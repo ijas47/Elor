@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 620 640">
+  <defs>
+    <radialGradient id="hglow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#f5c97d" stop-opacity="0.9"/>
+      <stop offset="45%" stop-color="#e8a94f" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#e8a94f" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="hmetal" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#4a3b22"/>
+      <stop offset="50%" stop-color="#d0a558"/>
+      <stop offset="100%" stop-color="#33281a"/>
+    </linearGradient>
+    <radialGradient id="hbulb" cx="50%" cy="40%" r="60%">
+      <stop offset="0%" stop-color="#fdf3dd"/>
+      <stop offset="60%" stop-color="#f3c979"/>
+      <stop offset="100%" stop-color="#c1913f"/>
+    </radialGradient>
+    <linearGradient id="hbeam" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#f0bd6b" stop-opacity="0.4"/>
+      <stop offset="100%" stop-color="#f0bd6b" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="harc" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#221c12"/>
+      <stop offset="100%" stop-color="#120e08"/>
+    </linearGradient>
+  </defs>
+
+  <!-- pendant trio -->
+  <line x1="180" y1="0" x2="180" y2="180" stroke="#8a6a35" stroke-width="3.5"/>
+  <line x1="300" y1="0" x2="300" y2="290" stroke="#8a6a35" stroke-width="3.5"/>
+  <line x1="420" y1="0" x2="420" y2="150" stroke="#8a6a35" stroke-width="3.5"/>
+
+  <ellipse cx="180" cy="238" rx="120" ry="110" fill="url(#hglow)" opacity="0.55"/>
+  <ellipse cx="300" cy="352" rx="135" ry="120" fill="url(#hglow)" opacity="0.6"/>
+  <ellipse cx="420" cy="208" rx="120" ry="110" fill="url(#hglow)" opacity="0.55"/>
+
+  <path d="M180 178 C 136 178, 120 214, 120 240 L 240 240 C 240 214, 224 178, 180 178 Z" fill="url(#hmetal)"/>
+  <ellipse cx="180" cy="240" rx="60" ry="9" fill="#f5d491"/>
+  <circle cx="180" cy="252" r="15" fill="url(#hbulb)"/>
+  <path d="M124 246 L 236 246 L 288 470 L 72 470 Z" fill="url(#hbeam)" opacity="0.7"/>
+
+  <path d="M300 288 C 248 288, 230 330, 230 360 L 370 360 C 370 330, 352 288, 300 288 Z" fill="url(#hmetal)"/>
+  <ellipse cx="300" cy="360" rx="70" ry="10" fill="#f5d491"/>
+  <circle cx="300" cy="374" r="17" fill="url(#hbulb)"/>
+  <path d="M234 366 L 366 366 L 424 610 L 176 610 Z" fill="url(#hbeam)" opacity="0.7"/>
+
+  <path d="M420 148 C 380 148, 366 182, 366 206 L 474 206 C 474 182, 460 148, 420 148 Z" fill="url(#hmetal)"/>
+  <ellipse cx="420" cy="206" rx="54" ry="8" fill="#f5d491"/>
+  <circle cx="420" cy="217" r="13" fill="url(#hbulb)"/>
+  <path d="M370 212 L 470 212 L 516 420 L 324 420 Z" fill="url(#hbeam)" opacity="0.65"/>
+
+  <!-- console table -->
+  <rect x="120" y="470" width="380" height="18" rx="9" fill="url(#harc)"/>
+  <rect x="146" y="488" width="12" height="120" fill="#161109"/>
+  <rect x="462" y="488" width="12" height="120" fill="#161109"/>
+  <ellipse cx="310" cy="620" rx="260" ry="18" fill="#070503"/>
+  <ellipse cx="310" cy="608" rx="200" ry="22" fill="url(#hglow)" opacity="0.3"/>
+
+  <!-- vase + book accents -->
+  <path d="M210 432 C 202 448, 202 458, 210 470 L 234 470 C 242 458, 242 448, 234 432 C 230 424, 214 424, 210 432 Z" fill="#2c2213"/>
+  <path d="M222 428 q -4 -22 10 -34 M222 428 q 6 -18 -2 -30" stroke="#3f5228" stroke-width="3.5" fill="none" stroke-linecap="round"/>
+  <rect x="356" y="458" width="90" height="7" rx="3" fill="#2c2213"/>
+  <rect x="364" y="448" width="74" height="7" rx="3" fill="#38290f"/>
+
+  <!-- wall sconce right -->
+  <rect x="556" y="230" width="18" height="84" rx="9" fill="url(#hmetal)"/>
+  <ellipse cx="565" cy="272" rx="70" ry="90" fill="url(#hglow)" opacity="0.4"/>
+</svg>

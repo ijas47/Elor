@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 480">
+  <defs>
+    <linearGradient id="pbg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#191510"/>
+      <stop offset="100%" stop-color="#100d08"/>
+    </linearGradient>
+    <radialGradient id="pglow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#f5c97d" stop-opacity="0.7"/>
+      <stop offset="100%" stop-color="#e8a94f" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="600" height="480" fill="url(#pbg)"/>
+  <g stroke="#2a2418" stroke-width="1">
+    <path d="M0 60 H600 M0 120 H600 M0 180 H600 M0 240 H600 M0 300 H600 M0 360 H600 M0 420 H600"/>
+    <path d="M60 0 V480 M120 0 V480 M180 0 V480 M240 0 V480 M300 0 V480 M360 0 V480 M420 0 V480 M480 0 V480 M540 0 V480"/>
+  </g>
+  <!-- floor plan outline -->
+  <path d="M90 90 H 430 V 200 H 510 V 400 H 90 Z" fill="none" stroke="#c99d55" stroke-width="3"/>
+  <path d="M250 90 V 230 M250 300 V 400 M250 230 a 36 36 0 0 1 36 36" fill="none" stroke="#c99d55" stroke-width="2.5"/>
+  <path d="M430 200 H 380" stroke="#c99d55" stroke-width="2.5"/>
+  <!-- light points -->
+  <g>
+    <circle cx="170" cy="160" r="26" fill="url(#pglow)"/>
+    <circle cx="170" cy="160" r="7" fill="#f3c979"/>
+    <circle cx="170" cy="160" r="13" fill="none" stroke="#f3c979" stroke-width="1.6" stroke-dasharray="3 4"/>
+  </g>
+  <g>
+    <circle cx="170" cy="330" r="26" fill="url(#pglow)"/>
+    <circle cx="170" cy="330" r="7" fill="#f3c979"/>
+    <circle cx="170" cy="330" r="13" fill="none" stroke="#f3c979" stroke-width="1.6" stroke-dasharray="3 4"/>
+  </g>
+  <g>
+    <circle cx="350" cy="160" r="26" fill="url(#pglow)"/>
+    <circle cx="350" cy="160" r="7" fill="#f3c979"/>
+    <circle cx="350" cy="160" r="13" fill="none" stroke="#f3c979" stroke-width="1.6" stroke-dasharray="3 4"/>
+  </g>
+  <g>
+    <circle cx="350" cy="330" r="26" fill="url(#pglow)"/>
+    <circle cx="350" cy="330" r="7" fill="#f3c979"/>
+    <circle cx="350" cy="330" r="13" fill="none" stroke="#f3c979" stroke-width="1.6" stroke-dasharray="3 4"/>
+  </g>
+  <g>
+    <circle cx="462" cy="300" r="26" fill="url(#pglow)"/>
+    <circle cx="462" cy="300" r="7" fill="#f3c979"/>
+    <circle cx="462" cy="300" r="13" fill="none" stroke="#f3c979" stroke-width="1.6" stroke-dasharray="3 4"/>
+  </g>
+  <!-- wall wash arrows -->
+  <path d="M108 130 q 20 8 0 18 M108 250 q 20 8 0 18 M108 360 q 20 8 0 18" stroke="#8a6a35" stroke-width="2" fill="none"/>
+  <!-- annotation lines -->
+  <path d="M350 160 L 545 96" stroke="#6b5c41" stroke-width="1.4" stroke-dasharray="4 4"/>
+  <rect x="466" y="72" width="118" height="30" rx="7" fill="#211b11"/>
+  <text x="478" y="92" font-family="monospace" font-size="13" fill="#e8c285">PENDANT 2700K</text>
+  <path d="M170 330 L 60 430" stroke="#6b5c41" stroke-width="1.4" stroke-dasharray="4 4"/>
+  <rect x="26" y="428" width="130" height="30" rx="7" fill="#211b11"/>
+  <text x="38" y="448" font-family="monospace" font-size="13" fill="#e8c285">COVE 300 LM/M</text>
+</svg>
