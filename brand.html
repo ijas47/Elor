@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Brand Guidelines | Elor Lighting</title>
+  <meta name="description" content="Elor Lighting brand guidelines: logo, the luminaire point mark, color palette, typography, motif and voice.">
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Marcellus&family=Jost:wght@300..600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    .tile-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+    .tile {
+      border-radius: var(--r);
+      border: 1px solid var(--line);
+      display: grid;
+      place-items: center;
+      min-height: 260px;
+      padding: 40px;
+    }
+    .tile.on-dark { background: var(--ink-2); }
+    .tile.on-light { background: var(--bone); border-color: rgba(20, 16, 11, 0.1); }
+    .tile img { width: min(300px, 70%); }
+    .tile .mark-img { width: 88px; }
+    .tile-cap {
+      margin-top: 10px;
+      font-size: 12px;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--text-faint);
+      text-align: center;
+    }
+    .swatches { display: grid; grid-template-columns: repeat(5, 1fr); gap: 16px; }
+    .swatch { border-radius: var(--r); overflow: hidden; border: 1px solid var(--line); }
+    .swatch .chip { height: 120px; }
+    .swatch .meta { padding: 14px 16px; background: var(--card); }
+    .swatch .meta b { display: block; font-family: var(--serif); font-weight: 400; font-size: 16px; color: var(--cream); }
+    .swatch .meta span { font-size: 12.5px; color: var(--text-faint); letter-spacing: 0.06em; }
+    .spec { border-top: 1px solid var(--line); padding: 26px 0; display: grid; grid-template-columns: 210px 1fr; gap: 24px; align-items: baseline; }
+    .spec .spec-label { font-size: 12px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--text-faint); }
+    .rule-list { list-style: none; }
+    .rule-list li { display: flex; gap: 14px; padding: 12px 0; border-bottom: 1px solid var(--line); font-size: 15px; color: var(--text-dim); }
+    .rule-list .yes { color: var(--amber-bright); flex: none; }
+    .rule-list .no { color: #c4756b; flex: none; }
+    @media (max-width: 900px) {
+      .tile-grid, .swatches { grid-template-columns: 1fr 1fr; }
+      .spec { grid-template-columns: 1fr; gap: 8px; }
+    }
+    @media (max-width: 620px) { .swatches { grid-template-columns: 1fr; } }
+  </style>
+</head>
+<body>
+
+<header class="site-head" id="siteHead">
+  <div class="head-inner">
+    <a class="logo" href="index.html"><img src="assets/logo-wordmark.svg" alt="ELOR"><small>Lighting</small></a>
+    <nav class="nav" id="nav">
+      <a href="index.html">Home</a>
+      <a href="shop.html">Shop Lights</a>
+      <a href="consultation.html">Consultation</a>
+      <a href="stores.html">Our Stores</a>
+      <a href="brand.html" class="active">Brand</a>
+    </nav>
+    <div class="head-cta">
+      <a class="btn btn-gold" href="index.html">Back to Site</a>
+      <button class="menu-btn" id="menuBtn" aria-label="Menu"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</header>
+
+<section class="page-hero">
+  <div class="wrap">
+    <p class="eyebrow rv">Brand guidelines · v1.0</p>
+    <h1 class="h-lg rv rv-d1">The Elor identity:<br><span class="serif-i">considered light.</span></h1>
+    <p class="lede rv rv-d2" style="margin-top: 22px;">Elor does not sell fixtures. It plans light. Everything in this identity, from the mark to the voice, expresses precision first and warmth as the result. Built for longevity: no gradients in the mark, no trend typefaces, nothing that dates.</p>
+  </div>
+</section>
+
+<!-- LOGO -->
+<section class="sec">
+  <div class="wrap">
+    <div class="sec-head">
+      <div>
+        <p class="eyebrow rv">01 · The mark</p>
+        <h2 class="h-lg rv rv-d1">The Luminaire Point</h2>
+      </div>
+      <p class="lede rv rv-d2">On every architect's lighting plan, a luminaire is drawn as a circle with a point at its center. The O of ELOR is exactly that symbol. The wordmark quietly states the business: light, planned.</p>
+    </div>
+    <div class="tile-grid">
+      <div class="rv">
+        <div class="tile on-dark"><img src="assets/logo-wordmark.svg" alt="ELOR wordmark on dark"></div>
+        <p class="tile-cap">Primary wordmark · on Ink</p>
+      </div>
+      <div class="rv rv-d1">
+        <div class="tile on-light"><img src="assets/logo-wordmark-dark.svg" alt="ELOR wordmark on light"></div>
+        <p class="tile-cap">Primary wordmark · on Bone</p>
+      </div>
+      <div class="rv rv-d2">
+        <div class="tile on-dark"><img class="mark-img" src="assets/logo-mark.svg" alt="ELOR luminaire point mark"></div>
+        <p class="tile-cap">Standalone mark · avatars, favicons, stamps</p>
+      </div>
+      <div class="rv rv-d3">
+        <div class="tile on-dark" style="gap: 18px;">
+          <img src="assets/logo-wordmark.svg" alt="ELOR wordmark" style="width: 46%;">
+          <img src="assets/logo-wordmark.svg" alt="ELOR wordmark small" style="width: 24%;">
+          <img src="assets/logo-wordmark.svg" alt="ELOR wordmark smallest" style="width: 13%;">
+        </div>
+        <p class="tile-cap">Scales cleanly · minimum width 64px</p>
+      </div>
+    </div>
+
+    <div style="margin-top: 56px;">
+      <div class="spec rv"><span class="spec-label">Construction</span><p style="color: var(--text-dim); font-size: 15.5px; max-width: 62ch;">Custom-drawn monoline capitals, not a typeface. Single stroke weight throughout (1/10 of cap height). Letterspacing is fixed at 40% of letter width. Do not retype the wordmark in a font.</p></div>
+      <div class="spec rv"><span class="spec-label">Clearspace</span><p style="color: var(--text-dim); font-size: 15.5px; max-width: 62ch;">Keep a margin equal to the height of the O on all sides. Nothing enters this zone: no text, no imagery, no edges.</p></div>
+      <div class="spec rv"><span class="spec-label">Color rules</span><p style="color: var(--text-dim); font-size: 15.5px; max-width: 62ch;">Bone letters on dark surfaces, Ink letters on light surfaces. The center point is always Brass, in both colorways. One-color versions (all Bone, all Ink, all Brass) are permitted for engraving, embossing and print.</p></div>
+      <div class="spec rv"><span class="spec-label">Never</span><p style="color: var(--text-dim); font-size: 15.5px; max-width: 62ch;">Do not add glows, gradients or shadows to the mark. Do not rotate, outline, stretch or place it over busy imagery. The product glows; the mark does not.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- COLOR -->
+<section class="sec" style="background: var(--ink-2); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line);">
+  <div class="wrap">
+    <div class="sec-head">
+      <div>
+        <p class="eyebrow rv">02 · Color</p>
+        <h2 class="h-lg rv rv-d1">Ink, Brass, Bone</h2>
+      </div>
+      <p class="lede rv rv-d2">A lighting brand shows light against darkness. Ink is the canvas, Brass is the light, Bone is the page. Brass is reserved for what matters: the mark's point, calls to action, prices, and accents. If everything is Brass, nothing is.</p>
+    </div>
+    <div class="swatches">
+      <div class="swatch rv"><div class="chip" style="background: #0c0a07;"></div><div class="meta"><b>Ink</b><span>#0C0A07 · canvas</span></div></div>
+      <div class="swatch rv rv-d1"><div class="chip" style="background: #c89b4b;"></div><div class="meta"><b>Brass</b><span>#C89B4B · the light</span></div></div>
+      <div class="swatch rv rv-d2"><div class="chip" style="background: #e6bc72;"></div><div class="meta"><b>Candle</b><span>#E6BC72 · highlight</span></div></div>
+      <div class="swatch rv rv-d3"><div class="chip" style="background: #f5f1e8;"></div><div class="meta"><b>Bone</b><span>#F5F1E8 · the page</span></div></div>
+      <div class="swatch rv rv-d3"><div class="chip" style="background: #b0a691;"></div><div class="meta"><b>Stone</b><span>#B0A691 · quiet text</span></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- TYPE -->
+<section class="sec">
+  <div class="wrap">
+    <div class="sec-head">
+      <div>
+        <p class="eyebrow rv">03 · Typography</p>
+        <h2 class="h-lg rv rv-d1">Marcellus &amp; Jost</h2>
+      </div>
+      <p class="lede rv rv-d2">Marcellus is an inscriptional Roman: calm, classical, carved rather than fashionable. Jost is a geometric sans in the Futura tradition. Both are longevity choices; neither will look dated in ten years.</p>
+    </div>
+    <div class="spec rv"><span class="spec-label">Display · Marcellus</span><p style="font-family: var(--serif); font-size: clamp(30px, 4vw, 48px); color: var(--cream); line-height: 1.15;">Light is how a space learns to feel.</p></div>
+    <div class="spec rv"><span class="spec-label">Body · Jost Light</span><p style="font-size: 17px; font-weight: 300; color: var(--text-dim); max-width: 58ch;">Elor designs the light for your home or business, supplies every fixture from our own range, and installs it. One team, from the first sketch to the final switch-on.</p></div>
+    <div class="spec rv"><span class="spec-label">Labels · Jost Caps</span><p style="font-size: 13px; font-weight: 500; letter-spacing: 0.28em; text-transform: uppercase; color: var(--amber);">Consultation · Supply · Installation</p></div>
+    <div class="spec rv"><span class="spec-label">Rules</span><p style="color: var(--text-dim); font-size: 15.5px; max-width: 62ch;">Headlines in Marcellus, sentence case, never bold (it has one weight; that is the point). UI, labels and body in Jost. Letterspaced uppercase Jost for eyebrows, buttons and small labels. Never set long paragraphs in Marcellus.</p></div>
+  </div>
+</section>
+
+<!-- MOTIF & IMAGERY -->
+<section class="sec light">
+  <div class="wrap">
+    <div class="sec-head">
+      <div>
+        <p class="eyebrow rv">04 · Motif &amp; imagery</p>
+        <h2 class="h-lg rv rv-d1">The point recurs.<br>The glow belongs to the product.</h2>
+      </div>
+    </div>
+    <div class="layers">
+      <div class="layer-card rv">
+        <div class="l-ico"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#9a7433" stroke-width="1.7"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="2" fill="#9a7433" stroke="none"/></svg></div>
+        <h3>The luminaire point</h3>
+        <p>The circle-and-point appears as a system-wide device: section markers, bullets, map pins, packaging stamps. Use it instead of generic icons wherever a brand touch is needed.</p>
+      </div>
+      <div class="layer-card rv rv-d1">
+        <div class="l-ico"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#9a7433" stroke-width="1.7"><path d="M12 3v3M5.6 5.6l2.1 2.1M18.4 5.6l-2.1 2.1M12 10a5 5 0 0 0-5 5h10a5 5 0 0 0-5-5Z"/><path d="M8 19h8"/></svg></div>
+        <h3>Imagery: always lit</h3>
+        <p>Every product is shown switched on, in darkness, with its true light pool. Warm tones only (2700 to 3000K). No fixtures photographed dead on white shelves.</p>
+      </div>
+      <div class="layer-card rv rv-d2">
+        <div class="l-ico"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#9a7433" stroke-width="1.7"><path d="M4 20h16M6 20V9l6-5 6 5v11"/></svg></div>
+        <h3>Surfaces &amp; shape</h3>
+        <p>Architectural restraint: near-square corners (3 to 6px), hairline rules, generous whitespace. Squared geometry frames the light; it never competes with it.</p>
+      </div>
+    </div>
+
+    <div style="margin-top: 60px; max-width: 780px;">
+      <h3 class="h-sm rv" style="margin-bottom: 18px;">Voice</h3>
+      <ul class="rule-list rv" style="color: var(--text-dim-on-cream);">
+        <li style="color: var(--text-dim-on-cream); border-color: rgba(20,16,11,0.12);"><span class="yes" style="color: var(--amber-deep);">●</span>Calm, precise, quietly confident. Short sentences. Concrete nouns.</li>
+        <li style="color: var(--text-dim-on-cream); border-color: rgba(20,16,11,0.12);"><span class="yes" style="color: var(--amber-deep);">●</span>Speak about light and how rooms feel, not about wattage first.</li>
+        <li style="color: var(--text-dim-on-cream); border-color: rgba(20,16,11,0.12);"><span class="no">●</span>No exclamation marks, no "world-class", no em dashes, no hype.</li>
+        <li style="color: var(--text-dim-on-cream); border-color: rgba(20,16,11,0.12);"><span class="no">●</span>Never promise what a photo can do better. Show the glow, then speak.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<footer class="site-foot">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div class="foot-brand">
+        <a class="logo" href="index.html" style="margin-bottom: 18px;"><img src="assets/logo-wordmark.svg" alt="ELOR"><small>Lighting</small></a>
+        <p>Lighting consultation, supply and installation for homes and commercial spaces. Three Celestial Lights stores in Kerala. Serving all of India.</p>
+      </div>
+      <div>
+        <h4>Explore</h4>
+        <a href="shop.html">Shop Lights</a>
+        <a href="consultation.html">Consultation</a>
+        <a href="stores.html">Our Stores</a>
+        <a href="brand.html">Brand Guidelines</a>
+      </div>
+      <div>
+        <h4>Stores</h4>
+        <a href="stores.html">Celestial Lights, Kannur</a>
+        <a href="stores.html">Celestial Lights, Kochi</a>
+        <a href="stores.html">Celestial Lights, Kozhikode</a>
+        <a href="shop.html">Online Store, Pan India</a>
+      </div>
+      <div>
+        <h4>Talk to us</h4>
+        <p>hello@elorlighting.in</p>
+        <p>+91 90000 00000</p>
+        <p>Mon-Sat · 9:30 AM - 8:30 PM IST</p>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© 2026 Elor Lighting. All rights reserved.</span>
+      <span>Elor Lighting · Celestial Lights · Kannur · Kochi · Kozhikode</span>
+    </div>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>

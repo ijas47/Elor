@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 304 84" fill="none">
+  <!-- E -->
+  <path d="M13.5 7 V77" stroke="#F5F1E8" stroke-width="7"/>
+  <path d="M10 10.5 H54" stroke="#F5F1E8" stroke-width="7"/>
+  <path d="M10 42 H46" stroke="#F5F1E8" stroke-width="7"/>
+  <path d="M10 73.5 H54" stroke="#F5F1E8" stroke-width="7"/>
+  <!-- L -->
+  <path d="M85.5 7 V77" stroke="#F5F1E8" stroke-width="7"/>
+  <path d="M82 73.5 H120" stroke="#F5F1E8" stroke-width="7"/>
+  <!-- O : the luminaire point -->
+  <circle cx="183" cy="42" r="31.5" stroke="#F5F1E8" stroke-width="7"/>
+  <circle cx="183" cy="42" r="7" fill="#C89B4B"/>
+  <!-- R -->
+  <path d="M249.5 7 V77" stroke="#F5F1E8" stroke-width="7"/>
+  <path d="M246 10.5 H270 A16.75 16.75 0 0 1 270 44 H246" stroke="#F5F1E8" stroke-width="7"/>
+  <path d="M269 46 L292 77" stroke="#F5F1E8" stroke-width="7"/>
+</svg>

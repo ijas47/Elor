@@ -1,38 +1,39 @@
 /* ============================================================
-   ELOR LIGHTING — Design System
-   Palette: warm ink, candle amber, bone cream
-   Type: Fraunces (display) / Outfit (text)
+   ELOR LIGHTING / Design System
+   Palette: Ink, Brass, Bone
+   Type: Marcellus (display) / Jost (text)
+   Motif: the luminaire point (circle + dot)
    ============================================================ */
 
 :root {
-  --ink: #0d0b08;
-  --ink-2: #14110c;
-  --ink-3: #1c1812;
-  --card: #191510;
+  --ink: #0c0a07;
+  --ink-2: #13100b;
+  --ink-3: #1b1711;
+  --card: #18140f;
   --line: rgba(233, 214, 179, 0.12);
   --line-strong: rgba(233, 214, 179, 0.22);
 
-  --amber: #d9a24a;
-  --amber-bright: #f0bd6b;
-  --amber-deep: #a8742a;
-  --glow: rgba(240, 189, 107, 0.35);
+  --amber: #c89b4b;
+  --amber-bright: #e6bc72;
+  --amber-deep: #9a7433;
+  --glow: rgba(230, 188, 114, 0.35);
 
-  --cream: #f4eee1;
-  --cream-2: #ece4d2;
-  --bone: #fbf8f1;
+  --cream: #f5f1e8;
+  --cream-2: #ede7d8;
+  --bone: #fbf9f3;
 
   --text: #efe8da;
   --text-dim: #b0a691;
   --text-faint: #857c69;
-  --text-on-cream: #241f16;
+  --text-on-cream: #14100b;
   --text-dim-on-cream: #6b6252;
 
-  --serif: "Fraunces", Georgia, serif;
-  --sans: "Outfit", "Segoe UI", sans-serif;
+  --serif: "Marcellus", Georgia, serif;
+  --sans: "Jost", "Segoe UI", sans-serif;
 
   --w: min(1200px, 92vw);
-  --r: 18px;
-  --r-sm: 12px;
+  --r: 6px;
+  --r-sm: 4px;
   --ease: cubic-bezier(0.22, 1, 0.36, 1);
 }
 
@@ -61,28 +62,30 @@ a { color: inherit; text-decoration: none; }
 
 h1, h2, h3, .display {
   font-family: var(--serif);
-  font-weight: 480;
-  line-height: 1.08;
-  letter-spacing: -0.015em;
+  font-weight: 400;
+  line-height: 1.12;
+  letter-spacing: 0.01em;
 }
 
 .eyebrow {
   font-family: var(--sans);
   font-size: 12.5px;
-  font-weight: 600;
-  letter-spacing: 0.26em;
+  font-weight: 500;
+  letter-spacing: 0.28em;
   text-transform: uppercase;
   color: var(--amber);
   display: flex;
   align-items: center;
-  gap: 14px;
+  gap: 12px;
   margin-bottom: 22px;
 }
 .eyebrow::before {
   content: "";
-  width: 34px; height: 1px;
-  background: var(--amber);
-  opacity: 0.7;
+  flex: none;
+  width: 11px; height: 11px;
+  border: 1.5px solid currentColor;
+  border-radius: 50%;
+  background: radial-gradient(circle, currentColor 2px, transparent 2.6px);
 }
 
 .h-xl { font-size: clamp(42px, 6.2vw, 84px); }
@@ -97,7 +100,8 @@ h1, h2, h3, .display {
   font-weight: 300;
 }
 
-.serif-i { font-style: italic; font-weight: 400; color: var(--amber-bright); }
+.serif-i { font-style: normal; font-weight: 400; color: var(--amber-bright); }
+.light .serif-i, .layer-card .serif-i { color: var(--amber-deep); }
 
 /* ---------- Buttons ---------- */
 
@@ -106,22 +110,24 @@ h1, h2, h3, .display {
   align-items: center;
   gap: 10px;
   font-family: var(--sans);
-  font-size: 14.5px;
-  font-weight: 600;
-  letter-spacing: 0.04em;
-  padding: 15px 30px;
-  border-radius: 100px;
+  font-size: 12.5px;
+  font-weight: 500;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  padding: 16px 30px;
+  border-radius: 3px;
   border: 1px solid transparent;
   cursor: pointer;
   transition: all 0.35s var(--ease);
   white-space: nowrap;
 }
 .btn-gold {
-  background: linear-gradient(135deg, var(--amber-bright), var(--amber));
-  color: #241a09;
+  background: var(--amber);
+  color: #14100b;
   box-shadow: 0 0 0 0 var(--glow);
 }
 .btn-gold:hover {
+  background: var(--amber-bright);
   box-shadow: 0 8px 34px var(--glow);
   transform: translateY(-2px);
 }
@@ -164,29 +170,18 @@ h1, h2, h3, .display {
 }
 .logo {
   display: flex;
-  align-items: baseline;
-  gap: 10px;
-  font-family: var(--serif);
-  font-size: 27px;
-  letter-spacing: 0.14em;
-  color: var(--cream);
+  align-items: center;
+  gap: 13px;
 }
-.logo .logo-o {
-  display: inline-block;
-  position: relative;
-}
-.logo em {
-  font-style: normal;
-  color: var(--amber-bright);
-  text-shadow: 0 0 18px var(--glow);
-}
+.logo img { height: 21px; width: auto; }
 .logo small {
   font-family: var(--sans);
-  font-size: 10.5px;
+  font-size: 10px;
   font-weight: 500;
   letter-spacing: 0.34em;
   text-transform: uppercase;
   color: var(--text-faint);
+  transform: translateY(1px);
 }
 .nav { display: flex; gap: 36px; align-items: center; }
 .nav a {
@@ -419,7 +414,7 @@ section { position: relative; }
   background: rgba(13, 11, 8, 0.65);
   border: 1px solid var(--line);
   padding: 6px 12px;
-  border-radius: 100px;
+  border-radius: 3px;
   backdrop-filter: blur(6px);
 }
 .prod-body { padding: 20px 20px 22px; }
@@ -734,13 +729,14 @@ section { position: relative; }
 }
 .filter-btn {
   font-family: var(--sans);
-  font-size: 13.5px;
+  font-size: 12px;
   font-weight: 500;
-  letter-spacing: 0.04em;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
   color: var(--text-dim);
   background: transparent;
   border: 1px solid var(--line-strong);
-  border-radius: 100px;
+  border-radius: 3px;
   padding: 10px 22px;
   cursor: pointer;
   transition: 0.3s;
@@ -749,8 +745,7 @@ section { position: relative; }
 .filter-btn.active {
   background: var(--amber);
   border-color: var(--amber);
-  color: #241a09;
-  font-weight: 600;
+  color: #14100b;
 }
 .prod-card.hide { display: none; }
 
