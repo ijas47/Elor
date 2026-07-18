@@ -8,20 +8,20 @@
   <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Marcellus&family=Jost:wght@300..600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
   <style>
     .tile-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
     .tile {
       border-radius: var(--r);
-      border: 1px solid var(--line);
+      border: 1px solid var(--line-light);
       display: grid;
       place-items: center;
       min-height: 260px;
       padding: 40px;
     }
     .tile.on-dark { background: var(--ink-2); }
-    .tile.on-light { background: var(--bone); border-color: rgba(20, 16, 11, 0.1); }
+    .tile.on-light { background: var(--white); }
     .tile img { width: min(300px, 70%); }
     .tile .mark-img { width: 88px; }
     .tile-cap {
@@ -33,15 +33,15 @@
       text-align: center;
     }
     .swatches { display: grid; grid-template-columns: repeat(5, 1fr); gap: 16px; }
-    .swatch { border-radius: var(--r); overflow: hidden; border: 1px solid var(--line); }
+    .swatch { border-radius: var(--r); overflow: hidden; border: 1px solid var(--line-light); }
     .swatch .chip { height: 120px; }
-    .swatch .meta { padding: 14px 16px; background: var(--card); }
-    .swatch .meta b { display: block; font-family: var(--serif); font-weight: 400; font-size: 16px; color: var(--cream); }
+    .swatch .meta { padding: 14px 16px; background: var(--white); }
+    .swatch .meta b { display: block; font-weight: 500; font-size: 15px; color: var(--text); }
     .swatch .meta span { font-size: 12.5px; color: var(--text-faint); letter-spacing: 0.06em; }
-    .spec { border-top: 1px solid var(--line); padding: 26px 0; display: grid; grid-template-columns: 210px 1fr; gap: 24px; align-items: baseline; }
+    .spec { border-top: 1px solid var(--line-light); padding: 26px 0; display: grid; grid-template-columns: 210px 1fr; gap: 24px; align-items: baseline; }
     .spec .spec-label { font-size: 12px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--text-faint); }
     .rule-list { list-style: none; }
-    .rule-list li { display: flex; gap: 14px; padding: 12px 0; border-bottom: 1px solid var(--line); font-size: 15px; color: var(--text-dim); }
+    .rule-list li { display: flex; gap: 14px; padding: 12px 0; border-bottom: 1px solid var(--line-light); font-size: 15px; color: var(--text-dim); }
     .rule-list .yes { color: var(--amber-bright); flex: none; }
     .rule-list .no { color: #c4756b; flex: none; }
     @media (max-width: 900px) {
@@ -72,9 +72,9 @@
 
 <section class="page-hero">
   <div class="wrap">
-    <p class="eyebrow rv">Brand guidelines · v1.0</p>
+    <p class="eyebrow rv">Brand guidelines · v2.0</p>
     <h1 class="h-lg rv rv-d1">The Elor identity:<br><span class="serif-i">considered light.</span></h1>
-    <p class="lede rv rv-d2" style="margin-top: 22px;">Elor does not sell fixtures. It plans light. Everything in this identity, from the mark to the voice, expresses precision first and warmth as the result. Built for longevity: no gradients in the mark, no trend typefaces, nothing that dates.</p>
+    <p class="lede rv rv-d2" style="margin-top: 22px;">Elor does not sell fixtures. It plans light. The identity pairs a pearl-and-black canvas with champagne gold and caramel accents, so the warmth always reads against calm, gallery-like surfaces. Version 2.0.</p>
   </div>
 </section>
 
@@ -121,21 +121,21 @@
 </section>
 
 <!-- COLOR -->
-<section class="sec" style="background: var(--ink-2); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line);">
+<section class="sec light">
   <div class="wrap">
     <div class="sec-head">
       <div>
         <p class="eyebrow rv">02 · Color</p>
-        <h2 class="h-lg rv rv-d1">Ink, Brass, Bone</h2>
+        <h2 class="h-lg rv rv-d1">Pearl, Black,<br><span class="serif-i">Champagne &amp; Caramel</span></h2>
       </div>
-      <p class="lede rv rv-d2">A lighting brand shows light against darkness. Ink is the canvas, Brass is the light, Bone is the page. Brass is reserved for what matters: the mark's point, calls to action, prices, and accents. If everything is Brass, nothing is.</p>
+      <p class="lede rv rv-d2">Pearl is the page, Black is the feature band, Champagne is the highlight, Caramel carries prices and testimonials, Charcoal speaks. Gold is reserved for what matters: the mark's point, highlighted words, calls to action. If everything glows, nothing does.</p>
     </div>
     <div class="swatches">
-      <div class="swatch rv"><div class="chip" style="background: #0c0a07;"></div><div class="meta"><b>Ink</b><span>#0C0A07 · canvas</span></div></div>
-      <div class="swatch rv rv-d1"><div class="chip" style="background: #c89b4b;"></div><div class="meta"><b>Brass</b><span>#C89B4B · the light</span></div></div>
-      <div class="swatch rv rv-d2"><div class="chip" style="background: #e6bc72;"></div><div class="meta"><b>Candle</b><span>#E6BC72 · highlight</span></div></div>
-      <div class="swatch rv rv-d3"><div class="chip" style="background: #f5f1e8;"></div><div class="meta"><b>Bone</b><span>#F5F1E8 · the page</span></div></div>
-      <div class="swatch rv rv-d3"><div class="chip" style="background: #b0a691;"></div><div class="meta"><b>Stone</b><span>#B0A691 · quiet text</span></div></div>
+      <div class="swatch rv"><div class="chip" style="background: #f6f3ef; border-bottom: 1px solid #e7e1d7;"></div><div class="meta"><b>Pearl</b><span>#F6F3EF · the page</span></div></div>
+      <div class="swatch rv rv-d1"><div class="chip" style="background: #0b0a08;"></div><div class="meta"><b>Black</b><span>#0B0A08 · feature bands</span></div></div>
+      <div class="swatch rv rv-d2"><div class="chip" style="background: linear-gradient(135deg, #e5c88f, #c9a266);"></div><div class="meta"><b>Champagne</b><span>#E5C88F → #C9A266 · gold</span></div></div>
+      <div class="swatch rv rv-d3"><div class="chip" style="background: #a9714b;"></div><div class="meta"><b>Caramel</b><span>#A9714B · prices, quotes</span></div></div>
+      <div class="swatch rv rv-d3"><div class="chip" style="background: #232120;"></div><div class="meta"><b>Charcoal</b><span>#232120 · text</span></div></div>
     </div>
   </div>
 </section>
@@ -146,14 +146,14 @@
     <div class="sec-head">
       <div>
         <p class="eyebrow rv">03 · Typography</p>
-        <h2 class="h-lg rv rv-d1">Marcellus &amp; Jost</h2>
+        <h2 class="h-lg rv rv-d1">Poppins, <span class="serif-i">everywhere.</span></h2>
       </div>
-      <p class="lede rv rv-d2">Marcellus is an inscriptional Roman: calm, classical, carved rather than fashionable. Jost is a geometric sans in the Futura tradition. Both are longevity choices; neither will look dated in ten years.</p>
+      <p class="lede rv rv-d2">One geometric sans, four weights. Light for body copy, Regular for UI, Medium for headings, Semibold for prices. Hierarchy comes from size, weight and the champagne highlight, never from a second typeface.</p>
     </div>
-    <div class="spec rv"><span class="spec-label">Display · Marcellus</span><p style="font-family: var(--serif); font-size: clamp(30px, 4vw, 48px); color: var(--cream); line-height: 1.15;">Light is how a space learns to feel.</p></div>
-    <div class="spec rv"><span class="spec-label">Body · Jost Light</span><p style="font-size: 17px; font-weight: 300; color: var(--text-dim); max-width: 58ch;">Elor designs the light for your home or business, supplies every fixture from our own range, and installs it. One team, from the first sketch to the final switch-on.</p></div>
-    <div class="spec rv"><span class="spec-label">Labels · Jost Caps</span><p style="font-size: 13px; font-weight: 500; letter-spacing: 0.28em; text-transform: uppercase; color: var(--amber);">Consultation · Supply · Installation</p></div>
-    <div class="spec rv"><span class="spec-label">Rules</span><p style="color: var(--text-dim); font-size: 15.5px; max-width: 62ch;">Headlines in Marcellus, sentence case, never bold (it has one weight; that is the point). UI, labels and body in Jost. Letterspaced uppercase Jost for eyebrows, buttons and small labels. Never set long paragraphs in Marcellus.</p></div>
+    <div class="spec rv"><span class="spec-label">Display · Medium</span><p style="font-weight: 500; font-size: clamp(30px, 4vw, 48px); color: var(--text); line-height: 1.18;">Light is how a <span class="serif-i">space</span> learns to feel.</p></div>
+    <div class="spec rv"><span class="spec-label">Body · Light</span><p style="font-size: 17px; font-weight: 300; color: var(--text-dim); max-width: 58ch;">Elor designs the light for your home or business, supplies every fixture from our own range, and installs it. One team, from the first sketch to the final switch-on.</p></div>
+    <div class="spec rv"><span class="spec-label">Labels · Caps</span><p style="font-size: 13px; font-weight: 500; letter-spacing: 0.28em; text-transform: uppercase; color: var(--amber);">Consultation · Supply · Installation</p></div>
+    <div class="spec rv"><span class="spec-label">Rules</span><p style="color: var(--text-dim); font-size: 15.5px; max-width: 62ch;">Headings in sentence case, Medium weight, with at most one champagne-highlighted word. Buttons are pill-shaped. Eyebrow labels are letterspaced uppercase with the luminaire-point marker. Body text never drops below 14px.</p></div>
   </div>
 </section>
 
@@ -180,7 +180,7 @@
       <div class="layer-card rv rv-d2">
         <div class="l-ico"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#9a7433" stroke-width="1.7"><path d="M4 20h16M6 20V9l6-5 6 5v11"/></svg></div>
         <h3>Surfaces &amp; shape</h3>
-        <p>Architectural restraint: near-square corners (3 to 6px), hairline rules, generous whitespace. Squared geometry frames the light; it never competes with it.</p>
+        <p>Soft gallery surfaces: 16px card corners, pill buttons and pill nav, thin frame lines inside imagery, generous whitespace. Dark bands are reserved for feature moments.</p>
       </div>
     </div>
 

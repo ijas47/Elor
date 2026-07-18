@@ -17,32 +17,31 @@ stores (Kannur, Kochi, Kozhikode) with pan-India online service.
 | **Commercial buyers** (architects, F&B, retail) decide on accountability, schedule, and ROI | Dedicated commercial section framed as "lighting that earns its keep", with project pricing and site-coordination promises |
 | Two distinct intents arrive at the site: **browse/buy** vs **plan/consult** | Dual CTAs everywhere: brass = Book Consultation (higher-value funnel), ghost = Shop |
 
-## Brand identity (v1.0)
+## Brand identity (v2.0)
 
-Full visual guidelines live at `brand.html` on the site.
+Full visual guidelines live at `brand.html` on the site. Design system modeled on a
+high-end lighting store reference the client selected: light-first gallery surfaces
+with rich black feature bands.
 
-- **Idea:** considered light. Elor plans light; the fixtures follow.
-- **Logo, "The Luminaire Point":** on an architect's lighting plan a luminaire is drawn
-  as a circle with a point at its center. The O of ELOR is that symbol. Custom-drawn
-  monoline capitals (SVG paths, not a typeface): `assets/logo-wordmark.svg` (on dark),
-  `assets/logo-wordmark-dark.svg` (on light), `assets/logo-mark.svg` (standalone),
-  `assets/favicon.svg`. One color per surface; the point is always Brass. No glows or
-  gradients on the mark itself.
-- **Palette:** Ink `#0C0A07` (canvas), Brass `#C89B4B` (the light), Candle `#E6BC72`
-  (highlight), Bone `#F5F1E8` (the page), Stone `#B0A691` (quiet text). Brass is
-  reserved for emphasis: the mark's point, CTAs, prices, accents.
-- **Type:** Marcellus (inscriptional Roman, display, single weight, sentence case)
-  + Jost (geometric sans, body/UI, letterspaced caps for labels and buttons).
-- **Shape language:** architectural restraint. Near-square corners (3 to 6px),
-  hairline rules, generous whitespace.
-- **Motif:** the circle-and-point recurs as section markers (eyebrow bullets),
-  and can extend to map pins, packaging stamps, social avatars.
-- **Imagery:** original hand-crafted SVG renders (products, room scenes,
-  lighting-plan art); every fixture shown lit, in darkness, warm (2700 to 3000K).
-  Swap for real photography as it becomes available; keep the "always lit,
-  always warm" rule.
-- **Voice:** calm, precise, quietly confident. Short sentences. No exclamation
-  marks, no hype, no em dashes.
+- **Logo, "The Luminaire Point"** (unchanged from v1): the O of ELOR is the
+  luminaire symbol from architectural lighting plans. Custom-drawn monoline
+  capitals as SVG paths: `assets/logo-wordmark.svg` (on dark),
+  `assets/logo-wordmark-dark.svg` (on light), `assets/logo-mark.svg`,
+  `assets/favicon.svg`.
+- **Palette:** Pearl `#F6F3EF` (the page), Black `#0B0A08` (feature bands: hero,
+  How-it-works, CTA, footer), Champagne gold `#E5C88F -> #C9A266` (highlighted
+  words, CTAs, icons), Caramel `#A9714B` (prices, testimonial cards),
+  Charcoal `#232120` (text).
+- **Type:** Poppins everywhere. Light 300 body, Regular 400 UI, Medium 500
+  headings (sentence case, one champagne-highlighted word max), Semibold 600
+  prices.
+- **Shape language:** pill buttons, floating dark pill navbar, 16px card
+  corners, thin gallery-frame lines inside imagery, soft shadows.
+- **Motif:** the circle-and-point recurs as eyebrow markers and nav indicators.
+- **Imagery:** original SVG renders, always lit, warm 2700-3000K, presented in
+  framed dark tiles against light surfaces.
+- **Voice:** calm, precise, quietly confident. No exclamation marks, no hype,
+  no em dashes.
 
 ## Pages
 
