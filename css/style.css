@@ -314,6 +314,15 @@ h1, h2, h3, .display {
   margin-bottom: -0.12em;
 }
 .hero-title.splitting .char { position: relative; display: inline-block; }
+/* Splitting.js moves the highlighted word's text into per-letter child spans.
+   The gradient text-clip trick on .serif-i only paints on its own direct text,
+   so once split, the parent has none left and the inherited transparent fill
+   leaves the word invisible. Use a solid gold instead for the split title. */
+.hero-title .serif-i {
+  background: none;
+  -webkit-text-fill-color: currentColor;
+  color: var(--gold-hi);
+}
 .hero-ctas { display: flex; gap: 14px; flex-wrap: wrap; }
 
 .hero-note {
