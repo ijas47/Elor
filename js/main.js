@@ -74,6 +74,29 @@
     if (hashMap[hash]) applyFilter(hashMap[hash]);
   }
 
+  // Showroom reel: play muted vignettes only while on screen, pause off screen
+  // (keeps data + battery use down; videos ship with preload="none")
+  var reelVideos = document.querySelectorAll("video[data-reel]");
+  if (reelVideos.length && "IntersectionObserver" in window) {
+    var reelIO = new IntersectionObserver(
+      function (entries) {
+        entries.forEach(function (entry) {
+          var v = entry.target;
+          if (entry.isIntersecting) {
+            var playing = v.play();
+            if (playing && playing.catch) playing.catch(function () {});
+            v.parentElement.classList.add("playing");
+          } else {
+            v.pause();
+            v.parentElement.classList.remove("playing");
+          }
+        });
+      },
+      { threshold: 0.4 }
+    );
+    reelVideos.forEach(function (v) { reelIO.observe(v); });
+  }
+
   // Consultation form (front-end only — wire to a backend or form service later)
   var form = document.getElementById("consultForm");
   if (form) {

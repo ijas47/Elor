@@ -38,8 +38,13 @@ with rich black feature bands.
 - **Shape language:** pill buttons, floating dark pill navbar, 16px card
   corners, thin gallery-frame lines inside imagery, soft shadows.
 - **Motif:** the circle-and-point recurs as eyebrow markers and nav indicators.
-- **Imagery:** original SVG renders, always lit, warm 2700-3000K, presented in
-  framed dark tiles against light surfaces.
+- **Imagery:** real Celestial Lights showroom footage (client-supplied), processed
+  with ffmpeg (audio stripped, trimmed, graded, compressed). Hero is a crossfaded
+  montage loop (`assets/video/hero.mp4`, ~0.7MB); a homepage "Inside Celestial
+  Lights" reel plays three portrait vignettes on scroll (`assets/video/showroom-*.mp4`);
+  two featured product cards use real stills (`assets/products/photo-*.jpg`). Original
+  SVG renders remain for products without footage yet. All media stays on dark
+  backgrounds, warm 2700-3000K feel.
 - **Voice:** calm, precise, quietly confident. No exclamation marks, no hype,
   no em dashes.
 
