@@ -66,6 +66,7 @@
     // Space links from the homepage map to a sensible starting filter
     var hashMap = {
       living: "pendant",
+      stairwell: "pendant",
       bedroom: "wall",
       outdoor: "outdoor",
       commercial: "pendant"
