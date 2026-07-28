@@ -274,13 +274,44 @@ h1, h2, h3, .display {
   object-fit: cover;
   display: block;
 }
-/* linear-gradient overlay: keeps hero text readable regardless of what the footage looks like */
+
+/* Slideshow: crossfading stills with a slow Ken Burns drift */
+.hero-slide {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  transition: opacity 1.6s ease-in-out;
+  will-change: opacity;
+}
+.hero-slide.active { opacity: 1; }
+.hero-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transform: scale(1.06);
+}
+.hero-slide.active img {
+  animation: kenburns 9s ease-out forwards;
+}
+@keyframes kenburns {
+  from { transform: scale(1.06); }
+  to { transform: scale(1.14); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .hero-slide.active img { animation: none; transform: scale(1.06); }
+  .hero-slide { transition-duration: 0.4s; }
+}
+
+/* Legibility scrim: a dark wash plus a stronger left-side ramp, so headline
+   and body copy hold contrast over bright interiors and busy detail alike */
 .hero-gradient {
   position: absolute;
   inset: 0;
   background:
-    linear-gradient(180deg, rgba(11, 10, 8, 0.1) 0%, rgba(11, 10, 8, 0.5) 55%, rgba(11, 10, 8, 0.94) 100%),
-    radial-gradient(1100px 520px at 78% 20%, rgba(230, 188, 114, 0.14), transparent 62%);
+    linear-gradient(180deg, rgba(11, 10, 8, 0.55) 0%, rgba(11, 10, 8, 0.55) 45%, rgba(11, 10, 8, 0.93) 100%),
+    linear-gradient(95deg, rgba(11, 10, 8, 0.88) 0%, rgba(11, 10, 8, 0.6) 42%, rgba(11, 10, 8, 0.18) 72%, transparent 100%),
+    radial-gradient(1100px 520px at 78% 20%, rgba(230, 188, 114, 0.12), transparent 62%);
 }
 /* mix-blend-mode: a decorative watermark, kept off the legible headline on purpose */
 .hero-watermark {
@@ -304,8 +335,40 @@ h1, h2, h3, .display {
   max-width: 800px;
   padding: 150px 0 110px;
 }
-.hero-inner h1 { color: #fff; font-weight: 500; }
-.hero-inner .lede { margin: 26px 0 36px; color: var(--dark-dim); }
+.hero-inner h1 {
+  color: #fff;
+  font-weight: 500;
+  text-shadow: 0 2px 26px rgba(6, 5, 4, 0.75);
+}
+/* brighter than the generic dim tone: body copy sits over photography here */
+.hero-inner .lede {
+  margin: 26px 0 36px;
+  color: #ded8ce;
+  text-shadow: 0 1px 14px rgba(6, 5, 4, 0.8);
+}
+.hero-inner .eyebrow { text-shadow: 0 1px 12px rgba(6, 5, 4, 0.8); }
+.hero-note { text-shadow: 0 1px 12px rgba(6, 5, 4, 0.85); }
+
+/* Slide indicators */
+.hero-dots {
+  position: absolute;
+  z-index: 3;
+  left: 0;
+  bottom: 46px;
+  display: flex;
+  gap: 10px;
+}
+.hero-dots button {
+  width: 30px;
+  height: 3px;
+  border: none;
+  padding: 0;
+  border-radius: 3px;
+  background: rgba(245, 241, 232, 0.3);
+  cursor: pointer;
+  transition: background 0.4s var(--ease), width 0.4s var(--ease);
+}
+.hero-dots button.on { background: var(--gold-hi); width: 46px; }
 .hero-title.splitting .word {
   position: relative;
   display: inline-block;

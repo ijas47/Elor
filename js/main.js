@@ -74,6 +74,43 @@
     if (hashMap[hash]) applyFilter(hashMap[hash]);
   }
 
+  // Hero slideshow: crossfade through showroom stills, with clickable indicators
+  var slideWrap = document.getElementById("heroSlides");
+  if (slideWrap) {
+    var slides = slideWrap.querySelectorAll(".hero-slide");
+    var dotWrap = document.getElementById("heroDots");
+    var current = 0;
+    var timer = null;
+    var HOLD = 5200;
+
+    function show(i) {
+      slides[current].classList.remove("active");
+      current = (i + slides.length) % slides.length;
+      slides[current].classList.add("active");
+      if (dotWrap) {
+        dotWrap.querySelectorAll("button").forEach(function (b, bi) {
+          b.classList.toggle("on", bi === current);
+          b.setAttribute("aria-selected", bi === current ? "true" : "false");
+        });
+      }
+    }
+    function start() { timer = setInterval(function () { show(current + 1); }, HOLD); }
+    function restart() { clearInterval(timer); start(); }
+
+    if (dotWrap && slides.length > 1) {
+      slides.forEach(function (s, i) {
+        var b = document.createElement("button");
+        b.type = "button";
+        b.setAttribute("role", "tab");
+        b.setAttribute("aria-label", "Show slide " + (i + 1));
+        if (i === 0) { b.classList.add("on"); b.setAttribute("aria-selected", "true"); }
+        b.addEventListener("click", function () { show(i); restart(); });
+        dotWrap.appendChild(b);
+      });
+    }
+    if (slides.length > 1) start();
+  }
+
   // Showroom reel: play muted vignettes only while on screen, pause off screen
   // (keeps data + battery use down; videos ship with preload="none")
   var reelVideos = document.querySelectorAll("video[data-reel]");
