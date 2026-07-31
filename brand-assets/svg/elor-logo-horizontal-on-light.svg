@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 120" fill="none">
+  <!-- Elor horizontal lockup · for light backgrounds -->
+  <defs>
+    <radialGradient id="orbL" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#e3c489"/>
+      <stop offset="60%" stop-color="#c9a266"/>
+      <stop offset="100%" stop-color="#9a7743"/>
+    </radialGradient>
+  </defs>
+  <g transform="translate(20,26) scale(0.92)">
+    <line x1="32" y1="4" x2="32" y2="24" stroke="#1e1912" stroke-width="1.4" stroke-linecap="round" opacity="0.85"/>
+    <circle cx="32" cy="4" r="1.9" fill="#1e1912"/>
+    <circle cx="32" cy="44" r="18" stroke="#1e1912" stroke-width="1.6" opacity="0.9"/>
+    <circle cx="32" cy="44" r="11.5" stroke="#9a7743" stroke-width="1" opacity="0.55"/>
+    <circle cx="32" cy="44" r="6" fill="url(#orbL)"/>
+  </g>
+  <text x="104" y="66" font-family="'Playfair Display', Georgia, serif" font-size="46" font-weight="500" letter-spacing="9" fill="#1e1912">ELOR</text>
+  <text x="106" y="88" font-family="'Inter', 'Segoe UI', sans-serif" font-size="12" font-weight="500" letter-spacing="7.5" fill="#9a7743">LIGHTING</text>
+</svg>
