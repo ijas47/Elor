@@ -5,7 +5,7 @@ import type { ReactNode } from "react";
 
 /**
  * Route entrance. Uses a CSS keyframe (not a JS animation) so it ALWAYS
- * settles at opacity:1 — it can never get stuck mid-animation and dim the
+ * settles at opacity:1, it can never get stuck mid-animation and dim the
  * page. Keyed on pathname so it re-runs on navigation. Respects
  * prefers-reduced-motion via the stylesheet.
  */

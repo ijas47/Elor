@@ -1,5 +1,5 @@
 /**
- * Elor emblem — "The Celestial Drop".
+ * Elor emblem, "The Celestial Drop".
  * A fine suspension descends to a glowing orb held in a thin halo ring:
  * a hanging luminaire and a celestial body at once. Ring/suspension use
  * currentColor so the mark adapts to dark or pearl contexts; the orb and its

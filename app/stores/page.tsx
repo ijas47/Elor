@@ -5,17 +5,17 @@ import { Reveal, Stagger, StaggerItem } from "@/components/motion/Reveal";
 import { MagneticButton } from "@/components/motion/MagneticButton";
 
 export const metadata: Metadata = {
-  title: "Our Stores — Celestial Lights in Kannur, Kochi & Kozhikode",
+  title: "Our Stores · Celestial Lights in Kannur, Kochi & Kozhikode",
   description:
     "Visit a Celestial Lights experience store in Kannur, Kochi or Kozhikode to see every Elor fixture lit before you buy. Pan-India delivery and remote consultation also available.",
   alternates: { canonical: "/stores" },
 };
 
-// LocalBusiness schema per store — strong signal for local + AI search.
+// LocalBusiness schema per store, strong signal for local + AI search.
 const localBusinessSchema = stores.map((s) => ({
   "@context": "https://schema.org",
   "@type": "LightingStore",
-  name: `${site.name} — ${s.brand}, ${s.city}`,
+  name: `${site.name} · ${s.brand}, ${s.city}`,
   image: `${site.domain}/lifestyle/store-wall.jpg`,
   address: {
     "@type": "PostalAddress",

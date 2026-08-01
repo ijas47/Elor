@@ -19,7 +19,7 @@ export const site = {
   email: "hello@elorlighting.in",
   phone: "+91 90000 00000",
   phoneHref: "tel:+919000000000",
-  hours: "Mon–Sat · 9:30 AM – 8:30 PM IST",
+  hours: "Mon-Sat · 9:30 AM to 8:30 PM IST",
 
   // ── SHOP HANDOFF (swap when Shopify is live) ──────────────────────────────
   // e.g. "https://celestiallights.store" or the myshopify domain.
@@ -42,7 +42,7 @@ export const stores = [
     city: "Kannur",
     brand: "Celestial Lights",
     address: "Fort Road, Kannur, Kerala 670001",
-    hours: "Mon–Sat · 9:30 AM – 8:30 PM",
+    hours: "Mon-Sat · 9:30 AM to 8:30 PM",
     phone: "+91 90000 00001",
     phoneHref: "tel:+919000000001",
     maps: "https://maps.google.com/?q=Fort+Road+Kannur+Kerala",
@@ -51,7 +51,7 @@ export const stores = [
     city: "Kochi",
     brand: "Celestial Lights",
     address: "MG Road, Ernakulam, Kochi, Kerala 682016",
-    hours: "Mon–Sat · 9:30 AM – 8:30 PM",
+    hours: "Mon-Sat · 9:30 AM to 8:30 PM",
     phone: "+91 90000 00002",
     phoneHref: "tel:+919000000002",
     maps: "https://maps.google.com/?q=MG+Road+Ernakulam+Kochi+Kerala",
@@ -60,7 +60,7 @@ export const stores = [
     city: "Kozhikode",
     brand: "Celestial Lights",
     address: "Mavoor Road, Kozhikode, Kerala 673004",
-    hours: "Mon–Sat · 9:30 AM – 8:30 PM",
+    hours: "Mon-Sat · 9:30 AM to 8:30 PM",
     phone: "+91 90000 00003",
     phoneHref: "tel:+919000000003",
     maps: "https://maps.google.com/?q=Mavoor+Road+Kozhikode+Kerala",

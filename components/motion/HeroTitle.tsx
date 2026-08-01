@@ -6,7 +6,7 @@ import type { ReactNode } from "react";
 /**
  * Cinematic title reveal. Splits a line into words that rise out from a
  * clipped mask, in sequence. The real text is passed as `lines` and rendered
- * in the DOM, so it's fully indexable — we animate presentation only.
+ * in the DOM, so it's fully indexable, we animate presentation only.
  *
  * Use <i>…</i> inside a line to mark the italic gold accent word(s).
  */

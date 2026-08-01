@@ -1,6 +1,6 @@
 /**
  * Curated collection shown on this marketing site.
- * No prices, no cart — every piece hands off to Celestial Lights (site.shopUrl).
+ * No prices, no cart, every piece hands off to Celestial Lights (site.shopUrl).
  * Real photography lives in /public/collections.
  */
 
@@ -111,7 +111,7 @@ export const pieces: Piece[] = [
     name: "Asteraceae Gold",
     category: "Pendants",
     image: "/collections/dandelion-gold.jpg",
-    blurb: "A gold dandelion burst — delicate, architectural, unforgettable.",
+    blurb: "A gold dandelion burst, delicate, architectural, unforgettable.",
     tag: "Signature",
     ratio: "square",
   },
@@ -208,7 +208,7 @@ export const pieces: Piece[] = [
     name: "Villa Facade & Landscape",
     category: "Outdoor & Facade",
     image: "/collections/villa-facade.jpg",
-    blurb: "A full exterior scheme — cove, facade wash and path lighting.",
+    blurb: "A full exterior scheme, cove, facade wash and path lighting.",
     tag: "Project",
     ratio: "wide",
   },

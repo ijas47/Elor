@@ -52,7 +52,7 @@ export function Reveal({
 }
 
 /**
- * Staggered container — children fade+rise in sequence.
+ * Staggered container, children fade+rise in sequence.
  */
 const containerVariants: Variants = {
   hidden: {},

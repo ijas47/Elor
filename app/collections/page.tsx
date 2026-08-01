@@ -6,7 +6,7 @@ import { MagneticButton } from "@/components/motion/MagneticButton";
 import { PieceCard } from "@/components/ui/PieceCard";
 
 export const metadata: Metadata = {
-  title: "Collections — Chandeliers, Pendants & Outdoor Lighting",
+  title: "Collections · Chandeliers, Pendants & Outdoor Lighting",
   description:
     "Browse the Elor collection of statement chandeliers, pendants, wall lights and facade lighting. Available at Celestial Lights, with pan-India delivery.",
   alternates: { canonical: "/collections" },
@@ -48,7 +48,7 @@ export default function Collections() {
           </Reveal>
           <Reveal delay={0.12}>
             <p className="lede">
-              A curated selection of our statement pieces — from double-height
+              A curated selection of our statement pieces, from double-height
               crystal chandeliers to facade washers. Every piece is available at{" "}
               {site.shopLabel}. Prefer something that doesn&rsquo;t exist yet?{" "}
               <a href="/customisation" style={{ color: "var(--gold)" }}>We&rsquo;ll build it.</a>

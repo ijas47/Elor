@@ -4,7 +4,7 @@ import { useState } from "react";
 import { site } from "@/lib/site";
 
 /**
- * Consultation lead form. Front-end only for now — on submit it composes a
+ * Consultation lead form. Front-end only for now, on submit it composes a
  * WhatsApp message (the picture/brief arrives with the enquiry) and shows a
  * confirmation. Swap the submit handler for a form endpoint when a backend
  * exists; the fields already map to a clean payload.
@@ -46,8 +46,8 @@ export function ConsultForm() {
           <label htmlFor="space">Type of space</label>
           <select id="space" name="space" defaultValue="">
             <option value="" disabled>Select…</option>
-            <option>Home — full house</option>
-            <option>Home — single room</option>
+            <option>Home, full house</option>
+            <option>Home, single room</option>
             <option>Villa / duplex</option>
             <option>Restaurant / café / hotel</option>
             <option>Retail / showroom</option>
@@ -83,7 +83,7 @@ export function ConsultForm() {
       </div>
       {sent && (
         <p className="form-note" role="status" style={{ color: "var(--gold)" }}>
-          Thanks — we&rsquo;ve opened WhatsApp with your details. Send the message
+          Thanks, we&rsquo;ve opened WhatsApp with your details. Send the message
           and we&rsquo;ll reply, usually the same day.
         </p>
       )}

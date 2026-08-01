@@ -119,7 +119,7 @@ export default function Home() {
               <Reveal as="span"><span className="eyebrow">Custom chandeliers · Our specialty</span></Reveal>
               <Reveal delay={0.06}><h2 className="h-lg" style={{ marginTop: 18 }}>Send us a picture.<br /><span className="serif-i">We build the light.</span></h2></Reveal>
               <Reveal delay={0.12}>
-                <p className="lede" style={{ marginTop: 22 }}>A Pinterest screenshot, a photo from a hotel lobby, a page torn from a magazine, even a rough sketch. If you can show it to us, we make it — sized to your ceiling, finished to match your interiors.</p>
+                <p className="lede" style={{ marginTop: 22 }}>A Pinterest screenshot, a photo from a hotel lobby, a page torn from a magazine, even a rough sketch. If you can show it to us, we make it, sized to your ceiling, finished to match your interiors.</p>
               </Reveal>
               <Reveal delay={0.16}>
                 <ul className="check-list">
@@ -152,7 +152,7 @@ export default function Home() {
               <Reveal delay={0.06}><h2 className="h-lg">When the fixture in<br />your render doesn&rsquo;t exist.</h2></Reveal>
             </div>
             <Reveal delay={0.12}>
-              <p className="lede">You specified a piece no showroom in the state stocks. The client loves it. Nobody can supply it. That is the call we take most often — and the one we are built to answer.</p>
+              <p className="lede">You specified a piece no showroom in the state stocks. The client loves it. Nobody can supply it. That is the call we take most often, and the one we are built to answer.</p>
             </Reveal>
           </div>
           <Stagger className="pillars">
@@ -188,7 +188,7 @@ export default function Home() {
               <Reveal delay={0.06}><h2 className="h-lg">Our showroom,<br /><span className="serif-i">in motion.</span></h2></Reveal>
             </div>
             <Reveal delay={0.12}>
-              <p className="lede">Photographs freeze light. These don&rsquo;t. A few moments from the Celestial Lights floor, where every fixture hangs lit — so you see how it moves and glows long before it reaches your ceiling.</p>
+              <p className="lede">Photographs freeze light. These don&rsquo;t. A few moments from the Celestial Lights floor, where every fixture hangs lit, so you see how it moves and glows long before it reaches your ceiling.</p>
             </Reveal>
           </div>
           <ShowroomReel />

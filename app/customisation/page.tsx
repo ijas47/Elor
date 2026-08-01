@@ -6,9 +6,9 @@ import { MagneticButton } from "@/components/motion/MagneticButton";
 import { Icon } from "@/components/ui/Icon";
 
 export const metadata: Metadata = {
-  title: "Custom Chandeliers — Send a Picture, We Build the Light",
+  title: "Custom Chandeliers · Send a Picture, We Build the Light",
   description:
-    "Elor builds custom chandeliers and statement lighting from any reference — a photo, a render, a magazine page or a sketch. Measure, design, fabricate and install, with up to 5-year warranty. Kerala & pan-India.",
+    "Elor builds custom chandeliers and statement lighting from any reference, a photo, a render, a magazine page or a sketch. Measure, design, fabricate and install, with up to 5-year warranty. Kerala & pan-India.",
   alternates: { canonical: "/customisation" },
 };
 
@@ -16,12 +16,12 @@ const faqs = [
   { q: "What can you actually make?", a: "Chandeliers, cascades, cluster pendants and statement ceiling pieces. If it hangs and it glows, it is in scope. We work in crystal, glass, metal, acrylic and LED, at any drop and diameter." },
   { q: "I only have a photo. Is that enough?", a: "Yes. The picture is the brief. A Pinterest screenshot, a hotel photo, a magazine page or a rough sketch all work. We reverse-engineer it into a buildable fixture and confirm dimensions with you." },
   { q: "How long does a custom piece take?", a: "Most pieces are designed, fabricated and installed within 3 to 6 weeks depending on size and finish. We give you a firm timeline with the quote, before you commit." },
-  { q: "What about budget?", a: "We quote firm before any commitment. You will know the full cost — fixture, delivery and installation — up front. There are no surprises after the piece is built." },
+  { q: "What about budget?", a: "We quote firm before any commitment. You will know the full cost, fixture, delivery and installation, up front. There are no surprises after the piece is built." },
   { q: "Is a custom piece serviceable later?", a: "Yes. We retain drawings and component lists, and custom pieces carry warranty up to 5 years, so a bespoke fixture stays serviceable for the long run." },
 ];
 
 const briefTypes = [
-  { icon: "render", h: "A photo or screenshot", p: "Something you saw and loved — a lobby, a Pinterest pin, a friend's home. Send it exactly as it is." },
+  { icon: "render", h: "A photo or screenshot", p: "Something you saw and loved, a lobby, a Pinterest pin, a friend's home. Send it exactly as it is." },
   { icon: "drawing", h: "A drawing or render", p: "An elevation, a 3D render, a mood image from your architect or designer. We build to it." },
   { icon: "spark", h: "Just a description", p: "No image at all? Describe the feeling and the space. We sketch options for you to choose from." },
 ];
@@ -41,7 +41,7 @@ export default function Customisation() {
               </Reveal>
               <Reveal delay={0.12}>
                 <p className="lede" style={{ marginTop: 22 }}>
-                  Any reference is a complete brief — no drawings, dimensions or
+                  Any reference is a complete brief, no drawings, dimensions or
                   lighting vocabulary required. If you can show it to us, we can
                   make it, sized to your ceiling and finished to match your room.
                 </p>
@@ -91,7 +91,7 @@ export default function Customisation() {
           <Stagger className="journey">
             {[
               { h: "Measure", p: "We confirm your ceiling height, drop, diameter and mounting so the piece fits its exact void." },
-              { h: "Design", p: "We translate your reference into a buildable design and quote it firm — before you commit." },
+              { h: "Design", p: "We translate your reference into a buildable design and quote it firm, before you commit." },
               { h: "Fabricate", p: "The piece is built by hand in our workshop, from crystal and glass to metal and LED." },
               { h: "Install", p: "Our own crew hangs, aims and tunes it, and hands you one warranty up to 5 years." },
             ].map((s) => (
@@ -109,14 +109,14 @@ export default function Customisation() {
           <div className="sec-head" style={{ justifyContent: "center", textAlign: "center", flexDirection: "column", alignItems: "center" }}>
             <Reveal as="span"><span className="eyebrow center">Send your reference</span></Reveal>
             <Reveal delay={0.06}><h2 className="h-lg">Start your custom piece.</h2></Reveal>
-            <Reveal delay={0.12}><p className="lede" style={{ textAlign: "center" }}>Tell us about the space and share your reference. The fastest way is WhatsApp — the picture arrives with your enquiry.</p></Reveal>
+            <Reveal delay={0.12}><p className="lede" style={{ textAlign: "center" }}>Tell us about the space and share your reference. The fastest way is WhatsApp, the picture arrives with your enquiry.</p></Reveal>
           </div>
           <Reveal delay={0.1}>
             <div className="form-card" style={{ textAlign: "center" }}>
               <p style={{ fontFamily: "var(--serif)", fontSize: 22, marginBottom: 10 }}>The picture is the brief.</p>
               <p className="lede" style={{ margin: "0 auto 26px", textAlign: "center" }}>
                 Send your reference image straight to us on WhatsApp and we&rsquo;ll
-                reply with feasibility, a rough budget and a timeline — usually the
+                reply with feasibility, a rough budget and a timeline, usually the
                 same day.
               </p>
               <div className="cta-ctas">

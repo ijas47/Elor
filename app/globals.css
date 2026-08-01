@@ -1,5 +1,5 @@
 /* ============================================================
-   ELOR LIGHTING — Design System v3
+   ELOR LIGHTING, Design System v3
    Dark-cinematic luxury. Obsidian canvas, champagne-gold light,
    editorial serif display over a quiet sans.
    Playfair Display (display) + Inter (body) via next/font.
@@ -160,16 +160,6 @@ h3 {
   color: var(--gold-deep);
   display: inline-flex;
   align-items: center;
-  gap: 12px;
-}
-.eyebrow::before {
-  content: "";
-  width: 26px;
-  height: 1px;
-  background: linear-gradient(90deg, var(--gold-deep), transparent);
-}
-.eyebrow.center::before {
-  background: linear-gradient(90deg, transparent, var(--gold-deep));
 }
 
 .lede {
@@ -288,7 +278,7 @@ section {
    Reveal fallback (no-JS / reduced motion still readable)
    ============================================================ */
 
-/* Route entrance — CSS keyframe always settles at opacity:1 (never stuck). */
+/* Route entrance, CSS keyframe always settles at opacity:1 (never stuck). */
 .page-enter {
   animation: pageEnter 0.55s cubic-bezier(0.16, 1, 0.3, 1) both;
 }

@@ -5,21 +5,21 @@ import { ConsultForm } from "@/components/sections/ConsultForm";
 import { Icon, type IconName } from "@/components/ui/Icon";
 
 export const metadata: Metadata = {
-  title: "Lighting Consultation — Design, Supply & Installation",
+  title: "Lighting Consultation · Design, Supply & Installation",
   description:
     "Book a free lighting consultation with Elor. A designer plans your whole space fixture-by-fixture; we supply from our own range and install it ourselves, with one warranty. Kerala & pan-India.",
   alternates: { canonical: "/consultation" },
 };
 
 const faqs = [
-  { q: "Is the consultation really free?", a: "Yes. The first session — at your site, in any of our stores, or over video — is free and carries no obligation. You only pay if you choose to go ahead." },
+  { q: "Is the consultation really free?", a: "Yes. The first session, at your site, in any of our stores, or over video, is free and carries no obligation. You only pay if you choose to go ahead." },
   { q: "Do I have to buy everything from you?", a: "No, but there's a real advantage to it: when we supply and install, one team owns quality, pricing and the warranty. No blame games between shop, designer and electrician." },
-  { q: "Can you work with my architect or interior designer?", a: "Absolutely. We work alongside architects and designers constantly — reading drawings, improving them, and coordinating on site so the scheme lands the way it was designed." },
+  { q: "Can you work with my architect or interior designer?", a: "Absolutely. We work alongside architects and designers constantly, reading drawings, improving them, and coordinating on site so the scheme lands the way it was designed." },
   { q: "Do you work outside Kerala?", a: "Yes. We deliver pan-India and run remote consultations over video with the same designers you'd meet in-store. For larger projects we travel to site." },
 ];
 
 const audiences = [
-  { icon: "spark", h: "Homeowners", p: "A room-by-room plan that makes your home feel considered, warm and expensive — without over-lighting or guesswork." },
+  { icon: "spark", h: "Homeowners", p: "A room-by-room plan that makes your home feel considered, warm and expensive, without over-lighting or guesswork." },
   { icon: "ruler", h: "Architects & designers", p: "A supply-and-install partner who reads your drawings, protects the intent, and shows up on site on schedule." },
   { icon: "shield", h: "Commercial owners", p: "Lighting tuned to keep guests longer and make product look its best, delivered on spec with project pricing." },
 ];
@@ -38,7 +38,7 @@ export default function Consultation() {
           <Reveal delay={0.12}>
             <p className="lede">
               One team plans, supplies and installs the lighting for your whole
-              space — then hands you a single warranty for all of it. Book a free
+              space, then hands you a single warranty for all of it. Book a free
               first session below.
             </p>
           </Reveal>
@@ -52,7 +52,7 @@ export default function Consultation() {
             {[
               { h: "Consult", p: "Free first session at your site, in a store, or on video. We listen before we recommend." },
               { h: "Design", p: "A fixture-by-fixture plan: positions, colour temperature, dimming zones and a transparent estimate." },
-              { h: "Supply", p: "From our own range — see it glowing in-store before you commit. Delivered pan-India." },
+              { h: "Supply", p: "From our own range, see it glowing in-store before you commit. Delivered pan-India." },
               { h: "Install", p: "Our crew installs, aims and tunes every light. One point of contact, one warranty." },
             ].map((s) => (
               <StaggerItem key={s.h}>
@@ -96,7 +96,7 @@ export default function Consultation() {
               <Reveal delay={0.12}>
                 <p className="lede" style={{ marginTop: 20 }}>
                   A few details is all we need to prepare. The fastest route is
-                  WhatsApp — send a photo or floor plan and it arrives with your
+                  WhatsApp, send a photo or floor plan and it arrives with your
                   enquiry.
                 </p>
               </Reveal>
