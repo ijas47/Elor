@@ -231,7 +231,7 @@ export default function Home() {
         <div className="wrap">
           <div className="split reverse">
             <Reveal className="split-media frame">
-              <Image src="/lifestyle/custom-install.jpg" alt="A glass leaf cascade being installed from scaffolding by the Elor crew" fill sizes="(max-width: 1020px) 100vw, 50vw" style={{ objectFit: "cover" }} />
+              <Image src="/lifestyle/hero-4.jpg" alt="A finished lounge lit end to end, a crystal ceiling fixture over warm layered lighting" fill sizes="(max-width: 1020px) 100vw, 50vw" style={{ objectFit: "cover" }} />
             </Reveal>
             <div>
               <Reveal as="span"><span className="eyebrow">Consultation & implementation</span></Reveal>
