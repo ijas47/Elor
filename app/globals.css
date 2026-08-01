@@ -1,0 +1,347 @@
+/* ============================================================
+   ELOR LIGHTING — Design System v3
+   Dark-cinematic luxury. Obsidian canvas, champagne-gold light,
+   editorial serif display over a quiet sans.
+   Playfair Display (display) + Inter (body) via next/font.
+   ============================================================ */
+
+:root {
+  /* ══ NOCTURNE palette ══
+     Warm espresso-black canvas · graduated champagne→antique brass ·
+     bone neutral tuned to 2700K glow. Never pure #000 (OLED smear). */
+
+  /* ── canvas ── */
+  --obsidian: #0b0906;
+  --ink: #100c07;
+  --ink-2: #17110a;
+  --ink-3: #201810;
+  --pearl: #ece5d6;
+  --pearl-2: #e0d7c4;
+
+  /* ── champagne → brass ── */
+  --gold-hi: #f4e4bc;
+  --gold: #e3c489;
+  --gold-deep: #b8935a;
+  --brass: #9a7743;
+  --caramel: #a9764a;
+  --glow: rgba(227, 196, 137, 0.34);
+  --glow-soft: rgba(227, 196, 137, 0.13);
+
+  /* ── text on dark ── */
+  --text: #f0e9db;
+  --text-dim: #b3a893;
+  --text-faint: #7d7362;
+
+  /* ── text on pearl ── */
+  --on-pearl: #1e1912;
+  --on-pearl-dim: #675c4c;
+
+  /* ── lines ── */
+  --line: rgba(244, 228, 188, 0.11);
+  --line-strong: rgba(244, 228, 188, 0.21);
+  --line-pearl: rgba(30, 25, 18, 0.13);
+
+  --serif: var(--font-playfair), "Playfair Display", Georgia, serif;
+  --sans: var(--font-inter), "Inter", "Segoe UI", system-ui, sans-serif;
+
+  --w: min(1240px, 92vw);
+  --w-tight: min(920px, 92vw);
+  --r: 18px;
+  --r-sm: 12px;
+  --ease: cubic-bezier(0.22, 1, 0.36, 1);
+  --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  font-family: var(--sans);
+  background: var(--obsidian);
+  color: var(--text);
+  line-height: 1.65;
+  font-size: 16px;
+  font-weight: 300;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  overflow-x: hidden;
+}
+
+img,
+svg,
+video {
+  display: block;
+  max-width: 100%;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+}
+
+::selection {
+  background: var(--gold);
+  color: #201603;
+}
+
+.wrap {
+  width: var(--w);
+  margin: 0 auto;
+}
+.wrap-tight {
+  width: var(--w-tight);
+  margin: 0 auto;
+}
+
+/* ── grain / vignette overlay for filmic depth ── */
+.grain::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+  opacity: 0.4;
+  mix-blend-mode: overlay;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.5'/%3E%3C/svg%3E");
+}
+
+/* ============================================================
+   Typography
+   ============================================================ */
+
+.display,
+h1,
+h2,
+h3 {
+  font-family: var(--serif);
+  font-weight: 400;
+  line-height: 1.08;
+  letter-spacing: -0.015em;
+}
+
+.h-xl {
+  font-size: clamp(42px, 6.6vw, 92px);
+  line-height: 1.02;
+}
+.h-lg {
+  font-size: clamp(32px, 4.6vw, 60px);
+}
+.h-md {
+  font-size: clamp(25px, 3vw, 38px);
+}
+.h-sm {
+  font-size: clamp(20px, 2.1vw, 27px);
+}
+
+.serif-i {
+  font-style: italic;
+  color: var(--gold);
+}
+
+.eyebrow {
+  font-family: var(--sans);
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.26em;
+  text-transform: uppercase;
+  color: var(--gold-deep);
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+}
+.eyebrow::before {
+  content: "";
+  width: 26px;
+  height: 1px;
+  background: linear-gradient(90deg, var(--gold-deep), transparent);
+}
+.eyebrow.center::before {
+  background: linear-gradient(90deg, transparent, var(--gold-deep));
+}
+
+.lede {
+  font-size: clamp(16px, 1.4vw, 19px);
+  color: var(--text-dim);
+  max-width: 56ch;
+  font-weight: 300;
+  line-height: 1.7;
+}
+
+/* pearl (light) sections */
+.on-pearl {
+  background: var(--pearl);
+  color: var(--on-pearl);
+}
+.on-pearl h1,
+.on-pearl h2,
+.on-pearl h3 {
+  color: var(--on-pearl);
+}
+.on-pearl .lede {
+  color: var(--on-pearl-dim);
+}
+.on-pearl .eyebrow {
+  color: var(--caramel);
+}
+
+/* ============================================================
+   Buttons
+   ============================================================ */
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-family: var(--sans);
+  font-size: 13.5px;
+  font-weight: 500;
+  letter-spacing: 0.03em;
+  padding: 16px 34px;
+  border-radius: 100px;
+  border: 1px solid transparent;
+  transition: transform 0.4s var(--ease), box-shadow 0.4s var(--ease),
+    background 0.4s var(--ease), color 0.4s var(--ease), border-color 0.4s var(--ease);
+  white-space: nowrap;
+  position: relative;
+}
+.btn-gold {
+  background: linear-gradient(135deg, var(--gold-hi), var(--gold-deep));
+  color: #211603;
+  box-shadow: 0 0 0 0 var(--glow);
+}
+.btn-gold:hover {
+  box-shadow: 0 14px 40px var(--glow);
+  transform: translateY(-2px);
+}
+.btn-ghost {
+  border-color: var(--line-strong);
+  color: var(--text);
+  background: transparent;
+}
+.btn-ghost:hover {
+  border-color: var(--gold);
+  color: var(--gold-hi);
+}
+.on-pearl .btn-ghost {
+  border-color: var(--line-pearl);
+  color: var(--on-pearl);
+}
+.on-pearl .btn-ghost:hover {
+  border-color: var(--caramel);
+  color: var(--caramel);
+}
+.btn .arr {
+  transition: transform 0.4s var(--ease);
+}
+.btn:hover .arr {
+  transform: translateX(5px);
+}
+
+/* ============================================================
+   Sections
+   ============================================================ */
+
+section {
+  position: relative;
+}
+.sec {
+  padding: clamp(80px, 11vw, 150px) 0;
+}
+.sec-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 40px;
+  margin-bottom: 64px;
+}
+.sec-head .lede {
+  margin-top: 20px;
+}
+
+.stack-sm {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+/* radial glow used behind dark sections */
+.glow-top {
+  background:
+    radial-gradient(900px 320px at 50% -5%, var(--glow-soft), transparent 65%),
+    var(--obsidian);
+}
+
+/* ============================================================
+   Reveal fallback (no-JS / reduced motion still readable)
+   ============================================================ */
+
+/* Route entrance — CSS keyframe always settles at opacity:1 (never stuck). */
+.page-enter {
+  animation: pageEnter 0.55s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+@keyframes pageEnter {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  .page-enter {
+    animation: none;
+  }
+}
+
+/* ============================================================
+   Utility
+   ============================================================ */
+
+.divider {
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--line-strong), transparent);
+  border: none;
+}
+
+.frame {
+  position: relative;
+  border-radius: var(--r);
+  overflow: hidden;
+}
+.frame::after {
+  content: "";
+  position: absolute;
+  inset: 12px;
+  border: 1px solid rgba(240, 220, 174, 0.16);
+  border-radius: 8px;
+  pointer-events: none;
+  z-index: 2;
+}
+
+@media (max-width: 900px) {
+  .sec-head {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+    margin-bottom: 44px;
+  }
+}

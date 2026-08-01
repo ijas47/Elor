@@ -1,0 +1,68 @@
+.reel {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+.item {
+  height: 100%;
+}
+.figure {
+  position: relative;
+  margin: 0;
+  border-radius: var(--r);
+  overflow: hidden;
+  border: 1px solid var(--line);
+  background: #000;
+  transition: transform 0.5s var(--ease), box-shadow 0.5s var(--ease);
+  height: 100%;
+}
+.figure:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.55);
+}
+.figure video {
+  width: 100%;
+  aspect-ratio: 9 / 16;
+  object-fit: cover;
+  display: block;
+}
+.figure figcaption {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 52px 20px 20px;
+  background: linear-gradient(transparent, rgba(6, 5, 4, 0.92) 72%);
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--gold);
+}
+.play {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  border: 1px solid rgba(240, 220, 174, 0.3);
+  background: rgba(12, 11, 9, 0.5);
+  backdrop-filter: blur(6px);
+  display: grid;
+  place-items: center;
+  color: var(--gold);
+  font-size: 10px;
+  opacity: 1;
+  transition: opacity 0.4s var(--ease);
+}
+.playing .play {
+  opacity: 0;
+}
+
+@media (max-width: 560px) {
+  .reel {
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+  }
+}

@@ -1,0 +1,31 @@
+.wrap {
+  overflow: hidden;
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+  padding: 26px 0;
+  background: var(--ink);
+  position: relative;
+  z-index: 2;
+}
+.track {
+  display: flex;
+  gap: 0;
+  width: max-content;
+  will-change: transform;
+}
+.item {
+  display: inline-flex;
+  align-items: center;
+  gap: 34px;
+  padding: 0 34px;
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: clamp(18px, 2vw, 26px);
+  color: var(--text-dim);
+  white-space: nowrap;
+}
+.star {
+  color: var(--gold-deep);
+  font-style: normal;
+  font-size: 12px;
+}

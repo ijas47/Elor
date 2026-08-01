@@ -1,0 +1,110 @@
+.hero {
+  position: relative;
+  min-height: 100svh;
+  display: flex;
+  align-items: flex-end;
+  overflow: hidden;
+  background: var(--obsidian);
+}
+.media {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+.mediaInner {
+  position: absolute;
+  inset: 0;
+  will-change: transform;
+}
+.img {
+  object-fit: cover;
+}
+.scrim {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(180deg, rgba(8, 7, 6, 0.5) 0%, rgba(8, 7, 6, 0.15) 38%, rgba(8, 7, 6, 0.82) 82%, rgba(8, 7, 6, 0.97) 100%),
+    linear-gradient(96deg, rgba(8, 7, 6, 0.85) 0%, rgba(8, 7, 6, 0.4) 46%, transparent 78%);
+}
+.vignette {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(120% 90% at 50% 40%, transparent 55%, rgba(6, 5, 4, 0.6) 100%);
+  pointer-events: none;
+}
+
+.inner {
+  position: relative;
+  z-index: 3;
+  max-width: 860px;
+  padding: 160px 0 clamp(80px, 12vh, 130px);
+}
+.title {
+  color: #fff;
+  margin: 26px 0 0;
+  text-shadow: 0 4px 40px rgba(6, 5, 4, 0.6);
+}
+.lede {
+  color: #e4dccd;
+  margin: 30px 0 40px;
+  max-width: 54ch;
+  text-shadow: 0 1px 16px rgba(6, 5, 4, 0.7);
+}
+.ctas {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+.note {
+  margin-top: 46px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 13px;
+  letter-spacing: 0.02em;
+  color: rgba(243, 237, 226, 0.55);
+}
+.dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--gold);
+  box-shadow: 0 0 12px var(--glow);
+  animation: pulse 2.6s infinite;
+  flex: none;
+}
+@keyframes pulse {
+  0%, 100% { box-shadow: 0 0 6px var(--glow); }
+  50% { box-shadow: 0 0 18px var(--gold); }
+}
+
+.scroll {
+  position: absolute;
+  right: max(4vw, calc((100vw - var(--w)) / 2));
+  bottom: 44px;
+  z-index: 3;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  font-size: 10px;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: rgba(243, 237, 226, 0.5);
+  writing-mode: vertical-rl;
+}
+.scrollLine {
+  width: 1px;
+  height: 46px;
+  background: var(--gold);
+  display: block;
+}
+
+@media (max-width: 900px) {
+  .inner {
+    padding-top: 130px;
+  }
+  .scroll {
+    display: none;
+  }
+}

@@ -1,99 +1,103 @@
-# Elor Lighting: Website Design Rationale
+# Elor Lighting — Brand & Design System (v3)
 
-A high-fidelity marketing + catalog site for **Elor Lighting**: custom chandelier
-fabrication, lighting consultation, own-supply retail, and installation. Physical
-presence via three **Celestial Lights** stores (Kannur, Kochi, Kozhikode) with
-pan-India online service.
+A premium marketing site for **Elor Lighting**: custom chandelier fabrication,
+lighting consultation, and installation. Three **Celestial Lights** experience
+stores in Kerala (Kannur, Kochi, Kozhikode) with pan-India delivery.
 
-## Commercial priority: customisation first
+Built with **Next.js (App Router) + TypeScript + Framer Motion**. Static-generated
+(SSG) and SEO/AEO-first: every page ships as server-rendered HTML with metadata,
+`sitemap.xml`, `robots.txt`, and JSON-LD schema.
 
-Customisation carries the margin, so the site is built to route traffic into it
-rather than treat it as an afterthought service page.
+---
 
-- **The insight it is built on:** architects and homeowners search online precisely
-  *because* the fixture they want is not stocked anywhere. That unanswered search is
-  the highest-intent moment in the whole funnel, and it is where a sale closes
-  fastest. Everyone now wants a piece nobody else has.
-- **The promise, stated in one line everywhere:** "Send us a picture. We will build
-  the light." Any Pinterest screenshot, magazine page, render, or rough sketch is
-  treated as a complete brief. No drawings, dimensions or lighting vocabulary
-  required from the customer.
-- **Where it appears:** `Customisation` sits immediately after `Shop Lights` in the
-  nav on every page; the homepage hero leads with "Custom chandeliers" and its
-  primary CTA is *Create a Custom Piece*; a dedicated dark band (`#custom`) and an
-  architect-facing section (`#architects`) sit high on the homepage, above the
-  showroom and consultation content.
-- **Two audiences, two arguments.** Homeowners are sold uniqueness and fit ("made to
-  your exact drop and diameter", "nobody else in your city has the same light").
-  Architects and interior designers are sold *rescue*: the specified piece is not
-  sold anywhere, so rather than substituting the nearest catalogue item and losing
-  the centrepiece of the scheme, they send the render and we build to it, quote
-  firm before commitment, and carry single-supplier accountability.
-- **Scope:** chandeliers, cascades, cluster pendants and statement ceiling pieces.
-- **Warranty:** up to **5 years**, on custom pieces as well as the standard range.
-  Drawings and component lists are retained so a bespoke piece stays serviceable.
+## Positioning
 
-## How customers decide on lighting, and how the site answers
+Customisation carries the margin, so the site routes traffic into it.
 
-| Buying behaviour | Design response |
-|---|---|
-| People shop by **room/space**, not fixture jargon ("doing up the living room", not "buying a sconce") | "Where are we lighting today?" space grid (Living, Bedroom, Outdoor & Facade, Commercial) is the first section after the hero; space links pre-filter the shop |
-| Lighting is bought on **ambience**: buyers need to *see the glow*, not a fixture on white | Dark, moody art direction throughout; every product render shows the fixture **lit**, with its light pool and beam |
-| **Anxiety about technical choices** (warmth, size, layering) stalls purchases | Ambient/Task/Accent education section positions Elor as the expert; product cards carry decision-relevant specs (2700K, dimmable, IP54) instead of jargon |
-| **Price transparency** builds trust in the Indian market | Every card shows price, compare-at price and % off in ₹ |
-| Lighting is **touch-and-see** retail: photos lie about light | Stores page sells the in-store experience ("stand under it"); store info repeated on the homepage |
-| Buyers fear **coordination failure** (designer blames electrician blames shop) | "One team, one warranty": the 4-step Consult → Design → Supply → Install journey appears on home and consultation pages; warranty of up to 5 years stated in the homepage trust bar |
-| The fixture a buyer has fallen for is often **not stocked anywhere**, and that is what sends them online | Customisation is treated as the primary offer, not a service footnote: reference-image intake, a Measure → Design → Fabricate → Install process, and an architect-specific pitch. See "Commercial priority" above |
-| **Commercial buyers** (architects, F&B, retail) decide on accountability, schedule, and ROI | Dedicated commercial section framed as "lighting that earns its keep", with project pricing and site-coordination promises |
-| Two distinct intents arrive at the site: **browse/buy** vs **plan/consult** | Dual CTAs everywhere: brass = Book Consultation (higher-value funnel), ghost = Shop |
+- **The promise, everywhere:** "Send us a picture. We build the light." Any
+  reference — a photo, a render, a magazine page, a sketch — is a complete brief.
+- **Two audiences:** homeowners are sold uniqueness and fit; architects are sold
+  *rescue* (the specified fixture nobody stocks, built to drawing, one accountable
+  supplier).
+- **Shop = handoff.** The Celestial Lights Shopify store is separate. This site
+  hosts a curated **Collections** gallery (no cart) that hands off to Celestial
+  Lights via `lib/site.ts → shopUrl`. Until Shopify is live, that link points to
+  WhatsApp. Flip `shopLive` and swap `shopUrl` when the store launches.
 
-## Brand identity (v2.0)
+---
 
-Full visual guidelines live at `brand.html` on the site. Design system modeled on a
-high-end lighting store reference the client selected: light-first gallery surfaces
-with rich black feature bands.
+## Identity — "The Celestial Drop"
 
-- **Logo, "The Luminaire Point"** (unchanged from v1): the O of ELOR is the
-  luminaire symbol from architectural lighting plans. Custom-drawn monoline
-  capitals as SVG paths: `assets/logo-wordmark.svg` (on dark),
-  `assets/logo-wordmark-dark.svg` (on light), `assets/logo-mark.svg`,
-  `assets/favicon.svg`.
-- **Palette:** Pearl `#F6F3EF` (the page), Black `#0B0A08` (feature bands: hero,
-  How-it-works, CTA, footer), Champagne gold `#E5C88F -> #C9A266` (highlighted
-  words, CTAs, icons), Caramel `#A9714B` (prices, testimonial cards),
-  Charcoal `#232120` (text).
-- **Type:** Poppins everywhere. Light 300 body, Regular 400 UI, Medium 500
-  headings (sentence case, one champagne-highlighted word max), Semibold 600
-  prices.
-- **Shape language:** pill buttons, floating dark pill navbar, 16px card
-  corners, thin gallery-frame lines inside imagery, soft shadows.
-- **Motif:** the circle-and-point recurs as eyebrow markers and nav indicators.
-- **Imagery:** real Celestial Lights showroom footage (client-supplied), processed
-  with ffmpeg (audio stripped, trimmed, graded, compressed). Hero is a crossfaded
-  montage loop (`assets/video/hero.mp4`, ~0.7MB); a homepage "Inside Celestial
-  Lights" reel plays three portrait vignettes on scroll (`assets/video/showroom-*.mp4`);
-  two featured product cards use real stills (`assets/products/photo-*.jpg`). Original
-  SVG renders remain for products without footage yet. All media stays on dark
-  backgrounds, warm 2700-3000K feel.
-- **Voice:** calm, precise, quietly confident. No exclamation marks, no hype,
-  no em dashes.
+The mark is a fine suspension descending to a glowing orb held in a thin halo
+ring: a hanging luminaire and a celestial body at once, tying Elor to *Celestial
+Lights*. Full kit (SVG masters + PNG exports, on-dark / on-light / gold, lockups,
+app icon, favicons) lives in [`brand-assets/`](brand-assets/README.md).
+
+- **Wordmark:** "ELOR" in Playfair Display 500, uppercase, ~0.2em tracking, with
+  a "LIGHTING" descriptor in Inter at ~0.42em.
+
+## Palette — "Nocturne"
+
+Warm espresso-black canvas, graduated champagne→antique-brass, bone neutral tuned
+to 2700K glow. Disciplined two-tone + neutral; richness comes from material
+treatments (grain, glass, gold hairlines, radial glows), not more hues. Tokens
+live in `app/globals.css`.
+
+| Token | Hex | Role |
+|---|---|---|
+| `--obsidian` | `#0B0906` | Primary canvas |
+| `--ink` / `--ink-2` / `--ink-3` | `#100C07` … `#201810` | Raised surfaces |
+| `--gold-hi` | `#F4E4BC` | Highlight / orb core |
+| `--gold` | `#E3C489` | Primary accent, CTAs, italic display words |
+| `--gold-deep` / `--brass` | `#B8935A` / `#9A7743` | Metal, hairlines, eyebrows |
+| `--pearl` | `#ECE5D6` | Light sections, wordmark on dark |
+| `--text` / `--text-dim` / `--text-faint` | `#F0E9DB` … `#7D7362` | Text on dark |
+
+## Typography
+
+- **Display:** Playfair Display (400/500, + italic for the one gold accent word).
+- **Body / UI:** Inter (300–600). Body is Light 300.
+- Loaded via `next/font/google` (self-hosted, no layout shift).
+
+## Shape & motion
+
+- Pill buttons, floating glass nav, 18px card radii, thin gold "frame" lines
+  inside imagery, soft radial glows behind dark bands.
+- Motion via Framer Motion, all SEO-safe (content is server-rendered; only its
+  presentation animates): hero line-mask reveal + slow zoom, scroll reveals
+  (`components/motion/Reveal.tsx`), staggered grids, magnetic buttons, running
+  marquee, on-scroll showroom video, CSS route entrance. All respect
+  `prefers-reduced-motion` (content renders fully visible when motion is off).
+
+## Voice
+
+Calm, precise, quietly confident. No exclamation marks, no hype, no em dashes.
+
+---
 
 ## Pages
 
-- `index.html`: full buying journey: hero → trust bar → shop-by-space → featured products → **customisation band** → **for architects** → showroom reel → lighting education → consultation → how it works → commercial → stores → testimonials → CTA.
-- `customisation.html`: the primary margin page. Hero ("Send us a picture. We will build the light.") → what can change → "a picture is a complete brief" (photo / drawing or render / just a description) → the architect argument → Measure, Design, Fabricate, Install → FAQ on timelines and budgets → reference brief form → CTA.
-- `shop.html`: 12-product catalog with category filters (wall / pendant / ceiling / lamp / outdoor); homepage space links deep-link to a matching filter.
-- `consultation.html`: the consultation & implementation offer, 4-step method, audience segments, lead form (front-end only; wire `js/main.js` to a backend/form service), FAQ that pre-handles objections.
-- `stores.html`: three Celestial Lights stores + "the fourth store is wherever you are" online banner.
-- `brand.html`: living brand guidelines (logo, color, type, motif, voice).
+- `/` — full journey: hero → trust → shop-by-space → featured collection →
+  customisation → for architects → showroom reel → layered-light education →
+  consultation → how it works → commercial → stores → testimonials → CTA.
+- `/collections` — curated gallery + category tiles, handoff to Celestial Lights.
+- `/customisation` — the primary margin page (reference intake, process, FAQ).
+- `/consultation` — method, audiences, lead form (WhatsApp handoff), FAQ.
+- `/stores` — three Celestial Lights stores with `LocalBusiness` schema.
+
+## SEO / AEO
+
+- SSG HTML on every route; `app/sitemap.ts`, `app/robots.ts` (AI crawlers
+  allowed); JSON-LD: `Organization` (layout), `ItemList`/`Product` (collections),
+  `LightingStore` per store (stores). Per-page metadata via the Metadata API.
 
 ## Notes / next steps
 
-- Store addresses and phone numbers are **placeholders**; replace with real details.
-- The consultation and custom-brief forms currently show a success message client-side
-  only; connect both to a form endpoint (Formspree/Google Forms/own API) or WhatsApp
-  deep link. The custom brief matters most here: it should accept an **image upload**
-  or drop straight into WhatsApp so the reference picture arrives with the enquiry,
-  since the picture is the brief.
-- Products and prices are illustrative catalog entries modeled on typical Kerala lighting retail; replace with the real Elor range.
-- Static site, no build step; deploy anywhere (GitHub Pages, Netlify, Vercel).
+- Store addresses and phone numbers are **placeholders** — replace in `lib/site.ts`.
+- Set `site.shopUrl` + `shopLive: true` when the Celestial Lights Shopify store
+  is published; every handoff link updates from that one place.
+- Consultation and custom-brief forms compose a WhatsApp message client-side.
+  Wire to a form endpoint/CRM when available (`components/sections/ConsultForm.tsx`).
+- Product copy and selection in `lib/collections.ts` are curated samples — extend
+  with the live range as needed.
+- Deploy on Vercel (`next build`).
