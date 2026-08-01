@@ -137,7 +137,7 @@ export default function Home() {
               </Reveal>
             </div>
             <Reveal delay={0.1} className="split-media frame">
-              <Image src="/collections/crystal-petal.jpg" alt="A bespoke crystal petal chandelier built to order" fill sizes="(max-width: 1020px) 100vw, 50vw" style={{ objectFit: "cover" }} />
+              <Image src="/collections/staircase-cascade.jpg" alt="A bespoke crystal cascade built to fall the full height of a stairwell" fill sizes="(max-width: 1020px) 100vw, 50vw" style={{ objectFit: "cover" }} />
             </Reveal>
           </div>
         </div>
@@ -294,7 +294,7 @@ export default function Home() {
               </Reveal>
             </div>
             <Reveal delay={0.1} className="split-media frame">
-              <Image src="/lifestyle/commercial-hall.jpg" alt="A commercial hall lit by a run of pendant chandeliers" fill sizes="(max-width: 1020px) 100vw, 50vw" style={{ objectFit: "cover" }} />
+              <Image src="/collections/acrylic-leaf.jpg" alt="A restaurant dining table lit by a feather-form statement pendant" fill sizes="(max-width: 1020px) 100vw, 50vw" style={{ objectFit: "cover" }} />
             </Reveal>
           </div>
         </div>
