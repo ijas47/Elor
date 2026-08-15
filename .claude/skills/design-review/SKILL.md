@@ -1,0 +1,1 @@
+/Users/ijasabdulla/.claude/skills/gstack/design-review/SKILL.md
