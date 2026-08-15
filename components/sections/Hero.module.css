@@ -1,3 +1,9 @@
+/* The track is as tall as the number of scenes; the hero pins inside it, so
+   scrolling scrubs the sequence instead of moving the page. */
+.track {
+  position: relative;
+  background: var(--obsidian);
+}
 .hero {
   position: relative;
   min-height: 100svh;
@@ -6,12 +12,23 @@
   overflow: hidden;
   background: var(--obsidian);
 }
+.pinned {
+  position: sticky;
+  top: 0;
+  height: 100svh;
+  min-height: 0;
+}
 .media {
   position: absolute;
   inset: 0;
   z-index: 0;
 }
-.mediaInner {
+.layer {
+  position: absolute;
+  inset: 0;
+  will-change: opacity;
+}
+.layerInner {
   position: absolute;
   inset: 0;
   will-change: transform;
@@ -39,16 +56,54 @@
   max-width: 860px;
   padding: 160px 0 clamp(80px, 12vh, 130px);
 }
+/* All scenes' copy occupies the same block, anchored to a common baseline so
+   the buttons below never move as the headline changes length. */
+.stack {
+  position: relative;
+  min-height: clamp(330px, 44vh, 470px);
+}
+.stack .copy {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  will-change: opacity, transform;
+}
+.eyebrow {
+  margin: 0;
+}
 .title {
   color: #fff;
   margin: 26px 0 0;
+  font-weight: inherit;
   text-shadow: 0 4px 40px rgba(6, 5, 4, 0.6);
 }
 .lede {
   color: #e4dccd;
-  margin: 30px 0 40px;
+  margin: 30px 0 0;
   max-width: 54ch;
   text-shadow: 0 1px 16px rgba(6, 5, 4, 0.7);
+}
+.copy + .ctas,
+.stack + .ctas {
+  margin-top: 40px;
+}
+
+/* Scene counter, mirrors the scroll cue on the other edge */
+.rail {
+  position: absolute;
+  left: max(4vw, calc((100vw - var(--w)) / 2));
+  bottom: 46px;
+  z-index: 3;
+  display: flex;
+  gap: 8px;
+}
+.tick {
+  width: 30px;
+  height: 2px;
+  border-radius: 2px;
+  background: var(--gold);
+  display: block;
 }
 .ctas {
   display: flex;
@@ -104,6 +159,40 @@
   .inner {
     padding-top: 130px;
   }
+  .scroll {
+    display: none;
+  }
+}
+
+/* Reduced motion: collapse the scrubbed track to a single static scene.
+   Done here rather than in the component because branching the rendered tree
+   on a client-only media query breaks hydration. framer-motion writes opacity
+   and transform inline, so these have to win. */
+@media (prefers-reduced-motion: reduce) {
+  .track {
+    height: 100svh !important;
+  }
+  .pinned {
+    position: relative;
+    height: 100svh;
+  }
+  .layer,
+  .layerInner,
+  .stack .copy {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+  .media .layer:not(:first-child),
+  .stack .copy:not(:first-child) {
+    display: none;
+  }
+  .stack {
+    min-height: 0;
+  }
+  .stack .copy {
+    position: relative;
+  }
+  .rail,
   .scroll {
     display: none;
   }

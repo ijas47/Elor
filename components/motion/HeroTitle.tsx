@@ -28,6 +28,11 @@ export function HeroTitle({ lines, className = "", delay = 0.15 }: Props) {
           style={{ display: "block", overflow: "hidden", paddingBottom: "0.06em" }}
         >
           <motion.span
+            // useReducedMotion is false during SSR, so the transform below is
+            // applied as `initial` on the server. framer then refuses to animate
+            // transforms for reduced-motion users, which would park the line
+            // off-screen forever. globals.css releases it, keyed off this attr.
+            data-heroline=""
             style={{ display: "block" }}
             initial={reduce ? { opacity: 0 } : { y: "108%" }}
             animate={reduce ? { opacity: 1 } : { y: "0%" }}

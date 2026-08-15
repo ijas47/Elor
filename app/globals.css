@@ -300,6 +300,14 @@ section {
   .page-enter {
     animation: none;
   }
+  /* Masked heading lines (components/motion/HeroTitle). The rise-up transform
+     is server-rendered as framer's `initial`, and framer will not animate
+     transforms for reduced-motion users, so without this the headline stays
+     hidden below its clip mask. */
+  [data-heroline] {
+    transform: none !important;
+    opacity: 1 !important;
+  }
 }
 
 /* ============================================================
