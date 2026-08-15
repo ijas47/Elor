@@ -53,14 +53,16 @@
 .inner {
   position: relative;
   z-index: 3;
-  max-width: 860px;
+  max-width: 940px;
   padding: 160px 0 clamp(80px, 12vh, 130px);
 }
 /* All scenes' copy occupies the same block, anchored to a common baseline so
-   the buttons below never move as the headline changes length. */
+   the buttons below never move as the headline changes length. The min-height
+   has to clear the tallest headline plus its lede, or a long one overflows
+   upward and slides behind the nav. */
 .stack {
   position: relative;
-  min-height: clamp(330px, 44vh, 470px);
+  min-height: clamp(360px, 50vh, 520px);
 }
 .stack .copy {
   position: absolute;
@@ -72,9 +74,14 @@
 .eyebrow {
   margin: 0;
 }
+/* A step down from .h-xl. These headlines carry an actual proposition rather
+   than three atmospheric words, and at 92px a line like "The fixture you
+   specified" breaks after four words and the block runs off the top. */
 .title {
   color: #fff;
-  margin: 26px 0 0;
+  margin: 22px 0 0;
+  font-size: clamp(34px, 4.9vw, 64px);
+  line-height: 1.05;
   font-weight: inherit;
   text-shadow: 0 4px 40px rgba(6, 5, 4, 0.6);
 }

@@ -13,10 +13,14 @@ import { HeroTitle } from "@/components/motion/HeroTitle";
 import styles from "./Hero.module.css";
 
 /**
- * Scroll-scrubbed hero. The section is four viewports tall and its contents
+ * Scroll-scrubbed hero. The section is three viewports tall and its contents
  * are pinned, so scrolling moves through a sequence of scenes rather than down
- * the page. The scenes escalate in scale (one fixture, the room, the full drop,
- * the building) and the headline changes with each one.
+ * the page.
+ *
+ * The copy follows a positioning-first structure rather than an atmospheric one:
+ * scene 1 says what Elor is and who it is for, scene 2 names the pain for the
+ * highest-intent segment, scene 3 gives the differentiator. Each headline should
+ * fail the swap test for a competitor.
  *
  * Every headline is in the DOM at build time and only its presentation
  * animates, so the pinning costs nothing in SEO.
@@ -28,52 +32,40 @@ import styles from "./Hero.module.css";
 
 const STAGES = [
   {
-    src: "/hero/stage-1-piece.jpg",
-    alt: "A custom crystal candle chandelier, lit, filling the frame",
-    eyebrow: "Custom chandeliers · Consultation · Installation",
+    src: "/hero/stage-1-custom.jpg",
+    alt: "A bespoke glass bird cascade suspended in a stairwell beside a tall window",
+    eyebrow: "Custom lighting manufacturer · Kerala, serving all of India",
     lines: [
-      <>One piece,</>,
+      <>Send any picture.</>,
       <>
-        made <i className="serif-i">once.</i>
+        Get that chandelier, <i className="serif-i">installed.</i>
       </>,
     ],
-    lede: "We build custom chandeliers from any picture you send us. A Pinterest screenshot, a render, a sketch on paper. Sized to your ceiling, finished to match your interiors.",
+    lede: "Elor builds custom chandeliers and lighting schemes for architects, interior designers and homeowners. Any reference works: a screenshot, a render, an elevation, a sketch on paper. We fabricate it to your ceiling, deliver it, and install it with our own crew.",
   },
   {
-    src: "/hero/stage-2-room.jpg",
-    alt: "A hotel lobby lounge lit by a crystal ceiling installation and warm cove lighting",
-    eyebrow: "Then the room",
+    src: "/hero/stage-2-project.jpg",
+    alt: "A hotel lobby lit by a wide crystal ceiling installation over lounge seating",
+    eyebrow: "For architects and interior designers",
     lines: [
-      <>Then the room</>,
+      <>The fixture you specified</>,
       <>
-        arranges itself <i className="serif-i">around it.</i>
+        is not sold <i className="serif-i">anywhere.</i>
       </>,
     ],
-    lede: "Ambient, task and accent light planned as one scheme, so the room has an evening as well as a daytime. We mark every fixture position with you before anything is ordered.",
+    lede: "So the scheme loses its centrepiece to whatever the nearest catalogue substitute happens to be. Send us the render or the elevation instead. We quote firm before you commit, build to the drawing at the scale your section needs, and stay one point of contact through to handover.",
   },
   {
-    src: "/hero/stage-3-void.jpg",
-    alt: "A tiered gold crystal cascade falling through a double-height space",
-    eyebrow: "Then every floor it falls through",
+    src: "/hero/stage-3-property.jpg",
+    alt: "A villa at night with its approach, lawn and facade lit as a single scheme",
+    eyebrow: "Why clients choose Elor",
     lines: [
-      <>Then every floor</>,
+      <>One team, from drawing</>,
       <>
-        it <i className="serif-i">falls through.</i>
+        to <i className="serif-i">switch-on.</i>
       </>,
     ],
-    lede: "Stairwells, voids and double-height halls are where a made-to-measure piece earns its keep. Built to your exact drop and diameter, rigged and load-fixed by our own crew.",
-  },
-  {
-    src: "/hero/stage-4-building.jpg",
-    alt: "A building facade at night, its terraces outlined in warm cove lighting",
-    eyebrow: "Then the whole building",
-    lines: [
-      <>Then the whole building,</>,
-      <>
-        from <i className="serif-i">the road.</i>
-      </>,
-    ],
-    lede: "Facade, landscape and approach lighting, designed so the building reads as one idea after dark. One team from the first sketch to the final switch-on. Pan-India, from Kerala.",
+    lede: "We manufacture from our own supply chain, deliver anywhere in India, and install with our own electricians, so nothing falls into the gap between the design and the result. Warranty of up to five years, on bespoke pieces as well as the standard range.",
   },
 ];
 
@@ -116,8 +108,10 @@ function StageMedia({
   progress: MotionValue<number>;
 }) {
   const opacity = useSceneOpacity(progress, i);
-  // a slow push-in across the scene's own window, so it never sits still
-  const scale = useTransform(progress, [i * SEG - SEG, (i + 1) * SEG], [1.13, 1.0]);
+  // A gentle push-in so the scene never sits still. Kept small on purpose: the
+  // source photos are already cropped to a wide band, and a heavier zoom on top
+  // of that reads as a blown-up snapshot rather than a wide shot.
+  const scale = useTransform(progress, [i * SEG - SEG, (i + 1) * SEG], [1.06, 1.0]);
 
   return (
     <motion.div className={styles.layer} style={{ opacity }} aria-hidden={i > 0}>
