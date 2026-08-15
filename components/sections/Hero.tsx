@@ -38,7 +38,6 @@ const STAGES = [
   {
     src: "/hero/stage-1-installation.jpg",
     alt: "A bespoke glass leaf installation suspended across a double-height lobby ceiling",
-    eyebrow: "Lighting consulting & custom lighting · By Celestial Lights",
     lines: [
       <>Perfect light is a</>,
       <>
@@ -50,7 +49,6 @@ const STAGES = [
   {
     src: "/hero/stage-2-project.jpg",
     alt: "A hotel lobby lit by a wide crystal ceiling installation over lounge seating",
-    eyebrow: "The problem",
     lines: [
       <>Most rooms are lit</>,
       <>
@@ -62,7 +60,6 @@ const STAGES = [
   {
     src: "/hero/stage-3-property.jpg",
     alt: "A villa at night with its approach, lawn and facade lit as a single scheme",
-    eyebrow: "Why clients choose Elor",
     lines: [
       <>One drawing, one supplier,</>,
       <>
@@ -153,7 +150,6 @@ function StageCopy({
       // stages that are faded out must not catch clicks or the tab order
       inert={i > 0}
     >
-      <p className={`eyebrow ${styles.eyebrow}`}>{stage.eyebrow}</p>
       {i === 0 ? (
         <HeroTitle className={`h-xl ${styles.title}`} lines={stage.lines} />
       ) : (

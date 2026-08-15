@@ -185,7 +185,6 @@ export default function Home() {
         <div className="wrap">
           <div className="sec-head">
             <div className="stack-sm">
-              <Reveal as="span"><span className="eyebrow">Selected work</span></Reveal>
               <Reveal delay={0.06}><h2 className="h-lg">Schemes we planned,<br />built and <span className="serif-i">switched on.</span></h2></Reveal>
             </div>
             <Reveal delay={0.12}>
@@ -266,28 +265,24 @@ export default function Home() {
         <div className="wrap">
           <div className="sec-head">
             <div className="stack-sm">
-              <Reveal as="span"><span className="eyebrow">The deliverable</span></Reveal>
-              <Reveal delay={0.06}><h2 className="h-lg">What a lighting plan<br />actually <span className="serif-i">contains.</span></h2></Reveal>
+              <Reveal><h2 className="h-lg">What a lighting plan<br />actually <span className="serif-i">contains.</span></h2></Reveal>
             </div>
             <Reveal delay={0.12}>
               <p className="lede">Not a quotation with fixture names on it. A drawing set your architect, your contractor and your electrician can all build from, issued before anything is ordered or any conduit is laid.</p>
             </Reveal>
           </div>
-          <Stagger className="plan-grid">
+          <Stagger className="register">
             {[
-              { n: "01", h: "Reflected ceiling plan", p: "Every fixture marked in position on your floor plan, with drop heights and beam directions. The document the electrician works from." },
-              { n: "02", h: "Circuit and switching layout", p: "What comes on with which switch, which groups dim, where the drivers sit. Decided at drawing stage, not argued about on site." },
-              { n: "03", h: "Fixture schedule", p: "Every light listed with code, finish, lamp type, colour temperature and wattage, so the specification survives handover to anyone else." },
-              { n: "04", h: "Layer breakdown per room", p: "Ambient, task and accent shown separately, so you can see what the room does at dinner and what it does at midnight." },
-              { n: "05", h: "Custom drawings", p: "For anything made to measure: scaled elevations, glass and finish samples, and a firm price before we cut a single part." },
-              { n: "06", h: "Night walkthrough", p: "We come back after install, aim the spots, set the scenes, and adjust with you in the dark. That is when a scheme is actually finished." },
+              { h: "Reflected ceiling plan", p: "Every fixture marked in position on your floor plan, with drop heights and beam directions. The document the site works from." },
+              { h: "Circuit and switching layout", p: "What comes on with which switch, which groups dim, where the drivers sit. Decided at drawing stage, not argued about on site." },
+              { h: "Fixture schedule", p: "Every light listed with code, finish, lamp type, colour temperature and wattage, so the specification survives handover to anyone else." },
+              { h: "Layer breakdown per room", p: "Ambient, task and accent shown separately, so you can see what the room does at dinner and what it does at midnight." },
+              { h: "Custom drawings", p: "For anything made to measure: scaled elevations, glass and finish samples, and a firm price before we cut a single part." },
+              { h: "Night walkthrough", p: "We come back after install, aim the spots, set the scenes, and adjust with you in the dark. That is when a scheme is actually finished." },
             ].map((s) => (
-              <StaggerItem key={s.n}>
-                <div className="plan-card">
-                  <span className="plan-num">{s.n}</span>
-                  <h3>{s.h}</h3>
-                  <p>{s.p}</p>
-                </div>
+              <StaggerItem key={s.h} className="register-row">
+                <h3>{s.h}</h3>
+                <p>{s.p}</p>
               </StaggerItem>
             ))}
           </Stagger>
