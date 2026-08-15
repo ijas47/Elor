@@ -18,10 +18,13 @@ import styles from "./Hero.module.css";
  * the page.
  *
  * The copy follows a positioning-first structure rather than an atmospheric one:
- * scene 1 says what Elor is and who it is for, scene 2 names the status quo it
- * displaces (lighting left to the wiring contractor, so the result is
- * out of proportion and off the shelf), scene 3 gives the differentiator. Each
- * headline should fail the swap test for a competitor.
+ * scene 1 says what Elor is (the consulting and custom arm of Celestial Lights)
+ * and who it is for, scene 2 names the status quo it displaces, scene 3 gives
+ * the differentiator and points at the stores. Each headline should fail the
+ * swap test for a competitor.
+ *
+ * Scene 2 attacks the default, not a trade. Naming the electrician was both
+ * needlessly rude and self-defeating, since our own crew does the installing.
  *
  * Every headline is in the DOM at build time and only its presentation
  * animates, so the pinning costs nothing in SEO.
@@ -35,38 +38,38 @@ const STAGES = [
   {
     src: "/hero/stage-1-installation.jpg",
     alt: "A bespoke glass leaf installation suspended across a double-height lobby ceiling",
-    eyebrow: "Lighting design · Manufacture · Installation",
+    eyebrow: "Lighting consulting & custom lighting · By Celestial Lights",
     lines: [
-      <>We design the light,</>,
+      <>Perfect light is a</>,
       <>
-        then <i className="serif-i">make and install it.</i>
+        question of <i className="serif-i">position.</i>
       </>,
     ],
-    lede: "Elor is a lighting design practice with its own workshop. We decide where every light falls, draw the plan, build the pieces nobody stocks, and install the whole scheme with our own crew. For architects, developers and homeowners, anywhere in India.",
+    lede: "Elor is the lighting consulting and custom manufacturing arm of Celestial Lights. We work out where every light belongs, design and build the pieces that have to be made for the space, and install the whole scheme. For architects, developers and homeowners across India.",
   },
   {
     src: "/hero/stage-2-project.jpg",
     alt: "A hotel lobby lit by a wide crystal ceiling installation over lounge seating",
-    eyebrow: "The problem we solve",
+    eyebrow: "The problem",
     lines: [
-      <>Most lighting is planned</>,
+      <>Most rooms are lit</>,
       <>
-        by the <i className="serif-i">electrician.</i>
+        by <i className="serif-i">guesswork.</i>
       </>,
     ],
-    lede: "So the chandelier is out of proportion with the ceiling, the downlights land in a grid instead of where light is wanted, and the rest is whatever the shop had in stock. Wiring is a trade. Where light falls is a design decision, and it belongs before the conduits go in.",
+    lede: "Fixtures spaced evenly across a ceiling because it looks tidy on a drawing. A chandelier sized to the catalogue rather than to the room. Nothing aimed at anything in particular. The result is bright without being designed, and once the ceiling closes it is expensive to change.",
   },
   {
     src: "/hero/stage-3-property.jpg",
     alt: "A villa at night with its approach, lawn and facade lit as a single scheme",
     eyebrow: "Why clients choose Elor",
     lines: [
-      <>One team, from the plan</>,
+      <>One drawing, one supplier,</>,
       <>
-        to the <i className="serif-i">switch-on.</i>
+        one <i className="serif-i">warranty.</i>
       </>,
     ],
-    lede: "We produce the layout, specify every fixture, manufacture whatever has to be made to measure, deliver anywhere in India and install it ourselves. One drawing, one supplier, one warranty of up to five years, and nobody to blame if a beam lands in the wrong place.",
+    lede: "We set the positions, specify every fixture, manufacture whatever has to be made to measure, and install it with our own crew. Warranty of up to five years. And three Celestial Lights stores in Kannur, Kochi and Kozhikode, if you would rather stand under it before you decide.",
   },
 ];
 

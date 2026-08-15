@@ -13,9 +13,10 @@ export function Footer() {
               <Brandmark size="lg" />
             </Link>
             <p className={styles.blurb}>
-              Custom chandeliers, lighting design and installation for homes and
-              commercial spaces. Three Celestial Lights experience stores in
-              Kerala. Serving all of India.
+              The lighting consulting and custom lighting arm of Celestial
+              Lights. We plan the positions, make what has to be made, and
+              install it. Three Celestial Lights experience stores in Kerala,
+              serving all of India.
             </p>
             <a
               href={site.shopUrl}

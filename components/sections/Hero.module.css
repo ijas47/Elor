@@ -36,12 +36,32 @@
 .img {
   object-fit: cover;
 }
+/* The copy sits in the left column, so the scrim is built to hold that field
+   dark whatever the photograph does, and to release toward the right so the
+   image is still the subject. Scene 1 is a pale ceiling: the old scrim dropped
+   to 0.15 at the exact height the headline sits, and white type disappeared
+   into it. Contrast here is measured, not judged by eye. */
 .scrim {
   position: absolute;
   inset: 0;
   background:
-    linear-gradient(180deg, rgba(8, 7, 6, 0.5) 0%, rgba(8, 7, 6, 0.15) 38%, rgba(8, 7, 6, 0.82) 82%, rgba(8, 7, 6, 0.97) 100%),
-    linear-gradient(96deg, rgba(8, 7, 6, 0.85) 0%, rgba(8, 7, 6, 0.4) 46%, transparent 78%);
+    linear-gradient(
+      100deg,
+      rgba(6, 5, 4, 0.95) 0%,
+      rgba(6, 5, 4, 0.9) 26%,
+      rgba(6, 5, 4, 0.66) 46%,
+      rgba(6, 5, 4, 0.26) 68%,
+      rgba(6, 5, 4, 0.04) 86%,
+      transparent 100%
+    ),
+    linear-gradient(
+      180deg,
+      rgba(6, 5, 4, 0.72) 0%,
+      rgba(6, 5, 4, 0.3) 24%,
+      rgba(6, 5, 4, 0.34) 56%,
+      rgba(6, 5, 4, 0.86) 88%,
+      rgba(6, 5, 4, 0.97) 100%
+    );
 }
 .vignette {
   position: absolute;
@@ -168,6 +188,18 @@
   }
   .scroll {
     display: none;
+  }
+  /* copy runs the full width here, so the wash has to be even rather than
+     weighted to one side */
+  .scrim {
+    background: linear-gradient(
+      180deg,
+      rgba(6, 5, 4, 0.8) 0%,
+      rgba(6, 5, 4, 0.62) 22%,
+      rgba(6, 5, 4, 0.68) 52%,
+      rgba(6, 5, 4, 0.9) 86%,
+      rgba(6, 5, 4, 0.98) 100%
+    );
   }
 }
 
