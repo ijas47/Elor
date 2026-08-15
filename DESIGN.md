@@ -26,15 +26,23 @@ Customisation carries the margin, so the site routes traffic into it.
 
 ---
 
-## Identity — "The Celestial Drop"
+## Identity — "The Crystal Cluster"
 
-The mark is a fine suspension descending to a glowing orb held in a thin halo
-ring: a hanging luminaire and a celestial body at once, tying Elor to *Celestial
-Lights*. Full kit (SVG masters + PNG exports, on-dark / on-light / gold, lockups,
-app icon, favicons) lives in [`brand-assets/`](brand-assets/README.md).
+The O of ELOR is not drawn, it is suspended: a scatter of 28 crystal drops holds
+the shape of the letter the way a chandelier holds the shape of a circle. Full
+kit (SVG masters + PNG exports, on-dark / on-light / gold, lockups, app icon,
+favicons) lives in [`brand-assets/`](brand-assets/README.md).
 
-- **Wordmark:** "ELOR" in Playfair Display 500, uppercase, ~0.2em tracking, with
-  a "LIGHTING" descriptor in Inter at ~0.42em.
+- **Wordmark:** artwork, not live type. Cormorant Garamond Light capitals
+  converted to outlines, tracked at 8.5% of cap height, with a "LIGHTING"
+  descriptor in Inter at ~0.42em. It is deliberately a different face from the
+  site's Playfair display type; never rebuild it in Playfair.
+- **Generated, not hand-drawn.** `brand-assets/logo-src/build-logo.py` emits
+  every SVG, the runtime assets in `public/brand/`, and the inline components
+  `components/ui/Wordmark.tsx` and `Logo.tsx`. Fixed seed, so rebuilds are
+  identical. Rerun the script rather than editing the SVGs or the components.
+- **Favicon is a separate drawing** (eight drops on an even ring): the scattered
+  cluster is illegible in a 16px browser tab.
 
 ## Palette — "Nocturne"
 

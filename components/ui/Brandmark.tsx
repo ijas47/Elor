@@ -1,9 +1,10 @@
-import { Logo } from "./Logo";
+import { Wordmark } from "./Wordmark";
 import styles from "./Brandmark.module.css";
 
 /**
- * The full brand lockup: Celestial Drop emblem + ELOR wordmark (Playfair) +
- * optional LIGHTING descriptor. Used in the nav and footer.
+ * The brand lockup: the ELOR wordmark with an optional LIGHTING descriptor
+ * beneath it. The wordmark carries its own O, so there is no separate emblem
+ * here and the name is artwork rather than live type.
  */
 export function Brandmark({
   showTag = true,
@@ -14,11 +15,8 @@ export function Brandmark({
 }) {
   return (
     <span className={`${styles.lockup} ${size === "lg" ? styles.lg : ""}`}>
-      <Logo className={styles.emblem} />
-      <span className={styles.text}>
-        <span className={styles.word}>Elor</span>
-        {showTag && <span className={styles.tag}>Lighting</span>}
-      </span>
+      <Wordmark className={styles.mark} />
+      {showTag && <span className={styles.tag}>Lighting</span>}
     </span>
   );
 }

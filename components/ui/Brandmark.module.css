@@ -1,29 +1,21 @@
 .lockup {
   display: inline-flex;
-  align-items: center;
-  gap: 11px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 6px;
   color: var(--pearl);
 }
-.emblem {
-  height: 30px;
+
+/* The crystal cluster overshoots the cap band, so cap height is only ~65% of
+   the artwork box. 26px here puts the caps at roughly 17px, level with the nav
+   type beside it. */
+.mark {
+  height: 26px;
   width: auto;
+  display: block;
   flex: none;
 }
-.text {
-  display: flex;
-  flex-direction: column;
-  line-height: 1;
-  gap: 3px;
-}
-.word {
-  font-family: var(--serif);
-  font-size: 21px;
-  font-weight: 500;
-  letter-spacing: 0.2em;
-  text-transform: uppercase;
-  color: currentColor;
-  padding-left: 0.2em; /* optical: balance the tracking */
-}
+
 .tag {
   font-family: var(--sans);
   font-size: 8.5px;
@@ -31,14 +23,13 @@
   letter-spacing: 0.42em;
   text-transform: uppercase;
   color: var(--gold-deep);
-  padding-left: 0.25em;
+  /* the E starts a little inside the artwork box, and the tracking adds a
+     trailing space, so nudge right to line the descriptor up under the E */
+  padding-left: 0.35em;
 }
 
-.lg .emblem {
-  height: 44px;
-}
-.lg .word {
-  font-size: 30px;
+.lg .mark {
+  height: 38px;
 }
 .lg .tag {
   font-size: 10px;

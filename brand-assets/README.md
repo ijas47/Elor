@@ -1,61 +1,85 @@
-# Elor Lighting — Brand Assets
+# Elor Lighting - Brand Assets
 
-Master logo kit for **Elor Lighting**. SVG is the source of truth (infinitely
-scalable, editable); PNGs are provided for convenience (email, docs, social,
-app icons). Keep this folder as the canonical reference.
+Master logo kit for **Elor Lighting**. SVG is the source of truth; PNGs are
+provided for convenience (email, docs, social, app icons). Keep this folder as
+the canonical reference.
 
-## The mark — "The Celestial Drop"
+## The mark - "The Crystal Cluster"
 
-A fine suspension descends to a glowing orb held in a thin halo ring: a hanging
-luminaire and a celestial body at once. It ties Elor to the *Celestial Lights*
-retail brand and reads clearly from a 16px favicon to a building sign.
+The O of ELOR is not drawn, it is suspended. A scatter of 28 crystal drops holds
+the shape of the letter the way a chandelier holds the shape of a circle. E, L
+and R are classical capitals; the one that matters is made of light.
+
+## Regenerating
+
+The artwork is **generated, not hand-drawn**. Do not edit the SVGs directly:
+
+```bash
+pip install fonttools
+python3 brand-assets/logo-src/build-logo.py
+```
+
+The script writes every SVG in `svg/`, the runtime assets in `public/brand/`,
+and the inline React components `components/ui/Wordmark.tsx` and
+`components/ui/Logo.tsx`. It runs off a fixed random seed, so the cluster is
+identical on every rebuild. `logo-src/` ships the two font subsets it needs
+(both SIL Open Font License), so no network access is required.
+
+To re-render the PNGs from the SVGs, any headless browser works; ImageMagick
+rasterises these fine too, since the artwork is flat fills with no gradients.
 
 ## Files
 
-### `svg/` (vector master — use these wherever possible)
+### `svg/` (vector master, use these wherever possible)
 | File | Use |
 |---|---|
-| `elor-emblem-on-dark.svg` | Emblem only, for dark backgrounds (pearl + gold) |
-| `elor-emblem-on-light.svg` | Emblem only, for light backgrounds (ink + gold) |
-| `elor-emblem-gold.svg` | Single-colour gold emblem (foil, emboss, watermark) |
-| `elor-logo-horizontal-on-dark.svg` | Full lockup (emblem + ELOR + LIGHTING), dark bg |
-| `elor-logo-horizontal-on-light.svg` | Full lockup, light bg |
-| `elor-logo-stacked-on-dark.svg` | Stacked lockup (avatars, hero, packaging) |
-| `elor-app-icon.svg` | Rounded-square app/favicon master (dark bg baked in) |
+| `elor-logo-horizontal-on-dark.svg` | Wordmark, pearl, for dark backgrounds |
+| `elor-logo-horizontal-on-light.svg` | Wordmark, ink, for light backgrounds |
+| `elor-logo-horizontal-gold.svg` | Wordmark, champagne. The primary presentation |
+| `elor-logo-stacked-on-dark.svg` | Wordmark + LIGHTING descriptor, dark bg |
+| `elor-logo-stacked-on-light.svg` | Wordmark + LIGHTING descriptor, light bg |
+| `elor-emblem-on-dark.svg` | Cluster alone, pearl |
+| `elor-emblem-on-light.svg` | Cluster alone, ink |
+| `elor-emblem-gold.svg` | Cluster alone, champagne (foil, emboss, watermark) |
+| `elor-app-icon.svg` | Rounded-square app icon (obsidian bg baked in) |
 
 ### `png/` (raster exports)
+- Wordmarks: `-1600` in horizontal on-dark / on-light / gold, stacked on-dark / on-light
 - Emblems: `-256 / -512 / -1024` in on-dark, on-light, gold
-- Lockups: `-1600` in horizontal on-dark, horizontal on-light, stacked on-dark
 - Icons: `elor-app-icon-1024`, `elor-icon-512`, `elor-apple-touch-180`,
   `elor-favicon-32`, `elor-favicon-16`
 
-> PNG lockups were rendered with the real Playfair Display font. To regenerate
-> PNGs from the SVGs on macOS: `qlmanage -t -s 2048 -o out file.svg` (WebKit,
-> renders gradients + fonts correctly — ImageMagick does not handle the radial
-> gradients).
+## Typography
 
-## Colour — "Nocturne" palette
+- **Wordmark:** Cormorant Garamond Light, converted to outlines, tracked at 8.5%
+  of cap height. It is deliberately a different face from the site's display
+  type: never rebuild the wordmark in Playfair, and never set it as live text.
+- **Descriptor:** Inter Medium, uppercase, `letter-spacing ~0.42em`.
+
+## Colour - "Nocturne" palette
 
 | Token | Hex | Use |
 |---|---|---|
 | Obsidian | `#0B0906` | Primary canvas (warm near-black) |
-| Ink | `#100C07` | Raised dark surface |
-| Champagne (hi) | `#F4E4BC` | Highlight / orb core |
-| Gold | `#E3C489` | Primary accent, CTAs |
-| Brass | `#B8935A` → `#9A7743` | Metal, hairlines, "LIGHTING" descriptor |
-| Pearl / Bone | `#ECE5D6` | Wordmark on dark, warm neutral (2700K feel) |
+| Champagne (hi) | `#F4E4BC` | Icon drops |
+| Gold | `#E3C489` | Primary wordmark colour, accents, CTAs |
+| Brass | `#B8935A` to `#9A7743` | Hairlines, "LIGHTING" descriptor |
+| Pearl | `#ECE5D6` | Wordmark on dark |
 | Ink text | `#1E1912` | Wordmark on light |
-
-## Typography
-
-- **Display / wordmark:** Playfair Display (500), uppercase, `letter-spacing ~0.2em`.
-- **Descriptor / UI / body:** Inter (300–600). "LIGHTING" descriptor at `~0.42em`.
 
 ## Usage rules
 
-- **Clear space:** keep at least the height of the emblem's orb clear on all sides.
-- **Minimum size:** emblem no smaller than 20px; horizontal lockup no smaller
-  than 110px wide.
-- **Do not:** recolour the orb away from gold, stretch, add shadows/outlines,
-  place the on-dark lockup on light (and vice-versa), or rebuild the wordmark in
-  a different typeface.
+- **One colour throughout.** Letters and cluster always share a colour. Never
+  split the cluster out in a second colour: it is a letter, not an ornament.
+- **Clear space:** keep at least the diameter of the cluster clear on all sides.
+- **Minimum size:** the cluster overshoots the cap band, so cap height is only
+  65% of the artwork box. Set the wordmark by its box and never below 24px tall
+  on screen, or 16mm wide in print. Below that, use the emblem.
+- **Favicons** use a separate drawing (eight drops on an even ring). The
+  scattered cluster turns to mush in a 16px browser tab, and thinning it does not
+  rescue it: filtering by size breaks the ring open, and a size floor fuses
+  neighbouring drops. Use `elor-app-icon.svg` / the favicon PNGs at icon sizes
+  and the real emblem everywhere else.
+- **Do not:** stretch, rotate, outline, add shadows or glows, recolour individual
+  drops, or place the on-dark wordmark on light (and vice versa). The product
+  glows; the mark does not.
