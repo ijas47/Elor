@@ -18,9 +18,10 @@ import styles from "./Hero.module.css";
  * the page.
  *
  * The copy follows a positioning-first structure rather than an atmospheric one:
- * scene 1 says what Elor is and who it is for, scene 2 names the pain for the
- * highest-intent segment, scene 3 gives the differentiator. Each headline should
- * fail the swap test for a competitor.
+ * scene 1 says what Elor is and who it is for, scene 2 names the status quo it
+ * displaces (lighting left to the wiring contractor, so the result is
+ * out of proportion and off the shelf), scene 3 gives the differentiator. Each
+ * headline should fail the swap test for a competitor.
  *
  * Every headline is in the DOM at build time and only its presentation
  * animates, so the pinning costs nothing in SEO.
@@ -32,40 +33,40 @@ import styles from "./Hero.module.css";
 
 const STAGES = [
   {
-    src: "/hero/stage-1-custom.jpg",
-    alt: "A bespoke glass bird cascade suspended in a stairwell beside a tall window",
-    eyebrow: "Custom lighting manufacturer · Kerala, serving all of India",
-    lines: [
-      <>Send any picture.</>,
-      <>
-        Get that chandelier, <i className="serif-i">installed.</i>
-      </>,
-    ],
-    lede: "Elor builds custom chandeliers and lighting schemes for architects, interior designers and homeowners. Any reference works: a screenshot, a render, an elevation, a sketch on paper. We fabricate it to your ceiling, deliver it, and install it with our own crew.",
-  },
-  {
     src: "/hero/stage-2-project.jpg",
     alt: "A hotel lobby lit by a wide crystal ceiling installation over lounge seating",
-    eyebrow: "For architects and interior designers",
+    eyebrow: "Lighting design · Manufacture · Installation",
     lines: [
-      <>The fixture you specified</>,
+      <>We design the light,</>,
       <>
-        is not sold <i className="serif-i">anywhere.</i>
+        then <i className="serif-i">make and install it.</i>
       </>,
     ],
-    lede: "So the scheme loses its centrepiece to whatever the nearest catalogue substitute happens to be. Send us the render or the elevation instead. We quote firm before you commit, build to the drawing at the scale your section needs, and stay one point of contact through to handover.",
+    lede: "Elor is a lighting design practice with its own workshop. We decide where every light falls, draw the plan, build the pieces nobody stocks, and install the whole scheme with our own crew. For architects, developers and homeowners, anywhere in India.",
+  },
+  {
+    src: "/hero/stage-1-custom.jpg",
+    alt: "A bespoke glass bird cascade suspended in a stairwell beside a tall window",
+    eyebrow: "The problem we solve",
+    lines: [
+      <>Most lighting is planned</>,
+      <>
+        by the <i className="serif-i">electrician.</i>
+      </>,
+    ],
+    lede: "So the chandelier is out of proportion with the ceiling, the downlights land in a grid instead of where light is wanted, and the rest is whatever the shop had in stock. Wiring is a trade. Where light falls is a design decision, and it belongs before the conduits go in.",
   },
   {
     src: "/hero/stage-3-property.jpg",
     alt: "A villa at night with its approach, lawn and facade lit as a single scheme",
     eyebrow: "Why clients choose Elor",
     lines: [
-      <>One team, from drawing</>,
+      <>One team, from the plan</>,
       <>
-        to <i className="serif-i">switch-on.</i>
+        to the <i className="serif-i">switch-on.</i>
       </>,
     ],
-    lede: "We manufacture from our own supply chain, deliver anywhere in India, and install with our own electricians, so nothing falls into the gap between the design and the result. Warranty of up to five years, on bespoke pieces as well as the standard range.",
+    lede: "We produce the layout, specify every fixture, manufacture whatever has to be made to measure, deliver anywhere in India and install it ourselves. One drawing, one supplier, one warranty of up to five years, and nobody to blame if a beam lands in the wrong place.",
   },
 ];
 

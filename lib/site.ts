@@ -12,10 +12,10 @@
 export const site = {
   name: "Elor Lighting",
   brand: "Elor",
-  tagline: "Custom chandeliers, lighting design & installation",
+  tagline: "Lighting design, manufacture & installation",
   domain: "https://elorlighting.in",
   description:
-    "Elor Lighting designs, builds and installs custom chandeliers and complete lighting schemes for homes and commercial spaces. Three Celestial Lights experience stores in Kerala, with pan-India delivery and installation.",
+    "Elor Lighting is a lighting design practice with its own workshop. We plan where every light falls, manufacture the custom pieces, and install the whole scheme ourselves, for architects, developers and homeowners. Three Celestial Lights experience stores in Kerala, with pan-India delivery and installation.",
   email: "hello@elorlighting.in",
   phone: "+91 90000 00000",
   phoneHref: "tel:+919000000000",
