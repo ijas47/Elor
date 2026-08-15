@@ -33,8 +33,8 @@ import styles from "./Hero.module.css";
 
 const STAGES = [
   {
-    src: "/hero/stage-2-project.jpg",
-    alt: "A hotel lobby lit by a wide crystal ceiling installation over lounge seating",
+    src: "/hero/stage-1-installation.jpg",
+    alt: "A bespoke glass leaf installation suspended across a double-height lobby ceiling",
     eyebrow: "Lighting design · Manufacture · Installation",
     lines: [
       <>We design the light,</>,
@@ -45,8 +45,8 @@ const STAGES = [
     lede: "Elor is a lighting design practice with its own workshop. We decide where every light falls, draw the plan, build the pieces nobody stocks, and install the whole scheme with our own crew. For architects, developers and homeowners, anywhere in India.",
   },
   {
-    src: "/hero/stage-1-custom.jpg",
-    alt: "A bespoke glass bird cascade suspended in a stairwell beside a tall window",
+    src: "/hero/stage-2-project.jpg",
+    alt: "A hotel lobby lit by a wide crystal ceiling installation over lounge seating",
     eyebrow: "The problem we solve",
     lines: [
       <>Most lighting is planned</>,
@@ -208,11 +208,11 @@ export function Hero() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.7, duration: 0.9, ease: [0.16, 1, 0.3, 1] }}
           >
-            <MagneticButton href="/customisation" variant="gold">
-              Create a Custom Piece <span className="arr">→</span>
+            <MagneticButton href="/consultation" variant="gold">
+              Get a Lighting Plan <span className="arr">→</span>
             </MagneticButton>
-            <MagneticButton href="/consultation" variant="ghost">
-              Book a Free Consultation
+            <MagneticButton href="/customisation" variant="ghost">
+              Create a Custom Piece
             </MagneticButton>
           </motion.div>
 

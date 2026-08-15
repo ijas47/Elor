@@ -17,7 +17,8 @@ const spaces = [
   { title: "Commercial", note: "Retail, hospitality & office", img: "/spaces/commercial.jpg", alt: "A hotel lift lobby under a wide crystal ceiling fixture, with backlit gold fluted panels", href: "/#commercial" },
 ];
 
-const featured = ["asgard-crystal-chandelier", "abstract-five-ring", "dandelion-gold", "autumn-leaves"]
+// autumn-leaves is the hero scene now, so the edit promotes crystal-petal instead
+const featured = ["asgard-crystal-chandelier", "abstract-five-ring", "dandelion-gold", "crystal-petal"]
   .map((s) => pieces.find((p) => p.slug === s)!)
   .filter(Boolean);
 
