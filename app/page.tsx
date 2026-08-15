@@ -180,6 +180,40 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Selected work */}
+      <section className="sec" id="work">
+        <div className="wrap">
+          <div className="sec-head">
+            <div className="stack-sm">
+              <Reveal as="span"><span className="eyebrow">Selected work</span></Reveal>
+              <Reveal delay={0.06}><h2 className="h-lg">Schemes we planned,<br />built and <span className="serif-i">switched on.</span></h2></Reveal>
+            </div>
+            <Reveal delay={0.12}>
+              <p className="lede">Hotels, villas, apartments and our own showroom floors. Every piece below was drawn for the space it hangs in, made in our workshop, and installed by our crew.</p>
+            </Reveal>
+          </div>
+          <Stagger className="work-grid">
+            {[
+              { src: "/work/w1-cascade.jpg", tall: true, h: "Glass bird cascade", p: "Private residence · Stairwell void", alt: "A bespoke glass bird cascade falling past a tall stairwell window" },
+              { src: "/work/w2-corridor.jpg", tall: false, h: "Lift lobby scheme", p: "Hotel · Cove, downlight & feature ceiling", alt: "A hotel lift lobby with a wide crystal ceiling fixture and backlit gold panels" },
+              { src: "/work/w3-showroom.jpg", tall: true, h: "Grand crystal chandelier", p: "Celestial Lights · Showroom floor", alt: "A large multi-tier crystal chandelier lit on the showroom floor" },
+              { src: "/work/w4-lounge.jpg", tall: false, h: "Lobby lounge", p: "Hotel · Reception & seating", alt: "A hotel reception lounge lit by warm cove lighting and a crystal ceiling" },
+              { src: "/work/w5-garden.jpg", tall: true, h: "Approach & landscape", p: "Villa · Bollards, uplights & path", alt: "A villa lawn at night lit by bollards and tree uplights" },
+            ].map((w) => (
+              <StaggerItem key={w.src} className={w.tall ? "work-item work-tall" : "work-item"}>
+                <figure className="work-fig frame">
+                  <Image src={w.src} alt={w.alt} fill sizes="(max-width: 900px) 100vw, 33vw" style={{ objectFit: "cover" }} />
+                  <figcaption className="work-cap">
+                    <strong>{w.h}</strong>
+                    <span>{w.p}</span>
+                  </figcaption>
+                </figure>
+              </StaggerItem>
+            ))}
+          </Stagger>
+        </div>
+      </section>
+
       {/* Showroom reel */}
       <section className="sec glow-top">
         <div className="wrap">
@@ -201,11 +235,11 @@ export default function Home() {
         <div className="wrap">
           <div className="sec-head">
             <div className="stack-sm">
-              <Reveal as="span"><span className="eyebrow">Why lighting goes wrong</span></Reveal>
-              <Reveal delay={0.06}><h2 className="h-lg">One tube light is not<br />a lighting plan.</h2></Reveal>
+              <Reveal as="span"><span className="eyebrow">How we plan a room</span></Reveal>
+              <Reveal delay={0.06}><h2 className="h-lg">Every room needs<br />three layers of light.</h2></Reveal>
             </div>
             <Reveal delay={0.12}>
-              <p className="lede">Great rooms layer three kinds of light. Miss a layer and the room feels flat, no matter how expensive the fixture. This is exactly what our consultants design for you.</p>
+              <p className="lede">Ambient to fill it, task to work in it, accent to give it depth. Miss a layer and the room falls flat however good the fixture is, which is why we specify all three together rather than picking lights one at a time.</p>
             </Reveal>
           </div>
           <Stagger className="pillars">
@@ -220,6 +254,39 @@ export default function Home() {
                   <h3>{c.h}</h3>
                   <p style={{ color: "var(--on-pearl-dim)" }}>{c.p}</p>
                   <p className="pillar-eg" style={{ borderColor: "var(--line-pearl)", color: "var(--caramel)" }}>{c.eg}</p>
+                </div>
+              </StaggerItem>
+            ))}
+          </Stagger>
+        </div>
+      </section>
+
+      {/* The deliverable */}
+      <section className="sec" style={{ background: "var(--ink)", borderTop: "1px solid var(--line)" }}>
+        <div className="wrap">
+          <div className="sec-head">
+            <div className="stack-sm">
+              <Reveal as="span"><span className="eyebrow">The deliverable</span></Reveal>
+              <Reveal delay={0.06}><h2 className="h-lg">What a lighting plan<br />actually <span className="serif-i">contains.</span></h2></Reveal>
+            </div>
+            <Reveal delay={0.12}>
+              <p className="lede">Not a quotation with fixture names on it. A drawing set your architect, your contractor and your electrician can all build from, issued before anything is ordered or any conduit is laid.</p>
+            </Reveal>
+          </div>
+          <Stagger className="plan-grid">
+            {[
+              { n: "01", h: "Reflected ceiling plan", p: "Every fixture marked in position on your floor plan, with drop heights and beam directions. The document the electrician works from." },
+              { n: "02", h: "Circuit and switching layout", p: "What comes on with which switch, which groups dim, where the drivers sit. Decided at drawing stage, not argued about on site." },
+              { n: "03", h: "Fixture schedule", p: "Every light listed with code, finish, lamp type, colour temperature and wattage, so the specification survives handover to anyone else." },
+              { n: "04", h: "Layer breakdown per room", p: "Ambient, task and accent shown separately, so you can see what the room does at dinner and what it does at midnight." },
+              { n: "05", h: "Custom drawings", p: "For anything made to measure: scaled elevations, glass and finish samples, and a firm price before we cut a single part." },
+              { n: "06", h: "Night walkthrough", p: "We come back after install, aim the spots, set the scenes, and adjust with you in the dark. That is when a scheme is actually finished." },
+            ].map((s) => (
+              <StaggerItem key={s.n}>
+                <div className="plan-card">
+                  <span className="plan-num">{s.n}</span>
+                  <h3>{s.h}</h3>
+                  <p>{s.p}</p>
                 </div>
               </StaggerItem>
             ))}
