@@ -11,10 +11,10 @@ import { PieceCard } from "@/components/ui/PieceCard";
 import { Icon } from "@/components/ui/Icon";
 
 const spaces = [
-  { title: "Living Room", note: "Pendants, floor lamps & accent walls", img: "/spaces/living.jpg", href: "/collections#chandeliers" },
-  { title: "Stairwells & Voids", note: "Cascades & double-height pieces", img: "/spaces/bedroom.jpg", href: "/collections#chandeliers" },
-  { title: "Outdoor & Facade", note: "Wall washers, lanterns & bollards", img: "/spaces/outdoor.jpg", href: "/collections#outdoor" },
-  { title: "Commercial", note: "Retail, hospitality & office", img: "/spaces/commercial.jpg", href: "/#commercial" },
+  { title: "Living Room", note: "Pendants, floor lamps & accent walls", img: "/spaces/living.jpg", alt: "An ornate crystal candle chandelier lighting a living room", href: "/collections#chandeliers" },
+  { title: "Stairwells & Voids", note: "Cascades & double-height pieces", img: "/spaces/bedroom.jpg", alt: "A tiered gold crystal cascade hanging the full height of a stairwell", href: "/collections#chandeliers" },
+  { title: "Outdoor & Facade", note: "Wall washers, lanterns & bollards", img: "/spaces/outdoor.jpg", alt: "A building facade at night with its terraces outlined in warm cove lighting", href: "/collections#outdoor" },
+  { title: "Commercial", note: "Retail, hospitality & office", img: "/spaces/commercial.jpg", alt: "A hotel lift lobby under a wide crystal ceiling fixture, with backlit gold fluted panels", href: "/#commercial" },
 ];
 
 const featured = ["asgard-crystal-chandelier", "abstract-five-ring", "dandelion-gold", "autumn-leaves"]
@@ -74,7 +74,7 @@ export default function Home() {
             {spaces.map((s) => (
               <StaggerItem key={s.title}>
                 <Link className="space-card" href={s.href}>
-                  <Image src={s.img} alt={`${s.title} lighting`} width={520} height={650} />
+                  <Image src={s.img} alt={s.alt} width={520} height={650} />
                   <div className="space-info">
                     <h3>{s.title}</h3>
                     <p>{s.note}</p>
