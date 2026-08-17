@@ -17,14 +17,22 @@ import styles from "./Hero.module.css";
  * are pinned, so scrolling moves through a sequence of scenes rather than down
  * the page.
  *
- * The copy follows a positioning-first structure rather than an atmospheric one:
- * scene 1 says what Elor is (the consulting and custom arm of Celestial Lights)
- * and who it is for, scene 2 names the status quo it displaces, scene 3 gives
- * the differentiator and points at the stores. Each headline should fail the
- * swap test for a competitor.
+ * The copy follows April Dunford's Sales Pitch structure, which suits a scrolled
+ * hero because it is sequential: scene 1 is the insight (lighting is decided at
+ * a construction gate, not at a showroom), scene 2 is the competitive
+ * alternative, scene 3 states the criteria a good answer has to meet and then
+ * introduces us as the only party that meets all three.
  *
- * Scene 2 attacks the default, not a trade. Naming the electrician was both
- * needlessly rude and self-defeating, since our own crew does the installing.
+ * Every headline should fail the swap test for a competitor. The claims are
+ * deliberately structural (we design, manufacture, install and warranty) rather
+ * than adjectival, because a survey of ~50 lighting firms found the category
+ * competes almost entirely on adjectives about light. Consultancies cannot copy
+ * scene 3 (no factory) and manufacturers cannot copy it either (no practice).
+ *
+ * Scene 2 describes the default without insulting the trade. It concedes the
+ * default openly, because it genuinely is the right answer for a small flat,
+ * and a fair concession is more persuasive than a put-down. It also matters
+ * commercially: electricians refer work to us, and our own crew installs.
  *
  * Every headline is in the DOM at build time and only its presentation
  * animates, so the pinning costs nothing in SEO.
@@ -39,23 +47,23 @@ const STAGES = [
     src: "/hero/stage-1-installation.jpg",
     alt: "A bespoke glass leaf installation suspended across a double-height lobby ceiling",
     lines: [
-      <>Perfect light is a</>,
+      <>Lighting is decided before</>,
       <>
-        question of <i className="serif-i">position.</i>
+        the ceiling <i className="serif-i">closes.</i>
       </>,
     ],
-    lede: "Elor is the lighting consulting and custom manufacturing arm of Celestial Lights. We work out where every light belongs, design and build the pieces that have to be made for the space, and install the whole scheme. For architects, developers and homeowners across India.",
+    lede: "By the time you can stand in the room and see it, the decisions that mattered are already buried in the ceiling. Elor plans the lighting for the whole space, builds what has to be made to measure, and installs it. For homeowners, architects and developers across India.",
   },
   {
     src: "/hero/stage-2-project.jpg",
     alt: "A hotel lobby lit by a wide crystal ceiling installation over lounge seating",
     lines: [
-      <>Most rooms are lit</>,
+      <>You are not choosing lighting.</>,
       <>
-        by <i className="serif-i">guesswork.</i>
+        You are <i className="serif-i">inheriting</i> it.
       </>,
     ],
-    lede: "Fixtures spaced evenly across a ceiling because it looks tidy on a drawing. A chandelier sized to the catalogue rather than to the room. Nothing aimed at anything in particular. The result is bright without being designed, and once the ceiling closes it is expensive to change.",
+    lede: "The electrician routes conduit from rough positions on the plan. Fixtures come from whichever shop he already knows, counted in downlights and decided by wattage. For a small flat that is fine. For a house you will live in for thirty years, nobody was ever asked how it should feel at night.",
   },
   {
     src: "/hero/stage-3-property.jpg",
@@ -66,7 +74,7 @@ const STAGES = [
         one <i className="serif-i">warranty.</i>
       </>,
     ],
-    lede: "We set the positions, specify every fixture, manufacture whatever has to be made to measure, and install it with our own crew. Warranty of up to five years. And three Celestial Lights stores in Kannur, Kochi and Kozhikode, if you would rather stand under it before you decide.",
+    lede: "Good lighting has to be decided early enough to matter, chosen by someone who is not simply selling you what is in stock, and backed by someone who still answers the phone in year three. Consultants do not manufacture. Manufacturers do not consult. We do both, and we install it ourselves.",
   },
 ];
 
