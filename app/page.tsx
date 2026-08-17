@@ -302,7 +302,7 @@ export default function Home() {
               <Reveal delay={0.12}>
                 <ul className="check-list">
                   <li><span className="tick">✓</span>A lighting designer studies your floor plan, interiors and how you use each room</li>
-                  <li><span className="tick">✓</span>You get a fixture-by-fixture plan: positions, colour temperature, dimming zones and budget</li>
+                  <li><span className="tick">✓</span>You get a fixture-by-fixture plan: positions, colour temperature and dimming zones</li>
                   <li><span className="tick">✓</span>Everything supplied from Elor&rsquo;s own range, so quality and pricing stay in our control</li>
                   <li><span className="tick">✓</span>Our crew installs, aims and tunes every light, then hands you one warranty for all of it</li>
                 </ul>

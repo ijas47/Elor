@@ -21,11 +21,12 @@ export function ConsultForm() {
       `Name: ${f.get("name") || "-"}`,
       `Phone: ${f.get("phone") || "-"}`,
       `Space: ${f.get("space") || "-"}`,
+      `Area: ${f.get("sqft") || "-"} sq ft`,
       `City: ${f.get("city") || "-"}`,
       `Stage: ${f.get("stage") || "-"}`,
       `Notes: ${f.get("notes") || "-"}`,
     ].join("\n");
-    const url = `https://wa.me/919000000000?text=${encodeURIComponent(msg)}`;
+    const url = `https://wa.me/918075884404?text=${encodeURIComponent(msg)}`;
     window.open(url, "_blank", "noopener,noreferrer");
     setSent(true);
     e.currentTarget.reset();
@@ -57,6 +58,10 @@ export function ConsultForm() {
         <div className="field">
           <label htmlFor="city">City</label>
           <input id="city" name="city" placeholder="e.g. Kochi" autoComplete="address-level2" />
+        </div>
+        <div className="field">
+          <label htmlFor="sqft">Approximate area (sq ft)</label>
+          <input id="sqft" name="sqft" placeholder="e.g. 2000" inputMode="numeric" />
         </div>
         <div className="field full">
           <label htmlFor="stage">Where are you in the project?</label>

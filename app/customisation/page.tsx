@@ -116,8 +116,7 @@ export default function Customisation() {
               <p style={{ fontFamily: "var(--serif)", fontSize: 22, marginBottom: 10 }}>The picture is the brief.</p>
               <p className="lede" style={{ margin: "0 auto 26px", textAlign: "center" }}>
                 Send your reference image straight to us on WhatsApp and we&rsquo;ll
-                reply with feasibility, a rough budget and a timeline, usually the
-                same day.
+                reply with feasibility and a timeline.
               </p>
               <div className="cta-ctas">
                 <MagneticButton href={site.whatsapp} variant="gold" external>Send on WhatsApp <span className="arr">→</span></MagneticButton>

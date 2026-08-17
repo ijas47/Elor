@@ -13,23 +13,23 @@ export const site = {
   name: "Elor Lighting",
   brand: "Elor",
   tagline: "Lighting consulting & custom lighting, by Celestial Lights",
-  domain: "https://elorlighting.in",
+  domain: "https://elorlighting.com",
   description:
     "Elor Lighting is the lighting consulting and custom lighting arm of Celestial Lights. We work out where every light belongs, design and manufacture the pieces that have to be made for the space, and install the whole scheme, for architects, developers and homeowners. Three Celestial Lights experience stores in Kerala, with pan-India delivery and installation.",
-  email: "hello@elorlighting.in",
-  phone: "+91 90000 00000",
-  phoneHref: "tel:+919000000000",
+  email: "hello@elorlighting.com",
+  phone: "+91 80758 84404",
+  phoneHref: "tel:+918075884404",
   hours: "Mon-Sat · 9:30 AM to 8:30 PM IST",
 
   // ── SHOP HANDOFF (swap when Shopify is live) ──────────────────────────────
   // e.g. "https://celestiallights.store" or the myshopify domain.
   shopUrl:
-    "https://wa.me/919000000000?text=Hi%20Elor%2C%20I%27d%20like%20to%20browse%20the%20Celestial%20Lights%20collection.",
+    "https://wa.me/918075884404?text=Hi%20Elor%2C%20I%27d%20like%20to%20browse%20the%20Celestial%20Lights%20collection.",
   shopLabel: "Celestial Lights",
   shopLive: false, // set true once the Shopify store is published
 
   whatsapp:
-    "https://wa.me/919000000000?text=Hi%20Elor%2C%20I%27m%20interested%20in%20lighting%20for%20my%20space.",
+    "https://wa.me/918075884404?text=Hi%20Elor%2C%20I%27m%20interested%20in%20lighting%20for%20my%20space.",
 
   social: {
     instagram: "https://instagram.com/elorlighting",
