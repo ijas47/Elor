@@ -372,7 +372,7 @@ export default function Home() {
               <Reveal delay={0.06}><h2 className="h-lg">See the glow<br />before you buy.</h2></Reveal>
             </div>
             <Reveal delay={0.12}>
-              <p className="lede">Photos lie about light. Our three experience stores let you stand under every fixture, compare warm against cool, and talk to people who light rooms for a living.</p>
+              <p className="lede">Photos lie about light. Our three experience stores let you stand under every fixture, compare warm against cool, and talk to people who light rooms for a living. Custom chandelier design, fabrication and installation, in person in Kannur, Kochi and Kozhikode.</p>
             </Reveal>
           </div>
           <Stagger className="stores-grid">

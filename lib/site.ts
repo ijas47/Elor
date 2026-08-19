@@ -13,7 +13,7 @@ export const site = {
   name: "Elor Lighting",
   brand: "Elor",
   tagline: "Lighting consulting & custom lighting, by Celestial Lights",
-  domain: "https://elorlighting.com",
+  domain: "https://www.elorlighting.com",
   description:
     "Elor Lighting is the lighting consulting and custom lighting arm of Celestial Lights. We work out where every light belongs, design and manufacture the pieces that have to be made for the space, and install the whole scheme, for architects, developers and homeowners. Three experience stores in Kerala, with pan-India delivery and installation.",
   // One number for the whole business, calls and WhatsApp alike, including

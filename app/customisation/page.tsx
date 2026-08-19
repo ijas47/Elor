@@ -13,6 +13,8 @@ export const metadata: Metadata = {
 };
 
 const faqs = [
+  // Also serialized into FAQPage schema below — keep questions/answers in sync
+  // with what's actually asked on the page.
   { q: "What can you actually make?", a: "Chandeliers, cascades, cluster pendants and statement ceiling pieces. If it hangs and it glows, it is in scope. We work in crystal, glass, metal, acrylic and LED, at any drop and diameter." },
   { q: "I only have a photo. Is that enough?", a: "Yes. The picture is the brief. A Pinterest screenshot, a hotel photo, a magazine page or a rough sketch all work. We reverse-engineer it into a buildable fixture and confirm dimensions with you." },
   { q: "How long does a custom piece take?", a: "Most pieces are designed, fabricated and installed within 3 to 6 weeks depending on size and finish. We give you a firm timeline with the quote, before you commit." },
@@ -26,9 +28,40 @@ const briefTypes = [
   { icon: "spark", h: "Just a description", p: "No image at all? Describe the feeling and the space. We sketch options for you to choose from." },
 ];
 
+const serviceSchema = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  name: "Custom Chandelier Fabrication",
+  serviceType: "Bespoke lighting fabrication",
+  provider: { "@type": "Organization", name: site.name, url: site.domain },
+  areaServed: "IN",
+  description:
+    "Custom chandeliers and statement lighting built from any reference photo, render or sketch: measured, designed, fabricated by hand and installed, with up to 5-year warranty.",
+  url: `${site.domain}/customisation`,
+};
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: faqs.map((f) => ({
+    "@type": "Question",
+    name: f.q,
+    acceptedAnswer: { "@type": "Answer", text: f.a },
+  })),
+};
+
 export default function Customisation() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
+
       <section className="page-hero">
         <div className="wrap">
           <div className="split" style={{ alignItems: "center" }}>
