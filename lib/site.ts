@@ -54,6 +54,11 @@ export const site = {
  * Every store deliberately carries the one company number rather than its own
  * line, so all enquiries land in a single place that can be automated. This is
  * intentional duplication, not placeholder data left behind.
+ *
+ * `geo` is locality-level (OpenStreetMap Nominatim geocoding of the address
+ * text), not a GPS-surveyed exact point — fine for LocalBusiness schema, but
+ * replace with the real coordinates if you ever pin the exact building.
+ * Kozhikode's is doubly approximate since its address is itself a placeholder.
  */
 export const stores = [
   {
@@ -65,6 +70,7 @@ export const stores = [
     phone: site.phone,
     phoneHref: site.phoneHref,
     maps: "https://maps.google.com/?q=Celestial+Lights+Chovva+Kannothumchal+Kannur+Kerala+670006",
+    geo: { lat: 11.8739191, lng: 75.3881457 },
   },
   {
     city: "Kochi",
@@ -74,6 +80,7 @@ export const stores = [
     phone: site.phone,
     phoneHref: site.phoneHref,
     maps: "https://maps.google.com/?q=Elor+Lighting+Chalakuzhy+Gandhi+Nagar+Kadavanthara+Kochi",
+    geo: { lat: 9.9889781, lng: 76.2951875 },
   },
   {
     city: "Kozhikode",
@@ -83,6 +90,7 @@ export const stores = [
     phone: site.phone,
     phoneHref: site.phoneHref,
     maps: "https://maps.google.com/?q=Mavoor+Road+Kozhikode+Kerala",
+    geo: { lat: 11.2579121, lng: 75.7987029 },
   },
 ] as const;
 

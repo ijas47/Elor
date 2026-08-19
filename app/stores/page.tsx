@@ -29,6 +29,7 @@ const localBusinessSchema = stores.map((s) => ({
   openingHours: "Mo-Sa 09:30-20:30",
   url: `${site.domain}/stores`,
   parentOrganization: { "@type": "Organization", name: site.name },
+  geo: { "@type": "GeoCoordinates", latitude: s.geo.lat, longitude: s.geo.lng },
 }));
 
 export default function Stores() {

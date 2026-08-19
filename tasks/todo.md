@@ -33,9 +33,9 @@ Verified: `npm run build` clean, all pages statically generated, canonical/schem
 - [ ] 11. No `aggregateRating`/`Review` schema anywhere
 - [x] 12. `robots.txt` `Host:` directive — fixed for free by item 2, both `sitemap` and `host` in `app/robots.ts` read the same `site.domain` constant
 - [x] 13. Sitemap `lastmod` is a build timestamp, not real freshness — done in Batch 2
-- [ ] 14. Fabrication process not marked up as `HowTo`/ordered list
-- [ ] 15. No freshness/"last updated" indicator on pages
-- [ ] 16. No `geo` coordinates on stores
+- [x] 14. Fabrication process not marked up as `HowTo`/ordered list — done in Batch 4 on `/customisation`, derived from the same `processSteps` array the page already renders (extracted from inline JSX so schema and visible content can't drift apart)
+- [~] 15. No freshness/"last updated" indicator on pages — addressed where it actually fits editorially: all 4 Guides pages show "Updated [date]" (Batch 3), Privacy/Terms already had it (Batch 1). Judgment call: not forcing a date stamp onto evergreen service pages (customisation/consultation/stores) where "freshness" isn't a meaningful signal — revisit if that judgment seems wrong
+- [x] 16. No `geo` coordinates on stores — done in Batch 4, geocoded from the address text via OpenStreetMap Nominatim (locality-level, not GPS-surveyed — noted in a code comment). Kozhikode's is doubly approximate since its address is itself still a placeholder
 - [ ] 17. Case studies lack client name/city/measurable outcome
 - [ ] 18. No press/media mentions or industry listings
 
@@ -45,7 +45,7 @@ Verified: `npm run build` clean, all pages statically generated, canonical/schem
 - [x] 20. No `BreadcrumbList` schema — done in Batch 2, all 6 subpages
 - [x] 21. No IndexNow key file — done in Batch 2 (key file only; submitting URLs on publish is a separate follow-up)
 - [ ] 22. Showroom video not linked to YouTube
-- [ ] 23. Poetic copy needs an adjacent factual sentence for citability
+- [~] 23. Poetic copy needs an adjacent factual sentence for citability — the Hero already carries one ("3 experience stores in Kerala · Kannur · Kochi · Kozhikode", always in the DOM per its own code comments), and the stores-section lede got one in Batch 1. Not touching the Hero's art-directed scene copy itself (explicitly protected, see `components/sections/Hero.tsx`'s own comments on the April Dunford structure) — checked whether other sections need the same treatment and didn't find an urgent gap, but flagging as a judgment call rather than fully closing it
 - [x] 26. `llms.txt` — not in the original audit, added in Batch 2 since the gap was real (no llms.txt existed at all)
 
 ## Off-site (not code — tracked here for visibility)
@@ -55,6 +55,19 @@ Verified: `npm run build` clean, all pages statically generated, canonical/schem
 - [ ] 25b. Bing Webmaster Tools, GA4 — still not confirmed
 
 ## Review Log
+
+### Batch 4 — 2026-08-19: quick technical wins (no Ijas input needed)
+
+`geo` coordinates on all 3 `LightingStore` schema entries (`lib/site.ts`, `app/stores/page.tsx`)
+— geocoded from the existing address text via OpenStreetMap Nominatim, locality-level
+accuracy, documented as such in a code comment (not GPS-surveyed). `HowTo` schema on
+`/customisation` (Measure → Design → Fabricate → Install), derived from the same
+`processSteps` array the page already renders in JSX so schema and visible content
+share one source. Reviewed #15 and #23 and made judgment calls rather than forcing
+changes that didn't fit — see inline notes above.
+
+`npm run build` clean, spot-checked via `next start` + curl. Committed and pushed to
+`main` 2026-08-19.
 
 ### Batch 3 — 2026-08-19: Guides section (pricing guide + 3 city pages)
 
@@ -93,8 +106,8 @@ updated (separate follow-up).
 `next start` + curl: BreadcrumbList/Article/FAQPage schema present on every new
 page, all 5 URLs in `/sitemap.xml`, Guides listed in `/llms.txt`, nav + footer
 links present, city store data (address/hours/phone) matches `lib/site.ts`
-exactly, all three price bands render correctly. Not committed/pushed — same as
-Batch 2, staged locally for review.
+exactly, all three price bands render correctly. Committed with Batch 2 and
+pushed to `main` (`ce9b67e`) 2026-08-19 — Vercel auto-deploys.
 
 ### Batch 2 — 2026-08-19
 
@@ -108,7 +121,8 @@ no `SearchAction` — no on-site search exists), `lib/schema.ts` (new,
 
 `npm run build` clean, spot-checked `/llms.txt`, `/sitemap.xml` lastmod
 values, the IndexNow key file, and breadcrumb schema presence via `next
-start` + curl. Not yet committed/pushed.
+start` + curl. Committed with Batch 3 and pushed to `main` (`ce9b67e`)
+2026-08-19 — Vercel auto-deploys.
 
 ### Batch 1 — 2026-08-19
 

@@ -29,6 +29,14 @@ const briefTypes = [
   { icon: "spark", h: "Just a description", p: "No image at all? Describe the feeling and the space. We sketch options for you to choose from." },
 ];
 
+// Also serialized into HowTo schema below — keep in sync with what's on the page.
+const processSteps = [
+  { h: "Measure", p: "We confirm your ceiling height, drop, diameter and mounting so the piece fits its exact void." },
+  { h: "Design", p: "We translate your reference into a buildable design and quote it firm, before you commit." },
+  { h: "Fabricate", p: "The piece is built by hand in our workshop, from crystal and glass to metal and LED." },
+  { h: "Install", p: "Our own crew hangs, aims and tunes it, and hands you one warranty up to 5 years." },
+];
+
 const serviceSchema = {
   "@context": "https://schema.org",
   "@type": "Service",
@@ -51,6 +59,20 @@ const faqSchema = {
   })),
 };
 
+const howToSchema = {
+  "@context": "https://schema.org",
+  "@type": "HowTo",
+  name: "How a custom chandelier is made",
+  description:
+    "The process Elor follows to turn a reference photo, render or sketch into an installed, custom-fabricated chandelier.",
+  totalTime: "P6W",
+  step: processSteps.map((s) => ({
+    "@type": "HowToStep",
+    name: s.h,
+    text: s.p,
+  })),
+};
+
 export default function Customisation() {
   return (
     <>
@@ -61,6 +83,10 @@ export default function Customisation() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(howToSchema) }}
       />
       <script
         type="application/ld+json"
@@ -129,12 +155,7 @@ export default function Customisation() {
         <div className="wrap">
           <Reveal><h2 className="h-lg" style={{ textAlign: "center", marginBottom: 64 }}>Measure. Design. <span className="serif-i">Fabricate.</span> Install.</h2></Reveal>
           <Stagger className="journey">
-            {[
-              { h: "Measure", p: "We confirm your ceiling height, drop, diameter and mounting so the piece fits its exact void." },
-              { h: "Design", p: "We translate your reference into a buildable design and quote it firm, before you commit." },
-              { h: "Fabricate", p: "The piece is built by hand in our workshop, from crystal and glass to metal and LED." },
-              { h: "Install", p: "Our own crew hangs, aims and tunes it, and hands you one warranty up to 5 years." },
-            ].map((s) => (
+            {processSteps.map((s) => (
               <StaggerItem key={s.h}>
                 <div className="j-step"><h3>{s.h}</h3><p>{s.p}</p></div>
               </StaggerItem>
