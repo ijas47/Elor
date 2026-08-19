@@ -1,0 +1,826 @@
+<title>Elor Search Strategy</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&family=IBM+Plex+Mono:wght@400;500&display=swap">
+
+<style>
+  :root {
+    --ground: #F3F5F8;
+    --surface: #FFFFFF;
+    --surface-2: #ECEFF3;
+    --ink: #101821;
+    --ink-2: #2C3742;
+    --muted: #5B6673;
+    --line: #D9DFE6;
+    --line-soft: #E7EBF0;
+    --amber: #A2620B;
+    --amber-bg: #F6EEDF;
+    --teal: #0D6357;
+    --teal-bg: #E2EFEC;
+    --clay: #9C332A;
+    --clay-bg: #F7E8E5;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --ground: #0D1116;
+      --surface: #151B22;
+      --surface-2: #1D242C;
+      --ink: #E3E8EE;
+      --ink-2: #C3CBD4;
+      --muted: #8B95A1;
+      --line: #2A333D;
+      --line-soft: #212932;
+      --amber: #E3A752;
+      --amber-bg: #2A2114;
+      --teal: #57B7A8;
+      --teal-bg: #12241F;
+      --clay: #E08476;
+      --clay-bg: #2A1815;
+    }
+  }
+
+  :root[data-theme="dark"] {
+    --ground: #0D1116;
+    --surface: #151B22;
+    --surface-2: #1D242C;
+    --ink: #E3E8EE;
+    --ink-2: #C3CBD4;
+    --muted: #8B95A1;
+    --line: #2A333D;
+    --line-soft: #212932;
+    --amber: #E3A752;
+    --amber-bg: #2A2114;
+    --teal: #57B7A8;
+    --teal-bg: #12241F;
+    --clay: #E08476;
+    --clay-bg: #2A1815;
+  }
+
+  * { box-sizing: border-box; }
+
+  body {
+    background: var(--ground);
+    color: var(--ink);
+    font-family: "Newsreader", Georgia, "Times New Roman", serif;
+    font-size: 18px;
+    line-height: 1.62;
+    margin: 0;
+    padding: 0 20px 120px;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .wrap {
+    max-width: 780px;
+    margin: 0 auto;
+  }
+
+  /* ── masthead ─────────────────────────────────────────── */
+
+  header.masthead {
+    padding: 72px 0 40px;
+    border-bottom: 1px solid var(--line);
+    margin-bottom: 48px;
+  }
+
+  .kicker {
+    font-family: "IBM Plex Mono", ui-monospace, monospace;
+    font-size: 12px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--amber);
+    margin: 0 0 20px;
+  }
+
+  h1 {
+    font-family: "Archivo", "Helvetica Neue", Arial, sans-serif;
+    font-weight: 700;
+    font-size: clamp(34px, 6vw, 50px);
+    line-height: 1.06;
+    letter-spacing: -0.022em;
+    text-wrap: balance;
+    margin: 0 0 22px;
+  }
+
+  .standfirst {
+    font-size: 20px;
+    line-height: 1.55;
+    color: var(--ink-2);
+    margin: 0 0 28px;
+    max-width: 62ch;
+  }
+
+  .meta {
+    font-family: "IBM Plex Mono", ui-monospace, monospace;
+    font-size: 12.5px;
+    color: var(--muted);
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px 20px;
+  }
+
+  /* ── sections ─────────────────────────────────────────── */
+
+  section { margin: 0 0 64px; }
+
+  h2 {
+    font-family: "Archivo", "Helvetica Neue", Arial, sans-serif;
+    font-weight: 600;
+    font-size: 27px;
+    line-height: 1.2;
+    letter-spacing: -0.014em;
+    text-wrap: balance;
+    margin: 0 0 8px;
+    padding-top: 14px;
+    border-top: 2px solid var(--ink);
+  }
+
+  h2 .num {
+    font-family: "IBM Plex Mono", ui-monospace, monospace;
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--amber);
+    display: block;
+    letter-spacing: 0.1em;
+    margin-bottom: 10px;
+  }
+
+  h3 {
+    font-family: "Archivo", "Helvetica Neue", Arial, sans-serif;
+    font-weight: 600;
+    font-size: 19px;
+    line-height: 1.3;
+    letter-spacing: -0.008em;
+    text-wrap: balance;
+    margin: 38px 0 10px;
+  }
+
+  h4 {
+    font-family: "IBM Plex Mono", ui-monospace, monospace;
+    font-weight: 500;
+    font-size: 12.5px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin: 30px 0 10px;
+  }
+
+  p { margin: 0 0 17px; max-width: 68ch; }
+
+  ul, ol { margin: 0 0 17px; padding-left: 22px; max-width: 68ch; }
+  li { margin-bottom: 8px; }
+  li::marker { color: var(--muted); }
+
+  a { color: var(--amber); text-decoration: underline; text-underline-offset: 2px; text-decoration-thickness: 1px; }
+  a:hover { text-decoration-thickness: 2px; }
+  a:focus-visible { outline: 2px solid var(--amber); outline-offset: 2px; border-radius: 2px; }
+
+  strong { font-weight: 500; color: var(--ink); }
+  em { font-style: italic; }
+
+  code, .mono {
+    font-family: "IBM Plex Mono", ui-monospace, monospace;
+    font-size: 0.845em;
+    background: var(--surface-2);
+    padding: 1px 5px;
+    border-radius: 3px;
+    color: var(--ink-2);
+  }
+
+  /* ── tables ───────────────────────────────────────────── */
+
+  .scroll {
+    overflow-x: auto;
+    margin: 24px 0 28px;
+    border: 1px solid var(--line);
+    background: var(--surface);
+  }
+
+  table {
+    border-collapse: collapse;
+    width: 100%;
+    min-width: 560px;
+    font-family: "Archivo", "Helvetica Neue", Arial, sans-serif;
+    font-size: 14.5px;
+    line-height: 1.45;
+    font-variant-numeric: tabular-nums;
+  }
+
+  th {
+    text-align: left;
+    font-weight: 600;
+    font-size: 11.5px;
+    letter-spacing: 0.09em;
+    text-transform: uppercase;
+    color: var(--muted);
+    padding: 12px 16px;
+    border-bottom: 1px solid var(--line);
+    background: var(--surface-2);
+    white-space: nowrap;
+  }
+
+  td {
+    padding: 12px 16px;
+    border-bottom: 1px solid var(--line-soft);
+    vertical-align: top;
+    color: var(--ink-2);
+  }
+
+  tr:last-child td { border-bottom: none; }
+  td:first-child { color: var(--ink); font-weight: 500; }
+  td code { font-size: 12.5px; background: none; padding: 0; }
+
+  /* ── callouts ─────────────────────────────────────────── */
+
+  .note {
+    border-left: 3px solid var(--amber);
+    background: var(--amber-bg);
+    padding: 20px 24px;
+    margin: 28px 0;
+  }
+
+  .note.risk { border-left-color: var(--clay); background: var(--clay-bg); }
+  .note.win { border-left-color: var(--teal); background: var(--teal-bg); }
+
+  .note h4 {
+    margin-top: 0;
+    color: var(--amber);
+  }
+  .note.risk h4 { color: var(--clay); }
+  .note.win h4 { color: var(--teal); }
+
+  .note p:last-child, .note ul:last-child { margin-bottom: 0; }
+
+  /* ── route tree ───────────────────────────────────────── */
+
+  pre.tree {
+    font-family: "IBM Plex Mono", ui-monospace, monospace;
+    font-size: 13px;
+    line-height: 1.72;
+    background: var(--surface);
+    border: 1px solid var(--line);
+    padding: 22px 24px;
+    overflow-x: auto;
+    margin: 24px 0 28px;
+    color: var(--ink-2);
+  }
+
+  pre.tree b { color: var(--ink); font-weight: 500; }
+  pre.tree i { color: var(--muted); font-style: normal; }
+  pre.tree u { color: var(--teal); text-decoration: none; }
+
+  /* ── status pills ─────────────────────────────────────── */
+
+  .pill {
+    display: inline-block;
+    font-family: "IBM Plex Mono", ui-monospace, monospace;
+    font-size: 10.5px;
+    letter-spacing: 0.07em;
+    text-transform: uppercase;
+    padding: 3px 8px;
+    border-radius: 2px;
+    white-space: nowrap;
+    background: var(--surface-2);
+    color: var(--muted);
+  }
+  .pill.live { background: var(--teal-bg); color: var(--teal); }
+  .pill.risk { background: var(--clay-bg); color: var(--clay); }
+  .pill.next { background: var(--amber-bg); color: var(--amber); }
+
+  /* ── checklist ────────────────────────────────────────── */
+
+  .checklist { list-style: none; padding: 0; max-width: 68ch; }
+  .checklist li {
+    padding-left: 30px;
+    position: relative;
+    margin-bottom: 13px;
+  }
+  .checklist li::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 8px;
+    width: 13px;
+    height: 13px;
+    border: 1.5px solid var(--line);
+    background: var(--surface);
+    border-radius: 2px;
+  }
+  .checklist li.done::before {
+    background: var(--teal);
+    border-color: var(--teal);
+  }
+  .checklist li.done { color: var(--muted); }
+
+  /* ── phase blocks ─────────────────────────────────────── */
+
+  .phase {
+    background: var(--surface);
+    border: 1px solid var(--line);
+    padding: 24px 26px;
+    margin: 0 0 18px;
+  }
+
+  .phase-head {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    gap: 12px;
+    margin-bottom: 6px;
+  }
+
+  .phase-num {
+    font-family: "IBM Plex Mono", ui-monospace, monospace;
+    font-size: 12px;
+    color: var(--amber);
+    letter-spacing: 0.1em;
+  }
+
+  .phase h3 { margin: 0; font-size: 18px; }
+  .phase .when {
+    font-family: "IBM Plex Mono", ui-monospace, monospace;
+    font-size: 11.5px;
+    color: var(--muted);
+    margin-left: auto;
+  }
+  .phase p, .phase ul { font-size: 16.5px; }
+  .phase > *:last-child { margin-bottom: 0; }
+
+  .gate {
+    font-family: "IBM Plex Mono", ui-monospace, monospace;
+    font-size: 12.5px;
+    line-height: 1.55;
+    color: var(--muted);
+    border-top: 1px dashed var(--line);
+    padding-top: 12px;
+    margin-top: 16px;
+  }
+  .gate b { color: var(--ink-2); font-weight: 500; }
+
+  footer {
+    border-top: 1px solid var(--line);
+    padding-top: 24px;
+    margin-top: 20px;
+    font-family: "IBM Plex Mono", ui-monospace, monospace;
+    font-size: 12.5px;
+    color: var(--muted);
+    line-height: 1.7;
+  }
+
+  @media (max-width: 600px) {
+    body { font-size: 17px; padding: 0 16px 80px; }
+    header.masthead { padding-top: 48px; }
+    .standfirst { font-size: 18px; }
+    .phase { padding: 20px; }
+    .phase .when { margin-left: 0; width: 100%; }
+  }
+</style>
+
+<div class="wrap">
+
+<header class="masthead">
+  <p class="kicker">Elor Lighting · Celestial Lights</p>
+  <h1>Owning "custom chandelier" across Kerala and India</h1>
+  <p class="standfirst">A search strategy for two brands, one business: what each domain should rank for, how to reach every Kerala city without a store in it, and what actually gets you cited by AI answer engines.</p>
+  <div class="meta">
+    <span>19 August 2026</span>
+    <span>Horizon: 6 months</span>
+    <span>Status: proposal</span>
+  </div>
+</header>
+
+<section>
+  <h2><span class="num">01</span>The starting position</h2>
+
+  <p><code>elorlighting.com</code> went live this month. Google Search Console is verified and returning zero impressions, which is exactly what a one-week-old domain should return. The technical foundation is unusually good for a site this young — canonical domain fixed, security headers, <code>BreadcrumbList</code>/<code>Article</code>/<code>FAQPage</code>/<code>HowTo</code>/<code>LightingStore</code> schema, an <code>llms.txt</code>, real <code>lastmod</code> dates, an IndexNow key, and eleven indexable pages including five content guides.</p>
+
+  <p>What the site does not have is <strong>any reason for Google to trust it yet</strong>: no named humans, no reviews, no third-party citations, no backlinks, and no presence on the directories that already rank for the queries you want. That gap — not the code — is the binding constraint for the next 90 days.</p>
+
+  <p>Two things change the picture from here. Celestial Lights is about to launch as an ecommerce site, which splits the business across two domains. And the ambition is pan-India delivery plus full Kerala coverage from a three-store physical footprint. Both are solvable. Both are easy to get wrong in ways that are expensive to undo later, which is why the architecture decisions in section 02 come before any content work.</p>
+
+  <h3>Who you are actually competing with</h3>
+
+  <p>The SERP for these queries is not held by other lighting studios. It is held by three distinct player types, and each needs a different answer.</p>
+
+  <div class="scroll">
+  <table>
+    <thead>
+      <tr><th>Competitor</th><th>What they own</th><th>How they win it</th><th>Your counter</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>White Teak</td>
+        <td>City queries nationwide, including Kochi</td>
+        <td>Programmatic city pages, doubled up on name aliases — separate pages for <code>/kochi-store/chandeliers-in-kochi/</code> and <code>/cochin/chandeliers-in-cochin/</code>. Physical stores in 9 metros. Asian Paints backing.</td>
+        <td>Cannot out-scale them. Beat them on depth per Kerala city and on custom fabrication, which they do not really do.</td>
+      </tr>
+      <tr>
+        <td>M.K Lighting</td>
+        <td>"Custom chandelier manufacturer in India"</td>
+        <td>Exact-match keyword URLs — <code>/custom-chandelier-manufacturer-in-india/</code>, <code>/chandelier-manufacturer-india/</code>. 15-year authority claim. Banquet-hall and hotel positioning.</td>
+        <td>Their pages are thin and templated. Win on real specification depth, real project evidence, and AEO structure.</td>
+      </tr>
+      <tr>
+        <td>IndiaMART, Justdial, Dial4Trade</td>
+        <td>Half the "chandeliers in [city]" results</td>
+        <td>Directory aggregation and domain authority. Nothing more.</td>
+        <td>You cannot outrank them, so <em>be listed on them</em>. Fastest available win, and they feed AI answers.</td>
+      </tr>
+      <tr>
+        <td>Platinum Lights, Ecolight India</td>
+        <td>Local Kerala retail queries</td>
+        <td>Local presence, Google Business Profiles, age</td>
+        <td>Directly beatable. They have no content layer and no schema.</td>
+      </tr>
+      <tr>
+        <td>The Living Influence</td>
+        <td>Export and NRI buyers (USA, UK, UAE, Singapore)</td>
+        <td>Explicit international shipping positioning</td>
+        <td>Validates the NRI wedge in section 05 — and you have the Kerala-side advantage they don't.</td>
+      </tr>
+    </tbody>
+  </table>
+  </div>
+
+  <div class="note win">
+    <h4>The alias finding</h4>
+    <p>White Teak running <em>both</em> <code>chandeliers-in-kochi</code> and <code>chandeliers-in-cochin</code> is not sloppiness — it is them monetising the fact that Kerala cities carry two live names. Cochin, Trivandrum, Calicut, Alleppey, Quilon, Trichur and Palghat all still pull real search volume alongside their official names, especially from NRI and older searchers. This roughly doubles the addressable Kerala keyword set and almost nobody local is covering both sides.</p>
+  </div>
+</section>
+
+<section>
+  <h2><span class="num">02</span>Two brands, one entity, zero overlap</h2>
+
+  <p>The single most consequential decision in this plan is which domain owns which query. Get it wrong and the two sites compete with each other for the same terms, splitting link equity and confusing Google about which page to rank — the classic sister-brand failure.</p>
+
+  <p>The split follows the actual business logic already encoded in <code>lib/site.ts</code>: Elor is the consulting and custom-fabrication arm, Celestial Lights is the retail brand and the experience-store estate.</p>
+
+  <div class="scroll">
+  <table>
+    <thead>
+      <tr><th></th><th>Elor — <code>elorlighting.com</code></th><th>Celestial Lights — new domain</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>Role</td><td>Service, design authority, local presence</td><td>Product catalogue, transactions</td></tr>
+      <tr><td>Search intent</td><td>Consideration and research</td><td>Transactional and product</td></tr>
+      <tr><td>Owns queries like</td><td>custom chandelier [city] · lighting designer Kerala · chandelier installation · how to choose · what does it cost · chandelier for double height living room</td><td>buy chandelier online india · crystal chandelier price · [product name] · pendant light online · chandelier under 20000</td></tr>
+      <tr><td>Page types</td><td>Service pages, city pages, guides, calculators, store pages</td><td>Collection pages, product pages, category pages</td></tr>
+      <tr><td>Core schema</td><td><code>Organization</code>, <code>LightingStore</code>, <code>Service</code>, <code>FAQPage</code>, <code>HowTo</code>, <code>Article</code>, <code>Person</code></td><td><code>Organization</code>, <code>Product</code> + <code>offers</code>, <code>ItemList</code>, <code>AggregateRating</code></td></tr>
+      <tr><td>Never publishes</td><td>Product detail pages with prices</td><td>City pages or lighting-design guides</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <h3>The hard rule</h3>
+
+  <p><strong>Elor never creates a page per product. Celestial never creates a page per city.</strong> Elor's <code>/collections</code> stays a curated gallery of 23 pieces with no individual product URLs — every piece links out to its Celestial product page. That is not a compromise; it is the thing that stops the two domains cannibalising each other, and it means Elor's gallery page accumulates all the link equity instead of spreading it across 23 thin pages.</p>
+
+  <div class="note risk">
+    <h4>The trade-off you are accepting</h4>
+    <p>Two domains split authority. A subfolder — <code>elorlighting.com/shop</code> — would consolidate everything into one growing domain and is what I would recommend if Shopify made it easy. It doesn't: subfolder hosting requires a reverse proxy and is a Shopify Plus feature. So two domains is the pragmatic answer, and the mitigations below are not optional extras — they are what buys back most of the lost authority.</p>
+  </div>
+
+  <h4>Cross-domain mitigations — do all five</h4>
+  <ol>
+    <li><strong>Mutual <code>sameAs</code> in Organization schema.</strong> Elor's Organization declares Celestial in <code>sameAs</code> and <code>parentOrganization</code>; Celestial declares Elor in <code>sameAs</code> and <code>subOrganization</code>. This tells Google they are one entity, not two unrelated sites.</li>
+    <li><strong>Identical NAP everywhere.</strong> Same phone (<code>+91 99956 19470</code>), same email pattern, same store addresses, character-for-character, on both domains and every directory listing. Inconsistent NAP is the most common local-SEO self-inflicted wound.</li>
+    <li><strong>Prominent editorial cross-links.</strong> Not a footer link. Elor's collections page links into Celestial product pages; Celestial's product pages link back to Elor for "want this customised?" and "see it in a store". Both directions, in the content body.</li>
+    <li><strong>Shared social profiles</strong> listed in both <code>sameAs</code> arrays.</li>
+    <li><strong>One Google Business Profile set</strong>, not two. Three profiles for three stores, each naming its trading brand correctly (Kannur and Kozhikode as Celestial Lights, Kochi as Elor Lighting), all linking to the right domain.</li>
+  </ol>
+</section>
+
+<section>
+  <h2><span class="num">03</span>Pan-India coverage without doorway pages</h2>
+
+  <p>You asked for city pages "buried somewhere" so they pull traffic. I want to flag one thing plainly, then give you the version that gets the same traffic without the risk.</p>
+
+  <div class="note risk">
+    <h4>Why "buried" is both risky and self-defeating</h4>
+    <p>A set of near-identical location pages, hidden from navigation, existing only to catch search traffic is the textbook definition of a <strong>doorway page</strong> — a named, actioned violation in Google's spam policies. The penalty is usually sitewide, not page-level, so it would take down the pages that are actually working.</p>
+    <p>It also doesn't work mechanically. Pages with no internal links get crawled rarely, accumulate no PageRank, and are the first candidates for "Crawled — currently not indexed". Burying a page is the most reliable way to stop it ranking.</p>
+  </div>
+
+  <p>The legitimate structure that delivers what you actually want — pan-India and full-Kerala reach, kept out of the main navigation so it doesn't clutter the brand — has three parts.</p>
+
+  <h3>1. Discoverable hub, not main nav</h3>
+  <p>A single index page at <code>/lighting</code> listing every city you serve, linked from the footer and from each store page. That is "buried" in the sense you meant — a customer browsing the brand never trips over it — while still being one click from a crawlable page. Hub-and-spoke, not orphaned.</p>
+
+  <h3>2. Two page types, honestly distinguished</h3>
+  <p>This is what separates a legitimate service-area page from a doorway page, and it is not a subtle distinction to Google:</p>
+
+  <div class="scroll">
+  <table>
+    <thead>
+      <tr><th></th><th>Store cities (3)</th><th>Service-area cities (all others)</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>URL</td><td><code>/stores/kannur</code></td><td><code>/lighting/thrissur</code></td></tr>
+      <tr><td>Claims</td><td>"Visit our Kannur store"</td><td>"We deliver and install in Thrissur from our Kochi store"</td></tr>
+      <tr><td>Schema</td><td><code>LightingStore</code> with address + <code>geo</code></td><td><code>Service</code> with <code>areaServed</code> — <strong>no address, no LocalBusiness</strong></td></tr>
+      <tr><td>Google Business Profile</td><td>Yes, one each</td><td>No</td></tr>
+      <tr><td>Content core</td><td>Store, staff, hours, directions, local projects</td><td>Delivery logistics, material guidance for that location, local project types</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <p>Publishing a fake address or <code>LocalBusiness</code> schema for a city you have no premises in is the line between aggressive and fraudulent. We stay well behind it — and the honest framing ("installed in Thrissur, dispatched from Kochi, 2 hours away") converts better anyway, because it answers the question the searcher actually has.</p>
+
+  <h3>3. Genuine differentiation per page</h3>
+  <p>Thin content is what kills location pages, and swapping a city name into a template is thin. Each service-area page is generated from a real per-city data record, so the differences are factual rather than cosmetic:</p>
+
+  <ul>
+    <li><strong>Nearest store, real distance and drive time</strong> — and what that means for site visits and installation scheduling</li>
+    <li><strong>Coastal or inland</strong> — Kerala's coastal belt is salt-laden and humid, which genuinely rules out untreated brass, iron and mild steel in favour of crystal, glass, stainless and powder-coated finishes. Real, useful, and different for Wayanad than for Alappuzha.</li>
+    <li><strong>Dominant building typology</strong> — Kochi apartments and villas, Wayanad and Idukki hill properties with high ceilings and condensation, Palakkad and Thrissur traditional courtyard homes, Kozhikode commercial and hospitality</li>
+    <li><strong>Real projects delivered there</strong> — the strongest differentiator, and the one I need data from you for</li>
+    <li><strong>City-specific FAQs</strong> — delivery window, whether a site visit is free at that distance, installation lead time</li>
+    <li><strong>Named localities</strong> within each city, which gives the page natural entity richness without keyword stuffing</li>
+  </ul>
+
+  <p>Rough target: <strong>600–900 words of genuinely unique content per page</strong>. Below that, expect indexation problems.</p>
+</section>
+
+<section>
+  <h2><span class="num">04</span>Proposed site architecture</h2>
+
+  <p>The current city guides live at <code>/guides/custom-chandeliers-kannur</code>, which collides conceptually with <code>/stores</code> and does not scale to fifty cities. They are one day old with zero traffic — this is the cheapest moment this restructure will ever be. Every moved URL gets a 301.</p>
+
+<pre class="tree">
+<b>/</b>                                  <i>home</i>
+├── <b>/collections</b>                     <i>gallery, 23 pieces → links out to Celestial</i>
+├── <b>/customisation</b>                   <i>the custom service · HowTo schema</i>
+├── <b>/consultation</b>                    <i>the booking funnel · Service schema</i>
+├── <b>/about</b>                           <u>NEW — founder, designers, workshop</u>
+│   └── <b>/about/{person}</b>              <u>NEW — Person schema, the AEO unlock</u>
+├── <b>/stores</b>                          <i>estate overview</i>
+│   ├── <b>/stores/kannur</b>               <u>NEW — LightingStore schema, absorbs city guide</u>
+│   ├── <b>/stores/kochi</b>                <u>NEW</u>
+│   └── <b>/stores/kozhikode</b>            <u>NEW</u>
+├── <b>/lighting</b>                        <u>NEW — service-area hub, footer-linked only</u>
+│   ├── <b>/lighting/thrissur</b>           <u>NEW — Service + areaServed</u>
+│   ├── <b>/lighting/thiruvananthapuram</b> <u>NEW</u>
+│   ├── <b>/lighting/kollam</b>             <u>… 11 Kerala districts, then towns, then metros</u>
+│   └── <b>/lighting/bengaluru</b>          <u>… pan-India, phase 4</u>
+├── <b>/guides</b>                          <i>editorial hub</i>
+│   ├── <b>/guides/chandelier-pricing-guide</b>          <i>live</i>
+│   ├── <b>/guides/how-to-choose-a-custom-chandelier</b> <i>live</i>
+│   ├── <b>/guides/chandelier-size-calculator</b>        <u>NEW — the link magnet</u>
+│   ├── <b>/guides/chandelier-with-ceiling-fan</b>       <u>NEW — uncontested</u>
+│   ├── <b>/guides/false-ceiling-chandelier-weight</b>   <u>NEW — uncontested</u>
+│   ├── <b>/guides/crystal-vs-glass-chandelier</b>       <u>NEW — comparison format</u>
+│   └── <b>/guides/building-in-kerala-from-abroad</b>    <u>NEW — NRI wedge</u>
+├── <b>/privacy</b> · <b>/terms</b>
+└── <b>/llms.txt</b> · <b>/sitemap.xml</b> · <b>/robots.txt</b>
+</pre>
+
+  <h4>Redirects required</h4>
+  <ul>
+    <li><code>/guides/custom-chandeliers-kannur</code> → <code>/stores/kannur</code></li>
+    <li><code>/guides/custom-chandeliers-kochi</code> → <code>/stores/kochi</code></li>
+    <li><code>/guides/custom-chandeliers-kozhikode</code> → <code>/stores/kozhikode</code></li>
+  </ul>
+
+  <h4>Code changes this implies</h4>
+  <ul>
+    <li><code>app/lighting/[city]/page.tsx</code> with <code>generateStaticParams</code> — one dynamic route replacing hand-written per-city files, so adding a city means adding a data record, not a page</li>
+    <li><code>lib/serviceAreas.ts</code> — the per-city data model (nearest store, distance, coastal flag, typology, localities, projects, FAQs)</li>
+    <li><code>app/stores/[city]/page.tsx</code> — the three store pages, reusing the existing <code>CityGuidePage</code> component and <code>stores</code> array</li>
+    <li><code>app/sitemap.ts</code> — generate from data rather than the current hardcoded array, which will not survive fifty routes</li>
+    <li><code>next.config.js</code> — <code>redirects()</code> for the three moved URLs</li>
+    <li>Split the sitemap by type once past ~50 URLs, so indexation can be diagnosed per page type in GSC</li>
+  </ul>
+</section>
+
+<section>
+  <h2><span class="num">05</span>Content that nobody else in India owns</h2>
+
+  <p>Ranking for "chandelier Kochi" against White Teak and IndiaMART is a grind. Ranking for questions nobody has answered properly is not. These are queries where Indian buyers are demonstrably underserved because the entire content corpus is Western, and where a well-structured answer gets pulled straight into AI answers.</p>
+
+  <div class="scroll">
+  <table>
+    <thead>
+      <tr><th>Wedge</th><th>Why it is uncontested</th><th>Format</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Chandelier + ceiling fan</td>
+        <td>Nearly every Indian room has a ceiling fan. Almost no Western lighting content addresses the clearance, offset and airflow problem. Highest-value gap on this list.</td>
+        <td>Guide with a clearance table and diagrams</td>
+      </tr>
+      <tr>
+        <td>False ceiling load limits</td>
+        <td>Gypsum and POP false ceilings are standard in Indian construction and cannot carry a 40 kg fixture — it needs an anchor into the RCC slab. Buyers find this out too late, contractors get it wrong.</td>
+        <td>Guide with weight thresholds by ceiling type</td>
+      </tr>
+      <tr>
+        <td>Sizing calculator</td>
+        <td>Free interactive tools earn links and get cited by AI as a resource. Room dimensions → diameter, ceiling height → drop, plus the Indian layer nobody adds: fan clearance and ceiling-load check.</td>
+        <td>Client-side calculator, no backend</td>
+      </tr>
+      <tr>
+        <td>Coastal corrosion</td>
+        <td>Kerala's coast destroys untreated metal finishes. Real, specific, verifiable, and it makes every city page more useful.</td>
+        <td>Guide + reused across city pages</td>
+      </tr>
+      <tr>
+        <td>Building in Kerala from the Gulf</td>
+        <td>Kerala's residential construction is heavily NRI-funded. Remote consultation, video handover, family site visits, shipping timelines. The Living Influence proves the demand exists; nobody owns the Kerala-side version.</td>
+        <td>Guide + a dedicated consultation path</td>
+      </tr>
+      <tr>
+        <td>Crystal vs glass vs acrylic</td>
+        <td>Comparison content is ~33% of all AI citations — the single most-cited format. You have zero comparison pages today.</td>
+        <td>Comparison table, one page per pairing</td>
+      </tr>
+      <tr>
+        <td>Traditional Kerala homes</td>
+        <td>Lighting a nalukettu courtyard, sloped tiled roofs, exposed rafters. Deeply local, culturally credible, entirely unwritten.</td>
+        <td>Guide, doubles as portfolio</td>
+      </tr>
+    </tbody>
+  </table>
+  </div>
+
+  <div class="note">
+    <h4>Query fan-out</h4>
+    <p>Google's AI features generate several related queries behind the one the user typed, then synthesise across all of them. That means a cluster of pages covering a whole topic beats one page per keyword. These seven pieces plus the two existing guides form a coherent "custom lighting in India" cluster — they should all interlink, and each should link back to <code>/guides</code> as the hub.</p>
+  </div>
+</section>
+
+<section>
+  <h2><span class="num">06</span>The AEO layer — getting cited, not just ranked</h2>
+
+  <p>AI Overviews now appear in roughly 45% of Google searches and cut clicks to websites by up to 58%. Ranking without being cited increasingly means being invisible. The Princeton GEO research ranked which interventions actually move AI citation rates, and Elor's gaps map onto the top four almost exactly.</p>
+
+  <div class="scroll">
+  <table>
+    <thead>
+      <tr><th>Lever</th><th>Measured lift</th><th>Elor today</th><th>Fix</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>Cite sources</td><td>+40%</td><td>None</td><td>Cite IS standards, BIS wiring norms, manufacturer specs in guides</td></tr>
+      <tr><td>Add statistics</td><td>+37%</td><td>Almost none</td><td>Ceiling-height thresholds, weight limits, lumens per m², lead times in days, warranty in years, project counts</td></tr>
+      <tr><td>Add quotations</td><td>+30%</td><td>None — no named humans exist on the site</td><td>Named founder and designer, quoted with title, on guides and the About page</td></tr>
+      <tr><td>Authoritative tone</td><td>+25%</td><td>Partial — copy is art-directed, not expert-voiced</td><td>Bylines with credentials, "According to…" framing</td></tr>
+      <tr><td>Keyword stuffing</td><td><strong>−10%</strong></td><td>Clean</td><td>Keep it that way — this actively hurts, unlike in classic SEO</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <div class="note risk">
+    <h4>The biggest single AEO gap is that no human being is named anywhere on the site</h4>
+    <p>Three of the top four citation levers — quotations, authoritative tone, expert attribution — all require a named person with credentials. An About page with the founder and lead designer, <code>Person</code> schema, and bylines on every guide is the highest-leverage change available, and it is blocked only on you sending me names, roles, years of experience and photos.</p>
+  </div>
+
+  <h3>Structure for extraction</h3>
+  <p>AI systems extract passages, not pages. Applied to Elor's content:</p>
+  <ul>
+    <li><strong>Lead every section with the answer.</strong> 40–60 words, self-contained, working without the surrounding context.</li>
+    <li><strong>Headings phrased as questions</strong> where the query is a question — "How heavy a chandelier can a false ceiling hold?" outranks "Ceiling Considerations".</li>
+    <li><strong>Tables beat prose</strong> for anything comparative. Numbered lists beat paragraphs for anything procedural.</li>
+    <li><strong>Dates on everything.</strong> Undated content loses to dated content. The Guides pages already carry "Updated"; extend to service pages when they change materially.</li>
+  </ul>
+
+  <p>One caution: Google explicitly warns against fragmenting content into AI-bait chunks or writing separate copy "for AI" — that risks the scaled-content-abuse policy. Everything above is just clear writing, which is why it satisfies both Google and the non-Google engines.</p>
+
+  <h3>Machine-readable layer</h3>
+  <ul>
+    <li><code>llms.txt</code> — <span class="pill live">live</span> already reads from <code>lib/guides.ts</code>, so new guides appear automatically. Extend it to name the service-area cities.</li>
+    <li><code>/pricing.md</code> — plain-text price bands for AI agents comparing options before a human ever visits. Elor's ready-collection bands are already published in the pricing guide; mirroring them as a parseable file costs nothing.</li>
+    <li>AI crawlers — <span class="pill live">clear</span> <code>robots.ts</code> allows all, including GPTBot, PerplexityBot, ClaudeBot and Google-Extended. Keep it that way.</li>
+    <li>IndexNow — key file is live, but URLs are not yet submitted on publish. Wire the submission.</li>
+  </ul>
+
+  <h3>Presence — where AI actually looks</h3>
+  <p>Brands are <strong>6.5× more likely to be cited via third-party sources than via their own domain</strong>. This is the part that cannot be coded, and it is currently at zero:</p>
+  <ul>
+    <li><strong>Google Business Profile ×3</strong> — the single highest-value action in this entire document. Local pack visibility for "chandelier Kannur" comes from GBP, not from schema. Nothing on the site substitutes for it.</li>
+    <li><strong>IndiaMART, Justdial, Dial4Trade, Sulekha</strong> — they already rank for your city queries. Being listed is the fastest route into those results and into AI answers.</li>
+    <li><strong>Houzz India</strong> — where architects and interior designers actually search, and your commercial buyer lives there</li>
+    <li><strong>YouTube</strong> — frequently cited by AI Overviews. The showroom video is already shot and currently linked nowhere.</li>
+    <li><strong>Reddit</strong> — <code>r/Kerala</code>, <code>r/india</code>, <code>r/InteriorDesign</code>. Genuine participation only; ~1.8% of all ChatGPT citations come from Reddit.</li>
+    <li><strong>Architect and builder partnerships</strong> — the most durable backlinks in this industry come from project credits</li>
+  </ul>
+</section>
+
+<section>
+  <h2><span class="num">07</span>Rollout, gated on real data</h2>
+
+  <p>Launching fifty location pages onto a two-week-old domain is the fastest known route to a thin-content classification. Each phase ships only when the previous one proves it is being indexed — which is also how we find out early whether the template is working, rather than after fifty pages of it.</p>
+
+  <div class="phase">
+    <div class="phase-head"><span class="phase-num">PHASE 0</span><h3>Foundations</h3><span class="when">Weeks 1–2</span></div>
+    <p>No new city pages. Everything here either unblocks AEO or is expensive to retrofit later.</p>
+    <ul>
+      <li>Google Business Profile ×3, claimed and fully filled — start immediately, verification takes days to weeks</li>
+      <li>About page + <code>Person</code> schema + bylines <span class="pill risk">needs your input</span></li>
+      <li>Bing Webmaster Tools, GA4, IndexNow submission on publish</li>
+      <li>Directory listings: IndiaMART, Justdial, Houzz India</li>
+      <li>Kozhikode's real address and Kochi's PIN code <span class="pill risk">needs your input</span></li>
+      <li>Restructure: <code>/stores/{city}</code>, <code>/lighting</code> hub, 301s, data-driven sitemap</li>
+    </ul>
+  </div>
+
+  <div class="phase">
+    <div class="phase-head"><span class="phase-num">PHASE 1</span><h3>Content wedges</h3><span class="when">Weeks 3–5</span></div>
+    <p>The seven uncontested guides from section 05, starting with the size calculator, ceiling-fan guide and false-ceiling guide. These build topical authority <em>before</em> the location pages arrive, so the location pages land on a domain Google already reads as knowledgeable about lighting.</p>
+    <div class="gate"><b>Gate →</b> ≥1 guide showing impressions in GSC before Phase 2 ships.</div>
+  </div>
+
+  <div class="phase">
+    <div class="phase-head"><span class="phase-num">PHASE 2</span><h3>Kerala districts</h3><span class="when">Weeks 6–9</span></div>
+    <p>The 11 remaining district headquarters — Thiruvananthapuram, Kollam, Pathanamthitta, Alappuzha, Kottayam, Idukki, Thrissur, Palakkad, Malappuram, Wayanad, Kasaragod — plus alias handling for Trivandrum, Alleppey, Quilon, Trichur, Palghat. Aliases are handled as content variants and redirects, <em>not</em> as duplicate pages.</p>
+    <div class="gate"><b>Gate →</b> ≥70% indexed and ≥50% showing impressions within 21 days. If "Crawled — currently not indexed" dominates, the template is too thin. Fix it before scaling.</div>
+  </div>
+
+  <div class="phase">
+    <div class="phase-head"><span class="phase-num">PHASE 3</span><h3>Kerala towns</h3><span class="when">Weeks 10–16</span></div>
+    <p>~25 secondary towns with real demand — Thalassery, Payyannur, Vadakara, Kalpetta, Manjeri, Perinthalmanna, Tirur, Guruvayur, Chalakudy, Aluva, Angamaly, Muvattupuzha, Thodupuzha, Changanassery, Thiruvalla, Cherthala, Kayamkulam, Attingal, Kanhangad, Ottapalam, Shoranur, Irinjalakuda, Kunnamkulam, Munnar, Kumarakom.</p>
+    <div class="gate"><b>Gate →</b> Phase 2 pages generating clicks, not just impressions.</div>
+  </div>
+
+  <div class="phase">
+    <div class="phase-head"><span class="phase-num">PHASE 4</span><h3>Pan-India metros</h3><span class="when">Month 4+</span></div>
+    <p>~15 cities where premium lighting demand is real and delivery is viable: Bengaluru, Chennai, Hyderabad, Mumbai, Pune, Delhi NCR, Ahmedabad, Coimbatore, Mysuru, Mangaluru, Kolkata, Jaipur, Chandigarh, Goa, Visakhapatnam. Different framing — no site visits, so these lead on remote consultation, shipping and installation partners.</p>
+    <div class="gate"><b>Gate →</b> Kerala pages converting. Competing with White Teak's physical stores in their own metros is the hardest fight here; do it last, from a position of authority.</div>
+  </div>
+</section>
+
+<section>
+  <h2><span class="num">08</span>Celestial Lights — decisions to make before launch</h2>
+
+  <p>These are cheap now and expensive after launch. Shopify's defaults will actively work against you on several of them.</p>
+
+  <ul>
+    <li><strong>Canonical URL discipline.</strong> Shopify serves every product at both <code>/products/x</code> and <code>/collections/y/products/x</code>. Canonicalise to <code>/products/x</code> from day one or you launch with duplicate content across the entire catalogue.</li>
+    <li><strong>Pick <code>www</code> or apex and enforce it</strong> with redirects — the exact bug that took a week to fix on Elor.</li>
+    <li><strong>Full <code>Product</code> schema</strong> — <code>offers</code>, <code>price</code>, <code>priceCurrency: INR</code>, <code>availability</code>, <code>sku</code>. Non-negotiable for AI shopping surfaces.</li>
+    <li><strong>Google Merchant Center feed</strong> from launch. Google explicitly names Merchant Center as a source for product visibility in AI Search.</li>
+    <li><strong>Review collection from the first order.</strong> <code>AggregateRating</code> is worthless without real reviews, and real reviews take months to accumulate. Start on day one. Never fabricate these — it is a manual-action risk and AI engines cross-check.</li>
+    <li><strong>Cross-domain schema and links</strong> wired at launch, not retrofitted.</li>
+    <li><strong>Flip <code>site.shopLive</code> to <code>true</code></strong> and update <code>site.shopUrl</code> — a single value in <code>lib/site.ts</code> updates every handoff across the Elor site.</li>
+    <li><strong>Do not link the staging URL publicly</strong> until the real domain is live, and <code>noindex</code> the Vercel preview.</li>
+  </ul>
+</section>
+
+<section>
+  <h2><span class="num">09</span>Measurement</h2>
+
+  <div class="scroll">
+  <table>
+    <thead><tr><th>Signal</th><th>Where</th><th>Cadence</th><th>What bad looks like</th></tr></thead>
+    <tbody>
+      <tr><td>Indexation by page type</td><td>GSC Coverage, split sitemaps</td><td>Weekly</td><td>"Crawled — currently not indexed" climbing = thin template</td></tr>
+      <tr><td>Impressions per city page</td><td>GSC Performance</td><td>Weekly</td><td>Zero impressions after 21 days = not competitive</td></tr>
+      <tr><td>Local pack presence</td><td>Manual, per store city</td><td>Monthly</td><td>Absent = GBP problem, not a site problem</td></tr>
+      <tr><td>AI citation rate</td><td>Manual: 20 queries × ChatGPT, Perplexity, AI Overviews</td><td>Monthly</td><td>Competitors cited, you absent</td></tr>
+      <tr><td>Consultation form submissions</td><td>GA4</td><td>Weekly</td><td>Traffic rising, enquiries flat = wrong intent targeted</td></tr>
+      <tr><td>Cross-domain referrals</td><td>GA4, both domains</td><td>Monthly</td><td>No flow = cross-links not working</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <p>There is no AI-specific reporting in Search Console and there won't be — Google's AI features run on core Search ranking. Standard GSC reports are the Google-side measurement; the monthly manual check is the only way to see cross-platform citation behaviour without paying for a tool.</p>
+</section>
+
+<section>
+  <h2><span class="num">10</span>What I need from you</h2>
+
+  <p>Everything blocked on you, in priority order. Most of it is small; all of it gates real work.</p>
+
+  <ul class="checklist">
+    <li><strong>Founder and team</strong> — names, roles, years in lighting, one line of background each, photos. Unblocks the About page, <code>Person</code> schema and every byline. Biggest single AEO lever.</li>
+    <li><strong>Kozhikode store's real address</strong> — currently a placeholder in <code>lib/site.ts</code>, which means its schema and geo coordinates are both wrong.</li>
+    <li><strong>Kochi PIN code</strong> — missing from the address.</li>
+    <li><strong>Google Business Profile access</strong> — or confirmation you'll claim all three yourself. Start this week; verification is slow.</li>
+    <li><strong>Projects by city</strong> — even a rough list of "we've installed in these towns" transforms service-area pages from templated to evidenced.</li>
+    <li><strong>Celestial Lights domain and launch date</strong> — so cross-domain wiring can be built rather than bolted on.</li>
+    <li><strong>Real testimonial dates</strong> — the four testimonials are real and named but undated, which weakens them as trust signals.</li>
+    <li><strong>Showroom video</strong> — upload to YouTube so it can be embedded and cited.</li>
+    <li><strong>Warranty terms in writing</strong> — "up to 5 years" appears across the site; the specifics are a citable statistic.</li>
+    <li><strong>Legal read on Privacy and Terms</strong> — drafted in good faith, never reviewed, especially the DPDP Act section.</li>
+  </ul>
+</section>
+
+<section>
+  <h2><span class="num">11</span>Start here</h2>
+
+  <p>If only three things happen in the next two weeks, these are the three. Everything else in this document compounds off them.</p>
+
+  <ol>
+    <li><strong>Claim the three Google Business Profiles.</strong> Nothing on the website substitutes for this, and verification is the long pole. Today, not next month.</li>
+    <li><strong>Send me the founder and team details.</strong> Three of the four highest-impact AI-citation levers are blocked behind a named human being.</li>
+    <li><strong>Approve the restructure</strong> so <code>/stores/{city}</code> and <code>/lighting/{city}</code> can be built on a dynamic route. Every week this waits, more content gets written into a structure that will need migrating.</li>
+  </ol>
+
+  <p>Phases 0 and 1 are almost entirely code and content I can execute without further input, once the restructure is approved and the team details arrive.</p>
+</section>
+
+<footer>
+  Elor Lighting · search strategy · 19 August 2026<br>
+  Competitor SERP data sampled 19 August 2026. Citation-lift figures from the Princeton GEO study (KDD 2024).<br>
+  Companion tracker: <code>tasks/todo.md</code> · <code>tasks/seo-strategy-actions.md</code>
+</footer>
+
+</div>

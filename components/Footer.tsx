@@ -69,9 +69,9 @@ export function Footer() {
           </span>
           <span>
             Elor Lighting · Celestial Lights ·{" "}
-            <Link href="/guides/custom-chandeliers-kannur">Kannur</Link> ·{" "}
-            <Link href="/guides/custom-chandeliers-kochi">Kochi</Link> ·{" "}
-            <Link href="/guides/custom-chandeliers-kozhikode">Kozhikode</Link>
+            <Link href="/stores/kannur">Kannur</Link> ·{" "}
+            <Link href="/stores/kochi">Kochi</Link> ·{" "}
+            <Link href="/stores/kozhikode">Kozhikode</Link>
           </span>
         </div>
       </div>

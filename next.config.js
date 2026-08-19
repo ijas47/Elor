@@ -35,6 +35,16 @@ const nextConfig = {
   async headers() {
     return [{ source: "/:path*", headers: securityHeaders }];
   },
+  // The three city guides moved to /stores/{city} when store pages became the
+  // canonical local entity. Permanent so link equity and any existing index
+  // entries follow.
+  async redirects() {
+    return ["kannur", "kochi", "kozhikode"].map((city) => ({
+      source: `/guides/custom-chandeliers-${city}`,
+      destination: `/stores/${city}`,
+      permanent: true,
+    }));
+  },
 };
 
 module.exports = nextConfig;

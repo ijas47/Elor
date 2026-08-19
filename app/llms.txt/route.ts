@@ -17,8 +17,9 @@ export async function GET() {
 - [Collections](${site.domain}/collections): curated lighting collections
 - [Customisation](${site.domain}/customisation): custom chandelier fabrication from a photo, render or sketch
 - [Consultation](${site.domain}/consultation): book a lighting design consultation
-- [Stores](${site.domain}/stores): the three experience stores (${stores.map((s) => s.city).join(", ")})
-- [Guides](${site.domain}/guides): pricing and city guides — ${guides.map((g) => g.title).join("; ")}
+- [Stores](${site.domain}/stores): the three experience stores
+${stores.map((s) => `  - [${s.brand}, ${s.city}](${site.domain}/stores/${s.city.toLowerCase()}): ${s.address}`).join("\n")}
+- [Guides](${site.domain}/guides): ${guides.map((g) => g.title).join("; ")}
 
 ## Contact
 

@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Image from "next/image";
+import Link from "next/link";
 import { site, stores } from "@/lib/site";
 import { breadcrumbSchema } from "@/lib/schema";
 import { Reveal, Stagger, StaggerItem } from "@/components/motion/Reveal";
@@ -12,32 +13,30 @@ export const metadata: Metadata = {
   alternates: { canonical: "/stores" },
 };
 
-// LocalBusiness schema per store, strong signal for local + AI search.
-const localBusinessSchema = stores.map((s) => ({
+/**
+ * This index page deliberately carries an ItemList, NOT LightingStore entries.
+ * Each physical store's LocalBusiness schema lives on its own page at
+ * /stores/{city}, so one store maps to one entity at one canonical URL —
+ * duplicating it here would give Google two competing entities per store.
+ */
+const storeListSchema = {
   "@context": "https://schema.org",
-  "@type": "LightingStore",
-  name: `${site.name} · ${s.brand}, ${s.city}`,
-  image: `${site.domain}/lifestyle/store-wall.jpg`,
-  address: {
-    "@type": "PostalAddress",
-    streetAddress: s.address,
-    addressLocality: s.city,
-    addressRegion: "Kerala",
-    addressCountry: "IN",
-  },
-  telephone: s.phone,
-  openingHours: "Mo-Sa 09:30-20:30",
-  url: `${site.domain}/stores`,
-  parentOrganization: { "@type": "Organization", name: site.name },
-  geo: { "@type": "GeoCoordinates", latitude: s.geo.lat, longitude: s.geo.lng },
-}));
+  "@type": "ItemList",
+  name: `${site.name} experience stores`,
+  itemListElement: stores.map((s, i) => ({
+    "@type": "ListItem",
+    position: i + 1,
+    name: `${s.brand}, ${s.city}`,
+    url: `${site.domain}/stores/${s.city.toLowerCase()}`,
+  })),
+};
 
 export default function Stores() {
   return (
     <>
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(storeListSchema) }}
       />
       <script
         type="application/ld+json"
@@ -88,7 +87,12 @@ export default function Stores() {
                   <p><span className="store-k">Address</span>{s.address}</p>
                   <p><span className="store-k">Hours</span>{s.hours}</p>
                   <p><span className="store-k">Phone</span><a href={s.phoneHref} style={{ color: "var(--text-dim)" }}>{s.phone}</a></p>
-                  <a className="store-link" href={s.maps} target="_blank" rel="noopener noreferrer">Get directions →</a>
+                  <div className="store-actions">
+                    <Link className="store-link" href={`/stores/${s.city.toLowerCase()}`}>
+                      {s.city} store details →
+                    </Link>
+                    <a className="store-link" href={s.maps} target="_blank" rel="noopener noreferrer">Get directions →</a>
+                  </div>
                 </div>
               </StaggerItem>
             ))}

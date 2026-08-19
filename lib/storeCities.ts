@@ -1,10 +1,13 @@
-export interface CityGuideFAQ {
+/** The three cities where we have a physical store. */
+export type StoreCity = "Kannur" | "Kochi" | "Kozhikode";
+
+export interface StoreCityFAQ {
   q: string;
   a: string;
 }
 
-export interface CityGuideCopy {
-  city: "Kannur" | "Kochi" | "Kozhikode";
+export interface StoreCityCopy {
+  city: StoreCity;
   metaTitle: string;
   metaDescription: string;
   heroHeadline: string;
@@ -12,13 +15,13 @@ export interface CityGuideCopy {
   heroImage: string;
   intro: string;
   whyUs: string[];
-  faqs: CityGuideFAQ[];
+  faqs: StoreCityFAQ[];
 }
 
-export const cityGuides: Record<"Kannur" | "Kochi" | "Kozhikode", CityGuideCopy> = {
+export const storeCities: Record<StoreCity, StoreCityCopy> = {
   Kannur: {
     city: "Kannur",
-    metaTitle: "Custom Chandeliers & Lighting Design in Kannur",
+    metaTitle: "Chandelier & Lighting Store in Kannur · Celestial Lights",
     metaDescription:
       "Custom chandelier design, fabrication and installation in Kannur, plus the Celestial Lights ready collection. Visit the Kannur store or book a consultation.",
     heroHeadline: "Custom Chandeliers & Lighting Design in Kannur",
@@ -42,7 +45,7 @@ export const cityGuides: Record<"Kannur" | "Kochi" | "Kozhikode", CityGuideCopy>
   },
   Kochi: {
     city: "Kochi",
-    metaTitle: "Custom Chandeliers & Lighting Design in Kochi",
+    metaTitle: "Chandelier & Lighting Store in Kochi · Elor Lighting",
     metaDescription:
       "Custom chandelier design, fabrication and installation in Kochi, plus the Celestial Lights ready collection. Visit the Kadavanthara store or book a consultation.",
     heroHeadline: "Custom Chandeliers & Lighting Design in Kochi",
@@ -66,7 +69,7 @@ export const cityGuides: Record<"Kannur" | "Kochi" | "Kozhikode", CityGuideCopy>
   },
   Kozhikode: {
     city: "Kozhikode",
-    metaTitle: "Custom Chandeliers & Lighting Design in Kozhikode",
+    metaTitle: "Chandelier & Lighting Store in Kozhikode · Celestial Lights",
     metaDescription:
       "Custom chandelier design, fabrication and installation in Kozhikode, plus the Celestial Lights ready collection. Visit the Kozhikode store or book a consultation.",
     heroHeadline: "Custom Chandeliers & Lighting Design in Kozhikode",

@@ -1,36 +1,51 @@
 import Image from "next/image";
+import Link from "next/link";
 import { site, stores } from "@/lib/site";
 import { testimonials } from "@/lib/testimonials";
 import { breadcrumbSchema } from "@/lib/schema";
-import { cityGuides } from "@/lib/cityGuides";
+import { storeCities, type StoreCity } from "@/lib/storeCities";
 import { Reveal } from "@/components/motion/Reveal";
 import { MagneticButton } from "@/components/motion/MagneticButton";
 
-// Shared template for the three city guide pages (Kannur/Kochi/Kozhikode).
-// All copy and data are per-city (lib/cityGuides.ts, lib/site.ts's `stores`,
-// lib/testimonials.ts) — this component only supplies the structure.
-export function CityGuidePage({ city }: { city: "Kannur" | "Kochi" | "Kozhikode" }) {
-  const copy = cityGuides[city];
+/**
+ * Shared template for the three store pages (/stores/kannur|kochi|kozhikode).
+ *
+ * These are the ONLY pages that carry `LightingStore` schema — the estate index
+ * at /stores lists them as an ItemList instead, so each physical store maps to
+ * exactly one schema entity at one canonical URL. Service-area cities where we
+ * have no premises get `Service` + `areaServed` and never a LocalBusiness type.
+ *
+ * All copy and data are per-city (lib/storeCities.ts, lib/site.ts's `stores`,
+ * lib/testimonials.ts) — this component only supplies the structure.
+ */
+export function StoreCityPage({ city }: { city: StoreCity }) {
+  const copy = storeCities[city];
   const store = stores.find((s) => s.city === city)!;
   const testimonial = testimonials.find((t) => t.city === city)!;
-  const slug = `custom-chandeliers-${city.toLowerCase()}`;
-  const path = `/guides/${slug}`;
+  const path = `/stores/${city.toLowerCase()}`;
+  const others = stores.filter((s) => s.city !== city);
 
-  const articleSchema = {
+  const storeSchema = {
     "@context": "https://schema.org",
-    "@type": "Article",
-    headline: copy.heroHeadline,
+    "@type": "LightingStore",
+    name: `${store.brand}, ${store.city}`,
     description: copy.metaDescription,
     image: `${site.domain}${copy.heroImage}`,
-    author: { "@type": "Organization", name: site.name, url: site.domain },
-    publisher: {
-      "@type": "Organization",
-      name: site.name,
-      logo: { "@type": "ImageObject", url: `${site.domain}/brand/logo-mark.svg` },
+    address: {
+      "@type": "PostalAddress",
+      streetAddress: store.address,
+      addressLocality: store.city,
+      addressRegion: "Kerala",
+      addressCountry: "IN",
     },
-    datePublished: "2026-08-19",
-    dateModified: "2026-08-19",
-    mainEntityOfPage: `${site.domain}${path}`,
+    telephone: store.phone,
+    email: site.email,
+    openingHours: "Mo-Sa 09:30-20:30",
+    url: `${site.domain}${path}`,
+    hasMap: store.maps,
+    parentOrganization: { "@type": "Organization", name: site.name, url: site.domain },
+    geo: { "@type": "GeoCoordinates", latitude: store.geo.lat, longitude: store.geo.lng },
+    areaServed: { "@type": "City", name: store.city },
   };
 
   const faqSchema = {
@@ -45,15 +60,15 @@ export function CityGuidePage({ city }: { city: "Kannur" | "Kochi" | "Kozhikode"
 
   return (
     <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(storeSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
           __html: JSON.stringify(
             breadcrumbSchema([
-              { name: "Guides", path: "/guides" },
-              { name: copy.heroHeadline, path },
+              { name: "Stores", path: "/stores" },
+              { name: city, path },
             ])
           ),
         }}
@@ -161,7 +176,7 @@ export function CityGuidePage({ city }: { city: "Kannur" | "Kochi" | "Kozhikode"
           <div className="faq">
             {copy.faqs.map((f, i) => (
               <Reveal key={f.q} delay={i * 0.04}>
-                <details className="faq-item" name={`${slug}-faq`}>
+                <details className="faq-item" name={`${city.toLowerCase()}-store-faq`}>
                   <summary>{f.q}</summary>
                   <p className="faq-a">{f.a}</p>
                 </details>
@@ -185,6 +200,21 @@ export function CityGuidePage({ city }: { city: "Kannur" | "Kochi" | "Kozhikode"
               <MagneticButton href="/consultation" variant="gold">Book a Consultation <span className="arr">→</span></MagneticButton>
               <MagneticButton href="/guides/chandelier-pricing-guide" variant="ghost">See Pricing Guide</MagneticButton>
             </div>
+          </Reveal>
+          {/* Sibling-store links: keeps each store page one click from the other
+              two and from the estate index, so no store page is a dead end. */}
+          <Reveal delay={0.18}>
+            <p className="fine" style={{ marginTop: 34 }}>
+              Not in {city}? Visit the{" "}
+              {others.map((s, i) => (
+                <span key={s.city}>
+                  <Link href={`/stores/${s.city.toLowerCase()}`}>{s.city} store</Link>
+                  {i === 0 ? " or the " : ""}
+                </span>
+              ))}
+              , see <Link href="/stores">all three</Link>, or book a remote
+              consultation from anywhere in India.
+            </p>
           </Reveal>
         </div>
       </section>

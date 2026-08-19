@@ -382,6 +382,12 @@
   margin-top: 8px;
   display: inline-block;
 }
+/* Two links per card on the estate index: detail page, then directions. */
+.store-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px 18px;
+}
 
 /* ---------- Online banner ---------- */
 .online-banner {
