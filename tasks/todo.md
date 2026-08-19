@@ -56,6 +56,19 @@ Verified: `npm run build` clean, all pages statically generated, canonical/schem
 
 ## Review Log
 
+### Batch 5 — 2026-08-19: AEO buying guide
+
+`/guides/how-to-choose-a-custom-chandelier` — mirrors JagMag Lights' winning
+direct-answer structure from the competitor research (space-type comparison,
+a "questions that matter" rubric, dense FAQ). No pricing claims, no Ijas
+input needed. Added to `lib/guides.ts` (new `"Buying Guide"` tag) and
+`app/sitemap.ts`; `llms.txt` picks it up automatically since it reads from
+`lib/guides.ts`.
+
+`npm run build` clean, verified via `next start` + curl: Article/FAQPage/
+BreadcrumbList schema present, listed in sitemap and llms.txt, card renders
+on the `/guides` index. Committed and pushed to `main` 2026-08-19.
+
 ### Batch 4 — 2026-08-19: quick technical wins (no Ijas input needed)
 
 `geo` coordinates on all 3 `LightingStore` schema entries (`lib/site.ts`, `app/stores/page.tsx`)

@@ -12,6 +12,7 @@ const routes = [
   { path: "/stores", priority: 0.7, freq: "monthly" as const, lastModified: "2026-08-19" },
   { path: "/guides", priority: 0.8, freq: "monthly" as const, lastModified: "2026-08-19" },
   { path: "/guides/chandelier-pricing-guide", priority: 0.7, freq: "monthly" as const, lastModified: "2026-08-19" },
+  { path: "/guides/how-to-choose-a-custom-chandelier", priority: 0.7, freq: "monthly" as const, lastModified: "2026-08-19" },
   { path: "/guides/custom-chandeliers-kannur", priority: 0.7, freq: "monthly" as const, lastModified: "2026-08-19" },
   { path: "/guides/custom-chandeliers-kochi", priority: 0.7, freq: "monthly" as const, lastModified: "2026-08-19" },
   { path: "/guides/custom-chandeliers-kozhikode", priority: 0.7, freq: "monthly" as const, lastModified: "2026-08-19" },

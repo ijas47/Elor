@@ -2,12 +2,20 @@ export interface Guide {
   slug: string;
   title: string;
   dek: string;
-  tag: "Pricing" | "City Guide";
+  tag: "Pricing" | "Buying Guide" | "City Guide";
   image: string;
   updated: string;
 }
 
 export const guides: Guide[] = [
+  {
+    slug: "how-to-choose-a-custom-chandelier",
+    title: "How to Choose a Custom Chandelier — Villa, Duplex or Hotel",
+    dek: "What actually changes between a living room, a stairwell and a lobby, and six questions to answer before you choose anything.",
+    tag: "Buying Guide",
+    image: "/work/w3-showroom.jpg",
+    updated: "19 August 2026",
+  },
   {
     slug: "chandelier-pricing-guide",
     title: "What Does a Custom Chandelier Cost in India?",
