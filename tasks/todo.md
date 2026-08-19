@@ -31,7 +31,7 @@ Verified: `npm run build` clean, all pages statically generated, canonical/schem
 - [ ] 9. Kochi missing PIN code in schema. **Correction**: the "inconsistent store naming" part of this item is not a bug — Kochi trades as a different legal brand ("Elor Lighting" vs "Celestial Lights" for Kannur/Kozhikode) per explicit code comment in `lib/site.ts`; do not rename it to match the other two
 - [ ] 10. Products missing `offers`/price/availability/`sku`
 - [ ] 11. No `aggregateRating`/`Review` schema anywhere
-- [ ] 12. `robots.txt` `Host:` directive still points at apex domain
+- [x] 12. `robots.txt` `Host:` directive — fixed for free by item 2, both `sitemap` and `host` in `app/robots.ts` read the same `site.domain` constant
 - [ ] 13. Sitemap `lastmod` is a build timestamp, not real freshness
 - [ ] 14. Fabrication process not marked up as `HowTo`/ordered list
 - [ ] 15. No freshness/"last updated" indicator on pages
@@ -72,4 +72,4 @@ Not yet done: legal review of Privacy Policy / Terms wording (drafted in good fa
 how the site actually handles data today, but neither of us is a lawyer — get it checked before
 treating it as final, especially the DPDP Act section).
 
-Branch `claude/geo-seo-fixes` not merged yet — waiting on go-ahead to open a PR against `main`.
+Merged to `main` and pushed 2026-08-19 (`c347352..2a8eac2`) — Vercel will auto-deploy.
