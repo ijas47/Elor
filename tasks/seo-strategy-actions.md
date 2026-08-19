@@ -32,14 +32,25 @@ Written 2026-08-19. Horizon: 6 months.
 - [ ] IndexNow: submit URLs on publish (key file already live)
 - [ ] Directory listings: IndiaMART, Justdial, Houzz India, Sulekha
 - [ ] Kozhikode real address + Kochi PIN in `lib/site.ts` *(blocked: data)*
-- [ ] Restructure:
-  - [ ] `app/stores/[city]/page.tsx` — absorbs the 3 city guides
-  - [ ] `app/lighting/page.tsx` — service-area hub, footer-linked
-  - [ ] `app/lighting/[city]/page.tsx` + `generateStaticParams`
-  - [ ] `lib/serviceAreas.ts` — per-city data model
-  - [ ] `app/sitemap.ts` — generate from data, not the hardcoded array
-  - [ ] `next.config.js` — 301s from `/guides/custom-chandeliers-{city}`
-  - [ ] Footer: link `/lighting` hub
+- [x] Restructure — merged to `main` 2026-08-20 (`32bb737`), build clean,
+      all 3 store pages statically prerendered:
+  - [x] `app/stores/[city]/page.tsx` — absorbs the 3 city guides,
+        `dynamicParams = false` so unknown slugs 404 rather than soft-404
+  - [x] `LightingStore` schema moved to per-store pages; `/stores` now carries
+        an `ItemList`, so one store = one entity at one canonical URL
+  - [x] `app/sitemap.ts` — generated from `stores` and `guides` data files
+  - [x] `next.config.js` — 301s from `/guides/custom-chandeliers-{city}`
+  - [x] `lib/cityGuides.ts` → `lib/storeCities.ts`,
+        `CityGuidePage` → `StoreCityPage`
+  - [x] Footer + `llms.txt` follow the move; `llms.txt` now lists each store
+  - [ ] `app/lighting/page.tsx` — service-area hub **(deferred to Phase 2)**
+  - [ ] `app/lighting/[city]/page.tsx` + `generateStaticParams` **(Phase 2)**
+  - [ ] `lib/serviceAreas.ts` — per-city data model **(Phase 2)**
+
+  *Judgment call: the `/lighting` hub and `[city]` route are deferred to Phase 2
+  rather than shipped empty. A hub listing only the three cities that already
+  have store pages adds nothing, and orphan routes are the exact failure mode
+  the strategy argues against. They ship with the district pages that fill them.*
 
 ## Phase 1 — Content wedges (weeks 3-5)
 
