@@ -102,12 +102,13 @@ Calm, precise, quietly confident. No exclamation marks, no hype, no em dashes.
 
 ## Notes / next steps
 
-- Kannur and Kochi addresses are real. The **Kozhikode address** and **all three
-  per-store phone numbers** are still placeholders in `lib/site.ts`. The phones
-  are published in the `LightingStore` JSON-LD on `/stores`, so replace them
-  before leaning on local or AI search.
-- The site has two contact numbers: a callable line (`site.phone`) and a
-  separate WhatsApp number (`site.whatsapp`). Keep them distinct.
+- **One number for everything**: `+91 99956 19470`, for calls and WhatsApp, on
+  the site and on all three stores. Enquiries funnel to that single line so they
+  can be automated and handled in one place. The stores read it from
+  `site.phone` rather than carrying their own, so there is one thing to change.
+  Do not add a second number.
+- Kannur and Kochi addresses are real. The **Kozhikode address** is still a
+  placeholder in `lib/site.ts`.
 - Set `site.shopUrl` + `shopLive: true` when the Celestial Lights Shopify store
   is published; every handoff link updates from that one place.
 - Consultation and custom-brief forms compose a WhatsApp message client-side.

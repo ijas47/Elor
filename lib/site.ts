@@ -16,9 +16,12 @@ export const site = {
   domain: "https://elorlighting.com",
   description:
     "Elor Lighting is the lighting consulting and custom lighting arm of Celestial Lights. We work out where every light belongs, design and manufacture the pieces that have to be made for the space, and install the whole scheme, for architects, developers and homeowners. Three experience stores in Kerala, with pan-India delivery and installation.",
+  // One number for the whole business, calls and WhatsApp alike, including
+  // every store. Enquiries are meant to funnel to this single line so they can
+  // be automated and handled in one place. Do not introduce a second number.
   email: "hello@elorlighting.com",
-  phone: "+91 80758 84404",
-  phoneHref: "tel:+918075884404",
+  phone: "+91 99956 19470",
+  phoneHref: "tel:+919995619470",
   hours: "Mon-Sat · 9:30 AM to 8:30 PM IST",
 
   // ── SHOP HANDOFF (swap when Shopify is live) ──────────────────────────────
@@ -28,7 +31,6 @@ export const site = {
   shopLabel: "Celestial Lights",
   shopLive: false, // set true once the Shopify store is published
 
-  // WhatsApp goes to a different number from the callable line above.
   whatsapp:
     "https://wa.me/919995619470?text=Hi%20Elor%2C%20I%27m%20interested%20in%20lighting%20for%20my%20space.",
 
@@ -44,9 +46,9 @@ export const site = {
  * the estate has to stay brand-neutral ("three experience stores") rather than
  * calling all three Celestial Lights.
  *
- * Per-store phone numbers are still PLACEHOLDERS. They are published in the
- * LocalBusiness JSON-LD on /stores, so replace them with real lines before
- * relying on local or AI search.
+ * Every store deliberately carries the one company number rather than its own
+ * line, so all enquiries land in a single place that can be automated. This is
+ * intentional duplication, not placeholder data left behind.
  */
 export const stores = [
   {
@@ -55,8 +57,8 @@ export const stores = [
     address:
       "Ground Floor, P O Chovva, Kannothumchal, Kannur, Elayavoor, Kerala 670006",
     hours: "Mon-Sat · 9:30 AM to 8:30 PM",
-    phone: "+91 90000 00001", // placeholder
-    phoneHref: "tel:+919000000001",
+    phone: site.phone,
+    phoneHref: site.phoneHref,
     maps: "https://maps.google.com/?q=Celestial+Lights+Chovva+Kannothumchal+Kannur+Kerala+670006",
   },
   {
@@ -64,8 +66,8 @@ export const stores = [
     brand: "Elor Lighting",
     address: "63/499, Chalakuzhy, Gandhi Nagar, Kadavanthara, Kochi, Kerala",
     hours: "Mon-Sat · 9:30 AM to 8:30 PM",
-    phone: "+91 90000 00002", // placeholder
-    phoneHref: "tel:+919000000002",
+    phone: site.phone,
+    phoneHref: site.phoneHref,
     maps: "https://maps.google.com/?q=Elor+Lighting+Chalakuzhy+Gandhi+Nagar+Kadavanthara+Kochi",
   },
   {
@@ -73,8 +75,8 @@ export const stores = [
     brand: "Celestial Lights",
     address: "Mavoor Road, Kozhikode, Kerala 673004", // placeholder, awaiting the real address
     hours: "Mon-Sat · 9:30 AM to 8:30 PM",
-    phone: "+91 90000 00003", // placeholder
-    phoneHref: "tel:+919000000003",
+    phone: site.phone,
+    phoneHref: site.phoneHref,
     maps: "https://maps.google.com/?q=Mavoor+Road+Kozhikode+Kerala",
   },
 ] as const;
