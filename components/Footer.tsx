@@ -15,8 +15,8 @@ export function Footer() {
             <p className={styles.blurb}>
               The lighting consulting and custom lighting arm of Celestial
               Lights. We plan the positions, make what has to be made, and
-              install it. Three Celestial Lights experience stores in Kerala,
-              serving all of India.
+              install it. Three experience stores in Kerala, serving all of
+              India.
             </p>
             <a
               href={site.shopUrl}
@@ -38,7 +38,7 @@ export function Footer() {
           </div>
 
           <div className={styles.col}>
-            <h4>Celestial Lights</h4>
+            <h4>Our Stores</h4>
             {stores.map((s) => (
               <a key={s.city} href={s.maps} target="_blank" rel="noopener noreferrer">
                 {s.city}

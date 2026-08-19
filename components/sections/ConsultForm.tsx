@@ -26,7 +26,7 @@ export function ConsultForm() {
       `Stage: ${f.get("stage") || "-"}`,
       `Notes: ${f.get("notes") || "-"}`,
     ].join("\n");
-    const url = `https://wa.me/918075884404?text=${encodeURIComponent(msg)}`;
+    const url = `https://wa.me/919995619470?text=${encodeURIComponent(msg)}`;
     window.open(url, "_blank", "noopener,noreferrer");
     setSent(true);
     e.currentTarget.reset();

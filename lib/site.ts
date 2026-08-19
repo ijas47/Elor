@@ -15,7 +15,7 @@ export const site = {
   tagline: "Lighting consulting & custom lighting, by Celestial Lights",
   domain: "https://elorlighting.com",
   description:
-    "Elor Lighting is the lighting consulting and custom lighting arm of Celestial Lights. We work out where every light belongs, design and manufacture the pieces that have to be made for the space, and install the whole scheme, for architects, developers and homeowners. Three Celestial Lights experience stores in Kerala, with pan-India delivery and installation.",
+    "Elor Lighting is the lighting consulting and custom lighting arm of Celestial Lights. We work out where every light belongs, design and manufacture the pieces that have to be made for the space, and install the whole scheme, for architects, developers and homeowners. Three experience stores in Kerala, with pan-India delivery and installation.",
   email: "hello@elorlighting.com",
   phone: "+91 80758 84404",
   phoneHref: "tel:+918075884404",
@@ -24,12 +24,13 @@ export const site = {
   // ── SHOP HANDOFF (swap when Shopify is live) ──────────────────────────────
   // e.g. "https://celestiallights.store" or the myshopify domain.
   shopUrl:
-    "https://wa.me/918075884404?text=Hi%20Elor%2C%20I%27d%20like%20to%20browse%20the%20Celestial%20Lights%20collection.",
+    "https://wa.me/919995619470?text=Hi%20Elor%2C%20I%27d%20like%20to%20browse%20the%20Celestial%20Lights%20collection.",
   shopLabel: "Celestial Lights",
   shopLive: false, // set true once the Shopify store is published
 
+  // WhatsApp goes to a different number from the callable line above.
   whatsapp:
-    "https://wa.me/918075884404?text=Hi%20Elor%2C%20I%27m%20interested%20in%20lighting%20for%20my%20space.",
+    "https://wa.me/919995619470?text=Hi%20Elor%2C%20I%27m%20interested%20in%20lighting%20for%20my%20space.",
 
   social: {
     instagram: "https://instagram.com/elorlighting",
@@ -37,31 +38,42 @@ export const site = {
   },
 } as const;
 
+/**
+ * The three stores do not share one brand: Kannur and Kozhikode trade as
+ * Celestial Lights, Kochi as Elor Lighting Pvt Ltd. Anything that describes
+ * the estate has to stay brand-neutral ("three experience stores") rather than
+ * calling all three Celestial Lights.
+ *
+ * Per-store phone numbers are still PLACEHOLDERS. They are published in the
+ * LocalBusiness JSON-LD on /stores, so replace them with real lines before
+ * relying on local or AI search.
+ */
 export const stores = [
   {
     city: "Kannur",
     brand: "Celestial Lights",
-    address: "Fort Road, Kannur, Kerala 670001",
+    address:
+      "Ground Floor, P O Chovva, Kannothumchal, Kannur, Elayavoor, Kerala 670006",
     hours: "Mon-Sat · 9:30 AM to 8:30 PM",
-    phone: "+91 90000 00001",
+    phone: "+91 90000 00001", // placeholder
     phoneHref: "tel:+919000000001",
-    maps: "https://maps.google.com/?q=Fort+Road+Kannur+Kerala",
+    maps: "https://maps.google.com/?q=Celestial+Lights+Chovva+Kannothumchal+Kannur+Kerala+670006",
   },
   {
     city: "Kochi",
-    brand: "Celestial Lights",
-    address: "MG Road, Ernakulam, Kochi, Kerala 682016",
+    brand: "Elor Lighting",
+    address: "63/499, Chalakuzhy, Gandhi Nagar, Kadavanthara, Kochi, Kerala",
     hours: "Mon-Sat · 9:30 AM to 8:30 PM",
-    phone: "+91 90000 00002",
+    phone: "+91 90000 00002", // placeholder
     phoneHref: "tel:+919000000002",
-    maps: "https://maps.google.com/?q=MG+Road+Ernakulam+Kochi+Kerala",
+    maps: "https://maps.google.com/?q=Elor+Lighting+Chalakuzhy+Gandhi+Nagar+Kadavanthara+Kochi",
   },
   {
     city: "Kozhikode",
     brand: "Celestial Lights",
-    address: "Mavoor Road, Kozhikode, Kerala 673004",
+    address: "Mavoor Road, Kozhikode, Kerala 673004", // placeholder, awaiting the real address
     hours: "Mon-Sat · 9:30 AM to 8:30 PM",
-    phone: "+91 90000 00003",
+    phone: "+91 90000 00003", // placeholder
     phoneHref: "tel:+919000000003",
     maps: "https://maps.google.com/?q=Mavoor+Road+Kozhikode+Kerala",
   },

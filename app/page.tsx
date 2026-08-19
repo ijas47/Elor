@@ -368,7 +368,7 @@ export default function Home() {
         <div className="wrap">
           <div className="sec-head">
             <div className="stack-sm">
-              <Reveal as="span"><span className="eyebrow">Celestial Lights stores</span></Reveal>
+              <Reveal as="span"><span className="eyebrow">Experience stores</span></Reveal>
               <Reveal delay={0.06}><h2 className="h-lg">See the glow<br />before you buy.</h2></Reveal>
             </div>
             <Reveal delay={0.12}>

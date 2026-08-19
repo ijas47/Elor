@@ -5,9 +5,9 @@ import { Reveal, Stagger, StaggerItem } from "@/components/motion/Reveal";
 import { MagneticButton } from "@/components/motion/MagneticButton";
 
 export const metadata: Metadata = {
-  title: "Our Stores · Celestial Lights in Kannur, Kochi & Kozhikode",
+  title: "Our Stores · Kannur, Kochi & Kozhikode",
   description:
-    "Visit a Celestial Lights experience store in Kannur, Kochi or Kozhikode to see every Elor fixture lit before you buy. Pan-India delivery and remote consultation also available.",
+    "Visit an Elor experience store in Kannur, Kochi or Kozhikode to see every fixture lit before you buy. Pan-India delivery and remote consultation also available.",
   alternates: { canonical: "/stores" },
 };
 
@@ -42,7 +42,7 @@ export default function Stores() {
         <div className="wrap">
           <div className="split" style={{ alignItems: "center" }}>
             <div>
-              <Reveal as="span"><span className="eyebrow">Celestial Lights stores</span></Reveal>
+              <Reveal as="span"><span className="eyebrow">Experience stores</span></Reveal>
               <Reveal delay={0.06}>
                 <h1 className="h-xl" style={{ marginTop: 18 }}>
                   See the glow<br /><span className="serif-i">before you buy.</span>

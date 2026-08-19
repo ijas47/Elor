@@ -1,8 +1,9 @@
 # Elor Lighting — Brand & Design System (v3)
 
 A premium marketing site for **Elor Lighting**: custom chandelier fabrication,
-lighting consultation, and installation. Three **Celestial Lights** experience
-stores in Kerala (Kannur, Kochi, Kozhikode) with pan-India delivery.
+lighting consultation, and installation. Three experience stores in Kerala with
+pan-India delivery: Kannur and Kozhikode trade as **Celestial Lights**, Kochi as
+**Elor Lighting Pvt Ltd**, so copy about the estate stays brand-neutral.
 
 Built with **Next.js (App Router) + TypeScript + Framer Motion**. Static-generated
 (SSG) and SEO/AEO-first: every page ships as server-rendered HTML with metadata,
@@ -101,7 +102,12 @@ Calm, precise, quietly confident. No exclamation marks, no hype, no em dashes.
 
 ## Notes / next steps
 
-- Store addresses and phone numbers are **placeholders** — replace in `lib/site.ts`.
+- Kannur and Kochi addresses are real. The **Kozhikode address** and **all three
+  per-store phone numbers** are still placeholders in `lib/site.ts`. The phones
+  are published in the `LightingStore` JSON-LD on `/stores`, so replace them
+  before leaning on local or AI search.
+- The site has two contact numbers: a callable line (`site.phone`) and a
+  separate WhatsApp number (`site.whatsapp`). Keep them distinct.
 - Set `site.shopUrl` + `shopLive: true` when the Celestial Lights Shopify store
   is published; every handoff link updates from that one place.
 - Consultation and custom-brief forms compose a WhatsApp message client-side.
