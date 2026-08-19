@@ -32,7 +32,7 @@ Verified: `npm run build` clean, all pages statically generated, canonical/schem
 - [ ] 10. Products missing `offers`/price/availability/`sku`
 - [ ] 11. No `aggregateRating`/`Review` schema anywhere
 - [x] 12. `robots.txt` `Host:` directive — fixed for free by item 2, both `sitemap` and `host` in `app/robots.ts` read the same `site.domain` constant
-- [ ] 13. Sitemap `lastmod` is a build timestamp, not real freshness
+- [x] 13. Sitemap `lastmod` is a build timestamp, not real freshness — done in Batch 2
 - [ ] 14. Fabrication process not marked up as `HowTo`/ordered list
 - [ ] 15. No freshness/"last updated" indicator on pages
 - [ ] 16. No `geo` coordinates on stores
@@ -41,18 +41,74 @@ Verified: `npm run build` clean, all pages statically generated, canonical/schem
 
 ## Backlog — Low
 
-- [ ] 19. No `WebSite`+`SearchAction` schema
-- [ ] 20. No `BreadcrumbList` schema
-- [ ] 21. No IndexNow key file
+- [x] 19. No `WebSite`+`SearchAction` schema — done in Batch 2 (as `WebSite` only, no `SearchAction`: the site has no on-site search, so a sitelinks-search-box schema would be invalid structured data)
+- [x] 20. No `BreadcrumbList` schema — done in Batch 2, all 6 subpages
+- [x] 21. No IndexNow key file — done in Batch 2 (key file only; submitting URLs on publish is a separate follow-up)
 - [ ] 22. Showroom video not linked to YouTube
 - [ ] 23. Poetic copy needs an adjacent factual sentence for citability
+- [x] 26. `llms.txt` — not in the original audit, added in Batch 2 since the gap was real (no llms.txt existed at all)
 
 ## Off-site (not code — tracked here for visibility)
 
 - [ ] 24. Claim Google Business Profile ×3, get first reviews, LinkedIn company page
-- [ ] 25. Set up GSC (domain property + DNS verification), Bing Webmaster Tools, GA4
+- [x] 25a. GSC — confirmed connected 2026-08-19 (property verified, API returning live data). All-zero traffic so far, expected since the domain only went live today; re-check in a week or two.
+- [ ] 25b. Bing Webmaster Tools, GA4 — still not confirmed
 
 ## Review Log
+
+### Batch 3 — 2026-08-19: Guides section (pricing guide + 3 city pages)
+
+New "Guides" section at `/guides`, driven by the competitor research from this
+session (JagMag Lights wins AEO citations via a direct buying guide, Samrattraders
+owns the pricing query via a dense price-table page, White Teak wins local Kerala
+queries via city pages — Elor had none of this content).
+
+Ships:
+- `/guides` — index/hub, card grid
+- `/guides/chandelier-pricing-guide` — real ready-collection price bands
+  (₹3,000–₹70,000+, sourced from the live `celestial-lights-storefront.vercel.app`
+  catalog fetch, not invented) + a clearly separate bespoke-pricing section with
+  no fabricated custom-fabrication number (quoted per design, per Ijas)
+- `/guides/custom-chandeliers-kannur`, `.../kochi`, `.../kozhikode` — one shared
+  template (`components/sections/CityGuidePage.tsx`), real per-city copy in
+  `lib/cityGuides.ts`, real store data reused from `lib/site.ts`'s `stores`,
+  matching testimonial reused from the new `lib/testimonials.ts`
+
+Files: `lib/schema.ts` (breadcrumbSchema refactored to a crumb array for 3-level
+breadcrumbs — updated all 6 prior call sites), `lib/guides.ts` (new, index
+metadata), `lib/cityGuides.ts` (new, per-city copy), `lib/testimonials.ts` (new,
+extracted from `app/page.tsx` so city pages can reuse the same quotes instead of
+duplicating them), `lib/site.ts` (nav entry), `components/Footer.tsx` (Guides
+link + linked city names), `components/ui/GuideCard.tsx` (new), `app/sitemap.ts`,
+`app/llms.txt/route.ts`.
+
+Deliberately did not add a second `LightingStore`/`LocalBusiness` schema on the
+city pages — that stays canonical on `/stores` only. Deliberately did not link
+to the `celestial-lights-storefront.vercel.app` preview URL anywhere public —
+it's unfinished/staging; the real figures are used as plain-text references
+only, until `celestiallights.in` is live and `site.shopUrl`/`shopLive` are
+updated (separate follow-up).
+
+`npm run build` clean, all 5 new routes statically generated. Verified via
+`next start` + curl: BreadcrumbList/Article/FAQPage schema present on every new
+page, all 5 URLs in `/sitemap.xml`, Guides listed in `/llms.txt`, nav + footer
+links present, city store data (address/hours/phone) matches `lib/site.ts`
+exactly, all three price bands render correctly. Not committed/pushed — same as
+Batch 2, staged locally for review.
+
+### Batch 2 — 2026-08-19
+
+Files changed: `app/sitemap.ts` (real per-page `lastModified` dates from git
+history instead of build timestamp), `app/layout.tsx` (added `WebSite` schema,
+no `SearchAction` — no on-site search exists), `lib/schema.ts` (new,
+`breadcrumbSchema` helper), `lib/site.ts` (added `indexNowKey`), new:
+`app/llms.txt/route.ts`, `public/47d1e184a9472a8ef2421ef36e117c5f.txt`
+(IndexNow key file). `BreadcrumbList` schema added to all 6 subpages
+(collections, customisation, consultation, stores, privacy, terms).
+
+`npm run build` clean, spot-checked `/llms.txt`, `/sitemap.xml` lastmod
+values, the IndexNow key file, and breadcrumb schema presence via `next
+start` + curl. Not yet committed/pushed.
 
 ### Batch 1 — 2026-08-19
 

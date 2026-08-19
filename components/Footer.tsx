@@ -34,6 +34,7 @@ export function Footer() {
             <Link href="/customisation">Customisation</Link>
             <Link href="/consultation">Consultation</Link>
             <Link href="/stores">Our Stores</Link>
+            <Link href="/guides">Guides</Link>
             <Link href="/#commercial">Commercial</Link>
           </div>
 
@@ -66,7 +67,12 @@ export function Footer() {
             <Link href="/privacy">Privacy Policy</Link>
             <Link href="/terms">Terms of Service</Link>
           </span>
-          <span>Elor Lighting · Celestial Lights · Kannur · Kochi · Kozhikode</span>
+          <span>
+            Elor Lighting · Celestial Lights ·{" "}
+            <Link href="/guides/custom-chandeliers-kannur">Kannur</Link> ·{" "}
+            <Link href="/guides/custom-chandeliers-kochi">Kochi</Link> ·{" "}
+            <Link href="/guides/custom-chandeliers-kozhikode">Kozhikode</Link>
+          </span>
         </div>
       </div>
     </footer>

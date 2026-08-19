@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import { site } from "@/lib/site";
+import { breadcrumbSchema } from "@/lib/schema";
 import { Reveal, Stagger, StaggerItem } from "@/components/motion/Reveal";
 import { MagneticButton } from "@/components/motion/MagneticButton";
 import { Icon } from "@/components/ui/Icon";
@@ -60,6 +61,12 @@ export default function Customisation() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(breadcrumbSchema([{ name: "Customisation", path: "/customisation" }])),
+        }}
       />
 
       <section className="page-hero">

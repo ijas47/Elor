@@ -73,6 +73,17 @@ const orgSchema = {
   sameAs: [site.social.instagram, site.social.facebook],
 };
 
+// No `potentialAction`/SearchAction here deliberately: the site has no
+// on-site search, and a sitelinks-search-box schema pointing at a
+// non-existent search endpoint would be invalid structured data.
+const websiteSchema = {
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  name: site.name,
+  url: site.domain,
+  publisher: { "@type": "Organization", name: site.name, url: site.domain },
+};
+
 export default function RootLayout({
   children,
 }: {
@@ -84,6 +95,10 @@ export default function RootLayout({
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(orgSchema) }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteSchema) }}
         />
         <Nav />
         <PageTransition>{children}</PageTransition>

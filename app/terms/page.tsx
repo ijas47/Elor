@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { site } from "@/lib/site";
+import { breadcrumbSchema } from "@/lib/schema";
 
 export const metadata: Metadata = {
   title: "Terms of Service",
@@ -13,7 +14,14 @@ const UPDATED = "19 August 2026";
 
 export default function Terms() {
   return (
-    <section className="sec">
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(breadcrumbSchema([{ name: "Terms of Service", path: "/terms" }])),
+        }}
+      />
+      <section className="sec">
       <div className="wrap-tight">
         <span className="eyebrow">Legal</span>
         <h1 className="h-lg" style={{ marginTop: 18 }}>Terms of Service</h1>
@@ -85,6 +93,7 @@ export default function Terms() {
           </p>
         </div>
       </div>
-    </section>
+      </section>
+    </>
   );
 }

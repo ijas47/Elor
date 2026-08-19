@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { site } from "@/lib/site";
+import { breadcrumbSchema } from "@/lib/schema";
 
 export const metadata: Metadata = {
   title: "Privacy Policy",
@@ -13,7 +14,14 @@ const UPDATED = "19 August 2026";
 
 export default function Privacy() {
   return (
-    <section className="sec">
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(breadcrumbSchema([{ name: "Privacy Policy", path: "/privacy" }])),
+        }}
+      />
+      <section className="sec">
       <div className="wrap-tight">
         <span className="eyebrow">Legal</span>
         <h1 className="h-lg" style={{ marginTop: 18 }}>Privacy Policy</h1>
@@ -101,6 +109,7 @@ export default function Privacy() {
           </p>
         </div>
       </div>
-    </section>
+      </section>
+    </>
   );
 }

@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { site, stores } from "@/lib/site";
 import { pieces } from "@/lib/collections";
+import { testimonials } from "@/lib/testimonials";
 import { Hero } from "@/components/sections/Hero";
 import { Marquee } from "@/components/sections/Marquee";
 import { ShowroomReel } from "@/components/sections/ShowroomReel";
@@ -21,27 +22,6 @@ const spaces = [
 const featured = ["asgard-crystal-chandelier", "abstract-five-ring", "dandelion-gold", "crystal-petal"]
   .map((s) => pieces.find((p) => p.slug === s)!)
   .filter(Boolean);
-
-const testimonials = [
-  {
-    quote: "We gave them a bare shell in Kochi and a Pinterest board. The plan they returned felt designed by someone who had lived in our home for years. Evenings feel like a resort now.",
-    name: "Anjali & Rahul Menon",
-    role: "Home in Panampilly Nagar, Kochi",
-    initial: "A",
-  },
-  {
-    quote: "Our café's evening footfall rose noticeably after the relight. Guests keep photographing the walls. One team handled design, supply and installation. I never chased an electrician.",
-    name: "Sameer K.",
-    role: "Café owner, Kozhikode",
-    initial: "S",
-  },
-  {
-    quote: "As an architect I've worked with many lighting vendors. Elor is the rare one that reads drawings properly, improves them, and shows up on site when they say. On all my projects now.",
-    name: "Ar. Divya Nair",
-    role: "Principal Architect, Kannur",
-    initial: "D",
-  },
-];
 
 export default function Home() {
   return (

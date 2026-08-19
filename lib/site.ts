@@ -38,6 +38,11 @@ export const site = {
     instagram: "https://instagram.com/elorlighting",
     facebook: "https://facebook.com/elorlighting",
   },
+
+  // Verification key for IndexNow (instant-index protocol used by Bing/Yandex).
+  // Matching file lives at public/<key>.txt. Submitting URLs on publish is a
+  // separate follow-up; this just makes the site verifiable.
+  indexNowKey: "47d1e184a9472a8ef2421ef36e117c5f",
 } as const;
 
 /**
@@ -86,5 +91,6 @@ export const nav = [
   { label: "Customisation", href: "/customisation" },
   { label: "Consultation", href: "/consultation" },
   { label: "Stores", href: "/stores" },
+  { label: "Guides", href: "/guides" },
   { label: "Commercial", href: "/#commercial" },
 ] as const;
