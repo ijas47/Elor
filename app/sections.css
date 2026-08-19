@@ -800,3 +800,88 @@
     padding: 24px 0 26px;
   }
 }
+
+/* ---------- Spec tables (guides) ----------
+   Tables, not prose, for anything comparative or numeric: they're what
+   AI answer engines extract cleanly, and they read faster on a phone.
+   The wrapper scrolls so the page body never scrolls sideways. */
+.spec-wrap {
+  overflow-x: auto;
+  border: 1px solid var(--line);
+  border-radius: var(--r);
+  background: var(--ink-2);
+  margin-top: 26px;
+}
+.spec-table {
+  border-collapse: collapse;
+  width: 100%;
+  min-width: 520px;
+  font-size: 14px;
+  font-variant-numeric: tabular-nums;
+}
+.spec-table th {
+  text-align: left;
+  font-size: 11px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--text-faint);
+  font-weight: 500;
+  padding: 14px 18px;
+  border-bottom: 1px solid var(--line);
+  white-space: nowrap;
+}
+.spec-table td {
+  padding: 14px 18px;
+  border-bottom: 1px solid var(--line);
+  color: var(--text-dim);
+  vertical-align: top;
+}
+.spec-table tr:last-child td { border-bottom: none; }
+.spec-table td:first-child { color: var(--text); }
+.spec-table .warn { color: var(--gold); }
+
+/* ---------- Calculator output ---------- */
+.calc-out {
+  margin-top: 26px;
+  border: 1px solid var(--line);
+  border-radius: var(--r);
+  background: var(--ink-2);
+  padding: 28px 30px;
+}
+.calc-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px 16px;
+  align-items: baseline;
+  padding: 14px 0;
+  border-bottom: 1px solid var(--line);
+}
+.calc-row:last-of-type { border-bottom: none; }
+.calc-k {
+  color: var(--text-faint);
+  font-size: 13px;
+  min-width: 190px;
+  flex: none;
+}
+.calc-v {
+  color: var(--gold);
+  font-size: 20px;
+  font-variant-numeric: tabular-nums;
+}
+.calc-note {
+  color: var(--text-dim);
+  font-size: 13px;
+  flex-basis: 100%;
+}
+.calc-flag {
+  margin-top: 18px;
+  padding: 16px 18px;
+  border-left: 2px solid var(--gold);
+  background: rgba(255, 255, 255, 0.02);
+  color: var(--text-dim);
+  font-size: 14px;
+  line-height: 1.6;
+}
+@media (max-width: 640px) {
+  .calc-k { min-width: 100%; }
+}
