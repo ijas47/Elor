@@ -93,6 +93,13 @@ export function ConsultForm() {
         </p>
       )}
       <p className="form-note">Free, no obligation. We reply within one working day.</p>
+      <p className="form-note">
+        By submitting, you agree to our{" "}
+        <a href="/privacy" style={{ textDecoration: "underline" }}>
+          Privacy Policy
+        </a>
+        .
+      </p>
     </form>
   );
 }

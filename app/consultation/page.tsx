@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Image from "next/image";
+import { site } from "@/lib/site";
 import { Reveal, Stagger, StaggerItem } from "@/components/motion/Reveal";
 import { ConsultForm } from "@/components/sections/ConsultForm";
 import { Icon, type IconName } from "@/components/ui/Icon";
@@ -12,6 +13,8 @@ export const metadata: Metadata = {
 };
 
 const faqs = [
+  // Also serialized into FAQPage schema below — keep questions/answers in sync
+  // with what's actually asked on the page.
   { q: "Is the consultation really free?", a: "Yes. The first session, at your site, in any of our stores, or over video, is free and carries no obligation. You only pay if you choose to go ahead." },
   { q: "Do I have to buy everything from you?", a: "No, but there's a real advantage to it: when we supply and install, one team owns quality, pricing and the warranty. No blame games between shop, designer and electrician." },
   { q: "Can you work with my architect or interior designer?", a: "Absolutely. We work alongside architects and designers constantly, reading drawings, improving them, and coordinating on site so the scheme lands the way it was designed." },
@@ -24,9 +27,40 @@ const audiences = [
   { icon: "shield", h: "Commercial owners", p: "Lighting tuned to keep guests longer and make product look its best, delivered on spec with project pricing." },
 ];
 
+const serviceSchema = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  name: "Lighting Design Consultation",
+  serviceType: "Interior lighting design consultation",
+  provider: { "@type": "Organization", name: site.name, url: site.domain },
+  areaServed: "IN",
+  description:
+    "A free lighting consultation covering the whole space fixture-by-fixture, with supply from Elor's own range and installation by Elor's own crew, under one warranty.",
+  url: `${site.domain}/consultation`,
+};
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: faqs.map((f) => ({
+    "@type": "Question",
+    name: f.q,
+    acceptedAnswer: { "@type": "Answer", text: f.a },
+  })),
+};
+
 export default function Consultation() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
+
       <section className="page-hero">
         <div className="wrap">
           <Reveal as="span"><span className="eyebrow">Consultation & implementation</span></Reveal>

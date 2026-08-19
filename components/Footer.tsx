@@ -62,6 +62,10 @@ export function Footer() {
 
         <div className={styles.bottom}>
           <span>© {new Date().getFullYear()} Elor Lighting. All rights reserved.</span>
+          <span className={styles.legalLinks}>
+            <Link href="/privacy">Privacy Policy</Link>
+            <Link href="/terms">Terms of Service</Link>
+          </span>
           <span>Elor Lighting · Celestial Lights · Kannur · Kochi · Kozhikode</span>
         </div>
       </div>

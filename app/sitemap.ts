@@ -8,6 +8,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { path: "/customisation", priority: 0.9, freq: "monthly" as const },
     { path: "/consultation", priority: 0.8, freq: "monthly" as const },
     { path: "/stores", priority: 0.7, freq: "monthly" as const },
+    { path: "/privacy", priority: 0.2, freq: "yearly" as const },
+    { path: "/terms", priority: 0.2, freq: "yearly" as const },
   ];
   const now = new Date();
   return routes.map((r) => ({
