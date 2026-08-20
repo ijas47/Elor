@@ -21,6 +21,10 @@ export async function GET() {
 ${stores.map((s) => `  - [${s.brand}, ${s.city}](${site.domain}/stores/${s.city.toLowerCase()}): ${s.address}`).join("\n")}
 - [Guides](${site.domain}/guides): ${guides.map((g) => g.title).join("; ")}
 
+## Machine-readable
+
+- [Pricing](${site.domain}/pricing.md): price bands, services and warranty in plain markdown
+
 ## Contact
 
 - Phone/WhatsApp: ${site.phone}

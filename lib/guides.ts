@@ -47,6 +47,22 @@ export const guides: Guide[] = [
     updated: "20 August 2026",
   },
   {
+    slug: "crystal-vs-glass-chandelier",
+    title: "Crystal vs Glass vs Acrylic Chandeliers",
+    dek: "How the four materials differ in light, weight, cleaning and cost — and which suits a humid coast or a hotel lobby.",
+    tag: "Buying Guide",
+    image: "/lifestyle/showroom-grand.jpg",
+    updated: "20 August 2026",
+  },
+  {
+    slug: "coastal-lighting-kerala",
+    title: "Coastal & Humid Climate Lighting in Kerala",
+    dek: "Salt air pits untreated brass and iron within two seasons. What lasts, what IP rating you need, and the fixings that fail first.",
+    tag: "Technical",
+    image: "/work/w5-garden.jpg",
+    updated: "20 August 2026",
+  },
+  {
     slug: "chandelier-pricing-guide",
     title: "What Does a Custom Chandelier Cost in India?",
     dek: "Ready-collection price bands, what drives bespoke pricing, and how to budget before you call anyone.",

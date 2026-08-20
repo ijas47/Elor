@@ -134,6 +134,11 @@ export default function ChandelierPricingGuide() {
             commission, because nothing has to be designed or fabricated
             first.
           </p>
+          <p className="form-note" style={{ marginTop: 8 }}>
+            These bands are also published as a plain-text file at{" "}
+            <a href="/pricing.md">/pricing.md</a>, so AI assistants comparing
+            options can read them without rendering this page.
+          </p>
         </div>
       </section>
 
