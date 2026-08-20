@@ -57,17 +57,28 @@ Written 2026-08-19. Horizon: 6 months.
 Queries no Indian competitor covers properly. Ship before city pages so the
 location pages land on a domain Google already reads as knowledgeable.
 
-- [ ] `/guides/chandelier-size-calculator` — client-side, room dims → diameter,
-      ceiling height → drop, plus fan clearance + ceiling-load check
-- [ ] `/guides/chandelier-with-ceiling-fan` — the biggest uncontested gap
-- [ ] `/guides/false-ceiling-chandelier-weight` — gypsum/POP vs RCC slab anchoring
-- [ ] `/guides/crystal-vs-glass-chandelier` — comparison format (~33% of AI citations)
-- [ ] `/guides/coastal-lighting-kerala` — salt/humidity material guidance
+- [x] `/guides/chandelier-size-calculator` — client-side, room dims → diameter,
+      ceiling height → drop, plus fan clearance + ceiling-load check. `HowTo`
+      schema; inputs present in prerendered HTML so agents read it without JS
+- [x] `/guides/chandelier-with-ceiling-fan` — the biggest uncontested gap
+- [x] `/guides/false-ceiling-chandelier-weight` — gypsum/POP vs RCC slab anchoring
+- [x] `/guides/crystal-vs-glass-chandelier` — comparison format (~33% of AI citations)
+- [x] `/guides/coastal-lighting-kerala` — salt/humidity material guidance;
+      Phase 2 city pages reuse this per-city
+- [x] `/pricing.md` — machine-readable price bands, linked from `llms.txt` and
+      the pricing guide. Not in `sitemap.xml` by choice: it is not an indexable
+      HTML page and non-HTML entries invite coverage warnings
 - [ ] `/guides/building-in-kerala-from-abroad` — NRI/Gulf remote-build wedge
 - [ ] `/guides/lighting-traditional-kerala-homes` — nalukettu, courtyards, rafters
-- [ ] `/pricing.md` — machine-readable price bands for AI agents
+
+Shipped 2026-08-20 in `ba81b07` + `0835f8f`, both live and verified. Seven
+guides now live; `.spec-table` styles added since tables extract far better
+than prose for AI answer engines.
 
 **Gate → ≥1 guide showing GSC impressions before Phase 2.**
+
+*Next action: submit the 7 new URLs (3 store pages + 4 guides) via GSC URL
+Inspection. The gate clock only starts once they are indexed.*
 
 ## Phase 2 — Kerala districts (weeks 6-9)
 
