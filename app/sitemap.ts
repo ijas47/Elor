@@ -1,6 +1,7 @@
 import type { MetadataRoute } from "next";
 import { site, stores } from "@/lib/site";
 import { guides } from "@/lib/guides";
+import { pieces } from "@/lib/collections";
 
 // lastModified is the real date each page's content last changed, not the build
 // timestamp. Store and guide routes are derived from their data files so a new
@@ -31,10 +32,17 @@ export default function sitemap(): MetadataRoute.Sitemap {
     lastModified: "2026-08-19",
   }));
 
+  // Deduplicated, absolute image URLs for the gallery on /collections — the
+  // `images` field maps to the sitemap's <image:image> extension, which is a
+  // legitimate discovery signal for Google Images independent of whether each
+  // image also has ImageObject schema on the page.
+  const collectionImages = Array.from(new Set(pieces.map((p) => `${site.domain}${p.image}`)));
+
   return [...staticRoutes, ...storeRoutes, ...guideRoutes].map((r) => ({
     url: `${site.domain}${r.path}`,
     lastModified: r.lastModified,
     changeFrequency: r.freq,
     priority: r.priority,
+    ...(r.path === "/collections" && { images: collectionImages }),
   }));
 }

@@ -3,6 +3,7 @@ import { site } from "@/lib/site";
 import { breadcrumbSchema } from "@/lib/schema";
 import { Breadcrumbs } from "@/components/ui/Breadcrumbs";
 import { pieces, categories } from "@/lib/collections";
+import { imageDimensions } from "@/lib/imageDimensions";
 import { Reveal, Stagger, StaggerItem } from "@/components/motion/Reveal";
 import { MagneticButton } from "@/components/motion/MagneticButton";
 import { PieceCard } from "@/components/ui/PieceCard";
@@ -18,18 +19,30 @@ const itemListSchema = {
   "@context": "https://schema.org",
   "@type": "ItemList",
   name: "Elor Lighting Collection",
-  itemListElement: pieces.map((p, i) => ({
-    "@type": "ListItem",
-    position: i + 1,
-    item: {
-      "@type": "Product",
-      name: p.name,
-      category: p.category,
-      image: `${site.domain}${p.image}`,
-      description: p.blurb,
-      brand: { "@type": "Brand", name: site.name },
-    },
-  })),
+  itemListElement: pieces.map((p, i) => {
+    const dims = imageDimensions[p.image];
+    return {
+      "@type": "ListItem",
+      position: i + 1,
+      item: {
+        "@type": "Product",
+        name: p.name,
+        category: p.category,
+        // ImageObject rather than a bare URL string: real width/height (read
+        // off the file, see lib/imageDimensions.ts) and a caption give Google
+        // Images more to index than a plain link does.
+        image: {
+          "@type": "ImageObject",
+          url: `${site.domain}${p.image}`,
+          contentUrl: `${site.domain}${p.image}`,
+          caption: p.blurb,
+          ...(dims && { width: dims.width, height: dims.height }),
+        },
+        description: p.blurb,
+        brand: { "@type": "Brand", name: site.name },
+      },
+    };
+  }),
 };
 
 export default function Collections() {
