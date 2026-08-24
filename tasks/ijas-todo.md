@@ -78,6 +78,18 @@ retrofitted.
 Drafted in good faith, never reviewed by a lawyer, especially the DPDP
 Act section.
 
-### 14. Directory listings
-IndiaMART, Justdial, Houzz India, Sulekha. They already rank for your
-city queries. Use the exact NAP strings from `tasks/gbp-setup.md`.
+### 14. Directory listings — Sulekha, IndiaMART, Justdial ×3, Houzz India
+Full plan with exact copy ready to paste, in `tasks/off-page-seo-plan.md`.
+Each one needs OTP or email verification tied to your phone/inbox, which is
+why this is on your list and not something I could complete — everything
+short of clicking "submit" and confirming the code is done. Budget 60–90
+minutes for the whole Tier 1 batch in one sitting.
+
+### 15. PR pitches — 5 real Kerala/India design publications identified
+Interior Times, Designer+Builder, Veedum Planum, Design Detail, Interior +
+Architecture. Pitch angles and an email template in `tasks/off-page-seo-plan.md`.
+Not urgent, but real and ready whenever you have 30 minutes.
+
+### 16. Pinterest + Houzz India professional profile
+Underused channel for this vertical — pins rank in Google Images. Setup
+guidance in `tasks/off-page-seo-plan.md`.
