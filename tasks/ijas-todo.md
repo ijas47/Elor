@@ -79,11 +79,14 @@ Drafted in good faith, never reviewed by a lawyer, especially the DPDP
 Act section.
 
 ### 14. Directory listings — Sulekha, IndiaMART, Justdial ×3, Houzz India
+**Deferred — Ijas's call, 2026-08-24.** Not urgent, will do later.
 Full plan with exact copy ready to paste, in `tasks/off-page-seo-plan.md`.
 Each one needs OTP or email verification tied to your phone/inbox, which is
 why this is on your list and not something I could complete — everything
 short of clicking "submit" and confirming the code is done. Budget 60–90
-minutes for the whole Tier 1 batch in one sitting.
+minutes for the whole Tier 1 batch in one sitting whenever you're ready —
+happy to drive the browser and fill every field, you just handle the OTP
+and verification-link prompts as they come up.
 
 ### 15. PR pitches — 5 real Kerala/India design publications identified
 Interior Times, Designer+Builder, Veedum Planum, Design Detail, Interior +
