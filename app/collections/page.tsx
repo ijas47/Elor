@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { site } from "@/lib/site";
 import { breadcrumbSchema } from "@/lib/schema";
+import { Breadcrumbs } from "@/components/ui/Breadcrumbs";
 import { pieces, categories } from "@/lib/collections";
 import { Reveal, Stagger, StaggerItem } from "@/components/motion/Reveal";
 import { MagneticButton } from "@/components/motion/MagneticButton";
@@ -47,6 +48,7 @@ export default function Collections() {
 
       <section className="page-hero">
         <div className="wrap">
+          <Breadcrumbs crumbs={[{ name: "Collections", path: "/collections" }]} />
           <Reveal as="span"><span className="eyebrow">The collection</span></Reveal>
           <Reveal delay={0.06}>
             <h1 className="h-xl" style={{ marginTop: 18, maxWidth: "14ch" }}>

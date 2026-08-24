@@ -3,6 +3,7 @@ import Link from "next/link";
 import { site, stores } from "@/lib/site";
 import { testimonials } from "@/lib/testimonials";
 import { breadcrumbSchema } from "@/lib/schema";
+import { Breadcrumbs } from "@/components/ui/Breadcrumbs";
 import { storeCities, type StoreCity } from "@/lib/storeCities";
 import { Reveal } from "@/components/motion/Reveal";
 import { MagneticButton } from "@/components/motion/MagneticButton";
@@ -76,6 +77,7 @@ export function StoreCityPage({ city }: { city: StoreCity }) {
 
       <section className="page-hero">
         <div className="wrap">
+          <Breadcrumbs crumbs={[{ name: "Stores", path: "/stores" }, { name: city, path }]} />
           <div className="split" style={{ alignItems: "center" }}>
             <div>
               <Reveal as="span"><span className="eyebrow">{store.brand}, {city}</span></Reveal>

@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import { site } from "@/lib/site";
 import { breadcrumbSchema } from "@/lib/schema";
+import { Breadcrumbs } from "@/components/ui/Breadcrumbs";
 import { Reveal, Stagger, StaggerItem } from "@/components/motion/Reveal";
 import { ConsultForm } from "@/components/sections/ConsultForm";
 import { Icon, type IconName } from "@/components/ui/Icon";
@@ -70,6 +71,7 @@ export default function Consultation() {
 
       <section className="page-hero">
         <div className="wrap">
+          <Breadcrumbs crumbs={[{ name: "Consultation", path: "/consultation" }]} />
           <Reveal as="span"><span className="eyebrow">Consultation & implementation</span></Reveal>
           <Reveal delay={0.06}>
             <h1 className="h-xl" style={{ marginTop: 18, maxWidth: "16ch" }}>

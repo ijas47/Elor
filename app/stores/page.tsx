@@ -3,6 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { site, stores } from "@/lib/site";
 import { breadcrumbSchema } from "@/lib/schema";
+import { Breadcrumbs } from "@/components/ui/Breadcrumbs";
 import { Reveal, Stagger, StaggerItem } from "@/components/motion/Reveal";
 import { MagneticButton } from "@/components/motion/MagneticButton";
 
@@ -47,6 +48,7 @@ export default function Stores() {
 
       <section className="page-hero">
         <div className="wrap">
+          <Breadcrumbs crumbs={[{ name: "Stores", path: "/stores" }]} />
           <div className="split" style={{ alignItems: "center" }}>
             <div>
               <Reveal as="span"><span className="eyebrow">Experience stores</span></Reveal>

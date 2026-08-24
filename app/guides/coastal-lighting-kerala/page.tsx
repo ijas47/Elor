@@ -1,8 +1,10 @@
 import type { Metadata } from "next";
 import { site } from "@/lib/site";
 import { breadcrumbSchema } from "@/lib/schema";
+import { Breadcrumbs } from "@/components/ui/Breadcrumbs";
 import { Reveal, Stagger, StaggerItem } from "@/components/motion/Reveal";
 import { MagneticButton } from "@/components/motion/MagneticButton";
+import { RelatedGuides } from "@/components/ui/RelatedGuides";
 
 const TITLE = "Coastal & Humid Climate Lighting — What Survives in Kerala";
 const META_TITLE = "Coastal & Humid Climate Lighting in Kerala";
@@ -109,6 +111,7 @@ export default function CoastalLightingGuide() {
 
       <section className="page-hero">
         <div className="wrap-tight">
+          <Breadcrumbs crumbs={[{ name: "Guides", path: "/guides" }, { name: "Coastal & Humid Climate Lighting", path: PATH }]} />
           <Reveal as="span"><span className="eyebrow">Technical · Updated {UPDATED}</span></Reveal>
           <Reveal delay={0.06}>
             <h1 className="h-xl" style={{ marginTop: 18 }}>
@@ -242,6 +245,8 @@ export default function CoastalLightingGuide() {
           </div>
         </div>
       </section>
+
+      <RelatedGuides currentSlug="coastal-lighting-kerala" />
 
       <section className="sec glow-top">
         <div className="wrap-tight" style={{ textAlign: "center" }}>

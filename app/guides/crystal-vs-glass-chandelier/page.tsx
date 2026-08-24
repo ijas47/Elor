@@ -1,8 +1,10 @@
 import type { Metadata } from "next";
 import { site } from "@/lib/site";
 import { breadcrumbSchema } from "@/lib/schema";
+import { Breadcrumbs } from "@/components/ui/Breadcrumbs";
 import { Reveal, Stagger, StaggerItem } from "@/components/motion/Reveal";
 import { MagneticButton } from "@/components/motion/MagneticButton";
+import { RelatedGuides } from "@/components/ui/RelatedGuides";
 
 const TITLE = "Crystal vs Glass vs Acrylic Chandeliers — Which to Choose";
 const META_TITLE = "Crystal vs Glass vs Acrylic Chandeliers";
@@ -109,6 +111,7 @@ export default function MaterialsComparisonGuide() {
 
       <section className="page-hero">
         <div className="wrap-tight">
+          <Breadcrumbs crumbs={[{ name: "Guides", path: "/guides" }, { name: "Crystal vs Glass vs Acrylic", path: PATH }]} />
           <Reveal as="span"><span className="eyebrow">Buying Guide · Updated {UPDATED}</span></Reveal>
           <Reveal delay={0.06}>
             <h1 className="h-xl" style={{ marginTop: 18 }}>
@@ -214,6 +217,8 @@ export default function MaterialsComparisonGuide() {
           </div>
         </div>
       </section>
+
+      <RelatedGuides currentSlug="crystal-vs-glass-chandelier" />
 
       <section className="sec glow-top">
         <div className="wrap-tight" style={{ textAlign: "center" }}>

@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { site } from "@/lib/site";
 import { breadcrumbSchema } from "@/lib/schema";
+import { Breadcrumbs } from "@/components/ui/Breadcrumbs";
 import { guides } from "@/lib/guides";
 import { Reveal, Stagger, StaggerItem } from "@/components/motion/Reveal";
 import { GuideCard } from "@/components/ui/GuideCard";
@@ -24,6 +25,7 @@ export default function Guides() {
 
       <section className="page-hero">
         <div className="wrap-tight">
+          <Breadcrumbs crumbs={[{ name: "Guides", path: "/guides" }]} />
           <Reveal as="span"><span className="eyebrow">Guides</span></Reveal>
           <Reveal delay={0.06}>
             <h1 className="h-xl" style={{ marginTop: 18 }}>

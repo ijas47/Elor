@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import { site } from "@/lib/site";
 import { breadcrumbSchema } from "@/lib/schema";
+import { Breadcrumbs } from "@/components/ui/Breadcrumbs";
 import { Reveal, Stagger, StaggerItem } from "@/components/motion/Reveal";
 import { MagneticButton } from "@/components/motion/MagneticButton";
 import { Icon } from "@/components/ui/Icon";
@@ -97,6 +98,7 @@ export default function Customisation() {
 
       <section className="page-hero">
         <div className="wrap">
+          <Breadcrumbs crumbs={[{ name: "Customisation", path: "/customisation" }]} />
           <div className="split" style={{ alignItems: "center" }}>
             <div>
               <Reveal as="span"><span className="eyebrow">Custom chandeliers · Our specialty</span></Reveal>

@@ -1,8 +1,10 @@
 import type { Metadata } from "next";
 import { site } from "@/lib/site";
 import { breadcrumbSchema } from "@/lib/schema";
+import { Breadcrumbs } from "@/components/ui/Breadcrumbs";
 import { Reveal, Stagger, StaggerItem } from "@/components/motion/Reveal";
 import { MagneticButton } from "@/components/motion/MagneticButton";
+import { RelatedGuides } from "@/components/ui/RelatedGuides";
 
 const TITLE = "Chandelier With a Ceiling Fan — How to Make Both Work";
 const META_TITLE = "Chandelier With a Ceiling Fan";
@@ -109,6 +111,7 @@ export default function CeilingFanGuide() {
 
       <section className="page-hero">
         <div className="wrap-tight">
+          <Breadcrumbs crumbs={[{ name: "Guides", path: "/guides" }, { name: "Chandelier With a Ceiling Fan", path: PATH }]} />
           <Reveal as="span"><span className="eyebrow">Technical · Updated {UPDATED}</span></Reveal>
           <Reveal delay={0.06}>
             <h1 className="h-xl" style={{ marginTop: 18 }}>
@@ -215,6 +218,8 @@ export default function CeilingFanGuide() {
           </div>
         </div>
       </section>
+
+      <RelatedGuides currentSlug="chandelier-with-ceiling-fan" />
 
       <section className="sec glow-top">
         <div className="wrap-tight" style={{ textAlign: "center" }}>

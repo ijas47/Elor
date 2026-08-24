@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { site } from "@/lib/site";
 import { breadcrumbSchema } from "@/lib/schema";
+import { Breadcrumbs } from "@/components/ui/Breadcrumbs";
 
 export const metadata: Metadata = {
   title: "Terms of Service",
@@ -23,6 +24,7 @@ export default function Terms() {
       />
       <section className="sec">
       <div className="wrap-tight">
+        <Breadcrumbs crumbs={[{ name: "Terms of Service", path: "/terms" }]} />
         <span className="eyebrow">Legal</span>
         <h1 className="h-lg" style={{ marginTop: 18 }}>Terms of Service</h1>
         <p className="lede" style={{ marginTop: 16 }}>Last updated {UPDATED}</p>

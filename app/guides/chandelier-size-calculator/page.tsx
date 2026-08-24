@@ -1,9 +1,11 @@
 import type { Metadata } from "next";
 import { site } from "@/lib/site";
 import { breadcrumbSchema } from "@/lib/schema";
+import { Breadcrumbs } from "@/components/ui/Breadcrumbs";
 import { ChandelierCalculator } from "@/components/ui/ChandelierCalculator";
 import { Reveal, Stagger, StaggerItem } from "@/components/motion/Reveal";
 import { MagneticButton } from "@/components/motion/MagneticButton";
+import { RelatedGuides } from "@/components/ui/RelatedGuides";
 
 const TITLE = "Chandelier Size Calculator — Diameter, Drop & Fan Clearance";
 // Shorter than TITLE, which stays as the Article headline and H1 subject.
@@ -125,6 +127,7 @@ export default function SizeCalculatorGuide() {
 
       <section className="page-hero">
         <div className="wrap-tight">
+          <Breadcrumbs crumbs={[{ name: "Guides", path: "/guides" }, { name: "Chandelier Size Calculator", path: PATH }]} />
           <Reveal as="span"><span className="eyebrow">Technical · Updated {UPDATED}</span></Reveal>
           <Reveal delay={0.06}>
             <h1 className="h-xl" style={{ marginTop: 18 }}>
@@ -226,6 +229,8 @@ export default function SizeCalculatorGuide() {
           </div>
         </div>
       </section>
+
+      <RelatedGuides currentSlug="chandelier-size-calculator" />
 
       <section className="sec glow-top">
         <div className="wrap-tight" style={{ textAlign: "center" }}>

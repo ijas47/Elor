@@ -1,8 +1,10 @@
 import type { Metadata } from "next";
 import { site } from "@/lib/site";
 import { breadcrumbSchema } from "@/lib/schema";
+import { Breadcrumbs } from "@/components/ui/Breadcrumbs";
 import { Reveal, Stagger, StaggerItem } from "@/components/motion/Reveal";
 import { MagneticButton } from "@/components/motion/MagneticButton";
+import { RelatedGuides } from "@/components/ui/RelatedGuides";
 
 const TITLE = "Can a False Ceiling Hold a Chandelier? Weights & Anchoring";
 const META_TITLE = "Can a False Ceiling Hold a Chandelier?";
@@ -123,6 +125,7 @@ export default function FalseCeilingGuide() {
 
       <section className="page-hero">
         <div className="wrap-tight">
+          <Breadcrumbs crumbs={[{ name: "Guides", path: "/guides" }, { name: "False Ceilings & Chandelier Weight", path: PATH }]} />
           <Reveal as="span"><span className="eyebrow">Technical · Updated {UPDATED}</span></Reveal>
           <Reveal delay={0.06}>
             <h1 className="h-xl" style={{ marginTop: 18 }}>
@@ -246,6 +249,8 @@ export default function FalseCeilingGuide() {
           </div>
         </div>
       </section>
+
+      <RelatedGuides currentSlug="false-ceiling-chandelier-weight" />
 
       <section className="sec glow-top">
         <div className="wrap-tight" style={{ textAlign: "center" }}>

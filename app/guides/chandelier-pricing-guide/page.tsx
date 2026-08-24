@@ -1,8 +1,10 @@
 import type { Metadata } from "next";
 import { site } from "@/lib/site";
 import { breadcrumbSchema } from "@/lib/schema";
+import { Breadcrumbs } from "@/components/ui/Breadcrumbs";
 import { Reveal, Stagger, StaggerItem } from "@/components/motion/Reveal";
 import { MagneticButton } from "@/components/motion/MagneticButton";
+import { RelatedGuides } from "@/components/ui/RelatedGuides";
 import { Icon, type IconName } from "@/components/ui/Icon";
 
 export const metadata: Metadata = {
@@ -91,6 +93,7 @@ export default function ChandelierPricingGuide() {
 
       <section className="page-hero">
         <div className="wrap-tight">
+          <Breadcrumbs crumbs={[{ name: "Guides", path: "/guides" }, { name: "Chandelier Pricing Guide", path: "/guides/chandelier-pricing-guide" }]} />
           <Reveal as="span"><span className="eyebrow">Pricing Guide · Updated {UPDATED}</span></Reveal>
           <Reveal delay={0.06}>
             <h1 className="h-xl" style={{ marginTop: 18 }}>
@@ -200,6 +203,8 @@ export default function ChandelierPricingGuide() {
           </div>
         </div>
       </section>
+
+      <RelatedGuides currentSlug="chandelier-pricing-guide" />
 
       <section className="sec glow-top">
         <div className="wrap-tight" style={{ textAlign: "center" }}>

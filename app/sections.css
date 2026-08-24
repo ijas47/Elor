@@ -885,3 +885,44 @@
 @media (max-width: 640px) {
   .calc-k { min-width: 100%; }
 }
+
+/* ---------- Breadcrumbs ----------
+   Renders the same trail as each page's BreadcrumbList schema, so Google sees
+   markup that matches something a visitor can actually see and click. Sits as
+   the first element inside the hero wrap, ahead of the eyebrow. */
+.breadcrumbs {
+  margin-bottom: 22px;
+}
+.breadcrumbs ol {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  font-size: 12.5px;
+  letter-spacing: 0.02em;
+}
+.breadcrumbs li {
+  display: flex;
+  align-items: center;
+  color: var(--text-faint);
+}
+.breadcrumbs li:not(:last-child)::after {
+  content: "/";
+  margin: 0 9px;
+  color: var(--text-faint);
+  opacity: 0.5;
+}
+.breadcrumbs a {
+  color: var(--text-faint);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+.breadcrumbs a:hover {
+  color: var(--gold);
+}
+.breadcrumbs span[aria-current] {
+  color: var(--text-dim);
+}
