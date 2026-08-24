@@ -127,6 +127,36 @@ these; fight there last, from authority.
 - [ ] Flip `site.shopLive: true` + real `site.shopUrl` in `lib/site.ts`
 - [ ] `noindex` the Vercel preview; don't link staging publicly
 
+## Technical audit follow-ups (shipped 2026-08-24)
+
+Not in the original phased plan — surfaced by the seo-audit skill against the
+live site five days after launch. All committed and pushed to `main`.
+
+- [x] Title/description lengths — 9 pages had titles or descriptions past the
+      SERP truncation width; `/stores/kochi` doubled the brand name. Fixed in
+      `281e9dd`.
+- [x] Sitemap submitted to GSC — it existed and was valid but had never been
+      registered, so `inspect_url` returned "URL is unknown to Google" for
+      pages that had been live for days. `submit_sitemap` + a 10-URL batch via
+      the Indexing API, 2026-08-24.
+- [x] Visible breadcrumbs — `BreadcrumbList` schema existed on 14 pages with no
+      visible trail to match it. `components/ui/Breadcrumbs.tsx` renders the
+      identical crumb list passed to `breadcrumbSchema()`, so the two can't
+      drift apart. `7a3b414`.
+- [x] Related-guides block — `how-to-choose-a-custom-chandelier` had zero
+      contextual inbound links, reachable only from the `/guides` hub.
+      `components/ui/RelatedGuides.tsx` on all 7 guide pages, same-tag first.
+      `7a3b414`.
+- [x] Image SEO — no `ImageObject` schema anywhere, no image sitemap. Added
+      both for the 22-piece `/collections` gallery, with real pixel dimensions
+      (`lib/imageDimensions.ts`, read off the files, not guessed). `832ce67`.
+- [ ] Core Web Vitals — genuinely unmeasured. PageSpeed Insights' API quota
+      was exhausted both times it was tried. TTFB (~200ms) and image payload
+      look healthy from static analysis, and next/font + next/image are
+      already configured well (font-display: swap, priority on the LCP
+      candidate, AVIF/WebP negotiation) — but that is not the same as a real
+      LCP/INP/CLS number. Needs a manual run at pagespeed.web.dev.
+
 ## Off-site presence (6.5× more AI citations come via third parties)
 
 - [ ] GBP ×3 — highest-value single action in this plan
