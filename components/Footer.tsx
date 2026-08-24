@@ -36,6 +36,8 @@ export function Footer() {
             <Link href="/stores">Our Stores</Link>
             <Link href="/guides">Guides</Link>
             <Link href="/#commercial">Commercial</Link>
+            <Link href="/for/architects-and-designers">For Architects &amp; Designers</Link>
+            <Link href="/press">Press</Link>
           </div>
 
           <div className={styles.col}>

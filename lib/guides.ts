@@ -63,6 +63,14 @@ export const guides: Guide[] = [
     updated: "20 August 2026",
   },
   {
+    slug: "how-to-choose-a-chandelier-shop",
+    title: "How to Choose a Chandelier Shop or Fabricator in India",
+    dek: "Seven questions that separate a shop that makes chandeliers from one that only imports and resells them.",
+    tag: "Buying Guide",
+    image: "/lifestyle/store-wall.jpg",
+    updated: "24 August 2026",
+  },
+  {
     slug: "chandelier-pricing-guide",
     title: "What Does a Custom Chandelier Cost in India?",
     dek: "Ready-collection price bands, what drives bespoke pricing, and how to budget before you call anyone.",

@@ -20,6 +20,8 @@ export async function GET() {
 - [Stores](${site.domain}/stores): the three experience stores
 ${stores.map((s) => `  - [${s.brand}, ${s.city}](${site.domain}/stores/${s.city.toLowerCase()}): ${s.address}`).join("\n")}
 - [Guides](${site.domain}/guides): ${guides.map((g) => g.title).join("; ")}
+- [For Architects & Designers](${site.domain}/for/architects-and-designers): trade fabrication service for architects and interior designers
+- [Press](${site.domain}/press): company facts, logo assets, contact for media
 
 ## Machine-readable
 
