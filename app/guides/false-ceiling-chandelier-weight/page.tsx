@@ -5,13 +5,14 @@ import { Reveal, Stagger, StaggerItem } from "@/components/motion/Reveal";
 import { MagneticButton } from "@/components/motion/MagneticButton";
 
 const TITLE = "Can a False Ceiling Hold a Chandelier? Weights & Anchoring";
+const META_TITLE = "Can a False Ceiling Hold a Chandelier?";
 const DESC =
-  "Gypsum and POP false ceilings carry a few kilograms, not a chandelier. What each ceiling type holds, what fixtures actually weigh, and why the anchor has to go in before the ceiling closes.";
+  "Gypsum and POP ceilings carry a few kilograms, not a chandelier. What each ceiling holds, what fixtures weigh, and why the anchor goes in first.";
 const PATH = "/guides/false-ceiling-chandelier-weight";
 const UPDATED = "20 August 2026";
 
 export const metadata: Metadata = {
-  title: TITLE,
+  title: META_TITLE,
   description: DESC,
   alternates: { canonical: PATH },
 };

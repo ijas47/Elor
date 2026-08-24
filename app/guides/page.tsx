@@ -6,9 +6,9 @@ import { Reveal, Stagger, StaggerItem } from "@/components/motion/Reveal";
 import { GuideCard } from "@/components/ui/GuideCard";
 
 export const metadata: Metadata = {
-  title: "Lighting Guides · Pricing & City Guides",
+  title: "Lighting Guides & Buying Advice",
   description:
-    "How much a custom chandelier costs in India, and what Elor and Celestial Lights build in Kannur, Kochi and Kozhikode.",
+    "What a custom chandelier costs in India, how to size one for your room, and what survives a humid coast. Practical guides from Elor Lighting.",
   alternates: { canonical: "/guides" },
 };
 

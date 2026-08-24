@@ -7,9 +7,9 @@ import { ConsultForm } from "@/components/sections/ConsultForm";
 import { Icon, type IconName } from "@/components/ui/Icon";
 
 export const metadata: Metadata = {
-  title: "Lighting Consultation · Design, Supply & Installation",
+  title: "Lighting Design Consultation",
   description:
-    "Book a free lighting consultation with Elor. A designer plans your whole space fixture-by-fixture; we supply from our own range and install it ourselves, with one warranty. Kerala & pan-India.",
+    "Book a free lighting design consultation — in store, at your site, or over video. We plan the scheme, design what has to be made, and install it.",
   alternates: { canonical: "/consultation" },
 };
 

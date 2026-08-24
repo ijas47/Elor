@@ -5,13 +5,14 @@ import { Reveal, Stagger, StaggerItem } from "@/components/motion/Reveal";
 import { MagneticButton } from "@/components/motion/MagneticButton";
 
 const TITLE = "Crystal vs Glass vs Acrylic Chandeliers — Which to Choose";
+const META_TITLE = "Crystal vs Glass vs Acrylic Chandeliers";
 const DESC =
-  "How crystal, hand-blown glass, acrylic and metal chandeliers actually differ in light, weight, cleaning and cost — and which suits an Indian home, humid coast or hotel lobby.";
+  "How crystal, glass, acrylic and metal chandeliers differ in light, weight, cleaning and cost — and which suits an Indian home, humid coast or lobby.";
 const PATH = "/guides/crystal-vs-glass-chandelier";
 const UPDATED = "20 August 2026";
 
 export const metadata: Metadata = {
-  title: TITLE,
+  title: META_TITLE,
   description: DESC,
   alternates: { canonical: PATH },
 };

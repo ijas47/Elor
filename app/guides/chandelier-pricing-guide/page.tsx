@@ -6,7 +6,7 @@ import { MagneticButton } from "@/components/motion/MagneticButton";
 import { Icon, type IconName } from "@/components/ui/Icon";
 
 export const metadata: Metadata = {
-  title: "Custom Chandelier Cost in India — A Real Pricing Guide",
+  title: "What a Custom Chandelier Costs in India",
   description:
     "What a chandelier actually costs in India: real ready-collection price bands by size and material, and how bespoke fabrication pricing is worked out.",
   alternates: { canonical: "/guides/chandelier-pricing-guide" },

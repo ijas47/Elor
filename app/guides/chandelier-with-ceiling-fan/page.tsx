@@ -5,13 +5,14 @@ import { Reveal, Stagger, StaggerItem } from "@/components/motion/Reveal";
 import { MagneticButton } from "@/components/motion/MagneticButton";
 
 const TITLE = "Chandelier With a Ceiling Fan — How to Make Both Work";
+const META_TITLE = "Chandelier With a Ceiling Fan";
 const DESC =
-  "Almost every Indian room has a ceiling fan, and almost every chandelier guide ignores it. The four layouts that work, the clearances they need, and the wiring nobody mentions.";
+  "Almost every Indian room has a ceiling fan and almost every chandelier guide ignores it. Four layouts that work, with the clearances each one needs.";
 const PATH = "/guides/chandelier-with-ceiling-fan";
 const UPDATED = "20 August 2026";
 
 export const metadata: Metadata = {
-  title: TITLE,
+  title: META_TITLE,
   description: DESC,
   alternates: { canonical: PATH },
 };

@@ -7,9 +7,9 @@ import { MagneticButton } from "@/components/motion/MagneticButton";
 import { Icon } from "@/components/ui/Icon";
 
 export const metadata: Metadata = {
-  title: "Custom Chandeliers · Send a Picture, We Build the Light",
+  title: "Custom Chandeliers Made to Your Design",
   description:
-    "Elor builds custom chandeliers and statement lighting from any reference, a photo, a render, a magazine page or a sketch. Measure, design, fabricate and install, with up to 5-year warranty. Kerala & pan-India.",
+    "Send a photo, render or sketch and we design, fabricate and install the chandelier to match. Crystal, glass, metal or acrylic, with pan-India delivery.",
   alternates: { canonical: "/customisation" },
 };
 

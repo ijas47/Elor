@@ -21,9 +21,9 @@ export interface StoreCityCopy {
 export const storeCities: Record<StoreCity, StoreCityCopy> = {
   Kannur: {
     city: "Kannur",
-    metaTitle: "Chandelier & Lighting Store in Kannur · Celestial Lights",
+    metaTitle: "Chandelier & Lighting Store in Kannur",
     metaDescription:
-      "Custom chandelier design, fabrication and installation in Kannur, plus the Celestial Lights ready collection. Visit the Kannur store or book a consultation.",
+      "Custom chandelier design, fabrication and installation in Kannur, plus the Celestial Lights ready collection. Visit the store or book a free consultation.",
     heroHeadline: "Custom Chandeliers & Lighting Design in Kannur",
     heroLede:
       "One of three Celestial Lights experience stores in Kerala, serving Kannur homes, offices and public spaces with bespoke fabrication, a ready collection, and full installation, backed by up to 5-year warranty.",
@@ -45,9 +45,9 @@ export const storeCities: Record<StoreCity, StoreCityCopy> = {
   },
   Kochi: {
     city: "Kochi",
-    metaTitle: "Chandelier & Lighting Store in Kochi · Elor Lighting",
+    metaTitle: "Chandelier & Lighting Store in Kochi",
     metaDescription:
-      "Custom chandelier design, fabrication and installation in Kochi, plus the Celestial Lights ready collection. Visit the Kadavanthara store or book a consultation.",
+      "Custom chandelier design, fabrication and installation in Kochi, plus the Celestial Lights ready collection. Visit Kadavanthara or book a free consultation.",
     heroHeadline: "Custom Chandeliers & Lighting Design in Kochi",
     heroLede:
       "Elor Lighting's Kochi store serves the city's homes, hospitality projects and commercial spaces with bespoke fabrication, a ready collection, and full installation, backed by up to 5-year warranty.",
@@ -69,9 +69,9 @@ export const storeCities: Record<StoreCity, StoreCityCopy> = {
   },
   Kozhikode: {
     city: "Kozhikode",
-    metaTitle: "Chandelier & Lighting Store in Kozhikode · Celestial Lights",
+    metaTitle: "Chandelier & Lighting Store in Kozhikode",
     metaDescription:
-      "Custom chandelier design, fabrication and installation in Kozhikode, plus the Celestial Lights ready collection. Visit the Kozhikode store or book a consultation.",
+      "Custom chandelier design, fabrication and installation in Kozhikode, plus the Celestial Lights ready collection. Visit the store or book a consultation.",
     heroHeadline: "Custom Chandeliers & Lighting Design in Kozhikode",
     heroLede:
       "One of three Celestial Lights experience stores in Kerala, serving Kozhikode homes, restaurants and retail spaces with bespoke fabrication, a ready collection, and full installation, backed by up to 5-year warranty.",

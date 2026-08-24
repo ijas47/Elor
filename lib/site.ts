@@ -16,6 +16,15 @@ export const site = {
   domain: "https://www.elorlighting.com",
   description:
     "Elor Lighting is the lighting consulting and custom lighting arm of Celestial Lights. We work out where every light belongs, design and manufacture the pieces that have to be made for the space, and install the whole scheme, for architects, developers and homeowners. Three experience stores in Kerala, with pan-India delivery and installation.",
+  /**
+   * `description` above is the full entity description — it feeds Organization
+   * schema and llms.txt, where length is fine. `metaDescription` is the SERP
+   * version: Google truncates around 160 characters, so the long one lost its
+   * location and its call to action before anyone read them.
+   */
+  metaDescription:
+    "Custom chandelier design, fabrication and installation across India, with three experience stores in Kannur, Kochi and Kozhikode. Free design consultation.",
+
   // One number for the whole business, calls and WhatsApp alike, including
   // every store. Enquiries are meant to funnel to this single line so they can
   // be automated and handled in one place. Do not introduce a second number.

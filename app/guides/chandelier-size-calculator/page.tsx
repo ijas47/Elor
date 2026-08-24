@@ -6,13 +6,15 @@ import { Reveal, Stagger, StaggerItem } from "@/components/motion/Reveal";
 import { MagneticButton } from "@/components/motion/MagneticButton";
 
 const TITLE = "Chandelier Size Calculator — Diameter, Drop & Fan Clearance";
+// Shorter than TITLE, which stays as the Article headline and H1 subject.
+const META_TITLE = "Chandelier Size Calculator";
 const DESC =
-  "Work out the right chandelier diameter and drop for your room in metres, with the two checks Indian homes actually need: ceiling fan clearance and false ceiling load.";
+  "Work out the right chandelier diameter and drop for your room, with the two checks Indian homes need: ceiling fan clearance and false ceiling load.";
 const PATH = "/guides/chandelier-size-calculator";
 const UPDATED = "20 August 2026";
 
 export const metadata: Metadata = {
-  title: TITLE,
+  title: META_TITLE,
   description: DESC,
   alternates: { canonical: PATH },
 };

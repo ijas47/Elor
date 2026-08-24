@@ -5,7 +5,7 @@ import { Reveal, Stagger, StaggerItem } from "@/components/motion/Reveal";
 import { MagneticButton } from "@/components/motion/MagneticButton";
 
 export const metadata: Metadata = {
-  title: "How to Choose a Custom Chandelier — Villa, Duplex or Hotel",
+  title: "How to Choose a Custom Chandelier",
   description:
     "What actually changes between lighting a villa living room, a duplex stairwell and a hotel lobby, and six questions to answer before you choose anything.",
   alternates: { canonical: "/guides/how-to-choose-a-custom-chandelier" },

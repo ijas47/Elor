@@ -5,13 +5,14 @@ import { Reveal, Stagger, StaggerItem } from "@/components/motion/Reveal";
 import { MagneticButton } from "@/components/motion/MagneticButton";
 
 const TITLE = "Coastal & Humid Climate Lighting — What Survives in Kerala";
+const META_TITLE = "Coastal & Humid Climate Lighting in Kerala";
 const DESC =
-  "Salt air and monsoon humidity corrode untreated brass and iron within a couple of years. Which finishes last near the Kerala coast, what IP rating you need where, and the fixings that fail first.";
+  "Salt air pits untreated brass and iron within two seasons. Which finishes last near the Kerala coast, what IP rating you need, and what fails first.";
 const PATH = "/guides/coastal-lighting-kerala";
 const UPDATED = "20 August 2026";
 
 export const metadata: Metadata = {
-  title: TITLE,
+  title: META_TITLE,
   description: DESC,
   alternates: { canonical: PATH },
 };

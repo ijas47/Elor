@@ -25,11 +25,13 @@ const inter = Inter({
 export const metadata: Metadata = {
   metadataBase: new URL(site.domain),
   title: {
-    default:
-      "Elor Lighting | Custom Chandeliers, Lighting Design & Installation | Kerala & Pan-India",
+    // Titles are budgeted to ~60 characters, the width Google renders before
+    // truncating. The template adds " | Elor Lighting" (16), so page titles
+    // below are kept to ~44.
+    default: "Elor Lighting | Custom Chandeliers & Lighting Design",
     template: "%s | Elor Lighting",
   },
-  description: site.description,
+  description: site.metaDescription,
   keywords: [
     "custom chandeliers Kerala",
     "chandelier manufacturer Kerala",
@@ -48,13 +50,13 @@ export const metadata: Metadata = {
     url: site.domain,
     siteName: site.name,
     title: "Elor Lighting | Custom Chandeliers, Design & Installation",
-    description: site.description,
+    description: site.metaDescription,
     images: [{ url: "/lifestyle/hero-1.jpg", width: 1200, height: 630, alt: "Elor Lighting" }],
   },
   twitter: {
     card: "summary_large_image",
     title: "Elor Lighting",
-    description: site.description,
+    description: site.metaDescription,
     images: ["/lifestyle/hero-1.jpg"],
   },
   robots: { index: true, follow: true },
@@ -69,8 +71,20 @@ const orgSchema = {
   logo: `${site.domain}/brand/logo-mark.svg`,
   description: site.description,
   email: site.email,
+  telephone: site.phone,
   areaServed: "IN",
   sameAs: [site.social.instagram, site.social.facebook],
+  // Each store's own address lives in its LightingStore schema at
+  // /stores/{city}. No Organization-level address here: which of the three is
+  // the registered office is a business fact, not something to infer.
+  contactPoint: {
+    "@type": "ContactPoint",
+    telephone: site.phone,
+    email: site.email,
+    contactType: "sales",
+    areaServed: "IN",
+    availableLanguage: ["en", "ml"],
+  },
 };
 
 // No `potentialAction`/SearchAction here deliberately: the site has no
