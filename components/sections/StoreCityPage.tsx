@@ -203,6 +203,13 @@ export function StoreCityPage({ city }: { city: StoreCity }) {
               <MagneticButton href="/guides/chandelier-pricing-guide" variant="ghost">See Pricing Guide</MagneticButton>
             </div>
           </Reveal>
+          <Reveal delay={0.16}>
+            <p className="fine" style={{ marginTop: 22 }}>
+              <Link href="/guides/how-a-lighting-plan-is-built">How a lighting plan is built</Link>
+              {" · "}
+              <Link href="/guides/colour-of-light">Kelvin, CRI and beam angle</Link>
+            </p>
+          </Reveal>
           {/* Sibling-store links: keeps each store page one click from the other
               two and from the estate index, so no store page is a dead end. */}
           <Reveal delay={0.18}>

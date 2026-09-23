@@ -19,7 +19,8 @@ export async function GET() {
 - [Consultation](${site.domain}/consultation): book a lighting design consultation
 - [Stores](${site.domain}/stores): Celestial stores and experience centres in Kannur and Calicut, and a full experience centre in Kochi
 ${stores.map((s) => `  - [${s.brand}, ${s.city}](${site.domain}/stores/${s.city.toLowerCase()}): ${s.address}`).join("\n")}
-- [Guides](${site.domain}/guides): ${guides.map((g) => g.title).join("; ")}
+- [Guides](${site.domain}/guides): practical notes on specifying and buying light
+${guides.map((g) => `  - [${g.title}](${site.domain}/guides/${g.slug}): ${g.dek}`).join("\n")}
 - [For Architects & Designers](${site.domain}/for/architects-and-designers): trade fabrication service for architects and interior designers
 - [Press](${site.domain}/press): company facts, logo assets, contact for media
 

@@ -21,9 +21,9 @@ export interface StoreCityCopy {
 export const storeCities: Record<StoreCity, StoreCityCopy> = {
   Kannur: {
     city: "Kannur",
-    metaTitle: "Chandelier & Lighting Store in Kannur",
+    metaTitle: "Celestial Lights Kannur",
     metaDescription:
-      "Custom chandelier design, fabrication and installation in Kannur, plus the Celestial Lights ready collection. Visit the store or book a free consultation.",
+      "Celestial Lights Kannur is a chandelier store and experience centre. Custom design, fabrication and installation, plus the ready collection. Walk in or book.",
     heroHeadline: "Custom Chandeliers & Lighting Design in Kannur",
     heroLede:
       "A Celestial Lights store and experience centre in Kannur. Lighting plans for architects and owners who are building, the ready range on the floor, and custom chandeliers made in our factory.",
@@ -69,9 +69,9 @@ export const storeCities: Record<StoreCity, StoreCityCopy> = {
   },
   Kozhikode: {
     city: "Kozhikode",
-    metaTitle: "Chandelier & Lighting Store in Kozhikode",
+    metaTitle: "Celestial Lights Calicut",
     metaDescription:
-      "Custom chandelier design, fabrication and installation in Kozhikode, plus the Celestial Lights ready collection. Visit the store or book a consultation.",
+      "Celestial Lights in Kozhikode (Calicut): a chandelier store and experience centre. Custom design, fabrication and installation, plus the ready collection.",
     heroHeadline: "Custom Chandeliers & Lighting Design in Kozhikode",
     heroLede:
       "A Celestial Lights store and experience centre in Calicut. Lighting plans for architects and owners who are building, the ready range on the floor, and custom chandeliers made in our factory.",

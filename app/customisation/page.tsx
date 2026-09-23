@@ -163,6 +163,12 @@ export default function Customisation() {
               </StaggerItem>
             ))}
           </Stagger>
+          <p className="fine" style={{ textAlign: "center", marginTop: 36 }}>
+            The piece is one line on the plan. Read{" "}
+            <a href="/guides/how-a-lighting-plan-is-built">how a lighting plan is built</a>
+            {" "}and{" "}
+            <a href="/guides/colour-of-light">what Kelvin, CRI and beam angle change</a>.
+          </p>
         </div>
       </section>
 
