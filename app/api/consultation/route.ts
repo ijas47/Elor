@@ -12,7 +12,7 @@ function reply(req: Request, json: boolean, ok: boolean, status = 200) {
 }
 
 /**
- * Emails a consultation request to site.enquiryEmail.
+ * Emails a consultation request to site.email.
  * Delivered through FormSubmit, which emails that inbox directly.
  * The first submission asks that inbox to confirm the address once.
  */
@@ -55,7 +55,7 @@ export async function POST(req: Request) {
 
   try {
     const res = await fetch(
-      `https://formsubmit.co/ajax/${encodeURIComponent(site.enquiryEmail)}`,
+      `https://formsubmit.co/ajax/${encodeURIComponent(site.email)}`,
       {
         method: "POST",
         headers: {

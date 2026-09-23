@@ -28,9 +28,8 @@ export const site = {
   // One number for the whole business, calls and WhatsApp alike, including
   // every store. Enquiries are meant to funnel to this single line so they can
   // be automated and handled in one place. Do not introduce a second number.
-  email: "hello@elorlighting.com",
-  // Consultation form notifications. Not the public address on the site.
-  enquiryEmail: "samad@elorlighting.com",
+  // hello@ does not exist yet. Use this until a shared inbox is created.
+  email: "samad@elorlighting.com",
   phone: "+91 99956 19470",
   phoneHref: "tel:+919995619470",
   hours: "Mon-Sat · 9:30 AM to 8:30 PM IST",
