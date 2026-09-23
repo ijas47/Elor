@@ -52,6 +52,9 @@ export const site = {
   // Matching file lives at public/<key>.txt. Submitting URLs on publish is a
   // separate follow-up; this just makes the site verifiable.
   indexNowKey: "47d1e184a9472a8ef2421ef36e117c5f",
+
+  // GA4 web stream for www.elorlighting.com.
+  gaMeasurementId: "G-QXWSL80NYJ",
 } as const;
 
 /**

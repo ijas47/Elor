@@ -11,7 +11,7 @@ export const metadata: Metadata = {
   robots: { index: true, follow: true },
 };
 
-const UPDATED = "19 August 2026";
+const UPDATED = "23 September 2026";
 
 export default function Privacy() {
   return (
@@ -63,17 +63,21 @@ export default function Privacy() {
             email provider.
           </p>
           <p>
-            We currently do not use analytics, advertising, or tracking cookies on this site. If
-            we add analytics tooling in the future (for example, to understand which pages are
-            useful), we will update this policy to describe what is collected and why before doing
-            so.
+            We use Google Analytics to see which pages are useful. It
+            receives the pages you view, roughly where you are, and the kind of device and browser
+            you use, and it sets a cookie to tell a return visit from a new one. It does not
+            receive your name, phone number, or anything you type into the consultation form.
+            Google processes that visit data under its own policy, at{" "}
+            <a href="https://policies.google.com/privacy">policies.google.com/privacy</a>. We do
+            not use this for advertising.
           </p>
 
           <h2 className="h-md">Why we use it</h2>
           <p>
-            Solely to respond to your enquiry — to understand your space, prepare a consultation
-            or a custom-fixture quote, and follow up with you. We do not sell, rent, or share your
-            information with third parties for their marketing purposes.
+            Enquiry details are used solely to respond to you — to understand your space, prepare
+            a consultation or a custom-fixture quote, and follow up. Visit data is used only to
+            see which pages help people. We do not sell or rent your information, and we do not
+            share it for anyone else&rsquo;s advertising.
           </p>
 
           <h2 className="h-md">How long we keep it</h2>
