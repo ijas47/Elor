@@ -38,7 +38,7 @@ Code, this week:
 - [x] `llms.txt` lists each guide as its own link, with the dek, instead of one long sentence
 - [x] Customisation and each store page link to the lighting-plan guide and the Kelvin guide
 - [x] Kannur title is `Celestial Lights Kannur`. Kozhikode title is `Celestial Lights Calicut`. Kochi stays Elor
-- [ ] IndexNow ping for the two new guides, and the sitemap resubmitted in Search Console, after those titles are on production
+- [x] IndexNow ping for the two new guides, and the sitemap resubmitted in Search Console, after those titles are on production. IndexNow returned 202 on 23 Sep 2026. Sitemap resubmit succeeded.
 - [ ] Confirm both new guides return 200 on the live domain and are “URL is on Google” in URL Inspection within 14 days
 
 You, this month. These move local pack and AI recommendations more than another page will:
