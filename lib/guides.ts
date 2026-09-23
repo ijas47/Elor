@@ -23,6 +23,22 @@ export const guides: Guide[] = [
     updated: "19 August 2026",
   },
   {
+    slug: "how-a-lighting-plan-is-built",
+    title: "How a Lighting Plan Is Built — Layers, Walls and Scenes",
+    dek: "What gets light, in what order, and why the ceiling is the last thing drawn. The method behind an Elor plan.",
+    tag: "Technical",
+    image: "/spaces/living.jpg",
+    updated: "23 September 2026",
+  },
+  {
+    slug: "colour-of-light",
+    title: "Kelvin, CRI and Beam Angle — How to Read a Light",
+    dek: "The three numbers on a specification that decide whether a room feels like a home or a clinic, and what to ask for in Kerala.",
+    tag: "Technical",
+    image: "/lifestyle/showroom-grand.jpg",
+    updated: "23 September 2026",
+  },
+  {
     slug: "chandelier-size-calculator",
     title: "Chandelier Size Calculator — Diameter, Drop & Fan Clearance",
     dek: "Put in the room, get back a diameter and a drop — plus the two checks Indian rooms actually need.",
