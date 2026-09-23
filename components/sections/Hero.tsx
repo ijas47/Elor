@@ -52,7 +52,7 @@ const STAGES = [
         the ceiling <i className="serif-i">closes.</i>
       </>,
     ],
-    lede: "We write the lighting plan, supply the fittings, and make the custom pieces in our factory. For architects, and for owners building homes and commercial spaces.",
+    lede: "We write the lighting plan in DIALux, supply the fittings, and make the custom pieces in our factory. For architects, and for owners building homes and commercial spaces.",
   },
   {
     src: "/hero/stage-2-project.jpg",

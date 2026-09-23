@@ -15,7 +15,7 @@ export const site = {
   tagline: "Lighting plans, supply, and custom chandeliers. By Celestial Lights.",
   domain: "https://www.elorlighting.com",
   description:
-    "Elor Lighting is the lighting consultancy of Celestial Lights. We write the lighting plan for architects and for owners building homes and commercial spaces, supply the fittings from basic to luxury, and manufacture custom chandeliers in our own factory. Celestial has stores and experience centres in Kannur and Calicut. Kochi is a full experience centre. An online store for the range is being built.",
+    "Elor Lighting is the lighting consultancy of Celestial Lights. We write the lighting plan in DIALux for architects and for owners building homes and commercial spaces, supply the fittings from basic to luxury, and manufacture custom chandeliers in our own factory. Celestial has stores and experience centres in Kannur and Calicut. Kochi is a full experience centre. An online store for the range is being built.",
   /**
    * `description` above is the full entity description — it feeds Organization
    * schema and llms.txt, where length is fine. `metaDescription` is the SERP

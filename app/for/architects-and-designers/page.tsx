@@ -9,7 +9,7 @@ import { MagneticButton } from "@/components/motion/MagneticButton";
 const TITLE = "Custom Lighting Fabrication for Architects & Interior Designers";
 const META_TITLE = "Custom Lighting for Architects & Designers";
 const DESC =
-  "A fabrication partner for lighting your drawings call for but nobody stocks — trade pricing, spec sheets, phased delivery and site coordination.";
+  "Lighting plans modelled in DIALux, then supplied and fabricated. For the piece your drawing calls for, with spec sheets, phased delivery and site coordination.";
 const PATH = "/for/architects-and-designers";
 
 export const metadata: Metadata = {
@@ -19,6 +19,10 @@ export const metadata: Metadata = {
 };
 
 const workWith = [
+  {
+    h: "Modelled in DIALux before site",
+    p: "We build the scheme in DIALux from your drawings and send the calculation with the set. Lux levels, uniformity and glare are checked while the ceiling is still open. You are not finding out the room is dark after handover.",
+  },
   {
     h: "Built from your drawing, not our catalogue",
     p: "Send a render, a CAD file, or a rough sketch with dimensions. We work from what you've already specified rather than asking you to pick the nearest thing we happen to stock. If the brief calls for a dimension or a finish that doesn't exist yet, that's the normal starting point of a fabrication job, not an exception.",
@@ -117,9 +121,9 @@ export default function ArchitectsAndDesigners() {
               </Reveal>
               <Reveal delay={0.12}>
                 <p className="lede" style={{ marginTop: 22 }}>
-                  A fabrication partner for the piece that isn&rsquo;t in
-                  anyone&rsquo;s catalogue — built from your spec, coordinated
-                  against your site program, delivered on your schedule.
+                  Send the drawings. We model the lighting in DIALux, supply
+                  the fittings, and make the piece that isn&rsquo;t in a
+                  catalogue. One set your site team can build from.
                 </p>
               </Reveal>
               <Reveal delay={0.18}>

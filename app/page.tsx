@@ -34,7 +34,7 @@ export default function Home() {
       {/* Trust */}
       <div className="trust">
         <div className="trust-inner">
-          <div className="trust-item"><span className="trust-num">Plan</span><span className="trust-label">Written before<br />the ceiling closes</span></div>
+          <div className="trust-item"><span className="trust-num">DIALux</span><span className="trust-label">The plan is calculated<br />before the ceiling closes</span></div>
           <div className="trust-item"><span className="trust-num">Factory</span><span className="trust-label">Custom chandeliers<br />made by us</span></div>
           <div className="trust-item"><span className="trust-num">Range</span><span className="trust-label">Basic fittings<br />to luxury pieces</span></div>
           <div className="trust-item"><span className="trust-num">3</span><span className="trust-label">Experience centres<br />Kannur, Calicut, Kochi</span></div>
@@ -250,11 +250,12 @@ export default function Home() {
               <Reveal><h2 className="h-lg">What a lighting plan<br />actually <span className="serif-i">contains.</span></h2></Reveal>
             </div>
             <Reveal delay={0.12}>
-              <p className="lede">Not a quotation with fixture names on it. A drawing set your architect, your contractor and your electrician can all build from, issued before anything is ordered or any conduit is laid.</p>
+              <p className="lede">Not a quotation with fixture names on it. The scheme is modelled in DIALux first, so the light levels are known while the ceiling can still change. Then your architect, contractor and electrician get a drawing set they can build from.</p>
             </Reveal>
           </div>
           <Stagger className="register">
             {[
+              { h: "DIALux calculation", p: "Lux levels, distribution and a false-colour view of each room. This is how we check the room is actually lit the way the drawing promises, before conduit is laid." },
               { h: "Reflected ceiling plan", p: "Every fixture marked in position on your floor plan, with drop heights and beam directions. The document the site works from." },
               { h: "Circuit and switching layout", p: "What comes on with which switch, which groups dim, where the drivers sit. Decided at drawing stage, not argued about on site." },
               { h: "Fixture schedule", p: "Every light listed with code, finish, lamp type, colour temperature and wattage, so the specification survives handover to anyone else." },
