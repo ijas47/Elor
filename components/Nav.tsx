@@ -90,7 +90,7 @@ export function Nav() {
               rel="noopener noreferrer"
               className={styles.sheetShop}
             >
-              Shop {site.shopLabel} →
+              {site.shopCta} →
             </a>
             <Link href="/consultation" className="btn btn-gold" style={{ marginTop: 8 }}>
               Book Consultation

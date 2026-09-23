@@ -17,7 +17,7 @@ export async function GET() {
 - [Collections](${site.domain}/collections): curated lighting collections
 - [Customisation](${site.domain}/customisation): custom chandelier fabrication from a photo, render or sketch
 - [Consultation](${site.domain}/consultation): book a lighting design consultation
-- [Stores](${site.domain}/stores): the three experience stores
+- [Stores](${site.domain}/stores): Celestial stores and experience centres in Kannur and Calicut, and a full experience centre in Kochi
 ${stores.map((s) => `  - [${s.brand}, ${s.city}](${site.domain}/stores/${s.city.toLowerCase()}): ${s.address}`).join("\n")}
 - [Guides](${site.domain}/guides): ${guides.map((g) => g.title).join("; ")}
 - [For Architects & Designers](${site.domain}/for/architects-and-designers): trade fabrication service for architects and interior designers

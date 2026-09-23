@@ -94,7 +94,7 @@ export const pieces: Piece[] = [
     name: "Spiral Staircase Cascade",
     category: "Chandeliers",
     image: "/collections/staircase-cascade.jpg",
-    blurb: "A crystal spiral that falls the full height of a stairwell.",
+    blurb: "A red crystal spiral that falls the full height of a stairwell.",
     tag: "Made to measure",
     ratio: "tall",
   },

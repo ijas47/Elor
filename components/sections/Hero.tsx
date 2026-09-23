@@ -52,7 +52,7 @@ const STAGES = [
         the ceiling <i className="serif-i">closes.</i>
       </>,
     ],
-    lede: "By the time you can stand in the room and see it, the decisions that mattered are already buried in the ceiling. Elor plans the lighting for the whole space, builds what has to be made to measure, and installs it. For homeowners, architects and developers across India.",
+    lede: "We write the lighting plan, supply the fittings, and make the custom pieces in our factory. For architects, and for owners building homes and commercial spaces.",
   },
   {
     src: "/hero/stage-2-project.jpg",
@@ -63,7 +63,7 @@ const STAGES = [
         You are <i className="serif-i">inheriting</i> it.
       </>,
     ],
-    lede: "The electrician routes conduit from rough positions on the plan. Fixtures come from whichever shop he already knows, counted in downlights and decided by wattage. For a small flat that is fine. For a house you will live in for thirty years, nobody was ever asked how it should feel at night.",
+    lede: "On most sites the points go in first, then a shop fills them with what is in stock. Fine for a small flat. Not for a house you will live in for thirty years.",
   },
   {
     src: "/hero/stage-3-property.jpg",
@@ -74,7 +74,7 @@ const STAGES = [
         one <i className="serif-i">warranty.</i>
       </>,
     ],
-    lede: "Good lighting has to be decided early enough to matter, chosen by someone who is not simply selling you what is in stock, and backed by someone who still answers the phone in year three. Consultants do not manufacture. Manufacturers do not consult. We do both, and we install it ourselves.",
+    lede: "A consultant will not make the piece. A shop will not write the plan. We do the plan, the supply and the custom work, and we still answer the phone in year three.",
   },
 ];
 
@@ -219,7 +219,7 @@ export function Hero() {
               Get a Lighting Plan <span className="arr">→</span>
             </MagneticButton>
             <MagneticButton href="/customisation" variant="ghost">
-              Create a Custom Piece
+              Send a reference
             </MagneticButton>
           </motion.div>
 
@@ -229,8 +229,8 @@ export function Hero() {
             animate={{ opacity: 1 }}
             transition={{ delay: 0.95, duration: 1 }}
           >
-            <span className={styles.dot} />3 experience stores in Kerala · Kannur ·
-            Kochi · Kozhikode
+            <span className={styles.dot} />Celestial stores in Kannur and Calicut · Full
+            experience centre in Kochi
           </motion.div>
         </div>
 

@@ -12,10 +12,10 @@
 export const site = {
   name: "Elor Lighting",
   brand: "Elor",
-  tagline: "Lighting consulting & custom lighting, by Celestial Lights",
+  tagline: "Lighting plans, supply, and custom chandeliers. By Celestial Lights.",
   domain: "https://www.elorlighting.com",
   description:
-    "Elor Lighting is the lighting consulting and custom lighting arm of Celestial Lights. We work out where every light belongs, design and manufacture the pieces that have to be made for the space, and install the whole scheme, for architects, developers and homeowners. Three experience stores in Kerala, with pan-India delivery and installation.",
+    "Elor Lighting is the lighting consultancy of Celestial Lights. We write the lighting plan for architects and for owners building homes and commercial spaces, supply the fittings from basic to luxury, and manufacture custom chandeliers in our own factory. Celestial has stores and experience centres in Kannur and Calicut. Kochi is a full experience centre. An online store for the range is being built.",
   /**
    * `description` above is the full entity description — it feeds Organization
    * schema and llms.txt, where length is fine. `metaDescription` is the SERP
@@ -23,12 +23,14 @@ export const site = {
    * location and its call to action before anyone read them.
    */
   metaDescription:
-    "Custom chandelier design, fabrication and installation across India, with three experience stores in Kannur, Kochi and Kozhikode. Free design consultation.",
+    "Lighting plans for architects and owners building homes and commercial spaces. We supply the fittings and make custom chandeliers. Centres in Kannur, Calicut and Kochi.",
 
   // One number for the whole business, calls and WhatsApp alike, including
   // every store. Enquiries are meant to funnel to this single line so they can
   // be automated and handled in one place. Do not introduce a second number.
   email: "hello@elorlighting.com",
+  // Consultation form notifications. Not the public address on the site.
+  enquiryEmail: "samad@elorlighting.com",
   phone: "+91 99956 19470",
   phoneHref: "tel:+919995619470",
   hours: "Mon-Sat · 9:30 AM to 8:30 PM IST",
@@ -39,6 +41,8 @@ export const site = {
     "https://wa.me/919995619470?text=Hi%20Elor%2C%20I%27d%20like%20to%20browse%20the%20Celestial%20Lights%20collection.",
   shopLabel: "Celestial Lights",
   shopLive: false, // set true once the Shopify store is published
+  // While the store is being built, do not label the button "Shop".
+  shopCta: "See the range",
 
   whatsapp:
     "https://wa.me/919995619470?text=Hi%20Elor%2C%20I%27m%20interested%20in%20lighting%20for%20my%20space.",
@@ -58,10 +62,9 @@ export const site = {
 } as const;
 
 /**
- * The three stores do not share one brand: Kannur and Kozhikode trade as
- * Celestial Lights, Kochi as Elor Lighting Pvt Ltd. Anything that describes
- * the estate has to stay brand-neutral ("three experience stores") rather than
- * calling all three Celestial Lights.
+ * Celestial has two stores, Kannur and Calicut (Kozhikode), and an experience
+ * centre at each. Kochi is Elor's full experience centre, not a third Celestial
+ * store. Do not call all three "Celestial stores".
  *
  * Every store deliberately carries the one company number rather than its own
  * line, so all enquiries land in a single place that can be automated. This is
@@ -76,6 +79,7 @@ export const stores = [
   {
     city: "Kannur",
     brand: "Celestial Lights",
+    kind: "Store and experience centre",
     address:
       "Ground Floor, P O Chovva, Kannothumchal, Kannur, Elayavoor, Kerala 670006",
     hours: "Mon-Sat · 9:30 AM to 8:30 PM",
@@ -87,6 +91,7 @@ export const stores = [
   {
     city: "Kochi",
     brand: "Elor Lighting",
+    kind: "Full experience centre",
     address: "63/499, Chalakuzhy, Gandhi Nagar, Kadavanthara, Kochi, Kerala",
     hours: "Mon-Sat · 9:30 AM to 8:30 PM",
     phone: site.phone,
@@ -97,6 +102,7 @@ export const stores = [
   {
     city: "Kozhikode",
     brand: "Celestial Lights",
+    kind: "Store and experience centre",
     address: "Mavoor Road, Kozhikode, Kerala 673004", // placeholder, awaiting the real address
     hours: "Mon-Sat · 9:30 AM to 8:30 PM",
     phone: site.phone,

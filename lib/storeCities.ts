@@ -26,7 +26,7 @@ export const storeCities: Record<StoreCity, StoreCityCopy> = {
       "Custom chandelier design, fabrication and installation in Kannur, plus the Celestial Lights ready collection. Visit the store or book a free consultation.",
     heroHeadline: "Custom Chandeliers & Lighting Design in Kannur",
     heroLede:
-      "One of three Celestial Lights experience stores in Kerala, serving Kannur homes, offices and public spaces with bespoke fabrication, a ready collection, and full installation, backed by up to 5-year warranty.",
+      "A Celestial Lights store and experience centre in Kannur. Lighting plans for architects and owners who are building, the ready range on the floor, and custom chandeliers made in our factory.",
     heroImage: "/lifestyle/villa-night.jpg",
     intro:
       "Kannur is known as much for its handloom weaving heritage as its coastline, a town where considered, handmade craft is already part of daily life. That's the same standard we hold custom fixtures to: measured to your ceiling, built by hand, and installed by the same team that designed it.",
@@ -50,7 +50,7 @@ export const storeCities: Record<StoreCity, StoreCityCopy> = {
       "Custom chandelier design, fabrication and installation in Kochi, plus the Celestial Lights ready collection. Visit Kadavanthara or book a free consultation.",
     heroHeadline: "Custom Chandeliers & Lighting Design in Kochi",
     heroLede:
-      "Elor Lighting's Kochi store serves the city's homes, hospitality projects and commercial spaces with bespoke fabrication, a ready collection, and full installation, backed by up to 5-year warranty.",
+      "Kochi is Elor's full experience centre. Architects and owners building homes, hotels and commercial spaces come here to see the range lit, agree the plan, and commission the pieces our factory makes.",
     heroImage: "/work/w4-lounge.jpg",
     intro:
       "Kochi is Kerala's commercial hub, a city of apartments, villas, hotels and offices where lighting has to work as hard as it looks good. We design for that: schemes that hold up under daily use in a working city, not just for a photograph.",
@@ -74,7 +74,7 @@ export const storeCities: Record<StoreCity, StoreCityCopy> = {
       "Custom chandelier design, fabrication and installation in Kozhikode, plus the Celestial Lights ready collection. Visit the store or book a consultation.",
     heroHeadline: "Custom Chandeliers & Lighting Design in Kozhikode",
     heroLede:
-      "One of three Celestial Lights experience stores in Kerala, serving Kozhikode homes, restaurants and retail spaces with bespoke fabrication, a ready collection, and full installation, backed by up to 5-year warranty.",
+      "A Celestial Lights store and experience centre in Calicut. Lighting plans for architects and owners who are building, the ready range on the floor, and custom chandeliers made in our factory.",
     heroImage: "/work/w1-cascade.jpg",
     intro:
       "Kozhikode is a historic Malabar port city where old-town character sits right next to new construction, and lighting has to bridge both. Whether it's a heritage-style home or a new-build café, we design fixtures that fit the room they're actually going into.",

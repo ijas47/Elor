@@ -10,7 +10,7 @@ import { MagneticButton } from "@/components/motion/MagneticButton";
 export const metadata: Metadata = {
   title: "Our Stores · Kannur, Kochi & Kozhikode",
   description:
-    "Visit an Elor experience store in Kannur, Kochi or Kozhikode to see every fixture lit before you buy. Pan-India delivery and remote consultation also available.",
+    "See the range lit before you specify it. Celestial stores and experience centres in Kannur and Calicut. A full experience centre in Kochi.",
   alternates: { canonical: "/stores" },
 };
 
@@ -51,23 +51,23 @@ export default function Stores() {
           <Breadcrumbs crumbs={[{ name: "Stores", path: "/stores" }]} />
           <div className="split" style={{ alignItems: "center" }}>
             <div>
-              <Reveal as="span"><span className="eyebrow">Experience stores</span></Reveal>
+              <Reveal as="span"><span className="eyebrow">Experience centres</span></Reveal>
               <Reveal delay={0.06}>
                 <h1 className="h-xl" style={{ marginTop: 18 }}>
-                  See the glow<br /><span className="serif-i">before you buy.</span>
+                  See it lit<br /><span className="serif-i">before you specify it.</span>
                 </h1>
               </Reveal>
               <Reveal delay={0.12}>
                 <p className="lede" style={{ marginTop: 22 }}>
-                  Photos lie about light. Our three experience stores across Kerala
-                  let you stand under every fixture, compare warm against cool, and
-                  talk to people who light rooms for a living.
+                  Celestial has stores and experience centres in Kannur and Calicut.
+                  Kochi is the full experience centre. Bring the drawing. Stand under
+                  the range, from basic fittings to the pieces we make to order.
                 </p>
               </Reveal>
               <Reveal delay={0.18}>
                 <div className="cta-ctas" style={{ justifyContent: "flex-start", marginTop: 30 }}>
                   <MagneticButton href="/consultation" variant="gold">Book a Visit <span className="arr">→</span></MagneticButton>
-                  <MagneticButton href={site.shopUrl} variant="ghost" external>Shop {site.shopLabel}</MagneticButton>
+                  <MagneticButton href={site.shopUrl} variant="ghost" external>{site.shopCta}</MagneticButton>
                 </div>
               </Reveal>
             </div>
@@ -85,7 +85,7 @@ export default function Stores() {
               <StaggerItem key={s.city}>
                 <div className="store-card">
                   <div className="store-city">{s.city}</div>
-                  <div className="store-brand">{s.brand}</div>
+                  <div className="store-brand">{s.brand} · {s.kind}</div>
                   <p><span className="store-k">Address</span>{s.address}</p>
                   <p><span className="store-k">Hours</span>{s.hours}</p>
                   <p><span className="store-k">Phone</span><a href={s.phoneHref} style={{ color: "var(--text-dim)" }}>{s.phone}</a></p>
@@ -103,10 +103,10 @@ export default function Stores() {
           <Reveal delay={0.1}>
             <div className="online-banner" style={{ marginTop: 24 }}>
               <div>
-                <h3>The fourth store is wherever you are.</h3>
-                <p>Not in Kerala? Browse the full collection at {site.shopLabel} with pan-India delivery, and book a remote consultation over video with the same designers you&rsquo;d meet in-store.</p>
+                <h3>Building, and not nearby?</h3>
+                <p>Send the drawings. We consult on the plan over video. The online store for the range, from basic fittings to luxury pieces, is being built. Until it opens, we will walk you through what to specify.</p>
               </div>
-              <a className="btn btn-gold" href={site.shopUrl} target="_blank" rel="noopener noreferrer">Shop Online <span className="arr">→</span></a>
+              <a className="btn btn-gold" href={site.shopUrl} target="_blank" rel="noopener noreferrer">{site.shopCta} <span className="arr">→</span></a>
             </div>
           </Reveal>
         </div>

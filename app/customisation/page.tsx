@@ -122,7 +122,7 @@ export default function Customisation() {
               </Reveal>
             </div>
             <Reveal delay={0.1} className="split-media frame">
-              <Image src="/collections/astral-debris.jpg" alt="A bespoke astral debris chandelier suspended in a stairwell" fill sizes="(max-width: 1020px) 100vw, 50vw" priority style={{ objectFit: "cover" }} />
+              <Image src="/lifestyle/lobby-canopy.jpg" alt="A black sculptural chandelier filling a bright lobby" fill sizes="(max-width: 1020px) 100vw, 50vw" priority style={{ objectFit: "cover" }} />
             </Reveal>
           </div>
         </div>

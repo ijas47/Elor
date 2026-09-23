@@ -28,6 +28,6 @@ export const imageDimensions: Record<string, { width: number; height: number }> 
   "/collections/crystal-petal.jpg": { width: 850, height: 850 },
   "/collections/dandelion-gold.jpg": { width: 800, height: 800 },
   "/collections/double-height-stair.jpg": { width: 1269, height: 1269 },
-  "/collections/staircase-cascade.jpg": { width: 1000, height: 1000 },
+  "/collections/staircase-cascade.jpg": { width: 992, height: 962 },
   "/collections/villa-facade.jpg": { width: 1400, height: 1050 },
 };

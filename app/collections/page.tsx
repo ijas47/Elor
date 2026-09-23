@@ -79,7 +79,7 @@ export default function Collections() {
           <Reveal delay={0.18}>
             <div className="cta-ctas" style={{ justifyContent: "flex-start", marginTop: 32 }}>
               <MagneticButton href={site.shopUrl} variant="gold" external>
-                Shop {site.shopLabel} <span className="arr">→</span>
+                {site.shopCta} <span className="arr">→</span>
               </MagneticButton>
               <MagneticButton href="/customisation" variant="ghost">
                 Create a Custom Piece
@@ -136,7 +136,7 @@ export default function Collections() {
           <Reveal delay={0.16}>
             <div className="cta-ctas">
               <MagneticButton href={site.shopUrl} variant="gold" external>
-                Shop {site.shopLabel} <span className="arr">→</span>
+                {site.shopCta} <span className="arr">→</span>
               </MagneticButton>
               <MagneticButton href="/consultation" variant="ghost">
                 Book a Consultation

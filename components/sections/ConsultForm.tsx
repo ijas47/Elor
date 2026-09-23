@@ -1,39 +1,54 @@
 "use client";
 
 import { useState } from "react";
+import { spaceOptions, stageOptions } from "@/lib/consultation";
 import { site } from "@/lib/site";
 
 /**
- * Consultation lead form. Front-end only for now, on submit it composes a
- * WhatsApp message (the picture/brief arrives with the enquiry) and shows a
- * confirmation. Swap the submit handler for a form endpoint when a backend
- * exists; the fields already map to a clean payload.
+ * Consultation lead form. Submits to /api/consultation, which emails the
+ * studio inbox. The WhatsApp link stays as a direct alternative.
  */
-export function ConsultForm() {
-  const [sent, setSent] = useState(false);
+export function ConsultForm({
+  initial = "idle",
+}: {
+  initial?: "idle" | "sent" | "error";
+}) {
+  const [status, setStatus] = useState<"idle" | "sending" | "sent" | "error">(initial);
 
-  function onSubmit(e: React.FormEvent<HTMLFormElement>) {
+  async function onSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
-    const f = new FormData(e.currentTarget);
-    const msg = [
-      `Hi Elor, I'd like a lighting consultation.`,
-      ``,
-      `Name: ${f.get("name") || "-"}`,
-      `Phone: ${f.get("phone") || "-"}`,
-      `Space: ${f.get("space") || "-"}`,
-      `Area: ${f.get("sqft") || "-"} sq ft`,
-      `City: ${f.get("city") || "-"}`,
-      `Stage: ${f.get("stage") || "-"}`,
-      `Notes: ${f.get("notes") || "-"}`,
-    ].join("\n");
-    const url = `https://wa.me/919995619470?text=${encodeURIComponent(msg)}`;
-    window.open(url, "_blank", "noopener,noreferrer");
-    setSent(true);
-    e.currentTarget.reset();
+    if (status === "sending") return;
+    const form = e.currentTarget;
+    const f = new FormData(form);
+    setStatus("sending");
+    try {
+      const res = await fetch("/api/consultation", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          name: f.get("name") ?? "",
+          phone: f.get("phone") ?? "",
+          space: f.get("space") ?? "",
+          city: f.get("city") ?? "",
+          sqft: f.get("sqft") ?? "",
+          stage: f.get("stage") ?? "",
+          notes: f.get("notes") ?? "",
+          company: f.get("company") ?? "",
+        }),
+      });
+      if (!res.ok) {
+        setStatus("error");
+        return;
+      }
+      form.reset();
+      setStatus("sent");
+    } catch {
+      setStatus("error");
+    }
   }
 
   return (
-    <form className="form-card" onSubmit={onSubmit}>
+    <form className="form-card" method="post" action="/api/consultation" onSubmit={onSubmit}>
       <div className="form-grid">
         <div className="field">
           <label htmlFor="name">Your name</label>
@@ -47,12 +62,9 @@ export function ConsultForm() {
           <label htmlFor="space">Type of space</label>
           <select id="space" name="space" defaultValue="">
             <option value="" disabled>Select…</option>
-            <option>Home, full house</option>
-            <option>Home, single room</option>
-            <option>Villa / duplex</option>
-            <option>Restaurant / café / hotel</option>
-            <option>Retail / showroom</option>
-            <option>Office / clinic</option>
+            {spaceOptions.map((option) => (
+              <option key={option}>{option}</option>
+            ))}
           </select>
         </div>
         <div className="field">
@@ -67,10 +79,9 @@ export function ConsultForm() {
           <label htmlFor="stage">Where are you in the project?</label>
           <select id="stage" name="stage" defaultValue="">
             <option value="" disabled>Select…</option>
-            <option>Just exploring ideas</option>
-            <option>Interiors in progress</option>
-            <option>Ready to finalise lighting</option>
-            <option>Need it installed soon</option>
+            {stageOptions.map((option) => (
+              <option key={option}>{option}</option>
+            ))}
           </select>
         </div>
         <div className="field full">
@@ -78,18 +89,28 @@ export function ConsultForm() {
           <textarea id="notes" name="notes" placeholder="Rooms, style you like, a reference you've seen, timeline…" />
         </div>
       </div>
+      <div className="hp" aria-hidden="true">
+        <label htmlFor="company">Company</label>
+        <input id="company" name="company" tabIndex={-1} autoComplete="off" />
+      </div>
       <div className="cta-ctas" style={{ justifyContent: "flex-start", marginTop: 24 }}>
-        <button type="submit" className="btn btn-gold">
-          Request Consultation <span className="arr">→</span>
+        <button type="submit" className="btn btn-gold" disabled={status === "sending"}>
+          {status === "sending" ? "Sending…" : "Request Consultation"}{" "}
+          {status !== "sending" && <span className="arr">→</span>}
         </button>
         <a className="btn btn-ghost" href={site.whatsapp} target="_blank" rel="noopener noreferrer">
           Or message us directly
         </a>
       </div>
-      {sent && (
+      {status === "sent" && (
         <p className="form-note" role="status" style={{ color: "var(--gold)" }}>
-          Thanks, we&rsquo;ve opened WhatsApp with your details. Send the message
-          and we&rsquo;ll reply, usually the same day.
+          Thanks. Your request is with the studio. We&rsquo;ll reply within one
+          working day, usually on the number you gave us.
+        </p>
+      )}
+      {status === "error" && (
+        <p className="form-note" role="status">
+          We couldn&rsquo;t send that. Please try again, or message us on WhatsApp.
         </p>
       )}
       <p className="form-note">Free, no obligation. We reply within one working day.</p>

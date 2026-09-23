@@ -33,8 +33,8 @@ export default function Privacy() {
           <p>
             This policy explains what information Elor Lighting ({site.domain}) collects when
             you use this website, why, and what happens to it. Elor Lighting is the lighting
-            consulting and custom lighting arm of Celestial Lights, operating three experience
-            stores in Kerala (Kannur, Kochi, Kozhikode) with pan-India delivery and installation.
+            lighting consultancy of Celestial Lights. Celestial has stores and experience
+            centres in Kannur and Calicut. Kochi is a full experience centre.
           </p>
 
           <h2 className="h-md">What we collect</h2>
@@ -54,13 +54,13 @@ export default function Privacy() {
 
           <h2 className="h-md">How that information moves</h2>
           <p>
-            The consultation form does not submit to a server we run. When you press &ldquo;Request
-            Consultation,&rdquo; the form composes a WhatsApp message from the details you entered
-            and opens WhatsApp with it pre-filled — nothing is sent until you send that message
-            yourself. From that point, the conversation and any files you share are handled inside
-            WhatsApp, under Meta&rsquo;s own privacy policy and terms, not ours. The same applies if
-            you choose the &ldquo;Email a Reference&rdquo; option: your message goes through your own
-            email provider.
+            When you press &ldquo;Request Consultation,&rdquo; the details you entered are sent to
+            our server and emailed to the studio so we can reply. We do not add you to a mailing
+            list, and we do not store a separate copy on the website. The &ldquo;Or message us
+            directly&rdquo; link opens WhatsApp on your device — nothing is sent until you send that
+            message yourself. From that point the conversation is handled inside WhatsApp, under
+            Meta&rsquo;s own privacy policy, not ours. The same applies if you choose &ldquo;Email a
+            Reference&rdquo;: your message goes through your own email provider.
           </p>
           <p>
             We use Google Analytics to see which pages are useful. It

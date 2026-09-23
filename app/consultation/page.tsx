@@ -17,16 +17,16 @@ export const metadata: Metadata = {
 const faqs = [
   // Also serialized into FAQPage schema below — keep questions/answers in sync
   // with what's actually asked on the page.
-  { q: "Is the consultation really free?", a: "Yes. The first session, at your site, in any of our stores, or over video, is free and carries no obligation. You only pay if you choose to go ahead." },
+  { q: "Is the consultation really free?", a: "Yes. The first session, at your site, at an experience centre in Kannur, Calicut or Kochi, or over video, is free and carries no obligation. You only pay if you choose to go ahead." },
   { q: "Do I have to buy everything from you?", a: "No, but there's a real advantage to it: when we supply and install, one team owns quality, pricing and the warranty. No blame games between shop, designer and electrician." },
   { q: "Can you work with my architect or interior designer?", a: "Absolutely. We work alongside architects and designers constantly, reading drawings, improving them, and coordinating on site so the scheme lands the way it was designed." },
   { q: "Do you work outside Kerala?", a: "Yes. We deliver pan-India and run remote consultations over video with the same designers you'd meet in-store. For larger projects we travel to site." },
 ];
 
 const audiences = [
-  { icon: "spark", h: "Homeowners", p: "A room-by-room plan that makes your home feel considered, warm and expensive, without over-lighting or guesswork." },
-  { icon: "ruler", h: "Architects & designers", p: "A supply-and-install partner who reads your drawings, protects the intent, and shows up on site on schedule." },
-  { icon: "shield", h: "Commercial owners", p: "Lighting tuned to keep guests longer and make product look its best, delivered on spec with project pricing." },
+  { icon: "ruler", h: "Architects & designers", p: "The fixture in the drawing does not exist in a catalogue, and the ceiling is about to close. Send the drawing. We write the plan, supply the schedule, and make the piece." },
+  { icon: "spark", h: "Owners who are building", p: "You are about to live with whatever the electrician put on the plan. We decide how each room should feel at night, then supply it, from basic fittings to the chandelier." },
+  { icon: "shield", h: "Commercial projects", p: "A hotel, a shop, a clinic. One plan, one supplier, and a factory that can repeat a piece across floors without the scheme changing on site." },
 ];
 
 const serviceSchema = {
@@ -51,7 +51,13 @@ const faqSchema = {
   })),
 };
 
-export default function Consultation() {
+export default async function Consultation({
+  searchParams,
+}: {
+  searchParams: Promise<{ sent?: string; error?: string }>;
+}) {
+  const query = await searchParams;
+  const initial = query.sent === "1" ? "sent" : query.error === "1" ? "error" : "idle";
   return (
     <>
       <script
@@ -138,9 +144,9 @@ export default function Consultation() {
               <Reveal delay={0.06}><h2 className="h-lg" style={{ marginTop: 18 }}>Tell us about<br />your space.</h2></Reveal>
               <Reveal delay={0.12}>
                 <p className="lede" style={{ marginTop: 20 }}>
-                  A few details is all we need to prepare. The fastest route is
-                  WhatsApp, send a photo or floor plan and it arrives with your
-                  enquiry.
+                  A few details is all we need to prepare. The request comes
+                  straight to the studio by email. Photos and floor plans are
+                  still fastest on WhatsApp.
                 </p>
               </Reveal>
               <Reveal delay={0.16} className="split-media frame" >
@@ -148,7 +154,7 @@ export default function Consultation() {
               </Reveal>
             </div>
             <Reveal delay={0.1}>
-              <ConsultForm />
+              <ConsultForm initial={initial} />
             </Reveal>
           </div>
         </div>
