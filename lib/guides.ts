@@ -31,6 +31,14 @@ export const guides: Guide[] = [
     updated: "23 September 2026",
   },
   {
+    slug: "why-downlights-glare",
+    title: "Why a Downlight Glares — Baffles, Cutoff and the Seated View",
+    dek: "If you can see the lamp from the sofa, the fitting is too shallow. What to ask for before the ceiling closes.",
+    tag: "Technical",
+    image: "/spaces/living.jpg",
+    updated: "23 September 2026",
+  },
+  {
     slug: "colour-of-light",
     title: "Kelvin, CRI and Beam Angle — How to Read a Light",
     dek: "The three numbers on a specification that decide whether a room feels like a home or a clinic, and what to ask for in Kerala.",

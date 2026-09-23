@@ -28,7 +28,7 @@ A query with no page, no profile, and no mention will not reach the top because 
 - [x] IndexNow key file at `public/47d1e184a9472a8ef2421ef36e117c5f.txt`
 - [x] Canonical host is `www`. Organization, WebSite, Breadcrumb, FAQ, HowTo, LightingStore, and collection ImageObject schema are in the server HTML
 - [x] GA4 `G-QXWSL80NYJ`. Search Console property connected
-- [x] Guide set: custom chandelier, lighting plan, Kelvin/CRI/beam, size calculator, ceiling fan, false ceiling, crystal vs glass, coastal, how to choose a shop, pricing
+- [x] Guide set: custom chandelier, lighting plan, why downlights glare, Kelvin/CRI/beam, size calculator, ceiling fan, false ceiling, crystal vs glass, coastal, how to choose a shop, pricing
 - [x] Related-guides block on every guide. New guides link to each other
 
 ## Month 1 — to 23 October

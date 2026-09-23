@@ -38,7 +38,7 @@ const steps = [
   },
   {
     h: "5. Resolve the ceiling before choosing the fitting",
-    p: "Gypsum depth, a deep baffle, where the driver sits, and whether a trimless fitting has room to recess. Glare is settled here. A pretty fitting with the lamp in your eye at the sofa fails, whatever the finish. Heavy pieces anchor into the slab. That sequence is the false-ceiling guide.",
+    p: "Gypsum depth, a deep baffle, where the driver sits, and whether a trimless fitting has room to recess. Glare is settled here. A pretty fitting with the lamp in your eye at the sofa fails, whatever the finish. That is the downlight guide. Heavy pieces anchor into the slab. That sequence is the false-ceiling guide.",
   },
   {
     h: "6. Write the scenes",
@@ -158,6 +158,9 @@ export default function LightingPlanGuide() {
               Colour, truth of colour, and beam are the three numbers on each
               fitting. They have their own guide:{" "}
               <a href="/guides/colour-of-light">Kelvin, CRI and beam angle</a>.
+              If the lamp is visible from the sofa, the fitting is too shallow.
+              That is{" "}
+              <a href="/guides/why-downlights-glare">why a downlight glares</a>.
               The plan is where those numbers get a place in the room.
             </p>
           </Reveal>
