@@ -91,11 +91,12 @@ export const stores = [
     city: "Kochi",
     brand: "Elor Lighting",
     kind: "Full experience centre",
-    address: "63/499, Chalakuzhy, Gandhi Nagar, Kadavanthara, Kochi, Kerala",
+    address:
+      "63/499, Chalakuzhy, Gandhinagar Road, near the Fire and Rescue Station, Gandhi Nagar, Kadavanthra, Kochi, Kerala 682020",
     hours: "Mon-Sat · 9:30 AM to 8:30 PM",
     phone: site.phone,
     phoneHref: site.phoneHref,
-    maps: "https://maps.google.com/?q=Elor+Lighting+Chalakuzhy+Gandhi+Nagar+Kadavanthara+Kochi",
+    maps: "https://maps.google.com/?q=Elor+Lighting+63/499+Chalakuzhy+Gandhinagar+Road+Kadavanthra+Kochi+682020",
     geo: { lat: 9.9889781, lng: 76.2951875 },
   },
   {

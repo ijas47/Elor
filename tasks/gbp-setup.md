@@ -1,8 +1,10 @@
 # Google Business Profile setup — exact data to enter
 
-**I cannot do this one.** Creating a GBP requires signing into your Google
-account and passing Google's business-ownership verification (video call,
-postcard, or phone). No API or agent can do that on your behalf.
+**I cannot open the Google account.** Business Profile edits happen in the
+browser where that Google user is signed in. Kochi is already claimed on the
+account in the 24 Sep 2026 screenshot. The clicks left on that profile are
+listed under Profile 2. Kannur and Kozhikode start once the owners add Ijas
+as an owner.
 
 What follows is everything pre-filled so you can work through it in one sitting.
 Start at https://business.google.com/create
@@ -33,12 +35,17 @@ the entity signal. Copy the strings below exactly — they are pulled from
 
 ## Profile 2 — Kochi
 
-- **Business name:** `Elor Lighting`
-- **Address:** `63/499, Chalakuzhy, Gandhi Nagar, Kadavanthara, Kochi, Kerala`
+Already claimed. The Google account that manages it sees the profile when searching `Elor Lighting PVT LTD` (screenshot, 24 Sep 2026). The public name on the map is `Elor Lighting PVT LTD`. Leave that legal name unless the owners want it shortened to `Elor Lighting`. Changing a verified name can send the profile back through verification.
+
+The address field currently starts with the company name and uses Google’s spellings `Kadavantha` and `Keralam`. Replace the whole address with the string below so it matches the site. Then fill the two gaps the dashboard is asking for: phone and hours.
+
+- **Business name:** `Elor Lighting PVT LTD` (already set)
+- **Address:** `63/499, Chalakuzhy, Gandhinagar Road, near the Fire and Rescue Station, Gandhi Nagar, Kadavanthra, Kochi, Kerala 682020`
 - **Phone:** `+91 99956 19470`
 - **Website:** `https://www.elorlighting.com/stores/kochi`
 - **Hours:** Mon–Sat, 9:30 AM – 8:30 PM · Closed Sunday
-- ⚠️ **PIN code missing.** Add it here and in `lib/site.ts` at the same time.
+- **WhatsApp:** the same number, via Add WhatsApp on the dashboard
+- **Primary category:** already `Lighting consultant`. Add `Lighting store` if the category list offers it. Do not remove the consultant category.
 
 ## Profile 3 — Kozhikode
 
