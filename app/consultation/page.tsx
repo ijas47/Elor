@@ -20,7 +20,7 @@ const faqs = [
   { q: "Is the consultation really free?", a: "Yes. The first session, at your site, at an experience centre in Kannur, Calicut or Kochi, or over video, is free and carries no obligation. You only pay if you choose to go ahead." },
   { q: "Do I have to buy everything from you?", a: "No, but there's a real advantage to it: when we supply and install, one team owns quality, pricing and the warranty. No blame games between shop, designer and electrician." },
   { q: "Can you work with my architect or interior designer?", a: "Absolutely. We work alongside architects and designers constantly, reading drawings, improving them, and coordinating on site so the scheme lands the way it was designed." },
-  { q: "Do you work outside Kerala?", a: "Yes. We deliver pan-India and run remote consultations over video with the same designers you'd meet in-store. For larger projects we travel to site." },
+  { q: "Do you work outside Kerala?", a: "Yes. The experience centres and the office are in Kerala. We design for any site in India, supply our own fittings, and our crew installs them. The plan can start on a video call. The installation happens on site." },
 ];
 
 const audiences = [

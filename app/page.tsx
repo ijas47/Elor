@@ -50,7 +50,7 @@ export default function Home() {
               <Reveal delay={0.06}><h2 className="h-lg">Start with<br />the room.</h2></Reveal>
             </div>
             <Reveal delay={0.12}>
-              <p className="lede">The ceiling is about to close, and nobody has decided how the room should feel at night. Send the drawing or the picture. We write the plan, supply what we already make, and build what the room still needs.</p>
+              <p className="lede">The ceiling is about to close, and nobody has decided how the room should feel at night. Send the drawing or the picture. We write the plan, supply what we already make, and build what the room still needs. The centres are in Kerala. The design and the installation are for any site in India. <Link href="/india">How a project outside Kerala works.</Link></p>
             </Reveal>
           </div>
           <Stagger className="spaces">

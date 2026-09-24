@@ -39,7 +39,9 @@ Code, this week:
 - [x] Customisation and each store page link to the lighting-plan guide and the Kelvin guide
 - [x] Kannur title is `Celestial Lights Kannur`. Kozhikode title is `Celestial Lights Calicut`. Kochi stays Elor
 - [x] IndexNow ping for the two new guides, and the sitemap resubmitted in Search Console, after those titles are on production. IndexNow returned 202 on 23 Sep 2026. Sitemap resubmit succeeded.
-- [ ] Confirm both new guides return 200 on the live domain and are “URL is on Google” in URL Inspection within 14 days
+- [x] Confirm the new guides return 200. On 24 Sep 2026 all three returned 200: colour-of-light, how-a-lighting-plan-is-built, why-downlights-glare
+- [ ] Get those three guides indexed. URL Inspection on 24 Sep 2026: “Discovered — currently not indexed”, not yet crawled. Indexing API accepted all three the same day. Recheck on the weekly pulse before writing more city pages
+- [x] National scope is a page, not a slogan. `/india` says the centres are in Kerala and design plus installation, with our own fittings and crew, is for any site in India. No pretend city offices
 
 You, this month. These move local pack and AI recommendations more than another page will:
 
@@ -91,4 +93,6 @@ Still held: 11 district pages, town pages, metro pages, a “best chandelier sho
 19. nalukettu lighting
 20. building a house in kerala from abroad lighting
 
-1–4 and 12–18 are the ones a new domain can touch in 90 days. 5–8 need the Business Profiles. 10 and 11 are JagMag’s, and we do not publish a hotel case study until a real project can be named. 19 and 20 wait for the month-2 guides.
+1–4 and 12–18 are the ones a new domain can touch in 90 days. 5–8 need the Business Profiles. Query 10 (custom chandelier manufacturer India) is now pointed at `/india`: design and install nationwide, centres only in Kerala. Query 11 still waits for a hotel project we can name. 19 and 20 wait for the month-2 guides.
+
+National aim, confirmed 24 Sep 2026: experience centres and the office stay in Kerala. Elor designs for any site in India and installs with its own product line and crew. That does not unlock a page per city. A city page still needs a real centre or a real project in that city.

@@ -13,10 +13,10 @@ export function Footer() {
               <Brandmark size="lg" />
             </Link>
             <p className={styles.blurb}>
-              The lighting consultancy of Celestial Lights. We write the
-              plan, supply the fittings, and make the custom pieces. Stores
-              and experience centres in Kannur and Calicut. A full experience
-              centre in Kochi.
+              The lighting consultancy of Celestial Lights. We design for
+              any site in India, supply our own fittings, and install them
+              with our own crew. Experience centres in Kannur, Calicut and
+              Kochi.
             </p>
             <a
               href={site.shopUrl}
@@ -34,6 +34,7 @@ export function Footer() {
             <Link href="/customisation">Customisation</Link>
             <Link href="/consultation">Consultation</Link>
             <Link href="/stores">Our Stores</Link>
+            <Link href="/india">Across India</Link>
             <Link href="/guides">Guides</Link>
             <Link href="/#commercial">Commercial</Link>
             <Link href="/for/architects-and-designers">For Architects &amp; Designers</Link>

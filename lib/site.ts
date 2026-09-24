@@ -15,7 +15,7 @@ export const site = {
   tagline: "Lighting plans, supply, and custom chandeliers. By Celestial Lights.",
   domain: "https://www.elorlighting.com",
   description:
-    "Elor Lighting is the lighting consultancy of Celestial Lights. We write the lighting plan in DIALux for architects and for owners building homes and commercial spaces, supply the fittings from basic to luxury, and manufacture custom chandeliers in our own factory. Celestial has stores and experience centres in Kannur and Calicut. Kochi is a full experience centre. An online store for the range is being built.",
+    "Elor Lighting is the lighting consultancy of Celestial Lights. We design lighting for sites anywhere in India, supply our own fittings, and install them with our own crew. The plan is written in DIALux. Custom chandeliers are made in our factory. Experience centres and the office are in Kerala: Celestial Lights in Kannur and Calicut, and a full Elor experience centre in Kochi. An online store for the range is being built.",
   /**
    * `description` above is the full entity description — it feeds Organization
    * schema and llms.txt, where length is fine. `metaDescription` is the SERP
@@ -23,7 +23,7 @@ export const site = {
    * location and its call to action before anyone read them.
    */
   metaDescription:
-    "Lighting plans for architects and owners building homes and commercial spaces. We supply the fittings and make custom chandeliers. Centres in Kannur, Calicut and Kochi.",
+    "Lighting design and installation anywhere in India, with our own fittings. Experience centres in Kannur, Calicut and Kochi.",
 
   // One number for the whole business, calls and WhatsApp alike, including
   // every store. Enquiries are meant to funnel to this single line so they can
