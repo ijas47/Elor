@@ -20,7 +20,7 @@ const csp = [
   "style-src 'self' 'unsafe-inline'",
   "img-src 'self' data: https://www.google-analytics.com https://www.googletagmanager.com",
   "font-src 'self'",
-  `connect-src 'self' ${googleTag}`,
+  `connect-src 'self' ${googleTag} https://formsubmit.co`,
   "object-src 'none'",
   "base-uri 'self'",
   "form-action 'self'",

@@ -1,3 +1,4 @@
+import https from "node:https";
 import { NextResponse } from "next/server";
 import { consultationEmail, parseConsultation } from "@/lib/consultation";
 import { site } from "@/lib/site";
@@ -11,10 +12,39 @@ function reply(req: Request, json: boolean, ok: boolean, status = 200) {
   return NextResponse.redirect(target, 303);
 }
 
+function postToFormSubmit(payload: string, page: string): Promise<{ status: number; text: string }> {
+  return new Promise((resolve, reject) => {
+    const req = https.request(
+      `https://formsubmit.co/ajax/${encodeURIComponent(site.email)}`,
+      {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+          Referer: page,
+          Origin: site.domain,
+          "User-Agent":
+            "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 Safari/537.36",
+          "Content-Length": Buffer.byteLength(payload),
+        },
+      },
+      (res) => {
+        const chunks: Buffer[] = [];
+        res.on("data", (chunk) => chunks.push(chunk));
+        res.on("end", () => resolve({ status: res.statusCode ?? 0, text: Buffer.concat(chunks).toString("utf8") }));
+      },
+    );
+    req.on("error", reject);
+    req.write(payload);
+    req.end();
+  });
+}
+
 /**
  * Emails a consultation request to site.email.
  * Delivered through FormSubmit, which emails that inbox directly.
- * The first submission asks that inbox to confirm the address once.
+ * hello@ has confirmed the address. The page posts from the browser;
+ * this route is the no-JavaScript fallback.
  */
 export async function POST(req: Request) {
   const type = req.headers.get("content-type") || "";
@@ -52,39 +82,29 @@ export async function POST(req: Request) {
 
   const { subject } = consultationEmail(parsed.lead);
   const lead = parsed.lead;
-  // FormSubmit rejects a server fetch that has no Referer, with a message
-  // about opening the page through a web server. Send the public page.
+  // FormSubmit rejects a post with no Referer. Node fetch from Vercel is also
+  // answered 403, so this fallback uses a plain HTTPS request a browser would
+  // send. The form itself posts from the visitor's browser.
   const page = `${site.domain}/consultation`;
+  const payload = JSON.stringify({
+    _subject: subject,
+    _template: "table",
+    _captcha: "false",
+    _url: page,
+    Name: lead.name,
+    Phone: lead.phone,
+    Space: lead.space || "-",
+    Area: lead.sqft ? `${lead.sqft} sq ft` : "-",
+    City: lead.city || "-",
+    Stage: lead.stage || "-",
+    Notes: lead.notes || "-",
+  });
 
   try {
-    const res = await fetch(
-      `https://formsubmit.co/ajax/${encodeURIComponent(site.email)}`,
-      {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-          Accept: "application/json",
-          Referer: page,
-          Origin: site.domain,
-        },
-        body: JSON.stringify({
-          _subject: subject,
-          _template: "table",
-          _captcha: "false",
-          _url: page,
-          Name: lead.name,
-          Phone: lead.phone,
-          Space: lead.space || "-",
-          Area: lead.sqft ? `${lead.sqft} sq ft` : "-",
-          City: lead.city || "-",
-          Stage: lead.stage || "-",
-          Notes: lead.notes || "-",
-        }),
-      },
-    );
-    const data = (await res.json().catch(() => null)) as { success?: string; message?: string } | null;
-    if (!res.ok || data?.success === "false") {
-      console.error("[consultation] send failed", res.status, data);
+    const sent = await postToFormSubmit(payload, page);
+    const data = JSON.parse(sent.text) as { success?: string; message?: string };
+    if (sent.status !== 200 || data?.success === "false") {
+      console.error("[consultation] send failed", sent.status, sent.text.slice(0, 300));
       return reply(req, json, false, 502);
     }
     if (data?.message) console.info("[consultation]", data.message);

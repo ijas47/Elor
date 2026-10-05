@@ -1,12 +1,13 @@
 "use client";
 
 import { useState } from "react";
-import { spaceOptions, stageOptions } from "@/lib/consultation";
+import { consultationEmail, parseConsultation, spaceOptions, stageOptions } from "@/lib/consultation";
 import { site } from "@/lib/site";
 
 /**
- * Consultation lead form. Submits to /api/consultation, which emails the
- * studio inbox. The WhatsApp link stays as a direct alternative.
+ * Consultation lead form. The browser posts straight to FormSubmit.
+ * A server-side post from Vercel is rejected (403) before the mail is sent.
+ * The WhatsApp link stays as a direct alternative.
  */
 export function ConsultForm({
   initial = "idle",
@@ -20,23 +21,48 @@ export function ConsultForm({
     if (status === "sending") return;
     const form = e.currentTarget;
     const f = new FormData(form);
+    const parsed = parseConsultation({
+      name: f.get("name") ?? "",
+      phone: f.get("phone") ?? "",
+      space: f.get("space") ?? "",
+      city: f.get("city") ?? "",
+      sqft: f.get("sqft") ?? "",
+      stage: f.get("stage") ?? "",
+      notes: f.get("notes") ?? "",
+      company: f.get("company") ?? "",
+    });
+    if (!parsed.ok) {
+      setStatus("error");
+      return;
+    }
+    if (parsed.spam) {
+      form.reset();
+      setStatus("sent");
+      return;
+    }
+
     setStatus("sending");
+    const lead = parsed.lead;
     try {
-      const res = await fetch("/api/consultation", {
+      const res = await fetch(`https://formsubmit.co/ajax/${encodeURIComponent(site.email)}`, {
         method: "POST",
-        headers: { "Content-Type": "application/json" },
+        headers: { "Content-Type": "application/json", Accept: "application/json" },
         body: JSON.stringify({
-          name: f.get("name") ?? "",
-          phone: f.get("phone") ?? "",
-          space: f.get("space") ?? "",
-          city: f.get("city") ?? "",
-          sqft: f.get("sqft") ?? "",
-          stage: f.get("stage") ?? "",
-          notes: f.get("notes") ?? "",
-          company: f.get("company") ?? "",
+          _subject: consultationEmail(lead).subject,
+          _template: "table",
+          _captcha: "false",
+          _url: `${site.domain}/consultation`,
+          Name: lead.name,
+          Phone: lead.phone,
+          Space: lead.space || "-",
+          Area: lead.sqft ? `${lead.sqft} sq ft` : "-",
+          City: lead.city || "-",
+          Stage: lead.stage || "-",
+          Notes: lead.notes || "-",
         }),
       });
-      if (!res.ok) {
+      const data = (await res.json().catch(() => null)) as { success?: string } | null;
+      if (!res.ok || data?.success === "false") {
         setStatus("error");
         return;
       }
