@@ -102,11 +102,11 @@ Calm, precise, quietly confident. No exclamation marks, no hype, no em dashes.
 
 ## Notes / next steps
 
-- **One number for everything**: `+91 99956 19470`, for calls and WhatsApp, on
-  the site and on all three stores. Enquiries funnel to that single line so they
-  can be automated and handled in one place. The stores read it from
-  `site.phone` rather than carrying their own, so there is one thing to change.
-  Do not add a second number.
+- **Calls**: `+91 99956 19470` on the site and on all three stores, from
+  `site.phone`. **WhatsApp**: `+91 88487 08529`, from `site.whatsappNumber`.
+  Do not point `wa.me` links back at the call line.
+- **Email**: `hello@elorlighting.com` (`site.email`). The consultation form
+  posts to that inbox through FormSubmit.
 - Kannur and Kochi addresses are real. The **Kozhikode address** is still a
   placeholder in `lib/site.ts`.
 - Set `site.shopUrl` + `shopLive: true` when the Celestial Lights Shopify store

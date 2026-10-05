@@ -10,7 +10,7 @@ import { Icon, type IconName } from "@/components/ui/Icon";
 export const metadata: Metadata = {
   title: "Lighting Design Consultation",
   description:
-    "Book a free lighting design consultation — in store, at your site, or over video. We plan the scheme, design what has to be made, and install it.",
+    "Book a free lighting design consultation — in store, at your site, or over video. We plan the scheme and design what has to be made. Custom-designed lights include free installation.",
   alternates: { canonical: "/consultation" },
 };
 
@@ -18,9 +18,10 @@ const faqs = [
   // Also serialized into FAQPage schema below — keep questions/answers in sync
   // with what's actually asked on the page.
   { q: "Is the consultation really free?", a: "Yes. The first session, at your site, at an experience centre in Kannur, Calicut or Kochi, or over video, is free and carries no obligation. You only pay if you choose to go ahead." },
-  { q: "Do I have to buy everything from you?", a: "No, but there's a real advantage to it: when we supply and install, one team owns quality, pricing and the warranty. No blame games between shop, designer and electrician." },
+  { q: "Do I have to buy everything from you?", a: "No. When the lights are ours, one team owns quality, pricing and the warranty. Custom-designed lights include free installation. Ready fittings and everything else come with installation support." },
   { q: "Can you work with my architect or interior designer?", a: "Absolutely. We work alongside architects and designers constantly, reading drawings, improving them, and coordinating on site so the scheme lands the way it was designed." },
-  { q: "Do you work outside Kerala?", a: "Yes. The experience centres and the office are in Kerala. We design for any site in India, supply our own fittings, and our crew installs them. The plan can start on a video call. The installation happens on site." },
+  { q: "Is installation free?", a: "Free installation is included with custom-designed lights. For ready fittings and everything else, we provide installation support." },
+  { q: "Do you work outside Kerala?", a: "Yes. The experience centres and the office are in Kerala. We design for any site in India and supply our own fittings. Custom-designed lights include free installation on site. Everything else comes with installation support. The plan can start on a video call." },
 ];
 
 const audiences = [
@@ -37,7 +38,7 @@ const serviceSchema = {
   provider: { "@type": "Organization", name: site.name, url: site.domain },
   areaServed: "IN",
   description:
-    "A free lighting consultation covering the whole space fixture-by-fixture, with supply from Elor's own range and installation by Elor's own crew, under one warranty.",
+    "A free lighting consultation covering the whole space fixture-by-fixture, with supply from Elor's own range. Custom-designed lights include free installation. Ready fittings and everything else come with installation support, under one warranty.",
   url: `${site.domain}/consultation`,
 };
 
@@ -86,8 +87,9 @@ export default async function Consultation({
           </Reveal>
           <Reveal delay={0.12}>
             <p className="lede">
-              One team plans, supplies and installs the lighting for your whole
-              space, then hands you a single warranty for all of it. Book a free
+              One team plans and supplies the lighting for your whole space.
+              Custom-designed lights include free installation. Ready fittings
+              and everything else come with installation support. Book a free
               first session below.
             </p>
           </Reveal>
@@ -102,7 +104,7 @@ export default async function Consultation({
               { h: "Consult", p: "Free first session at your site, in a store, or on video. We listen before we recommend." },
               { h: "Design", p: "A fixture-by-fixture plan: positions, colour temperature, dimming zones and a transparent estimate." },
               { h: "Supply", p: "From our own range, see it glowing in-store before you commit. Delivered pan-India." },
-              { h: "Install", p: "Our crew installs, aims and tunes every light. One point of contact, one warranty." },
+              { h: "Install", p: "Free installation on custom-designed lights. Installation support for ready fittings and everything else. One point of contact, one warranty." },
             ].map((s) => (
               <StaggerItem key={s.h}>
                 <div className="j-step"><h3>{s.h}</h3><p>{s.p}</p></div>

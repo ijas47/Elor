@@ -41,7 +41,7 @@ const workWith = [
   },
   {
     h: "One warranty, one point of contact",
-    p: "Up to 5-year warranty on fabricated pieces, and one team responsible for design, build and installation — not a fixture from one vendor and installation from another, with the warranty caught between them if something goes wrong.",
+    p: "Up to 5-year warranty on fabricated pieces. Custom-designed lights include free installation by our crew. Ready fittings and the rest of a schedule come with installation support, so the warranty is not caught between a fixture from one vendor and an installer from another.",
   },
 ];
 

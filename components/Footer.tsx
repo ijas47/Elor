@@ -14,9 +14,10 @@ export function Footer() {
             </Link>
             <p className={styles.blurb}>
               The lighting consultancy of Celestial Lights. We design for
-              any site in India, supply our own fittings, and install them
-              with our own crew. Experience centres in Kannur, Calicut and
-              Kochi.
+              any site in India and supply our own fittings. Custom-designed
+              lights include free installation. Everything else comes with
+              installation support. Experience centres in Kannur, Calicut
+              and Kochi.
             </p>
             <a
               href={site.shopUrl}
@@ -59,7 +60,7 @@ export function Footer() {
             <a href={site.phoneHref}>{site.phone}</a>
             <p>{site.hours}</p>
             <a href={site.whatsapp} target="_blank" rel="noopener noreferrer">
-              WhatsApp us →
+              WhatsApp {site.whatsappNumber} →
             </a>
           </div>
         </div>

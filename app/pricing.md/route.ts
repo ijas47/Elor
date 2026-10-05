@@ -49,22 +49,25 @@ fabrication is quoted per design after a free consultation.
   considerably more, depending on material and fabrication complexity
 
 Pricing drivers, in order of impact: size and drop; material (crystal,
-hand-blown glass, brass, marble); fabrication complexity; installation and
-site conditions.
+hand-blown glass, brass, marble); fabrication complexity. For ready fittings,
+installation support and site conditions are arranged with the order.
+Custom-designed lights include free installation.
 
 ## Services
 
 - Design consultation: free (in store, at your site, or over video)
-- Installation: quoted alongside the piece, no separate electrician needed
+- Custom-designed lights: free installation
+- Ready fittings and everything else: installation support, arranged with the order
 - Delivery: pan-India
 - Warranty: up to 5 years
 
 ## Notes
 
 - Product pricing is identical across all three stores and pan-India delivery.
-- Installation cost varies with site access and distance from the nearest store.
-- Ready-collection prices are final for pieces bought as shown; delivery and
-  installation are quoted separately.
+- Installation support for ready pieces varies with site access and distance from the nearest store.
+- Ready-collection prices are final for pieces bought as shown. Delivery is
+  quoted separately. Those pieces come with installation support, not free installation.
+- Custom-designed lights include free installation.
 
 ## Where to buy
 
@@ -73,7 +76,8 @@ ${stores.map((s) => `- ${s.brand}, ${s.city} — ${s.address}`).join("\n")}
 
 ## Contact
 
-- Phone/WhatsApp: ${site.phone}
+- Phone: ${site.phone}
+- WhatsApp: ${site.whatsappNumber}
 - Email: ${site.email}
 - Hours: ${site.hours}
 - Full pricing guide: ${site.domain}/guides/chandelier-pricing-guide

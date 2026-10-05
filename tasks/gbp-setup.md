@@ -44,7 +44,7 @@ The address field currently starts with the company name and uses Google’s spe
 - **Phone:** `+91 99956 19470`
 - **Website:** `https://www.elorlighting.com/stores/kochi`
 - **Hours:** Mon–Sat, 9:30 AM – 8:30 PM · Closed Sunday
-- **WhatsApp:** the same number, via Add WhatsApp on the dashboard
+- **WhatsApp:** `+91 88487 08529`, via Add WhatsApp on the dashboard. This is not the call number.
 - **Primary category:** already `Lighting consultant`. Add `Lighting store` if the category list offers it. Do not remove the consultant category.
 
 ## Profile 3 — Kozhikode
@@ -72,9 +72,9 @@ The address field currently starts with the company name and uses Google’s spe
 
 **Description** (same for all three, 750 char limit):
 
-> Custom chandelier design, fabrication and installation, plus the Celestial
-> Lights ready collection. We measure your space, design the piece, build it,
-> and install it — one team for the whole job, with up to 5-year warranty.
+> Custom chandelier design and fabrication, plus the Celestial Lights ready
+> collection. Custom-designed lights include free installation. Ready fittings
+> and everything else come with installation support. Up to 5-year warranty.
 > Free design consultation in store, at your site, or over video. Pan-India
 > delivery from our three Kerala experience stores in Kannur, Kochi and
 > Kozhikode.

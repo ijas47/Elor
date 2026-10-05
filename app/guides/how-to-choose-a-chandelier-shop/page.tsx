@@ -61,7 +61,7 @@ const faqs = [
   },
   {
     q: "Is installation usually included when you buy a chandelier?",
-    a: "It varies by shop, and this is one of the most important questions to ask upfront. Some quote the piece and installation together; others sell the fixture only and leave you to arrange an electrician. Get this confirmed in writing before ordering, since a badly installed fixture is a safety issue, not just a cosmetic one.",
+    a: "It varies by shop, and this is one of the most important questions to ask upfront. Some quote the piece and installation together; others sell the fixture only and leave you to arrange an electrician. At Elor, custom-designed lights include free installation. Ready fittings and everything else come with installation support. Get this confirmed in writing before ordering, since a badly installed fixture is a safety issue, not just a cosmetic one.",
   },
   {
     q: "How do I know if a chandelier warranty is actually worth anything?",
@@ -181,7 +181,7 @@ export default function ChooseAShopGuide() {
             <ul className="check-list" style={{ marginTop: 28 }}>
               <li><span className="tick">✓</span>We fabricate in-house — custom pieces are designed and built to your ceiling, not selected from a fixed catalogue.</li>
               <li><span className="tick">✓</span>Three physical showrooms in Kerala, plus video consultation if you&rsquo;re elsewhere.</li>
-              <li><span className="tick">✓</span>Installation is quoted with the piece, not arranged separately.</li>
+              <li><span className="tick">✓</span>Custom-designed lights include free installation. Ready fittings come with installation support.</li>
               <li><span className="tick">✓</span>Up to 5-year warranty, confirmed in writing at consultation.</li>
               <li><span className="tick">✓</span>We plan around false ceilings, shared fan points and non-standard ceilings as a normal part of the process — see the <a href="/guides/false-ceiling-chandelier-weight">false ceiling guide</a> and <a href="/guides/chandelier-with-ceiling-fan">ceiling fan guide</a>.</li>
               <li><span className="tick">✓</span>Firm pricing after design approval, before fabrication starts.</li>

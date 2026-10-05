@@ -20,7 +20,7 @@ const facts = [
   { k: "Founded", v: "Elor Lighting / Celestial Lights, Kerala, India" },
   { k: "What we do", v: "Lighting plans for architects and owners who are building, supply from basic to luxury, and custom chandeliers made in our factory" },
   { k: "Locations", v: "Celestial stores and experience centres in Kannur and Calicut. Full experience centre in Kochi." },
-  { k: "Coverage", v: "Pan-India delivery and installation" },
+  { k: "Coverage", v: "Pan-India delivery. Free installation on custom-designed lights. Installation support on everything else." },
   { k: "Warranty", v: "Up to 5 years on fabricated pieces" },
 ];
 

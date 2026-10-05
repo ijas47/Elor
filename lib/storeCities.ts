@@ -23,21 +23,21 @@ export const storeCities: Record<StoreCity, StoreCityCopy> = {
     city: "Kannur",
     metaTitle: "Celestial Lights Kannur",
     metaDescription:
-      "Celestial Lights Kannur is a chandelier store and experience centre. Custom design, fabrication and installation, plus the ready collection. Walk in or book.",
+      "Celestial Lights Kannur is a chandelier store and experience centre. Custom design and fabrication, free installation on custom lights, plus the ready collection. Walk in or book.",
     heroHeadline: "Custom Chandeliers & Lighting Design in Kannur",
     heroLede:
       "A Celestial Lights store and experience centre in Kannur. Lighting plans for architects and owners who are building, the ready range on the floor, and custom chandeliers made in our factory.",
     heroImage: "/lifestyle/villa-night.jpg",
     intro:
-      "Kannur is known as much for its handloom weaving heritage as its coastline, a town where considered, handmade craft is already part of daily life. That's the same standard we hold custom fixtures to: measured to your ceiling, built by hand, and installed by the same team that designed it.",
+      "Kannur is known as much for its handloom weaving heritage as its coastline, a town where considered, handmade craft is already part of daily life. That's the same standard we hold custom fixtures to: measured to your ceiling, built by hand, and installed free by the same team that designed it.",
     whyUs: [
       "Custom chandeliers built from a photo, render or sketch, fabricated in crystal, glass, metal or acrylic",
       "The full Celestial Lights ready collection on the showroom floor to see and take home",
       "Free design consultation, at the Kannur store, at your site, or over video",
-      "One team for design, fabrication and installation, with up to 5-year warranty",
+      "Free installation on custom-designed lights, and installation support for the ready collection, with up to 5-year warranty",
     ],
     faqs: [
-      { q: "Do you only serve Kannur, or the wider district?", a: "The Kannur store serves the whole district and nearby towns for consultation and installation, and we deliver pan-India from all three stores for anything ordered online or by phone." },
+      { q: "Do you only serve Kannur, or the wider district?", a: "The Kannur store serves the whole district and nearby towns for consultation and installation support. Custom-designed lights include free installation. We deliver pan-India from all three stores for anything ordered online or by phone." },
       { q: "Can I just walk in, or do I need an appointment?", a: "Walk-ins are welcome during store hours. Booking a consultation ahead means we can prepare mood boards and a cost range before you arrive." },
       { q: "Is everything in the Kannur store made to order?", a: "No. The store carries the full Celestial Lights ready collection to see and buy on the spot, alongside taking custom briefs for anything you can't find on the floor." },
       { q: "How long does a custom piece take from the Kannur store?", a: "Most custom pieces are designed, fabricated and installed within 3 to 6 weeks of your consultation." },
@@ -47,7 +47,7 @@ export const storeCities: Record<StoreCity, StoreCityCopy> = {
     city: "Kochi",
     metaTitle: "Chandelier & Lighting Store in Kochi",
     metaDescription:
-      "Custom chandelier design, fabrication and installation in Kochi, plus the Celestial Lights ready collection. Visit Kadavanthara or book a free consultation.",
+      "Custom chandelier design and fabrication in Kochi, with free installation on custom lights. Plus the Celestial Lights ready collection. Visit Kadavanthara or book a free consultation.",
     heroHeadline: "Custom Chandeliers & Lighting Design in Kochi",
     heroLede:
       "Kochi is Elor's full experience centre. Architects and owners building homes, hotels and commercial spaces come here to see the range lit, agree the plan, and commission the pieces our factory makes.",
@@ -58,6 +58,7 @@ export const storeCities: Record<StoreCity, StoreCityCopy> = {
       "Custom chandeliers built from a photo, render or sketch, fabricated in crystal, glass, metal or acrylic",
       "The full Celestial Lights ready collection on the showroom floor to see and take home",
       "Free design consultation, at the Kochi store, at your site, or over video",
+      "Free installation on custom-designed lights, and installation support for the ready collection",
       "Project pricing and phased delivery for hotels, retail and office fit-outs, alongside home lighting",
     ],
     faqs: [
@@ -71,7 +72,7 @@ export const storeCities: Record<StoreCity, StoreCityCopy> = {
     city: "Kozhikode",
     metaTitle: "Celestial Lights Calicut",
     metaDescription:
-      "Celestial Lights in Kozhikode (Calicut): a chandelier store and experience centre. Custom design, fabrication and installation, plus the ready collection.",
+      "Celestial Lights in Kozhikode (Calicut): a chandelier store and experience centre. Custom design and fabrication, free installation on custom lights, plus the ready collection.",
     heroHeadline: "Custom Chandeliers & Lighting Design in Kozhikode",
     heroLede:
       "A Celestial Lights store and experience centre in Calicut. Lighting plans for architects and owners who are building, the ready range on the floor, and custom chandeliers made in our factory.",
@@ -82,10 +83,10 @@ export const storeCities: Record<StoreCity, StoreCityCopy> = {
       "Custom chandeliers built from a photo, render or sketch, fabricated in crystal, glass, metal or acrylic",
       "The full Celestial Lights ready collection on the showroom floor to see and take home",
       "Free design consultation, at the Kozhikode store, at your site, or over video",
-      "One team for design, fabrication and installation, with up to 5-year warranty",
+      "Free installation on custom-designed lights, and installation support for the ready collection, with up to 5-year warranty",
     ],
     faqs: [
-      { q: "Do you only serve Kozhikode city, or the wider Malabar area?", a: "The Kozhikode store serves the city and surrounding Malabar towns for consultation and installation, and we deliver pan-India from all three stores for anything ordered online or by phone." },
+      { q: "Do you only serve Kozhikode city, or the wider Malabar area?", a: "The Kozhikode store serves the city and surrounding Malabar towns for consultation and installation support. Custom-designed lights include free installation. We deliver pan-India from all three stores for anything ordered online or by phone." },
       { q: "Can I just walk in, or do I need an appointment?", a: "Walk-ins are welcome during store hours. Booking a consultation ahead means we can prepare mood boards and a cost range before you arrive." },
       { q: "Is everything in the Kozhikode store made to order?", a: "No. The store carries the full Celestial Lights ready collection to see and buy on the spot, alongside taking custom briefs for anything you can't find on the floor." },
       { q: "How long does a custom piece take from the Kozhikode store?", a: "Most custom pieces are designed, fabricated and installed within 3 to 6 weeks of your consultation." },

@@ -78,14 +78,24 @@ const orgSchema = {
   // Each store's own address lives in its LightingStore schema at
   // /stores/{city}. No Organization-level address here: which of the three is
   // the registered office is a business fact, not something to infer.
-  contactPoint: {
-    "@type": "ContactPoint",
-    telephone: site.phone,
-    email: site.email,
-    contactType: "sales",
-    areaServed: "IN",
-    availableLanguage: ["en", "ml"],
-  },
+  contactPoint: [
+    {
+      "@type": "ContactPoint",
+      telephone: site.phone,
+      email: site.email,
+      contactType: "sales",
+      areaServed: "IN",
+      availableLanguage: ["en", "ml"],
+    },
+    {
+      "@type": "ContactPoint",
+      telephone: site.whatsappNumber,
+      contactType: "WhatsApp",
+      url: site.whatsapp,
+      areaServed: "IN",
+      availableLanguage: ["en", "ml"],
+    },
+  ],
 };
 
 // No `potentialAction`/SearchAction here deliberately: the site has no

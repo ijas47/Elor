@@ -52,6 +52,9 @@ export async function POST(req: Request) {
 
   const { subject } = consultationEmail(parsed.lead);
   const lead = parsed.lead;
+  // FormSubmit rejects a server fetch that has no Referer, with a message
+  // about opening the page through a web server. Send the public page.
+  const page = `${site.domain}/consultation`;
 
   try {
     const res = await fetch(
@@ -61,11 +64,14 @@ export async function POST(req: Request) {
         headers: {
           "Content-Type": "application/json",
           Accept: "application/json",
+          Referer: page,
+          Origin: site.domain,
         },
         body: JSON.stringify({
           _subject: subject,
           _template: "table",
           _captcha: "false",
+          _url: page,
           Name: lead.name,
           Phone: lead.phone,
           Space: lead.space || "-",

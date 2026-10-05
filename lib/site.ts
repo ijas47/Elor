@@ -15,7 +15,7 @@ export const site = {
   tagline: "Lighting plans, supply, and custom chandeliers. By Celestial Lights.",
   domain: "https://www.elorlighting.com",
   description:
-    "Elor Lighting is the lighting consultancy of Celestial Lights. We design lighting for sites anywhere in India, supply our own fittings, and install them with our own crew. The plan is written in DIALux. Custom chandeliers are made in our factory. Experience centres and the office are in Kerala: Celestial Lights in Kannur and Calicut, and a full Elor experience centre in Kochi. An online store for the range is being built.",
+    "Elor Lighting is the lighting consultancy of Celestial Lights. We design lighting for sites anywhere in India and supply our own fittings. Custom-designed lights include free installation. Ready fittings and everything else come with installation support. The plan is written in DIALux. Custom chandeliers are made in our factory. Experience centres and the office are in Kerala: Celestial Lights in Kannur and Calicut, and a full Elor experience centre in Kochi. An online store for the range is being built.",
   /**
    * `description` above is the full entity description — it feeds Organization
    * schema and llms.txt, where length is fine. `metaDescription` is the SERP
@@ -23,28 +23,27 @@ export const site = {
    * location and its call to action before anyone read them.
    */
   metaDescription:
-    "Lighting design and installation anywhere in India, with our own fittings. Experience centres in Kannur, Calicut and Kochi.",
+    "Lighting design anywhere in India, with our own fittings. Free installation on custom lights. Centres in Kannur, Calicut and Kochi.",
 
-  // One number for the whole business, calls and WhatsApp alike, including
-  // every store. Enquiries are meant to funnel to this single line so they can
-  // be automated and handled in one place. Do not introduce a second number.
-  // hello@ does not exist yet. Use this until a shared inbox is created.
-  email: "samad@elorlighting.com",
+  // Calls stay on one line, on every store and in directories.
+  // WhatsApp is a separate number. Do not point wa.me links back at the call line.
+  email: "hello@elorlighting.com",
   phone: "+91 99956 19470",
   phoneHref: "tel:+919995619470",
+  whatsappNumber: "+91 88487 08529",
   hours: "Mon-Sat · 9:30 AM to 8:30 PM IST",
 
   // ── SHOP HANDOFF (swap when Shopify is live) ──────────────────────────────
   // e.g. "https://celestiallights.store" or the myshopify domain.
   shopUrl:
-    "https://wa.me/919995619470?text=Hi%20Elor%2C%20I%27d%20like%20to%20browse%20the%20Celestial%20Lights%20collection.",
+    "https://wa.me/918848708529?text=Hi%20Elor%2C%20I%27d%20like%20to%20browse%20the%20Celestial%20Lights%20collection.",
   shopLabel: "Celestial Lights",
   shopLive: false, // set true once the Shopify store is published
   // While the store is being built, do not label the button "Shop".
   shopCta: "See the range",
 
   whatsapp:
-    "https://wa.me/919995619470?text=Hi%20Elor%2C%20I%27m%20interested%20in%20lighting%20for%20my%20space.",
+    "https://wa.me/918848708529?text=Hi%20Elor%2C%20I%27m%20interested%20in%20lighting%20for%20my%20space.",
 
   social: {
     instagram: "https://instagram.com/elorlighting",
