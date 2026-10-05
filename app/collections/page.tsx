@@ -75,6 +75,25 @@ export default function Collections() {
               {site.shopLabel}. Prefer something that doesn&rsquo;t exist yet?{" "}
               <a href="/customisation" style={{ color: "var(--gold)" }}>We&rsquo;ll build it.</a>
             </p>
+            <p className="lede" style={{ marginTop: 16 }}>
+              The room is decided on Elor, then a shelf piece links to {site.shopLabel}.{" "}
+              <a href="/guides/chandelier-for-living-room" style={{ color: "var(--gold)" }}>Living room</a>
+              {" · "}
+              <a href="/guides/ceiling-and-lighting-design" style={{ color: "var(--gold)" }}>Ceiling</a>
+              {" · "}
+              <a href="/guides/home-lighting-design" style={{ color: "var(--gold)" }}>Whole house</a>
+              {" · "}
+              <a href="/guides/staircase-lighting-design" style={{ color: "var(--gold)" }}>Stair</a>
+              {" · "}
+              <a href="/guides/bedroom-lighting-design" style={{ color: "var(--gold)" }}>Bedroom</a>
+              {" · "}
+              <a href="/guides/kitchen-lighting-design" style={{ color: "var(--gold)" }}>Kitchen</a>
+              {" · "}
+              <a href="/guides/wooden-chandelier" style={{ color: "var(--gold)" }}>Wood</a>
+              {" · "}
+              <a href="/guides/brass-chandelier" style={{ color: "var(--gold)" }}>Brass</a>
+              .
+            </p>
           </Reveal>
           <Reveal delay={0.18}>
             <div className="cta-ctas" style={{ justifyContent: "flex-start", marginTop: 32 }}>

@@ -10,7 +10,7 @@ export function GuideCard({ guide }: { guide: Guide }) {
       <div className="piece-media">
         <Image
           src={guide.image}
-          alt={guide.title}
+          alt={guide.imageAlt ?? guide.title}
           fill
           sizes="(max-width: 620px) 100vw, (max-width: 1020px) 50vw, 25vw"
         />

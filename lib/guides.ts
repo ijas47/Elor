@@ -4,7 +4,11 @@ export interface Guide {
   dek: string;
   tag: "Pricing" | "Buying Guide" | "Technical" | "Local";
   image: string;
+  /** Describes the photograph. Falls back to the title on older cards. */
+  imageAlt?: string;
   updated: string;
+  /** ISO date for the sitemap. Omit on older guides; the sitemap keeps their dates. */
+  modified?: string;
 }
 
 /**
@@ -14,6 +18,86 @@ export interface Guide {
  * Keeping them apart is what stops the two page types cannibalising each other.
  */
 export const guides: Guide[] = [
+  {
+    slug: "chandelier-for-living-room",
+    title: "Chandelier for a Living Room",
+    dek: "Size it to the seating, clear the fan, and put the anchor in the slab before the ceiling closes.",
+    tag: "Buying Guide",
+    image: "/spaces/living.jpg",
+    imageAlt: "A living room with a chandelier, cove light in the tray ceiling, and a lamp beside the sofa",
+    updated: "5 October 2026",
+    modified: "2026-10-05",
+  },
+  {
+    slug: "ceiling-and-lighting-design",
+    title: "Ceiling and Lighting Design",
+    dek: "Cove, spots, and the decorative piece are three jobs. The ceiling is drawn after the furniture.",
+    tag: "Technical",
+    image: "/spaces/living.jpg",
+    imageAlt: "A tray ceiling with cove lighting, recessed spots, and a chandelier over the seating",
+    updated: "5 October 2026",
+    modified: "2026-10-05",
+  },
+  {
+    slug: "home-lighting-design",
+    title: "Home Lighting Design",
+    dek: "One plan for every room, written before the ceilings close. The same job as a house lighting design.",
+    tag: "Technical",
+    image: "/lifestyle/villa-night.jpg",
+    imageAlt: "A house at night with cove light under the slabs, wall lights, and a lit path",
+    updated: "5 October 2026",
+    modified: "2026-10-05",
+  },
+  {
+    slug: "staircase-lighting-design",
+    title: "Staircase Lighting Design",
+    dek: "Light the nose of each tread, and hang the void from the slab. The two are separate decisions.",
+    tag: "Technical",
+    image: "/collections/staircase-cascade.jpg",
+    imageAlt: "A red crystal cascade hung in a spiral stair, with a wall light on the landing",
+    updated: "5 October 2026",
+    modified: "2026-10-05",
+  },
+  {
+    slug: "bedroom-lighting-design",
+    title: "Bedroom Lighting Design",
+    dek: "Nothing bright over the pillow. A reading light on its own switch, and a dimmable piece in the ceiling.",
+    tag: "Technical",
+    image: "/spaces/bedroom.jpg",
+    imageAlt: "A tiered crystal chandelier in a vaulted bedroom, hung clear of the window",
+    updated: "5 October 2026",
+    modified: "2026-10-05",
+  },
+  {
+    slug: "kitchen-lighting-design",
+    title: "Kitchen Lighting Design",
+    dek: "The worktop gets its own light. The pendant over the island is a second circuit, not the task light.",
+    tag: "Technical",
+    image: "/collections/abstract-rings.jpg",
+    imageAlt: "A linear pendant over a dining table, with the kitchen visible beyond",
+    updated: "5 October 2026",
+    modified: "2026-10-05",
+  },
+  {
+    slug: "wooden-chandelier",
+    title: "Wooden Chandelier",
+    dek: "Wood suits a dry, air-conditioned room. On a humid coast it needs a sealed finish, or another material.",
+    tag: "Buying Guide",
+    image: "/lifestyle/store-wall.jpg",
+    imageAlt: "The Celestial Lights wall, with mosaic pendants and crystal cascades on display",
+    updated: "5 October 2026",
+    modified: "2026-10-05",
+  },
+  {
+    slug: "brass-chandelier",
+    title: "Brass Chandelier",
+    dek: "Untreated brass pits in salt air. The finish is specified for the room, then the piece is sized to it.",
+    tag: "Buying Guide",
+    image: "/collections/dandelion-gold.jpg",
+    imageAlt: "A brass-coloured sputnik chandelier with frosted glass globes",
+    updated: "5 October 2026",
+    modified: "2026-10-05",
+  },
   {
     slug: "how-to-choose-a-custom-chandelier",
     title: "How to Choose a Custom Chandelier — Villa, Duplex or Hotel",
