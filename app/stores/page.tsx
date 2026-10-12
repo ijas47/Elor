@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { GuideLinks } from "@/components/ui/GuideLinks";
 import Image from "next/image";
 import Link from "next/link";
 import { site, stores } from "@/lib/site";
@@ -111,6 +112,8 @@ export default function Stores() {
           </Reveal>
         </div>
       </section>
+
+      <GuideLinks />
 
       <section className="cta-band">
         <div className="wrap-tight">

@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import { GuideLinks } from "@/components/ui/GuideLinks";
 import { site, stores } from "@/lib/site";
 import { testimonials } from "@/lib/testimonials";
 import { breadcrumbSchema } from "@/lib/schema";
@@ -188,6 +189,8 @@ export function StoreCityPage({ city }: { city: StoreCity }) {
           </div>
         </div>
       </section>
+
+      <GuideLinks />
 
       <section className="sec glow-top">
         <div className="wrap-tight" style={{ textAlign: "center" }}>

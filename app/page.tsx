@@ -10,6 +10,7 @@ import { Reveal, Stagger, StaggerItem } from "@/components/motion/Reveal";
 import { MagneticButton } from "@/components/motion/MagneticButton";
 import { PieceCard } from "@/components/ui/PieceCard";
 import { Icon } from "@/components/ui/Icon";
+import { GuideLinks } from "@/components/ui/GuideLinks";
 
 const spaces = [
   // Living-room photograph is Pexels 7166647 (Max Vakhtbovych), free to use.
@@ -368,6 +369,7 @@ export default function Home() {
                   <p style={{ color: "var(--on-pearl-dim)" }}><span className="store-k">Address</span>{s.address}</p>
                   <p style={{ color: "var(--on-pearl-dim)" }}><span className="store-k">Hours</span>{s.hours}</p>
                   <p style={{ color: "var(--on-pearl-dim)" }}><span className="store-k">Phone</span>{s.phone}</p>
+                  <Link className="store-link" href={`/stores/${s.city.toLowerCase()}`} style={{ color: "var(--caramel)" }}>{s.city} store details →</Link>
                 </div>
               </StaggerItem>
             ))}
@@ -383,6 +385,8 @@ export default function Home() {
           </Reveal>
         </div>
       </section>
+
+      <GuideLinks />
 
       {/* Testimonials */}
       <section className="sec">

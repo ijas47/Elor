@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { GuideLinks } from "@/components/ui/GuideLinks";
 import Image from "next/image";
 import { site } from "@/lib/site";
 import { breadcrumbSchema } from "@/lib/schema";
@@ -216,6 +217,8 @@ export default function Customisation() {
       </section>
 
       {/* CTA */}
+      <GuideLinks />
+
       <section className="cta-band">
         <div className="wrap-tight">
           <Reveal delay={0.06}><h2 className="h-lg">The light you pictured<br /><span className="serif-i">is buildable.</span></h2></Reveal>
