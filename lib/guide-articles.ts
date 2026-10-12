@@ -237,49 +237,59 @@ export const guideArticles: GuideArticle[] = [
   },
   {
     slug: "ceiling-and-lighting-design",
-    metaTitle: "Ceiling and Lighting Design",
+    metaTitle: "False Ceiling Lighting for Kerala Homes: Cove, Spots, Anchor",
     description:
-      "Ceiling and lighting design puts the cove, the spots, and the chandelier on separate circuits. Elor draws it before the gypsum closes.",
+      "Ceiling and lighting design for Kerala homes: draw the furniture first, put cove, spots, and the chandelier on separate circuits, fix the anchor to the slab, and plan for fans and humidity before the gypsum closes.",
     crumb: "Ceiling and Lighting Design",
     eyebrow: "Technical",
     h1: "Design the ceiling",
     h1Em: "around the light.",
     lede: [
       {
-        text: "Ceiling and lighting design is the order of the work, not a folder of photographs. The furniture is drawn first. Cove, spots, and the chandelier are three jobs, on three circuits, settled before the gypsum closes.",
+        text: "Design a false ceiling and its lighting together, before the gypsum closes. Draw the furniture first, then place three layers: cove for a soft wash, spots for tasks and paths, and a decorative piece over the seating or table. Give each its own circuit, fix the chandelier anchor to the slab, and leave the fan its own point.",
       },
     ],
     image: "/spaces/living.jpg",
     imageAlt: "A tray ceiling with cove lighting, recessed spots, and a chandelier over the seating",
     sections: [
       {
-        h: "Three jobs, three circuits",
+        h: "What is ceiling and lighting design?",
         paragraphs: [
           [
             {
-              text: "A cove washes the edge of the ceiling. Spots mark a task or a path. The chandelier or pendant is the object in the room. Put all three on one switch and the room has one scene, brighter or darker. The method is ",
+              text: "It is the order of the work, not a folder of photographs. A false ceiling in a Kerala home is usually gypsum or POP hung below the RCC slab, and the lighting decides how deep it needs to be, where it steps, and where the openings go. If the ceiling is drawn first and the lights are fitted into whatever space is left, the result is spots in the wrong places, a cove that shows its LED strip, and a chandelier with nothing solid above it.",
             },
-            { text: "how a lighting plan is built", href: "/guides/how-a-lighting-plan-is-built" },
-            { text: "." },
           ],
           [
             {
-              text: "Gypsum depth decides what can recess. A deep baffle needs room. A trimless fitting needs room. If the lamp is visible from the sofa, the fitting is too shallow. That is ",
+              text: "The drawing that settles this is a reflected ceiling plan: the ceiling seen from below, with every light, every fan, every anchor, and every circuit marked. The method behind it is ",
             },
-            { text: "why a downlight glares", href: "/guides/why-downlights-glare" },
+            { text: "how a lighting plan is built", href: "/guides/how-a-lighting-plan-is-built" },
             { text: "." },
           ],
         ],
       },
       {
-        h: "The decorative piece is specified on top",
+        h: "Why should the furniture be drawn before the ceiling?",
         paragraphs: [
           [
             {
-              text: "The chandelier does not replace the layers. It is one line on the plan, with its own anchor in the slab. Weight, and why the fixing cannot wait, is the ",
+              text: "Because the light is for the furniture, not for the middle of the room. The sofa, the dining table, the bed, and the kitchen counter decide where the decorative piece hangs and where task light falls. A tray ceiling centred on the room but not on the seating puts the chandelier over the walkway. Fix the furniture layout, even roughly, and centre the ceiling features on it. Where a living and dining area share one long hall, as in many Kerala homes, each end gets its own ceiling feature and its own decorative light, rather than one tray stretched across both. If the furniture is likely to move, keep the decorative points flexible by marking two anchor positions while the ceiling is still open.",
             },
-            { text: "false-ceiling guide", href: "/guides/false-ceiling-chandelier-weight" },
-            { text: ". Colour of the lamps is agreed once for the room. The numbers are ",
+          ],
+        ],
+      },
+      {
+        h: "What do cove, spots, and the chandelier each do?",
+        paragraphs: [
+          [
+            {
+              text: "A cove washes the edge of the ceiling and makes the room feel taller and calmer; it is the light for a quiet evening. Spots mark a task or a path, or pick out a wall, a picture, or a shelf. The chandelier or pendant is the object in the room, the piece people notice. Put all three on one switch and the room has one scene, brighter or darker. On three circuits it has several, and that is most of what makes a room feel designed.",
+            },
+          ],
+          [
+            {
+              text: "Agree the colour of the lamps once for the room, so the cove, the spots, and the chandelier match. The numbers are in ",
             },
             { text: "Kelvin, CRI, and beam", href: "/guides/colour-of-light" },
             { text: "." },
@@ -287,22 +297,94 @@ export const guideArticles: GuideArticle[] = [
         ],
       },
       {
-        h: "Made for the room, or planned first",
+        h: "How deep should a false ceiling be for lighting?",
         paragraphs: [
           [
-            { text: "When the stock sizes do not fit a ceiling, send a picture and the measurements and Elor makes the piece. That process, with the timeline and what it costs, is on " },
+            {
+              text: "Deep enough for the fittings you choose, which is why the fittings are chosen first. A downlight with a deep baffle, which hides the lamp from the sofa, needs more depth than a flat panel. A trimless fitting needs room behind the gypsum. A cove needs a lip high enough that the strip is not seen from across the room. If the lamp is visible from where people sit, the fitting was too shallow for the job. That is ",
+            },
+            { text: "why a downlight glares", href: "/guides/why-downlights-glare" },
+            { text: ". Ask for the depth each fitting needs from its data sheet before the ceiling height is fixed." },
+          ],
+        ],
+      },
+      {
+        h: "Can a false ceiling hold a chandelier?",
+        paragraphs: [
+          [
+            {
+              text: "No. Gypsum and POP are finishes, not structure. The chandelier anchor goes into the slab, at a point marked while the ceiling is open, and the false ceiling is built around it. The same applies to a heavy pendant. Leave it until after the ceiling closes and the choice is between cutting the ceiling and hanging something lighter than you wanted. The full sequence, and what each build-up can carry, is in the ",
+            },
+            { text: "false-ceiling guide", href: "/guides/false-ceiling-chandelier-weight" },
+            { text: "." },
+          ],
+        ],
+      },
+      {
+        h: "Where does the ceiling fan go?",
+        paragraphs: [
+          [
+            {
+              text: "On its own point, marked on the same drawing. Most Kerala rooms need a fan for much of the year, and the fan competes with the chandelier for the centre of the ceiling. Decide which one takes the centre, then place the other far enough away that the blades never reach it. A fan below downlights also flickers the light as the blades pass, so keep spots out of the circle the blades sweep. The usual layouts are in ",
+            },
+            { text: "chandelier with a ceiling fan", href: "/guides/chandelier-with-ceiling-fan" },
+            { text: "." },
+          ],
+        ],
+      },
+      {
+        h: "How does Kerala's humidity affect a false ceiling with lights?",
+        paragraphs: [
+          [
+            {
+              text: "Gypsum near a bathroom, under a leaking terrace, or beside a nalukettu courtyard open to the rain sees damp for months. Fittings in those ceilings should be chosen for damp air, and drivers placed where they can be reached without breaking the ceiling. Leave a way in: an access panel near the drivers and the junctions saves a lot of damage later. What fails first near the coast is in the ",
+            },
+            { text: "coastal guide", href: "/guides/coastal-lighting-kerala" },
+            { text: ", and the ratings are explained in " },
+            { text: "IP rating for outdoor lights", href: "/guides/ip-rating-for-outdoor-lights" },
+            { text: "." },
+          ],
+        ],
+      },
+      {
+        h: "How does this apply room by room?",
+        paragraphs: [
+          [
+            {
+              text: "The living room centres the decorative piece on the seating; see ",
+            },
+            { text: "chandelier for a living room", href: "/guides/chandelier-for-living-room" },
+            { text: ". The bedroom keeps spots away from the pillow; see " },
+            { text: "bedroom lighting", href: "/guides/bedroom-lighting-design" },
+            { text: ". The kitchen puts task light in front of the cook, not behind; see " },
+            { text: "kitchen lighting", href: "/guides/kitchen-lighting-design" },
+            { text: ". A double-height void hangs from the top slab; see " },
+            { text: "staircase lighting", href: "/guides/staircase-lighting-design" },
+            { text: ". Whatever hangs from the ceiling has to be reachable for cleaning; the routine is in " },
+            { text: "how to clean a crystal chandelier", href: "/guides/how-to-clean-a-crystal-chandelier" },
+            { text: "." },
+          ],
+        ],
+      },
+      {
+        h: "Who draws the ceiling, and where do the fittings come from?",
+        paragraphs: [
+          [
+            {
+              text: "Elor writes the lighting plan, in DIALux where the room needs a calculation, and marks the anchors before the ceiling closes. ",
+            },
+            { text: "Book a lighting consultation", href: "/consultation" },
+            { text: " and start with a floor plan and a photo. Celestial Lights carries ready fittings for every room. A piece made for this ceiling is on " },
             { text: "custom chandeliers", href: "/customisation" },
-            { text: ". If the wiring and the ceiling are still open, start with the reflected ceiling plan: " },
-            { text: "book a lighting consultation", href: "/consultation" },
-            { text: " and the plan is drawn before anything is bought. Comparing showrooms first? The " },
+            { text: ", and the " },
             { text: "chandelier shop guide", href: "/guides/how-to-choose-a-chandelier-shop" },
-            { text: " lists what to ask." },
+            { text: " lists what to ask anyone else." },
           ],
         ],
       },
     ],
     shelf:
-      "Downlights, cove profiles, and a pendant that already exists are shelf fittings at Celestial Lights.",
+      "Ready fittings for every room, including the ceiling, are shelf pieces at Celestial Lights.",
     custom:
       "A piece made for this ceiling, or a plan for the whole room, is Elor’s work.",
     faqs: [
@@ -312,7 +394,15 @@ export const guideArticles: GuideArticle[] = [
       },
       {
         q: "Should the chandelier be the only light?",
-        a: "No. A single fitting in the middle leaves the walls dark and gives the room one level. Ambient, vertical, and task light stay in the plan. The chandelier sits on top of them.",
+        a: "No. A single fitting in the middle leaves the walls dark and gives the room one level. Cove, spots, and task light stay in the plan. The chandelier sits on top of them.",
+      },
+      {
+        q: "Can gypsum or POP hold a chandelier?",
+        a: "No. The anchor goes into the slab while the ceiling is open, and the false ceiling is built around it. The false-ceiling guide sets out the sequence.",
+      },
+      {
+        q: "Why can I see the bulb in my false-ceiling downlights?",
+        a: "The fitting is too shallow, or the lamp sits too close to the opening. A deeper baffle or a recessed lamp hides it. Check the depth each fitting needs before the ceiling height is fixed.",
       },
       {
         q: "Who draws the ceiling?",
@@ -323,75 +413,173 @@ export const guideArticles: GuideArticle[] = [
         a: "Ready fittings are at Celestial Lights. Anything the ceiling still needs, and that the collection does not have, is designed and made by Elor, usually in 3 to 6 weeks. Free installation is on the custom piece. Ready fittings come with installation support.",
       },
     ],
+    published: "2026-10-05",
+    modified: "2026-10-12",
   },
   {
     slug: "home-lighting-design",
-    metaTitle: "Home Lighting Design",
+    metaTitle: "Home Lighting Design for Kerala Houses: One Plan, Every Room",
     description:
-      "Home lighting design is one plan for every room, before the ceilings close. House lighting design is the same job. Shelf fittings are at Celestial Lights.",
+      "Home lighting design for Kerala houses: one plan for every room and the outside, drawn before the ceilings close, with consistent colour, separate circuits, fans placed, and fittings chosen for humidity and the coast.",
     crumb: "Home Lighting Design",
     eyebrow: "Technical",
     h1: "The whole house,",
     h1Em: "one lighting plan.",
     lede: [
       {
-        text: "Home lighting design is one drawing for every room, written while the ceilings can still change. A house lighting design is the same search and the same job.",
+        text: "Home lighting design for a Kerala house is one plan for every room and the outside, drawn while the ceilings and walls are still open. It places each light against the furniture, gives every room separate circuits, keeps one colour of light through the house, sets fans and anchors, and chooses outdoor and bathroom fittings for the monsoon and the coast.",
       },
     ],
     image: "/lifestyle/villa-night.jpg",
     imageAlt: "A house at night with cove light under the slabs, wall lights, and a lit path",
     sections: [
       {
-        h: "Close the wet rooms first",
+        h: "What is home lighting design?",
         paragraphs: [
           [
             {
-              text: "Kitchens, baths, and the stair lose their open ceiling earliest. Those points are marked first. Living, dining, and bedrooms follow, on the same family of colour, so the house does not change temperature as you walk. The three numbers are ",
+              text: "A drawing for the whole house that says where every light goes, which switch controls it, what it is fixed to, and what colour it is. House lighting design is the same search and the same job. It is different from choosing fittings room by room in a showroom, because it makes the decisions that have to be made before the electrician and the ceiling contractor finish: points, circuits, anchors, and depths.",
             },
-            { text: "Kelvin, CRI, and beam", href: "/guides/colour-of-light" },
-            { text: "." },
           ],
           [
             {
-              text: "Outside is part of the plan. The path, the porch, and the facade are separate from the rooms, and on the coast the fittings have to live in salt air. That is the ",
+              text: "The order we draw a plan in is set out in ",
             },
-            { text: "coastal guide", href: "/guides/coastal-lighting-kerala" },
-            { text: "." },
-          ],
-        ],
-      },
-      {
-        h: "Each room keeps its own page",
-        paragraphs: [
-          [
-            { text: "The living room", href: "/guides/chandelier-for-living-room" },
-            { text: " sizes the chandelier. " },
-            { text: "The ceiling", href: "/guides/ceiling-and-lighting-design" },
-            { text: " splits cove, spots, and the decorative piece. " },
-            { text: "The stair", href: "/guides/staircase-lighting-design" },
-            { text: " lights the tread and the void separately. " },
-            { text: "The bedroom", href: "/guides/bedroom-lighting-design" },
-            { text: " keeps the lamp out of the eyes. " },
-            { text: "The kitchen", href: "/guides/kitchen-lighting-design" },
-            { text: " gives the worktop its own circuit. The order we draw them in is " },
             { text: "how a lighting plan is built", href: "/guides/how-a-lighting-plan-is-built" },
             { text: "." },
           ],
         ],
       },
       {
-        h: "Made for the room, or planned first",
+        h: "When should a house lighting plan be drawn?",
         paragraphs: [
           [
-            { text: "When the stock sizes do not fit the house, send a picture and the measurements and Elor makes the piece. That process, with the timeline and what it costs, is on " },
-            { text: "custom chandeliers", href: "/customisation" },
-            { text: ". If the wiring and the ceiling are still open, start with the floor plans: " },
-            { text: "book a lighting consultation", href: "/consultation" },
-            { text: " and the plan is drawn before anything is bought. Comparing showrooms first? The " },
-            { text: "chandelier shop guide", href: "/guides/how-to-choose-a-chandelier-shop" },
-            { text: " lists what to ask. Verandas, sit-outs and the courtyard need a rated fitting. Which rating goes where is in the " },
-            { text: "IP rating guide", href: "/guides/ip-rating-for-outdoor-lights" },
+            {
+              text: "Before the wiring is concealed and before any false ceiling closes. In a typical build the conduits go into the slab and the walls early, so the plan is most useful when the structure is going up. Start from the architect's floor plans and the furniture layout. If the house is already finished, a plan still helps, but changes then mean chasing walls or opening ceilings.",
+            },
+          ],
+        ],
+      },
+      {
+        h: "Which rooms should be planned first?",
+        paragraphs: [
+          [
+            {
+              text: "The ones whose ceilings and walls close earliest: kitchens, bathrooms, and the stair. Mark those points first. Living, dining, and bedrooms follow. Outside comes into the same drawing, not as an afterthought, because the gate, the path, the car porch, the sit-out, and the facade need conduits laid before the paving and the plaster.",
+            },
+          ],
+        ],
+      },
+      {
+        h: "Why should the whole house use one colour of light?",
+        paragraphs: [
+          [
+            {
+              text: "So the house does not change temperature as you walk through it. A warm living room opening onto a cold white corridor and a bluish kitchen looks like three different houses. Agree the colour temperature and colour rendering once, then make exceptions on purpose, for example a task light over a work counter. The three numbers to agree are in ",
+            },
+            { text: "Kelvin, CRI, and beam", href: "/guides/colour-of-light" },
             { text: "." },
+          ],
+        ],
+      },
+      {
+        h: "How should circuits and switches be planned?",
+        paragraphs: [
+          [
+            {
+              text: "Each room gets layers on separate switches: a general light, task light where work happens, and any decorative piece on its own. Switches go where people enter and where they stop, including two-way switching on the stair and beside the bed. The fan has its own regulator and point. A house planned this way can be lit for an evening, for guests, or for a function without every light in the room coming on at once.",
+            },
+          ],
+        ],
+      },
+      {
+        h: "How should the outside of a Kerala house be lit?",
+        paragraphs: [
+          [
+            {
+              text: "As its own set of circuits, planned with the rooms. The gate and the compound wall tell a visitor where to go. The path needs low light at the edges so nobody trips, without lamps shining into the eyes of someone walking up it. The car porch and the sit-out are rooms in their own right in a Kerala house, used most evenings, and deserve the same warm colour as the living room inside. The facade can be lit softly from below or from the slab edges, but a little goes a long way.",
+            },
+          ],
+          [
+            {
+              text: "Put the outside lights on a timer or a sensor if you want them to come on reliably at dusk, and keep the sit-out on a switch by the door. Every one of these fittings faces the monsoon, so the rating and the finish matter more than the shape.",
+            },
+          ],
+        ],
+      },
+      {
+        h: "What changes in a Kerala house?",
+        paragraphs: [
+          [
+            {
+              text: "Fans run for much of the year, so every room's ceiling has to place the fan and the decorative light apart; see ",
+            },
+            { text: "chandelier with a ceiling fan", href: "/guides/chandelier-with-ceiling-fan" },
+            { text: ". Many houses have a double-height void by the stair or the living room, and the piece in it hangs from the top slab; see " },
+            { text: "staircase lighting", href: "/guides/staircase-lighting-design" },
+            { text: ". The monsoon keeps bathrooms, verandas, and courtyards damp for months, and the coast adds salt air." },
+          ],
+          [
+            {
+              text: "A nalukettu or a courtyard open to the sky treats its edges as outdoors, so the fittings there need a weather rating; see ",
+            },
+            { text: "IP rating for outdoor lights", href: "/guides/ip-rating-for-outdoor-lights" },
+            { text: ". Metal finishes near the sea need specifying, not choosing from a dry showroom; see the " },
+            { text: "coastal guide", href: "/guides/coastal-lighting-kerala" },
+            { text: ". If you want a material that suits a traditional house, the " },
+            { text: "wooden chandelier", href: "/guides/wooden-chandelier" },
+            { text: " and " },
+            { text: "brass chandelier", href: "/guides/brass-chandelier" },
+            { text: " guides cover what to ask for." },
+          ],
+        ],
+      },
+      {
+        h: "How is each room handled?",
+        paragraphs: [
+          [
+            { text: "The living room", href: "/guides/chandelier-for-living-room" },
+            { text: " sizes the chandelier to the seating. " },
+            { text: "The ceiling", href: "/guides/ceiling-and-lighting-design" },
+            { text: " splits cove, spots, and the decorative piece onto separate circuits. " },
+            { text: "The stair", href: "/guides/staircase-lighting-design" },
+            { text: " lights the tread and the void separately. " },
+            { text: "The bedroom", href: "/guides/bedroom-lighting-design" },
+            { text: " keeps the lamp out of the eyes. " },
+            { text: "The kitchen", href: "/guides/kitchen-lighting-design" },
+            { text: " gives the worktop its own light. Every decorative piece is fixed to the slab, not the false ceiling, as set out in the " },
+            { text: "false-ceiling guide", href: "/guides/false-ceiling-chandelier-weight" },
+            { text: ", and placed where someone can reach it to clean it; see " },
+            { text: "how to clean a crystal chandelier", href: "/guides/how-to-clean-a-crystal-chandelier" },
+            { text: "." },
+          ],
+        ],
+      },
+      {
+        h: "Can the plan be done if I am building from abroad?",
+        paragraphs: [
+          [
+            {
+              text: "The plan can start from drawings and video calls, which suits families building in Kerala while working elsewhere. Elor also designs lighting for sites elsewhere in India.",
+            },
+          ],
+        ],
+      },
+      {
+        h: "Should I buy ready fittings or have pieces made?",
+        paragraphs: [
+          [
+            {
+              text: "Most of a house is lit with ready fittings, and Celestial Lights carries ready fittings for every room. A piece made for a particular void, ceiling, or picture is designed and made by Elor; the process, timeline, and what drives the cost are on ",
+            },
+            { text: "custom chandeliers", href: "/customisation" },
+            { text: ", and budgeting is in the " },
+            { text: "pricing guide", href: "/guides/chandelier-pricing-guide" },
+            { text: ". To start the plan, " },
+            { text: "book a lighting consultation", href: "/consultation" },
+            { text: " with the floor plans. Comparing showrooms first? The " },
+            { text: "chandelier shop guide", href: "/guides/how-to-choose-a-chandelier-shop" },
+            { text: " lists what to ask." },
           ],
         ],
       },
@@ -406,6 +594,10 @@ export const guideArticles: GuideArticle[] = [
         a: "A plan that places the light in every room, names the circuits, and marks the anchors before the false ceilings close. House lighting design means the same thing.",
       },
       {
+        q: "When should I start the lighting plan for a new house?",
+        a: "While the structure is going up, before conduits are concealed and ceilings close. Start from the architect's floor plans and a furniture layout.",
+      },
+      {
         q: "Do I need a plan if I only want a chandelier?",
         a: "The chandelier still needs a point, a drop, and an anchor. The rest of the room needs its own layers, or the piece becomes the only light. Send the floor plan and a photo either way.",
       },
@@ -418,6 +610,8 @@ export const guideArticles: GuideArticle[] = [
         a: "Shelf fittings are at Celestial Lights. Elor writes the plan and makes the custom pieces, usually in 3 to 6 weeks. Free installation is on custom-designed lights. Ready fittings come with installation support. Warranty is up to 5 years.",
       },
     ],
+    published: "2026-10-05",
+    modified: "2026-10-12",
   },
   {
     slug: "staircase-lighting-design",
