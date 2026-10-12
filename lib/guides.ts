@@ -8,7 +8,8 @@ export interface Guide {
   imageAlt?: string;
   updated: string;
   /** ISO date for the sitemap. Omit on older guides; the sitemap keeps their dates. */
-  modified?: string;
+  /** ISO date the content last changed; must match `updated`. Feeds sitemap + schema. */
+  modified: string;
 }
 
 /**
@@ -125,6 +126,7 @@ export const guides: Guide[] = [
     tag: "Buying Guide",
     image: "/work/w3-showroom.jpg",
     updated: "19 August 2026",
+    modified: "2026-08-19",
   },
   {
     slug: "how-a-lighting-plan-is-built",
@@ -133,6 +135,7 @@ export const guides: Guide[] = [
     tag: "Technical",
     image: "/spaces/living.jpg",
     updated: "23 September 2026",
+    modified: "2026-09-23",
   },
   {
     slug: "why-downlights-glare",
@@ -141,6 +144,7 @@ export const guides: Guide[] = [
     tag: "Technical",
     image: "/spaces/living.jpg",
     updated: "23 September 2026",
+    modified: "2026-09-23",
   },
   {
     slug: "colour-of-light",
@@ -149,6 +153,7 @@ export const guides: Guide[] = [
     tag: "Technical",
     image: "/lifestyle/showroom-grand.jpg",
     updated: "23 September 2026",
+    modified: "2026-09-23",
   },
   {
     slug: "chandelier-size-calculator",
@@ -157,6 +162,7 @@ export const guides: Guide[] = [
     tag: "Technical",
     image: "/work/w1-cascade.jpg",
     updated: "20 August 2026",
+    modified: "2026-08-20",
   },
   {
     slug: "chandelier-with-ceiling-fan",
@@ -165,6 +171,7 @@ export const guides: Guide[] = [
     tag: "Technical",
     image: "/work/w4-lounge.jpg",
     updated: "20 August 2026",
+    modified: "2026-08-20",
   },
   {
     slug: "false-ceiling-chandelier-weight",
@@ -173,6 +180,7 @@ export const guides: Guide[] = [
     tag: "Technical",
     image: "/work/w2-corridor.jpg",
     updated: "20 August 2026",
+    modified: "2026-08-20",
   },
   {
     slug: "crystal-vs-glass-chandelier",
@@ -181,6 +189,7 @@ export const guides: Guide[] = [
     tag: "Buying Guide",
     image: "/lifestyle/showroom-grand.jpg",
     updated: "20 August 2026",
+    modified: "2026-08-20",
   },
   {
     slug: "coastal-lighting-kerala",
@@ -189,6 +198,7 @@ export const guides: Guide[] = [
     tag: "Technical",
     image: "/work/w5-garden.jpg",
     updated: "20 August 2026",
+    modified: "2026-08-20",
   },
   {
     slug: "how-to-choose-a-chandelier-shop",
@@ -197,6 +207,7 @@ export const guides: Guide[] = [
     tag: "Buying Guide",
     image: "/lifestyle/store-wall.jpg",
     updated: "24 August 2026",
+    modified: "2026-08-24",
   },
   {
     slug: "chandelier-pricing-guide",
@@ -205,5 +216,6 @@ export const guides: Guide[] = [
     tag: "Pricing",
     image: "/lifestyle/showroom-grand.jpg",
     updated: "19 August 2026",
+    modified: "2026-08-19",
   },
 ];

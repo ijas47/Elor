@@ -1,12 +1,11 @@
-"use client";
-
-import { motion, useReducedMotion } from "framer-motion";
-import type { ReactNode } from "react";
+import type { CSSProperties, ReactNode } from "react";
 
 /**
- * Cinematic title reveal. Splits a line into words that rise out from a
- * clipped mask, in sequence. The real text is passed as `lines` and rendered
- * in the DOM, so it's fully indexable, we animate presentation only.
+ * Cinematic title reveal. Each line rises out from a clipped mask, in
+ * sequence. Pure CSS keyframes (globals.css .hero-rise), so it starts at first
+ * paint instead of waiting for JS to hydrate, which was holding the hero
+ * headline (the home page LCP element) invisible for several seconds on mobile.
+ * Reduced motion disables the animation in the stylesheet.
  *
  * Use <i>…</i> inside a line to mark the italic gold accent word(s).
  */
@@ -18,8 +17,6 @@ interface Props {
 }
 
 export function HeroTitle({ lines, className = "", delay = 0.15 }: Props) {
-  const reduce = useReducedMotion();
-
   return (
     <h1 className={className} style={{ margin: 0 }}>
       {lines.map((line, i) => (
@@ -27,23 +24,13 @@ export function HeroTitle({ lines, className = "", delay = 0.15 }: Props) {
           key={i}
           style={{ display: "block", overflow: "hidden", paddingBottom: "0.06em" }}
         >
-          <motion.span
-            // useReducedMotion is false during SSR, so the transform below is
-            // applied as `initial` on the server. framer then refuses to animate
-            // transforms for reduced-motion users, which would park the line
-            // off-screen forever. globals.css releases it, keyed off this attr.
+          <span
             data-heroline=""
-            style={{ display: "block" }}
-            initial={reduce ? { opacity: 0 } : { y: "108%" }}
-            animate={reduce ? { opacity: 1 } : { y: "0%" }}
-            transition={{
-              duration: 1.05,
-              delay: delay + i * 0.12,
-              ease: [0.16, 1, 0.3, 1],
-            }}
+            className="hero-rise"
+            style={{ display: "block", animationDelay: `${delay + i * 0.12}s` } as CSSProperties}
           >
             {line}
-          </motion.span>
+          </span>
         </span>
       ))}
     </h1>
