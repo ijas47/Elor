@@ -34,10 +34,10 @@ export function StoreCityPage({ city }: { city: StoreCity }) {
     image: `${site.domain}${copy.heroImage}`,
     address: {
       "@type": "PostalAddress",
-      streetAddress: store.street,
+      ...(store.street ? { streetAddress: store.street } : {}),
       addressLocality: store.locality,
       addressRegion: store.region,
-      postalCode: store.postalCode,
+      ...(store.postalCode ? { postalCode: store.postalCode } : {}),
       addressCountry: "IN",
     },
     telephone: store.phone,
@@ -46,7 +46,7 @@ export function StoreCityPage({ city }: { city: StoreCity }) {
     url: `${site.domain}${path}`,
     hasMap: store.maps,
     parentOrganization: { "@type": "Organization", name: site.name, url: site.domain },
-    geo: { "@type": "GeoCoordinates", latitude: store.geo.lat, longitude: store.geo.lng },
+    ...(store.geo ? { geo: { "@type": "GeoCoordinates", latitude: store.geo.lat, longitude: store.geo.lng } } : {}),
     areaServed: { "@type": "City", name: store.city },
   };
 
