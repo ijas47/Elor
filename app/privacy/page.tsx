@@ -71,6 +71,12 @@ export default function Privacy() {
             <a href="https://policies.google.com/privacy">policies.google.com/privacy</a>. We do
             not use this for advertising.
           </p>
+          <p>
+            We also use Microsoft Clarity for anonymous usage analytics, such as where visitors
+            click and scroll, so we can improve the site. Microsoft processes that data under its
+            own policy, at{" "}
+            <a href="https://privacy.microsoft.com/privacystatement">privacy.microsoft.com</a>.
+          </p>
 
           <h2 className="h-md">Why we use it</h2>
           <p>
