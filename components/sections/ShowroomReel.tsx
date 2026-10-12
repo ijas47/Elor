@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import { Reveal } from "@/components/motion/Reveal";
 import styles from "./ShowroomReel.module.css";
 
@@ -12,6 +12,30 @@ const clips = [
 
 export function ShowroomReel() {
   const refs = useRef<(HTMLVideoElement | null)[]>([]);
+  const reelRef = useRef<HTMLDivElement>(null);
+  // Posters are set only as the reel approaches the viewport. As plain
+  // poster= attributes they were fetched at first load (~130 KB, Medium
+  // priority) and competed with the home hero image, the LCP element.
+  const [near, setNear] = useState(false);
+
+  useEffect(() => {
+    const el = reelRef.current;
+    if (!el || !("IntersectionObserver" in window)) {
+      setNear(true);
+      return;
+    }
+    const io = new IntersectionObserver(
+      (entries) => {
+        if (entries.some((e) => e.isIntersecting)) {
+          setNear(true);
+          io.disconnect();
+        }
+      },
+      { rootMargin: "1200px 0px" }
+    );
+    io.observe(el);
+    return () => io.disconnect();
+  }, []);
 
   useEffect(() => {
     if (!("IntersectionObserver" in window)) return;
@@ -35,7 +59,7 @@ export function ShowroomReel() {
   }, []);
 
   return (
-    <div className={styles.reel}>
+    <div ref={reelRef} className={styles.reel}>
       {clips.map((c, i) => (
         <Reveal key={c.src} delay={i * 0.08} className={styles.item}>
           <figure className={styles.figure}>
@@ -44,7 +68,7 @@ export function ShowroomReel() {
                 refs.current[i] = el;
               }}
               src={c.src}
-              poster={c.poster}
+              poster={near ? c.poster : undefined}
               muted
               loop
               playsInline
