@@ -115,7 +115,7 @@ export default function Collections() {
             {categories.map((c) => (
               <StaggerItem key={c.label}>
                 <div className="cat-tile">
-                  <h3>{c.label}</h3>
+                  <h2>{c.label}</h2>
                   <p>{c.note}</p>
                 </div>
               </StaggerItem>
@@ -130,7 +130,7 @@ export default function Collections() {
           <Stagger className="collection-grid">
             {pieces.map((p, i) => (
               <StaggerItem key={p.slug}>
-                <PieceCard piece={p} priority={i < 4} />
+                <PieceCard piece={p} priority={i < 4} headingLevel={2} />
               </StaggerItem>
             ))}
           </Stagger>

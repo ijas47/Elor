@@ -4,7 +4,15 @@ import type { Guide } from "@/lib/guides";
 
 // Same visual language as PieceCard (image, tag, hover-reveal), but an
 // internal Link to a guide page instead of an external shop handoff.
-export function GuideCard({ guide }: { guide: Guide }) {
+export function GuideCard({
+  guide,
+  headingLevel = 3,
+}: {
+  guide: Guide;
+  /** 2 on the guides index, where cards sit directly under the h1. */
+  headingLevel?: 2 | 3;
+}) {
+  const Heading = headingLevel === 2 ? "h2" : "h3";
   return (
     <Link className="piece-card" href={`/guides/${guide.slug}`}>
       <div className="piece-media">
@@ -18,7 +26,7 @@ export function GuideCard({ guide }: { guide: Guide }) {
       <span className="piece-tag">{guide.tag}</span>
       <div className="piece-body">
         <p className="piece-cat">Updated {guide.updated}</p>
-        <h3>{guide.title}</h3>
+        <Heading>{guide.title}</Heading>
         <div className="piece-reveal">
           <div>
             <p>{guide.dek}</p>

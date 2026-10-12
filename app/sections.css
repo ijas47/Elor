@@ -168,6 +168,7 @@
   color: var(--gold-deep);
   margin-bottom: 6px;
 }
+.piece-body h2,
 .piece-body h3 {
   font-size: 20px;
   color: #fff;
@@ -404,6 +405,7 @@
   gap: 30px;
   flex-wrap: wrap;
 }
+.online-banner h2,
 .online-banner h3 {
   font-size: 26px;
   margin-bottom: 8px;
@@ -529,6 +531,7 @@
   border-color: var(--gold-deep);
   background: var(--ink-3);
 }
+.cat-tile h2,
 .cat-tile h3 {
   font-size: 18px;
   margin-bottom: 6px;

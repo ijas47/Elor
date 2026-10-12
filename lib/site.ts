@@ -23,7 +23,7 @@ export const site = {
    * location and its call to action before anyone read them.
    */
   metaDescription:
-    "Lighting design anywhere in India, with our own fittings. We install custom lights and give installation support for everything else. Centres in Kannur, Calicut and Kochi.",
+    "Lighting design anywhere in India, with our own fittings. We install custom lights and support the install of the rest. Centres in Kannur, Calicut and Kochi.",
 
   // Elor uses ONE number for calls and WhatsApp: +91 88487 08529.
   // +91 99956 19470 is the Celestial Lights line and appears only on the

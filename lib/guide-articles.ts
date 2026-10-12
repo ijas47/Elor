@@ -47,7 +47,7 @@ export const guideArticles: GuideArticle[] = [
     slug: "chandelier-for-living-room",
     metaTitle: "Living Room Chandelier for Kerala Homes: Size, Fan, Ceiling",
     description:
-      "How to choose a living room chandelier for a Kerala home: size it to the seating, keep it apart from the fan, anchor it to the slab, and pick a material that suits the humidity.",
+      "How to choose a living room chandelier for a Kerala home: size it to the seating, keep it apart from the fan, anchor it to the slab, and suit it to humidity.",
     crumb: "Chandelier for a Living Room",
     eyebrow: "Buying guide",
     h1: "A living room chandelier",
@@ -237,9 +237,9 @@ export const guideArticles: GuideArticle[] = [
   },
   {
     slug: "ceiling-and-lighting-design",
-    metaTitle: "False Ceiling Lighting for Kerala Homes: Cove, Spots, Anchor",
+    metaTitle: "False Ceiling Lighting Design for Kerala",
     description:
-      "Ceiling and lighting design for Kerala homes: draw the furniture first, put cove, spots, and the chandelier on separate circuits, fix the anchor to the slab, and plan for fans and humidity before the gypsum closes.",
+      "False ceiling lighting design for Kerala homes: draw the furniture first, put cove, spots and the chandelier on separate circuits, and anchor it to the slab.",
     crumb: "Ceiling and Lighting Design",
     eyebrow: "Technical",
     h1: "Design the ceiling",
@@ -420,7 +420,7 @@ export const guideArticles: GuideArticle[] = [
     slug: "home-lighting-design",
     metaTitle: "Home Lighting Design for Kerala Houses: One Plan, Every Room",
     description:
-      "Home lighting design for Kerala houses: one plan for every room and the outside, drawn before the ceilings close, with consistent colour, separate circuits, fans placed, and fittings chosen for humidity and the coast.",
+      "Home lighting design for Kerala houses: one plan for every room and the outside, drawn before the ceilings close, with consistent colour and separate circuits.",
     crumb: "Home Lighting Design",
     eyebrow: "Technical",
     h1: "The whole house,",
@@ -617,7 +617,7 @@ export const guideArticles: GuideArticle[] = [
     slug: "staircase-lighting-design",
     metaTitle: "Staircase Lighting for Kerala Homes: Treads, Voids, Cascades",
     description:
-      "Staircase lighting design for Kerala homes: light each tread without glare, hang the double-height void from the slab, keep the fan and the cascade apart, and plan access for cleaning.",
+      "Staircase lighting design for Kerala homes: light each tread without glare, hang the double-height void from the slab, and keep the fan clear of the cascade.",
     crumb: "Staircase Lighting Design",
     eyebrow: "Technical",
     h1: "Light the tread.",
@@ -796,7 +796,7 @@ export const guideArticles: GuideArticle[] = [
     slug: "bedroom-lighting-design",
     metaTitle: "Bedroom Lighting for Kerala Homes: Fan, Reading Light, Calm",
     description:
-      "Bedroom lighting design for Kerala homes: keep bright lamps out of sight of the pillow, give reading light its own switch, keep the fan and the ceiling piece apart, and choose finishes for humidity.",
+      "Bedroom lighting design for Kerala homes: no bright lamp in sight of the pillow, reading light on its own switch, and the fan kept clear of the ceiling piece.",
     crumb: "Bedroom Lighting Design",
     eyebrow: "Technical",
     h1: "Keep the lamp",
@@ -996,7 +996,7 @@ export const guideArticles: GuideArticle[] = [
     slug: "kitchen-lighting-design",
     metaTitle: "Kitchen Lighting for Kerala Homes: Worktop, Island, Steam",
     description:
-      "Kitchen lighting design for Kerala homes: light the worktop on its own circuit, hang the island pendant separately, avoid shadows from overhead lights, and choose finishes that survive steam and humidity.",
+      "Kitchen lighting design for Kerala homes: the worktop on its own circuit, the island pendant switched apart, no overhead shadows, finishes that survive steam.",
     crumb: "Kitchen Lighting Design",
     eyebrow: "Technical",
     h1: "The worktop gets",
@@ -1183,7 +1183,7 @@ export const guideArticles: GuideArticle[] = [
     slug: "wooden-chandelier",
     metaTitle: "Wooden Chandelier for Kerala Homes: Timber, Finish, Fixing",
     description:
-      "How to choose a wooden chandelier for a Kerala home: match it to the room and the joinery, ask how the timber and finish are specified for humidity, size it to the room, and fix it to the slab.",
+      "How to choose a wooden chandelier for a Kerala home: match it to the joinery, ask how timber and finish are specified for humidity, and fix it to the slab.",
     crumb: "Wooden Chandelier",
     eyebrow: "Buying guide",
     h1: "Wood, where the",
@@ -1370,7 +1370,7 @@ export const guideArticles: GuideArticle[] = [
     slug: "brass-chandelier",
     metaTitle: "Brass Chandelier for Kerala Homes: Finish, Size, Fixing",
     description:
-      "How to choose a brass chandelier for a Kerala home: know whether it is solid brass, plated, or painted, specify the finish for the room's humidity, size it to the furniture, and fix it to the slab.",
+      "How to choose a brass chandelier for a Kerala home: solid, plated or painted, a finish specified for humidity, sized to the furniture and fixed to the slab.",
     crumb: "Brass Chandelier",
     eyebrow: "Buying guide",
     h1: "Brass has to survive",
@@ -1646,7 +1646,7 @@ export const guideArticles: GuideArticle[] = [
     slug: "ip-rating-for-outdoor-lights",
     metaTitle: "IP Rating for Outdoor Lights in Kerala",
     description:
-      "What IP rating outdoor lights need: IP44 for a covered sit-out, IP65 for rain-exposed walls and courtyards, IP66/67 for poolside and ground-recessed. Kerala examples.",
+      "What IP rating outdoor lights need: IP44 for a covered sit-out, IP65 for rain-exposed walls, IP66/67 for poolside and ground-recessed. With Kerala examples.",
     crumb: "IP Rating for Outdoor Lights",
     eyebrow: "Technical",
     h1: "Read the second digit,",

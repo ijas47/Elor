@@ -47,7 +47,7 @@ export default function Guides() {
           <Stagger className="collection-grid">
             {guides.map((g) => (
               <StaggerItem key={g.slug}>
-                <GuideCard guide={g} />
+                <GuideCard guide={g} headingLevel={2} />
               </StaggerItem>
             ))}
           </Stagger>

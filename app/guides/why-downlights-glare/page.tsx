@@ -132,7 +132,7 @@ export default function DownlightGlareGuide() {
           <Stagger className="register">
             {checks.map((item) => (
               <StaggerItem key={item.h} className="register-row">
-                <h3>{item.h}</h3>
+                <h2>{item.h}</h2>
                 <p>{item.p}</p>
               </StaggerItem>
             ))}
