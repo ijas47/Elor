@@ -30,11 +30,11 @@ const materials = [
     p: "Glass refracts less than crystal, so it glows rather than sparkles. What it offers instead is form: colour, organic shapes and visible hand-work that crystal's faceted geometry cannot do. Lighter than crystal, more forgiving to clean, and it reads as contemporary where crystal reads as formal.",
   },
   {
-    h: "Acrylic: light, safe, and honest about what it is",
+    h: "Acrylic: light and shatter-safe",
     p: "A fraction of the weight and cost, and it does not shatter. Genuinely the right answer for a child's room, a high ceiling that is hard to service, a rental, or a false ceiling that cannot take a slab anchor. It will not fool anyone standing under it, and it yellows over years under strong UV, so keep it away from a west-facing window.",
   },
   {
-    h: "Metal and mixed media: structure as the statement",
+    h: "Metal and mixed media",
     p: "Brass, stainless, powder-coated steel and blackened iron, often with LED integrated rather than lamped. The lightest visual language of the four and the most durable. Where crystal is about the light it throws, metal is about the shape it draws in the air, which makes it the usual choice for a modern interior.",
   },
 ];
@@ -58,7 +58,7 @@ const faqs = [
   },
   {
     q: "Does crystal actually give more light than glass?",
-    a: "Not more light, but differently distributed. The same lamp behind crystal throws sharp points and refracted patterns across walls and ceiling; behind glass it produces a softer, more even wash. Choose crystal for drama and glass for ambience. The lumens are set by the lamp, not the material.",
+    a: "Crystal does not add light. It changes how the light is spread. The same lamp behind crystal throws sharp points and refracted patterns across walls and ceiling; behind glass it produces a softer, more even wash. Choose crystal for drama and glass for ambience. The lumens are set by the lamp, not the material.",
   },
   {
     q: "What do the different materials cost?",

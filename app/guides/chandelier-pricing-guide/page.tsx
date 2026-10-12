@@ -35,15 +35,15 @@ const factors: { icon: IconName; h: string; p: string }[] = [
   { icon: "ruler", h: "Size & drop", p: "A 24-inch flush mount and an 8-foot duplex cascade are different fabrication jobs, not different sizes of the same job. Scale is the single biggest driver." },
   { icon: "supplier", h: "Material", p: "Crystal, hand-blown glass, brass and marble all price differently, and so does whether a material is stocked or sourced specially for your piece." },
   { icon: "spark", h: "Fabrication complexity", p: "A single-tier ring costs less to build than a multi-layer cascade with hand-set crystal or custom metalwork. Complexity is time, and time is cost." },
-  { icon: "shield", h: "Installation & site conditions", p: "Custom-designed lights include free installation. For ready fittings, ceiling height, mounting and site access shape the installation support, confirmed at consultation rather than guessed from a photo." },
+  { icon: "shield", h: "Installation & site conditions", p: "We install custom lights and give installation support for everything else. For ready fittings, ceiling height, mounting and site access shape the installation support, confirmed at consultation rather than guessed from a photo." },
 ];
 
 const faqs = [
-  { q: "Is the ready-collection price the final price?", a: "Yes, for ready pieces bought as shown. Delivery is quoted separately based on your location. Ready pieces come with installation support, not free installation." },
+  { q: "Is the ready-collection price the final price?", a: "Yes, for ready pieces bought as shown. Delivery is quoted separately based on your location. We install custom lights and give installation support for everything else." },
   { q: "How much does a custom chandelier typically add over a ready piece?", a: "It depends entirely on the design, there is no fixed multiplier. A custom piece can cost about the same as a large ready piece, or considerably more, depending on material and complexity. You get a firm number before committing, not an estimate." },
   { q: "Do you charge for the design and quote itself?", a: "No. The consultation, design direction and firm quote are free. You only pay once you approve the design." },
-  { q: "Is installation included in the quote?", a: "Custom-designed lights include free installation. Ready fittings and everything else come with installation support, arranged with the quote so you know what is covered before you order." },
-  { q: "Do prices differ between Kannur, Kochi and Kozhikode?", a: "Product pricing is the same across all three stores and pan-India delivery. Installation support for ready pieces can vary with site access and distance from the nearest store. Custom-designed lights include free installation." },
+  { q: "Is installation included in the quote?", a: "We install custom lights and give installation support for everything else., arranged with the quote so you know what is covered before you order." },
+  { q: "Do prices differ between Kannur, Kochi and Kozhikode?", a: "Product pricing is the same across all three stores and pan-India delivery. Installation support for ready pieces can vary with site access and distance from the nearest store. We install custom lights and give installation support for everything else." },
 ];
 
 const articleSchema = {
@@ -134,9 +134,8 @@ export default function ChandelierPricingGuide() {
             Figures reflect the current Celestial Lights ready-collection
             range across materials including crystal, marble, glass and
             brass. Ready pieces ship faster than a bespoke commission,
-            because nothing has to be designed or fabricated first. They
-            come with installation support. Free installation applies to
-            custom-designed lights.
+            because nothing has to be designed or fabricated first.
+            We install custom lights and give installation support for everything else.
           </p>
           <p className="form-note" style={{ marginTop: 8 }}>
             These bands are also published as a plain-text file at{" "}

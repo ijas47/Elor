@@ -49,7 +49,7 @@ const faqs = [
   },
   {
     q: "Why does my chandelier rattle when the fan is on?",
-    a: "Moving air is catching hanging crystal or glass drops and swinging them against each other. It means the fixture is inside the fan's airflow, not just outside the blade circle. Either move the fixture further out, or choose a piece with fixed rather than freely hanging elements.",
+    a: "Moving air is catching hanging crystal or glass drops and swinging them against each other. It means the fixture is inside the fan's airflow, even though it clears the blade circle. Either move the fixture further out, or choose a piece with fixed rather than freely hanging elements.",
   },
   {
     q: "Can I run a chandelier off the fan's existing wiring?",

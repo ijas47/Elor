@@ -53,7 +53,7 @@ const criteria = [
 const faqs = [
   {
     q: "What's the difference between a custom chandelier shop and one that just sells ready-made fixtures?",
-    a: "A custom shop has its own design and fabrication capability. It can build a fixture to a size, shape or material you specify, not just sell what's already in stock. A ready-made shop imports or wholesales a catalogue and offers finish or size variants within it. Both are legitimate, but they answer different needs: ask directly whether fabrication happens in-house.",
+    a: "A custom shop has its own design and fabrication capability. It can build a fixture to a size, shape or material you specify, beyond what's already in stock. A ready-made shop imports or wholesales a catalogue and offers finish or size variants within it. Both are legitimate, but they answer different needs: ask directly whether fabrication happens in-house.",
   },
   {
     q: "Should I buy a chandelier online without seeing it in person first?",
@@ -61,7 +61,7 @@ const faqs = [
   },
   {
     q: "Is installation usually included when you buy a chandelier?",
-    a: "It varies by shop, and this is one of the most important questions to ask upfront. Some quote the piece and installation together; others sell the fixture only and leave you to arrange an electrician. At Elor, custom-designed lights include free installation. Ready fittings and everything else come with installation support. Get this confirmed in writing before ordering, since a badly installed fixture is a safety issue, not just a cosmetic one.",
+    a: "It varies by shop, and this is one of the most important questions to ask upfront. Some quote the piece and installation together; others sell the fixture only and leave you to arrange an electrician. At Elor, we install custom lights and give installation support for everything else. Get this confirmed in writing before ordering. A badly installed fixture is a safety issue.",
   },
   {
     q: "How do I know if a chandelier warranty is actually worth anything?",
@@ -181,7 +181,7 @@ export default function ChooseAShopGuide() {
             <ul className="check-list" style={{ marginTop: 28 }}>
               <li><span className="tick">✓</span>We fabricate in-house. Custom pieces are designed and built to your ceiling, not selected from a fixed catalogue.</li>
               <li><span className="tick">✓</span>Three physical showrooms in Kerala, plus video consultation if you&rsquo;re elsewhere.</li>
-              <li><span className="tick">✓</span>Custom-designed lights include free installation. Ready fittings come with installation support.</li>
+              <li><span className="tick">✓</span>We install custom lights and give installation support for everything else.</li>
               <li><span className="tick">✓</span>Up to 5-year warranty, confirmed in writing at consultation.</li>
               <li><span className="tick">✓</span>We plan around false ceilings, shared fan points and non-standard ceilings as a normal part of the process. See the <a href="/guides/false-ceiling-chandelier-weight">false ceiling guide</a> and <a href="/guides/chandelier-with-ceiling-fan">ceiling fan guide</a>.</li>
               <li><span className="tick">✓</span>Firm pricing after design approval, before fabrication starts.</li>

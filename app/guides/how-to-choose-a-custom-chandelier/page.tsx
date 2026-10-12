@@ -22,7 +22,7 @@ const spaces = [
   },
   {
     h: "Duplex stairwells & double-height voids",
-    p: "Drop matters more than diameter. A cascade or tiered piece is built to the exact vertical distance between floors, and is viewed from multiple angles and heights, not just from directly below.",
+    p: "Drop matters more than diameter. A cascade or tiered piece is built to the exact vertical distance between floors, and is viewed from multiple angles and heights, including from directly below.",
   },
   {
     h: "Hotel lobbies & banquet halls",

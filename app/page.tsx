@@ -50,7 +50,7 @@ export default function Home() {
               <Reveal delay={0.06}><h2 className="h-lg">Start with<br />the room.</h2></Reveal>
             </div>
             <Reveal delay={0.12}>
-              <p className="lede">The ceiling is about to close, and nobody has decided how the room should feel at night. Send the drawing or the picture. We write the plan, supply what we already make, and build what the room still needs. The centres are in Kerala. We design for any site in India. Custom-designed lights include free installation. Everything else comes with installation support. <Link href="/india">How a project outside Kerala works.</Link></p>
+              <p className="lede">The ceiling is about to close, and nobody has decided how the room should feel at night. Send the drawing or the picture. We write the plan, supply what we already make, and build what the room still needs. The centres are in Kerala. We design for any site in India. We install custom lights and give installation support for everything else. <Link href="/india">How a project outside Kerala works.</Link></p>
             </Reveal>
           </div>
           <Stagger className="spaces">
@@ -109,7 +109,7 @@ export default function Home() {
                   <li><span className="tick">✓</span>Chandeliers, cascades, cluster pendants and statement ceiling pieces, built to order</li>
                   <li><span className="tick">✓</span>Any reference welcome: an image, a drawing, a render, or a fixture you can&rsquo;t find anywhere</li>
                   <li><span className="tick">✓</span>Made to your exact drop and diameter, so it fits the void it was designed for</li>
-                  <li><span className="tick">✓</span>Free installation on the custom-designed light</li>
+                  <li><span className="tick">✓</span>We install the custom light</li>
                   <li><span className="tick">✓</span>One piece, made once. Nobody else in your city has the same light</li>
                 </ul>
               </Reveal>
@@ -143,7 +143,7 @@ export default function Home() {
             {[
               { icon: "render", h: "Work from the render", p: "Send the visual you presented to your client. We reverse-engineer it into a buildable fixture, confirm load and drop against your section, and quote before you commit.", eg: "Render · Elevation · Mood image" },
               { icon: "drawing", h: "Protect the design intent", p: "No more substituting the nearest catalogue item and watching the scheme lose its centrepiece. It gets built the way it was drawn, at the scale the space needs.", eg: "Made to drawing · No substitutions" },
-              { icon: "supplier", h: "One accountable supplier", p: "Design, fabrication and delivery sit with us. Custom-designed lights include free installation. The rest of the schedule comes with installation support, so your client has one number to call.", eg: "Single point · Site coordination" },
+              { icon: "supplier", h: "One accountable supplier", p: "Design, fabrication and delivery sit with us. We install custom lights and give installation support for everything else, so your client has one number to call.", eg: "Single point · Site coordination" },
             ].map((c) => (
               <StaggerItem key={c.h}>
                 <div className="pillar">
@@ -288,7 +288,7 @@ export default function Home() {
                   <li><span className="tick">✓</span>A lighting designer studies your floor plan, interiors and how you use each room</li>
                   <li><span className="tick">✓</span>You get a fixture-by-fixture plan: positions, colour temperature and dimming zones</li>
                   <li><span className="tick">✓</span>Everything supplied from Elor&rsquo;s own range, so quality and pricing stay in our control</li>
-                  <li><span className="tick">✓</span>Custom-designed lights include free installation. Ready fittings come with installation support, under one warranty</li>
+                  <li><span className="tick">✓</span>We install custom lights and give installation support for everything else.</li>
                 </ul>
               </Reveal>
               <Reveal delay={0.16}>
@@ -308,7 +308,7 @@ export default function Home() {
               { h: "Consult", p: "Free first session at your site, in any store, or on a video call. We listen before we recommend." },
               { h: "Design", p: "A tailored lighting plan with layouts, moods, fixture selections and a transparent estimate." },
               { h: "Supply", p: "Fixtures from our own inventory. See them glowing in-store before you commit. Delivered pan-India." },
-              { h: "Install", p: "Free installation on custom-designed lights. Installation support for ready fittings and everything else. One point of contact, one warranty." },
+              { h: "Install", p: "We install custom lights and give installation support for everything else. One point of contact, one warranty." },
             ].map((s) => (
               <StaggerItem key={s.h}>
                 <div className="j-step"><h3>{s.h}</h3><p>{s.p}</p></div>

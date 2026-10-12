@@ -50,14 +50,13 @@ fabrication is quoted per design after a free consultation.
 
 Pricing drivers, in order of impact: size and drop; material (crystal,
 hand-blown glass, brass, marble); fabrication complexity. For ready fittings,
-installation support and site conditions are arranged with the order.
-Custom-designed lights include free installation.
+site conditions are arranged with the order.
+We install custom lights and give installation support for everything else.
 
 ## Services
 
 - Design consultation: free (in store, at your site, or over video)
-- Custom-designed lights: free installation
-- Ready fittings and everything else: installation support, arranged with the order
+- We install custom lights and give installation support for everything else.
 - Delivery: pan-India
 - Warranty: up to 5 years
 
@@ -66,8 +65,8 @@ Custom-designed lights include free installation.
 - Product pricing is identical across all three stores and pan-India delivery.
 - Installation support for ready pieces varies with site access and distance from the nearest store.
 - Ready-collection prices are final for pieces bought as shown. Delivery is
-  quoted separately. Those pieces come with installation support, not free installation.
-- Custom-designed lights include free installation.
+  quoted separately. Those pieces come with installation support.
+- We install custom lights and give installation support for everything else.
 
 ## Where to buy
 

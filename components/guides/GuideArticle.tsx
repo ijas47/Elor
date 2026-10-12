@@ -222,7 +222,7 @@ export function GuideArticleView({ article }: { article: GuideArticle }) {
               </li>
               <li>
                 <span className="tick">✓</span>
-                Custom-designed lights include free installation, and are usually ready in 3 to 6 weeks. A ready fitting comes with installation support. Warranty is up to 5 years.
+                Custom pieces are usually ready in 3 to 6 weeks. We install custom lights and give installation support for everything else. Warranty is up to 5 years.
               </li>
               <li>
                 <span className="tick">✓</span>

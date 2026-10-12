@@ -23,7 +23,7 @@ export const metadata: Metadata = {
 const zones = [
   {
     h: "Within about 500 m of open sea",
-    p: "The harshest band. Salt spray reaches the building directly and is carried inside by ventilation. Untreated brass, mild steel and iron will show pitting within a couple of seasons regardless of how they are finished at the factory. Specify marine-grade stainless, crystal, glass or acrylic, and check every screw and chain link, not just the visible body.",
+    p: "The harshest band. Salt spray reaches the building directly and is carried inside by ventilation. Untreated brass, mild steel and iron will show pitting within a couple of seasons regardless of how they are finished at the factory. Specify marine-grade stainless, crystal, glass or acrylic, and check every screw and chain link as well as the visible body.",
   },
   {
     h: "Roughly 500 m to 5 km inland",

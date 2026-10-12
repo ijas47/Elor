@@ -41,16 +41,16 @@ const workWith = [
   },
   {
     h: "One warranty, one point of contact",
-    p: "Up to 5-year warranty on fabricated pieces. Custom-designed lights include free installation by our crew. Ready fittings and the rest of a schedule come with installation support, so the warranty is not caught between a fixture from one vendor and an installer from another.",
+    p: "Up to 5-year warranty on fabricated pieces. We install custom lights and give installation support for everything else, so the warranty is not caught between a fixture from one vendor and an installer from another.",
   },
 ];
 
 const projectTypes = [
   "Hotels & hospitality: lobby centrepieces, corridor and room lighting, facade wash",
   "Restaurants & cafés: mood-driven dining light, matched fixtures across multiple outlets",
-  "Retail & showrooms: display lighting specified to flatter the merchandise, not generic",
+  "Retail & showrooms: display lighting specified to flatter the merchandise",
   "Residential villas & duplexes: stairwell cascades, double-height statement pieces",
-  "Offices & clinics: glare-free ambient light built to a lighting plan, not off-the-shelf",
+  "Offices & clinics: glare-free ambient light built to a lighting plan",
 ];
 
 const faqs = [
