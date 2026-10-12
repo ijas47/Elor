@@ -119,7 +119,7 @@ export default function RootLayout({
       <body className="grain">
         <Script
           src={`https://www.googletagmanager.com/gtag/js?id=${site.gaMeasurementId}`}
-          strategy="afterInteractive"
+          strategy="lazyOnload"
         />
         <Script id="gtag" strategy="afterInteractive">
           {`window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','${site.gaMeasurementId}');`}

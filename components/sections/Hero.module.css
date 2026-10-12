@@ -180,6 +180,14 @@
   height: 46px;
   background: var(--gold);
   display: block;
+  /* was a framer-motion loop; same 2.2s grow-from-top, shrink-to-bottom */
+  animation: scrollLine 2.2s ease-in-out infinite;
+}
+@keyframes scrollLine {
+  0% { transform: scaleY(0); transform-origin: top; }
+  50% { transform: scaleY(1); transform-origin: top; }
+  50.01% { transform: scaleY(1); transform-origin: bottom; }
+  100% { transform: scaleY(0); transform-origin: bottom; }
 }
 
 @media (max-width: 900px) {

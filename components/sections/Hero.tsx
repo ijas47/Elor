@@ -1,15 +1,8 @@
-"use client";
-
-import { useRef } from "react";
 import Image from "next/image";
-import {
-  motion,
-  useScroll,
-  useTransform,
-  type MotionValue,
-} from "framer-motion";
 import { MagneticButton } from "@/components/motion/MagneticButton";
 import { HeroTitle } from "@/components/motion/HeroTitle";
+import { HeroScroll } from "./HeroScroll";
+import { sceneOpacity, sceneScale, copyOpacity, copyY, tickOpacity } from "./heroTimeline";
 import styles from "./Hero.module.css";
 
 /**
@@ -36,6 +29,12 @@ import styles from "./Hero.module.css";
  *
  * Every headline is in the DOM at build time and only its presentation
  * animates, so the pinning costs nothing in SEO.
+ *
+ * The hero is a server component: the first scene, the LCP image, is plain
+ * HTML that paints without any JS. The scroll scrub is a small driver
+ * (heroScroll.ts) that is dynamically imported after hydration and only
+ * updates inline opacity/transform, starting from the same progress-0 values
+ * rendered here, so attaching it changes nothing on screen.
  *
  * Reduced motion is handled entirely in CSS, not by branching here: rendering a
  * different tree for it would not match what the server sent and hydration
@@ -79,124 +78,42 @@ const STAGES = [
 ];
 
 const N = STAGES.length;
-const SEG = 1 / N;
+const TRACK_ID = "home-hero-track";
 
-/**
- * Scenes cross-dissolve: each image fades out over the same window the next one
- * fades in, centred on the boundary between their segments, so only ever two
- * layers are mixing.
- */
-function useSceneOpacity(p: MotionValue<number>, i: number) {
-  return useTransform(
-    p,
-    [i * SEG - 0.06, i * SEG + 0.01, (i + 1) * SEG - 0.06, (i + 1) * SEG + 0.01],
-    // the first scene is already on screen, the last one has to stay
-    [i === 0 ? 1 : 0, 1, 1, i === N - 1 ? 1 : 0]
-  );
-}
-
-/**
- * Copy does NOT cross-dissolve. Two superimposed headlines are unreadable, so
- * each one finishes fading out exactly where the next starts fading in.
- */
-function useCopyOpacity(p: MotionValue<number>, i: number) {
-  return useTransform(
-    p,
-    [i * SEG - 0.04, i * SEG + 0.03, (i + 1) * SEG - 0.09, (i + 1) * SEG - 0.04],
-    [i === 0 ? 1 : 0, 1, 1, i === N - 1 ? 1 : 0]
-  );
-}
-
-function StageMedia({
-  stage,
-  i,
-  progress,
-}: {
-  stage: (typeof STAGES)[number];
-  i: number;
-  progress: MotionValue<number>;
-}) {
-  const opacity = useSceneOpacity(progress, i);
-  // A gentle push-in so the scene never sits still. Kept small on purpose: the
-  // source photos are already cropped to a wide band, and a heavier zoom on top
-  // of that reads as a blown-up snapshot rather than a wide shot.
-  const scale = useTransform(progress, [i * SEG - SEG, (i + 1) * SEG], [1.06, 1.0]);
-
-  return (
-    <motion.div className={styles.layer} style={{ opacity }} aria-hidden={i > 0}>
-      <motion.div className={styles.layerInner} style={{ scale }}>
-        <Image
-          src={stage.src}
-          alt={stage.alt}
-          fill
-          priority={i === 0}
-          sizes="100vw"
-          className={styles.img}
-        />
-      </motion.div>
-    </motion.div>
-  );
-}
-
-function StageCopy({
-  stage,
-  i,
-  progress,
-}: {
-  stage: (typeof STAGES)[number];
-  i: number;
-  progress: MotionValue<number>;
-}) {
-  const opacity = useCopyOpacity(progress, i);
-  const y = useTransform(progress, [i * SEG - 0.05, (i + 1) * SEG - 0.03], [26, -26]);
-
-  return (
-    <motion.div
-      className={styles.copy}
-      style={{ opacity, y }}
-      aria-hidden={i > 0}
-      // stages that are faded out must not catch clicks or the tab order
-      inert={i > 0}
-    >
-      {i === 0 ? (
-        <HeroTitle className={`h-xl ${styles.title}`} lines={stage.lines} />
-      ) : (
-        <p className={`h-xl ${styles.title}`}>
-          {stage.lines.map((l, k) => (
-            <span key={k} style={{ display: "block" }}>
-              {l}
-            </span>
-          ))}
-        </p>
-      )}
-      <p className={`lede ${styles.lede}`}>{stage.lede}</p>
-    </motion.div>
-  );
-}
-
-function Tick({ i, progress }: { i: number; progress: MotionValue<number> }) {
-  const active = useTransform(
-    progress,
-    [i * SEG - SEG * 0.3, i * SEG + SEG * 0.2, (i + 1) * SEG - SEG * 0.2, (i + 1) * SEG + SEG * 0.3],
-    [0.22, 1, 1, 0.22]
-  );
-  return <motion.span className={styles.tick} style={{ opacity: active }} />;
-}
+// first-frame (scroll progress 0) values, identical to what the driver computes
+const P0 = 0;
 
 export function Hero() {
-  const ref = useRef<HTMLDivElement>(null);
-  const { scrollYProgress } = useScroll({
-    target: ref,
-    offset: ["start start", "end end"],
-  });
-  const cueOpacity = useTransform(scrollYProgress, [0, 0.06], [1, 0]);
-
   return (
-    <div ref={ref} className={styles.track} style={{ height: `${N * 100}svh` }}>
+    <div id={TRACK_ID} className={styles.track} style={{ height: `${N * 100}svh` }}>
       <section className={`${styles.hero} ${styles.pinned}`}>
         <div className={styles.media}>
           {STAGES.map((s, i) => (
-            <StageMedia key={s.src} stage={s} i={i} progress={scrollYProgress} />
+            <div
+              key={s.src}
+              data-hero-layer=""
+              className={styles.layer}
+              style={{ opacity: sceneOpacity(P0, i) }}
+              aria-hidden={i > 0}
+            >
+              <div
+                data-hero-layer-inner=""
+                className={styles.layerInner}
+                style={{ transform: `scale(${sceneScale(P0, i)})` }}
+              >
+                {/* A gentle push-in so the scene never sits still. Kept small
+                    on purpose: the photos are already cropped to a wide band. */}
+                <Image
+                  src={s.src}
+                  alt={s.alt}
+                  fill
+                  priority={i === 0}
+                  fetchPriority={i === 0 ? "high" : undefined}
+                  sizes="100vw"
+                  className={styles.img}
+                />
+              </div>
+            </div>
           ))}
           <div className={styles.scrim} />
           <div className={styles.vignette} />
@@ -205,7 +122,28 @@ export function Hero() {
         <div className={`wrap ${styles.inner}`}>
           <div className={styles.stack}>
             {STAGES.map((s, i) => (
-              <StageCopy key={s.src} stage={s} i={i} progress={scrollYProgress} />
+              <div
+                key={s.src}
+                data-hero-copy=""
+                className={styles.copy}
+                style={{ opacity: copyOpacity(P0, i), transform: `translateY(${copyY(P0, i)}px)` }}
+                aria-hidden={i > 0}
+                // stages that are faded out must not catch clicks or the tab order
+                inert={i > 0}
+              >
+                {i === 0 ? (
+                  <HeroTitle className={`h-xl ${styles.title}`} lines={s.lines} />
+                ) : (
+                  <p className={`h-xl ${styles.title}`}>
+                    {s.lines.map((l, k) => (
+                      <span key={k} style={{ display: "block" }}>
+                        {l}
+                      </span>
+                    ))}
+                  </p>
+                )}
+                <p className={`lede ${styles.lede}`}>{s.lede}</p>
+              </div>
             ))}
           </div>
 
@@ -229,19 +167,16 @@ export function Hero() {
 
         <div className={styles.rail} aria-hidden>
           {STAGES.map((s, i) => (
-            <Tick key={s.src} i={i} progress={scrollYProgress} />
+            <span key={s.src} data-hero-tick="" className={styles.tick} style={{ opacity: tickOpacity(P0, i) }} />
           ))}
         </div>
 
-        <motion.div className={styles.scroll} style={{ opacity: cueOpacity }}>
+        <div data-hero-cue="" className={styles.scroll} style={{ opacity: 1 }}>
           <span>Scroll</span>
-          <motion.span
-            className={styles.scrollLine}
-            animate={{ scaleY: [0, 1, 0], transformOrigin: ["top", "top", "bottom"] }}
-            transition={{ duration: 2.2, repeat: Infinity, ease: "easeInOut" }}
-          />
-        </motion.div>
+          <span className={styles.scrollLine} />
+        </div>
       </section>
+      <HeroScroll trackId={TRACK_ID} />
     </div>
   );
 }
