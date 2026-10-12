@@ -9,18 +9,19 @@
 // so unsafe-eval stays off the live site. Without it, `next dev` never
 // hydrates and the consultation form falls through to a plain navigation.
 const googleTag = "https://www.googletagmanager.com https://www.google-analytics.com https://*.google-analytics.com https://*.analytics.google.com";
+const clarity = "https://*.clarity.ms https://c.bing.com";
 const scriptSrc =
   process.env.NODE_ENV === "development"
-    ? `script-src 'self' 'unsafe-inline' 'unsafe-eval' ${googleTag}`
-    : `script-src 'self' 'unsafe-inline' ${googleTag}`;
+    ? `script-src 'self' 'unsafe-inline' 'unsafe-eval' ${googleTag} ${clarity}`
+    : `script-src 'self' 'unsafe-inline' ${googleTag} ${clarity}`;
 
 const csp = [
   "default-src 'self'",
   scriptSrc,
   "style-src 'self' 'unsafe-inline'",
-  "img-src 'self' data: https://www.google-analytics.com https://www.googletagmanager.com",
+  "img-src 'self' data: https://www.google-analytics.com https://www.googletagmanager.com https://*.clarity.ms https://c.bing.com",
   "font-src 'self'",
-  `connect-src 'self' ${googleTag} https://formsubmit.co`,
+  `connect-src 'self' ${googleTag} ${clarity} https://formsubmit.co`,
   "object-src 'none'",
   "base-uri 'self'",
   "form-action 'self'",
