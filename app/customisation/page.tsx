@@ -11,7 +11,7 @@ import { Icon } from "@/components/ui/Icon";
 export const metadata: Metadata = {
   title: "Custom Chandeliers Made to Your Design",
   description:
-    "Send a photo, render or sketch. We design and fabricate the chandelier to match, and we install it. We give installation support for everything else. Crystal, glass, metal or acrylic, with pan-India delivery.",
+    "Send a photo, render or sketch. We design, fabricate and install a chandelier to match, in crystal, glass, metal or acrylic, with delivery across India.",
   alternates: { canonical: "/customisation" },
 };
 

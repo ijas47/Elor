@@ -29,7 +29,7 @@ export function Footer() {
           </div>
 
           <div className={styles.col}>
-            <h4>Explore</h4>
+            <h2>Explore</h2>
             <Link href="/collections">Collections</Link>
             <Link href="/customisation">Customisation</Link>
             <Link href="/consultation">Consultation</Link>
@@ -42,7 +42,7 @@ export function Footer() {
           </div>
 
           <div className={styles.col}>
-            <h4>Our Stores</h4>
+            <h2>Our Stores</h2>
             {stores.map((s) => (
               <a key={s.city} href={s.maps} target="_blank" rel="noopener noreferrer">
                 {s.city}
@@ -54,7 +54,7 @@ export function Footer() {
           </div>
 
           <div className={styles.col}>
-            <h4>Talk to us</h4>
+            <h2>Talk to us</h2>
             <a href={`mailto:${site.email}`}>{site.email}</a>
             <a href={site.phoneHref}>{site.phone}</a>
             <p>{site.hours}</p>

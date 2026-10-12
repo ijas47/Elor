@@ -104,7 +104,7 @@ export default function Stores() {
           <Reveal delay={0.1}>
             <div className="online-banner" style={{ marginTop: 24 }}>
               <div>
-                <h3>Building, and not nearby?</h3>
+                <h2>Building, and not nearby?</h2>
                 <p>Send the drawings. We consult on the plan over video. The online store for the range, from basic fittings to luxury pieces, is being built. Until it opens, we will walk you through what to specify.</p>
               </div>
               <a className="btn btn-gold" href={site.shopUrl} target="_blank" rel="noopener noreferrer">{site.shopCta} <span className="arr">→</span></a>

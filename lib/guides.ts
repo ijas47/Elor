@@ -51,7 +51,7 @@ export const guides: Guide[] = [
   },
   {
     slug: "ceiling-and-lighting-design",
-    title: "False Ceiling Lighting for Kerala Homes",
+    title: "False Ceiling Lighting Design for Kerala Homes",
     dek: "Cove, spots, and the decorative piece are three jobs. The ceiling is drawn after the furniture.",
     tag: "Technical",
     image: "/spaces/living.jpg",

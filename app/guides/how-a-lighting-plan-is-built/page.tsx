@@ -142,7 +142,7 @@ export default function LightingPlanGuide() {
           <Stagger className="register">
             {steps.map((step) => (
               <StaggerItem key={step.h} className="register-row">
-                <h3>{step.h}</h3>
+                <h2>{step.h}</h2>
                 <p>{step.p}</p>
               </StaggerItem>
             ))}

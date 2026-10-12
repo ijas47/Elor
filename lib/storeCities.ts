@@ -23,7 +23,7 @@ export const storeCities: Record<StoreCity, StoreCityCopy> = {
     city: "Kannur",
     metaTitle: "Celestial Lights Kannur",
     metaDescription:
-      "Celestial Lights Kannur is a chandelier store and experience centre. Custom design and fabrication, plus the ready collection. We install custom lights and give installation support for everything else. Walk in or book.",
+      "Celestial Lights Kannur: chandelier store and experience centre. Custom design and fabrication plus the ready collection, installed by us. Walk in or book.",
     heroHeadline: "Custom Chandeliers & Lighting Design in Kannur",
     heroLede:
       "A Celestial Lights store and experience centre in Kannur. Lighting plans for architects and owners who are building, the ready range on the floor, and custom chandeliers made in our factory.",
@@ -47,7 +47,7 @@ export const storeCities: Record<StoreCity, StoreCityCopy> = {
     city: "Kochi",
     metaTitle: "Chandelier & Lighting Store in Kochi",
     metaDescription:
-      "Custom chandelier design and fabrication in Kochi. We install custom lights and give installation support for everything else. Plus the Celestial Lights ready collection. Visit Kadavanthara or book a free consultation.",
+      "Custom chandelier design and fabrication in Kochi, installed by us, plus the Celestial Lights ready collection. Visit Kadavanthara or book a free consultation.",
     heroHeadline: "Custom Chandeliers & Lighting Design in Kochi",
     heroLede:
       "Kochi is Elor's full experience centre. Architects and owners building homes, hotels and commercial spaces come here to see the range lit, agree the plan, and commission the pieces our factory makes.",
@@ -72,7 +72,7 @@ export const storeCities: Record<StoreCity, StoreCityCopy> = {
     city: "Kozhikode",
     metaTitle: "Celestial Lights Calicut",
     metaDescription:
-      "Celestial Lights in Kozhikode (Calicut): a chandelier store and experience centre. Custom design and fabrication, plus the ready collection. We install custom lights and give installation support for everything else.",
+      "Celestial Lights Kozhikode (Calicut): chandelier store and experience centre. Custom design and fabrication plus the ready collection, installed by our team.",
     heroHeadline: "Custom Chandeliers & Lighting Design in Kozhikode",
     heroLede:
       "A Celestial Lights store and experience centre in Calicut. Lighting plans for architects and owners who are building, the ready range on the floor, and custom chandeliers made in our factory.",

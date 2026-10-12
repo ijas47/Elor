@@ -8,7 +8,7 @@ import { MagneticButton } from "@/components/motion/MagneticButton";
 const TITLE = "Lighting Design and Installation Across India";
 const META_TITLE = "Lighting Design Across India";
 const DESC =
-  "Elor designs lighting for any site in India and supplies our own fittings. We install custom lights and give installation support for everything else. Centres in Kannur, Calicut and Kochi.";
+  "Elor designs lighting for any site in India and supplies our own fittings. We install custom lights and support the rest. Centres in Kannur, Calicut and Kochi.";
 const PATH = "/india";
 
 export const metadata: Metadata = {
@@ -120,7 +120,7 @@ export default function IndiaPage() {
           <Stagger className="register">
             {steps.map((step) => (
               <StaggerItem key={step.h} className="register-row">
-                <h3>{step.h}</h3>
+                <h2>{step.h}</h2>
                 <p>{step.p}</p>
               </StaggerItem>
             ))}
