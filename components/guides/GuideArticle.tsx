@@ -13,6 +13,21 @@ import {
   type GuideRun,
 } from "@/lib/guide-articles";
 
+function guideModified(article: GuideArticle): string {
+  return (
+    article.modified ??
+    guides.find((g) => g.slug === article.slug)?.modified ??
+    article.published ??
+    "2026-10-05"
+  );
+}
+
+function formatGuideDate(iso: string): string {
+  const [y, m, d] = iso.split("-").map(Number);
+  const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+  return `${d} ${months[m - 1]} ${y}`;
+}
+
 function Runs({ runs }: { runs: GuideRun[] }) {
   return (
     <>
@@ -116,7 +131,9 @@ export function GuideArticleView({ article }: { article: GuideArticle }) {
             ]}
           />
           <Reveal as="span">
-            <span className="eyebrow">{article.eyebrow}</span>
+            <span className="eyebrow">
+              {article.eyebrow} · Updated {formatGuideDate(guideModified(article))}
+            </span>
           </Reveal>
           <Reveal delay={0.06}>
             <h1 className="h-xl" style={{ marginTop: 18 }}>

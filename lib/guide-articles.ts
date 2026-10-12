@@ -39,6 +39,7 @@ export interface GuideArticle {
   modified?: string;
 }
 
+// Display date for the "Updated" eyebrow comes from each guide's `modified` (or `published`).
 const UPDATED = "5 October 2026";
 
 export const guideArticles: GuideArticle[] = [
@@ -48,7 +49,7 @@ export const guideArticles: GuideArticle[] = [
     description:
       "How to choose a living room chandelier for a Kerala home: size it to the seating, keep it apart from the fan, anchor it to the slab, and pick a material that suits the humidity.",
     crumb: "Chandelier for a Living Room",
-    eyebrow: "Buying guide · Updated 12 October 2026",
+    eyebrow: "Buying guide",
     h1: "A living room chandelier",
     h1Em: "for a Kerala home.",
     lede: [
@@ -240,7 +241,7 @@ export const guideArticles: GuideArticle[] = [
     description:
       "Ceiling and lighting design puts the cove, the spots, and the chandelier on separate circuits. Elor draws it before the gypsum closes.",
     crumb: "Ceiling and Lighting Design",
-    eyebrow: `Technical · Updated ${UPDATED}`,
+    eyebrow: "Technical",
     h1: "Design the ceiling",
     h1Em: "around the light.",
     lede: [
@@ -329,7 +330,7 @@ export const guideArticles: GuideArticle[] = [
     description:
       "Home lighting design is one plan for every room, before the ceilings close. House lighting design is the same job. Shelf fittings are at Celestial Lights.",
     crumb: "Home Lighting Design",
-    eyebrow: `Technical · Updated ${UPDATED}`,
+    eyebrow: "Technical",
     h1: "The whole house,",
     h1Em: "one lighting plan.",
     lede: [
@@ -424,7 +425,7 @@ export const guideArticles: GuideArticle[] = [
     description:
       "Staircase lighting design for Kerala homes: light each tread without glare, hang the double-height void from the slab, keep the fan and the cascade apart, and plan access for cleaning.",
     crumb: "Staircase Lighting Design",
-    eyebrow: "Technical · Updated 12 October 2026",
+    eyebrow: "Technical",
     h1: "Light the tread.",
     h1Em: "Hang the void.",
     lede: [
@@ -543,7 +544,7 @@ export const guideArticles: GuideArticle[] = [
         paragraphs: [
           [
             {
-              text: "If a cascade in the collection fits the width and the drop, it is a shelf piece from Celestial Lights, which you can see at the stores in Kannur and Kozhikode or at the Elor experience centre in Kochi. When the void has an odd width, a turn, or joinery the finish has to match, send a picture and the measurements and Elor makes the piece. That process, with the timeline and what drives the cost, is on ",
+              text: "Start with the range. Celestial Lights carries cascades in set widths and drops, so measure the void first and compare those numbers, not photographs. A stair that turns, a void narrower or wider than the stock pieces, or joinery the finish has to match is where a made piece earns its place: send the section and a picture, and Elor designs it. How custom work runs, and what drives the cost, is on ",
             },
             { text: "custom chandeliers", href: "/customisation" },
             { text: "." },
@@ -599,65 +600,171 @@ export const guideArticles: GuideArticle[] = [
   },
   {
     slug: "bedroom-lighting-design",
-    metaTitle: "Bedroom Lighting Design",
+    metaTitle: "Bedroom Lighting for Kerala Homes: Fan, Reading Light, Calm",
     description:
-      "Bedroom lighting design keeps a bright lamp off the pillow and puts reading light on its own switch. Shelf fittings are at Celestial Lights.",
+      "Bedroom lighting design for Kerala homes: keep bright lamps out of sight of the pillow, give reading light its own switch, keep the fan and the ceiling piece apart, and choose finishes for humidity.",
     crumb: "Bedroom Lighting Design",
-    eyebrow: `Technical · Updated ${UPDATED}`,
+    eyebrow: "Technical",
     h1: "Keep the lamp",
     h1Em: "out of the eyes.",
     lede: [
       {
-        text: "Bedroom lighting design starts from the pillow. A bare lamp over the bed is the mistake. Reading light sits at the side, on its own switch. The piece in the ceiling is dimmable, and clear of a fan.",
+        text: "Plan bedroom lighting in a Kerala home from the pillow outwards. Keep any bright lamp out of sight of someone lying in bed, put reading light at the bedside on its own switch, and keep the ceiling piece dimmable and well apart from the fan. Use warm light, and choose finishes that will cope with the humidity.",
       },
     ],
     image: "/spaces/bedroom.jpg",
     imageAlt: "A tiered crystal chandelier in a vaulted bedroom, hung clear of the window",
     sections: [
       {
-        h: "Three levels, and the bed is not one of the spots",
+        h: "What lighting does a bedroom need?",
         paragraphs: [
           [
             {
-              text: "A low ambient level lets the room be dark. A bedside light is for reading, and it switches alone, so the ceiling stays off. A vertical wash on a wall or a headboard gives the room depth without a lamp in the eyes. Colour stays warm. The numbers are ",
+              text: "Three layers, each on its own switch. A low general light lets you move around the room and can be turned right down. A bedside light is for reading, and switches without anything else, so one person can read while the other sleeps. A soft wash on a wall or the headboard gives the room depth without putting a lamp in anyone's eyes. A decorative piece, if there is one, sits on top of these, not instead of them.",
+            },
+          ],
+          [
+            {
+              text: "Keep the colour warm and consistent with the rest of the house, so the corridor and the bedroom do not clash at night. The numbers to agree before ordering anything are in ",
             },
             { text: "Kelvin, CRI, and beam", href: "/guides/colour-of-light" },
             { text: "." },
           ],
+        ],
+      },
+      {
+        h: "Why should there be no downlight over the bed?",
+        paragraphs: [
           [
             {
-              text: "If the room has a ceiling fan, the fan keeps its own point. The chandelier does not hang on the same drop. Clearances are in the ",
+              text: "Because the bed is where people lie on their backs and look straight up. A downlight above the pillow is the one fitting in the house that is guaranteed to be seen directly. Put the ceiling lights over the walkway and the wardrobe instead, and choose fittings with the lamp set back so it stays hidden from most angles. Why some downlights glare and others do not is explained in ",
             },
-            { text: "fan guide", href: "/guides/chandelier-with-ceiling-fan" },
-            { text: ". A low ceiling wants a short drop or a close-to-ceiling piece, checked with the " },
-            { text: "size calculator", href: "/guides/chandelier-size-calculator" },
+            { text: "why downlights glare", href: "/guides/why-downlights-glare" },
             { text: "." },
           ],
         ],
       },
       {
-        h: "The ceiling still needs an anchor",
+        h: "Can a bedroom have a chandelier and a ceiling fan?",
         paragraphs: [
           [
             {
-              text: "A bedroom piece can be lighter than a stair cascade and still too heavy for gypsum. The fixing goes into the slab before the ceiling closes. That sequence is the ",
+              text: "Yes, if each has its own point. In Kerala the bedroom fan often runs all night for much of the year, so it usually takes the centre of the room. The chandelier or pendant goes elsewhere, often over the foot of the bed or the open floor, far enough away that the blades never reach it and the moving air does not set it swaying. The usual layouts are in ",
+            },
+            { text: "chandelier with a ceiling fan", href: "/guides/chandelier-with-ceiling-fan" },
+            { text: "." },
+          ],
+          [
+            {
+              text: "A low ceiling wants a short drop or a piece that sits close to the ceiling. Check the drop against the ceiling height with the ",
+            },
+            { text: "size calculator", href: "/guides/chandelier-size-calculator" },
+            { text: " before choosing from a photograph." },
+          ],
+        ],
+      },
+      {
+        h: "Where should reading lights and switches go?",
+        paragraphs: [
+          [
+            {
+              text: "At the bed. A wall light or a pendant on each side, positioned so the light falls on the page rather than on the pillow next to it, is the usual answer. Each side gets its own switch within reach of the bed, and it helps to be able to switch off the main room light from the bed as well. Decide this while the walls are open, because moving a point after the plaster and paint is done is a much bigger job.",
+            },
+          ],
+        ],
+      },
+      {
+        h: "How does Kerala's humidity affect bedroom lighting?",
+        paragraphs: [
+          [
+            {
+              text: "Bedrooms often have an attached bathroom, and in a Kerala monsoon that bathroom stays damp for months. Fittings near the bathroom door, or in a bedroom that opens onto a balcony or a nalukettu courtyard, should be chosen for damp air. Metal finishes matter too: untreated brass and iron mark near the coast. The ",
+            },
+            { text: "coastal guide", href: "/guides/coastal-lighting-kerala" },
+            { text: " sets out what fails first, and " },
+            { text: "IP ratings", href: "/guides/ip-rating-for-outdoor-lights" },
+            { text: " explains what the numbers on a bathroom fitting mean." },
+          ],
+          [
+            {
+              text: "If you want a material that feels calmer than crystal in a bedroom, the ",
+            },
+            { text: "wooden chandelier guide", href: "/guides/wooden-chandelier" },
+            { text: " and the " },
+            { text: "brass guide", href: "/guides/brass-chandelier" },
+            { text: " cover what to ask for." },
+          ],
+        ],
+      },
+      {
+        h: "How should the way to the bathroom be lit at night?",
+        paragraphs: [
+          [
+            {
+              text: "With a low light, not the main one. A small fitting near the floor along the path from the bed to the bathroom door, or a dim light just inside the bathroom, lets someone get up at night without waking the room or their own eyes. This matters most in a bedroom for an elderly parent, where a missed step in the dark is the real risk. Put it on a switch by the bed, or on a sensor if you prefer, and keep it warm and dim.",
+            },
+          ],
+          [
+            {
+              text: "A child's room follows the same rule with one addition: a dimmable general light, so the room can be bright for play and homework and almost dark at bedtime. Keep any fitting a child might reach or swing at out of the way, and fix it to the slab, not the false ceiling.",
+            },
+          ],
+        ],
+      },
+      {
+        h: "How do I light a wardrobe and a dressing area?",
+        paragraphs: [
+          [
+            {
+              text: "From the front, not from above. A light over the middle of the room leaves the inside of a wardrobe in shadow, and a mirror lit from above puts shadows under the eyes. A light inside the wardrobe that comes on with the door, and light on either side of the dressing mirror, show colours as they are. Choose a good colour rendering for the mirror; the numbers are in the colour-of-light guide linked above.",
+            },
+          ],
+        ],
+      },
+      {
+        h: "Can a false ceiling hold a bedroom chandelier?",
+        paragraphs: [
+          [
+            {
+              text: "No. A bedroom piece can be lighter than a stair cascade and still too heavy for gypsum or POP. The fixing goes into the slab while the false ceiling is still open, and the cove and the spots are wired at the same time. That sequence is in the ",
             },
             { text: "false-ceiling guide", href: "/guides/false-ceiling-chandelier-weight" },
+            { text: ", and how the ceiling and its circuits are laid out is in " },
+            { text: "ceiling and lighting design", href: "/guides/ceiling-and-lighting-design" },
             { text: "." },
           ],
         ],
       },
       {
-        h: "Made for the room, or planned first",
+        h: "How do I keep a bedroom chandelier clean?",
         paragraphs: [
           [
-            { text: "When the stock sizes do not fit a bedroom, send a picture and the measurements and Elor makes the piece. That process, with the timeline and what it costs, is on " },
+            {
+              text: "A fan running every night carries dust onto the piece, and crystal shows it most. Before buying, check that someone can reach the piece from a stable platform without leaning over the bed. The routine, with the power off at the breaker, is in ",
+            },
+            { text: "how to clean a crystal chandelier", href: "/guides/how-to-clean-a-crystal-chandelier" },
+            { text: "." },
+          ],
+        ],
+      },
+      {
+        h: "Should a bedroom light be ready-made or custom?",
+        paragraphs: [
+          [
+            {
+              text: "Bedside lights, sconces, and bedroom pendants that already exist in the range come from Celestial Lights. When the room has a low ceiling, a vaulted roof, or a headboard the light should be built around, send a picture and the measurements and Elor makes the piece. The process, with the timeline and what drives the cost, is on ",
+            },
             { text: "custom chandeliers", href: "/customisation" },
-            { text: ". If the wiring and the ceiling are still open, start with the bed wall and the ceiling: " },
-            { text: "book a lighting consultation", href: "/consultation" },
-            { text: " and the plan is drawn before anything is bought. Comparing showrooms first? The " },
-            { text: "chandelier shop guide", href: "/guides/how-to-choose-a-chandelier-shop" },
-            { text: " lists what to ask." },
+            { text: "." },
+          ],
+          [
+            {
+              text: "If the wiring is still open, start with the bed wall and the switch positions. ",
+            },
+            { text: "Book a lighting consultation", href: "/consultation" },
+            { text: " and the bedroom is planned with the rest of the house; the whole-house approach is in " },
+            { text: "home lighting design", href: "/guides/home-lighting-design" },
+            { text: "." },
           ],
         ],
       },
@@ -673,7 +780,11 @@ export const guideArticles: GuideArticle[] = [
       },
       {
         q: "Why not a downlight above the bed?",
-        a: "A lamp you can see from the pillow glares. Reading light belongs at the side, on its own switch. The ceiling piece, if there is one, dims.",
+        a: "Someone lying in bed looks straight up at it, so it glares. Put ceiling lights over the walkway instead, and keep reading light at the side on its own switch.",
+      },
+      {
+        q: "Can a bedroom have both a fan and a chandelier?",
+        a: "Yes, on separate points with their own anchors. The fan usually takes the centre, and the decorative piece goes over the foot of the bed or the open floor, clear of the blades.",
       },
       {
         q: "What colour of light belongs in a bedroom?",
@@ -684,67 +795,162 @@ export const guideArticles: GuideArticle[] = [
         a: "Yes. A stock fitting comes from Celestial Lights. A piece made for the ceiling or the headboard is Elor, usually in 3 to 6 weeks, with free installation. Ready fittings come with installation support.",
       },
     ],
+    published: "2026-10-05",
+    modified: "2026-10-12",
   },
   {
     slug: "kitchen-lighting-design",
-    metaTitle: "Kitchen Lighting Design",
+    metaTitle: "Kitchen Lighting for Kerala Homes: Worktop, Island, Steam",
     description:
-      "Kitchen lighting design gives the worktop its own light and keeps the island pendant on a separate circuit. Shelf pendants are at Celestial Lights.",
+      "Kitchen lighting design for Kerala homes: light the worktop on its own circuit, hang the island pendant separately, avoid shadows from overhead lights, and choose finishes that survive steam and humidity.",
     crumb: "Kitchen Lighting Design",
-    eyebrow: `Technical · Updated ${UPDATED}`,
+    eyebrow: "Technical",
     h1: "The worktop gets",
     h1Em: "its own light.",
     lede: [
       {
-        text: "Kitchen lighting design fails when one pendant is asked to light the chopping board. The counter has its own light. The island pendant is a second circuit. Steam, wiping, and the finish are decided with the fitting.",
+        text: "Light a Kerala kitchen in layers. Put task light directly on the worktop, usually under the wall cabinets, so you never cook in your own shadow. Hang the island or dining pendant on a separate circuit. Then light the room generally, and choose fittings and finishes that can be wiped down and will cope with steam and humidity.",
       },
     ],
     image: "/collections/abstract-rings.jpg",
     imageAlt: "A linear pendant over a dining table, with the kitchen visible beyond",
     sections: [
       {
-        h: "Task light on the counter, pendant over the island",
+        h: "What lighting does a kitchen need?",
         paragraphs: [
           [
             {
-              text: "A strip under the wall cabinet, or a fitting aimed at the worktop, is the light you cook by. It switches without the decorative piece. The pendant hangs above the island or the table, high enough to walk under, and on a dimmer for the hour when nobody is cooking.",
+              text: "Three jobs. Task light on the worktop, where you chop and cook. A pendant or linear piece over the island or the table, which is as much about how the room looks as what it lights. And general light, so the floor, the cupboards, and the corners are visible. Each goes on its own switch. One fitting in the middle of the ceiling tries to do all three and does none of them well.",
             },
           ],
           [
             {
-              text: "The length of a linear piece follows the island, not a photograph of someone else’s kitchen. If the span is particular, it is made. Colour and beam for a work surface are in ",
+              text: "How the circuits are grouped across a whole house is set out in ",
+            },
+            { text: "how a lighting plan is built", href: "/guides/how-a-lighting-plan-is-built" },
+            { text: "." },
+          ],
+        ],
+      },
+      {
+        h: "Why do I cook in my own shadow?",
+        paragraphs: [
+          [
+            {
+              text: "Because the light is behind you. A ceiling light in the middle of the kitchen sits behind anyone facing the counter, so their head and shoulders throw a shadow onto the board. The fix is light in front of you: a strip or fitting under the wall cabinets, or downlights set close to the wall above the counter and aimed at the worktop. Keep the lamp out of direct view from where people stand. The reasons are in ",
+            },
+            { text: "why downlights glare", href: "/guides/why-downlights-glare" },
+            { text: "." },
+          ],
+          [
+            {
+              text: "For a work surface, colour rendering matters, because you are judging food. The numbers to agree are in ",
             },
             { text: "Kelvin, CRI, and beam", href: "/guides/colour-of-light" },
             { text: "." },
           ],
+          [
+            {
+              text: "Under-cabinet light needs planning with the carpenter. The wiring has to reach the underside of the wall cabinets before they are fixed, the strip or fitting needs a lip or a channel so it is not seen from the dining table, and the switch should be at the counter, not by the door. If the backsplash is glossy tile or polished stone, ask how the fitting will reflect in it; a bright line reflected in the splashback is a glare of its own.",
+            },
+          ],
         ],
       },
       {
-        h: "The finish has to live with steam",
+        h: "How should an island pendant be hung?",
         paragraphs: [
           [
             {
-              text: "A kitchen is wiped down. On the Kerala coast it is also humid. Untreated brass and bare iron pit. What lasts is the ",
+              text: "High enough that nobody walks into it, and low enough that it lights the top of the island rather than the ceiling. A linear piece follows the length of the island, not a photograph of someone else's kitchen. Measure the island and the ceiling first, and check the drop with the ",
+            },
+            { text: "size calculator", href: "/guides/chandelier-size-calculator" },
+            { text: ". Put it on a dimmer, if the fitting supports one, for the hours when nobody is cooking and the kitchen is part of the living space." },
+          ],
+          [
+            {
+              text: "In many Kerala homes the kitchen opens onto the dining area. If so, the dining light and the kitchen light are planned together so the two ends of the room do not compete. The fixing for a heavier piece goes into the slab, not the false ceiling; the ",
+            },
+            { text: "false-ceiling guide", href: "/guides/false-ceiling-chandelier-weight" },
+            { text: " explains why." },
+          ],
+        ],
+      },
+      {
+        h: "Do I need separate lighting in a work area or second kitchen?",
+        paragraphs: [
+          [
+            {
+              text: "Many Kerala houses have a work area or a second kitchen behind the main one, where the heavy cooking happens. That space wants plain, bright task light over the stove and the counter, with fittings that can be wiped down. If it is semi-open to the outside, or the wash area is outdoors, treat the fittings as outdoor ones. The ",
+            },
+            { text: "IP rating guide", href: "/guides/ip-rating-for-outdoor-lights" },
+            { text: " sets out which rating to ask for." },
+          ],
+        ],
+      },
+      {
+        h: "Which kitchen light finishes survive steam and humidity?",
+        paragraphs: [
+          [
+            {
+              text: "A kitchen is wiped down, sees steam and oil, and on the Kerala coast it is humid for months. Untreated brass and bare iron mark, and open fittings collect grease. Choose closed or easily wiped fittings near the stove, and ask for the finish in writing. What fails first near the sea is in the ",
             },
             { text: "coastal guide", href: "/guides/coastal-lighting-kerala" },
             { text: ". A brass piece, if that is the finish you want, is specified on the " },
             { text: "brass page", href: "/guides/brass-chandelier" },
+            { text: ". Glass and acrylic clean differently from crystal; the comparison is in " },
+            { text: "crystal, glass, and acrylic", href: "/guides/crystal-vs-glass-chandelier" },
+            { text: ", and the cleaning routine is in " },
+            { text: "how to clean a crystal chandelier", href: "/guides/how-to-clean-a-crystal-chandelier" },
             { text: "." },
           ],
         ],
       },
       {
-        h: "Made for the room, or planned first",
+        h: "How should the dining area next to the kitchen be lit?",
         paragraphs: [
           [
-            { text: "When the stock sizes do not fit a kitchen, send a picture and the measurements and Elor makes the piece. That process, with the timeline and what it costs, is on " },
+            {
+              text: "As its own space. In many Kerala homes the dining table sits between the kitchen and the living room, and it is where the family actually spends the evening. Hang a pendant or a small chandelier over the table, sized to the table rather than the room, on its own switch and ideally a dimmer. When the kitchen is closed for the night, the dining light carries the room; when people are cooking, the worktop light does the work and the dining light can stay low.",
+            },
+          ],
+          [
+            {
+              text: "Keep the colour of light the same in the kitchen and the dining area, so food looks the same on the counter and on the plate. If the dining area also opens to the living room, plan the three together; the ",
+            },
+            { text: "living room guide", href: "/guides/chandelier-for-living-room" },
+            { text: " covers the room beside it." },
+          ],
+        ],
+      },
+      {
+        h: "Can a kitchen have a ceiling fan and pendants?",
+        paragraphs: [
+          [
+            {
+              text: "Yes, with care. A fan over the stove disturbs a gas flame, and a fan close to a pendant sets it swinging. Give the fan its own point away from both. The layouts are in ",
+            },
+            { text: "chandelier with a ceiling fan", href: "/guides/chandelier-with-ceiling-fan" },
+            { text: "." },
+          ],
+        ],
+      },
+      {
+        h: "Should a kitchen pendant be ready-made or custom?",
+        paragraphs: [
+          [
+            {
+              text: "A pendant made to a standard island length, already in the range, is a shelf fitting from Celestial Lights. When the island is an unusual length, or the finish has to match the cabinets, send a picture and the measurements and Elor makes the piece. The process, with the timeline and what drives the cost, is on ",
+            },
             { text: "custom chandeliers", href: "/customisation" },
-            { text: ". If the wiring and the ceiling are still open, start with the counter layout: " },
-            { text: "book a lighting consultation", href: "/consultation" },
-            { text: " and the plan is drawn before anything is bought. Comparing showrooms first? The " },
-            { text: "chandelier shop guide", href: "/guides/how-to-choose-a-chandelier-shop" },
-            { text: " lists what to ask. A work-area light outside, or by the wash area, needs a rated fitting. See the " },
-            { text: "IP rating guide", href: "/guides/ip-rating-for-outdoor-lights" },
+            { text: "." },
+          ],
+          [
+            {
+              text: "If the kitchen is still being designed, decide the light with the cabinet drawings, because the strip under the wall cabinets needs wiring before the cabinets go up. ",
+            },
+            { text: "Book a lighting consultation", href: "/consultation" },
+            { text: " and the kitchen is planned with the rest of the house; see " },
+            { text: "home lighting design", href: "/guides/home-lighting-design" },
             { text: "." },
           ],
         ],
@@ -757,7 +963,11 @@ export const guideArticles: GuideArticle[] = [
     faqs: [
       {
         q: "What light does a kitchen actually need?",
-        a: "A task light on the worktop, on its own switch, and a separate pendant or linear piece over the island or the table. One fitting in the middle of the ceiling does both jobs badly.",
+        a: "A task light on the worktop, on its own switch, a separate pendant or linear piece over the island or the table, and general light for the room. One fitting in the middle of the ceiling does all three badly.",
+      },
+      {
+        q: "Why is my kitchen counter in shadow?",
+        a: "The ceiling light is behind you, so your body blocks it. Put light in front of you, under the wall cabinets or close to the wall above the counter.",
       },
       {
         q: "How low should an island pendant hang?",
@@ -765,13 +975,15 @@ export const guideArticles: GuideArticle[] = [
       },
       {
         q: "Will brass survive in a Kerala kitchen?",
-        a: "Untreated brass pits in salt air and in steam. A sealed finish, specified for the room, is the condition. The coastal guide covers what fails first.",
+        a: "Untreated brass marks in salt air and in steam. A sealed finish, specified for the room, is the condition. The coastal guide covers what fails first.",
       },
       {
         q: "Is the kitchen pendant custom?",
         a: "A standard length from the collection is at Celestial Lights. A piece made to the island is designed and built by Elor, usually in 3 to 6 weeks, with free installation. Ready fittings come with installation support.",
       },
     ],
+    published: "2026-10-05",
+    modified: "2026-10-12",
   },
   {
     slug: "wooden-chandelier",
@@ -779,7 +991,7 @@ export const guideArticles: GuideArticle[] = [
     description:
       "A wooden chandelier suits a dry, finished room. Humid coastal air moves untreated timber. Shelf pieces are at Celestial Lights. Elor makes the rest.",
     crumb: "Wooden Chandelier",
-    eyebrow: `Buying guide · Updated ${UPDATED}`,
+    eyebrow: "Buying guide",
     h1: "Wood, where the",
     h1Em: "air allows it.",
     lede: [
@@ -862,7 +1074,7 @@ export const guideArticles: GuideArticle[] = [
     description:
       "A brass chandelier needs a finish specified for the room. Untreated brass pits on the Kerala coast. Shelf pieces are at Celestial Lights. Elor makes the rest.",
     crumb: "Brass Chandelier",
-    eyebrow: `Buying guide · Updated ${UPDATED}`,
+    eyebrow: "Buying guide",
     h1: "Brass has to survive",
     h1Em: "the air it hangs in.",
     lede: [
@@ -947,7 +1159,7 @@ export const guideArticles: GuideArticle[] = [
     description:
       "Clean a crystal chandelier with the power off, a cloth-and-glove wipe in place, and the drops washed by hand only when they are dull. Steps for Kerala homes.",
     crumb: "How to Clean a Crystal Chandelier",
-    eyebrow: "How-to · Updated 12 October 2026",
+    eyebrow: "How-to",
     h1: "Switch it off,",
     h1Em: "then clean it in place.",
     lede: [
@@ -1040,7 +1252,7 @@ export const guideArticles: GuideArticle[] = [
     description:
       "What IP rating outdoor lights need: IP44 for a covered sit-out, IP65 for rain-exposed walls and courtyards, IP66/67 for poolside and ground-recessed. Kerala examples.",
     crumb: "IP Rating for Outdoor Lights",
-    eyebrow: "Technical · Updated 12 October 2026",
+    eyebrow: "Technical",
     h1: "Read the second digit,",
     h1Em: "then the place.",
     lede: [
