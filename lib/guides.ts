@@ -45,7 +45,7 @@ export const guides: Guide[] = [
     tag: "Buying Guide",
     image: "/spaces/living.jpg",
     imageAlt: "A living room with a chandelier, cove light in the tray ceiling, and a lamp beside the sofa",
-    updated: "5 October 2026",
+    updated: "12 October 2026",
     modified: "2026-10-12",
   },
   {
@@ -56,7 +56,7 @@ export const guides: Guide[] = [
     image: "/spaces/living.jpg",
     imageAlt: "A tray ceiling with cove lighting, recessed spots, and a chandelier over the seating",
     updated: "5 October 2026",
-    modified: "2026-10-12",
+    modified: "2026-10-05",
   },
   {
     slug: "home-lighting-design",
@@ -66,7 +66,7 @@ export const guides: Guide[] = [
     image: "/lifestyle/villa-night.jpg",
     imageAlt: "A house at night with cove light under the slabs, wall lights, and a lit path",
     updated: "5 October 2026",
-    modified: "2026-10-12",
+    modified: "2026-10-05",
   },
   {
     slug: "staircase-lighting-design",
@@ -75,7 +75,7 @@ export const guides: Guide[] = [
     tag: "Technical",
     image: "/collections/staircase-cascade.jpg",
     imageAlt: "A red crystal cascade hung in a spiral stair, with a wall light on the landing",
-    updated: "5 October 2026",
+    updated: "12 October 2026",
     modified: "2026-10-12",
   },
   {
@@ -86,7 +86,7 @@ export const guides: Guide[] = [
     image: "/spaces/bedroom.jpg",
     imageAlt: "A tiered crystal chandelier in a vaulted bedroom, hung clear of the window",
     updated: "5 October 2026",
-    modified: "2026-10-12",
+    modified: "2026-10-05",
   },
   {
     slug: "kitchen-lighting-design",
@@ -96,7 +96,7 @@ export const guides: Guide[] = [
     image: "/collections/abstract-rings.jpg",
     imageAlt: "A linear pendant over a dining table, with the kitchen visible beyond",
     updated: "5 October 2026",
-    modified: "2026-10-12",
+    modified: "2026-10-05",
   },
   {
     slug: "wooden-chandelier",
@@ -106,7 +106,7 @@ export const guides: Guide[] = [
     image: "/lifestyle/store-wall.jpg",
     imageAlt: "The Celestial Lights wall, with mosaic pendants and crystal cascades on display",
     updated: "5 October 2026",
-    modified: "2026-10-12",
+    modified: "2026-10-05",
   },
   {
     slug: "brass-chandelier",
@@ -116,7 +116,7 @@ export const guides: Guide[] = [
     image: "/collections/dandelion-gold.jpg",
     imageAlt: "A brass-coloured sputnik chandelier with frosted glass globes",
     updated: "5 October 2026",
-    modified: "2026-10-12",
+    modified: "2026-10-05",
   },
   {
     slug: "how-to-choose-a-custom-chandelier",
