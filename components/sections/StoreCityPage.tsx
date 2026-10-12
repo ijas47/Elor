@@ -209,6 +209,10 @@ export function StoreCityPage({ city }: { city: StoreCity }) {
               <Link href="/guides/how-a-lighting-plan-is-built">How a lighting plan is built</Link>
               {" · "}
               <Link href="/guides/colour-of-light">Kelvin, CRI and beam angle</Link>
+              {" · "}
+              <Link href="/guides/how-to-clean-a-crystal-chandelier">Cleaning a crystal chandelier</Link>
+              {" · "}
+              <Link href="/guides/ip-rating-for-outdoor-lights">IP ratings for outdoor lights</Link>
             </p>
           </Reveal>
           {/* Sibling-store links: keeps each store page one click from the other

@@ -1,3 +1,4 @@
+import Link from "next/link";
 import type { Metadata } from "next";
 import { site } from "@/lib/site";
 import { breadcrumbSchema } from "@/lib/schema";
@@ -190,7 +191,9 @@ export default function CoastalLightingGuide() {
           <Reveal delay={0.06}>
             <p className="lede" style={{ marginTop: 16 }}>
               The first digit is dust, the second is water. For Kerala only the
-              second one usually decides anything.
+              second one usually decides anything. Every rating, with what to
+              specify outside, is in the{" "}
+              <Link href="/guides/ip-rating-for-outdoor-lights" style={{ color: "var(--gold)" }}>IP rating guide</Link>.
             </p>
           </Reveal>
           <Reveal delay={0.12}>
