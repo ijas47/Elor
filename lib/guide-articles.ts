@@ -544,7 +544,7 @@ export const guideArticles: GuideArticle[] = [
         paragraphs: [
           [
             {
-              text: "Start with the range. Celestial Lights carries cascades in set widths and drops, so measure the void first and compare those numbers, not photographs. A stair that turns, a void narrower or wider than the stock pieces, or joinery the finish has to match is where a made piece earns its place: send the section and a picture, and Elor designs it. How custom work runs, and what drives the cost, is on ",
+              text: "Start with the range. Celestial Lights carries ready cascades in a range of sizes, so measure the void first and compare its width and height with the pieces on offer, not with photographs. A stair that turns, a void narrower or wider than the stock pieces, or joinery the finish has to match is where a made piece earns its place: send the section and a picture, and Elor designs it. How custom work runs, and what drives the cost, is on ",
             },
             { text: "custom chandeliers", href: "/customisation" },
             { text: "." },
