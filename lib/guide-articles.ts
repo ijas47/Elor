@@ -1181,60 +1181,158 @@ export const guideArticles: GuideArticle[] = [
   },
   {
     slug: "wooden-chandelier",
-    metaTitle: "Wooden Chandelier",
+    metaTitle: "Wooden Chandelier for Kerala Homes: Timber, Finish, Fixing",
     description:
-      "A wooden chandelier suits a dry, finished room. Humid coastal air moves untreated timber. Shelf pieces are at Celestial Lights. Elor makes the rest.",
+      "How to choose a wooden chandelier for a Kerala home: match it to the room and the joinery, ask how the timber and finish are specified for humidity, size it to the room, and fix it to the slab.",
     crumb: "Wooden Chandelier",
     eyebrow: "Buying guide",
     h1: "Wood, where the",
     h1Em: "air allows it.",
     lede: [
       {
-        text: "A wooden chandelier is a material decision before it is a shape. Timber moves with humidity. In a dry, air-conditioned room a sealed wood finish can be right. On an open Kerala coast it often is not.",
+        text: "Choose a wooden chandelier for a Kerala home by deciding the room first, then the timber and its finish, then the shape. Ask the maker which timber and finish are used and whether they are meant for a humid room. Size it to the furniture, keep it clear of the fan, and fix it to the slab, not the false ceiling.",
       },
     ],
     image: "/lifestyle/store-wall.jpg",
     imageAlt: "The Celestial Lights wall, with mosaic pendants and crystal cascades on display",
     sections: [
       {
-        h: "Ask what the air will do to the timber",
+        h: "Why choose a wooden chandelier?",
         paragraphs: [
           [
             {
-              text: "Untreated wood swells, opens at the joints, and dulls. A finish specified for the room is part of the piece, not a coat added later. Salt air is harder still. What fails outdoors and on the coast is the ",
+              text: "Because it belongs with the rest of the house. Kerala homes are full of timber: doors, window frames, ceilings, staircases, and in traditional houses whole verandas and courtyards. A wooden chandelier can pick up that joinery instead of competing with it. It gives a warmer, quieter light than crystal, and it reads as part of the architecture rather than an object hung in the middle of the room.",
+            },
+          ],
+          [
+            {
+              text: "It is a material decision before it is a shape. Choose the room and the timber first, then the design.",
+            },
+          ],
+        ],
+      },
+      {
+        h: "Which rooms suit a wooden chandelier?",
+        paragraphs: [
+          [
+            {
+              text: "Rooms where the timber already is. A dining room with a wooden table and a timber ceiling, a living room with wooden joinery, a bedroom with a carved headboard, or a stair with a wooden handrail are natural places. A modern apartment with white walls and gypsum ceilings can also take one, as a single warm object. The living room is covered in ",
+            },
+            { text: "chandelier for a living room", href: "/guides/chandelier-for-living-room" },
+            { text: " and the bedroom in " },
+            { text: "bedroom lighting", href: "/guides/bedroom-lighting-design" },
+            { text: "." },
+          ],
+        ],
+      },
+      {
+        h: "Does a wooden chandelier suit a traditional Kerala house?",
+        paragraphs: [
+          [
+            {
+              text: "Often better than crystal does. In a nalukettu or a house built around a central courtyard, a timber piece in the same tone as the rafters or the pillars looks as if it was always there. The care is with the air: a courtyard open to the rain brings damp right into the rooms around it, so ask how the piece is finished for that before choosing it. For a heritage house, keep the light warm and low, so the timber of the room glows rather than the fitting. Colour of light is covered in ",
+            },
+            { text: "Kelvin, CRI, and beam", href: "/guides/colour-of-light" },
+            { text: "." },
+          ],
+        ],
+      },
+      {
+        h: "What should I ask about timber and humidity?",
+        paragraphs: [
+          [
+            {
+              text: "Ask which timber is used, how it is finished, and whether that finish is specified for a humid room. A finish chosen for the room is part of the piece, not a coat added later. Say which room the piece is for, and whether it is near a bathroom, a kitchen, an open window, or a courtyard. Near the coast, ask about the metal parts too, the brackets, chains, and screws, because those are often what show wear first. The ",
             },
             { text: "coastal guide", href: "/guides/coastal-lighting-kerala" },
-            { text: ". Crystal, glass, and a sealed metal are the usual alternatives. The material comparison is " },
+            { text: " covers what to ask for near the sea." },
+          ],
+          [
+            {
+              text: "If the room is damp for much of the year, compare wood with the alternatives before deciding. Crystal, glass, and sealed metal are the usual ones; the comparison is in ",
+            },
             { text: "crystal, glass, and acrylic", href: "/guides/crystal-vs-glass-chandelier" },
+            { text: " and the " },
+            { text: "brass guide", href: "/guides/brass-chandelier" },
             { text: "." },
           ],
         ],
       },
       {
-        h: "Wood is still a weight on the slab",
+        h: "How should a wooden chandelier be lit and switched?",
         paragraphs: [
           [
             {
-              text: "A timber frame can be heavier than it looks. The anchor goes into the slab before the ceiling closes, same as any other chandelier. That sequence is the ",
+              text: "On its own switch, with a dimmer if the fitting and the lamps support one. Many wooden designs throw light through slats, cut-outs, or woven panels, so they draw patterns on the ceiling and walls. Look at the piece lit in a dark room before choosing it, because the shadows are part of the design. Keep the lamps warm, so the timber reads as wood and not as grey. If the piece is the only light in the room, it will be either too bright to look at or too dim to use; the cove and spots carry the room, and the chandelier sits on top. How those layers are set out is in ",
             },
-            { text: "false-ceiling guide", href: "/guides/false-ceiling-chandelier-weight" },
-            { text: ". Diameter and drop still come from the room, via the " },
-            { text: "size calculator", href: "/guides/chandelier-size-calculator" },
+            { text: "how a lighting plan is built", href: "/guides/how-a-lighting-plan-is-built" },
             { text: "." },
           ],
         ],
       },
       {
-        h: "Made for the room, or planned first",
+        h: "What size wooden chandelier do I need?",
         paragraphs: [
           [
-            { text: "When the stock sizes do not fit a wooden piece, send a picture and the measurements and Elor makes the piece. That process, with the timeline and what it costs, is on " },
+            {
+              text: "The same as any chandelier: size it to the furniture and the ceiling, not the whole room. Over a dining table, the piece follows the table. Over seating, it follows the seating group. Timber pieces often look heavier than metal ones of the same size, so when in doubt, go slightly smaller. In a double-height void, the piece is seen from the stair and the upper landing as well as from below, so judge it from above too. ",
+            },
+            { text: "The size calculator", href: "/guides/chandelier-size-calculator" },
+            { text: " turns the room into a diameter and a drop." },
+          ],
+        ],
+      },
+      {
+        h: "Can a false ceiling hold a wooden chandelier?",
+        paragraphs: [
+          [
+            {
+              text: "No. A timber frame can be heavier than it looks, and gypsum and POP do not carry a chandelier of any material. The anchor goes into the slab before the ceiling closes. That sequence is in the ",
+            },
+            { text: "false-ceiling guide", href: "/guides/false-ceiling-chandelier-weight" },
+            { text: ", and how the ceiling and its circuits are laid out is in " },
+            { text: "ceiling and lighting design", href: "/guides/ceiling-and-lighting-design" },
+            { text: "." },
+          ],
+        ],
+      },
+      {
+        h: "Can a wooden chandelier hang near a ceiling fan?",
+        paragraphs: [
+          [
+            {
+              text: "Not on the same point, and not close. Most Kerala rooms run a fan for much of the year. Give the fan and the chandelier separate points far enough apart that the blades never reach the piece and the moving air does not set it swaying. The layouts are in ",
+            },
+            { text: "chandelier with a ceiling fan", href: "/guides/chandelier-with-ceiling-fan" },
+            { text: "." },
+          ],
+        ],
+      },
+      {
+        h: "How do I clean a wooden chandelier?",
+        paragraphs: [
+          [
+            {
+              text: "With the power off at the breaker and a dry, soft cloth or brush. Ask the maker what the finish tolerates before using anything else on it, and keep water away from the lamp holders and the wiring. If the piece has glass or crystal parts, those are cleaned as in ",
+            },
+            { text: "how to clean a crystal chandelier", href: "/guides/how-to-clean-a-crystal-chandelier" },
+            { text: "." },
+          ],
+        ],
+      },
+      {
+        h: "Should a wooden chandelier be ready-made or custom?",
+        paragraphs: [
+          [
+            {
+              text: "Celestial Lights carries ready fittings for every room; if a wooden piece in the collection fits the room, the size, and the climate, it is a shelf fitting. When the span, the timber, or the finish has to match the joinery, send a photograph of the joinery and the measurements, and Elor designs and makes the piece. The process, timeline, and what drives the cost are on ",
+            },
             { text: "custom chandeliers", href: "/customisation" },
-            { text: ". If the wiring and the ceiling are still open, start with the timber and the room: " },
+            { text: ". If the house is still being built, " },
             { text: "book a lighting consultation", href: "/consultation" },
-            { text: " and the plan is drawn before anything is bought. Comparing showrooms first? The " },
-            { text: "chandelier shop guide", href: "/guides/how-to-choose-a-chandelier-shop" },
-            { text: " lists what to ask." },
+            { text: " and the piece is planned with the rest of the house; see " },
+            { text: "home lighting design", href: "/guides/home-lighting-design" },
+            { text: "." },
           ],
         ],
       },
@@ -1249,6 +1347,10 @@ export const guideArticles: GuideArticle[] = [
         a: "In a dry, air-conditioned room, with a finish specified for humidity, it can be. In open salt air, untreated timber moves and fails. The coastal guide is the check before the material is chosen.",
       },
       {
+        q: "Does a wooden chandelier suit a nalukettu or traditional house?",
+        a: "Often, because it can match the rafters and pillars. Ask how it is finished for damp air if the room opens onto a courtyard, and keep the light warm and low.",
+      },
+      {
         q: "Do you have wooden chandeliers on the shelf?",
         a: "Whatever wood is in the current collection is at Celestial Lights. See the range and we will say what is actually there. The shop site is still being built.",
       },
@@ -1261,65 +1363,159 @@ export const guideArticles: GuideArticle[] = [
         a: "The false ceiling does not. The anchor is in the slab, marked before the gypsum closes. Weight is covered in the false-ceiling guide.",
       },
     ],
+    published: "2026-10-05",
+    modified: "2026-10-12",
   },
   {
     slug: "brass-chandelier",
-    metaTitle: "Brass Chandelier",
+    metaTitle: "Brass Chandelier for Kerala Homes: Finish, Size, Fixing",
     description:
-      "A brass chandelier needs a finish specified for the room. Untreated brass pits on the Kerala coast. Shelf pieces are at Celestial Lights. Elor makes the rest.",
+      "How to choose a brass chandelier for a Kerala home: know whether it is solid brass, plated, or painted, specify the finish for the room's humidity, size it to the furniture, and fix it to the slab.",
     crumb: "Brass Chandelier",
     eyebrow: "Buying guide",
     h1: "Brass has to survive",
     h1Em: "the air it hangs in.",
     lede: [
       {
-        text: "A brass chandelier is a finish and a structure. The alloy, or a brass-coloured metal with a sealed coat, has to be specified for the room. Untreated brass pits in salt air within a season or two.",
+        text: "Choose a brass chandelier for a Kerala home by first asking what it actually is: solid brass, brass-plated, or a gold-coloured coat. Then specify the finish for the room, especially near the coast, a kitchen, or a courtyard. Size it to the furniture and the ceiling, keep it clear of the fan, and fix it to the slab.",
       },
     ],
     image: "/collections/dandelion-gold.jpg",
     imageAlt: "A brass-coloured sputnik chandelier with frosted glass globes",
     sections: [
       {
-        h: "Specify the finish before the shape",
+        h: "Why choose a brass chandelier?",
         paragraphs: [
           [
             {
-              text: "Lacquer, a plated coat, or a living finish that is allowed to change: pick one, and write it down. A kitchen and a coastal verandah are harder than a dry living room. What fails first is the ",
+              text: "Brass is familiar in a Kerala home. It is the metal of the nilavilakku, the temple lamp, and the old door fittings, so a brass chandelier can feel at home in a traditional house as easily as in a modern one. It suits warm light, works with timber and with white walls, and comes in shapes from classic arms to modern sputnik and linear designs.",
+            },
+          ],
+        ],
+      },
+      {
+        h: "Is it solid brass, plated, or a gold-coloured finish?",
+        paragraphs: [
+          [
+            {
+              text: "Ask before anything else, because they are different products. Solid brass is the metal all the way through. Brass plate is a thin brass layer over another metal. A gold-coloured coat is paint or powder coat that looks like brass. Each looks different up close, weighs differently, and behaves differently over the years. The specification, or the bill, should name which one you are buying or having made.",
+            },
+          ],
+        ],
+      },
+      {
+        h: "Which finish should a brass chandelier have?",
+        paragraphs: [
+          [
+            {
+              text: "Pick one and write it down: a lacquered finish, a plated coat, or a living finish that is allowed to change. Say which room the piece is for, and whether it is near the sea, a kitchen, a bathroom, or an open courtyard, so the finish can be chosen for that room rather than for a dry showroom. A kitchen and a coastal veranda are harder on any metal than a closed living room. What to ask for near the sea is in the ",
             },
             { text: "coastal guide", href: "/guides/coastal-lighting-kerala" },
-            { text: ". If the room wants timber instead, that decision is the " },
-            { text: "wood page", href: "/guides/wooden-chandelier" },
             { text: "." },
           ],
         ],
       },
       {
-        h: "Then size it, and fix it to the slab",
+        h: "Which rooms suit a brass chandelier?",
         paragraphs: [
           [
             {
-              text: "Diameter and drop come from the room. ",
+              text: "Living and dining rooms, a double-height entrance, a pooja area where brass is already the language, and bedrooms where a small piece adds warmth. In a kitchen, think about steam and grease before choosing an open brass design; see ",
+            },
+            { text: "kitchen lighting", href: "/guides/kitchen-lighting-design" },
+            { text: ". For a double-height void, the clearances from the stair and the handrail are in " },
+            { text: "staircase lighting", href: "/guides/staircase-lighting-design" },
+            { text: ". If the room is mostly timber and you want the light to disappear into it, compare the " },
+            { text: "wooden chandelier guide", href: "/guides/wooden-chandelier" },
+            { text: "." },
+          ],
+        ],
+      },
+      {
+        h: "Does a brass chandelier suit a pooja room?",
+        paragraphs: [
+          [
+            {
+              text: "It can, because brass is already the material of the lamps and vessels in most pooja rooms. Keep the piece small and the light warm and low, so it supports the lamp rather than outshining it. Many families prefer the pooja area lit softly from the side or the ceiling edge, with no fitting directly above the idols; ask the family what they want before placing anything. Smoke and oil from the lamp settle on any fitting nearby, so choose a design that is easy to reach and wipe.",
+            },
+          ],
+        ],
+      },
+      {
+        h: "How should brass sit with the other metals in a room?",
+        paragraphs: [
+          [
+            {
+              text: "Decide the room's metal once. Brass next to chrome taps, steel handles, and black window frames can look accidental. Either let the brass chandelier be the one warm metal in a cool room, on purpose, or carry brass into a few other details, such as door handles, a mirror frame, or switch plates, so it reads as a choice. The same applies to tone: a polished brass chandelier and an antique-finish wall light in the same room rarely look like a pair. Bring a photo of the room, or a sample of the other finishes, when choosing. If the room also has wooden joinery, look at the brass against that timber in daylight and in the evening, because both change with the light.",
+            },
+          ],
+        ],
+      },
+      {
+        h: "What colour of light suits brass?",
+        paragraphs: [
+          [
+            {
+              text: "Warm light flatters brass and the room around it; a cold white lamp makes it look flat and greenish. Agree the colour temperature once for the room, so the brass piece and the cove and spots match. If the piece has glass shades, the glass changes the light too, so look at it lit before deciding. The numbers to agree are in ",
+            },
+            { text: "Kelvin, CRI, and beam", href: "/guides/colour-of-light" },
+            { text: ", and the glass options are compared in " },
+            { text: "crystal, glass, and acrylic", href: "/guides/crystal-vs-glass-chandelier" },
+            { text: "." },
+          ],
+        ],
+      },
+      {
+        h: "What size brass chandelier do I need?",
+        paragraphs: [
+          [
+            {
+              text: "Size it to the furniture and the ceiling, not the whole room: the seating group in a living room, the table in a dining room. ",
             },
             { text: "The size calculator", href: "/guides/chandelier-size-calculator" },
+            { text: " turns those measurements into a diameter and a drop. Measure before ordering from a photograph, because a photograph never shows the ceiling height it was taken under." },
+          ],
+        ],
+      },
+      {
+        h: "Can a false ceiling hold a brass chandelier?",
+        paragraphs: [
+          [
             {
-              text: " does that part. Brass frames carry real weight. The anchor goes into the slab before the ceiling closes, as set out in the ",
+              text: "No. Brass frames carry real weight, and gypsum and POP do not carry a chandelier. The anchor goes into the slab before the ceiling closes, as set out in the ",
             },
             { text: "false-ceiling guide", href: "/guides/false-ceiling-chandelier-weight" },
+            { text: ". Plan the fan on its own point, well away from the piece; the layouts are in " },
+            { text: "chandelier with a ceiling fan", href: "/guides/chandelier-with-ceiling-fan" },
             { text: "." },
           ],
         ],
       },
       {
-        h: "Made for the room, or planned first",
+        h: "How do I clean a brass chandelier?",
         paragraphs: [
           [
-            { text: "When the stock sizes do not fit a brass piece, send a picture and the measurements and Elor makes the piece. That process, with the timeline and what it costs, is on " },
+            {
+              text: "With the power off at the breaker and a dry, soft cloth. Ask the maker what the finish tolerates before using any polish or cleaner, because a polish meant for bare brass can strip a lacquer or a plated coat. Keep liquid away from the lamp holders and the wiring. Glass or crystal parts are cleaned as in ",
+            },
+            { text: "how to clean a crystal chandelier", href: "/guides/how-to-clean-a-crystal-chandelier" },
+            { text: "." },
+          ],
+        ],
+      },
+      {
+        h: "Should a brass chandelier be ready-made or custom?",
+        paragraphs: [
+          [
+            {
+              text: "Celestial Lights carries ready fittings for every room; if a brass or brass-coloured piece in the collection fits the room and the finish you need, it is a shelf fitting. When you need a diameter, a finish, or a drawing the collection does not have, send the diameter, the finish, and the ceiling height, and Elor makes the piece. The process, timeline, and what drives the cost are on ",
+            },
             { text: "custom chandeliers", href: "/customisation" },
-            { text: ". If the wiring and the ceiling are still open, start with the finish and the room: " },
+            { text: ", and budgeting is in the " },
+            { text: "pricing guide", href: "/guides/chandelier-pricing-guide" },
+            { text: ". If the house is still being built, " },
             { text: "book a lighting consultation", href: "/consultation" },
-            { text: " and the plan is drawn before anything is bought. Comparing showrooms first? The " },
-            { text: "chandelier shop guide", href: "/guides/how-to-choose-a-chandelier-shop" },
-            { text: " lists what to ask." },
+            { text: " and the piece is planned with the rest of the house." },
           ],
         ],
       },
@@ -1338,6 +1534,10 @@ export const guideArticles: GuideArticle[] = [
         a: "No. Solid brass, brass plate, and a painted gold coat age differently. The specification should name which one you are buying or making.",
       },
       {
+        q: "Can I polish a brass chandelier?",
+        a: "Only with what the finish allows. A polish for bare brass can strip a lacquer or a plated coat. Ask the maker, and clean with a dry cloth with the power off.",
+      },
+      {
         q: "Where do I see brass fittings?",
         a: "Shelf pieces are at Celestial Lights. See the range and we send what is in the collection. The online shop is still being built.",
       },
@@ -1346,6 +1546,8 @@ export const guideArticles: GuideArticle[] = [
         a: "Yes. Send the diameter, the finish, and the ceiling height. Custom work is usually 3 to 6 weeks, with free installation. A ready fitting comes with installation support. Warranty is up to 5 years.",
       },
     ],
+    published: "2026-10-05",
+    modified: "2026-10-12",
   },
   {
     slug: "how-to-clean-a-crystal-chandelier",
