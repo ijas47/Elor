@@ -374,7 +374,7 @@ export const guideArticles: GuideArticle[] = [
               text: "Elor writes the lighting plan, in DIALux where the room needs a calculation, and marks the anchors before the ceiling closes. ",
             },
             { text: "Book a lighting consultation", href: "/consultation" },
-            { text: " and start with a floor plan and a photo. Celestial Lights carries a range of downlights, cove profiles, and pendants for the ready fittings. A piece made for this ceiling is on " },
+            { text: " and start with a floor plan and a photo. Celestial Lights carries ready fittings for every room. A piece made for this ceiling is on " },
             { text: "custom chandeliers", href: "/customisation" },
             { text: ", and the " },
             { text: "chandelier shop guide", href: "/guides/how-to-choose-a-chandelier-shop" },
@@ -384,7 +384,7 @@ export const guideArticles: GuideArticle[] = [
       },
     ],
     shelf:
-      "Downlights, cove profiles, and pendants from the ready range are shelf fittings at Celestial Lights.",
+      "Ready fittings for every room, including the ceiling, are shelf pieces at Celestial Lights.",
     custom:
       "A piece made for this ceiling, or a plan for the whole room, is Elor’s work.",
     faqs: [
@@ -560,7 +560,7 @@ export const guideArticles: GuideArticle[] = [
         paragraphs: [
           [
             {
-              text: "The plan and the quotation can be done from drawings and video, which suits families building in Kerala while working elsewhere. Installation is arranged from the Kannur, Kozhikode, or Kochi centre, depending on where the house is. Kannur and Kozhikode trade as Celestial Lights; Kochi is the Elor experience centre. Elor also designs lighting for sites elsewhere in India.",
+              text: "The plan can start from drawings and video calls, which suits families building in Kerala while working elsewhere. Elor also designs lighting for sites elsewhere in India.",
             },
           ],
         ],
@@ -570,7 +570,7 @@ export const guideArticles: GuideArticle[] = [
         paragraphs: [
           [
             {
-              text: "Most of a house is lit with ready fittings, and Celestial Lights carries a range of them. A piece made for a particular void, ceiling, or picture is designed and made by Elor; the process, timeline, and what drives the cost are on ",
+              text: "Most of a house is lit with ready fittings, and Celestial Lights carries ready fittings for every room. A piece made for a particular void, ceiling, or picture is designed and made by Elor; the process, timeline, and what drives the cost are on ",
             },
             { text: "custom chandeliers", href: "/customisation" },
             { text: ", and budgeting is in the " },
