@@ -45,8 +45,12 @@ export function GuideArticleView({ article }: { article: GuideArticle }) {
       name: site.name,
       logo: { "@type": "ImageObject", url: `${site.domain}/brand/logo-mark.svg` },
     },
-    datePublished: "2026-10-05",
-    dateModified: guides.find((g) => g.slug === article.slug)?.modified ?? "2026-10-05",
+    datePublished: article.published ?? "2026-10-05",
+    dateModified:
+      article.modified ??
+      guides.find((g) => g.slug === article.slug)?.modified ??
+      article.published ??
+      "2026-10-05",
     mainEntityOfPage: `${site.domain}${path}`,
   };
 
@@ -60,8 +64,29 @@ export function GuideArticleView({ article }: { article: GuideArticle }) {
     })),
   };
 
+  const howToSchema = article.howTo
+    ? {
+        "@context": "https://schema.org",
+        "@type": "HowTo",
+        name: article.howTo.name,
+        description: article.description,
+        step: article.howTo.steps.map((s, i) => ({
+          "@type": "HowToStep",
+          position: i + 1,
+          name: s.h,
+          text: s.p,
+        })),
+      }
+    : null;
+
   return (
     <>
+      {howToSchema ? (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(howToSchema) }}
+        />
+      ) : null}
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
@@ -134,7 +159,7 @@ export function GuideArticleView({ article }: { article: GuideArticle }) {
           <div className="register">
             {article.sections.map((section) => (
               <div key={section.h} className="register-row">
-                <h3>{section.h}</h3>
+                {section.h.endsWith("?") ? <h2 className="h-sm">{section.h}</h2> : <h3>{section.h}</h3>}
                 <div>
                   {section.paragraphs.map((paragraph, i) => (
                     <p key={i} style={i > 0 ? { marginTop: 16 } : undefined}>
@@ -147,6 +172,21 @@ export function GuideArticleView({ article }: { article: GuideArticle }) {
           </div>
         </div>
       </section>
+
+      {article.howTo ? (
+        <section className="sec" style={{ paddingTop: 0 }}>
+          <div className="wrap-tight">
+            <h2 className="h-lg">{article.howTo.name}</h2>
+            <ol style={{ marginTop: 24, paddingLeft: 22 }}>
+              {article.howTo.steps.map((step) => (
+                <li key={step.h} style={{ marginTop: 14 }}>
+                  <strong>{step.h}.</strong> {step.p}
+                </li>
+              ))}
+            </ol>
+          </div>
+        </section>
+      ) : null}
 
       <section className="sec glow-top">
         <div className="wrap-tight">
