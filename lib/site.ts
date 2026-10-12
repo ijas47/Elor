@@ -75,7 +75,7 @@ export const site = {
  * `geo` is locality-level (OpenStreetMap Nominatim geocoding of the address
  * text), not a GPS-surveyed exact point — fine for LocalBusiness schema, but
  * replace with the real coordinates if you ever pin the exact building.
- * Kozhikode's is doubly approximate since its address is itself a placeholder.
+ * Kozhikode's is city-level only until the street address is confirmed.
  */
 export const stores = [
   {
@@ -116,18 +116,17 @@ export const stores = [
     city: "Kozhikode",
     brand: "Celestial Lights",
     kind: "Store and experience centre",
-    // placeholder, awaiting the real address
-    street:
-      "Mavoor Road",
+    // Street address and PIN not confirmed yet. Leave empty rather than
+    // publishing a placeholder; schema omits empty fields.
+    street: "",
     locality: "Kozhikode",
     region: "Kerala",
-    postalCode: "673004",
-    address:
-      "Mavoor Road, Kozhikode, Kerala 673004",
+    postalCode: "",
+    address: "Kozhikode, Kerala",
     hours: "Mon-Sat · 9:30 AM to 8:30 PM",
     phone: site.celestialPhone,
     phoneHref: site.celestialPhoneHref,
-    maps: "https://maps.google.com/?q=Mavoor+Road+Kozhikode+Kerala",
+    maps: "https://maps.google.com/?q=Celestial+Lights+Kozhikode+Kerala",
     geo: { lat: 11.2579121, lng: 75.7987029 },
   },
 ] as const;
