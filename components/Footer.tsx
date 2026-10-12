@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { site, stores } from "@/lib/site";
 import { Brandmark } from "@/components/ui/Brandmark";
+import { roomGuideLinks, topicGuideLinks } from "@/lib/guideLinks";
 import styles from "./Footer.module.css";
 
 export function Footer() {
@@ -62,6 +63,15 @@ export function Footer() {
             </a>
           </div>
         </div>
+
+        <nav className={styles.guides} aria-label="Lighting guides">
+          <h4>Lighting guides</h4>
+          <div className={styles.guideRow}>
+            {[...roomGuideLinks, ...topicGuideLinks].map((g) => (
+              <Link key={g.href} href={g.href}>{g.label}</Link>
+            ))}
+          </div>
+        </nav>
 
         <div className={styles.bottom}>
           <span>© {new Date().getFullYear()} Elor Lighting. All rights reserved.</span>

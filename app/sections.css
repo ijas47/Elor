@@ -934,3 +934,20 @@
 .breadcrumbs span[aria-current] {
   color: var(--text-dim);
 }
+
+/* Guide link block (home, customisation, consultation, store pages) */
+.guide-links-cols {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 8px 48px;
+  margin-top: 28px;
+}
+.guide-links ul { list-style: none; margin: 0; padding: 0; }
+.guide-links li { margin-bottom: 12px; font-size: 15px; }
+.guide-links a { color: var(--text-dim); transition: color 0.3s; }
+.guide-links a:hover { color: var(--gold); }
+.guide-links.on-pearl a { color: var(--on-pearl-dim); }
+.guide-links.on-pearl a:hover { color: var(--caramel); }
+@media (max-width: 720px) {
+  .guide-links-cols { grid-template-columns: 1fr; }
+}
