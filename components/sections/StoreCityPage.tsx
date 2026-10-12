@@ -34,9 +34,10 @@ export function StoreCityPage({ city }: { city: StoreCity }) {
     image: `${site.domain}${copy.heroImage}`,
     address: {
       "@type": "PostalAddress",
-      streetAddress: store.address,
-      addressLocality: store.city,
-      addressRegion: "Kerala",
+      streetAddress: store.street,
+      addressLocality: store.locality,
+      addressRegion: store.region,
+      postalCode: store.postalCode,
       addressCountry: "IN",
     },
     telephone: store.phone,

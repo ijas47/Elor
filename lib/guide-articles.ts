@@ -89,6 +89,20 @@ export const guideArticles: GuideArticle[] = [
           ],
         ],
       },
+      {
+        h: "Made for the room, or planned first",
+        paragraphs: [
+          [
+            { text: "When the stock sizes do not fit a living room, send a picture and the measurements and Elor makes the piece. That process, with the timeline and what it costs, is on " },
+            { text: "custom chandeliers", href: "/customisation" },
+            { text: ". If the wiring and the ceiling are still open, start with the seating plan and the ceiling drawing: " },
+            { text: "book a lighting consultation", href: "/consultation" },
+            { text: " and the plan is drawn before anything is bought. Comparing showrooms first? The " },
+            { text: "chandelier shop guide", href: "/guides/how-to-choose-a-chandelier-shop" },
+            { text: " lists what to ask." },
+          ],
+        ],
+      },
     ],
     shelf:
       "A living-room piece that already exists in the collection is a shelf fitting at Celestial Lights.",
@@ -161,6 +175,20 @@ export const guideArticles: GuideArticle[] = [
             },
             { text: "Kelvin, CRI, and beam", href: "/guides/colour-of-light" },
             { text: "." },
+          ],
+        ],
+      },
+      {
+        h: "Made for the room, or planned first",
+        paragraphs: [
+          [
+            { text: "When the stock sizes do not fit a ceiling, send a picture and the measurements and Elor makes the piece. That process, with the timeline and what it costs, is on " },
+            { text: "custom chandeliers", href: "/customisation" },
+            { text: ". If the wiring and the ceiling are still open, start with the reflected ceiling plan: " },
+            { text: "book a lighting consultation", href: "/consultation" },
+            { text: " and the plan is drawn before anything is bought. Comparing showrooms first? The " },
+            { text: "chandelier shop guide", href: "/guides/how-to-choose-a-chandelier-shop" },
+            { text: " lists what to ask." },
           ],
         ],
       },
@@ -243,6 +271,20 @@ export const guideArticles: GuideArticle[] = [
           ],
         ],
       },
+      {
+        h: "Made for the room, or planned first",
+        paragraphs: [
+          [
+            { text: "When the stock sizes do not fit the house, send a picture and the measurements and Elor makes the piece. That process, with the timeline and what it costs, is on " },
+            { text: "custom chandeliers", href: "/customisation" },
+            { text: ". If the wiring and the ceiling are still open, start with the floor plans: " },
+            { text: "book a lighting consultation", href: "/consultation" },
+            { text: " and the plan is drawn before anything is bought. Comparing showrooms first? The " },
+            { text: "chandelier shop guide", href: "/guides/how-to-choose-a-chandelier-shop" },
+            { text: " lists what to ask." },
+          ],
+        ],
+      },
     ],
     shelf:
       "Room by room, a fitting that already exists is a shelf piece at Celestial Lights.",
@@ -309,6 +351,20 @@ export const guideArticles: GuideArticle[] = [
             },
             { text: "false-ceiling guide", href: "/guides/false-ceiling-chandelier-weight" },
             { text: "." },
+          ],
+        ],
+      },
+      {
+        h: "Made for the room, or planned first",
+        paragraphs: [
+          [
+            { text: "When the stock sizes do not fit a stair void, send a picture and the measurements and Elor makes the piece. That process, with the timeline and what it costs, is on " },
+            { text: "custom chandeliers", href: "/customisation" },
+            { text: ". If the wiring and the ceiling are still open, start with the section through the stair: " },
+            { text: "book a lighting consultation", href: "/consultation" },
+            { text: " and the plan is drawn before anything is bought. Comparing showrooms first? The " },
+            { text: "chandelier shop guide", href: "/guides/how-to-choose-a-chandelier-shop" },
+            { text: " lists what to ask." },
           ],
         ],
       },
@@ -386,6 +442,20 @@ export const guideArticles: GuideArticle[] = [
           ],
         ],
       },
+      {
+        h: "Made for the room, or planned first",
+        paragraphs: [
+          [
+            { text: "When the stock sizes do not fit a bedroom, send a picture and the measurements and Elor makes the piece. That process, with the timeline and what it costs, is on " },
+            { text: "custom chandeliers", href: "/customisation" },
+            { text: ". If the wiring and the ceiling are still open, start with the bed wall and the ceiling: " },
+            { text: "book a lighting consultation", href: "/consultation" },
+            { text: " and the plan is drawn before anything is bought. Comparing showrooms first? The " },
+            { text: "chandelier shop guide", href: "/guides/how-to-choose-a-chandelier-shop" },
+            { text: " lists what to ask." },
+          ],
+        ],
+      },
     ],
     shelf:
       "A bedside light, a sconce, or a bedroom pendant from the collection is at Celestial Lights.",
@@ -458,6 +528,20 @@ export const guideArticles: GuideArticle[] = [
           ],
         ],
       },
+      {
+        h: "Made for the room, or planned first",
+        paragraphs: [
+          [
+            { text: "When the stock sizes do not fit a kitchen, send a picture and the measurements and Elor makes the piece. That process, with the timeline and what it costs, is on " },
+            { text: "custom chandeliers", href: "/customisation" },
+            { text: ". If the wiring and the ceiling are still open, start with the counter layout: " },
+            { text: "book a lighting consultation", href: "/consultation" },
+            { text: " and the plan is drawn before anything is bought. Comparing showrooms first? The " },
+            { text: "chandelier shop guide", href: "/guides/how-to-choose-a-chandelier-shop" },
+            { text: " lists what to ask." },
+          ],
+        ],
+      },
     ],
     shelf:
       "A pendant already made to a standard island length is a shelf fitting at Celestial Lights.",
@@ -524,6 +608,20 @@ export const guideArticles: GuideArticle[] = [
             { text: ". Diameter and drop still come from the room, via the " },
             { text: "size calculator", href: "/guides/chandelier-size-calculator" },
             { text: "." },
+          ],
+        ],
+      },
+      {
+        h: "Made for the room, or planned first",
+        paragraphs: [
+          [
+            { text: "When the stock sizes do not fit a wooden piece, send a picture and the measurements and Elor makes the piece. That process, with the timeline and what it costs, is on " },
+            { text: "custom chandeliers", href: "/customisation" },
+            { text: ". If the wiring and the ceiling are still open, start with the timber and the room: " },
+            { text: "book a lighting consultation", href: "/consultation" },
+            { text: " and the plan is drawn before anything is bought. Comparing showrooms first? The " },
+            { text: "chandelier shop guide", href: "/guides/how-to-choose-a-chandelier-shop" },
+            { text: " lists what to ask." },
           ],
         ],
       },
@@ -595,6 +693,20 @@ export const guideArticles: GuideArticle[] = [
             },
             { text: "false-ceiling guide", href: "/guides/false-ceiling-chandelier-weight" },
             { text: "." },
+          ],
+        ],
+      },
+      {
+        h: "Made for the room, or planned first",
+        paragraphs: [
+          [
+            { text: "When the stock sizes do not fit a brass piece, send a picture and the measurements and Elor makes the piece. That process, with the timeline and what it costs, is on " },
+            { text: "custom chandeliers", href: "/customisation" },
+            { text: ". If the wiring and the ceiling are still open, start with the finish and the room: " },
+            { text: "book a lighting consultation", href: "/consultation" },
+            { text: " and the plan is drawn before anything is bought. Comparing showrooms first? The " },
+            { text: "chandelier shop guide", href: "/guides/how-to-choose-a-chandelier-shop" },
+            { text: " lists what to ask." },
           ],
         ],
       },

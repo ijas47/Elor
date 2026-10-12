@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { site } from "@/lib/site";
+import { guides } from "@/lib/guides";
 import { breadcrumbSchema } from "@/lib/schema";
 import { Breadcrumbs } from "@/components/ui/Breadcrumbs";
 import { Reveal } from "@/components/motion/Reveal";
@@ -45,7 +46,7 @@ export function GuideArticleView({ article }: { article: GuideArticle }) {
       logo: { "@type": "ImageObject", url: `${site.domain}/brand/logo-mark.svg` },
     },
     datePublished: "2026-10-05",
-    dateModified: "2026-10-05",
+    dateModified: guides.find((g) => g.slug === article.slug)?.modified ?? "2026-10-05",
     mainEntityOfPage: `${site.domain}${path}`,
   };
 
