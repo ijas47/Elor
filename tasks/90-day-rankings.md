@@ -45,9 +45,9 @@ Code, this week:
 
 You, this month. These move local pack and AI recommendations more than another page will:
 
-- [ ] Google Business Profile ×3. Kochi exists and is managed (legal name Elor Lighting PVT LTD, Gandhi Nagar). Still missing on that profile: phone `+91 99956 19470`, hours Mon–Sat 9:30–8:30, website `https://www.elorlighting.com/stores/kochi`, and an address string that matches the site. Kannur and Kozhikode as Celestial Lights wait until the owners add Ijas as owner
+- [ ] Google Business Profile ×3. Kochi exists and is managed (legal name Elor Lighting PVT LTD, Gandhi Nagar). Still missing on that profile: phone `+91 88487 08529`, hours Mon–Sat 9:30–8:30, website `https://www.elorlighting.com/stores/kochi`, and an address string that matches the site. Kannur and Kozhikode as Celestial Lights wait until the owners add Ijas as owner
 - [ ] Kozhikode street address. Kochi PIN is in: `682020`, and the site address now includes Gandhinagar Road and the fire station. Do not file a Kozhikode directory on the Mavoor Road placeholder
-- [ ] Justdial, IndiaMART, Sulekha, Houzz. Paste-ready copy is in `tasks/off-page-seo-plan.md`. Each one needs the OTP on +91 99956 19470
+- [ ] Justdial, IndiaMART, Sulekha, Houzz. Paste-ready copy is in `tasks/off-page-seo-plan.md`. Each one needs the OTP on +91 88487 08529 (Elor; Celestial listings use +91 99956 19470)
 - [ ] Founder name, role, years, and a photo, so the guides can carry a byline. This is the biggest AEO gap that is not a page
 
 ## Month 2 — to 23 November

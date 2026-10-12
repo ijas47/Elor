@@ -159,7 +159,7 @@ export function GuideArticleView({ article }: { article: GuideArticle }) {
           <div className="register">
             {article.sections.map((section) => (
               <div key={section.h} className="register-row">
-                {section.h.endsWith("?") ? <h2 className="h-sm">{section.h}</h2> : <h3>{section.h}</h3>}
+                {section.h.endsWith("?") ? <h2>{section.h}</h2> : <h3>{section.h}</h3>}
                 <div>
                   {section.paragraphs.map((paragraph, i) => (
                     <p key={i} style={i > 0 ? { marginTop: 16 } : undefined}>
