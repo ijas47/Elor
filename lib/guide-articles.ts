@@ -94,6 +94,20 @@ export const guideArticles: GuideArticle[] = [
           ],
         ],
       },
+      {
+        h: "Made for the room, or planned first",
+        paragraphs: [
+          [
+            { text: "When the stock sizes do not fit a living room, send a picture and the measurements and Elor makes the piece. That process, with the timeline and what it costs, is on " },
+            { text: "custom chandeliers", href: "/customisation" },
+            { text: ". If the wiring and the ceiling are still open, start with the seating plan and the ceiling drawing: " },
+            { text: "book a lighting consultation", href: "/consultation" },
+            { text: " and the plan is drawn before anything is bought. Comparing showrooms first? The " },
+            { text: "chandelier shop guide", href: "/guides/how-to-choose-a-chandelier-shop" },
+            { text: " lists what to ask." },
+          ],
+        ],
+      },
     ],
     shelf:
       "A living-room piece that already exists in the collection is a shelf fitting at Celestial Lights.",
@@ -166,6 +180,20 @@ export const guideArticles: GuideArticle[] = [
             },
             { text: "Kelvin, CRI, and beam", href: "/guides/colour-of-light" },
             { text: "." },
+          ],
+        ],
+      },
+      {
+        h: "Made for the room, or planned first",
+        paragraphs: [
+          [
+            { text: "When the stock sizes do not fit a ceiling, send a picture and the measurements and Elor makes the piece. That process, with the timeline and what it costs, is on " },
+            { text: "custom chandeliers", href: "/customisation" },
+            { text: ". If the wiring and the ceiling are still open, start with the reflected ceiling plan: " },
+            { text: "book a lighting consultation", href: "/consultation" },
+            { text: " and the plan is drawn before anything is bought. Comparing showrooms first? The " },
+            { text: "chandelier shop guide", href: "/guides/how-to-choose-a-chandelier-shop" },
+            { text: " lists what to ask." },
           ],
         ],
       },
@@ -248,6 +276,22 @@ export const guideArticles: GuideArticle[] = [
           ],
         ],
       },
+      {
+        h: "Made for the room, or planned first",
+        paragraphs: [
+          [
+            { text: "When the stock sizes do not fit the house, send a picture and the measurements and Elor makes the piece. That process, with the timeline and what it costs, is on " },
+            { text: "custom chandeliers", href: "/customisation" },
+            { text: ". If the wiring and the ceiling are still open, start with the floor plans: " },
+            { text: "book a lighting consultation", href: "/consultation" },
+            { text: " and the plan is drawn before anything is bought. Comparing showrooms first? The " },
+            { text: "chandelier shop guide", href: "/guides/how-to-choose-a-chandelier-shop" },
+            { text: " lists what to ask. Verandas, sit-outs and the courtyard need a rated fitting. Which rating goes where is in the " },
+            { text: "IP rating guide", href: "/guides/ip-rating-for-outdoor-lights" },
+            { text: "." },
+          ],
+        ],
+      },
     ],
     shelf:
       "Room by room, a fitting that already exists is a shelf piece at Celestial Lights.",
@@ -313,6 +357,22 @@ export const guideArticles: GuideArticle[] = [
               text: " is the check. The fixing is in the slab at the top, before that ceiling closes. What the ceiling can carry is the ",
             },
             { text: "false-ceiling guide", href: "/guides/false-ceiling-chandelier-weight" },
+            { text: "." },
+          ],
+        ],
+      },
+      {
+        h: "Made for the room, or planned first",
+        paragraphs: [
+          [
+            { text: "When the stock sizes do not fit a stair void, send a picture and the measurements and Elor makes the piece. That process, with the timeline and what it costs, is on " },
+            { text: "custom chandeliers", href: "/customisation" },
+            { text: ". If the wiring and the ceiling are still open, start with the section through the stair: " },
+            { text: "book a lighting consultation", href: "/consultation" },
+            { text: " and the plan is drawn before anything is bought. Comparing showrooms first? The " },
+            { text: "chandelier shop guide", href: "/guides/how-to-choose-a-chandelier-shop" },
+            { text: " lists what to ask. A crystal piece in a stair void has to be reachable for cleaning. The routine is in " },
+            { text: "how to clean a crystal chandelier", href: "/guides/how-to-clean-a-crystal-chandelier" },
             { text: "." },
           ],
         ],
@@ -391,6 +451,20 @@ export const guideArticles: GuideArticle[] = [
           ],
         ],
       },
+      {
+        h: "Made for the room, or planned first",
+        paragraphs: [
+          [
+            { text: "When the stock sizes do not fit a bedroom, send a picture and the measurements and Elor makes the piece. That process, with the timeline and what it costs, is on " },
+            { text: "custom chandeliers", href: "/customisation" },
+            { text: ". If the wiring and the ceiling are still open, start with the bed wall and the ceiling: " },
+            { text: "book a lighting consultation", href: "/consultation" },
+            { text: " and the plan is drawn before anything is bought. Comparing showrooms first? The " },
+            { text: "chandelier shop guide", href: "/guides/how-to-choose-a-chandelier-shop" },
+            { text: " lists what to ask." },
+          ],
+        ],
+      },
     ],
     shelf:
       "A bedside light, a sconce, or a bedroom pendant from the collection is at Celestial Lights.",
@@ -459,6 +533,22 @@ export const guideArticles: GuideArticle[] = [
             { text: "coastal guide", href: "/guides/coastal-lighting-kerala" },
             { text: ". A brass piece, if that is the finish you want, is specified on the " },
             { text: "brass page", href: "/guides/brass-chandelier" },
+            { text: "." },
+          ],
+        ],
+      },
+      {
+        h: "Made for the room, or planned first",
+        paragraphs: [
+          [
+            { text: "When the stock sizes do not fit a kitchen, send a picture and the measurements and Elor makes the piece. That process, with the timeline and what it costs, is on " },
+            { text: "custom chandeliers", href: "/customisation" },
+            { text: ". If the wiring and the ceiling are still open, start with the counter layout: " },
+            { text: "book a lighting consultation", href: "/consultation" },
+            { text: " and the plan is drawn before anything is bought. Comparing showrooms first? The " },
+            { text: "chandelier shop guide", href: "/guides/how-to-choose-a-chandelier-shop" },
+            { text: " lists what to ask. A work-area light outside, or by the wash area, needs a rated fitting. See the " },
+            { text: "IP rating guide", href: "/guides/ip-rating-for-outdoor-lights" },
             { text: "." },
           ],
         ],
@@ -532,6 +622,20 @@ export const guideArticles: GuideArticle[] = [
           ],
         ],
       },
+      {
+        h: "Made for the room, or planned first",
+        paragraphs: [
+          [
+            { text: "When the stock sizes do not fit a wooden piece, send a picture and the measurements and Elor makes the piece. That process, with the timeline and what it costs, is on " },
+            { text: "custom chandeliers", href: "/customisation" },
+            { text: ". If the wiring and the ceiling are still open, start with the timber and the room: " },
+            { text: "book a lighting consultation", href: "/consultation" },
+            { text: " and the plan is drawn before anything is bought. Comparing showrooms first? The " },
+            { text: "chandelier shop guide", href: "/guides/how-to-choose-a-chandelier-shop" },
+            { text: " lists what to ask." },
+          ],
+        ],
+      },
     ],
     shelf:
       "If a wood piece in the collection fits the room and the climate, it is a shelf fitting at Celestial Lights.",
@@ -600,6 +704,20 @@ export const guideArticles: GuideArticle[] = [
             },
             { text: "false-ceiling guide", href: "/guides/false-ceiling-chandelier-weight" },
             { text: "." },
+          ],
+        ],
+      },
+      {
+        h: "Made for the room, or planned first",
+        paragraphs: [
+          [
+            { text: "When the stock sizes do not fit a brass piece, send a picture and the measurements and Elor makes the piece. That process, with the timeline and what it costs, is on " },
+            { text: "custom chandeliers", href: "/customisation" },
+            { text: ". If the wiring and the ceiling are still open, start with the finish and the room: " },
+            { text: "book a lighting consultation", href: "/consultation" },
+            { text: " and the plan is drawn before anything is bought. Comparing showrooms first? The " },
+            { text: "chandelier shop guide", href: "/guides/how-to-choose-a-chandelier-shop" },
+            { text: " lists what to ask." },
           ],
         ],
       },
@@ -764,8 +882,10 @@ export const guideArticles: GuideArticle[] = [
         paragraphs: [
           [
             {
-              text: "No. The rating covers water and dust getting in. It says nothing about salt air eating the body, the screws, or the bracket. In Kochi, Kannur, Kozhikode, or anywhere on the coast, ask for the finish and the fixings as well as the number. Untreated brass and iron pit in salt air.",
+              text: "No. The rating covers water and dust getting in. It says nothing about salt air eating the body, the screws, or the bracket. In Kochi, Kannur, Kozhikode, or anywhere on the coast, ask for the finish and the fixings as well as the number. ",
             },
+            { text: "Why brass and iron pit", href: "/guides/coastal-lighting-kerala" },
+            { text: " is covered there too." },
           ],
         ],
       },

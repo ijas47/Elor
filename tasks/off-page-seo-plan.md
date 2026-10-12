@@ -17,7 +17,7 @@ listing — an email confirmation link or a phone OTP sent to the business's own
 contact details. That's by design, to keep the directory spam-free, and it
 means **I cannot complete a directory submission end to end**. I don't have
 access to `hello@elorlighting.com` or the ability to receive an SMS at
-`+91 99956 19470`.
+`+91 88487 08529`.
 
 What I *can* do, and have done below: pick the right directories for this
 business (not a generic SaaS list), write the exact copy for each one so

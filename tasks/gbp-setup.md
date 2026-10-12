@@ -40,11 +40,11 @@ Already claimed. The Google account that manages it sees the profile when search
 The address field currently starts with the company name and uses Google’s spellings `Kadavantha` and `Keralam`. Replace the whole address with the string below so it matches the site. Then fill the two gaps the dashboard is asking for: phone and hours.
 
 - **Business name:** `Elor Lighting PVT LTD` (already set)
-- **Address:** `63/499, Chalakuzhy, Gandhinagar Road, near the Fire and Rescue Station, Gandhi Nagar, Kadavanthra, Kochi, Kerala 682020`
-- **Phone:** `+91 99956 19470`
+- **Address:** `63/500, 1st Floor, Chalakuzhy, Gandhinagar Road, near the Fire and Rescue Station, Gandhi Nagar, Kadavanthra, Kochi, Kerala 682020`
+- **Phone:** `+91 88487 08529`
 - **Website:** `https://www.elorlighting.com/stores/kochi`
 - **Hours:** Mon–Sat, 9:30 AM – 8:30 PM · Closed Sunday
-- **WhatsApp:** `+91 88487 08529`, via Add WhatsApp on the dashboard. This is not the call number.
+- **WhatsApp:** `+91 88487 08529` (same number as calls), via Add WhatsApp on the dashboard.
 - **Primary category:** already `Lighting consultant`. Add `Lighting store` if the category list offers it. Do not remove the consultant category.
 
 ## Profile 3 — Kozhikode

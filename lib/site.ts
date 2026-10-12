@@ -25,11 +25,14 @@ export const site = {
   metaDescription:
     "Lighting design anywhere in India, with our own fittings. Free installation on custom lights. Centres in Kannur, Calicut and Kochi.",
 
-  // Calls stay on one line, on every store and in directories.
-  // WhatsApp is a separate number. Do not point wa.me links back at the call line.
+  // Elor uses ONE number for calls and WhatsApp: +91 88487 08529.
+  // +91 99956 19470 is the Celestial Lights line and appears only on the
+  // Celestial store pages (Kannur, Kozhikode) via `celestialPhone` below.
   email: "hello@elorlighting.com",
-  phone: "+91 99956 19470",
-  phoneHref: "tel:+919995619470",
+  phone: "+91 88487 08529",
+  phoneHref: "tel:+918848708529",
+  celestialPhone: "+91 99956 19470",
+  celestialPhoneHref: "tel:+919995619470",
   whatsappNumber: "+91 88487 08529",
   hours: "Mon-Sat · 9:30 AM to 8:30 PM IST",
 
@@ -64,9 +67,10 @@ export const site = {
  * centre at each. Kochi is Elor's full experience centre, not a third Celestial
  * store. Do not call all three "Celestial stores".
  *
- * Every store deliberately carries the one company number rather than its own
- * line, so all enquiries land in a single place that can be automated. This is
- * intentional duplication, not placeholder data left behind.
+ * Phones: the Elor (Kochi) centre carries the Elor number; the two Celestial
+ * stores carry the Celestial line. Address parts are stored separately so the
+ * PostalAddress schema gets a clean streetAddress plus locality/region/PIN;
+ * `address` is the display string built from them.
  *
  * `geo` is locality-level (OpenStreetMap Nominatim geocoding of the address
  * text), not a GPS-surveyed exact point — fine for LocalBusiness schema, but
@@ -78,11 +82,16 @@ export const stores = [
     city: "Kannur",
     brand: "Celestial Lights",
     kind: "Store and experience centre",
+    street:
+      "Ground Floor, P O Chovva, Kannothumchal, Elayavoor",
+    locality: "Kannur",
+    region: "Kerala",
+    postalCode: "670006",
     address:
       "Ground Floor, P O Chovva, Kannothumchal, Kannur, Elayavoor, Kerala 670006",
     hours: "Mon-Sat · 9:30 AM to 8:30 PM",
-    phone: site.phone,
-    phoneHref: site.phoneHref,
+    phone: site.celestialPhone,
+    phoneHref: site.celestialPhoneHref,
     maps: "https://maps.google.com/?q=Celestial+Lights+Chovva+Kannothumchal+Kannur+Kerala+670006",
     geo: { lat: 11.8739191, lng: 75.3881457 },
   },
@@ -90,22 +99,34 @@ export const stores = [
     city: "Kochi",
     brand: "Elor Lighting",
     kind: "Full experience centre",
+    street:
+      "63/500, 1st Floor, Chalakuzhy, Gandhinagar Road, near the Fire and Rescue Station, Gandhi Nagar, Kadavanthra",
+    locality: "Kochi",
+    region: "Kerala",
+    postalCode: "682020",
     address:
-      "63/499, Chalakuzhy, Gandhinagar Road, near the Fire and Rescue Station, Gandhi Nagar, Kadavanthra, Kochi, Kerala 682020",
+      "63/500, 1st Floor, Chalakuzhy, Gandhinagar Road, near the Fire and Rescue Station, Gandhi Nagar, Kadavanthra, Kochi, Kerala 682020",
     hours: "Mon-Sat · 9:30 AM to 8:30 PM",
     phone: site.phone,
     phoneHref: site.phoneHref,
-    maps: "https://maps.google.com/?q=Elor+Lighting+63/499+Chalakuzhy+Gandhinagar+Road+Kadavanthra+Kochi+682020",
+    maps: "https://maps.google.com/?q=Elor+Lighting+63/500+Chalakuzhy+Gandhinagar+Road+Kadavanthra+Kochi+682020",
     geo: { lat: 9.9889781, lng: 76.2951875 },
   },
   {
     city: "Kozhikode",
     brand: "Celestial Lights",
     kind: "Store and experience centre",
-    address: "Mavoor Road, Kozhikode, Kerala 673004", // placeholder, awaiting the real address
+    // placeholder, awaiting the real address
+    street:
+      "Mavoor Road",
+    locality: "Kozhikode",
+    region: "Kerala",
+    postalCode: "673004",
+    address:
+      "Mavoor Road, Kozhikode, Kerala 673004",
     hours: "Mon-Sat · 9:30 AM to 8:30 PM",
-    phone: site.phone,
-    phoneHref: site.phoneHref,
+    phone: site.celestialPhone,
+    phoneHref: site.celestialPhoneHref,
     maps: "https://maps.google.com/?q=Mavoor+Road+Kozhikode+Kerala",
     geo: { lat: 11.2579121, lng: 75.7987029 },
   },

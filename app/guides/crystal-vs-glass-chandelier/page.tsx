@@ -1,3 +1,4 @@
+import Link from "next/link";
 import type { Metadata } from "next";
 import { site } from "@/lib/site";
 import { breadcrumbSchema } from "@/lib/schema";
@@ -195,7 +196,7 @@ export default function MaterialsComparisonGuide() {
               <li><span className="tick">✓</span>Will anyone stand within a few metres of it? If not, crystal&rsquo;s detail is largely wasted &mdash; scale and silhouette matter more than material.</li>
               <li><span className="tick">✓</span>Is the room dimmable, or lit flat? Crystal needs a point source and some contrast to sparkle. Under uniform daylight-temperature downlights it looks inert.</li>
               <li><span className="tick">✓</span>Within a few kilometres of the coast? Rule out untreated brass, iron and mild steel before considering anything else.</li>
-              <li><span className="tick">✓</span>Can the ceiling take the weight, and can anyone reach it to clean it? Both questions have killed more crystal specifications than budget has.</li>
+              <li><span className="tick">✓</span>Can the ceiling take the weight, and can anyone reach it to clean it? Both questions have killed more crystal specifications than budget has. The routine is in <Link href="/guides/how-to-clean-a-crystal-chandelier" style={{ color: "var(--gold)" }}>how to clean a crystal chandelier</Link>.</li>
               <li><span className="tick">✓</span>Formal room or modern one? Crystal and glass carry different registers, and mixing the register with the interior is the mistake that no amount of quality fixes.</li>
             </ul>
           </Reveal>

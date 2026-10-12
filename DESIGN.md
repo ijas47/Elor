@@ -102,9 +102,10 @@ Calm, precise, quietly confident. No exclamation marks, no hype, no em dashes.
 
 ## Notes / next steps
 
-- **Calls**: `+91 99956 19470` on the site and on all three stores, from
-  `site.phone`. **WhatsApp**: `+91 88487 08529`, from `site.whatsappNumber`.
-  Do not point `wa.me` links back at the call line.
+- **Calls + WhatsApp (Elor, Kochi)**: `+91 88487 08529` only, from `site.phone`
+  / `site.whatsappNumber`. **Celestial Lights (Kannur, Kozhikode stores)**:
+  `+91 99956 19470`, from `site.celestialPhone`. Never use the Celestial
+  number for Elor.
 - **Email**: `hello@elorlighting.com` (`site.email`). The consultation form
   posts to that inbox through FormSubmit.
 - Kannur and Kochi addresses are real. The **Kozhikode address** is still a
