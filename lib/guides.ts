@@ -40,7 +40,7 @@ export const guides: Guide[] = [
   },
   {
     slug: "chandelier-for-living-room",
-    title: "Chandelier for a Living Room",
+    title: "Living Room Chandelier for Kerala Homes",
     dek: "Size it to the seating, clear the fan, and put the anchor in the slab before the ceiling closes.",
     tag: "Buying Guide",
     image: "/spaces/living.jpg",
@@ -70,7 +70,7 @@ export const guides: Guide[] = [
   },
   {
     slug: "staircase-lighting-design",
-    title: "Staircase Lighting Design",
+    title: "Staircase Lighting for Kerala Homes",
     dek: "Light the nose of each tread, and hang the void from the slab. The two are separate decisions.",
     tag: "Technical",
     image: "/collections/staircase-cascade.jpg",

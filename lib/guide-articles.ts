@@ -44,16 +44,16 @@ const UPDATED = "5 October 2026";
 export const guideArticles: GuideArticle[] = [
   {
     slug: "chandelier-for-living-room",
-    metaTitle: "Chandelier for a Living Room",
+    metaTitle: "Living Room Chandelier for Kerala Homes: Size, Fan, Ceiling",
     description:
-      "Size a chandelier for a living room from the seating, the ceiling, and the fan clearance. Shelf pieces are at Celestial Lights. Elor makes the custom piece.",
+      "How to choose a living room chandelier for a Kerala home: size it to the seating, keep it apart from the fan, anchor it to the slab, and pick a material that suits the humidity.",
     crumb: "Chandelier for a Living Room",
-    eyebrow: `Buying guide · Updated ${UPDATED}`,
-    h1: "The seating decides",
-    h1Em: "the chandelier.",
+    eyebrow: "Buying guide · Updated 12 October 2026",
+    h1: "A living room chandelier",
+    h1Em: "for a Kerala home.",
     lede: [
       {
-        text: "A chandelier for a living room is sized to the sofas, not to the length of the hall. Ceiling height, a fan if the room has one, and the slab above the gypsum decide the rest.",
+        text: "Choose a living room chandelier in Kerala by sizing it to the seating group, not the whole hall. Keep it on a separate point from the ceiling fan, fix it to the slab before the false ceiling closes, and pick a material and finish that will stand the humidity. Then put it on its own switch.",
       },
     ],
     image: "/spaces/living.jpg",
@@ -61,50 +61,142 @@ export const guideArticles: GuideArticle[] = [
       "A living room with a chandelier, cove light in the tray ceiling, and a lamp beside the sofa",
     sections: [
       {
-        h: "Measure the seating, then the drop",
+        h: "What size chandelier suits a Kerala living room?",
         paragraphs: [
           [
             {
-              text: "The piece hangs over the part of the room where people sit. A diameter taken from the whole hall lands too large once the sofas are in. ",
+              text: "Size it to the part of the room where people sit. Many Kerala halls run straight into the dining area, sometimes into the foyer as well, and a diameter taken from the full length of that space lands too large once the sofas are in. Measure the seating group, then the clear height from floor to finished ceiling. ",
             },
-            { text: "The size calculator", href: "/guides/chandelier-size-calculator" },
-            { text: " turns the room into a diameter and a drop. Use that before anyone orders a fitting from a photograph." },
+            { text: "The chandelier size calculator", href: "/guides/chandelier-size-calculator" },
+            { text: " turns those two numbers into a diameter and a drop. Use it before anyone orders a fitting from a photograph, because a photograph never shows the ceiling height it was taken under." },
           ],
           [
             {
-              text: "The bottom of the piece stays clear of anyone walking past. In a room with a ceiling fan, the fan and the chandelier do not share a point. Clearances and the usual layouts are in the ",
+              text: "The bottom of the piece has to clear anyone walking past, and it should not sit in the line of sight between two people talking across the sofas. If the dining table shares the room, the dining area usually gets its own light. One large piece trying to cover both ends up in the wrong place for each.",
             },
-            { text: "fan guide", href: "/guides/chandelier-with-ceiling-fan" },
+          ],
+        ],
+      },
+      {
+        h: "Can a chandelier and a ceiling fan share a living room?",
+        paragraphs: [
+          [
+            {
+              text: "Yes, but not the same point. In most Kerala homes the fan runs for much of the year, so the living room has to work with it rather than around it. The fan and the chandelier each get their own position and their own anchor, far enough apart that the blades never reach the piece and the fan does not set the drops swinging. A fan moving air past crystal also carries dust onto it, which matters later when the piece needs cleaning.",
+            },
+          ],
+          [
+            {
+              text: "Where the ceiling is only one storey high, a low, close-fitting piece over the seating with the fan elsewhere is often the cleaner answer. The usual layouts and clearances are in ",
+            },
+            { text: "chandelier with a ceiling fan", href: "/guides/chandelier-with-ceiling-fan" },
             { text: "." },
           ],
         ],
       },
       {
-        h: "The anchor goes in before the ceiling closes",
+        h: "What changes in a double-height living room?",
         paragraphs: [
           [
             {
-              text: "Gypsum and POP do not carry a chandelier. The fixing goes into the slab, on a point marked while the ceiling is still open. What each ceiling can hold is the ",
+              text: "A double-height void, common in Kerala villas and in homes built by families working abroad, gives the chandelier more room and makes every decision harder to undo. The piece is seen from the floor, from the stair, and from the upper landing, so it has to read from above as well as below. The drop is set by where it is seen from, not by a stock length.",
+            },
+          ],
+          [
+            {
+              text: "The anchor goes into the slab at the top of the void, and the wiring and access are planned at the same time. Someone will need to reach that piece to clean it and to change a lamp. If the stair wraps the void, the ",
+            },
+            { text: "staircase lighting guide", href: "/guides/staircase-lighting-design" },
+            { text: " covers the clearances from the flight and the handrail." },
+          ],
+        ],
+      },
+      {
+        h: "Can a false ceiling hold a living room chandelier?",
+        paragraphs: [
+          [
+            {
+              text: "The decorative ceiling does not carry the weight. Gypsum and POP are finishes, not structure. The fixing goes into the RCC slab, on a point marked while the false ceiling is still open, and the ceiling is then built around it. Leave that until the gypsum has closed and the choices are to cut the ceiling or to hang something lighter than you wanted. What each ceiling build-up can and cannot hold is in the ",
             },
             { text: "false-ceiling guide", href: "/guides/false-ceiling-chandelier-weight" },
-            { text: ". Crystal, glass, and acrylic behave differently in weight and in a humid room. That comparison is ",
+            { text: "." },
+          ],
+          [
+            {
+              text: "The same moment is when the circuits are decided. Cove light, spots, and the chandelier are three jobs and work better on three switches, so the room can be bright for guests and soft in the evening. How that is laid out is in ",
+            },
+            { text: "ceiling and lighting design", href: "/guides/ceiling-and-lighting-design" },
+            { text: "." },
+          ],
+        ],
+      },
+      {
+        h: "Which chandelier material lasts in Kerala's humidity?",
+        paragraphs: [
+          [
+            {
+              text: "Crystal, glass, and acrylic all behave differently in weight, in the light they give, and in how much cleaning they ask for. Crystal sparkles most and shows dust most. Glass glows rather than sparkles and is more forgiving. The comparison is in ",
             },
             { text: "crystal, glass, and acrylic", href: "/guides/crystal-vs-glass-chandelier" },
             { text: "." },
           ],
+          [
+            {
+              text: "The metal matters as much as the drops. A living room near the coast in Kochi, Kannur, or Kozhikode, or one opening onto a nalukettu courtyard, sees damp air for months. Untreated brass and iron mark in salt air, so ask for the finish in writing. The ",
+            },
+            { text: "brass guide", href: "/guides/brass-chandelier" },
+            { text: " and the " },
+            { text: "coastal guide", href: "/guides/coastal-lighting-kerala" },
+            { text: " explain what to ask for. For a traditional house where a crystal piece would look out of place, the " },
+            { text: "wooden chandelier guide", href: "/guides/wooden-chandelier" },
+            { text: " is the other route." },
+          ],
         ],
       },
       {
-        h: "Made for the room, or planned first",
+        h: "How should a living room chandelier be switched?",
         paragraphs: [
           [
-            { text: "When the stock sizes do not fit a living room, send a picture and the measurements and Elor makes the piece. That process, with the timeline and what it costs, is on " },
+            {
+              text: "On its own switch, and ideally on a dimmer if the fitting and the lamps support one. A chandelier is the object people notice, but it is rarely the light anyone wants for a quiet evening with the fan on and the television running. Lamps beside the sofa and a soft cove carry most evenings. The chandelier comes on when guests arrive, for a function, or for an occasion such as Onam or a wedding visit. Choose a warm colour of light so it flatters skin and wood; the ",
+            },
+            { text: "Kelvin, CRI, and beam guide", href: "/guides/colour-of-light" },
+            { text: " explains the numbers on the box." },
+          ],
+        ],
+      },
+      {
+        h: "How do I keep a living room chandelier clean?",
+        paragraphs: [
+          [
+            {
+              text: "Plan for it before you buy. A piece over the seating at normal height can be wiped in place from a stable platform. A piece in a double-height void needs proper access, so decide at the start who will clean it and how. The routine, with the power off at the breaker, is in ",
+            },
+            { text: "how to clean a crystal chandelier", href: "/guides/how-to-clean-a-crystal-chandelier" },
+            { text: "." },
+          ],
+        ],
+      },
+      {
+        h: "Should I buy a ready chandelier or have one made?",
+        paragraphs: [
+          [
+            {
+              text: "If a piece in the collection already fits the seating, the ceiling height, and the finish you want, it is a shelf fitting from Celestial Lights. You can see it at the Celestial Lights stores in Kannur and Kozhikode, or at the Elor experience centre in Kochi. When the void is unusual, the ceiling has an off-centre beam, or the picture you have saved is not something anyone stocks, Elor designs and makes the piece. How that works, with timelines and what drives the cost, is on ",
+            },
             { text: "custom chandeliers", href: "/customisation" },
-            { text: ". If the wiring and the ceiling are still open, start with the seating plan and the ceiling drawing: " },
-            { text: "book a lighting consultation", href: "/consultation" },
-            { text: " and the plan is drawn before anything is bought. Comparing showrooms first? The " },
-            { text: "chandelier shop guide", href: "/guides/how-to-choose-a-chandelier-shop" },
-            { text: " lists what to ask." },
+            { text: ", and the " },
+            { text: "pricing guide", href: "/guides/chandelier-pricing-guide" },
+            { text: " covers budgeting." },
+          ],
+          [
+            {
+              text: "If the ceiling is still open and the room is still being drawn, start with the plan rather than the piece. ",
+            },
+            { text: "Book a lighting consultation", href: "/consultation" },
+            { text: " and the living room is planned with the rest of the house before anything is bought. The method is in " },
+            { text: "how a lighting plan is built", href: "/guides/how-a-lighting-plan-is-built" },
+            { text: "." },
           ],
         ],
       },
@@ -115,22 +207,32 @@ export const guideArticles: GuideArticle[] = [
       "A double-height void, an off-centre beam, or a picture nobody stocks is a piece Elor designs and makes.",
     faqs: [
       {
-        q: "What size chandelier works in a living room?",
+        q: "What size chandelier works in a Kerala living room?",
         a: "Size it to the seating group and the ceiling height, not to the full length of the hall. The chandelier size calculator on this site turns those two measurements into a diameter and a drop.",
       },
       {
-        q: "Can the living-room false ceiling hold it?",
-        a: "The decorative ceiling does not carry the weight. The anchor goes into the slab before the gypsum or POP closes. The false-ceiling guide covers what each build-up can and cannot hold.",
+        q: "Can I have a chandelier and a ceiling fan in the same living room?",
+        a: "Yes, on separate points with their own anchors, far enough apart that the blades never reach the piece. The fan guide covers the usual layouts.",
       },
       {
-        q: "Where do I see a ready living-room chandelier?",
-        a: "Shelf fittings are at Celestial Lights. See the range, and we send what is in the collection. The online shop is still being built, so that link opens a conversation.",
+        q: "Can the living-room false ceiling hold the chandelier?",
+        a: "No. Gypsum and POP do not carry the weight. The anchor goes into the slab before the false ceiling closes, and the ceiling is built around it.",
       },
       {
-        q: "When is the living-room light custom?",
-        a: "When the ceiling, the reference, or the drop is not a stock size. Elor designs and makes that piece. Most custom work is ready in 3 to 6 weeks, with free installation. A ready fitting comes with installation support.",
+        q: "Will a chandelier survive Kerala's humidity?",
+        a: "The right one will. Choose the drops for how much cleaning you will do, and ask for a sealed finish on the metal, especially near the coast or beside an open courtyard.",
+      },
+      {
+        q: "How should a chandelier in a double-height living room be planned?",
+        a: "Size the drop to where it is seen from, including the stair and the upper landing. Fix the anchor to the top slab and plan access for cleaning and lamp changes at the same time.",
+      },
+      {
+        q: "When is a living-room chandelier custom?",
+        a: "When the ceiling, the reference picture, or the drop is not a stock size. Elor designs and makes that piece. Custom work is usually ready in 3 to 6 weeks, with free installation. A ready fitting comes with installation support.",
       },
     ],
+    published: "2026-10-05",
+    modified: "2026-10-12",
   },
   {
     slug: "ceiling-and-lighting-design",
@@ -318,43 +420,80 @@ export const guideArticles: GuideArticle[] = [
   },
   {
     slug: "staircase-lighting-design",
-    metaTitle: "Staircase Lighting Design",
+    metaTitle: "Staircase Lighting for Kerala Homes: Treads, Voids, Cascades",
     description:
-      "Staircase lighting design lights each tread, then hangs the void from the slab. Shelf cascades are at Celestial Lights. A piece made for the void is Elor.",
+      "Staircase lighting design for Kerala homes: light each tread without glare, hang the double-height void from the slab, keep the fan and the cascade apart, and plan access for cleaning.",
     crumb: "Staircase Lighting Design",
-    eyebrow: `Technical · Updated ${UPDATED}`,
+    eyebrow: "Technical · Updated 12 October 2026",
     h1: "Light the tread.",
     h1Em: "Hang the void.",
     lede: [
       {
-        text: "Staircase lighting design is two decisions. One puts light on the nose of each tread so the step reads at night. The other hangs a piece in the void, from the slab, on its own anchor.",
+        text: "Staircase lighting in a Kerala home is two separate decisions. First, light the edge of every tread so each step reads at night without a lamp glaring into your eyes. Second, if the stair has a double-height void, hang the decorative piece from the slab, clear of the handrail, with a way to reach it for cleaning.",
       },
     ],
     image: "/collections/staircase-cascade.jpg",
     imageAlt: "A red crystal cascade hung in a spiral stair, with a wall light on the landing",
     sections: [
       {
-        h: "The step has to read without a glare in the eyes",
+        h: "How should stair treads be lit?",
         paragraphs: [
           [
             {
-              text: "A washer on the wall, or a small light at the tread, shows the edge of the step. A downlight aimed down the flight from the landing glares as you climb. The fitting is chosen so the lamp stays hidden from someone on the stair. The same idea, in a room, is ",
+              text: "The job is to show the edge of each step. A low light set into the wall beside the treads, or a small fitting at each tread, puts light where the foot goes. A wall washer along the flight can do the same over a wider stair. What fails is a downlight on the landing ceiling aimed down the flight: it lights the steps and glares straight into the eyes of anyone climbing. The fitting is chosen so the lamp stays hidden from someone on the stair. The same idea in a room is ",
             },
             { text: "why a downlight glares", href: "/guides/why-downlights-glare" },
+            { text: "." },
+          ],
+          [
+            {
+              text: "Put the tread lights on their own circuit, switchable from the top and the bottom of the flight. Late at night they are often the only light anyone needs, and the colour should be warm enough not to wake the house. Choosing the colour of light is covered in the ",
+            },
+            { text: "Kelvin, CRI, and beam guide", href: "/guides/colour-of-light" },
             { text: "." },
           ],
         ],
       },
       {
-        h: "The void is not a dining drop",
+        h: "What goes in a double-height stair void?",
         paragraphs: [
           [
             {
-              text: "A cascade in a double-height stair is sized to the void, not to a table. The bottom stays clear of anyone on the flight and of the handrail. ",
+              text: "Many Kerala houses put the stair in a double-height void, often beside the living room or the entrance, and that void is where a cascade or a long chandelier usually goes. It is not a dining drop. The piece is sized to the void, not to a table, and it is seen from the floor, from every step of the flight, and from the upper landing, so it has to look right from above as well as below.",
+            },
+          ],
+          [
+            {
+              text: "The bottom of the piece stays clear of anyone on the flight and of the handrail. A spiral or a turning stair makes this tighter, because the clear space changes at every step. ",
             },
             { text: "The size calculator", href: "/guides/chandelier-size-calculator" },
+            { text: " is the first check. Then draw the stair in section, with the piece in it, before anything is ordered." },
+          ],
+        ],
+      },
+      {
+        h: "How should the landing and the stair wall be lit?",
+        paragraphs: [
+          [
             {
-              text: " is the check. The fixing is in the slab at the top, before that ceiling closes. What the ceiling can carry is the ",
+              text: "The landing is where people turn, stop, and sometimes look back down into the void, so it wants its own light rather than borrowed spill from the chandelier. A wall light at the turn, at a height nobody's head will meet, marks the change of direction. On a long straight flight, the wall beside the stair is often the best surface in the house for a picture light or a quiet wash, because everyone passes it slowly.",
+            },
+          ],
+          [
+            {
+              text: "Keep the switching simple. The tread lights, the landing light, and the piece in the void are three circuits, each reachable from both ends of the stair. The decorative piece is then something you switch on for an evening or for guests, not the only way to see the steps. How circuits are grouped across a whole house is set out in ",
+            },
+            { text: "how a lighting plan is built", href: "/guides/how-a-lighting-plan-is-built" },
+            { text: "." },
+          ],
+        ],
+      },
+      {
+        h: "Where is a staircase chandelier fixed?",
+        paragraphs: [
+          [
+            {
+              text: "To the slab at the top of the void, on its own anchor, set while the ceiling there is still open. A false ceiling at the top of the stair is a finish and does not carry the weight. Long cascades with many drops can be heavy, and the weight sits on that one point. What each ceiling build-up can and cannot hold is in the ",
             },
             { text: "false-ceiling guide", href: "/guides/false-ceiling-chandelier-weight" },
             { text: "." },
@@ -362,18 +501,65 @@ export const guideArticles: GuideArticle[] = [
         ],
       },
       {
-        h: "Made for the room, or planned first",
+        h: "Can a ceiling fan sit near a stair cascade?",
         paragraphs: [
           [
-            { text: "When the stock sizes do not fit a stair void, send a picture and the measurements and Elor makes the piece. That process, with the timeline and what it costs, is on " },
-            { text: "custom chandeliers", href: "/customisation" },
-            { text: ". If the wiring and the ceiling are still open, start with the section through the stair: " },
-            { text: "book a lighting consultation", href: "/consultation" },
-            { text: " and the plan is drawn before anything is bought. Comparing showrooms first? The " },
-            { text: "chandelier shop guide", href: "/guides/how-to-choose-a-chandelier-shop" },
-            { text: " lists what to ask. A crystal piece in a stair void has to be reachable for cleaning. The routine is in " },
+            {
+              text: "Not close to it. Kerala homes run fans for much of the year, and a fan near the void sets the drops swinging and carries dust onto every strand. If the landing or the hall beside the stair needs a fan, keep it well away from the piece and give each its own point. The layouts that work are in ",
+            },
+            { text: "chandelier with a ceiling fan", href: "/guides/chandelier-with-ceiling-fan" },
+            { text: "." },
+          ],
+        ],
+      },
+      {
+        h: "How does humidity affect staircase lighting?",
+        paragraphs: [
+          [
+            {
+              text: "A stair beside an open courtyard, as in a nalukettu, or a flight with a window that stays open through the monsoon, sees damp air for months. Fittings near the opening want a rating for that, and metal finishes should be specified for humidity, not chosen from a dry showroom. Untreated brass and iron mark near the coast. The ",
+            },
+            { text: "coastal guide", href: "/guides/coastal-lighting-kerala" },
+            { text: " sets out what fails first, and " },
+            { text: "IP rating for outdoor lights", href: "/guides/ip-rating-for-outdoor-lights" },
+            { text: " explains the numbers." },
+          ],
+        ],
+      },
+      {
+        h: "How do I clean a chandelier over a staircase?",
+        paragraphs: [
+          [
+            {
+              text: "Decide this before the piece is bought. A cascade over a flight cannot be reached from a household ladder on the steps. It needs a stable platform or a fixing that lets the piece be lowered, and a second person. Plan the access with the anchor. The routine itself, with the power off at the breaker, is in ",
+            },
             { text: "how to clean a crystal chandelier", href: "/guides/how-to-clean-a-crystal-chandelier" },
             { text: "." },
+          ],
+        ],
+      },
+      {
+        h: "Should a stair piece be ready-made or custom?",
+        paragraphs: [
+          [
+            {
+              text: "If a cascade in the collection fits the width and the drop, it is a shelf piece from Celestial Lights, which you can see at the stores in Kannur and Kozhikode or at the Elor experience centre in Kochi. When the void has an odd width, a turn, or joinery the finish has to match, send a picture and the measurements and Elor makes the piece. That process, with the timeline and what drives the cost, is on ",
+            },
+            { text: "custom chandeliers", href: "/customisation" },
+            { text: "." },
+          ],
+          [
+            {
+              text: "If the wiring and the ceiling are still open, start with the section through the stair. ",
+            },
+            { text: "Book a lighting consultation", href: "/consultation" },
+            { text: " and the stair is planned with the rest of the house. The " },
+            { text: "home lighting design guide", href: "/guides/home-lighting-design" },
+            { text: " covers that whole-house plan, and if the void opens onto the hall, the " },
+            { text: "living room guide", href: "/guides/chandelier-for-living-room" },
+            { text: " covers the room beside it. Comparing showrooms first? The " },
+            { text: "chandelier shop guide", href: "/guides/how-to-choose-a-chandelier-shop" },
+            { text: " lists what to ask." },
           ],
         ],
       },
@@ -385,21 +571,31 @@ export const guideArticles: GuideArticle[] = [
     faqs: [
       {
         q: "What does staircase lighting design include?",
-        a: "Light on the treads, so each step is readable at night, and a decision about the void. The decorative piece, if there is one, hangs from the slab on its own anchor.",
+        a: "Light on the treads, so each step reads at night without glare, and a decision about the void. The decorative piece, if there is one, hangs from the slab on its own anchor.",
+      },
+      {
+        q: "What is the best way to light stair treads?",
+        a: "Low lights in the wall beside the steps, or a small fitting at each tread, on their own circuit. Avoid a downlight on the landing aimed down the flight, because it glares at anyone climbing.",
       },
       {
         q: "Can a false ceiling at the top of the stair hold a cascade?",
-        a: "The gypsum cannot. The anchor is fixed to the slab while that ceiling is open. The false-ceiling guide sets out the sequence.",
+        a: "No. The gypsum is a finish. The anchor is fixed to the slab while that ceiling is open. The false-ceiling guide sets out the sequence.",
       },
       {
-        q: "How long is the drop?",
-        a: "Long enough to belong to the void, and short of the handrail and of anyone using the stair. Measure the clear height and use the size calculator before a piece is ordered from a picture.",
+        q: "How long should a staircase chandelier drop?",
+        a: "Long enough to belong to the void, and short of the handrail and of anyone using the stair. Measure the clear height, use the size calculator, and draw the stair in section before ordering.",
+      },
+      {
+        q: "How is a chandelier over a staircase cleaned?",
+        a: "Not from a household ladder on the steps. Plan a stable platform or a way to lower the piece when the anchor is set. The crystal cleaning guide has the routine.",
       },
       {
         q: "Is a stair piece from the shelf or made?",
         a: "If the collection has a cascade that fits the width and the drop, it is at Celestial Lights. If it has to be made for that void, Elor designs and builds it, usually in 3 to 6 weeks, with free installation. A ready fitting comes with installation support.",
       },
     ],
+    published: "2026-10-05",
+    modified: "2026-10-12",
   },
   {
     slug: "bedroom-lighting-design",
