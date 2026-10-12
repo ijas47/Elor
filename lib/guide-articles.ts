@@ -696,7 +696,7 @@ export const guideArticles: GuideArticle[] = [
       ],
     },
     shelf:
-      "A crystal piece that already exists in the collection is a shelf fitting at Celestial Lights. Replacement drops can be asked for in the same chat.",
+      "A crystal piece that already exists in the collection is a shelf fitting at Celestial Lights.",
     custom:
       "A crystal chandelier sized and hung for a room nobody can easily reach is designed by Elor with access for cleaning drawn in from the start.",
     faqs: [
@@ -713,8 +713,8 @@ export const guideArticles: GuideArticle[] = [
         a: "A ceiling fan running most of the year carries dust onto every facet, and crystal shows it more than glass or acrylic. A kitchen or a road-facing room adds more.",
       },
       {
-        q: "Who can clean or service a high chandelier in Kerala?",
-        a: "Ask the people who installed it. For a piece from Elor or Celestial Lights, message us with a photo and the ceiling height and we will tell you what the job needs.",
+        q: "Who should clean a chandelier hung high?",
+        a: "If nobody can reach it from a stable platform with a second person holding it, do not use a household ladder. Ask whoever installed it how the piece comes down safely.",
       },
     ],
     published: "2026-10-12",
@@ -764,10 +764,8 @@ export const guideArticles: GuideArticle[] = [
         paragraphs: [
           [
             {
-              text: "No. The rating covers water and dust getting in. It says nothing about salt air eating the body, the screws, or the bracket. In Kochi, Kannur, Kozhikode, or anywhere on the coast, ask for the finish and the fixings as well as the number. ",
+              text: "No. The rating covers water and dust getting in. It says nothing about salt air eating the body, the screws, or the bracket. In Kochi, Kannur, Kozhikode, or anywhere on the coast, ask for the finish and the fixings as well as the number. Untreated brass and iron pit in salt air.",
             },
-            { text: "Why brass and iron pit", href: "/guides/coastal-lighting-kerala" },
-            { text: " is covered there too." },
           ],
         ],
       },

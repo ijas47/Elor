@@ -773,6 +773,7 @@
   padding: 30px 0 32px;
   border-bottom: 1px solid var(--line);
 }
+.register-row h2,
 .register-row h3 {
   font-family: var(--serif);
   font-size: clamp(20px, 1.7vw, 25px);
