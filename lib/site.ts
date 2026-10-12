@@ -127,7 +127,8 @@ export const stores = [
     phone: site.celestialPhone,
     phoneHref: site.celestialPhoneHref,
     maps: "https://maps.google.com/?q=Celestial+Lights+Kozhikode+Kerala",
-    geo: { lat: 11.2579121, lng: 75.7987029 },
+    // No geo until the real store location is confirmed.
+    geo: null,
   },
 ] as const;
 

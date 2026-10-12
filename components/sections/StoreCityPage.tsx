@@ -46,7 +46,7 @@ export function StoreCityPage({ city }: { city: StoreCity }) {
     url: `${site.domain}${path}`,
     hasMap: store.maps,
     parentOrganization: { "@type": "Organization", name: site.name, url: site.domain },
-    geo: { "@type": "GeoCoordinates", latitude: store.geo.lat, longitude: store.geo.lng },
+    ...(store.geo ? { geo: { "@type": "GeoCoordinates", latitude: store.geo.lat, longitude: store.geo.lng } } : {}),
     areaServed: { "@type": "City", name: store.city },
   };
 
