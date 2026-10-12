@@ -7,7 +7,7 @@ import { Reveal, Stagger, StaggerItem } from "@/components/motion/Reveal";
 import { MagneticButton } from "@/components/motion/MagneticButton";
 import { RelatedGuides } from "@/components/ui/RelatedGuides";
 
-const TITLE = "Chandelier Size Calculator — Diameter, Drop & Fan Clearance";
+const TITLE = "Chandelier Size Calculator: Diameter, Drop & Fan Clearance";
 // Shorter than TITLE, which stays as the Article headline and H1 subject.
 const META_TITLE = "Chandelier Size Calculator";
 const DESC =
@@ -32,11 +32,11 @@ const rules = [
   },
   {
     h: "Drop: 2.5 to 3 inches of fixture height per foot of ceiling",
-    p: "A 10 ft ceiling carries 25–30 inches of fixture, about 65–75 cm. Cascade pieces built for a double-height void are the exception — those are measured to the actual vertical distance between floors.",
+    p: "A 10 ft ceiling carries 25–30 inches of fixture, about 65–75 cm. Cascade pieces built for a double-height void are the exception. Those are measured to the actual vertical distance between floors.",
   },
   {
     h: "Bottom of the fixture: 2.1 m above the floor, minimum",
-    p: "Anywhere people walk. Over a dining table the rule changes entirely — 75 to 90 cm above the tabletop, so sightlines across the table stay open.",
+    p: "Anywhere people walk. Over a dining table the rule changes entirely: 75 to 90 cm above the tabletop, so sightlines across the table stay open.",
   },
 ];
 
@@ -59,11 +59,11 @@ const faqs = [
   },
   {
     q: "Does the calculator work for double-height voids and stairwells?",
-    a: "Use it as a starting point only. In a void the drop is set by the vertical distance between floors and by where the piece is seen from — often a mezzanine or landing rather than from directly below. Those we measure on site.",
+    a: "Use it as a starting point only. In a void the drop is set by the vertical distance between floors and by where the piece is seen from, which is often a mezzanine or landing rather than directly below. Those we measure on site.",
   },
   {
     q: "Is it better to go slightly larger or slightly smaller?",
-    a: "Slightly larger, within the clearance limits. Undersizing is the single most common mistake we correct — a fixture that looked substantial in a showroom reads as a pendant once it is up in a real room.",
+    a: "Slightly larger, within the clearance limits. Undersizing is the single most common mistake we correct. A fixture that looked substantial in a showroom reads as a pendant once it is up in a real room.",
   },
 ];
 
@@ -138,8 +138,8 @@ export default function SizeCalculatorGuide() {
             <p className="lede" style={{ marginTop: 22 }}>
               Put in the room and get back a diameter, a drop and a mounting
               height. The sizing rules are the standard ones. The two checks
-              underneath them &mdash; ceiling fan clearance and what your false
-              ceiling can actually hold &mdash; are the ones that decide whether
+              underneath them (ceiling fan clearance and what your false
+              ceiling can actually hold) are the ones that decide whether
               the fixture works once it is up.
             </p>
           </Reveal>
@@ -151,7 +151,7 @@ export default function SizeCalculatorGuide() {
           <Reveal><ChandelierCalculator /></Reveal>
           <Reveal delay={0.08}>
             <p className="form-note" style={{ marginTop: 14 }}>
-              Nothing is sent anywhere &mdash; this runs entirely in your browser.
+              Nothing is sent anywhere. This runs entirely in your browser.
               Treat the output as a starting range, not a specification: voids,
               stairwells and sloped ceilings all change the answer, which is why
               we measure on site before fabricating anything.

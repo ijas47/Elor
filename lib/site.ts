@@ -15,7 +15,7 @@ export const site = {
   tagline: "Lighting plans, supply, and custom chandeliers. By Celestial Lights.",
   domain: "https://www.elorlighting.com",
   description:
-    "Elor Lighting is the lighting consultancy of Celestial Lights. We design lighting for sites anywhere in India and supply our own fittings. Custom-designed lights include free installation. Ready fittings and everything else come with installation support. The plan is written in DIALux. Custom chandeliers are made in our factory. Experience centres and the office are in Kerala: Celestial Lights in Kannur and Calicut, and a full Elor experience centre in Kochi. An online store for the range is being built.",
+    "Elor Lighting is the lighting consultancy of Celestial Lights. We design lighting for sites anywhere in India and supply our own fittings. We install custom lights and give installation support for everything else. The plan is written in DIALux. Custom chandeliers are made in our factory. Experience centres and the office are in Kerala: Celestial Lights in Kannur and Calicut, and a full Elor experience centre in Kochi. An online store for the range is being built.",
   /**
    * `description` above is the full entity description — it feeds Organization
    * schema and llms.txt, where length is fine. `metaDescription` is the SERP
@@ -23,7 +23,7 @@ export const site = {
    * location and its call to action before anyone read them.
    */
   metaDescription:
-    "Lighting design anywhere in India, with our own fittings. Free installation on custom lights. Centres in Kannur, Calicut and Kochi.",
+    "Lighting design anywhere in India, with our own fittings. We install custom lights and give installation support for everything else. Centres in Kannur, Calicut and Kochi.",
 
   // Elor uses ONE number for calls and WhatsApp: +91 88487 08529.
   // +91 99956 19470 is the Celestial Lights line and appears only on the

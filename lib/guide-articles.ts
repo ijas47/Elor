@@ -229,7 +229,7 @@ export const guideArticles: GuideArticle[] = [
       },
       {
         q: "When is a living-room chandelier custom?",
-        a: "When the ceiling, the reference picture, or the drop is not a stock size. Elor designs and makes that piece. Custom work is usually ready in 3 to 6 weeks, with free installation. A ready fitting comes with installation support.",
+        a: "When the ceiling, the reference picture, or the drop is not a stock size. Elor designs and makes that piece. Custom work is usually ready in 3 to 6 weeks. We install custom lights and give installation support for everything else.",
       },
     ],
     published: "2026-10-05",
@@ -410,7 +410,7 @@ export const guideArticles: GuideArticle[] = [
       },
       {
         q: "Where do the fittings come from?",
-        a: "Ready fittings are at Celestial Lights. Anything the ceiling still needs, and that the collection does not have, is designed and made by Elor, usually in 3 to 6 weeks. Free installation is on the custom piece. Ready fittings come with installation support.",
+        a: "Ready fittings are at Celestial Lights. Anything the ceiling still needs, and that the collection does not have, is designed and made by Elor, usually in 3 to 6 weeks. We install custom lights and give installation support for everything else.",
       },
     ],
     published: "2026-10-05",
@@ -607,7 +607,7 @@ export const guideArticles: GuideArticle[] = [
       },
       {
         q: "What is made, and what is from the shelf?",
-        a: "Shelf fittings are at Celestial Lights. Elor writes the plan and makes the custom pieces, usually in 3 to 6 weeks. Free installation is on custom-designed lights. Ready fittings come with installation support. Warranty is up to 5 years.",
+        a: "Shelf fittings are at Celestial Lights. Elor writes the plan and makes the custom pieces, usually in 3 to 6 weeks. We install custom lights and give installation support for everything else. Warranty is up to 5 years.",
       },
     ],
     published: "2026-10-05",
@@ -786,7 +786,7 @@ export const guideArticles: GuideArticle[] = [
       },
       {
         q: "Is a stair piece from the shelf or made?",
-        a: "If the collection has a cascade that fits the width and the drop, it is at Celestial Lights. If it has to be made for that void, Elor designs and builds it, usually in 3 to 6 weeks, with free installation. A ready fitting comes with installation support.",
+        a: "If the collection has a cascade that fits the width and the drop, it is at Celestial Lights. If it has to be made for that void, Elor designs and builds it, usually in 3 to 6 weeks. We install custom lights and give installation support for everything else.",
       },
     ],
     published: "2026-10-05",
@@ -986,7 +986,7 @@ export const guideArticles: GuideArticle[] = [
       },
       {
         q: "Can the bedroom light be made for the room?",
-        a: "Yes. A stock fitting comes from Celestial Lights. A piece made for the ceiling or the headboard is Elor, usually in 3 to 6 weeks, with free installation. Ready fittings come with installation support.",
+        a: "Yes. A stock fitting comes from Celestial Lights. A piece made for the ceiling or the headboard is Elor, usually in 3 to 6 weeks. We install custom lights and give installation support for everything else.",
       },
     ],
     published: "2026-10-05",
@@ -1173,7 +1173,7 @@ export const guideArticles: GuideArticle[] = [
       },
       {
         q: "Is the kitchen pendant custom?",
-        a: "A standard length from the collection is at Celestial Lights. A piece made to the island is designed and built by Elor, usually in 3 to 6 weeks, with free installation. Ready fittings come with installation support.",
+        a: "A standard length from the collection is at Celestial Lights. A piece made to the island is designed and built by Elor, usually in 3 to 6 weeks. We install custom lights and give installation support for everything else.",
       },
     ],
     published: "2026-10-05",
@@ -1356,7 +1356,7 @@ export const guideArticles: GuideArticle[] = [
       },
       {
         q: "Can you make a wooden piece to match the furniture?",
-        a: "Yes. Send the timber, the span, and a photograph of the joinery. Elor designs and makes that piece, usually in 3 to 6 weeks, with free installation.",
+        a: "Yes. Send the timber, the span, and a photograph of the joinery. Elor designs and makes that piece, usually in 3 to 6 weeks. We install custom lights and give installation support for everything else.",
       },
       {
         q: "Does the ceiling hold a timber frame?",
@@ -1543,7 +1543,7 @@ export const guideArticles: GuideArticle[] = [
       },
       {
         q: "Can Elor make a brass piece to a drawing?",
-        a: "Yes. Send the diameter, the finish, and the ceiling height. Custom work is usually 3 to 6 weeks, with free installation. A ready fitting comes with installation support. Warranty is up to 5 years.",
+        a: "Yes. Send the diameter, the finish, and the ceiling height. Custom work is usually 3 to 6 weeks. We install custom lights and give installation support for everything else. Warranty is up to 5 years.",
       },
     ],
     published: "2026-10-05",
@@ -1608,7 +1608,7 @@ export const guideArticles: GuideArticle[] = [
     howTo: {
       name: "How to clean a crystal chandelier",
       steps: [
-        { h: "Switch off at the breaker", p: "Turn the circuit off at the distribution board, not only at the wall switch, and let the lamps cool." },
+        { h: "Switch off at the breaker", p: "Turn the circuit off at the distribution board, as well as at the wall switch, and let the lamps cool." },
         { h: "Photograph the piece", p: "Take photos from below and from the side so every drop and strand goes back where it came from." },
         { h: "Set up below it", p: "Lay a folded towel or a padded sheet under the chandelier. Use a stable platform, and have a second person hold it for anything high." },
         { h: "Wipe each drop in place", p: "Wear cotton gloves. Hold each drop with one hand and wipe it with a dry lint-free cloth in the other, working round one tier at a time." },
@@ -1712,7 +1712,7 @@ export const guideArticles: GuideArticle[] = [
         { h: "Mark where rain reaches", p: "Walk the outside of the house in the monsoon, or ask the site engineer, and mark every point driven rain can hit." },
         { h: "Sort each point", p: "Covered and only splashed: IP44. Open to driven rain, like a facade, terrace, gate, or courtyard: IP65. Jets, immersion, or ground-recessed: IP66 or IP67." },
         { h: "Take the higher rating when unsure", p: "If a point sits between two categories, specify the higher one." },
-        { h: "Add finish and fixings near the coast", p: "On the coast, specify a corrosion-resistant body, finish, and stainless fixings, not only the IP number." },
+        { h: "Add finish and fixings near the coast", p: "On the coast, specify a corrosion-resistant body, finish, and stainless fixings as well as the IP number." },
         { h: "Check the rating on the fitting", p: "Confirm the IP rating is printed on the product or its data sheet before it is installed." },
       ],
     },

@@ -22,7 +22,7 @@ const spaces = [
   },
   {
     h: "Duplex stairwells & double-height voids",
-    p: "Drop matters more than diameter. A cascade or tiered piece is built to the exact vertical distance between floors, and is viewed from multiple angles and heights, not just from directly below.",
+    p: "Drop matters more than diameter. A cascade or tiered piece is built to the exact vertical distance between floors, and is viewed from multiple angles and heights, including from directly below.",
   },
   {
     h: "Hotel lobbies & banquet halls",
@@ -50,7 +50,7 @@ const faqs = [
 const articleSchema = {
   "@context": "https://schema.org",
   "@type": "Article",
-  headline: "How to Choose a Custom Chandelier — Villa, Duplex or Hotel",
+  headline: "How to Choose a Custom Chandelier: Villa, Duplex or Hotel",
   description:
     "What actually changes between lighting a villa living room, a duplex stairwell and a hotel lobby, and six questions to answer before you choose anything.",
   image: `${site.domain}/work/w3-showroom.jpg`,

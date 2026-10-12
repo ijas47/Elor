@@ -6,7 +6,7 @@ import { Reveal, Stagger, StaggerItem } from "@/components/motion/Reveal";
 import { MagneticButton } from "@/components/motion/MagneticButton";
 import { RelatedGuides } from "@/components/ui/RelatedGuides";
 
-const TITLE = "Why a Downlight Glares — Baffles, Cutoff and the Seated View";
+const TITLE = "Why a Downlight Glares: Baffles, Cutoff and the Seated View";
 const META_TITLE = "Why a Downlight Glares";
 const DESC =
   "If you can see the LED from the sofa, the fitting is too shallow. Baffle depth, cutoff, and where the driver sits, decided before the ceiling closes.";
@@ -145,7 +145,7 @@ export default function DownlightGlareGuide() {
           <Reveal><h2 className="h-lg">What to write on the drawing</h2></Reveal>
           <Reveal delay={0.08}>
             <ul className="check-list" style={{ marginTop: 28 }}>
-              <li><span className="tick">✓</span>Recess depth, not just the cut-out diameter. The baffle has to hide the chip from a seated eye.</li>
+              <li><span className="tick">✓</span>Recess depth as well as the cut-out diameter. The baffle has to hide the chip from a seated eye.</li>
               <li><span className="tick">✓</span>A dimmer on the ambient group, separate from the wall wash and the chandelier.</li>
               <li><span className="tick">✓</span>3000K in the living room, CRI 90. Colour is the other half of comfort, in the Kelvin guide.</li>
               <li><span className="tick">✓</span>Driver location, and a hatch if it is remote.</li>

@@ -8,7 +8,7 @@ const items = [
   "Lighting Consultation",
   "Facade & Outdoor",
   "Installation Support",
-  "Free Custom Installation",
+  "Custom Installation",
   "5-Year Warranty",
   "Pan-India Delivery",
   "Own Supply Chain",

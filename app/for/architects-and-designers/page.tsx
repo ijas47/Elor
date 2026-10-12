@@ -29,7 +29,7 @@ const workWith = [
   },
   {
     h: "Spec sheets and samples before fabrication",
-    p: "A formal spec sheet — dimensions, material, finish, lumens, IP rating where relevant, lead time — before anything is built, so it can go straight into your documentation. Material and finish samples on request for client sign-off.",
+    p: "A formal spec sheet (dimensions, material, finish, lumens, IP rating where relevant, lead time) before anything is built, so it can go straight into your documentation. Material and finish samples on request for client sign-off.",
   },
   {
     h: "Site coordination that fits your program",
@@ -41,26 +41,26 @@ const workWith = [
   },
   {
     h: "One warranty, one point of contact",
-    p: "Up to 5-year warranty on fabricated pieces. Custom-designed lights include free installation by our crew. Ready fittings and the rest of a schedule come with installation support, so the warranty is not caught between a fixture from one vendor and an installer from another.",
+    p: "Up to 5-year warranty on fabricated pieces. We install custom lights and give installation support for everything else, so the warranty is not caught between a fixture from one vendor and an installer from another.",
   },
 ];
 
 const projectTypes = [
-  "Hotels & hospitality — lobby centrepieces, corridor and room lighting, facade wash",
-  "Restaurants & cafés — mood-driven dining light, matched fixtures across multiple outlets",
-  "Retail & showrooms — display lighting specified to flatter the merchandise, not generic",
-  "Residential villas & duplexes — stairwell cascades, double-height statement pieces",
-  "Offices & clinics — glare-free ambient light built to a lighting plan, not off-the-shelf",
+  "Hotels & hospitality: lobby centrepieces, corridor and room lighting, facade wash",
+  "Restaurants & cafés: mood-driven dining light, matched fixtures across multiple outlets",
+  "Retail & showrooms: display lighting specified to flatter the merchandise",
+  "Residential villas & duplexes: stairwell cascades, double-height statement pieces",
+  "Offices & clinics: glare-free ambient light built to a lighting plan",
 ];
 
 const faqs = [
   {
     q: "Do you work directly with architects and interior designers, or only end clients?",
-    a: "Both, and we're set up for either. We can work from your drawings and specifications directly, coordinate on-site with your contractor, and invoice however your project structure requires — through you, or directly to the client with you looped in.",
+    a: "Both, and we're set up for either. We can work from your drawings and specifications directly, coordinate on-site with your contractor, and invoice however your project structure requires: through you, or directly to the client with you looped in.",
   },
   {
     q: "Can you fabricate from a CAD file or render?",
-    a: "Yes — a render, CAD file, or dimensioned sketch is the normal starting point for a custom brief. We confirm exact measurements and structural mounting on-site before fabrication begins, and provide a spec sheet for your documentation before anything is built.",
+    a: "Yes. A render, CAD file, or dimensioned sketch is the normal starting point for a custom brief. We confirm exact measurements and structural mounting on-site before fabrication begins, and provide a spec sheet for your documentation before anything is built.",
   },
   {
     q: "How do you handle multi-unit projects like hotels with dozens of identical fixtures?",
@@ -68,11 +68,11 @@ const faqs = [
   },
   {
     q: "What's your typical lead time for a specified custom piece?",
-    a: "Most single custom pieces are designed, fabricated and installed within 3 to 6 weeks of a confirmed brief. Multi-unit or large-scale commercial projects are quoted with a phased timeline matched to your construction schedule — ask at consultation for a project-specific estimate.",
+    a: "Most single custom pieces are designed, fabricated and installed within 3 to 6 weeks of a confirmed brief. Multi-unit or large-scale commercial projects are quoted with a phased timeline matched to your construction schedule. Ask at consultation for a project-specific estimate.",
   },
   {
     q: "Is there trade pricing for architects and designers?",
-    a: "Project-scale pricing applies to multi-unit and commercial work — talk to us about your project scope at consultation. Ready-collection pricing is published at the pricing guide linked below for single pieces.",
+    a: "Project-scale pricing applies to multi-unit and commercial work. Talk to us about your project scope at consultation. Ready-collection pricing is published at the pricing guide linked below for single pieces.",
   },
 ];
 

@@ -30,7 +30,7 @@ const steps = [
   },
   {
     h: "3. Bring the rod or chain down through the ceiling",
-    p: "The false ceiling is cut around the drop rod and finished with a plate or recess. The ceiling carries none of the weight — it only conceals the anchor. Done properly this is invisible; done as an afterthought it cracks the board around the opening.",
+    p: "The false ceiling is cut around the drop rod and finished with a plate or recess. The ceiling carries none of the weight. It only conceals the anchor. Done properly this is invisible; done as an afterthought it cracks the board around the opening.",
   },
   {
     h: "4. Run the circuit at the same time",
@@ -41,7 +41,7 @@ const steps = [
 const faqs = [
   {
     q: "How much weight can a gypsum false ceiling hold?",
-    a: "Only a few kilograms, and only at a properly supported framing intersection — enough for a light fitting or a small pendant. A gypsum ceiling's GI framework is engineered to carry the boards themselves plus a modest service load, not a concentrated point load. Anything heavier goes into the slab above.",
+    a: "Only a few kilograms, and only at a properly supported framing intersection, enough for a light fitting or a small pendant. A gypsum ceiling's GI framework is engineered to carry the boards themselves plus a modest service load, not a concentrated point load. Anything heavier goes into the slab above.",
   },
   {
     q: "Can a POP ceiling hold a chandelier?",
@@ -137,7 +137,7 @@ export default function FalseCeilingGuide() {
               A gypsum or POP false ceiling carries its own boards and a light
               fitting of a few kilograms. It does not carry a chandelier. Every
               piece past that goes into the RCC slab above, on an anchor that
-              has to be placed while the ceiling is still open &mdash; which is
+              has to be placed while the ceiling is still open. That is
               why this is a decision for the start of a fit-out, not the end.
             </p>
           </Reveal>

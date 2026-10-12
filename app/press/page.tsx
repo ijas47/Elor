@@ -20,7 +20,7 @@ const facts = [
   { k: "Founded", v: "Elor Lighting / Celestial Lights, Kerala, India" },
   { k: "What we do", v: "Lighting plans for architects and owners who are building, supply from basic to luxury, and custom chandeliers made in our factory" },
   { k: "Locations", v: "Celestial stores and experience centres in Kannur and Calicut. Full experience centre in Kochi." },
-  { k: "Coverage", v: "Pan-India delivery. Free installation on custom-designed lights. Installation support on everything else." },
+  { k: "Coverage", v: "Pan-India delivery. We install custom lights and give installation support for everything else." },
   { k: "Warranty", v: "Up to 5 years on fabricated pieces" },
 ];
 
@@ -70,7 +70,7 @@ export default function Press() {
           <Reveal delay={0.12}>
             <p className="lede" style={{ marginTop: 22 }}>
               For interview requests, quotes or assets, email{" "}
-              <a href={`mailto:${site.email}`} style={{ color: "var(--gold)" }}>{site.email}</a> — we
+              <a href={`mailto:${site.email}`} style={{ color: "var(--gold)" }}>{site.email}</a>. We
               respond within 24 hours. No forms.
             </p>
           </Reveal>
@@ -175,7 +175,7 @@ export default function Press() {
           </Reveal>
           <Reveal delay={0.18}>
             <p className="form-note" style={{ marginTop: 16 }}>
-              Full-resolution originals available on request — {site.email}.
+              Full-resolution originals available on request from {site.email}.
             </p>
           </Reveal>
         </div>

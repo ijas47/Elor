@@ -6,7 +6,7 @@ import { Reveal, Stagger, StaggerItem } from "@/components/motion/Reveal";
 import { MagneticButton } from "@/components/motion/MagneticButton";
 import { RelatedGuides } from "@/components/ui/RelatedGuides";
 
-const TITLE = "Kelvin, CRI and Beam Angle — How to Read a Light";
+const TITLE = "Kelvin, CRI and Beam Angle: How to Read a Light";
 const META_TITLE = "Kelvin, CRI and Beam Angle";
 const DESC =
   "2700K for living rooms, 4000K where you work, CRI 90 where colour matters, and a beam that fits the wall. How to specify light for a Kerala home.";
@@ -21,19 +21,19 @@ export const metadata: Metadata = {
 
 const rooms = [
   {
-    h: "Living, dining, bedroom — 2700K to 3000K",
+    h: "Living, dining, bedroom: 2700K to 3000K",
     p: "This is the evening colour of the house. Skin, timber, and brass read as themselves. A living room that also hosts dinner can sit at 3000K so the table is clear without the room going cold. Bedrooms stay at 2700K.",
   },
   {
-    h: "Kitchen worktop and study — 4000K, on its own switch",
+    h: "Kitchen worktop and study: 4000K, on its own switch",
     p: "Chopping, reading a plan, and matching fabric need a clearer white than a sofa does. Put 4000K on the task layer only: under-cabinet strips, a desk lamp, a mirror light. Leave the room’s decorative light at 3000K so the kitchen does not look like an office after eight.",
   },
   {
-    h: "Bathroom mirror — 3000K to 4000K, from the sides",
+    h: "Bathroom mirror: 3000K to 4000K, from the sides",
     p: "A single downlight above the mirror puts the eyes in shadow. Two lights at face height, 3000K if the bath is meant to be calm, 4000K if makeup and shaving are the job. Match the two fittings. A 2700K sconce beside a 4000K mirror is the mistake people notice and cannot name.",
   },
   {
-    h: "Facade and garden — 2700K to 3000K, aimed down",
+    h: "Facade and garden: 2700K to 3000K, aimed down",
     p: "Warm light on laterite, timber, and planting. Cool white on a house front reads as a compound light, not architecture. Keep the beam on the wall and the path. A coastal site also needs a fitting that can live in salt air. That choice is in the coastal guide.",
   },
 ];

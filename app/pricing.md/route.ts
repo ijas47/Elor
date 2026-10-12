@@ -13,7 +13,7 @@ import { site, stores } from "@/lib/site";
 export const dynamic = "force-static";
 
 export async function GET() {
-  const body = `# Pricing — ${site.name}
+  const body = `# Pricing: ${site.name}
 
 Last updated: 20 August 2026
 Currency: INR (₹). All prices include GST as applicable.
@@ -22,7 +22,7 @@ ${site.name} is the lighting consulting and custom fabrication arm of
 Celestial Lights. Ready-collection pieces are sold at fixed prices; bespoke
 fabrication is quoted per design after a free consultation.
 
-## Ready collection — fixed price bands
+## Ready collection: fixed price bands
 
 ### Accent & wall pieces
 - Price: ₹3,000 – ₹15,000
@@ -42,7 +42,7 @@ fabrication is quoted per design after a free consultation.
 
 ## Bespoke fabrication
 
-- Price: quoted per design — no fixed multiplier over ready pieces
+- Price: quoted per design, with no fixed multiplier over ready pieces
 - Design consultation, design direction and firm quote: free
 - Payment: only after you approve the design
 - Range: a custom piece can cost about the same as a large ready piece, or
@@ -50,14 +50,13 @@ fabrication is quoted per design after a free consultation.
 
 Pricing drivers, in order of impact: size and drop; material (crystal,
 hand-blown glass, brass, marble); fabrication complexity. For ready fittings,
-installation support and site conditions are arranged with the order.
-Custom-designed lights include free installation.
+site conditions are arranged with the order.
+We install custom lights and give installation support for everything else.
 
 ## Services
 
 - Design consultation: free (in store, at your site, or over video)
-- Custom-designed lights: free installation
-- Ready fittings and everything else: installation support, arranged with the order
+- We install custom lights and give installation support for everything else.
 - Delivery: pan-India
 - Warranty: up to 5 years
 
@@ -66,12 +65,12 @@ Custom-designed lights include free installation.
 - Product pricing is identical across all three stores and pan-India delivery.
 - Installation support for ready pieces varies with site access and distance from the nearest store.
 - Ready-collection prices are final for pieces bought as shown. Delivery is
-  quoted separately. Those pieces come with installation support, not free installation.
-- Custom-designed lights include free installation.
+  quoted separately. Those pieces come with installation support.
+- We install custom lights and give installation support for everything else.
 
 ## Where to buy
 
-${stores.map((s) => `- ${s.brand}, ${s.city} — ${s.address}`).join("\n")}
+${stores.map((s) => `- ${s.brand}, ${s.city}: ${s.address}`).join("\n")}
 - Pan-India delivery and remote video consultation from any store.
 
 ## Contact

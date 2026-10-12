@@ -10,7 +10,7 @@ import { Icon } from "@/components/ui/Icon";
 export const metadata: Metadata = {
   title: "Custom Chandeliers Made to Your Design",
   description:
-    "Send a photo, render or sketch. We design and fabricate the chandelier to match, and installation of that custom light is free. Crystal, glass, metal or acrylic, with pan-India delivery.",
+    "Send a photo, render or sketch. We design and fabricate the chandelier to match, and we install it. We give installation support for everything else. Crystal, glass, metal or acrylic, with pan-India delivery.",
   alternates: { canonical: "/customisation" },
 };
 
@@ -20,8 +20,8 @@ const faqs = [
   { q: "What can you actually make?", a: "Chandeliers, cascades, cluster pendants and statement ceiling pieces. If it hangs and it glows, it is in scope. We work in crystal, glass, metal, acrylic and LED, at any drop and diameter." },
   { q: "I only have a photo. Is that enough?", a: "Yes. The picture is the brief. A Pinterest screenshot, a hotel photo, a magazine page or a rough sketch all work. We reverse-engineer it into a buildable fixture and confirm dimensions with you." },
   { q: "How long does a custom piece take?", a: "Most pieces are designed, fabricated and installed within 3 to 6 weeks depending on size and finish. We give you a firm timeline with the quote, before you commit." },
-  { q: "What about budget?", a: "We quote firm before any commitment. You will know the fixture cost up front. Installation of a custom-designed light is free. There are no surprises after the piece is built." },
-  { q: "Is installation free?", a: "Yes, for a custom-designed light. Ready fittings and everything else come with installation support, not free installation." },
+  { q: "What about budget?", a: "We quote firm before any commitment. You will know the fixture cost up front. We install custom lights and give installation support for everything else. There are no surprises after the piece is built." },
+  { q: "Do you install the lights?", a: "We install custom lights and give installation support for everything else." },
   { q: "Is a custom piece serviceable later?", a: "Yes. We retain drawings and component lists, and custom pieces carry warranty up to 5 years, so a bespoke fixture stays serviceable for the long run." },
 ];
 
@@ -36,7 +36,7 @@ const processSteps = [
   { h: "Measure", p: "We confirm your ceiling height, drop, diameter and mounting so the piece fits its exact void." },
   { h: "Design", p: "We translate your reference into a buildable design and quote it firm, before you commit." },
   { h: "Fabricate", p: "The piece is built by hand in our workshop, from crystal and glass to metal and LED." },
-  { h: "Install", p: "Free installation: our crew hangs, aims and tunes the custom-designed light, and hands you one warranty up to 5 years." },
+  { h: "Install", p: "Our crew hangs, aims and tunes the custom light, and hands you one warranty up to 5 years." },
 ];
 
 const serviceSchema = {
@@ -47,7 +47,7 @@ const serviceSchema = {
   provider: { "@type": "Organization", name: site.name, url: site.domain },
   areaServed: "IN",
   description:
-    "Custom chandeliers and statement lighting built from any reference photo, render or sketch: measured, designed, fabricated by hand, with free installation and up to 5-year warranty.",
+    "Custom chandeliers and statement lighting built from any reference photo, render or sketch: measured, designed, fabricated by hand and installed by us, with up to 5-year warranty.",
   url: `${site.domain}/customisation`,
 };
 
