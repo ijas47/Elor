@@ -120,7 +120,7 @@ export const guides: Guide[] = [
   },
   {
     slug: "how-to-choose-a-custom-chandelier",
-    title: "How to Choose a Custom Chandelier — Villa, Duplex or Hotel",
+    title: "How to Choose a Custom Chandelier: Villa, Duplex or Hotel",
     dek: "What actually changes between a living room, a stairwell and a lobby, and six questions to answer before you choose anything.",
     tag: "Buying Guide",
     image: "/work/w3-showroom.jpg",
@@ -128,7 +128,7 @@ export const guides: Guide[] = [
   },
   {
     slug: "how-a-lighting-plan-is-built",
-    title: "How a Lighting Plan Is Built — Layers, Walls and Scenes",
+    title: "How a Lighting Plan Is Built: Layers, Walls and Scenes",
     dek: "What gets light, in what order, and why the ceiling is the last thing drawn. The method behind an Elor plan.",
     tag: "Technical",
     image: "/spaces/living.jpg",
@@ -136,7 +136,7 @@ export const guides: Guide[] = [
   },
   {
     slug: "why-downlights-glare",
-    title: "Why a Downlight Glares — Baffles, Cutoff and the Seated View",
+    title: "Why a Downlight Glares: Baffles, Cutoff and the Seated View",
     dek: "If you can see the lamp from the sofa, the fitting is too shallow. What to ask for before the ceiling closes.",
     tag: "Technical",
     image: "/spaces/living.jpg",
@@ -144,7 +144,7 @@ export const guides: Guide[] = [
   },
   {
     slug: "colour-of-light",
-    title: "Kelvin, CRI and Beam Angle — How to Read a Light",
+    title: "Kelvin, CRI and Beam Angle: How to Read a Light",
     dek: "The three numbers on a specification that decide whether a room feels like a home or a clinic, and what to ask for in Kerala.",
     tag: "Technical",
     image: "/lifestyle/showroom-grand.jpg",
@@ -152,15 +152,15 @@ export const guides: Guide[] = [
   },
   {
     slug: "chandelier-size-calculator",
-    title: "Chandelier Size Calculator — Diameter, Drop & Fan Clearance",
-    dek: "Put in the room, get back a diameter and a drop — plus the two checks Indian rooms actually need.",
+    title: "Chandelier Size Calculator: Diameter, Drop & Fan Clearance",
+    dek: "Put in the room, get back a diameter and a drop, plus the two checks Indian rooms actually need.",
     tag: "Technical",
     image: "/work/w1-cascade.jpg",
     updated: "20 August 2026",
   },
   {
     slug: "chandelier-with-ceiling-fan",
-    title: "Chandelier With a Ceiling Fan — How to Make Both Work",
+    title: "Chandelier With a Ceiling Fan: How to Make Both Work",
     dek: "Four layouts that work, the clearances they need, and the wiring mistake we get called to fix most often.",
     tag: "Technical",
     image: "/work/w4-lounge.jpg",
@@ -177,7 +177,7 @@ export const guides: Guide[] = [
   {
     slug: "crystal-vs-glass-chandelier",
     title: "Crystal vs Glass vs Acrylic Chandeliers",
-    dek: "How the four materials differ in light, weight, cleaning and cost — and which suits a humid coast or a hotel lobby.",
+    dek: "How the four materials differ in light, weight, cleaning and cost, and which suits a humid coast or a hotel lobby.",
     tag: "Buying Guide",
     image: "/lifestyle/showroom-grand.jpg",
     updated: "20 August 2026",

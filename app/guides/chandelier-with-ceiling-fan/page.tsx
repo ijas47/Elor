@@ -6,7 +6,7 @@ import { Reveal, Stagger, StaggerItem } from "@/components/motion/Reveal";
 import { MagneticButton } from "@/components/motion/MagneticButton";
 import { RelatedGuides } from "@/components/ui/RelatedGuides";
 
-const TITLE = "Chandelier With a Ceiling Fan — How to Make Both Work";
+const TITLE = "Chandelier With a Ceiling Fan: How to Make Both Work";
 const META_TITLE = "Chandelier With a Ceiling Fan";
 const DESC =
   "Almost every Indian room has a ceiling fan and almost every chandelier guide ignores it. Four layouts that work, with the clearances each one needs.";
@@ -21,19 +21,19 @@ export const metadata: Metadata = {
 
 const layouts = [
   {
-    h: "1. Offset — the fan keeps the centre, the chandelier moves",
+    h: "1. Offset: the fan keeps the centre, the chandelier moves",
     p: "The most common fix and usually the best one. The fan stays on the existing centre point over the seating, and the chandelier goes over the dining table, the coffee table or a seating group. Two separate ceiling points, two separate switches, no overlap. Most rooms have a natural second focal point already.",
   },
   {
     h: "2. Chandelier centre, fans to the sides",
-    p: "The chandelier takes the centre of the ceiling and two smaller fans — typically 900 mm — go on either side, over the areas people actually sit. Better air distribution than a single central fan in a wide room, and it frees the centre entirely. Costs a second fan and two more ceiling points.",
+    p: "The chandelier takes the centre of the ceiling and two smaller fans (typically 900 mm) go on either side, over the areas people actually sit. Better air distribution than a single central fan in a wide room, and it frees the centre entirely. Costs a second fan and two more ceiling points.",
   },
   {
     h: "3. Replace the fan rather than work around it",
-    p: "Wall-mounted fans, tower fans or a ducted system remove the conflict completely. Worth considering in a formal dining room or a double-height foyer where a ceiling fan was never going to be effective anyway — air thrown from a 5 m ceiling does very little at head height.",
+    p: "Wall-mounted fans, tower fans or a ducted system remove the conflict completely. Worth considering in a formal dining room or a double-height foyer where a ceiling fan was never going to be effective anyway. Air thrown from a 5 m ceiling does very little at head height.",
   },
   {
-    h: "4. Above the sweep — only with a real void",
+    h: "4. Above the sweep, only with a real void",
     p: "A compact fixture mounted well above the blade plane, in a double-height space where the fan hangs low on a downrod. This works only when there is genuine vertical separation and the fixture has no loose drops. In a standard 3 m room there is not enough height, and it is the configuration that most often ends in a rattling, swinging chandelier.",
   },
 ];
@@ -61,7 +61,7 @@ const faqs = [
   },
   {
     q: "Is a fan-light combination a reasonable alternative?",
-    a: "For a bedroom or a small room, often yes. For a room where the fixture is meant to be the visual anchor, no — the integrated lights in fan-light units are sized for utility, not for presence, and you lose the thing you wanted the chandelier for.",
+    a: "For a bedroom or a small room, often yes. For a room where the fixture is meant to be the visual anchor, no. The integrated lights in fan-light units are sized for utility, not for presence, and you lose the thing you wanted the chandelier for.",
   },
 ];
 
@@ -162,7 +162,7 @@ export default function CeilingFanGuide() {
           <Reveal delay={0.16}>
             <p className="form-note" style={{ marginTop: 12 }}>
               A 3.6 × 3.0 m dining room has roughly 1.8 m from centre to the
-              middle of a table set to one side &mdash; enough for a 1200 mm fan
+              middle of a table set to one side. That is enough for a 1200 mm fan
               and a 60 cm fixture, and not enough for much more than that.
             </p>
           </Reveal>

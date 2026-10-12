@@ -74,7 +74,7 @@ export function parseConsultation(
 }
 
 export function consultationEmail(lead: ConsultationLead): { subject: string; text: string } {
-  const subject = `Consultation request — ${lead.name}${lead.city ? `, ${lead.city}` : ""}`;
+  const subject = `Consultation request: ${lead.name}${lead.city ? `, ${lead.city}` : ""}`;
   const text = [
     `Name: ${lead.name}`,
     `Phone: ${lead.phone}`,

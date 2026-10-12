@@ -18,15 +18,15 @@ const UPDATED = "19 August 2026";
 
 const priceBands = [
   {
-    h: "Accent & wall pieces — ₹3,000 to ₹15,000",
+    h: "Accent & wall pieces: ₹3,000 to ₹15,000",
     p: "Reading lights, wall sconces and smaller accent fixtures in glass, brass and metal. The entry point for a considered room.",
   },
   {
-    h: "Statement chandeliers — ₹20,000 to ₹50,000",
+    h: "Statement chandeliers: ₹20,000 to ₹50,000",
     p: "Mid-scale dining and living-room chandeliers in crystal, glass and mixed metal, the size most homes actually need.",
   },
   {
-    h: "Large & duplex statement pieces — ₹45,000 to ₹70,000+",
+    h: "Large & duplex statement pieces: ₹45,000 to ₹70,000+",
     p: "Double-height cascades and grand centrepieces built for stairwells, lobbies and duplex ceilings.",
   },
 ];

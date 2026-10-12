@@ -99,8 +99,8 @@ export function ChandelierCalculator() {
             value={overTable ? "yes" : "no"}
             onChange={(e) => setOverTable(e.target.value === "yes")}
           >
-            <option value="no">No — open room, centre of ceiling</option>
-            <option value="yes">Yes — over a dining table</option>
+            <option value="no">No, open room, centre of ceiling</option>
+            <option value="yes">Yes, over a dining table</option>
           </select>
         </div>
         {overTable && (
@@ -118,7 +118,7 @@ export function ChandelierCalculator() {
             <span className="calc-v">{round(diaMinCm)}–{round(diaMaxCm)} cm</span>
             <span className="calc-note">
               {overTable
-                ? "Sized to the table, not the room — half to two-thirds of the table's short side, so nobody knocks their head reaching across."
+                ? "Sized to the table, not the room: half to two-thirds of the table's short side, so nobody knocks their head reaching across."
                 : "From the room proportion rule: length plus width in feet, read as inches of diameter."}
             </span>
           </div>
@@ -145,8 +145,8 @@ export function ChandelierCalculator() {
           {fanMm > 0 && (
             <div className="calc-flag">
               <strong>Ceiling fan clearance.</strong> With a {fanMm} mm sweep, keep the chandelier&rsquo;s
-              centre at least <strong>{clearanceM.toFixed(2)} m</strong> from the fan&rsquo;s centre —
-              the blade radius, plus 600 mm, plus the fixture&rsquo;s own radius. Sharing one ceiling point
+              centre at least <strong>{clearanceM.toFixed(2)} m</strong> from the fan&rsquo;s centre
+              (the blade radius, plus 600 mm, plus the fixture&rsquo;s own radius). Sharing one ceiling point
               between a fan and a chandelier almost never works: moving air swings crystal and glass drops,
               and a fan regulator is not a dimmer, so the two need separate circuits.
             </div>

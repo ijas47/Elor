@@ -6,7 +6,7 @@ import { Reveal, Stagger, StaggerItem } from "@/components/motion/Reveal";
 import { MagneticButton } from "@/components/motion/MagneticButton";
 import { RelatedGuides } from "@/components/ui/RelatedGuides";
 
-const TITLE = "Why a Downlight Glares — Baffles, Cutoff and the Seated View";
+const TITLE = "Why a Downlight Glares: Baffles, Cutoff and the Seated View";
 const META_TITLE = "Why a Downlight Glares";
 const DESC =
   "If you can see the LED from the sofa, the fitting is too shallow. Baffle depth, cutoff, and where the driver sits, decided before the ceiling closes.";

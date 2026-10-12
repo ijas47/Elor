@@ -30,7 +30,7 @@ const criteria = [
   },
   {
     h: "Is installation included, or a separate hire?",
-    p: "A fixture that ships without installation puts the site coordination, the electrician, and the liability if it is hung wrong onto you. Ask whether installation is quoted with the piece or arranged separately — and if separate, who is responsible if the ceiling anchor or wiring is done incorrectly.",
+    p: "A fixture that ships without installation puts the site coordination, the electrician, and the liability if it is hung wrong onto you. Ask whether installation is quoted with the piece or arranged separately. If separate, ask who is responsible if the ceiling anchor or wiring is done incorrectly.",
   },
   {
     h: "What is the actual warranty, in writing?",
@@ -38,26 +38,26 @@ const criteria = [
   },
   {
     h: "Can they handle a ceiling or site condition that isn't standard?",
-    p: "A false ceiling with limited load capacity, a fan sharing the same point, a sloped or double-height ceiling — these come up constantly in Indian homes and not every shop is equipped to plan around them. Ask what happens if your ceiling can't take the anchor the piece needs. A vague answer here usually means it hasn't come up before, which is itself useful information.",
+    p: "A false ceiling with limited load capacity, a fan sharing the same point, a sloped or double-height ceiling: these come up constantly in Indian homes and not every shop is equipped to plan around them. Ask what happens if your ceiling can't take the anchor the piece needs. A vague answer here usually means it hasn't come up before, which is itself useful information.",
   },
   {
     h: "How firm is the quote, and when do you pay?",
-    p: "A custom piece should get you a firm price after measurement and design, not a range that moves once fabrication starts. Ask when payment is due relative to design approval — paying in full before you have approved a design leaves you with no leverage if the final piece doesn't match the brief.",
+    p: "A custom piece should get you a firm price after measurement and design, not a range that moves once fabrication starts. Ask when payment is due relative to design approval. Paying in full before you have approved a design leaves you with no leverage if the final piece doesn't match the brief.",
   },
   {
     h: "What do their own customers say, and can you verify it?",
-    p: "Testimonials on a shop's own website are worth something, but a Google Business Profile with real reviews and dates is easier to verify — you can see when the review was left, cross-check the reviewer's other activity, and read the shop's replies to complaints. If a shop that has been operating for years has no third-party reviews anywhere, ask why.",
+    p: "Testimonials on a shop's own website are worth something, but a Google Business Profile with real reviews and dates is easier to verify. You can see when the review was left, cross-check the reviewer's other activity, and read the shop's replies to complaints. If a shop that has been operating for years has no third-party reviews anywhere, ask why.",
   },
 ];
 
 const faqs = [
   {
     q: "What's the difference between a custom chandelier shop and one that just sells ready-made fixtures?",
-    a: "A custom shop has its own design and fabrication capability — it can build a fixture to a size, shape or material you specify, not just sell what's already in stock. A ready-made shop imports or wholesales a catalogue and offers finish or size variants within it. Both are legitimate, but they answer different needs: ask directly whether fabrication happens in-house.",
+    a: "A custom shop has its own design and fabrication capability. It can build a fixture to a size, shape or material you specify, not just sell what's already in stock. A ready-made shop imports or wholesales a catalogue and offers finish or size variants within it. Both are legitimate, but they answer different needs: ask directly whether fabrication happens in-house.",
   },
   {
     q: "Should I buy a chandelier online without seeing it in person first?",
-    a: "For a small, inexpensive accent piece, often fine. For a statement chandelier that will be the focal point of a room, seeing it lit in person matters — colour temperature, sparkle and scale rarely translate accurately through photography. If there's no showroom near you, ask for a video call under real lighting conditions before committing.",
+    a: "For a small, inexpensive accent piece, often fine. For a statement chandelier that will be the focal point of a room, seeing it lit in person matters. Colour temperature, sparkle and scale rarely translate accurately through photography. If there's no showroom near you, ask for a video call under real lighting conditions before committing.",
   },
   {
     q: "Is installation usually included when you buy a chandelier?",
@@ -65,11 +65,11 @@ const faqs = [
   },
   {
     q: "How do I know if a chandelier warranty is actually worth anything?",
-    a: "Ask for the term in years and exactly what it covers — LED driver, finish, structural joints — in writing, not verbally. A shop that fabricates its own pieces can usually offer a longer, more specific warranty than one reselling an imported catalogue, because they know the piece's construction firsthand.",
+    a: "Ask for the term in years and exactly what it covers (LED driver, finish, structural joints) in writing, not verbally. A shop that fabricates its own pieces can usually offer a longer, more specific warranty than one reselling an imported catalogue, because they know the piece's construction firsthand.",
   },
   {
     q: "What should I ask before ordering a chandelier for an unusual ceiling?",
-    a: "Ask specifically how they handle your ceiling type — false ceiling load limits, a shared point with a ceiling fan, sloped or double-height ceilings all change what's possible. A shop that fabricates in-house can usually adapt the fixture's mounting to the site; one that only resells often can't.",
+    a: "Ask specifically how they handle your ceiling type. False ceiling load limits, a shared point with a ceiling fan, sloped or double-height ceilings all change what's possible. A shop that fabricates in-house can usually adapt the fixture's mounting to the site; one that only resells often can't.",
   },
 ];
 
@@ -130,7 +130,7 @@ export default function ChooseAShopGuide() {
             <p className="lede" style={{ marginTop: 22 }}>
               India has no shortage of lighting shops. It has far fewer that
               actually design and build what they sell. Seven questions to ask
-              any shop before you commit — including us — so you know
+              any shop before you commit, including us, so you know
               exactly what you&rsquo;re buying.
             </p>
           </Reveal>
@@ -141,7 +141,7 @@ export default function ChooseAShopGuide() {
         <div className="wrap-tight">
           <Reveal>
             <p className="lede">
-              This isn&rsquo;t a ranked list of shops — we can&rsquo;t
+              This isn&rsquo;t a ranked list of shops. We can&rsquo;t
               honestly evaluate businesses we don&rsquo;t run, and a
               self-scored comparison would be worth exactly as much as you&rsquo;d
               expect. What we can do is tell you what actually matters when
@@ -179,11 +179,11 @@ export default function ChooseAShopGuide() {
           </Reveal>
           <Reveal delay={0.12}>
             <ul className="check-list" style={{ marginTop: 28 }}>
-              <li><span className="tick">✓</span>We fabricate in-house — custom pieces are designed and built to your ceiling, not selected from a fixed catalogue.</li>
+              <li><span className="tick">✓</span>We fabricate in-house. Custom pieces are designed and built to your ceiling, not selected from a fixed catalogue.</li>
               <li><span className="tick">✓</span>Three physical showrooms in Kerala, plus video consultation if you&rsquo;re elsewhere.</li>
               <li><span className="tick">✓</span>Custom-designed lights include free installation. Ready fittings come with installation support.</li>
               <li><span className="tick">✓</span>Up to 5-year warranty, confirmed in writing at consultation.</li>
-              <li><span className="tick">✓</span>We plan around false ceilings, shared fan points and non-standard ceilings as a normal part of the process — see the <a href="/guides/false-ceiling-chandelier-weight">false ceiling guide</a> and <a href="/guides/chandelier-with-ceiling-fan">ceiling fan guide</a>.</li>
+              <li><span className="tick">✓</span>We plan around false ceilings, shared fan points and non-standard ceilings as a normal part of the process. See the <a href="/guides/false-ceiling-chandelier-weight">false ceiling guide</a> and <a href="/guides/chandelier-with-ceiling-fan">ceiling fan guide</a>.</li>
               <li><span className="tick">✓</span>Firm pricing after design approval, before fabrication starts.</li>
             </ul>
           </Reveal>

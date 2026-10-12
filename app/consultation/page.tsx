@@ -10,7 +10,7 @@ import { Icon, type IconName } from "@/components/ui/Icon";
 export const metadata: Metadata = {
   title: "Lighting Design Consultation",
   description:
-    "Book a free lighting design consultation — in store, at your site, or over video. We plan the scheme and design what has to be made. Custom-designed lights include free installation.",
+    "Book a free lighting design consultation in store, at your site, or over video. We plan the scheme and design what has to be made. Custom-designed lights include free installation.",
   alternates: { canonical: "/consultation" },
 };
 

@@ -70,7 +70,7 @@ export default function Press() {
           <Reveal delay={0.12}>
             <p className="lede" style={{ marginTop: 22 }}>
               For interview requests, quotes or assets, email{" "}
-              <a href={`mailto:${site.email}`} style={{ color: "var(--gold)" }}>{site.email}</a> — we
+              <a href={`mailto:${site.email}`} style={{ color: "var(--gold)" }}>{site.email}</a>. We
               respond within 24 hours. No forms.
             </p>
           </Reveal>
@@ -175,7 +175,7 @@ export default function Press() {
           </Reveal>
           <Reveal delay={0.18}>
             <p className="form-note" style={{ marginTop: 16 }}>
-              Full-resolution originals available on request — {site.email}.
+              Full-resolution originals available on request from {site.email}.
             </p>
           </Reveal>
         </div>

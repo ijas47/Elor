@@ -47,7 +47,7 @@ export default function Privacy() {
             receive.
           </p>
           <p>
-            We do not run any e-commerce or payment flow on this site — the Celestial Lights shop
+            We do not run any e-commerce or payment flow on this site. The Celestial Lights shop
             is a separate storefront, and purchases there are governed by that store&rsquo;s own
             policies once it is live.
           </p>
@@ -57,7 +57,7 @@ export default function Privacy() {
             When you press &ldquo;Request Consultation,&rdquo; the details you entered are sent to
             our server and emailed to the studio so we can reply. We do not add you to a mailing
             list, and we do not store a separate copy on the website. The &ldquo;Or message us
-            directly&rdquo; link opens WhatsApp on your device — nothing is sent until you send that
+            directly&rdquo; link opens WhatsApp on your device. Nothing is sent until you send that
             message yourself. From that point the conversation is handled inside WhatsApp, under
             Meta&rsquo;s own privacy policy, not ours. The same applies if you choose &ldquo;Email a
             Reference&rdquo;: your message goes through your own email provider.
@@ -80,7 +80,7 @@ export default function Privacy() {
 
           <h2 className="h-md">Why we use it</h2>
           <p>
-            Enquiry details are used solely to respond to you — to understand your space, prepare
+            Enquiry details are used solely to respond to you: to understand your space, prepare
             a consultation or a custom-fixture quote, and follow up. Visit data is used only to
             see which pages help people. We do not sell or rent your information, and we do not
             share it for anyone else&rsquo;s advertising.

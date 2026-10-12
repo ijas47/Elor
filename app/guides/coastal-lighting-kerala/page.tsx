@@ -7,7 +7,7 @@ import { Reveal, Stagger, StaggerItem } from "@/components/motion/Reveal";
 import { MagneticButton } from "@/components/motion/MagneticButton";
 import { RelatedGuides } from "@/components/ui/RelatedGuides";
 
-const TITLE = "Coastal & Humid Climate Lighting — What Survives in Kerala";
+const TITLE = "Coastal & Humid Climate Lighting: What Survives in Kerala";
 const META_TITLE = "Coastal & Humid Climate Lighting in Kerala";
 const DESC =
   "Salt air pits untreated brass and iron within two seasons. Which finishes last near the Kerala coast, what IP rating you need, and what fails first.";
@@ -30,7 +30,7 @@ const zones = [
     p: "Salt-laden air still reaches this band on the monsoon wind, but without direct spray. Powder-coated steel over a proper primer holds well, and lacquered brass survives indoors if it is not in the path of a sea-facing window. This covers most of Kochi, Kozhikode city and coastal Kannur.",
   },
   {
-    h: "Inland Kerala — humidity without salt",
+    h: "Inland Kerala: humidity without salt",
     p: "Thrissur, Palakkad, Kottayam and the hill districts trade salt for sustained high humidity and, at elevation, real condensation. Corrosion is slower and far more forgiving of material choice. What matters here instead is sealing and ventilation of the fitting, because moisture that condenses inside a housing has nowhere to go.",
   },
   {
@@ -42,7 +42,7 @@ const zones = [
 const faqs = [
   {
     q: "Which chandelier materials last near the sea in Kerala?",
-    a: "Crystal, glass, acrylic, marine-grade stainless steel and properly powder-coated aluminium or steel. Avoid untreated brass, iron and mild steel within a few kilometres of open sea — salt-laden air pits them within about two seasons, starting at fixings and joints rather than on the visible surface.",
+    a: "Crystal, glass, acrylic, marine-grade stainless steel and properly powder-coated aluminium or steel. Avoid untreated brass, iron and mild steel within a few kilometres of open sea. Salt-laden air pits them within about two seasons, starting at fixings and joints rather than on the visible surface.",
   },
   {
     q: "Does brass work at all in coastal Kerala?",
@@ -54,11 +54,11 @@ const faqs = [
   },
   {
     q: "What actually fails first on a coastal fixture?",
-    a: "The fixings, almost always — screws, chain links, suspension wires and the internal fasteners nobody looks at. A fixture can have a perfect marine-grade body and still fail because it was assembled with plated mild-steel screws. Specifying stainless fixings throughout costs very little and doubles practical life.",
+    a: "The fixings, almost always: screws, chain links, suspension wires and the internal fasteners nobody looks at. A fixture can have a perfect marine-grade body and still fail because it was assembled with plated mild-steel screws. Specifying stainless fixings throughout costs very little and doubles practical life.",
   },
   {
     q: "How often should coastal fixtures be cleaned?",
-    a: "Two to three times a year, and rinse rather than just dust — salt deposits are hygroscopic, so they hold moisture against the surface between cleanings. That single habit extends the life of a coastal fixture more than any finish upgrade.",
+    a: "Two to three times a year, and rinse rather than just dust. Salt deposits are hygroscopic, so they hold moisture against the surface between cleanings. That single habit extends the life of a coastal fixture more than any finish upgrade.",
   },
   {
     q: "Does the monsoon affect fixtures indoors?",
@@ -123,7 +123,7 @@ export default function CoastalLightingGuide() {
             <p className="lede" style={{ marginTop: 22 }}>
               Kerala runs 590 km of coastline, and most of its cities sit on it.
               Salt-laden air corrodes untreated brass, iron and mild steel within
-              about two seasons &mdash; and it starts at the fixings, not on the
+              about two seasons, and it starts at the fixings, not on the
               surface anyone is looking at. Crystal, glass, acrylic and
               marine-grade stainless are unaffected.
             </p>
@@ -223,7 +223,7 @@ export default function CoastalLightingGuide() {
           <Reveal><h2 className="h-lg">What we specify differently on the coast</h2></Reveal>
           <Reveal delay={0.12}>
             <ul className="check-list" style={{ marginTop: 28 }}>
-              <li><span className="tick">✓</span>Stainless fixings throughout &mdash; screws, chain, suspension wire and internal fasteners, not just the visible body. This is the single highest-value change and it costs very little.</li>
+              <li><span className="tick">✓</span>Stainless fixings throughout, including screws, chain, suspension wire and internal fasteners as well as the visible body. This is the single highest-value change and it costs very little.</li>
               <li><span className="tick">✓</span>Sealed or genuinely ventilated housings, never the almost-sealed middle ground that traps monsoon condensation with no way out.</li>
               <li><span className="tick">✓</span>Powder coat over a proper primer, not over bare metal, and touched up at any drilled or cut edge during installation.</li>
               <li><span className="tick">✓</span>Crystal and glass wherever the client wants the look of metal but the building is in the first 500 m band.</li>

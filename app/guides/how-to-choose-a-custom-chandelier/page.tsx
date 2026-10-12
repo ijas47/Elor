@@ -50,7 +50,7 @@ const faqs = [
 const articleSchema = {
   "@context": "https://schema.org",
   "@type": "Article",
-  headline: "How to Choose a Custom Chandelier — Villa, Duplex or Hotel",
+  headline: "How to Choose a Custom Chandelier: Villa, Duplex or Hotel",
   description:
     "What actually changes between lighting a villa living room, a duplex stairwell and a hotel lobby, and six questions to answer before you choose anything.",
   image: `${site.domain}/work/w3-showroom.jpg`,

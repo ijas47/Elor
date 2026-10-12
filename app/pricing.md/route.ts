@@ -13,7 +13,7 @@ import { site, stores } from "@/lib/site";
 export const dynamic = "force-static";
 
 export async function GET() {
-  const body = `# Pricing — ${site.name}
+  const body = `# Pricing: ${site.name}
 
 Last updated: 20 August 2026
 Currency: INR (₹). All prices include GST as applicable.
@@ -22,7 +22,7 @@ ${site.name} is the lighting consulting and custom fabrication arm of
 Celestial Lights. Ready-collection pieces are sold at fixed prices; bespoke
 fabrication is quoted per design after a free consultation.
 
-## Ready collection — fixed price bands
+## Ready collection: fixed price bands
 
 ### Accent & wall pieces
 - Price: ₹3,000 – ₹15,000
@@ -42,7 +42,7 @@ fabrication is quoted per design after a free consultation.
 
 ## Bespoke fabrication
 
-- Price: quoted per design — no fixed multiplier over ready pieces
+- Price: quoted per design, with no fixed multiplier over ready pieces
 - Design consultation, design direction and firm quote: free
 - Payment: only after you approve the design
 - Range: a custom piece can cost about the same as a large ready piece, or
@@ -71,7 +71,7 @@ Custom-designed lights include free installation.
 
 ## Where to buy
 
-${stores.map((s) => `- ${s.brand}, ${s.city} — ${s.address}`).join("\n")}
+${stores.map((s) => `- ${s.brand}, ${s.city}: ${s.address}`).join("\n")}
 - Pan-India delivery and remote video consultation from any store.
 
 ## Contact
