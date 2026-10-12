@@ -19,6 +19,26 @@ export interface Guide {
  */
 export const guides: Guide[] = [
   {
+    slug: "how-to-clean-a-crystal-chandelier",
+    title: "How to Clean a Crystal Chandelier",
+    dek: "Power off at the breaker, wipe in place, and wash only the drops that stay dull.",
+    tag: "Technical",
+    image: "/video/showroom-crystal.jpg",
+    imageAlt: "Crystal chandeliers lit in the showroom",
+    updated: "12 October 2026",
+    modified: "2026-10-12",
+  },
+  {
+    slug: "ip-rating-for-outdoor-lights",
+    title: "IP Rating for Outdoor Lights",
+    dek: "IP44 under cover, IP65 where monsoon rain reaches, IP66/67 by the pool. And why the number is not enough on the coast.",
+    tag: "Technical",
+    image: "/work/w5-garden.jpg",
+    imageAlt: "Garden and path lighting at night",
+    updated: "12 October 2026",
+    modified: "2026-10-12",
+  },
+  {
     slug: "chandelier-for-living-room",
     title: "Chandelier for a Living Room",
     dek: "Size it to the seating, clear the fan, and put the anchor in the slab before the ceiling closes.",
