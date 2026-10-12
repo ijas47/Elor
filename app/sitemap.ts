@@ -32,13 +32,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     path: `/guides/${g.slug}`,
     priority: 0.7,
     freq: "monthly" as const,
-    lastModified:
-      g.modified ??
-      (g.slug === "colour-of-light" ||
-      g.slug === "how-a-lighting-plan-is-built" ||
-      g.slug === "why-downlights-glare"
-        ? "2026-09-23"
-        : "2026-08-19"),
+    lastModified: g.modified,
   }));
 
   // Deduplicated, absolute image URLs for the gallery on /collections — the

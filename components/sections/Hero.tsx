@@ -209,11 +209,9 @@ export function Hero() {
             ))}
           </div>
 
-          <motion.div
-            className={styles.ctas}
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.7, duration: 0.9, ease: [0.16, 1, 0.3, 1] }}
+          <div
+            className={`${styles.ctas} hero-fade-up`}
+            style={{ animationDelay: "0.7s" }}
           >
             <MagneticButton href="/consultation" variant="gold">
               Get a Lighting Plan <span className="arr">→</span>
@@ -221,17 +219,12 @@ export function Hero() {
             <MagneticButton href="/customisation" variant="ghost">
               Send a reference
             </MagneticButton>
-          </motion.div>
+          </div>
 
-          <motion.div
-            className={styles.note}
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 0.95, duration: 1 }}
-          >
+          <div className={`${styles.note} hero-fade`} style={{ animationDelay: "0.95s" }}>
             <span className={styles.dot} />Celestial stores in Kannur and Calicut · Full
             experience centre in Kochi
-          </motion.div>
+          </div>
         </div>
 
         <div className={styles.rail} aria-hidden>

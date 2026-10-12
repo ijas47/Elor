@@ -1,12 +1,50 @@
 "use client";
 
-import { motion, useReducedMotion, useInView, type Variants } from "framer-motion";
-import { useRef, type ReactNode } from "react";
+import { useEffect, useRef, type CSSProperties, type ReactNode } from "react";
 
 /**
- * Scroll reveal. Content is server-rendered inside; we only animate its
- * presentation (opacity/translate), so crawlers always see the text.
+ * Scroll reveal, CSS-driven.
+ *
+ * Content is server-rendered VISIBLE. Nothing is hidden in the HTML, so
+ * above-the-fold copy and images paint on first frame (good LCP) and the page
+ * reads fine with JS off. After hydration, only elements that start BELOW the
+ * fold are "armed" (set to their hidden pre-reveal state, while off screen, so
+ * there is no visible flash) and then revealed by an IntersectionObserver as
+ * they scroll in. Reduced motion is handled in globals.css.
  */
+
+const EASE = "cubic-bezier(0.16, 1, 0.3, 1)";
+
+function belowFold(el: Element) {
+  return el.getBoundingClientRect().top > window.innerHeight * 0.98;
+}
+
+function useArmedReveal<T extends HTMLElement>(amount: number, once: boolean) {
+  const ref = useRef<T>(null);
+  useEffect(() => {
+    const el = ref.current;
+    if (!el || typeof IntersectionObserver === "undefined") return;
+    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+    if (!belowFold(el)) return; // already on screen: leave it visible
+    el.classList.add("reveal-armed");
+    const io = new IntersectionObserver(
+      (entries) => {
+        for (const e of entries) {
+          if (e.isIntersecting) {
+            el.classList.add("reveal-in");
+            if (once) io.disconnect();
+          } else if (!once) {
+            el.classList.remove("reveal-in");
+          }
+        }
+      },
+      { threshold: amount }
+    );
+    io.observe(el);
+    return () => io.disconnect();
+  }, [amount, once]);
+  return ref;
+}
 
 interface RevealProps {
   children: ReactNode;
@@ -25,51 +63,28 @@ export function Reveal({
   as = "div",
   once = true,
 }: RevealProps) {
-  const reduce = useReducedMotion();
-
-  // Reduced motion: render fully visible, no scroll dependency.
-  if (reduce) {
-    const Tag = as;
-    return <Tag className={className}>{children}</Tag>;
-  }
-
-  const MotionTag = motion[as];
+  const ref = useArmedReveal<HTMLElement>(0.15, once);
+  const Tag = as as "div";
+  const style = {
+    "--reveal-y": `${y}px`,
+    "--reveal-delay": `${delay}s`,
+    "--reveal-ease": EASE,
+  } as CSSProperties;
   return (
-    <MotionTag
-      className={className}
-      initial={{ opacity: 0, y }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once, amount: 0.15 }}
-      transition={{
-        duration: 0.9,
-        delay,
-        ease: [0.16, 1, 0.3, 1],
-      }}
+    <Tag
+      ref={ref as React.Ref<HTMLDivElement>}
+      className={className ? `reveal ${className}` : "reveal"}
+      style={style}
     >
       {children}
-    </MotionTag>
+    </Tag>
   );
 }
 
 /**
- * Staggered container, children fade+rise in sequence.
+ * Staggered container, children fade+rise in sequence once it scrolls in.
+ * Same rule: visible in the HTML, armed only if it starts below the fold.
  */
-const containerVariants: Variants = {
-  hidden: {},
-  show: {
-    transition: { staggerChildren: 0.09, delayChildren: 0.05 },
-  },
-};
-
-const itemVariants: Variants = {
-  hidden: { opacity: 0, y: 24 },
-  show: {
-    opacity: 1,
-    y: 0,
-    transition: { duration: 0.85, ease: [0.16, 1, 0.3, 1] },
-  },
-};
-
 export function Stagger({
   children,
   className,
@@ -77,24 +92,16 @@ export function Stagger({
   children: ReactNode;
   className?: string;
 }) {
-  const reduce = useReducedMotion();
-  const ref = useRef<HTMLDivElement>(null);
-  // useInView + animate is more reliable than whileInView for variant
-  // propagation to children (fires deterministically once 12% is visible).
-  const inView = useInView(ref, { once: true, amount: 0.12 });
-
-  if (reduce) return <div className={className}>{children}</div>;
-
+  const ref = useArmedReveal<HTMLDivElement>(0.12, true);
+  useEffect(() => {
+    ref.current
+      ?.querySelectorAll<HTMLElement>(".stagger-item")
+      .forEach((n, i) => n.style.setProperty("--stagger-i", String(i)));
+  }, [ref]);
   return (
-    <motion.div
-      ref={ref}
-      className={className}
-      variants={containerVariants}
-      initial="hidden"
-      animate={inView ? "show" : "hidden"}
-    >
+    <div ref={ref} className={className ? `stagger ${className}` : "stagger"}>
       {children}
-    </motion.div>
+    </div>
   );
 }
 
@@ -105,11 +112,9 @@ export function StaggerItem({
   children: ReactNode;
   className?: string;
 }) {
-  const reduce = useReducedMotion();
-  if (reduce) return <div className={className}>{children}</div>;
   return (
-    <motion.div className={className} variants={itemVariants}>
+    <div className={className ? `stagger-item ${className}` : "stagger-item"}>
       {children}
-    </motion.div>
+    </div>
   );
 }
