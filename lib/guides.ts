@@ -195,7 +195,7 @@ export const guides: Guide[] = [
     image: "/work/w2-corridor.jpg",
     updated: "20 August 2026",
     modified: "2026-08-20",
-    related: ["chandelier-with-ceiling-fan", "kitchen-lighting-design", "staircase-lighting-design"],
+    related: ["ceiling-and-lighting-design", "chandelier-with-ceiling-fan", "staircase-lighting-design"],
   },
   {
     slug: "crystal-vs-glass-chandelier",
