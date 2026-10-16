@@ -10,6 +10,12 @@ export interface Guide {
   /** ISO date for the sitemap. Omit on older guides; the sitemap keeps their dates. */
   /** ISO date the content last changed; must match `updated`. Feeds sitemap + schema. */
   modified: string;
+  /**
+   * Slugs shown first in this guide's Related guides row, ahead of the same-tag
+   * fill. Set on indexed guides so each guide Google has not indexed yet gets
+   * at least three links from pages it already crawls.
+   */
+  related?: string[];
 }
 
 /**
@@ -38,6 +44,7 @@ export const guides: Guide[] = [
     imageAlt: "Garden and path lighting at night",
     updated: "12 October 2026",
     modified: "2026-10-12",
+    related: ["home-lighting-design", "staircase-lighting-design", "brass-chandelier"],
   },
   {
     slug: "chandelier-for-living-room",
@@ -48,6 +55,7 @@ export const guides: Guide[] = [
     imageAlt: "A living room with a chandelier, cove light in the tray ceiling, and a lamp beside the sofa",
     updated: "12 October 2026",
     modified: "2026-10-12",
+    related: ["chandelier-with-ceiling-fan", "how-to-choose-a-custom-chandelier", "home-lighting-design"],
   },
   {
     slug: "ceiling-and-lighting-design",
@@ -58,6 +66,7 @@ export const guides: Guide[] = [
     imageAlt: "A tray ceiling with cove lighting, recessed spots, and a chandelier over the seating",
     updated: "12 October 2026",
     modified: "2026-10-12",
+    related: ["home-lighting-design", "kitchen-lighting-design", "chandelier-with-ceiling-fan"],
   },
   {
     slug: "home-lighting-design",
@@ -108,6 +117,7 @@ export const guides: Guide[] = [
     imageAlt: "The Celestial Lights wall, with mosaic pendants and crystal cascades on display",
     updated: "12 October 2026",
     modified: "2026-10-12",
+    related: ["brass-chandelier", "how-to-clean-a-crystal-chandelier", "how-to-choose-a-custom-chandelier"],
   },
   {
     slug: "brass-chandelier",
@@ -136,6 +146,7 @@ export const guides: Guide[] = [
     image: "/spaces/living.jpg",
     updated: "23 September 2026",
     modified: "2026-09-23",
+    related: ["home-lighting-design", "kitchen-lighting-design", "bedroom-lighting-design"],
   },
   {
     slug: "why-downlights-glare",
@@ -145,6 +156,7 @@ export const guides: Guide[] = [
     image: "/spaces/living.jpg",
     updated: "23 September 2026",
     modified: "2026-09-23",
+    related: ["kitchen-lighting-design", "bedroom-lighting-design", "staircase-lighting-design"],
   },
   {
     slug: "colour-of-light",
@@ -154,6 +166,7 @@ export const guides: Guide[] = [
     image: "/lifestyle/showroom-grand.jpg",
     updated: "23 September 2026",
     modified: "2026-09-23",
+    related: ["kitchen-lighting-design", "bedroom-lighting-design", "home-lighting-design"],
   },
   {
     slug: "chandelier-size-calculator",
@@ -163,6 +176,7 @@ export const guides: Guide[] = [
     image: "/work/w1-cascade.jpg",
     updated: "20 August 2026",
     modified: "2026-08-20",
+    related: ["chandelier-with-ceiling-fan", "staircase-lighting-design", "bedroom-lighting-design"],
   },
   {
     slug: "chandelier-with-ceiling-fan",
@@ -181,6 +195,7 @@ export const guides: Guide[] = [
     image: "/work/w2-corridor.jpg",
     updated: "20 August 2026",
     modified: "2026-08-20",
+    related: ["ceiling-and-lighting-design", "chandelier-with-ceiling-fan", "staircase-lighting-design"],
   },
   {
     slug: "crystal-vs-glass-chandelier",
@@ -190,6 +205,7 @@ export const guides: Guide[] = [
     image: "/lifestyle/showroom-grand.jpg",
     updated: "20 August 2026",
     modified: "2026-08-20",
+    related: ["how-to-clean-a-crystal-chandelier", "brass-chandelier", "how-to-choose-a-custom-chandelier"],
   },
   {
     slug: "coastal-lighting-kerala",
@@ -199,6 +215,7 @@ export const guides: Guide[] = [
     image: "/work/w5-garden.jpg",
     updated: "20 August 2026",
     modified: "2026-08-20",
+    related: ["brass-chandelier", "how-to-clean-a-crystal-chandelier", "home-lighting-design"],
   },
   {
     slug: "how-to-choose-a-chandelier-shop",
@@ -208,6 +225,7 @@ export const guides: Guide[] = [
     image: "/lifestyle/store-wall.jpg",
     updated: "24 August 2026",
     modified: "2026-08-24",
+    related: ["how-to-choose-a-custom-chandelier", "how-to-clean-a-crystal-chandelier", "brass-chandelier"],
   },
   {
     slug: "chandelier-pricing-guide",
@@ -217,5 +235,6 @@ export const guides: Guide[] = [
     image: "/lifestyle/showroom-grand.jpg",
     updated: "19 August 2026",
     modified: "2026-08-19",
+    related: ["how-to-choose-a-custom-chandelier", "brass-chandelier", "home-lighting-design"],
   },
 ];
