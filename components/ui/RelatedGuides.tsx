@@ -14,9 +14,14 @@ function pickRelated(currentSlug: string, count: number): Guide[] {
   const rest = guides.filter((g) => g.slug !== currentSlug);
   if (!current) return rest.slice(0, count);
 
-  const sameTag = rest.filter((g) => g.tag === current.tag);
-  const others = rest.filter((g) => g.tag !== current.tag);
-  return [...sameTag, ...others].slice(0, count);
+  // Hand-picked slugs from lib/guides.ts lead, then same-tag, then the rest.
+  const picked = (current.related ?? [])
+    .map((slug) => rest.find((g) => g.slug === slug))
+    .filter((g): g is Guide => Boolean(g));
+  const remaining = rest.filter((g) => !picked.includes(g));
+  const sameTag = remaining.filter((g) => g.tag === current.tag);
+  const others = remaining.filter((g) => g.tag !== current.tag);
+  return [...picked, ...sameTag, ...others].slice(0, count);
 }
 
 export function RelatedGuides({ currentSlug, count = 3 }: { currentSlug: string; count?: number }) {

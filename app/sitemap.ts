@@ -7,11 +7,11 @@ import { pieces } from "@/lib/collections";
 // timestamp. Store and guide routes are derived from their data files so a new
 // store or guide can never be silently missing from the sitemap.
 const staticRoutes = [
-  { path: "/", priority: 1.0, freq: "weekly" as const, lastModified: "2026-08-19" },
+  { path: "/", priority: 1.0, freq: "weekly" as const, lastModified: "2026-10-12" },
   { path: "/collections", priority: 0.9, freq: "weekly" as const, lastModified: "2026-08-01" },
-  { path: "/customisation", priority: 0.9, freq: "monthly" as const, lastModified: "2026-08-19" },
-  { path: "/consultation", priority: 0.8, freq: "monthly" as const, lastModified: "2026-08-19" },
-  { path: "/stores", priority: 0.7, freq: "monthly" as const, lastModified: "2026-08-19" },
+  { path: "/customisation", priority: 0.9, freq: "monthly" as const, lastModified: "2026-10-12" },
+  { path: "/consultation", priority: 0.8, freq: "monthly" as const, lastModified: "2026-10-12" },
+  { path: "/stores", priority: 0.7, freq: "monthly" as const, lastModified: "2026-10-12" },
   { path: "/india", priority: 0.8, freq: "monthly" as const, lastModified: "2026-09-24" },
   { path: "/guides", priority: 0.8, freq: "monthly" as const, lastModified: "2026-10-12" },
   { path: "/for/architects-and-designers", priority: 0.7, freq: "monthly" as const, lastModified: "2026-08-24" },
@@ -25,7 +25,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
     path: `/stores/${s.city.toLowerCase()}`,
     priority: 0.8,
     freq: "monthly" as const,
-    lastModified: "2026-08-19",
+    // 12 Oct 2026: per-store phones, Kochi door number, Kozhikode placeholder
+    // address removed, guide links added to every store page.
+    lastModified: "2026-10-12",
   }));
 
   const guideRoutes = guides.map((g) => ({
