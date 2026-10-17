@@ -7,7 +7,11 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "indexnow": "node scripts/indexnow.mjs"
+    "indexnow": "node scripts/indexnow.mjs",
+    "typecheck": "tsc --noEmit",
+    "check": "node scripts/check-source.mjs",
+    "verify": "node scripts/verify-site.mjs",
+    "ci": "npm run typecheck && npm run check && npm run build && npm run verify"
   },
   "dependencies": {
     "framer-motion": "^11.15.0",
