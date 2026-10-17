@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { consultationEmail, parseConsultation, spaceOptions, stageOptions } from "@/lib/consultation";
 import { site } from "@/lib/site";
+import { elorContact } from "@/lib/brands";
 
 /**
  * Consultation lead form. The browser posts straight to FormSubmit.
@@ -124,7 +125,7 @@ export function ConsultForm({
           {status === "sending" ? "Sending…" : "Request Consultation"}{" "}
           {status !== "sending" && <span className="arr">→</span>}
         </button>
-        <a className="btn btn-ghost" href={site.whatsapp} target="_blank" rel="noopener noreferrer">
+        <a className="btn btn-ghost" href={elorContact.whatsappHref} target="_blank" rel="noopener noreferrer">
           Or message us directly
         </a>
       </div>

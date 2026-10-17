@@ -1,4 +1,5 @@
 import { site, stores } from "@/lib/site";
+import { elorContact } from "@/lib/brands";
 import { guides } from "@/lib/guides";
 
 // llms.txt: a plain-language summary for AI assistants/crawlers, per the
@@ -31,8 +32,8 @@ ${guides.map((g) => `  - [${g.title}](${site.domain}/guides/${g.slug}): ${g.dek}
 
 ## Contact
 
-- Phone: ${site.phone}
-- WhatsApp: ${site.whatsappNumber}
+- Phone: ${elorContact.phone}
+- WhatsApp: ${elorContact.whatsapp}
 - Email: ${site.email}
 - Hours: ${site.hours}
 `;

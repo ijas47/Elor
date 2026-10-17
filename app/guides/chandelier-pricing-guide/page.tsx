@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { site } from "@/lib/site";
+import { elorContact } from "@/lib/brands";
 import { guideDates } from "@/lib/guides";
 import { breadcrumbSchema } from "@/lib/schema";
 import { Breadcrumbs } from "@/components/ui/Breadcrumbs";
@@ -161,7 +162,7 @@ export default function ChandelierPricingGuide() {
           <Reveal delay={0.12}>
             <div className="cta-ctas" style={{ justifyContent: "flex-start", marginTop: 28 }}>
               <MagneticButton href="/consultation" variant="gold">Start a Consultation <span className="arr">→</span></MagneticButton>
-              <MagneticButton href={site.whatsapp} variant="ghost" external>WhatsApp a Photo</MagneticButton>
+              <MagneticButton href={elorContact.whatsappHref} variant="ghost" external>WhatsApp a Photo</MagneticButton>
             </div>
           </Reveal>
         </div>

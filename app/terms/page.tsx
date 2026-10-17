@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { site } from "@/lib/site";
+import { elorContact } from "@/lib/brands";
 import { breadcrumbSchema } from "@/lib/schema";
 import { Breadcrumbs } from "@/components/ui/Breadcrumbs";
 
@@ -91,7 +92,7 @@ export default function Terms() {
           <h2 className="h-md">Contact</h2>
           <p>
             Elor Lighting · <a href={`mailto:${site.email}`}>{site.email}</a> ·{" "}
-            <a href={site.phoneHref}>{site.phone}</a>
+            <a href={elorContact.phoneHref}>{elorContact.phone}</a>
           </p>
         </div>
       </div>

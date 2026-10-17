@@ -25,3 +25,14 @@ export const brands = {
 } as const;
 
 export type BrandId = keyof typeof brands;
+
+/**
+ * Elor's contact details in the forms pages need. Derived from the registry
+ * above, so a number exists in one place only.
+ */
+export const elorContact = {
+  phone: display(brands.elor.phone),
+  phoneHref: telHref(brands.elor.phone),
+  whatsapp: display(brands.elor.whatsapp),
+  whatsappHref: waHref(brands.elor.whatsapp, "Hi Elor, I'm interested in lighting for my space."),
+} as const;

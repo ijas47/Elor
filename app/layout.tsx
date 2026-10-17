@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Script from "next/script";
 import { Playfair_Display, Inter } from "next/font/google";
 import { site } from "@/lib/site";
+import { elorContact } from "@/lib/brands";
 import { Nav } from "@/components/Nav";
 import { Footer } from "@/components/Footer";
 import { PageTransition } from "@/components/motion/PageTransition";
@@ -72,7 +73,7 @@ const orgSchema = {
   logo: `${site.domain}/brand/logo-mark.svg`,
   description: site.description,
   email: site.email,
-  telephone: site.phone,
+  telephone: elorContact.phone,
   areaServed: "IN",
   sameAs: [site.social.instagram, site.social.facebook],
   // Each store's own address lives in its LightingStore schema at
@@ -81,7 +82,7 @@ const orgSchema = {
   contactPoint: [
     {
       "@type": "ContactPoint",
-      telephone: site.phone,
+      telephone: elorContact.phone,
       email: site.email,
       contactType: "sales",
       areaServed: "IN",
@@ -89,9 +90,9 @@ const orgSchema = {
     },
     {
       "@type": "ContactPoint",
-      telephone: site.whatsappNumber,
+      telephone: elorContact.whatsapp,
       contactType: "WhatsApp",
-      url: site.whatsapp,
+      url: elorContact.whatsappHref,
       areaServed: "IN",
       availableLanguage: ["en", "ml"],
     },

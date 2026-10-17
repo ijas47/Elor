@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { site } from "@/lib/site";
+import { elorContact } from "@/lib/brands";
 import { breadcrumbSchema } from "@/lib/schema";
 import { Breadcrumbs } from "@/components/ui/Breadcrumbs";
 
@@ -98,7 +99,7 @@ export default function Privacy() {
             Under India&rsquo;s Digital Personal Data Protection Act, 2023, you can ask us what
             information we hold about you, ask us to correct it, or ask us to delete it. To do any
             of this, email <a href={`mailto:${site.email}`}>{site.email}</a> or call{" "}
-            <a href={site.phoneHref}>{site.phone}</a> and we will respond within a reasonable time.
+            <a href={elorContact.phoneHref}>{elorContact.phone}</a> and we will respond within a reasonable time.
           </p>
 
           <h2 className="h-md">Third-party links</h2>
@@ -117,7 +118,7 @@ export default function Privacy() {
           <h2 className="h-md">Contact</h2>
           <p>
             Elor Lighting · <a href={`mailto:${site.email}`}>{site.email}</a> ·{" "}
-            <a href={site.phoneHref}>{site.phone}</a>
+            <a href={elorContact.phoneHref}>{elorContact.phone}</a>
           </p>
         </div>
       </div>

@@ -3,6 +3,7 @@ import { GuideLinks } from "@/components/ui/GuideLinks";
 import Image from "next/image";
 import Link from "next/link";
 import { site, stores } from "@/lib/site";
+import { elorContact } from "@/lib/brands";
 import { breadcrumbSchema } from "@/lib/schema";
 import { Breadcrumbs } from "@/components/ui/Breadcrumbs";
 import { Reveal, Stagger, StaggerItem } from "@/components/motion/Reveal";
@@ -122,7 +123,7 @@ export default function Stores() {
           <Reveal delay={0.16}>
             <div className="cta-ctas">
               <MagneticButton href="/consultation" variant="gold">Book a Consultation <span className="arr">→</span></MagneticButton>
-              <MagneticButton href={site.whatsapp} variant="ghost" external>WhatsApp Us</MagneticButton>
+              <MagneticButton href={elorContact.whatsappHref} variant="ghost" external>WhatsApp Us</MagneticButton>
             </div>
           </Reveal>
         </div>
