@@ -2,7 +2,7 @@
 
 Production is `main`, deployed by Vercel to https://www.elorlighting.com. Change it only through a pull request that Ijas reviews. Never push to `main`, never merge, never force-push.
 
-Before you open a PR, run `npm run ci` (typecheck, source check, build, built-site check). To see a change in a browser, use `.cursor/skills/verify-elor/SKILL.md`.
+Before you open a PR, run `npm run ci` (typecheck, source check, build, built-site check). CI runs the same command on the merge result of every PR. To see a change in a browser, use `.cursor/skills/verify-elor/SKILL.md`.
 
 ## Rules and what enforces them
 
