@@ -1,3 +1,5 @@
+import { brands, display, telHref, waHref, type BrandId } from "@/lib/brands";
+
 /**
  * Central site configuration.
  *
@@ -25,28 +27,21 @@ export const site = {
   metaDescription:
     "Lighting design anywhere in India, with our own fittings. We install custom lights and support the install of the rest. Centres in Kannur, Calicut and Kochi.",
 
-  // Elor uses ONE number for calls and WhatsApp: +91 88487 08529.
-  // +91 99956 19470 is the Celestial Lights line and appears only on the
-  // Celestial store pages (Kannur, Kozhikode) via `celestialPhone` below.
-  email: "hello@elorlighting.com",
-  phone: "+91 88487 08529",
-  phoneHref: "tel:+918848708529",
-  celestialPhone: "+91 99956 19470",
-  celestialPhoneHref: "tel:+919995619470",
-  whatsappNumber: "+91 88487 08529",
+  email: brands.elor.email,
+  phone: display(brands.elor.phone),
+  phoneHref: telHref(brands.elor.phone),
+  whatsappNumber: display(brands.elor.whatsapp),
   hours: "Mon-Sat · 9:30 AM to 8:30 PM IST",
 
   // ── SHOP HANDOFF (swap when Shopify is live) ──────────────────────────────
   // e.g. "https://celestiallights.store" or the myshopify domain.
-  shopUrl:
-    "https://wa.me/918848708529?text=Hi%20Elor%2C%20I%27d%20like%20to%20browse%20the%20Celestial%20Lights%20collection.",
+  shopUrl: waHref(brands.elor.whatsapp, "Hi Elor, I'd like to browse the Celestial Lights collection."),
   shopLabel: "Celestial Lights",
   shopLive: false, // set true once the Shopify store is published
   // While the store is being built, do not label the button "Shop".
   shopCta: "See the range",
 
-  whatsapp:
-    "https://wa.me/918848708529?text=Hi%20Elor%2C%20I%27m%20interested%20in%20lighting%20for%20my%20space.",
+  whatsapp: waHref(brands.elor.whatsapp, "Hi Elor, I'm interested in lighting for my space."),
 
   social: {
     instagram: "https://instagram.com/elorlighting",
@@ -77,10 +72,29 @@ export const site = {
  * replace with the real coordinates if you ever pin the exact building.
  * Kozhikode's is city-level only until the street address is confirmed.
  */
+type StoreInput = {
+  city: string;
+  brandId: BrandId;
+  kind: string;
+  street: string;
+  locality: string;
+  region: string;
+  postalCode: string;
+  address: string;
+  hours: string;
+  maps: string;
+  geo: { lat: number; lng: number } | null;
+};
+
+function store(input: StoreInput) {
+  const b = brands[input.brandId];
+  return { ...input, brand: b.name, phone: display(b.phone), phoneHref: telHref(b.phone) };
+}
+
 export const stores = [
-  {
+  store({
     city: "Kannur",
-    brand: "Celestial Lights",
+    brandId: "celestial",
     kind: "Store and experience centre",
     street:
       "Ground Floor, P O Chovva, Kannothumchal, Elayavoor",
@@ -90,14 +104,12 @@ export const stores = [
     address:
       "Ground Floor, P O Chovva, Kannothumchal, Kannur, Elayavoor, Kerala 670006",
     hours: "Mon-Sat · 9:30 AM to 8:30 PM",
-    phone: site.celestialPhone,
-    phoneHref: site.celestialPhoneHref,
     maps: "https://maps.google.com/?q=Celestial+Lights+Chovva+Kannothumchal+Kannur+Kerala+670006",
     geo: { lat: 11.8739191, lng: 75.3881457 },
-  },
-  {
+  }),
+  store({
     city: "Kochi",
-    brand: "Elor Lighting",
+    brandId: "elor",
     kind: "Full experience centre",
     street:
       "63/500, 1st Floor, Chalakuzhy, Gandhinagar Road, near the Fire and Rescue Station, Gandhi Nagar, Kadavanthra",
@@ -107,14 +119,12 @@ export const stores = [
     address:
       "63/500, 1st Floor, Chalakuzhy, Gandhinagar Road, near the Fire and Rescue Station, Gandhi Nagar, Kadavanthra, Kochi, Kerala 682020",
     hours: "Mon-Sat · 9:30 AM to 8:30 PM",
-    phone: site.phone,
-    phoneHref: site.phoneHref,
     maps: "https://maps.google.com/?q=Elor+Lighting+63/500+Chalakuzhy+Gandhinagar+Road+Kadavanthra+Kochi+682020",
     geo: { lat: 9.9889781, lng: 76.2951875 },
-  },
-  {
+  }),
+  store({
     city: "Kozhikode",
-    brand: "Celestial Lights",
+    brandId: "celestial",
     kind: "Store and experience centre",
     // Street address and PIN not confirmed yet. Leave empty rather than
     // publishing a placeholder; schema omits empty fields.
@@ -124,13 +134,11 @@ export const stores = [
     postalCode: "",
     address: "Kozhikode, Kerala",
     hours: "Mon-Sat · 9:30 AM to 8:30 PM",
-    phone: site.celestialPhone,
-    phoneHref: site.celestialPhoneHref,
     maps: "https://maps.google.com/?q=Celestial+Lights+Kozhikode+Kerala",
     // No geo until the real store location is confirmed.
     geo: null,
-  },
-] as const;
+  }),
+];
 
 export const nav = [
   { label: "Collections", href: "/collections" },
