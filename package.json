@@ -6,7 +6,6 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint",
     "indexnow": "node scripts/indexnow.mjs",
     "typecheck": "tsc --noEmit",
     "check": "node scripts/check-source.mjs",
