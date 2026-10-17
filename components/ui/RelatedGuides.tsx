@@ -5,7 +5,7 @@ import { Reveal, Stagger, StaggerItem } from "@/components/motion/Reveal";
 /**
  * Same-tag guides first, then whatever else fills the row, self excluded.
  * Exists because the audit found some guides (how-to-choose-a-custom-
- * chandelier) had zero contextual inbound links — reachable only from the
+ * chandelier) had zero contextual inbound links, reachable only from the
  * /guides hub. Query fan-out rewards a linked cluster over isolated pages,
  * so every guide should point at its neighbours, not just the index.
  */

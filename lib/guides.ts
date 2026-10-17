@@ -17,7 +17,7 @@ export interface GuideEntry {
 }
 
 /**
- * The editorial guides index. City/store content is NOT here — each store city
+ * The editorial guides index. City/store content is NOT here. Each store city
  * lives at /stores/{city} with LightingStore schema, and service-area cities
  * (where we deliver but have no premises) will live under /lighting/{city}.
  * Keeping them apart is what stops the two page types cannibalising each other.

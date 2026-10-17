@@ -19,7 +19,7 @@ export const site = {
   description:
     "Elor Lighting is the lighting consultancy of Celestial Lights. We design lighting for sites anywhere in India and supply our own fittings. We install custom lights and give installation support for everything else. The plan is written in DIALux. Custom chandeliers are made in our factory. Experience centres and the office are in Kerala: Celestial Lights in Kannur and Calicut, and a full Elor experience centre in Kochi. An online store for the range is being built.",
   /**
-   * `description` above is the full entity description — it feeds Organization
+   * `description` above is the full entity description. It feeds Organization
    * schema and llms.txt, where length is fine. `metaDescription` is the SERP
    * version: Google truncates around 160 characters, so the long one lost its
    * location and its call to action before anyone read them.
@@ -68,7 +68,7 @@ export const site = {
  * `address` is the display string built from them.
  *
  * `geo` is locality-level (OpenStreetMap Nominatim geocoding of the address
- * text), not a GPS-surveyed exact point — fine for LocalBusiness schema, but
+ * text), not a GPS-surveyed exact point. Fine for LocalBusiness schema, but
  * replace with the real coordinates if you ever pin the exact building.
  * Kozhikode's is city-level only until the street address is confirmed.
  */

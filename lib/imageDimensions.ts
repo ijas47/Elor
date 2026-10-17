@@ -1,7 +1,7 @@
 /**
  * Real pixel dimensions for /public images used in ImageObject schema and the
  * sitemap's image extension. Google's ImageObject guidance wants actual
- * width/height, not a guess — these were read directly off the files with
+ * width/height, not a guess. These were read directly off the files with
  * `sips -g pixelWidth -g pixelHeight`, not inferred from CSS display size.
  *
  * Only images that appear in structured data need an entry here. Re-run the

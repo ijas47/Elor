@@ -16,7 +16,7 @@ export const metadata: Metadata = {
 };
 
 const faqs = [
-  // Also serialized into FAQPage schema below — keep questions/answers in sync
+  // Also serialized into FAQPage schema below. Keep questions/answers in sync
   // with what's actually asked on the page.
   { q: "What can you actually make?", a: "Chandeliers, cascades, cluster pendants and statement ceiling pieces. If it hangs and it glows, it is in scope. We work in crystal, glass, metal, acrylic and LED, at any drop and diameter." },
   { q: "I only have a photo. Is that enough?", a: "Yes. The picture is the brief. A Pinterest screenshot, a hotel photo, a magazine page or a rough sketch all work. We reverse-engineer it into a buildable fixture and confirm dimensions with you." },
@@ -32,7 +32,7 @@ const briefTypes = [
   { icon: "spark", h: "Just a description", p: "No image at all? Describe the feeling and the space. We sketch options for you to choose from." },
 ];
 
-// Also serialized into HowTo schema below — keep in sync with what's on the page.
+// Also serialized into HowTo schema below. Keep in sync with what's on the page.
 const processSteps = [
   { h: "Measure", p: "We confirm your ceiling height, drop, diameter and mounting so the piece fits its exact void." },
   { h: "Design", p: "We translate your reference into a buildable design and quote it firm, before you commit." },

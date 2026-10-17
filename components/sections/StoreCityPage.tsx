@@ -12,13 +12,13 @@ import { MagneticButton } from "@/components/motion/MagneticButton";
 /**
  * Shared template for the three store pages (/stores/kannur|kochi|kozhikode).
  *
- * These are the ONLY pages that carry `LightingStore` schema — the estate index
+ * These are the ONLY pages that carry `LightingStore` schema. The estate index
  * at /stores lists them as an ItemList instead, so each physical store maps to
  * exactly one schema entity at one canonical URL. Service-area cities where we
  * have no premises get `Service` + `areaServed` and never a LocalBusiness type.
  *
  * All copy and data are per-city (lib/storeCities.ts, lib/site.ts's `stores`,
- * lib/testimonials.ts) — this component only supplies the structure.
+ * lib/testimonials.ts). This component only supplies the structure.
  */
 export function StoreCityPage({ city }: { city: StoreCity }) {
   const copy = storeCities[city];

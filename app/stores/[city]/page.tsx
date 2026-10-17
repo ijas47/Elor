@@ -4,7 +4,7 @@ import { StoreCityPage } from "@/components/sections/StoreCityPage";
 import { storeCities, type StoreCity } from "@/lib/storeCities";
 
 // One route for all three store pages. Adding a fourth store means adding a
-// record to lib/site.ts's `stores` and lib/storeCities.ts — no new page file.
+// record to lib/site.ts's `stores` and lib/storeCities.ts. No new page file.
 const slugToCity: Record<string, StoreCity> = {
   kannur: "Kannur",
   kochi: "Kochi",
@@ -15,7 +15,7 @@ export function generateStaticParams() {
   return Object.keys(slugToCity).map((city) => ({ city }));
 }
 
-// Any slug outside the map 404s rather than rendering an empty shell — stops
+// Any slug outside the map 404s rather than rendering an empty shell. That stops
 // /stores/anything becoming an accidental soft-404 that Google indexes.
 export const dynamicParams = false;
 

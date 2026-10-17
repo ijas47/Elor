@@ -9,7 +9,7 @@ Before you open a PR, run `npm run ci` (typecheck, source check, build, built-si
 | Rule | Enforced by |
 |---|---|
 | Elor uses +91 88487 08529 for calls and WhatsApp. Celestial uses +91 99956 19470, only on the Kannur and Kozhikode stores. | `lib/brands.ts` is the only place a number exists. Stores take `brandId` and cannot carry their own phone (type error). `npm run check` rejects phone, `tel:` and `wa.me` literals elsewhere. `npm run verify` checks every built page and its JSON-LD. |
-| No em dashes. En dashes only in number ranges. | `npm run verify` (`no-em-dash`, `no-en-dash-as-dash`) on all built HTML, llms.txt and pricing.md. |
+| No em dashes. En dashes only in number ranges. | `npm run verify` (`no-em-dash`, `no-en-dash-as-dash`) on all built HTML, llms.txt and pricing.md. `npm run check` (`em-dash`) on source in app, components and lib, comments included. |
 | No AI-tell wording (delve, elevate, seamless, unlock, tapestry, testament, "in today's world", "not just", "whether you're"). | `npm run verify` (`no-ai-tell`). Rule-of-three filler and "not X but Y" need judgment. See below. |
 | No placeholder business data. Leave a field empty. | `npm run verify` (`no-placeholder`). |
 | Meta description at most 160 characters. Title at most 65 including " \| Elor Lighting". | `npm run verify` (`meta-description`, `title-length`). |

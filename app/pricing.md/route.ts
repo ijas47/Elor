@@ -1,13 +1,13 @@
 import { site, stores } from "@/lib/site";
 
 /**
- * /pricing.md — structured pricing for AI agents that compare options before a
+ * /pricing.md: structured pricing for AI agents that compare options before a
  * human ever visits the site. Opaque pricing gets filtered out of AI-mediated
  * buying journeys, so the bands published in the pricing guide are mirrored
  * here in a form any model can parse without rendering the page.
  *
  * Bands must stay in sync with app/guides/chandelier-pricing-guide/page.tsx.
- * Bespoke fabrication is deliberately not given a number — it is quoted per
+ * Bespoke fabrication is deliberately not given a number. It is quoted per
  * design, and inventing a figure here would be worse than omitting it.
  */
 export const dynamic = "force-static";

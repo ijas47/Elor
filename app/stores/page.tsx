@@ -18,8 +18,8 @@ export const metadata: Metadata = {
 /**
  * This index page deliberately carries an ItemList, NOT LightingStore entries.
  * Each physical store's LocalBusiness schema lives on its own page at
- * /stores/{city}, so one store maps to one entity at one canonical URL —
- * duplicating it here would give Google two competing entities per store.
+ * /stores/{city}, so one store maps to one entity at one canonical URL.
+ * Duplicating it here would give Google two competing entities per store.
  */
 const storeListSchema = {
   "@context": "https://schema.org",
