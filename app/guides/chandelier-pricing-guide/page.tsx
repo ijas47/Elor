@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { site } from "@/lib/site";
+import { guideDates } from "@/lib/guides";
 import { breadcrumbSchema } from "@/lib/schema";
 import { Breadcrumbs } from "@/components/ui/Breadcrumbs";
 import { Reveal, Stagger, StaggerItem } from "@/components/motion/Reveal";
@@ -14,7 +15,7 @@ export const metadata: Metadata = {
   alternates: { canonical: "/guides/chandelier-pricing-guide" },
 };
 
-const UPDATED = "19 August 2026";
+const { updated: UPDATED, modified: MODIFIED } = guideDates("/guides/chandelier-pricing-guide");
 
 const priceBands = [
   {
@@ -60,7 +61,7 @@ const articleSchema = {
     logo: { "@type": "ImageObject", url: `${site.domain}/brand/logo-mark.svg` },
   },
   datePublished: "2026-08-19",
-  dateModified: "2026-08-19",
+  dateModified: MODIFIED,
   mainEntityOfPage: `${site.domain}/guides/chandelier-pricing-guide`,
 };
 

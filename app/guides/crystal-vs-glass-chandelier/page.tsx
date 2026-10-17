@@ -1,6 +1,7 @@
 import Link from "next/link";
 import type { Metadata } from "next";
 import { site } from "@/lib/site";
+import { guideDates } from "@/lib/guides";
 import { breadcrumbSchema } from "@/lib/schema";
 import { Breadcrumbs } from "@/components/ui/Breadcrumbs";
 import { Reveal, Stagger, StaggerItem } from "@/components/motion/Reveal";
@@ -12,7 +13,7 @@ const META_TITLE = "Crystal vs Glass vs Acrylic Chandeliers";
 const DESC =
   "How crystal, glass, acrylic and metal chandeliers differ in light, weight, cleaning and cost, and which suits an Indian home, humid coast or lobby.";
 const PATH = "/guides/crystal-vs-glass-chandelier";
-const UPDATED = "20 August 2026";
+const { updated: UPDATED, modified: MODIFIED } = guideDates(PATH);
 
 export const metadata: Metadata = {
   title: META_TITLE,
@@ -79,7 +80,7 @@ const articleSchema = {
     logo: { "@type": "ImageObject", url: `${site.domain}/brand/logo-mark.svg` },
   },
   datePublished: "2026-08-20",
-  dateModified: "2026-08-20",
+  dateModified: MODIFIED,
   mainEntityOfPage: `${site.domain}${PATH}`,
 };
 
