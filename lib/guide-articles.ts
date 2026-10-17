@@ -45,7 +45,7 @@ const UPDATED = "5 October 2026";
 export const guideArticles: GuideArticle[] = [
   {
     slug: "chandelier-for-living-room",
-    metaTitle: "Living Room Chandelier for Kerala Homes: Size, Fan, Ceiling",
+    metaTitle: "Living Room Chandelier for Kerala Homes",
     description:
       "How to choose a living room chandelier for a Kerala home: size it to the seating, keep it apart from the fan, anchor it to the slab, and suit it to humidity.",
     crumb: "Chandelier for a Living Room",
@@ -418,7 +418,7 @@ export const guideArticles: GuideArticle[] = [
   },
   {
     slug: "home-lighting-design",
-    metaTitle: "Home Lighting Design for Kerala Houses: One Plan, Every Room",
+    metaTitle: "Home Lighting Design for Kerala Houses",
     description:
       "Home lighting design for Kerala houses: one plan for every room and the outside, drawn before the ceilings close, with consistent colour and separate circuits.",
     crumb: "Home Lighting Design",
@@ -615,7 +615,7 @@ export const guideArticles: GuideArticle[] = [
   },
   {
     slug: "staircase-lighting-design",
-    metaTitle: "Staircase Lighting for Kerala Homes: Treads, Voids, Cascades",
+    metaTitle: "Staircase Lighting for Kerala Homes",
     description:
       "Staircase lighting design for Kerala homes: light each tread without glare, hang the double-height void from the slab, and keep the fan clear of the cascade.",
     crumb: "Staircase Lighting Design",
@@ -794,7 +794,7 @@ export const guideArticles: GuideArticle[] = [
   },
   {
     slug: "bedroom-lighting-design",
-    metaTitle: "Bedroom Lighting for Kerala Homes: Fan, Reading Light, Calm",
+    metaTitle: "Bedroom Lighting for Kerala Homes",
     description:
       "Bedroom lighting design for Kerala homes: no bright lamp in sight of the pillow, reading light on its own switch, and the fan kept clear of the ceiling piece.",
     crumb: "Bedroom Lighting Design",
@@ -994,7 +994,7 @@ export const guideArticles: GuideArticle[] = [
   },
   {
     slug: "kitchen-lighting-design",
-    metaTitle: "Kitchen Lighting for Kerala Homes: Worktop, Island, Steam",
+    metaTitle: "Kitchen Lighting for Kerala Homes",
     description:
       "Kitchen lighting design for Kerala homes: the worktop on its own circuit, the island pendant switched apart, no overhead shadows, finishes that survive steam.",
     crumb: "Kitchen Lighting Design",
@@ -1181,7 +1181,7 @@ export const guideArticles: GuideArticle[] = [
   },
   {
     slug: "wooden-chandelier",
-    metaTitle: "Wooden Chandelier for Kerala Homes: Timber, Finish, Fixing",
+    metaTitle: "Wooden Chandelier for Kerala Homes",
     description:
       "How to choose a wooden chandelier for a Kerala home: match it to the joinery, ask how timber and finish are specified for humidity, and fix it to the slab.",
     crumb: "Wooden Chandelier",
@@ -1368,7 +1368,7 @@ export const guideArticles: GuideArticle[] = [
   },
   {
     slug: "brass-chandelier",
-    metaTitle: "Brass Chandelier for Kerala Homes: Finish, Size, Fixing",
+    metaTitle: "Brass Chandelier for Kerala Homes",
     description:
       "How to choose a brass chandelier for a Kerala home: solid, plated or painted, a finish specified for humidity, sized to the furniture and fixed to the slab.",
     crumb: "Brass Chandelier",
