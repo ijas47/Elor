@@ -11,7 +11,7 @@ import { useState } from "react";
  * Indian layer underneath: a ceiling-fan sweep check and a false-ceiling
  * load warning, which is where most rooms here actually go wrong.
  *
- * Everything runs client-side — no network calls, no data leaves the page.
+ * Everything runs client-side. No network calls, no data leaves the page.
  */
 
 const M_TO_FT = 3.28084;
@@ -44,8 +44,8 @@ export function ChandelierCalculator() {
 
   const ready = L > 0 && W > 0 && H > 0;
 
-  // Diameter. Over a dining table the table governs, not the room —
-  // roughly half to two-thirds of the table's width.
+  // Diameter. Over a dining table the table governs, not the room.
+  // Aim for roughly half to two-thirds of the table's width.
   const roomDiaCm = (L + W) * 10;
   const tableDiaMinCm = TW * 100 * 0.5;
   const tableDiaMaxCm = TW * 100 * 0.667;

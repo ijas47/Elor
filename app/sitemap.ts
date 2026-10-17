@@ -37,7 +37,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     lastModified: g.modified,
   }));
 
-  // Deduplicated, absolute image URLs for the gallery on /collections — the
+  // Deduplicated, absolute image URLs for the gallery on /collections. The
   // `images` field maps to the sitemap's <image:image> extension, which is a
   // legitimate discovery signal for Google Images independent of whether each
   // image also has ImageObject schema on the page.

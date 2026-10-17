@@ -31,6 +31,12 @@ const rules = [
     rx: /^\s+updated: "/gm,
     fix: "Set only `modified` (ISO) on a guide entry. The visible Updated label is derived from it.",
   },
+  {
+    id: "em-dash",
+    test: () => true,
+    rx: /\u2014/g,
+    fix: "No em dashes in source, comments included. Agents copy them into page text. Rewrite with a full stop or a comma.",
+  },
 ];
 
 const failures = [];

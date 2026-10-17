@@ -16,7 +16,7 @@ export const metadata: Metadata = {
 };
 
 const faqs = [
-  // Also serialized into FAQPage schema below — keep questions/answers in sync
+  // Also serialized into FAQPage schema below. Keep questions/answers in sync
   // with what's actually asked on the page.
   { q: "Is the consultation really free?", a: "Yes. The first session, at your site, at an experience centre in Kannur, Calicut or Kochi, or over video, is free and carries no obligation. You only pay if you choose to go ahead." },
   { q: "Do I have to buy everything from you?", a: "No. When the lights are ours, one team owns quality, pricing and the warranty. We install custom lights and give installation support for everything else." },
