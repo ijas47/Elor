@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import { site, stores } from "@/lib/site";
+import { elorContact } from "@/lib/brands";
 import { breadcrumbSchema } from "@/lib/schema";
 import { Breadcrumbs } from "@/components/ui/Breadcrumbs";
 import { Reveal } from "@/components/motion/Reveal";
@@ -43,7 +44,7 @@ const pressSchema = {
     url: site.domain,
     logo: `${site.domain}/brand/logo-mark.svg`,
     email: site.email,
-    telephone: site.phone,
+    telephone: elorContact.phone,
   },
 };
 

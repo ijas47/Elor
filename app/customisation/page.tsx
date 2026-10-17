@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { GuideLinks } from "@/components/ui/GuideLinks";
 import Image from "next/image";
 import { site } from "@/lib/site";
+import { elorContact } from "@/lib/brands";
 import { breadcrumbSchema } from "@/lib/schema";
 import { Breadcrumbs } from "@/components/ui/Breadcrumbs";
 import { Reveal, Stagger, StaggerItem } from "@/components/motion/Reveal";
@@ -119,7 +120,7 @@ export default function Customisation() {
               <Reveal delay={0.18}>
                 <div className="cta-ctas" style={{ justifyContent: "flex-start", marginTop: 30 }}>
                   <MagneticButton href="#brief" variant="gold">Send a Reference <span className="arr">→</span></MagneticButton>
-                  <MagneticButton href={site.whatsapp} variant="ghost" external>WhatsApp a Photo</MagneticButton>
+                  <MagneticButton href={elorContact.whatsappHref} variant="ghost" external>WhatsApp a Photo</MagneticButton>
                 </div>
               </Reveal>
             </div>
@@ -190,10 +191,10 @@ export default function Customisation() {
                 reply with feasibility and a timeline.
               </p>
               <div className="cta-ctas">
-                <MagneticButton href={site.whatsapp} variant="gold" external>Send on WhatsApp <span className="arr">→</span></MagneticButton>
+                <MagneticButton href={elorContact.whatsappHref} variant="gold" external>Send on WhatsApp <span className="arr">→</span></MagneticButton>
                 <a className="btn btn-ghost" href={`mailto:${site.email}?subject=Custom%20piece%20enquiry`}>Email a Reference</a>
               </div>
-              <p className="form-note" style={{ textAlign: "center" }}>Prefer to talk? Call {site.phone}, {site.hours}.</p>
+              <p className="form-note" style={{ textAlign: "center" }}>Prefer to talk? Call {elorContact.phone}, {site.hours}.</p>
             </div>
           </Reveal>
         </div>
@@ -225,7 +226,7 @@ export default function Customisation() {
           <Reveal delay={0.12}><p className="lede" style={{ textAlign: "center" }}>Send the reference. We&rsquo;ll tell you what it takes to hang it in your home.</p></Reveal>
           <Reveal delay={0.16}>
             <div className="cta-ctas">
-              <MagneticButton href={site.whatsapp} variant="gold" external>Send a Reference <span className="arr">→</span></MagneticButton>
+              <MagneticButton href={elorContact.whatsappHref} variant="gold" external>Send a Reference <span className="arr">→</span></MagneticButton>
               <MagneticButton href="/consultation" variant="ghost">Book a Consultation</MagneticButton>
             </div>
           </Reveal>

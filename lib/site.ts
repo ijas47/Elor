@@ -28,9 +28,6 @@ export const site = {
     "Lighting design anywhere in India, with our own fittings. We install custom lights and support the install of the rest. Centres in Kannur, Calicut and Kochi.",
 
   email: brands.elor.email,
-  phone: display(brands.elor.phone),
-  phoneHref: telHref(brands.elor.phone),
-  whatsappNumber: display(brands.elor.whatsapp),
   hours: "Mon-Sat · 9:30 AM to 8:30 PM IST",
 
   // ── SHOP HANDOFF (swap when Shopify is live) ──────────────────────────────
@@ -40,8 +37,6 @@ export const site = {
   shopLive: false, // set true once the Shopify store is published
   // While the store is being built, do not label the button "Shop".
   shopCta: "See the range",
-
-  whatsapp: waHref(brands.elor.whatsapp, "Hi Elor, I'm interested in lighting for my space."),
 
   social: {
     instagram: "https://instagram.com/elorlighting",

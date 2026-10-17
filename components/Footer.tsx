@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { site, stores } from "@/lib/site";
+import { elorContact } from "@/lib/brands";
 import { Brandmark } from "@/components/ui/Brandmark";
 import { roomGuideLinks, topicGuideLinks } from "@/lib/guideLinks";
 import styles from "./Footer.module.css";
@@ -56,10 +57,10 @@ export function Footer() {
           <div className={styles.col}>
             <h2>Talk to us</h2>
             <a href={`mailto:${site.email}`}>{site.email}</a>
-            <a href={site.phoneHref}>{site.phone}</a>
+            <a href={elorContact.phoneHref}>{elorContact.phone}</a>
             <p>{site.hours}</p>
-            <a href={site.whatsapp} target="_blank" rel="noopener noreferrer">
-              WhatsApp {site.whatsappNumber} →
+            <a href={elorContact.whatsappHref} target="_blank" rel="noopener noreferrer">
+              WhatsApp {elorContact.whatsapp} →
             </a>
           </div>
         </div>

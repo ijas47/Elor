@@ -1,4 +1,5 @@
 import { site, stores } from "@/lib/site";
+import { elorContact } from "@/lib/brands";
 
 /**
  * /pricing.md — structured pricing for AI agents that compare options before a
@@ -75,8 +76,8 @@ ${stores.map((s) => `- ${s.brand}, ${s.city}: ${s.address}`).join("\n")}
 
 ## Contact
 
-- Phone: ${site.phone}
-- WhatsApp: ${site.whatsappNumber}
+- Phone: ${elorContact.phone}
+- WhatsApp: ${elorContact.whatsapp}
 - Email: ${site.email}
 - Hours: ${site.hours}
 - Full pricing guide: ${site.domain}/guides/chandelier-pricing-guide

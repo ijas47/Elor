@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { GuideLinks } from "@/components/ui/GuideLinks";
 import { site, stores } from "@/lib/site";
+import { elorContact } from "@/lib/brands";
 import { testimonials } from "@/lib/testimonials";
 import { breadcrumbSchema } from "@/lib/schema";
 import { Breadcrumbs } from "@/components/ui/Breadcrumbs";
@@ -92,7 +93,7 @@ export function StoreCityPage({ city }: { city: StoreCity }) {
               <Reveal delay={0.18}>
                 <div className="cta-ctas" style={{ justifyContent: "flex-start", marginTop: 30 }}>
                   <MagneticButton href="/consultation" variant="gold">Book a Consultation <span className="arr">→</span></MagneticButton>
-                  <MagneticButton href={site.whatsapp} variant="ghost" external>WhatsApp Us</MagneticButton>
+                  <MagneticButton href={elorContact.whatsappHref} variant="ghost" external>WhatsApp Us</MagneticButton>
                 </div>
               </Reveal>
             </div>
