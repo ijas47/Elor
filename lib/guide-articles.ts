@@ -34,13 +34,13 @@ export interface GuideArticle {
   faqs: GuideFaq[];
   /** Optional numbered steps. Rendered as a list and emitted as HowTo schema. */
   howTo?: { name: string; steps: { h: string; p: string }[] };
-  /** ISO dates for Article schema. Default to the 5 October set. */
-  published?: string;
-  modified?: string;
+  /**
+   * ISO date first published, for Article schema. Required, so no page falls
+   * back to a made-up date. The modified date and the "Updated" label come
+   * from this guide's entry in lib/guides.ts.
+   */
+  published: string;
 }
-
-// Display date for the "Updated" eyebrow comes from each guide's `modified` (or `published`).
-const UPDATED = "5 October 2026";
 
 export const guideArticles: GuideArticle[] = [
   {
@@ -233,7 +233,6 @@ export const guideArticles: GuideArticle[] = [
       },
     ],
     published: "2026-10-05",
-    modified: "2026-10-12",
   },
   {
     slug: "ceiling-and-lighting-design",
@@ -414,7 +413,6 @@ export const guideArticles: GuideArticle[] = [
       },
     ],
     published: "2026-10-05",
-    modified: "2026-10-12",
   },
   {
     slug: "home-lighting-design",
@@ -611,7 +609,6 @@ export const guideArticles: GuideArticle[] = [
       },
     ],
     published: "2026-10-05",
-    modified: "2026-10-12",
   },
   {
     slug: "staircase-lighting-design",
@@ -790,7 +787,6 @@ export const guideArticles: GuideArticle[] = [
       },
     ],
     published: "2026-10-05",
-    modified: "2026-10-12",
   },
   {
     slug: "bedroom-lighting-design",
@@ -990,7 +986,6 @@ export const guideArticles: GuideArticle[] = [
       },
     ],
     published: "2026-10-05",
-    modified: "2026-10-12",
   },
   {
     slug: "kitchen-lighting-design",
@@ -1177,7 +1172,6 @@ export const guideArticles: GuideArticle[] = [
       },
     ],
     published: "2026-10-05",
-    modified: "2026-10-12",
   },
   {
     slug: "wooden-chandelier",
@@ -1364,7 +1358,6 @@ export const guideArticles: GuideArticle[] = [
       },
     ],
     published: "2026-10-05",
-    modified: "2026-10-12",
   },
   {
     slug: "brass-chandelier",
@@ -1547,7 +1540,6 @@ export const guideArticles: GuideArticle[] = [
       },
     ],
     published: "2026-10-05",
-    modified: "2026-10-12",
   },
   {
     slug: "how-to-clean-a-crystal-chandelier",
@@ -1640,7 +1632,6 @@ export const guideArticles: GuideArticle[] = [
       },
     ],
     published: "2026-10-12",
-    modified: "2026-10-12",
   },
   {
     slug: "ip-rating-for-outdoor-lights",
@@ -1739,7 +1730,6 @@ export const guideArticles: GuideArticle[] = [
       },
     ],
     published: "2026-10-12",
-    modified: "2026-10-12",
   },
 ];
 
@@ -1747,4 +1737,3 @@ export function getGuideArticle(slug: string): GuideArticle | undefined {
   return guideArticles.find((article) => article.slug === slug);
 }
 
-export { UPDATED as guideArticlesUpdated };
