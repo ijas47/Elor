@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { site } from "@/lib/site";
+import { guideDates } from "@/lib/guides";
 import { breadcrumbSchema } from "@/lib/schema";
 import { Breadcrumbs } from "@/components/ui/Breadcrumbs";
 import { Reveal, Stagger, StaggerItem } from "@/components/motion/Reveal";
@@ -11,7 +12,7 @@ const META_TITLE = "How a Lighting Plan Is Built";
 const DESC =
   "A lighting plan starts with the furniture and the walls, then the layers, the wall wash, and the scenes. How Elor marks a Kerala ceiling before it closes.";
 const PATH = "/guides/how-a-lighting-plan-is-built";
-const UPDATED = "23 September 2026";
+const { updated: UPDATED, modified: MODIFIED } = guideDates(PATH);
 
 export const metadata: Metadata = {
   title: META_TITLE,
@@ -86,7 +87,7 @@ const articleSchema = {
     logo: { "@type": "ImageObject", url: `${site.domain}/brand/logo-mark.svg` },
   },
   datePublished: "2026-09-23",
-  dateModified: "2026-09-23",
+  dateModified: MODIFIED,
   mainEntityOfPage: `${site.domain}${PATH}`,
 };
 

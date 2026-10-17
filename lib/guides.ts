@@ -1,4 +1,4 @@
-export interface Guide {
+export interface GuideEntry {
   slug: string;
   title: string;
   dek: string;
@@ -6,9 +6,7 @@ export interface Guide {
   image: string;
   /** Describes the photograph. Falls back to the title on older cards. */
   imageAlt?: string;
-  updated: string;
-  /** ISO date for the sitemap. Omit on older guides; the sitemap keeps their dates. */
-  /** ISO date the content last changed; must match `updated`. Feeds sitemap + schema. */
+  /** ISO date the content last changed. The visible "Updated" label, sitemap and schema all derive from it. */
   modified: string;
   /**
    * Slugs shown first in this guide's Related guides row, ahead of the same-tag
@@ -24,7 +22,7 @@ export interface Guide {
  * (where we deliver but have no premises) will live under /lighting/{city}.
  * Keeping them apart is what stops the two page types cannibalising each other.
  */
-export const guides: Guide[] = [
+const entries: GuideEntry[] = [
   {
     slug: "how-to-clean-a-crystal-chandelier",
     title: "How to Clean a Crystal Chandelier",
@@ -32,7 +30,6 @@ export const guides: Guide[] = [
     tag: "Technical",
     image: "/video/showroom-crystal.jpg",
     imageAlt: "Crystal chandeliers lit in the showroom",
-    updated: "12 October 2026",
     modified: "2026-10-12",
   },
   {
@@ -42,7 +39,6 @@ export const guides: Guide[] = [
     tag: "Technical",
     image: "/work/w5-garden.jpg",
     imageAlt: "Garden and path lighting at night",
-    updated: "12 October 2026",
     modified: "2026-10-12",
     related: ["home-lighting-design", "staircase-lighting-design", "brass-chandelier"],
   },
@@ -53,7 +49,6 @@ export const guides: Guide[] = [
     tag: "Buying Guide",
     image: "/spaces/living.jpg",
     imageAlt: "A living room with a chandelier, cove light in the tray ceiling, and a lamp beside the sofa",
-    updated: "12 October 2026",
     modified: "2026-10-12",
     related: ["chandelier-with-ceiling-fan", "how-to-choose-a-custom-chandelier", "home-lighting-design"],
   },
@@ -64,7 +59,6 @@ export const guides: Guide[] = [
     tag: "Technical",
     image: "/spaces/living.jpg",
     imageAlt: "A tray ceiling with cove lighting, recessed spots, and a chandelier over the seating",
-    updated: "12 October 2026",
     modified: "2026-10-12",
     related: ["home-lighting-design", "kitchen-lighting-design", "chandelier-with-ceiling-fan"],
   },
@@ -75,7 +69,6 @@ export const guides: Guide[] = [
     tag: "Technical",
     image: "/lifestyle/villa-night.jpg",
     imageAlt: "A house at night with cove light under the slabs, wall lights, and a lit path",
-    updated: "12 October 2026",
     modified: "2026-10-12",
   },
   {
@@ -85,7 +78,6 @@ export const guides: Guide[] = [
     tag: "Technical",
     image: "/collections/staircase-cascade.jpg",
     imageAlt: "A red crystal cascade hung in a spiral stair, with a wall light on the landing",
-    updated: "12 October 2026",
     modified: "2026-10-12",
   },
   {
@@ -95,7 +87,6 @@ export const guides: Guide[] = [
     tag: "Technical",
     image: "/spaces/bedroom.jpg",
     imageAlt: "A tiered crystal chandelier in a vaulted bedroom, hung clear of the window",
-    updated: "12 October 2026",
     modified: "2026-10-12",
   },
   {
@@ -105,7 +96,6 @@ export const guides: Guide[] = [
     tag: "Technical",
     image: "/collections/abstract-rings.jpg",
     imageAlt: "A linear pendant over a dining table, with the kitchen visible beyond",
-    updated: "12 October 2026",
     modified: "2026-10-12",
   },
   {
@@ -115,7 +105,6 @@ export const guides: Guide[] = [
     tag: "Buying Guide",
     image: "/lifestyle/store-wall.jpg",
     imageAlt: "The Celestial Lights wall, with mosaic pendants and crystal cascades on display",
-    updated: "12 October 2026",
     modified: "2026-10-12",
     related: ["brass-chandelier", "how-to-clean-a-crystal-chandelier", "how-to-choose-a-custom-chandelier"],
   },
@@ -126,7 +115,6 @@ export const guides: Guide[] = [
     tag: "Buying Guide",
     image: "/collections/dandelion-gold.jpg",
     imageAlt: "A brass-coloured sputnik chandelier with frosted glass globes",
-    updated: "12 October 2026",
     modified: "2026-10-12",
   },
   {
@@ -135,7 +123,6 @@ export const guides: Guide[] = [
     dek: "What actually changes between a living room, a stairwell and a lobby, and six questions to answer before you choose anything.",
     tag: "Buying Guide",
     image: "/work/w3-showroom.jpg",
-    updated: "19 August 2026",
     modified: "2026-08-19",
   },
   {
@@ -144,7 +131,6 @@ export const guides: Guide[] = [
     dek: "What gets light, in what order, and why the ceiling is the last thing drawn. The method behind an Elor plan.",
     tag: "Technical",
     image: "/spaces/living.jpg",
-    updated: "23 September 2026",
     modified: "2026-09-23",
     related: ["home-lighting-design", "kitchen-lighting-design", "bedroom-lighting-design"],
   },
@@ -154,7 +140,6 @@ export const guides: Guide[] = [
     dek: "If you can see the lamp from the sofa, the fitting is too shallow. What to ask for before the ceiling closes.",
     tag: "Technical",
     image: "/spaces/living.jpg",
-    updated: "23 September 2026",
     modified: "2026-09-23",
     related: ["kitchen-lighting-design", "bedroom-lighting-design", "staircase-lighting-design"],
   },
@@ -164,7 +149,6 @@ export const guides: Guide[] = [
     dek: "The three numbers on a specification that decide whether a room feels like a home or a clinic, and what to ask for in Kerala.",
     tag: "Technical",
     image: "/lifestyle/showroom-grand.jpg",
-    updated: "23 September 2026",
     modified: "2026-09-23",
     related: ["kitchen-lighting-design", "bedroom-lighting-design", "home-lighting-design"],
   },
@@ -174,7 +158,6 @@ export const guides: Guide[] = [
     dek: "Put in the room, get back a diameter and a drop, plus the two checks Indian rooms actually need.",
     tag: "Technical",
     image: "/work/w1-cascade.jpg",
-    updated: "20 August 2026",
     modified: "2026-08-20",
     related: ["chandelier-with-ceiling-fan", "staircase-lighting-design", "bedroom-lighting-design"],
   },
@@ -184,7 +167,6 @@ export const guides: Guide[] = [
     dek: "Four layouts that work, the clearances they need, and the wiring mistake we get called to fix most often.",
     tag: "Technical",
     image: "/work/w4-lounge.jpg",
-    updated: "20 August 2026",
     modified: "2026-08-20",
   },
   {
@@ -193,7 +175,6 @@ export const guides: Guide[] = [
     dek: "What gypsum, POP and RCC each carry, what fixtures weigh, and why the anchor goes in before the ceiling closes.",
     tag: "Technical",
     image: "/work/w2-corridor.jpg",
-    updated: "20 August 2026",
     modified: "2026-08-20",
     related: ["ceiling-and-lighting-design", "chandelier-with-ceiling-fan", "staircase-lighting-design"],
   },
@@ -203,7 +184,6 @@ export const guides: Guide[] = [
     dek: "How the four materials differ in light, weight, cleaning and cost, and which suits a humid coast or a hotel lobby.",
     tag: "Buying Guide",
     image: "/lifestyle/showroom-grand.jpg",
-    updated: "20 August 2026",
     modified: "2026-08-20",
     related: ["how-to-clean-a-crystal-chandelier", "brass-chandelier", "how-to-choose-a-custom-chandelier"],
   },
@@ -213,7 +193,6 @@ export const guides: Guide[] = [
     dek: "Salt air pits untreated brass and iron within two seasons. What lasts, what IP rating you need, and the fixings that fail first.",
     tag: "Technical",
     image: "/work/w5-garden.jpg",
-    updated: "20 August 2026",
     modified: "2026-08-20",
     related: ["brass-chandelier", "how-to-clean-a-crystal-chandelier", "home-lighting-design"],
   },
@@ -223,7 +202,6 @@ export const guides: Guide[] = [
     dek: "Seven questions that separate a shop that makes chandeliers from one that only imports and resells them.",
     tag: "Buying Guide",
     image: "/lifestyle/store-wall.jpg",
-    updated: "24 August 2026",
     modified: "2026-08-24",
     related: ["how-to-choose-a-custom-chandelier", "how-to-clean-a-crystal-chandelier", "brass-chandelier"],
   },
@@ -233,8 +211,24 @@ export const guides: Guide[] = [
     dek: "Ready-collection price bands, what drives bespoke pricing, and how to budget before you call anyone.",
     tag: "Pricing",
     image: "/lifestyle/showroom-grand.jpg",
-    updated: "19 August 2026",
     modified: "2026-08-19",
     related: ["how-to-choose-a-custom-chandelier", "brass-chandelier", "home-lighting-design"],
   },
 ];
+
+export interface Guide extends GuideEntry {
+  updated: string;
+}
+
+export function formatGuideDate(iso: string): string {
+  return new Date(`${iso}T00:00:00Z`).toLocaleDateString("en-GB", { day: "numeric", month: "long", year: "numeric", timeZone: "UTC" });
+}
+
+export const guides: Guide[] = entries.map((e) => ({ ...e, updated: formatGuideDate(e.modified) }));
+
+export function guideDates(path: string): { modified: string; updated: string } {
+  const slug = path.replace(/^\/guides\//, "");
+  const guide = guides.find((x) => x.slug === slug);
+  if (!guide) throw new Error(`No entry for ${slug} in lib/guides.ts. Add it there; dates are read from that entry.`);
+  return { modified: guide.modified, updated: guide.updated };
+}

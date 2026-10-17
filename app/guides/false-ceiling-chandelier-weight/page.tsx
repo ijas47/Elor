@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { site } from "@/lib/site";
+import { guideDates } from "@/lib/guides";
 import { breadcrumbSchema } from "@/lib/schema";
 import { Breadcrumbs } from "@/components/ui/Breadcrumbs";
 import { Reveal, Stagger, StaggerItem } from "@/components/motion/Reveal";
@@ -11,7 +12,7 @@ const META_TITLE = "Can a False Ceiling Hold a Chandelier?";
 const DESC =
   "Gypsum and POP ceilings carry a few kilograms, not a chandelier. What each ceiling holds, what fixtures weigh, and why the anchor goes in first.";
 const PATH = "/guides/false-ceiling-chandelier-weight";
-const UPDATED = "20 August 2026";
+const { updated: UPDATED, modified: MODIFIED } = guideDates(PATH);
 
 export const metadata: Metadata = {
   title: META_TITLE,
@@ -91,7 +92,7 @@ const articleSchema = {
     logo: { "@type": "ImageObject", url: `${site.domain}/brand/logo-mark.svg` },
   },
   datePublished: "2026-08-20",
-  dateModified: "2026-08-20",
+  dateModified: MODIFIED,
   mainEntityOfPage: `${site.domain}${PATH}`,
 };
 

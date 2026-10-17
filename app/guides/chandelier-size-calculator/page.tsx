@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { site } from "@/lib/site";
+import { guideDates } from "@/lib/guides";
 import { breadcrumbSchema } from "@/lib/schema";
 import { Breadcrumbs } from "@/components/ui/Breadcrumbs";
 import { ChandelierCalculator } from "@/components/ui/ChandelierCalculator";
@@ -13,7 +14,7 @@ const META_TITLE = "Chandelier Size Calculator";
 const DESC =
   "Work out the right chandelier diameter and drop for your room, with the two checks Indian homes need: ceiling fan clearance and false ceiling load.";
 const PATH = "/guides/chandelier-size-calculator";
-const UPDATED = "20 August 2026";
+const { updated: UPDATED, modified: MODIFIED } = guideDates(PATH);
 
 export const metadata: Metadata = {
   title: META_TITLE,
@@ -93,7 +94,7 @@ const articleSchema = {
     logo: { "@type": "ImageObject", url: `${site.domain}/brand/logo-mark.svg` },
   },
   datePublished: "2026-08-20",
-  dateModified: "2026-08-20",
+  dateModified: MODIFIED,
   mainEntityOfPage: `${site.domain}${PATH}`,
 };
 
