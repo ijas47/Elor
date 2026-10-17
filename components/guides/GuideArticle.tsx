@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { site } from "@/lib/site";
-import { guides } from "@/lib/guides";
+import { guideDates } from "@/lib/guides";
 import { breadcrumbSchema } from "@/lib/schema";
 import { Breadcrumbs } from "@/components/ui/Breadcrumbs";
 import { Reveal } from "@/components/motion/Reveal";
@@ -12,21 +12,6 @@ import {
   type GuideArticle,
   type GuideRun,
 } from "@/lib/guide-articles";
-
-function guideModified(article: GuideArticle): string {
-  return (
-    article.modified ??
-    guides.find((g) => g.slug === article.slug)?.modified ??
-    article.published ??
-    "2026-10-05"
-  );
-}
-
-function formatGuideDate(iso: string): string {
-  const [y, m, d] = iso.split("-").map(Number);
-  const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
-  return `${d} ${months[m - 1]} ${y}`;
-}
 
 function Runs({ runs }: { runs: GuideRun[] }) {
   return (
@@ -47,6 +32,7 @@ function Runs({ runs }: { runs: GuideRun[] }) {
 export function GuideArticleView({ article }: { article: GuideArticle }) {
   const path = `/guides/${article.slug}`;
   const others = guideArticles.filter((item) => item.slug !== article.slug);
+  const { modified, updated } = guideDates(path);
 
   const articleSchema = {
     "@context": "https://schema.org",
@@ -60,12 +46,8 @@ export function GuideArticleView({ article }: { article: GuideArticle }) {
       name: site.name,
       logo: { "@type": "ImageObject", url: `${site.domain}/brand/logo-mark.svg` },
     },
-    datePublished: article.published ?? "2026-10-05",
-    dateModified:
-      article.modified ??
-      guides.find((g) => g.slug === article.slug)?.modified ??
-      article.published ??
-      "2026-10-05",
+    datePublished: article.published,
+    dateModified: modified,
     mainEntityOfPage: `${site.domain}${path}`,
   };
 
@@ -132,7 +114,7 @@ export function GuideArticleView({ article }: { article: GuideArticle }) {
           />
           <Reveal as="span">
             <span className="eyebrow">
-              {article.eyebrow} · Updated {formatGuideDate(guideModified(article))}
+              {article.eyebrow} · Updated {updated}
             </span>
           </Reveal>
           <Reveal delay={0.06}>
