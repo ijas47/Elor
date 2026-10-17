@@ -65,7 +65,7 @@ export function Footer() {
         </div>
 
         <nav className={styles.guides} aria-label="Lighting guides">
-          <h4>Lighting guides</h4>
+          <h2>Lighting guides</h2>
           <div className={styles.guideRow}>
             {[...roomGuideLinks, ...topicGuideLinks].map((g) => (
               <Link key={g.href} href={g.href}>{g.label}</Link>
