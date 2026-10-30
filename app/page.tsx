@@ -1,30 +1,20 @@
 import Image from "next/image";
 import Link from "next/link";
 import { site, stores } from "@/lib/site";
-import { pieces } from "@/lib/collections";
-import { testimonials } from "@/lib/testimonials";
 import { Hero } from "@/components/sections/Hero";
 import { Marquee } from "@/components/sections/Marquee";
 import { ShowroomReel } from "@/components/sections/ShowroomReel";
 import { Reveal, Stagger, StaggerItem } from "@/components/motion/Reveal";
 import { MagneticButton } from "@/components/motion/MagneticButton";
-import { PieceCard } from "@/components/ui/PieceCard";
 import { Icon } from "@/components/ui/Icon";
 import { GuideLinks } from "@/components/ui/GuideLinks";
 
 const spaces = [
-  // Living-room photograph is Pexels 7166647 (Max Vakhtbovych), free to use.
-  // It shows a kind of room, not an Elor project. Swap it when the owners send theirs.
-  { title: "Living Room", note: "Chandelier, cove and a lamp in the corner", img: "/spaces/living.jpg", alt: "A living room lit in layers: a chandelier, cove light in the ceiling, and a lamp beside the sofa", href: "/collections#chandeliers" },
-  { title: "Stairwells & Voids", note: "Cascades & double-height pieces", img: "/collections/staircase-cascade.jpg", alt: "A red crystal cascade falling beside a dark spiral staircase", href: "/collections#chandeliers" },
-  { title: "Outdoor & Facade", note: "Wall washers, lanterns & bollards", img: "/spaces/outdoor.jpg", alt: "A building facade at night with its terraces outlined in warm cove lighting", href: "/collections#outdoor" },
-  { title: "Commercial", note: "Retail, hospitality & office", img: "/lifestyle/lobby-canopy.jpg", alt: "A bright lobby under a large black sculptural chandelier", href: "/#commercial" },
+  { title: "Living Room", note: "Chandelier, cove and a lamp in the corner", img: "/spaces/corner-pendant.jpg", alt: "A warm living corner with a pleated pendant and a wash of light on the wall", href: "/guides/chandelier-for-living-room" },
+  { title: "Stairwells & Voids", note: "Cascades & double-height pieces", img: "/collections/staircase-cascade.jpg", alt: "A red crystal cascade falling beside a dark spiral staircase", href: "/guides/staircase-lighting-design" },
+  { title: "Outdoor & Facade", note: "Wall washers, lanterns & bollards", img: "/spaces/outdoor.jpg", alt: "A building facade at night with its terraces outlined in warm cove lighting", href: "/customisation" },
+  { title: "Commercial", note: "Retail, hospitality & office", img: "/lifestyle/lobby-canopy.jpg", alt: "A black sculptural chandelier in a bright lobby", href: "/#commercial" },
 ];
-
-// autumn-leaves is the hero scene now, so the edit promotes crystal-petal instead
-const featured = ["asgard-crystal-chandelier", "abstract-five-ring", "dandelion-gold", "crystal-petal"]
-  .map((s) => pieces.find((p) => p.slug === s)!)
-  .filter(Boolean);
 
 export default function Home() {
   return (
@@ -51,7 +41,7 @@ export default function Home() {
               <Reveal delay={0.06}><h2 className="h-lg">Start with<br />the room.</h2></Reveal>
             </div>
             <Reveal delay={0.12}>
-              <p className="lede">The ceiling is about to close, and nobody has decided how the room should feel at night. Send the drawing or the picture. We write the plan, supply what we already make, and build what the room still needs. The centres are in Kerala. We design for any site in India. We install custom lights and give installation support for everything else. <Link href="/india">How a project outside Kerala works.</Link></p>
+              <p className="lede">Send the drawing, or a photo of the room. We write the plan in DIALux while the ceiling can still change, then supply the fittings and build what that room still needs. We install custom lights and give installation support for everything else. Centres in Kannur, Calicut and Kochi. The site can be anywhere in India. <Link href="/india">If you are building outside Kerala.</Link></p>
             </Reveal>
           </div>
           <Stagger className="spaces">
@@ -71,30 +61,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Featured collection */}
-      <section className="sec" style={{ paddingTop: 0 }}>
-        <div className="wrap">
-          <div className="sec-head">
-            <div className="stack-sm">
-              <Reveal as="span"><span className="eyebrow">The Elor edit</span></Reveal>
-              <Reveal delay={0.06}><h2 className="h-lg">Made for a ceiling,<br />not a shelf.</h2></Reveal>
-            </div>
-            <Reveal delay={0.12}>
-              <MagneticButton href="/collections" variant="ghost">
-                View the Collection <span className="arr">→</span>
-              </MagneticButton>
-            </Reveal>
-          </div>
-          <Stagger className="collection-grid">
-            {featured.map((p) => (
-              <StaggerItem key={p.slug}>
-                <PieceCard piece={p} />
-              </StaggerItem>
-            ))}
-          </Stagger>
-        </div>
-      </section>
-
       {/* Customisation band */}
       <section className="sec glow-top" id="custom">
         <div className="wrap">
@@ -103,15 +69,13 @@ export default function Home() {
               <Reveal as="span"><span className="eyebrow">Custom chandeliers · Our specialty</span></Reveal>
               <Reveal delay={0.06}><h2 className="h-lg" style={{ marginTop: 18 }}>Send us a picture.<br /><span className="serif-i">We build the light.</span></h2></Reveal>
               <Reveal delay={0.12}>
-                <p className="lede" style={{ marginTop: 22 }}>A Pinterest screenshot, a photo from a hotel lobby, a page torn from a magazine, even a rough sketch. If you can show it to us, we make it, sized to your ceiling, finished to match your interiors.</p>
+                <p className="lede" style={{ marginTop: 22 }}>A photo, a render, or a sketch is enough to start. We still measure the ceiling before we cut anything. Most custom pieces are made and installed in 3 to 6 weeks after the brief is agreed.</p>
               </Reveal>
               <Reveal delay={0.16}>
                 <ul className="check-list">
-                  <li><span className="tick">✓</span>Chandeliers, cascades, cluster pendants and statement ceiling pieces, built to order</li>
-                  <li><span className="tick">✓</span>Any reference welcome: an image, a drawing, a render, or a fixture you can&rsquo;t find anywhere</li>
-                  <li><span className="tick">✓</span>Made to your exact drop and diameter, so it fits the void it was designed for</li>
-                  <li><span className="tick">✓</span>We install the custom light</li>
-                  <li><span className="tick">✓</span>One piece, made once. Nobody else in your city has the same light</li>
+                  <li><span className="tick">✓</span>Chandeliers, cascades and cluster pendants, sized to the drop and diameter of your ceiling</li>
+                  <li><span className="tick">✓</span>A firm price before we build</li>
+                  <li><span className="tick">✓</span>We install custom lights and give installation support for everything else.</li>
                 </ul>
               </Reveal>
               <Reveal delay={0.2}>
@@ -137,14 +101,14 @@ export default function Home() {
               <Reveal delay={0.06}><h2 className="h-lg">When the fixture in<br />your render doesn&rsquo;t exist.</h2></Reveal>
             </div>
             <Reveal delay={0.12}>
-              <p className="lede">You specified a piece no showroom stocks. The client has signed off on it. Then someone suggests the nearest thing in a catalogue, and the room loses its centre. Send the drawing. We make that piece, and we supply the rest of the schedule so you are not chasing three other shops.</p>
+              <p className="lede">The client has signed the render. The showroom does not stock that fitting. Send the drawing. We make the piece, and we can supply the rest of the schedule from the same place.</p>
             </Reveal>
           </div>
           <Stagger className="pillars">
             {[
-              { icon: "render", h: "Work from the render", p: "Send the visual you presented to your client. We reverse-engineer it into a buildable fixture, confirm load and drop against your section, and quote before you commit.", eg: "Render · Elevation · Mood image" },
-              { icon: "drawing", h: "Protect the design intent", p: "No more substituting the nearest catalogue item and watching the scheme lose its centrepiece. It gets built the way it was drawn, at the scale the space needs.", eg: "Made to drawing · No substitutions" },
-              { icon: "supplier", h: "One accountable supplier", p: "Design, fabrication and delivery sit with us. We install custom lights and give installation support for everything else, so your client has one number to call.", eg: "Single point · Site coordination" },
+              { icon: "render", h: "Work from the render", p: "Send the visual the client signed. We turn it into a fixture, check the load and the drop against your section, and quote before you commit.", eg: "Render · Elevation · Mood image" },
+              { icon: "drawing", h: "Built to the drawing", p: "The piece is made at the size the section shows. If the span or the finish does not exist yet, that is a normal brief.", eg: "Drop · Diameter · Finish" },
+              { icon: "supplier", h: "One number after handover", p: "We install custom lights and give installation support for everything else. Fabricated pieces carry warranty up to 5 years.", eg: "Install · Warranty · Site" },
             ].map((c) => (
               <StaggerItem key={c.h}>
                 <div className="pillar">
@@ -172,16 +136,19 @@ export default function Home() {
               <Reveal delay={0.06}><h2 className="h-lg">The room, then<br />the <span className="serif-i">light.</span></h2></Reveal>
             </div>
             <Reveal delay={0.12}>
-              <p className="lede">A stairwell, a lobby, a facade. The fixture is there to give the room a character, not to fill a catalogue page. Project photographs from our own sites are on the way. Until then, send the picture of yours.</p>
+              <p className="lede">A void, a living room, a lobby. Each fitting is there because that room needed it. If yours is still a drawing, send the picture.</p>
             </Reveal>
           </div>
           <Stagger className="work-grid">
             {[
-              { src: "/work/w1-cascade.jpg", tall: true, h: "Stairwell void", p: "A cascade for the full height of the stair", alt: "A glass cascade falling past a tall stairwell window" },
-              { src: "/work/w2-corridor.jpg", tall: false, h: "Lift lobby", p: "Cove, downlights and a feature ceiling", alt: "A lift lobby with a wide crystal ceiling fixture and backlit panels" },
-              { src: "/work/w3-showroom.jpg", tall: true, h: "Showroom floor", p: "A grand piece, seen switched on", alt: "A large multi-tier crystal chandelier lit on a showroom floor" },
-              { src: "/work/w4-lounge.jpg", tall: false, h: "Reception", p: "Warm light over the seating", alt: "A reception lounge lit by warm cove lighting and a crystal ceiling" },
-              { src: "/work/w5-garden.jpg", tall: true, h: "The approach", p: "Path, trees and the facade, as one scheme", alt: "A villa lawn at night lit by bollards and tree uplights" },
+              { src: "/photos/wing-void.jpg", tall: true, h: "The void", p: "A crystal piece for the full height of the room", alt: "A crystal wing chandelier in a double-height dining room" },
+              { src: "/work/w2-corridor.jpg", tall: false, h: "Lift lobby", p: "Cove, downlights and a feature ceiling", alt: "A lift lobby with a wide crystal ceiling fixture and wood-lined doors" },
+              { src: "/photos/pleated-plant.jpg", tall: true, h: "Pendant", p: "A scalloped shade throwing light up the wall", alt: "A black pleated pendant over a side table, washing the wall with light" },
+              { src: "/work/w4-lounge.jpg", tall: false, h: "Reception", p: "Warm light over the seating", alt: "A reception with warm cove lighting, a crystal ceiling, and a gold screen" },
+              { src: "/photos/bedroom-dome.jpg", tall: true, h: "Bedroom", p: "A ribbed dome over the desk", alt: "A black ribbed dome pendant lighting a desk beside a bed" },
+              { src: "/photos/lobby-square.jpg", tall: false, h: "Lobby", p: "A square crystal ceiling over curved seating", alt: "Curved lobby sofas under a square crystal ceiling light" },
+              { src: "/photos/dome-desk.jpg", tall: true, h: "Study", p: "A white dome pendant, the rest of the room dark", alt: "A white dome pendant lighting a writing desk" },
+              { src: "/photos/living-room.jpg", tall: false, h: "Living room", p: "Shelves, seating, and a pendant in the corner", alt: "A living room at night with lit display shelves and warm seating" },
             ].map((w) => (
               <StaggerItem key={w.src} className={w.tall ? "work-item work-tall" : "work-item"}>
                 <figure className="work-fig frame">
@@ -203,10 +170,10 @@ export default function Home() {
           <div className="sec-head">
             <div className="stack-sm">
               <Reveal as="span"><span className="eyebrow">Inside Celestial Lights</span></Reveal>
-              <Reveal delay={0.06}><h2 className="h-lg">Our showroom,<br /><span className="serif-i">in motion.</span></h2></Reveal>
+              <Reveal delay={0.06}><h2 className="h-lg">The showroom,<br /><span className="serif-i">lights on.</span></h2></Reveal>
             </div>
             <Reveal delay={0.12}>
-              <p className="lede">Photographs freeze light. These don&rsquo;t. A few moments from the Celestial Lights floor, where every fixture hangs lit, so you see how it moves and glows long before it reaches your ceiling.</p>
+              <p className="lede">Short films from the Celestial Lights floor. The fittings are switched on, so you can see how the light moves before you order.</p>
             </Reveal>
           </div>
           <ShowroomReel />
@@ -219,17 +186,17 @@ export default function Home() {
           <div className="sec-head">
             <div className="stack-sm">
               <Reveal as="span"><span className="eyebrow">How we plan a room</span></Reveal>
-              <Reveal delay={0.06}><h2 className="h-lg">Every room needs<br />three layers of light.</h2></Reveal>
+              <Reveal delay={0.06}><h2 className="h-lg">One fitting<br />cannot do three jobs.</h2></Reveal>
             </div>
             <Reveal delay={0.12}>
-              <p className="lede">Ambient to fill it, task to work in it, accent to give it depth. Miss a layer and the room falls flat however good the fixture is, which is why we specify all three together rather than picking lights one at a time.</p>
+              <p className="lede">A chandelier does not light a chopping board, a book, and a painting. We specify each job, on its own circuit, before anyone buys a fitting.</p>
             </Reveal>
           </div>
           <Stagger className="pillars">
             {[
-              { icon: "ambient", h: "Ambient light", p: "The base layer that fills the room: ceiling lights, cove strips, diffused pendants. It decides whether a space feels welcoming or clinical the moment you walk in.", eg: "Ceiling · Cove LED · Diffusers" },
-              { icon: "task", h: "Task light", p: "Focused light where life happens: the kitchen counter, the reading chair, the mirror, the desk. Bright enough to work by, placed so it never glares.", eg: "Table lamps · Under-cabinet · Mirror" },
-              { icon: "accent", h: "Accent light", p: "The drama. Wall washers on texture, spots on art, a glow behind the panel, bollards along the path. Accent light is what makes people say wow.", eg: "Wall washers · Spots · Facade" },
+              { icon: "ambient", h: "The light you walk into", p: "Cove, a diffused pendant, or ceiling fittings. This is what the room feels like at 7pm. Get it wrong and the chandelier will not save it.", eg: "Ceiling · Cove · Diffusers" },
+              { icon: "task", h: "The light you work by", p: "Counter, desk, mirror. Its own switch. Bright enough for the job, and out of your eyes when you sit down.", eg: "Under-cabinet · Desk · Mirror" },
+              { icon: "accent", h: "The light people notice", p: "A wash on a textured wall, a spot on a painting, the facade. Useful, and the first place a beam glares if the fitting is wrong.", eg: "Wall wash · Art · Facade" },
             ].map((c) => (
               <StaggerItem key={c.h}>
                 <div className="pillar" style={{ background: "#fff", borderColor: "var(--line-pearl)" }}>
@@ -252,7 +219,7 @@ export default function Home() {
               <Reveal><h2 className="h-lg">What a lighting plan<br />actually <span className="serif-i">contains.</span></h2></Reveal>
             </div>
             <Reveal delay={0.12}>
-              <p className="lede">Not a quotation with fixture names on it. The scheme is modelled in DIALux first, so the light levels are known while the ceiling can still change. Then your architect, contractor and electrician get a drawing set they can build from.</p>
+              <p className="lede">A list of product names is not a plan. We model the rooms in DIALux while the ceiling can still change. Your architect, contractor and electrician then get a drawing set they can build from.</p>
             </Reveal>
           </div>
           <Stagger className="register">
@@ -279,17 +246,17 @@ export default function Home() {
         <div className="wrap">
           <div className="split reverse">
             <Reveal className="split-media frame">
-              <Image src="/lifestyle/hero-4.jpg" alt="A finished lounge lit end to end, a crystal ceiling fixture over warm layered lighting" fill sizes="(max-width: 1020px) 100vw, 50vw" style={{ objectFit: "cover" }} />
+              <Image src="/lifestyle/hero-4.jpg" alt="A crystal ceiling light over a curved sofa, with wood-lined lift doors behind" fill sizes="(max-width: 1020px) 100vw, 50vw" style={{ objectFit: "cover" }} />
             </Reveal>
             <div>
               <Reveal as="span"><span className="eyebrow">Consultation & implementation</span></Reveal>
-              <Reveal delay={0.06}><h2 className="h-lg" style={{ marginTop: 18 }}>You dream it. We light it. <span className="serif-i">End to end.</span></h2></Reveal>
+              <Reveal delay={0.06}><h2 className="h-lg" style={{ marginTop: 18 }}>The first session<br />is <span className="serif-i">free.</span></h2></Reveal>
               <Reveal delay={0.12}>
                 <ul className="check-list">
-                  <li><span className="tick">✓</span>A lighting designer studies your floor plan, interiors and how you use each room</li>
-                  <li><span className="tick">✓</span>You get a fixture-by-fixture plan: positions, colour temperature and dimming zones</li>
-                  <li><span className="tick">✓</span>Everything supplied from Elor&rsquo;s own range, so quality and pricing stay in our control</li>
-                  <li><span className="tick">✓</span>We install custom lights and give installation support for everything else.</li>
+                  <li><span className="tick">✓</span>At your site, in Kannur, Calicut or Kochi, or on video</li>
+                  <li><span className="tick">✓</span>You leave with positions, colour temperature, and which circuits dim</li>
+                  <li><span className="tick">✓</span>You pay only if you ask us to go ahead</li>
+                  <li><span className="tick">✓</span>Supply is from our own fittings. We install custom lights and give installation support for everything else.</li>
                 </ul>
               </Reveal>
               <Reveal delay={0.16}>
@@ -306,9 +273,9 @@ export default function Home() {
           <Reveal><h2 className="h-lg" style={{ textAlign: "center", marginBottom: 64 }}>How it <span className="serif-i">works</span></h2></Reveal>
           <Stagger className="journey">
             {[
-              { h: "Consult", p: "Free first session at your site, in any store, or on a video call. We listen before we recommend." },
-              { h: "Design", p: "A tailored lighting plan with layouts, moods, fixture selections and a transparent estimate." },
-              { h: "Supply", p: "Fixtures from our own inventory. See them glowing in-store before you commit. Delivered pan-India." },
+              { h: "Consult", p: "Free. On site, in a centre, or on video. Bring the floor plan if you have it." },
+              { h: "Design", p: "A DIALux model, then the drawing set and a price. The ceiling should still be open." },
+              { h: "Supply", p: "Our fittings. Stand under them in Kannur, Calicut or Kochi before you order. The online shop is not open yet." },
               { h: "Install", p: "We install custom lights and give installation support for everything else. One point of contact, one warranty." },
             ].map((s) => (
               <StaggerItem key={s.h}>
@@ -325,16 +292,16 @@ export default function Home() {
           <div className="split">
             <div>
               <Reveal as="span"><span className="eyebrow">For business spaces</span></Reveal>
-              <Reveal delay={0.06}><h2 className="h-lg" style={{ marginTop: 18 }}>Lighting that earns<br />its keep.</h2></Reveal>
+              <Reveal delay={0.06}><h2 className="h-lg" style={{ marginTop: 18 }}>A café, a shop,<br />or a lobby.</h2></Reveal>
               <Reveal delay={0.12}>
-                <p className="lede" style={{ marginTop: 22 }}>In a café, a boutique or a lobby, lighting is a revenue decision. It sets how long people stay and how good your product looks. We partner with architects, builders and owners across India to deliver on schedule and on spec.</p>
+                <p className="lede" style={{ marginTop: 22 }}>People stay longer when the light is comfortable, and the goods look like the price on them. We plan it, supply it, and fit the dates the builder already has.</p>
               </Reveal>
               <Reveal delay={0.16}>
                 <ul className="check-list">
-                  <li><span className="tick">✓</span>Restaurants, cafés & hotels: mood-driven dining and facade lighting</li>
-                  <li><span className="tick">✓</span>Retail & showrooms: display lighting that flatters the merchandise</li>
-                  <li><span className="tick">✓</span>Offices & clinics: glare-free, energy-efficient working light</li>
-                  <li><span className="tick">✓</span>Project pricing, site coordination and phased delivery for builders</li>
+                  <li><span className="tick">✓</span>Hotels and restaurants: the dining room, the rooms, and the facade</li>
+                  <li><span className="tick">✓</span>Retail: light on the goods, not a wash over the whole floor</li>
+                  <li><span className="tick">✓</span>Offices and clinics: the lamp out of the eye at the desk</li>
+                  <li><span className="tick">✓</span>Builders: one price for the project, delivered in phases</li>
                 </ul>
               </Reveal>
               <Reveal delay={0.2}>
@@ -342,7 +309,7 @@ export default function Home() {
               </Reveal>
             </div>
             <Reveal delay={0.1} className="split-media frame">
-              <Image src="/lifestyle/lobby-canopy.jpg" alt="A bright lobby under a large black sculptural chandelier" fill sizes="(max-width: 1020px) 100vw, 50vw" style={{ objectFit: "cover" }} />
+              <Image src="/lifestyle/lobby-canopy.jpg" alt="A black sculptural chandelier filling a bright lobby" fill sizes="(max-width: 1020px) 100vw, 50vw" style={{ objectFit: "cover" }} />
             </Reveal>
           </div>
         </div>
@@ -357,7 +324,7 @@ export default function Home() {
               <Reveal delay={0.06}><h2 className="h-lg">Stand under it<br />before you <span className="serif-i">sign off.</span></h2></Reveal>
             </div>
             <Reveal delay={0.12}>
-              <p className="lede">Celestial has stores and experience centres in Kannur and Calicut. Kochi is the full experience centre. The range runs from basic fittings to the luxury pieces, and the custom work is made in our factory. The online store is being built. Until it opens, come in, or send the plan.</p>
+              <p className="lede">Kannur and Calicut are Celestial Lights. Kochi is Elor. Come and stand under a fitting before you order it. The online shop is not open yet, so until then you come in, or you send the plan on WhatsApp.</p>
             </Reveal>
           </div>
           <Stagger className="stores-grid">
@@ -378,7 +345,7 @@ export default function Home() {
             <div className="online-banner" style={{ background: "var(--on-pearl)", borderColor: "transparent", marginTop: 24 }}>
               <div>
                 <h3 style={{ color: "#fff" }}>Building outside Kerala?</h3>
-                <p>Send the drawings. We consult on the plan over video, and the online store for the range is on the way. Until it opens, we will walk you through what to specify.</p>
+                <p>Send the drawings. The first session can be on video. We will tell you what to specify. The shop site is still being built.</p>
               </div>
               <a className="btn btn-gold" href={site.shopUrl} target="_blank" rel="noopener noreferrer">{site.shopCta} <span className="arr">→</span></a>
             </div>
@@ -388,43 +355,16 @@ export default function Home() {
 
       <GuideLinks />
 
-      {/* Testimonials */}
-      <section className="sec">
-        <div className="wrap">
-          <div className="sec-head">
-            <div className="stack-sm">
-              <Reveal as="span"><span className="eyebrow">Word of mouth</span></Reveal>
-              <Reveal delay={0.06}><h2 className="h-lg">Rooms we&rsquo;ve<br />transformed</h2></Reveal>
-            </div>
-          </div>
-          <Stagger className="quote-grid">
-            {testimonials.map((t) => (
-              <StaggerItem key={t.name}>
-                <div className="quote-card">
-                  <span className="quote-mark">&ldquo;</span>
-                  <blockquote>{t.quote}</blockquote>
-                  <div className="quote-who">
-                    <span className="quote-av">{t.initial}</span>
-                    <div><div className="quote-name">{t.name}</div><div className="quote-role">{t.role}</div></div>
-                  </div>
-                  <div className="stars">★★★★★</div>
-                </div>
-              </StaggerItem>
-            ))}
-          </Stagger>
-        </div>
-      </section>
-
       {/* CTA */}
       <section className="cta-band">
         <div className="wrap-tight">
           <Reveal as="span"><span className="eyebrow center">Free · No obligation</span></Reveal>
-          <Reveal delay={0.06}><h2 className="h-lg" style={{ marginTop: 18 }}>Your space is one plan away<br />from feeling <span className="serif-i">extraordinary.</span></h2></Reveal>
-          <Reveal delay={0.12}><p className="lede" style={{ textAlign: "center" }}>Book a consultation at home, in-store, or over video. If you just want to browse, the collection is always open.</p></Reveal>
+          <Reveal delay={0.06}><h2 className="h-lg" style={{ marginTop: 18 }}>Book the first session.<br />It is <span className="serif-i">free.</span></h2></Reveal>
+          <Reveal delay={0.12}><p className="lede" style={{ textAlign: "center" }}>At the site, in a centre, or on video. If you already have a picture of the light, send that instead and we will say whether we can build it.</p></Reveal>
           <Reveal delay={0.16}>
             <div className="cta-ctas">
               <MagneticButton href="/consultation" variant="gold">Book a Free Consultation <span className="arr">→</span></MagneticButton>
-              <MagneticButton href="/collections" variant="ghost">View the Collection</MagneticButton>
+              <MagneticButton href="/customisation" variant="ghost">Start a Custom Piece</MagneticButton>
             </div>
           </Reveal>
         </div>

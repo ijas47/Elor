@@ -79,7 +79,7 @@ const articleSchema = {
   "@type": "Article",
   headline: TITLE,
   description: DESC,
-  image: `${site.domain}/lifestyle/store-wall.jpg`,
+  image: `${site.domain}/video/showroom-petal.jpg`,
   author: { "@type": "Organization", name: site.name, url: site.domain },
   publisher: {
     "@type": "Organization",

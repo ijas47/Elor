@@ -152,7 +152,7 @@ export default async function Consultation({
                 </p>
               </Reveal>
               <Reveal delay={0.16} className="split-media frame" >
-                <Image src="/lifestyle/showroom-grand.jpg" alt="A grand chandelier lit inside the Celestial Lights showroom" fill sizes="(max-width: 1020px) 100vw, 50vw" style={{ objectFit: "cover" }} />
+                <Image src="/lifestyle/hero-4.jpg" alt="A crystal ceiling light over a curved sofa, with wood-lined lift doors behind" fill sizes="(max-width: 1020px) 100vw, 50vw" style={{ objectFit: "cover" }} />
               </Reveal>
             </div>
             <Reveal delay={0.1}>

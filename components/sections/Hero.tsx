@@ -32,7 +32,7 @@ import styles from "./Hero.module.css";
  *
  * The hero is a server component: the first scene, the LCP image, is plain
  * HTML that paints without any JS. The scroll scrub is a small driver
- * (heroScroll.ts) that is dynamically imported after hydration and only
+ * (heroDriver.ts) that is dynamically imported after hydration and only
  * updates inline opacity/transform, starting from the same progress-0 values
  * rendered here, so attaching it changes nothing on screen.
  *
@@ -43,8 +43,8 @@ import styles from "./Hero.module.css";
 
 const STAGES = [
   {
-    src: "/hero/stage-1-installation.jpg",
-    alt: "A bespoke glass leaf installation suspended across a double-height lobby ceiling",
+    src: "/photos/crystal-low.jpg",
+    alt: "A crystal chandelier seen from below in a tall room, with sheer curtains and lounge chairs",
     lines: [
       <>Lighting is decided before</>,
       <>
@@ -54,8 +54,8 @@ const STAGES = [
     lede: "We write the lighting plan in DIALux, supply the fittings, and make the custom pieces in our factory. For architects, and for owners building homes and commercial spaces.",
   },
   {
-    src: "/hero/stage-2-project.jpg",
-    alt: "A hotel lobby lit by a wide crystal ceiling installation over lounge seating",
+    src: "/photos/wing-wide.jpg",
+    alt: "A crystal wing chandelier over a dining table in a double-height room with sheer curtains",
     lines: [
       <>You are not choosing lighting.</>,
       <>
@@ -65,8 +65,8 @@ const STAGES = [
     lede: "On most sites the points go in first, then a shop fills them with what is in stock. Fine for a small flat. Not for a house you will live in for thirty years.",
   },
   {
-    src: "/hero/stage-3-property.jpg",
-    alt: "A villa at night with its approach, lawn and facade lit as a single scheme",
+    src: "/photos/lobby-wide.jpg",
+    alt: "A lobby with curved sofas under a square crystal ceiling light and wood-lined walls",
     lines: [
       <>One drawing, one supplier,</>,
       <>
@@ -113,9 +113,11 @@ export function Hero() {
                   className={styles.img}
                 />
               </div>
+              {/* Scene 1 is a dark exposure. The heavy wash used on the brighter
+                  rooms turns this one into a silhouette. */}
+              <div className={i === 0 ? styles.scrimLight : styles.scrim} />
             </div>
           ))}
-          <div className={styles.scrim} />
           <div className={styles.vignette} />
         </div>
 
@@ -125,7 +127,7 @@ export function Hero() {
               <div
                 key={s.src}
                 data-hero-copy=""
-                className={styles.copy}
+                className={i === 0 ? `${styles.copy} ${styles.copyLight}` : styles.copy}
                 style={{ opacity: copyOpacity(P0, i), transform: `translateY(${copyY(P0, i)}px)` }}
                 aria-hidden={i > 0}
                 // stages that are faded out must not catch clicks or the tab order

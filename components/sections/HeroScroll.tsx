@@ -11,7 +11,7 @@ export function HeroScroll({ trackId }: { trackId: string }) {
   useEffect(() => {
     let detach: (() => void) | undefined;
     let cancelled = false;
-    import("./heroScroll").then(({ attachHeroScroll }) => {
+    import("./heroDriver").then(({ attachHeroScroll }) => {
       const track = document.getElementById(trackId);
       if (!cancelled && track) detach = attachHeroScroll(track);
     });

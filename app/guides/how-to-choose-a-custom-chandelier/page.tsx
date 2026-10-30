@@ -54,7 +54,7 @@ const articleSchema = {
   headline: "How to Choose a Custom Chandelier: Villa, Duplex or Hotel",
   description:
     "What actually changes between lighting a villa living room, a duplex stairwell and a hotel lobby, and six questions to answer before you choose anything.",
-  image: `${site.domain}/work/w3-showroom.jpg`,
+  image: `${site.domain}/photos/crystal-low.jpg`,
   author: { "@type": "Organization", name: site.name, url: site.domain },
   publisher: {
     "@type": "Organization",

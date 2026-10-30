@@ -135,7 +135,7 @@ export default function ArchitectsAndDesigners() {
             </div>
             <Reveal delay={0.1} className="split-media frame">
               <Image
-                src="/lifestyle/showroom-grand.jpg"
+                src="/lifestyle/lobby-canopy.jpg"
                 alt="A large fabricated chandelier centrepiece in a commercial lobby setting"
                 fill
                 sizes="(max-width: 1020px) 100vw, 50vw"

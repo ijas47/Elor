@@ -57,9 +57,9 @@ export const guideArticles: GuideArticle[] = [
         text: "Choose a living room chandelier in Kerala by sizing it to the seating group, not the whole hall. Keep it on a separate point from the ceiling fan, fix it to the slab before the false ceiling closes, and pick a material and finish that will stand the humidity. Then put it on its own switch.",
       },
     ],
-    image: "/spaces/living.jpg",
+    image: "/photos/living-room.jpg",
     imageAlt:
-      "A living room with a chandelier, cove light in the tray ceiling, and a lamp beside the sofa",
+      "A living room at night with lit display shelves, a wood coffee table, and warm seating",
     sections: [
       {
         h: "What size chandelier suits a Kerala living room?",
@@ -248,8 +248,8 @@ export const guideArticles: GuideArticle[] = [
         text: "Design a false ceiling and its lighting together, before the gypsum closes. Draw the furniture first, then place three layers: cove for a soft wash, spots for tasks and paths, and a decorative piece over the seating or table. Give each its own circuit, fix the chandelier anchor to the slab, and leave the fan its own point.",
       },
     ],
-    image: "/spaces/living.jpg",
-    imageAlt: "A tray ceiling with cove lighting, recessed spots, and a chandelier over the seating",
+    image: "/photos/living-room.jpg",
+    imageAlt: "A living room with lit shelves, a pendant, and warm seating",
     sections: [
       {
         h: "What is ceiling and lighting design?",
@@ -428,8 +428,8 @@ export const guideArticles: GuideArticle[] = [
         text: "Home lighting design for a Kerala house is one plan for every room and the outside, drawn while the ceilings and walls are still open. It places each light against the furniture, gives every room separate circuits, keeps one colour of light through the house, sets fans and anchors, and chooses outdoor and bathroom fittings for the monsoon and the coast.",
       },
     ],
-    image: "/lifestyle/villa-night.jpg",
-    imageAlt: "A house at night with cove light under the slabs, wall lights, and a lit path",
+    image: "/spaces/outdoor.jpg",
+    imageAlt: "A building facade at night with its terraces outlined in warm light",
     sections: [
       {
         h: "What is home lighting design?",
@@ -802,8 +802,8 @@ export const guideArticles: GuideArticle[] = [
         text: "Plan bedroom lighting in a Kerala home from the pillow outwards. Keep any bright lamp out of sight of someone lying in bed, put reading light at the bedside on its own switch, and keep the ceiling piece dimmable and well apart from the fan. Use warm light, and choose finishes that will cope with the humidity.",
       },
     ],
-    image: "/spaces/bedroom.jpg",
-    imageAlt: "A tiered crystal chandelier in a vaulted bedroom, hung clear of the window",
+    image: "/photos/bedroom-dome.jpg",
+    imageAlt: "A bedroom with a black ribbed dome pendant lighting the desk beside the bed",
     sections: [
       {
         h: "What lighting does a bedroom need?",
@@ -1001,8 +1001,8 @@ export const guideArticles: GuideArticle[] = [
         text: "Light a Kerala kitchen in layers. Put task light directly on the worktop, usually under the wall cabinets, so you never cook in your own shadow. Hang the island or dining pendant on a separate circuit. Then light the room generally, and choose fittings and finishes that can be wiped down and will cope with steam and humidity.",
       },
     ],
-    image: "/collections/abstract-rings.jpg",
-    imageAlt: "A linear pendant over a dining table, with the kitchen visible beyond",
+    image: "/collections/staircase-cascade.jpg",
+    imageAlt: "A red crystal cascade falling beside a dark spiral staircase",
     sections: [
       {
         h: "What lighting does a kitchen need?",
@@ -1187,8 +1187,8 @@ export const guideArticles: GuideArticle[] = [
         text: "Choose a wooden chandelier for a Kerala home by deciding the room first, then the timber and its finish, then the shape. Ask the maker which timber and finish are used and whether they are meant for a humid room. Size it to the furniture, keep it clear of the fan, and fix it to the slab, not the false ceiling.",
       },
     ],
-    image: "/lifestyle/store-wall.jpg",
-    imageAlt: "The Celestial Lights wall, with mosaic pendants and crystal cascades on display",
+    image: "/video/showroom-petal.jpg",
+    imageAlt: "Cascading white petal pendants in the showroom",
     sections: [
       {
         h: "Why choose a wooden chandelier?",
@@ -1373,8 +1373,8 @@ export const guideArticles: GuideArticle[] = [
         text: "Choose a brass chandelier for a Kerala home by first asking what it actually is: solid brass, brass-plated, or a gold-coloured coat. Then specify the finish for the room, especially near the coast, a kitchen, or a courtyard. Size it to the furniture and the ceiling, keep it clear of the fan, and fix it to the slab.",
       },
     ],
-    image: "/collections/dandelion-gold.jpg",
-    imageAlt: "A brass-coloured sputnik chandelier with frosted glass globes",
+    image: "/collections/staircase-cascade.jpg",
+    imageAlt: "A red crystal cascade falling beside a dark spiral staircase",
     sections: [
       {
         h: "Why choose a brass chandelier?",
@@ -1647,8 +1647,8 @@ export const guideArticles: GuideArticle[] = [
         text: "Outdoor lights in Kerala need IP44 as a minimum under a covered sit-out or balcony, IP65 anywhere driven monsoon rain reaches, such as a facade, an open terrace, or a nalukettu courtyard, and IP66 or IP67 by a pool or in the ground. The first digit is dust. The second is water.",
       },
     ],
-    image: "/work/w5-garden.jpg",
-    imageAlt: "Garden and path lighting at night",
+    image: "/spaces/outdoor.jpg",
+    imageAlt: "A building facade at night with its terraces outlined in warm light",
     sections: [
       {
         h: "What does an IP rating mean?",

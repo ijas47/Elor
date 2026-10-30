@@ -1,57 +1,25 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import { site } from "@/lib/site";
 import { breadcrumbSchema } from "@/lib/schema";
 import { Breadcrumbs } from "@/components/ui/Breadcrumbs";
-import { pieces, categories } from "@/lib/collections";
-import { imageDimensions } from "@/lib/imageDimensions";
-import { Reveal, Stagger, StaggerItem } from "@/components/motion/Reveal";
+import { Reveal } from "@/components/motion/Reveal";
 import { MagneticButton } from "@/components/motion/MagneticButton";
-import { PieceCard } from "@/components/ui/PieceCard";
 
 export const metadata: Metadata = {
   title: "Chandeliers, Pendants & Outdoor Lighting",
   description:
-    "Browse the Elor collection of statement chandeliers, pendants, wall lights and facade lighting. Available at Celestial Lights, with pan-India delivery.",
+    "Photographs of the Elor range are coming. Until then, send a picture and we build the light, or ask Celestial Lights on WhatsApp.",
   alternates: { canonical: "/collections" },
 };
 
-const itemListSchema = {
-  "@context": "https://schema.org",
-  "@type": "ItemList",
-  name: "Elor Lighting Collection",
-  itemListElement: pieces.map((p, i) => {
-    const dims = imageDimensions[p.image];
-    return {
-      "@type": "ListItem",
-      position: i + 1,
-      item: {
-        "@type": "Product",
-        name: p.name,
-        category: p.category,
-        // ImageObject rather than a bare URL string: real width/height (read
-        // off the file, see lib/imageDimensions.ts) and a caption give Google
-        // Images more to index than a plain link does.
-        image: {
-          "@type": "ImageObject",
-          url: `${site.domain}${p.image}`,
-          contentUrl: `${site.domain}${p.image}`,
-          caption: p.blurb,
-          ...(dims && { width: dims.width, height: dims.height }),
-        },
-        description: p.blurb,
-        brand: { "@type": "Brand", name: site.name },
-      },
-    };
-  }),
-};
+// Catalogue photos stay in lib/collections.ts and public/collections/.
+// They stay off this page until the Celestial range or new custom-light
+// images replace them. Restore the gallery from that data when they do.
 
 export default function Collections() {
   return (
     <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(itemListSchema) }}
-      />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
@@ -62,106 +30,37 @@ export default function Collections() {
       <section className="page-hero">
         <div className="wrap">
           <Breadcrumbs crumbs={[{ name: "Collections", path: "/collections" }]} />
-          <Reveal as="span"><span className="eyebrow">The collection</span></Reveal>
-          <Reveal delay={0.06}>
-            <h1 className="h-xl" style={{ marginTop: 18, maxWidth: "14ch" }}>
-              Light worth <span className="serif-i">looking up</span> at.
-            </h1>
-          </Reveal>
-          <Reveal delay={0.12}>
-            <p className="lede">
-              A curated selection of our statement pieces, from double-height
-              crystal chandeliers to facade washers. Every piece is available at{" "}
-              {site.shopLabel}. Prefer something that doesn&rsquo;t exist yet?{" "}
-              <a href="/customisation" style={{ color: "var(--gold)" }}>We&rsquo;ll build it.</a>
-            </p>
-            <p className="lede" style={{ marginTop: 16 }}>
-              The room is decided on Elor, then a shelf piece links to {site.shopLabel}.{" "}
-              <a href="/guides/chandelier-for-living-room" style={{ color: "var(--gold)" }}>Living room</a>
-              {" · "}
-              <a href="/guides/ceiling-and-lighting-design" style={{ color: "var(--gold)" }}>Ceiling</a>
-              {" · "}
-              <a href="/guides/home-lighting-design" style={{ color: "var(--gold)" }}>Whole house</a>
-              {" · "}
-              <a href="/guides/staircase-lighting-design" style={{ color: "var(--gold)" }}>Stair</a>
-              {" · "}
-              <a href="/guides/bedroom-lighting-design" style={{ color: "var(--gold)" }}>Bedroom</a>
-              {" · "}
-              <a href="/guides/kitchen-lighting-design" style={{ color: "var(--gold)" }}>Kitchen</a>
-              {" · "}
-              <a href="/guides/wooden-chandelier" style={{ color: "var(--gold)" }}>Wood</a>
-              {" · "}
-              <a href="/guides/brass-chandelier" style={{ color: "var(--gold)" }}>Brass</a>
-              .
-            </p>
-          </Reveal>
-          <Reveal delay={0.18}>
-            <div className="cta-ctas" style={{ justifyContent: "flex-start", marginTop: 32 }}>
-              <MagneticButton href={site.shopUrl} variant="gold" external>
-                {site.shopCta} <span className="arr">→</span>
-              </MagneticButton>
-              <MagneticButton href="/customisation" variant="ghost">
-                Create a Custom Piece
-              </MagneticButton>
-            </div>
-          </Reveal>
-        </div>
-      </section>
-
-      {/* Category tiles */}
-      <section className="sec" style={{ paddingTop: 0 }}>
-        <div className="wrap">
-          <Stagger className="cat-tiles">
-            {categories.map((c) => (
-              <StaggerItem key={c.label}>
-                <div className="cat-tile">
-                  <h2>{c.label}</h2>
-                  <p>{c.note}</p>
+          <div className="split" style={{ alignItems: "center" }}>
+            <div>
+              <Reveal as="span"><span className="eyebrow">The collection</span></Reveal>
+              <Reveal delay={0.06}>
+                <h1 className="h-xl" style={{ marginTop: 18, maxWidth: "16ch" }}>
+                  The new lights are <span className="serif-i">being photographed.</span>
+                </h1>
+              </Reveal>
+              <Reveal delay={0.12}>
+                <p className="lede" style={{ marginTop: 22 }}>
+                  New photographs of the range are not on this page yet.
+                  The cascade here is the one piece we are showing. To have
+                  something made, send a picture. To ask what is in stock,
+                  WhatsApp {site.shopLabel}.
+                </p>
+              </Reveal>
+              <Reveal delay={0.18}>
+                <div className="cta-ctas" style={{ justifyContent: "flex-start", marginTop: 32 }}>
+                  <MagneticButton href="/customisation" variant="gold">
+                    Create a Custom Piece <span className="arr">→</span>
+                  </MagneticButton>
+                  <MagneticButton href={site.shopUrl} variant="ghost" external>
+                    {site.shopCta}
+                  </MagneticButton>
                 </div>
-              </StaggerItem>
-            ))}
-          </Stagger>
-        </div>
-      </section>
-
-      {/* Gallery */}
-      <section className="sec" style={{ paddingTop: 0 }}>
-        <div className="wrap">
-          <Stagger className="collection-grid">
-            {pieces.map((p, i) => (
-              <StaggerItem key={p.slug}>
-                <PieceCard piece={p} priority={i < 4} headingLevel={2} />
-              </StaggerItem>
-            ))}
-          </Stagger>
-        </div>
-      </section>
-
-      {/* CTA */}
-      <section className="cta-band">
-        <div className="wrap-tight">
-          <Reveal as="span"><span className="eyebrow center">Ready when you are</span></Reveal>
-          <Reveal delay={0.06}>
-            <h2 className="h-lg" style={{ marginTop: 18 }}>
-              Found something? <span className="serif-i">Or nearly?</span>
-            </h2>
-          </Reveal>
-          <Reveal delay={0.12}>
-            <p className="lede" style={{ textAlign: "center" }}>
-              Shop the full range at {site.shopLabel}, or send us a reference and
-              we&rsquo;ll build the piece you actually pictured.
-            </p>
-          </Reveal>
-          <Reveal delay={0.16}>
-            <div className="cta-ctas">
-              <MagneticButton href={site.shopUrl} variant="gold" external>
-                {site.shopCta} <span className="arr">→</span>
-              </MagneticButton>
-              <MagneticButton href="/consultation" variant="ghost">
-                Book a Consultation
-              </MagneticButton>
+              </Reveal>
             </div>
-          </Reveal>
+            <Reveal delay={0.1} className="split-media frame">
+              <Image src="/collections/staircase-cascade.jpg" alt="A red crystal cascade built to fall the height of a spiral stair" fill sizes="(max-width: 1020px) 100vw, 50vw" priority style={{ objectFit: "cover" }} />
+            </Reveal>
+          </div>
         </div>
       </section>
     </>

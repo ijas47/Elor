@@ -27,7 +27,7 @@ export const storeCities: Record<StoreCity, StoreCityCopy> = {
     heroHeadline: "Custom Chandeliers & Lighting Design in Kannur",
     heroLede:
       "A Celestial Lights store and experience centre in Kannur. Lighting plans for architects and owners who are building, the ready range on the floor, and custom chandeliers made in our factory.",
-    heroImage: "/lifestyle/villa-night.jpg",
+    heroImage: "/lifestyle/hero-4.jpg",
     intro:
       "Kannur is known as much for its handloom weaving heritage as its coastline, a town where considered, handmade craft is already part of daily life. That's the same standard we hold custom fixtures to: measured to your ceiling, built by hand, and installed by the same team that designed it.",
     whyUs: [
@@ -76,7 +76,7 @@ export const storeCities: Record<StoreCity, StoreCityCopy> = {
     heroHeadline: "Custom Chandeliers & Lighting Design in Kozhikode",
     heroLede:
       "A Celestial Lights store and experience centre in Calicut. Lighting plans for architects and owners who are building, the ready range on the floor, and custom chandeliers made in our factory.",
-    heroImage: "/work/w1-cascade.jpg",
+    heroImage: "/collections/staircase-cascade.jpg",
     intro:
       "Kozhikode is a historic Malabar port city where old-town character sits right next to new construction, and lighting has to bridge both. Whether it's a heritage-style home or a new-build café, we design fixtures that fit the room they're actually going into.",
     whyUs: [

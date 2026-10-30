@@ -54,7 +54,7 @@ const articleSchema = {
   headline: "What Does a Custom Chandelier Cost in India?",
   description:
     "Real ready-collection price bands by size and material, and how bespoke chandelier fabrication pricing is worked out.",
-  image: `${site.domain}/lifestyle/showroom-grand.jpg`,
+  image: `${site.domain}/lifestyle/lobby-canopy.jpg`,
   author: { "@type": "Organization", name: site.name, url: site.domain },
   publisher: {
     "@type": "Organization",

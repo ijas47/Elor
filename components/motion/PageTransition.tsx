@@ -4,10 +4,8 @@ import { usePathname } from "next/navigation";
 import type { ReactNode } from "react";
 
 /**
- * Route entrance. Uses a CSS keyframe (not a JS animation) so it ALWAYS
- * settles at opacity:1, it can never get stuck mid-animation and dim the
- * page. Keyed on pathname so it re-runs on navigation. Respects
- * prefers-reduced-motion via the stylesheet.
+ * Route wrapper. Keyed on pathname so client navigations remount the page.
+ * The entrance does not start from opacity 0: that blanked the first paint.
  */
 export function PageTransition({ children }: { children: ReactNode }) {
   const pathname = usePathname();

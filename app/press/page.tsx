@@ -167,9 +167,13 @@ export default function Press() {
           <Reveal><h2 className="h-lg">Photography</h2></Reveal>
           <Reveal delay={0.12}>
             <div className="collection-grid" style={{ marginTop: 26, display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(220px, 1fr))", gap: 16 }}>
-              {["/lifestyle/showroom-grand.jpg", "/lifestyle/store-wall.jpg", "/work/w3-showroom.jpg", "/collections/asgard.jpg"].map((src) => (
-                <div key={src} className="frame" style={{ position: "relative", aspectRatio: "4/3" }}>
-                  <Image src={src} alt="Elor Lighting press photography" fill sizes="(max-width: 640px) 100vw, 25vw" style={{ objectFit: "cover" }} />
+              {[
+                { src: "/lifestyle/lobby-canopy.jpg", alt: "A black sculptural chandelier filling a bright lobby" },
+                { src: "/video/showroom-petal.jpg", alt: "Cascading white petal pendants in the showroom" },
+                { src: "/video/showroom-orb.jpg", alt: "Crystal orbs hanging over a stairwell" },
+              ].map((photo) => (
+                <div key={photo.src} className="frame" style={{ position: "relative", aspectRatio: "4/3" }}>
+                  <Image src={photo.src} alt={photo.alt} fill sizes="(max-width: 640px) 100vw, 25vw" style={{ objectFit: "cover" }} />
                 </div>
               ))}
             </div>

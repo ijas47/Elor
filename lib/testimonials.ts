@@ -1,3 +1,5 @@
+// Not rendered. These quotes name people and show five stars, and we do not
+// have a source for them. Put them back only when Ijas confirms each one.
 export interface Testimonial {
   quote: string;
   name: string;

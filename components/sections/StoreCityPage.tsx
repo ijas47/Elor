@@ -3,7 +3,6 @@ import Link from "next/link";
 import { GuideLinks } from "@/components/ui/GuideLinks";
 import { site, stores } from "@/lib/site";
 import { elorContact } from "@/lib/brands";
-import { testimonials } from "@/lib/testimonials";
 import { breadcrumbSchema } from "@/lib/schema";
 import { Breadcrumbs } from "@/components/ui/Breadcrumbs";
 import { storeCities, type StoreCity } from "@/lib/storeCities";
@@ -18,13 +17,13 @@ import { MagneticButton } from "@/components/motion/MagneticButton";
  * exactly one schema entity at one canonical URL. Service-area cities where we
  * have no premises get `Service` + `areaServed` and never a LocalBusiness type.
  *
- * All copy and data are per-city (lib/storeCities.ts, lib/site.ts's `stores`,
- * lib/testimonials.ts). This component only supplies the structure.
+ * All copy and data are per-city (lib/storeCities.ts, lib/site.ts's `stores`).
+ * This component only supplies the structure. Named testimonials stay in
+ * lib/testimonials.ts and are not rendered.
  */
 export function StoreCityPage({ city }: { city: StoreCity }) {
   const copy = storeCities[city];
   const store = stores.find((s) => s.city === city)!;
-  const testimonial = testimonials.find((t) => t.city === city)!;
   const path = `/stores/${city.toLowerCase()}`;
   const others = stores.filter((s) => s.city !== city);
 
@@ -151,25 +150,6 @@ export function StoreCityPage({ city }: { city: StoreCity }) {
               <p><span className="store-k">Hours</span>{store.hours}</p>
               <p><span className="store-k">Phone</span><a href={store.phoneHref} style={{ color: "var(--text-dim)" }}>{store.phone}</a></p>
               <a className="store-link" href={store.maps} target="_blank" rel="noopener noreferrer">Get directions →</a>
-            </div>
-          </Reveal>
-        </div>
-      </section>
-
-      <section className="sec">
-        <div className="wrap-tight">
-          <Reveal>
-            <div className="quote-card">
-              <span className="quote-mark">&ldquo;</span>
-              <blockquote>{testimonial.quote}</blockquote>
-              <div className="quote-who">
-                <span className="quote-av">{testimonial.initial}</span>
-                <div>
-                  <div className="quote-name">{testimonial.name}</div>
-                  <div className="quote-role">{testimonial.role}</div>
-                </div>
-              </div>
-              <div className="stars">★★★★★</div>
             </div>
           </Reveal>
         </div>

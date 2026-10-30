@@ -3,7 +3,7 @@
   flex-direction: column;
   align-items: flex-start;
   gap: 6px;
-  color: var(--pearl);
+  color: currentColor;
 }
 
 /* The crystal cluster overshoots the cap band, so cap height is only ~65% of

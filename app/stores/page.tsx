@@ -74,7 +74,7 @@ export default function Stores() {
               </Reveal>
             </div>
             <Reveal delay={0.1} className="split-media frame">
-              <Image src="/lifestyle/store-wall.jpg" alt="Inside a Celestial Lights store, a wall of lit fixtures" fill sizes="(max-width: 1020px) 100vw, 50vw" priority style={{ objectFit: "cover" }} />
+              <Image src="/video/showroom-petal.jpg" alt="Cascading white petal pendants in the showroom" fill sizes="(max-width: 1020px) 100vw, 50vw" priority style={{ objectFit: "cover" }} />
             </Reveal>
           </div>
         </div>

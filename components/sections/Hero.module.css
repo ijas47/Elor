@@ -41,9 +41,13 @@
    image is still the subject. Scene 1 is a pale ceiling: the old scrim dropped
    to 0.15 at the exact height the headline sits, and white type disappeared
    into it. Contrast here is measured, not judged by eye. */
-.scrim {
+.scrim,
+.scrimLight {
   position: absolute;
   inset: 0;
+  pointer-events: none;
+}
+.scrim {
   background:
     linear-gradient(
       100deg,
@@ -62,6 +66,18 @@
       rgba(6, 5, 4, 0.86) 88%,
       rgba(6, 5, 4, 0.97) 100%
     );
+}
+/* Scene 1 is a dark exposure. Keep the fixture and the room visible.
+   The type sits on the floor and the chairs, which are already dark. */
+.scrimLight {
+  background: linear-gradient(
+    180deg,
+    rgba(12, 10, 8, 0.06) 0%,
+    rgba(12, 10, 8, 0.02) 30%,
+    rgba(12, 10, 8, 0.16) 52%,
+    rgba(12, 10, 8, 0.34) 72%,
+    rgba(12, 10, 8, 0.5) 100%
+  );
 }
 .vignette {
   position: absolute;
@@ -91,6 +107,28 @@
   bottom: 0;
   will-change: opacity, transform;
 }
+/* A light feather behind scene 1 type, so the headline holds without
+   painting the whole room black. */
+.stack .copyLight {
+  isolation: isolate;
+}
+.stack .copyLight::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  left: -4vw;
+  right: -2vw;
+  top: -36px;
+  bottom: -16px;
+  background: radial-gradient(
+    ellipse 100% 80% at 42% 46%,
+    rgba(8, 6, 4, 0.38) 0%,
+    rgba(8, 6, 4, 0.16) 52%,
+    rgba(8, 6, 4, 0) 76%
+  );
+  filter: blur(16px);
+  pointer-events: none;
+}
 .eyebrow {
   margin: 0;
 }
@@ -102,8 +140,11 @@
   margin: 22px 0 0;
   font-size: clamp(34px, 4.9vw, 64px);
   line-height: 1.05;
-  font-weight: inherit;
+  font-weight: 500;
   text-shadow: 0 4px 40px rgba(6, 5, 4, 0.6);
+}
+.title :global(.serif-i) {
+  font-weight: 500;
 }
 .lede {
   color: #e4dccd;
@@ -199,6 +240,9 @@
   }
   /* copy runs the full width here, so the wash has to be even rather than
      weighted to one side */
+  .stack .copyLight::before {
+    display: none;
+  }
   .scrim {
     background: linear-gradient(
       180deg,
@@ -207,6 +251,15 @@
       rgba(6, 5, 4, 0.68) 52%,
       rgba(6, 5, 4, 0.9) 86%,
       rgba(6, 5, 4, 0.98) 100%
+    );
+  }
+  .scrimLight {
+    background: linear-gradient(
+      180deg,
+      rgba(6, 5, 4, 0.28) 0%,
+      rgba(6, 5, 4, 0.12) 28%,
+      rgba(6, 5, 4, 0.32) 58%,
+      rgba(6, 5, 4, 0.62) 100%
     );
   }
 }
