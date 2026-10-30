@@ -54,8 +54,8 @@ export function ChandelierCalculator() {
 
   // Fixture height: 2.5–3 in per foot of ceiling height.
   const ceilingFt = H * M_TO_FT;
-  const dropMinCm = (ceilingFt * 2.5) / CM_TO_IN / 10;
-  const dropMaxCm = (ceilingFt * 3) / CM_TO_IN / 10;
+  const dropMinCm = (ceilingFt * 2.5) / CM_TO_IN;
+  const dropMaxCm = (ceilingFt * 3) / CM_TO_IN;
 
   // Bottom-of-fixture height above floor. Over a table it's measured from
   // the tabletop (75–90 cm above it, table assumed 75 cm high); otherwise

@@ -29,7 +29,7 @@ export function Nav() {
   return (
     <header
       className={`${styles.head} ${scrolled ? styles.scrolled : ""}`}
-      data-light={pathname === "/" && !scrolled && !open ? "true" : "false"}
+      data-light={!scrolled ? "true" : "false"}
     >
       <div className={styles.inner}>
         <Link href="/" aria-label="Elor Lighting home" className={styles.brand}>

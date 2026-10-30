@@ -83,14 +83,14 @@ export default async function Consultation({
           <Reveal as="span"><span className="eyebrow">Consultation & implementation</span></Reveal>
           <Reveal delay={0.06}>
             <h1 className="h-xl" style={{ marginTop: 18, maxWidth: "16ch" }}>
-              You dream it. We light it. <span className="serif-i">End to end.</span>
+              The first session is <span className="serif-i">free.</span>
             </h1>
           </Reveal>
           <Reveal delay={0.12}>
             <p className="lede">
-              One team plans and supplies the lighting for your whole space.
-              We install custom lights and give installation support for everything else. Book a free
-              first session below.
+              Book it at your site, in Kannur, Calicut or Kochi, or on video.
+              You pay only if you ask us to go ahead. We install custom lights
+              and give installation support for everything else.
             </p>
           </Reveal>
         </div>

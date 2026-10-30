@@ -34,7 +34,7 @@ export default function Privacy() {
           <p>
             This policy explains what information Elor Lighting ({site.domain}) collects when
             you use this website, why, and what happens to it. Elor Lighting is the lighting
-            lighting consultancy of Celestial Lights. Celestial has stores and experience
+            consultancy of Celestial Lights. Celestial has stores and experience
             centres in Kannur and Calicut. Kochi is a full experience centre.
           </p>
 

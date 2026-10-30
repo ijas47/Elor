@@ -29,7 +29,7 @@ export const storeCities: Record<StoreCity, StoreCityCopy> = {
       "A Celestial Lights store and experience centre in Kannur. Lighting plans for architects and owners who are building, the ready range on the floor, and custom chandeliers made in our factory.",
     heroImage: "/lifestyle/hero-4.jpg",
     intro:
-      "Kannur is known as much for its handloom weaving heritage as its coastline, a town where considered, handmade craft is already part of daily life. That's the same standard we hold custom fixtures to: measured to your ceiling, built by hand, and installed by the same team that designed it.",
+      "The ready fittings are on the floor. A custom piece starts from a photo, a render, or a sketch, and we measure the ceiling before we build. Most custom pieces take 3 to 6 weeks after the brief is agreed.",
     whyUs: [
       "Custom chandeliers built from a photo, render or sketch, fabricated in crystal, glass, metal or acrylic",
       "The full Celestial Lights ready collection on the showroom floor to see and take home",

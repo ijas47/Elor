@@ -4,15 +4,13 @@ import { motion, useReducedMotion } from "framer-motion";
 import styles from "./Marquee.module.css";
 
 const items = [
-  "Custom Chandeliers",
-  "Lighting Consultation",
-  "Facade & Outdoor",
-  "Installation Support",
-  "Custom Installation",
-  "5-Year Warranty",
-  "Pan-India Delivery",
-  "Own Supply Chain",
-  "Made to Measure",
+  "DIALux plans",
+  "Custom chandeliers",
+  "Custom lights installed by us",
+  "Installation support",
+  "Warranty up to 5 years",
+  "Kannur · Calicut · Kochi",
+  "Sites anywhere in India",
 ];
 
 export function Marquee() {
