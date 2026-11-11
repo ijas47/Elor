@@ -119,7 +119,8 @@ const entries: GuideEntry[] = [
     tag: "Buying Guide",
     image: "/collections/staircase-cascade.jpg",
     imageAlt: "A red crystal cascade falling beside a dark spiral staircase",
-    modified: "2026-10-12",
+    modified: "2026-11-11",
+    related: ["chandelier-for-living-room", "wooden-chandelier", "how-to-choose-a-custom-chandelier"],
   },
   {
     slug: "how-to-choose-a-custom-chandelier",
