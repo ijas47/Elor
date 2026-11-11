@@ -98,7 +98,7 @@ export const stores = [
     postalCode: "670005",
     address:
       "Philips Building, Kannur, Kerala 670005",
-    hours: "Mon-Sat · 9:30 AM to 8:30 PM",
+    hours: "Mon-Sat · 10:00 AM to 8:30 PM",
     maps: "https://maps.google.com/?q=Celestial+Lights+Philips+Building+Kannur+Kerala+670005",
     geo: { lat: 11.8739191, lng: 75.3881457 },
   }),

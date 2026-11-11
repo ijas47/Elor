@@ -31,7 +31,7 @@ the entity signal. Copy the strings below exactly — they are pulled from
 - **Address:** `Philips Building, Kannur, Kerala 670005`
 - **Phone:** `+91 99956 19470`
 - **Website:** `https://www.elorlighting.com/stores/kannur`
-- **Hours:** Mon–Sat, 9:30 AM – 8:30 PM · Closed Sunday
+- **Hours:** Mon–Sat, 10:00 AM – 8:30 PM · Closed Sunday
 
 ## Profile 2 — Kochi
 

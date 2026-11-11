@@ -69,7 +69,7 @@ const storeSchema = {
   },
   telephone: store.phone,
   email: site.email,
-  openingHours: "Mo-Sa 09:30-20:30",
+  openingHours: "Mo-Sa 10:00-20:30",
   url: `${site.domain}${PATH}`,
   hasMap: store.maps,
   parentOrganization: { "@id": `${site.domain}/#organization` },
@@ -142,7 +142,7 @@ export default function KannurStorePage() {
               </Reveal>
               <Reveal delay={0.16}>
                 <p className="lede" style={{ marginTop: 22 }}>
-                  Celestial Lights in Kannur is the shop and experience centre where you can see and buy the ready collection. It is at Philips Building, 670005, open Monday to Saturday, 9:30 AM to 8:30 PM. You can walk in, or book ahead. Elor handles the lighting design. Design is free with purchase from Celestial.
+                  Celestial Lights in Kannur is the shop and experience centre where you can see and buy the ready collection. It is at Philips Building, 670005, open Monday to Saturday, 10:00 AM to 8:30 PM. You can walk in, or book ahead. Elor handles the lighting design. Design is free with purchase from Celestial.
                 </p>
               </Reveal>
               <Reveal delay={0.18}>
