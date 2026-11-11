@@ -175,8 +175,8 @@ const entries: GuideEntry[] = [
     dek: "What gypsum, POP and RCC each carry, what fixtures weigh, and why the anchor goes in before the ceiling closes.",
     tag: "Technical",
     image: "/work/w2-corridor.jpg",
-    modified: "2026-08-20",
-    related: ["ceiling-and-lighting-design", "chandelier-with-ceiling-fan", "staircase-lighting-design"],
+    modified: "2026-11-11",
+    related: ["ceiling-and-lighting-design", "chandelier-with-ceiling-fan", "staircase-lighting-design", "chandelier-size-calculator"],
   },
   {
     slug: "crystal-vs-glass-chandelier",
