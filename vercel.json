@@ -1,4 +1,16 @@
 {
   "$schema": "https://openapi.vercel.sh/vercel.json",
-  "framework": "nextjs"
+  "framework": "nextjs",
+  "redirects": [
+    {
+      "source": "/guides/custom-chandeliers-kannur",
+      "destination": "/stores/kannur",
+      "statusCode": 301
+    },
+    {
+      "source": "/guides/custom-chandeliers-kochi",
+      "destination": "/stores/kochi",
+      "statusCode": 301
+    }
+  ]
 }
