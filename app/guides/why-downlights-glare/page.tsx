@@ -12,6 +12,7 @@ const META_TITLE = "Why a Downlight Glares";
 const DESC =
   "If you can see the LED from the sofa, the fitting is too shallow. Baffle depth, cutoff, and where the driver sits, decided before the ceiling closes.";
 const PATH = "/guides/why-downlights-glare";
+const CELESTIAL = "https://www.celestiallights.in";
 const { updated: UPDATED, modified: MODIFIED } = guideDates(PATH);
 
 export const metadata: Metadata = {
@@ -179,6 +180,13 @@ export default function DownlightGlareGuide() {
           <Reveal><h2 className="h-lg">Sit in the centre and look up.</h2></Reveal>
           <Reveal delay={0.06}>
             <p className="lede" style={{ margin: "16px auto 0" }}>
+              Ready fittings are at{" "}
+              <a href={CELESTIAL} target="_blank" rel="noopener noreferrer">Celestial Lights</a>
+              . Design is free with purchase from Celestial. This page stays the technical answer on glare; it does not name a downlight collection.
+            </p>
+          </Reveal>
+          <Reveal delay={0.1}>
+            <p className="lede" style={{ margin: "16px auto 0" }}>
               The Kannur, Kochi, and Kozhikode centres have fittings at
               different recess depths. Bring the ceiling section if you have
               it.
@@ -188,6 +196,7 @@ export default function DownlightGlareGuide() {
             <div className="cta-ctas" style={{ marginTop: 30 }}>
               <MagneticButton href="/consultation" variant="gold">Book a Consultation <span className="arr">→</span></MagneticButton>
               <MagneticButton href="/guides/colour-of-light" variant="ghost">Kelvin, CRI, beam</MagneticButton>
+              <MagneticButton href={CELESTIAL} variant="ghost" external>See the range <span className="arr">→</span></MagneticButton>
             </div>
           </Reveal>
         </div>

@@ -146,7 +146,7 @@ const entries: GuideEntry[] = [
     dek: "If you can see the lamp from the sofa, the fitting is too shallow. What to ask for before the ceiling closes.",
     tag: "Technical",
     image: "/photos/living-room.jpg",
-    modified: "2026-09-23",
+    modified: "2026-11-11",
     related: ["kitchen-lighting-design", "bedroom-lighting-design", "staircase-lighting-design"],
   },
   {
