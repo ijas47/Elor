@@ -167,7 +167,8 @@ const entries: GuideEntry[] = [
     dek: "Four layouts that work, the clearances they need, and the wiring mistake we get called to fix most often.",
     tag: "Technical",
     image: "/work/w4-lounge.jpg",
-    modified: "2026-08-20",
+    modified: "2026-11-11",
+    related: ["how-to-clean-a-crystal-chandelier", "ip-rating-for-outdoor-lights", "ceiling-and-lighting-design", "chandelier-for-living-room"],
   },
   {
     slug: "false-ceiling-chandelier-weight",

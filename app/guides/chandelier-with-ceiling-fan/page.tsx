@@ -1,3 +1,4 @@
+import Link from "next/link";
 import type { Metadata } from "next";
 import { site } from "@/lib/site";
 import { guideDates } from "@/lib/guides";
@@ -7,11 +8,12 @@ import { Reveal, Stagger, StaggerItem } from "@/components/motion/Reveal";
 import { MagneticButton } from "@/components/motion/MagneticButton";
 import { RelatedGuides } from "@/components/ui/RelatedGuides";
 
-const TITLE = "Chandelier With a Ceiling Fan: How to Make Both Work";
+const TITLE = "Chandelier With a Ceiling Fan";
 const META_TITLE = "Chandelier With a Ceiling Fan";
 const DESC =
   "Almost every Indian room has a ceiling fan and almost every chandelier guide ignores it. Four layouts that work, with the clearances each one needs.";
 const PATH = "/guides/chandelier-with-ceiling-fan";
+const CELESTIAL = "https://www.celestiallights.in";
 const { updated: UPDATED, modified: MODIFIED } = guideDates(PATH);
 
 export const metadata: Metadata = {
@@ -121,11 +123,13 @@ export default function CeilingFanGuide() {
           </Reveal>
           <Reveal delay={0.12}>
             <p className="lede" style={{ marginTop: 22 }}>
-              Nearly every room in India has a ceiling fan, and nearly every
-              chandelier guide is written as though it does not. The short
-              answer: keep them apart. The fan holds the centre of the ceiling,
-              the chandelier takes a second point at least 600 mm clear of the
-              blade tips, and the two never share a circuit.
+              You can put a chandelier and a ceiling fan in the same Indian
+              room if you keep them apart. The fan stays at the centre. The
+              chandelier takes a second point at least 600 mm clear of the
+              blade tips, and the two never share a circuit. Ready pieces are
+              at{" "}
+              <a href={CELESTIAL} target="_blank" rel="noopener noreferrer">Celestial Lights</a>.
+              {" "}Design is free with purchase from Celestial.
             </p>
           </Reveal>
         </div>
@@ -198,7 +202,12 @@ export default function CeilingFanGuide() {
             <ul className="check-list" style={{ marginTop: 28 }}>
               <li><span className="tick">✓</span>A fan regulator is a speed controller, not a dimmer. A chandelier needs its own switched circuit, and a dimmable one needs a dimmer matched to its LED drivers.</li>
               <li><span className="tick">✓</span>The second ceiling point has to be planned before the false ceiling closes, not chased afterwards. Retrofitting a conduit through a finished gypsum ceiling means opening and refinishing it.</li>
-              <li><span className="tick">✓</span>The chandelier&rsquo;s anchor goes into the RCC slab, never the false ceiling or the fan&rsquo;s existing hook. A fan hook is rated for a fan, and most chandeliers are heavier.</li>
+              <li>
+                <span className="tick">✓</span>
+                The chandelier&rsquo;s anchor goes into the RCC slab, never the false ceiling or the fan&rsquo;s existing hook. A fan hook is rated for a fan, and most chandeliers are heavier. The{" "}
+                <Link href="/guides/false-ceiling-chandelier-weight">false-ceiling weight guide</Link>
+                {" "}covers the anchor.
+              </li>
             </ul>
           </Reveal>
         </div>
@@ -229,12 +238,14 @@ export default function CeilingFanGuide() {
             <p className="lede" style={{ margin: "16px auto 0" }}>
               Easiest before the false ceiling goes up, and still workable
               after. A photo and the room dimensions are enough to start.
+              Design is free with purchase from Celestial.
             </p>
           </Reveal>
           <Reveal delay={0.12}>
             <div className="cta-ctas" style={{ marginTop: 30 }}>
               <MagneticButton href="/consultation" variant="gold">Book a Consultation <span className="arr">→</span></MagneticButton>
               <MagneticButton href="/guides/chandelier-size-calculator" variant="ghost">Size Calculator</MagneticButton>
+              <MagneticButton href={CELESTIAL} variant="ghost" external>See the range</MagneticButton>
             </div>
           </Reveal>
         </div>
