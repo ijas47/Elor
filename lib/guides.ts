@@ -209,7 +209,7 @@ const entries: GuideEntry[] = [
     dek: "Seven questions that separate a shop that makes chandeliers from one that only imports and resells them.",
     tag: "Buying Guide",
     image: "/video/showroom-petal.jpg",
-    modified: "2026-08-24",
+    modified: "2026-11-11",
     related: ["how-to-choose-a-custom-chandelier", "how-to-clean-a-crystal-chandelier", "brass-chandelier"],
   },
   {

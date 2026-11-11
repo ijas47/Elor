@@ -12,6 +12,7 @@ const META_TITLE = "How to Choose a Chandelier Shop in India";
 const DESC =
   "Seven questions that separate a shop that fabricates chandeliers from one that only resells them, so you know what you're buying before you commit.";
 const PATH = "/guides/how-to-choose-a-chandelier-shop";
+const CELESTIAL = "https://www.celestiallights.in";
 const { updated: UPDATED, modified: MODIFIED } = guideDates(PATH);
 
 export const metadata: Metadata = {
@@ -31,7 +32,7 @@ const criteria = [
   },
   {
     h: "Is installation included, or a separate hire?",
-    p: "A fixture that ships without installation puts the site coordination, the electrician, and the liability if it is hung wrong onto you. Ask whether installation is quoted with the piece or arranged separately. If separate, ask who is responsible if the ceiling anchor or wiring is done incorrectly.",
+    p: "A fixture that ships without installation puts the site coordination, the electrician, and the liability if it is hung wrong onto you. Ask whether installation is quoted with the piece or arranged separately. If it is separate, ask who is responsible if the ceiling anchor or wiring is done incorrectly.",
   },
   {
     h: "What is the actual warranty, in writing?",
@@ -131,8 +132,8 @@ export default function ChooseAShopGuide() {
             <p className="lede" style={{ marginTop: 22 }}>
               India has no shortage of lighting shops. It has far fewer that
               actually design and build what they sell. Seven questions to ask
-              any shop before you commit, including us, so you know
-              exactly what you&rsquo;re buying.
+              any shop before you commit, including us, in a showroom or when
+              you read a quote, so you know exactly what you are buying.
             </p>
           </Reveal>
         </div>
@@ -142,12 +143,12 @@ export default function ChooseAShopGuide() {
         <div className="wrap-tight">
           <Reveal>
             <p className="lede">
-              This isn&rsquo;t a ranked list of shops. We can&rsquo;t
-              honestly evaluate businesses we don&rsquo;t run, and a
-              self-scored comparison would be worth exactly as much as you&rsquo;d
-              expect. What we can do is tell you what actually matters when
-              you&rsquo;re standing in a showroom or reading a quote, because
-              these are the questions our own customers ask us before they buy.
+              This is not a ranked list of shops. We cannot honestly judge
+              businesses we do not run, and a self-scored comparison would be
+              worth exactly as much as you would expect. What we can do is tell
+              you what actually matters when you are standing in a showroom or
+              reading a quote, because these are the questions our own
+              customers ask us before they buy.
             </p>
           </Reveal>
         </div>
@@ -186,8 +187,27 @@ export default function ChooseAShopGuide() {
               <li><span className="tick">✓</span>Up to 5-year warranty, confirmed in writing at consultation.</li>
               <li><span className="tick">✓</span>We plan around false ceilings, shared fan points and non-standard ceilings as a normal part of the process. See the <a href="/guides/false-ceiling-chandelier-weight">false ceiling guide</a> and <a href="/guides/chandelier-with-ceiling-fan">ceiling fan guide</a>.</li>
               <li><span className="tick">✓</span>Firm pricing after design approval, before fabrication starts.</li>
+              <li><span className="tick">✓</span>Ready pieces are at{" "}
+                <a href={CELESTIAL} target="_blank" rel="noopener noreferrer">Celestial Lights</a>
+                . Design is free with purchase from Celestial.</li>
             </ul>
           </Reveal>
+        </div>
+      </section>
+
+      <section className="sec">
+        <div className="wrap">
+          <Reveal><h2 className="h-lg" style={{ textAlign: "center", marginBottom: 56 }}>Questions, answered</h2></Reveal>
+          <div className="faq">
+            {faqs.map((f, i) => (
+              <Reveal key={f.q} delay={i * 0.04}>
+                <details className="faq-item" name="how-to-choose-a-chandelier-shop-faq">
+                  <summary>{f.q}</summary>
+                  <p className="faq-a">{f.a}</p>
+                </details>
+              </Reveal>
+            ))}
+          </div>
         </div>
       </section>
 
@@ -198,14 +218,14 @@ export default function ChooseAShopGuide() {
           <Reveal><h2 className="h-lg">Ask us the same questions.</h2></Reveal>
           <Reveal delay={0.06}>
             <p className="lede" style={{ margin: "16px auto 0" }}>
-              A free consultation is the fastest way to see how we answer
-              them, with your actual room and ceiling in front of us.
+              Bring your room and ceiling questions, and we will walk through how we answer them. Design is free with purchase from Celestial.
             </p>
           </Reveal>
           <Reveal delay={0.12}>
             <div className="cta-ctas" style={{ marginTop: 30 }}>
               <MagneticButton href="/consultation" variant="gold">Book a Consultation <span className="arr">→</span></MagneticButton>
               <MagneticButton href="/stores" variant="ghost">Visit a Store</MagneticButton>
+              <MagneticButton href={CELESTIAL} variant="ghost" external>See the range <span className="arr">→</span></MagneticButton>
             </div>
           </Reveal>
         </div>
