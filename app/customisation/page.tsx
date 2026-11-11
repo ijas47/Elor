@@ -9,10 +9,12 @@ import { Reveal, Stagger, StaggerItem } from "@/components/motion/Reveal";
 import { MagneticButton } from "@/components/motion/MagneticButton";
 import { Icon } from "@/components/ui/Icon";
 
+const CELESTIAL = "https://www.celestiallights.in";
+
 export const metadata: Metadata = {
   title: "Custom Chandeliers Made to Your Design",
   description:
-    "Send a photo, render or sketch. We design, fabricate and install a chandelier to match, in crystal, glass, metal or acrylic, with delivery across India.",
+    "Send a photo, render or sketch. Elor designs and makes the custom piece. Ready lights are at Celestial. Design is free with purchase from Celestial.",
   alternates: { canonical: "/customisation" },
 };
 
@@ -25,6 +27,7 @@ const faqs = [
   { q: "What about budget?", a: "We quote firm before any commitment. You will know the fixture cost up front. We install custom lights and give installation support for everything else. There are no surprises after the piece is built." },
   { q: "Do you install the lights?", a: "We install custom lights and give installation support for everything else." },
   { q: "Is a custom piece serviceable later?", a: "Yes. We retain drawings and component lists, and custom pieces carry warranty up to 5 years, so a bespoke fixture stays serviceable for the long run." },
+  { q: "Is design free?", a: "Design is free with purchase from Celestial. Ready lights are bought from Celestial. Custom pieces are designed and made by Elor." },
 ];
 
 const briefTypes = [
@@ -49,7 +52,7 @@ const serviceSchema = {
   provider: { "@type": "Organization", name: site.name, url: site.domain },
   areaServed: "IN",
   description:
-    "Custom chandeliers and statement lighting built from any reference photo, render or sketch: measured, designed, fabricated by hand and installed by us, with up to 5-year warranty.",
+    "Send a photo, render or sketch. Elor designs and makes the custom piece. Ready lights are at Celestial. Design is free with purchase from Celestial.",
   url: `${site.domain}/customisation`,
 };
 
@@ -112,15 +115,16 @@ export default function Customisation() {
               </Reveal>
               <Reveal delay={0.12}>
                 <p className="lede" style={{ marginTop: 22 }}>
-                  Any reference is a complete brief, no drawings, dimensions or
-                  lighting vocabulary required. If you can show it to us, we can
-                  make it, sized to your ceiling and finished to match your room.
+                  Send a photo, a render or a sketch. That is a complete brief; you do not need drawings. Elor designs and makes the custom piece, sized to your ceiling. Ready fittings are bought from{" "}
+                  <a href={CELESTIAL} target="_blank" rel="noopener noreferrer">Celestial Lights</a>
+                  . Design is free with purchase from Celestial.
                 </p>
               </Reveal>
               <Reveal delay={0.18}>
                 <div className="cta-ctas" style={{ justifyContent: "flex-start", marginTop: 30 }}>
                   <MagneticButton href="#brief" variant="gold">Send a Reference <span className="arr">→</span></MagneticButton>
                   <MagneticButton href={elorContact.whatsappHref} variant="ghost" external>WhatsApp a Photo</MagneticButton>
+                  <MagneticButton href="/consultation" variant="ghost">Book a Consultation</MagneticButton>
                 </div>
               </Reveal>
             </div>
@@ -169,9 +173,60 @@ export default function Customisation() {
           <p className="fine" style={{ textAlign: "center", marginTop: 36 }}>
             The piece is one line on the plan. Read{" "}
             <a href="/guides/how-a-lighting-plan-is-built">how a lighting plan is built</a>
-            {" "}and{" "}
-            <a href="/guides/colour-of-light">what Kelvin, CRI and beam angle change</a>.
+            {" "}and what{" "}
+            <a href="/guides/colour-of-light">Kelvin, CRI and beam angle</a>
+            {" "}change. Questions to ask before you choose a piece are in{" "}
+            <a href="/guides/how-to-choose-a-custom-chandelier">how to choose a custom chandelier</a>
+            . Architects can start on{" "}
+            <a href="/for/architects-and-designers">the trade page</a>.
           </p>
+        </div>
+      </section>
+
+      <section className="sec">
+        <div className="wrap-tight">
+          <Reveal><h2 className="h-lg">What we make</h2></Reveal>
+          <Reveal delay={0.06}>
+            <p className="lede" style={{ marginTop: 16 }}>
+              Chandeliers, cascades, cluster pendants and statement ceiling pieces. If it hangs and it glows, it is in scope. We work in crystal, glass, metal, acrylic and LED, at any drop and diameter.
+            </p>
+          </Reveal>
+        </div>
+      </section>
+
+      <section className="sec">
+        <div className="wrap-tight">
+          <Reveal><h2 className="h-lg">Ready lights, and custom pieces</h2></Reveal>
+          <Reveal delay={0.06}>
+            <p className="lede" style={{ marginTop: 16 }}>
+              If a ready piece already fits the room, buy it from{" "}
+              <a href={CELESTIAL} target="_blank" rel="noopener noreferrer">Celestial Lights</a>
+              . If it has to be made for your ceiling, Elor designs and builds it here. Design is free with purchase from Celestial.
+            </p>
+          </Reveal>
+          <Reveal delay={0.12}>
+            <div className="cta-ctas" style={{ justifyContent: "flex-start", marginTop: 30 }}>
+              <MagneticButton href={CELESTIAL} variant="ghost" external>
+                See the range <span className="arr">→</span>
+              </MagneticButton>
+              <MagneticButton href="/guides/chandelier-pricing-guide" variant="ghost">
+                What a custom piece costs
+              </MagneticButton>
+            </div>
+          </Reveal>
+        </div>
+      </section>
+
+      <section className="sec">
+        <div className="wrap-tight">
+          <Reveal><h2 className="h-lg">Free design with purchase from Celestial</h2></Reveal>
+          <Reveal delay={0.06}>
+            <p className="lede" style={{ marginTop: 16 }}>
+              Elor is the design and custom-fabrication studio.{" "}
+              <a href={CELESTIAL} target="_blank" rel="noopener noreferrer">Celestial Lights</a>
+              {" "}is the shop for ready fittings. Design is free with purchase from Celestial. That does not mean every design job is free on its own.
+            </p>
+          </Reveal>
         </div>
       </section>
 
@@ -223,7 +278,7 @@ export default function Customisation() {
       <section className="cta-band">
         <div className="wrap-tight">
           <Reveal delay={0.06}><h2 className="h-lg">The light you pictured<br /><span className="serif-i">is buildable.</span></h2></Reveal>
-          <Reveal delay={0.12}><p className="lede" style={{ textAlign: "center" }}>Send the reference. We&rsquo;ll tell you what it takes to hang it in your home.</p></Reveal>
+          <Reveal delay={0.12}><p className="lede" style={{ textAlign: "center" }}>Send the reference. We will tell you what it takes to hang it in your home. Design is free with purchase from Celestial.</p></Reveal>
           <Reveal delay={0.16}>
             <div className="cta-ctas">
               <MagneticButton href={elorContact.whatsappHref} variant="gold" external>Send a Reference <span className="arr">→</span></MagneticButton>
