@@ -49,7 +49,7 @@ const entries: GuideEntry[] = [
     tag: "Buying Guide",
     image: "/photos/living-room.jpg",
     imageAlt: "A living room at night with lit display shelves, a wood coffee table, and warm seating",
-    modified: "2026-10-12",
+    modified: "2026-11-11",
     related: ["chandelier-with-ceiling-fan", "how-to-choose-a-custom-chandelier", "home-lighting-design"],
   },
   {
