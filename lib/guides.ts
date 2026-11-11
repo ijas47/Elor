@@ -129,7 +129,8 @@ const entries: GuideEntry[] = [
     dek: "What actually changes between a living room, a stairwell and a lobby, and six questions to answer before you choose anything.",
     tag: "Buying Guide",
     image: "/photos/crystal-low.jpg",
-    modified: "2026-08-19",
+    modified: "2026-11-11",
+    related: ["chandelier-for-living-room", "staircase-lighting-design", "chandelier-size-calculator"],
   },
   {
     slug: "how-a-lighting-plan-is-built",
