@@ -158,8 +158,8 @@ const entries: GuideEntry[] = [
     dek: "Put in the room, get back a diameter and a drop, plus the two checks Indian rooms actually need.",
     tag: "Technical",
     image: "/collections/staircase-cascade.jpg",
-    modified: "2026-08-20",
-    related: ["chandelier-with-ceiling-fan", "staircase-lighting-design", "bedroom-lighting-design"],
+    modified: "2026-11-11",
+    related: ["chandelier-with-ceiling-fan", "false-ceiling-chandelier-weight", "staircase-lighting-design", "chandelier-for-living-room"],
   },
   {
     slug: "chandelier-with-ceiling-fan",
