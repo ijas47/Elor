@@ -211,8 +211,8 @@ const entries: GuideEntry[] = [
     dek: "Ready-collection price bands, what drives bespoke pricing, and how to budget before you call anyone.",
     tag: "Pricing",
     image: "/lifestyle/lobby-canopy.jpg",
-    modified: "2026-08-19",
-    related: ["how-to-choose-a-custom-chandelier", "brass-chandelier", "home-lighting-design"],
+    modified: "2026-11-11",
+    related: ["how-to-choose-a-custom-chandelier", "crystal-vs-glass-chandelier", "brass-chandelier", "home-lighting-design"],
   },
 ];
 

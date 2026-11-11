@@ -1,4 +1,4 @@
-import { site, stores } from "@/lib/site";
+import { site } from "@/lib/site";
 import { elorContact } from "@/lib/brands";
 
 /**
@@ -16,35 +16,37 @@ export const dynamic = "force-static";
 export async function GET() {
   const body = `# Pricing: ${site.name}
 
-Last updated: 20 August 2026
+Last updated: 11 November 2026
 Currency: INR (₹). All prices include GST as applicable.
 
 ${site.name} is the lighting consulting and custom fabrication arm of
 Celestial Lights. Ready-collection pieces are sold at fixed prices; bespoke
-fabrication is quoted per design after a free consultation.
+fabrication is quoted per design. The first session is free. Design is
+free with purchase from Celestial.
 
 ## Ready collection: fixed price bands
 
 ### Accent & wall pieces
-- Price: ₹3,000 – ₹15,000
+- Price: ₹3,000 to ₹15,000
 - Includes: reading lights, wall sconces, smaller accent fixtures
 - Materials: glass, brass, metal
 
 ### Statement chandeliers
-- Price: ₹20,000 – ₹50,000
+- Price: ₹20,000 to ₹50,000
 - Includes: mid-scale dining and living-room chandeliers
 - Materials: crystal, glass, mixed metal
 - Note: the size most homes actually need
 
 ### Large & duplex statement pieces
-- Price: ₹45,000 – ₹70,000+
+- Price: ₹45,000 to ₹70,000+
 - Includes: double-height cascades, grand centrepieces
 - For: stairwells, lobbies, duplex ceilings
 
 ## Bespoke fabrication
 
 - Price: quoted per design, with no fixed multiplier over ready pieces
-- Design consultation, design direction and firm quote: free
+- The first session is free
+- Design: free with purchase from Celestial
 - Payment: only after you approve the design
 - Range: a custom piece can cost about the same as a large ready piece, or
   considerably more, depending on material and fabrication complexity
@@ -56,7 +58,8 @@ We install custom lights and give installation support for everything else.
 
 ## Services
 
-- Design consultation: free (in store, at your site, or over video)
+- The first session is free (at your site, in Kannur, Calicut or Kochi, or on video)
+- Design: free with purchase from Celestial
 - We install custom lights and give installation support for everything else.
 - Delivery: pan-India
 - Warranty: up to 5 years
@@ -71,8 +74,11 @@ We install custom lights and give installation support for everything else.
 
 ## Where to buy
 
-${stores.map((s) => `- ${s.brand}, ${s.city}: ${s.address}`).join("\n")}
-- Pan-India delivery and remote video consultation from any store.
+- Celestial Lights, Kannur: Philips Building, 670005
+- Elor Lighting, Kochi: 63/500, 1st Floor, Chalakuzhy, Gandhinagar Road, near the Fire and Rescue Station, Gandhi Nagar, Kadavanthra, Kochi, Kerala 682020
+- Celestial Lights, Kozhikode: Kozhikode, Kerala
+- Shop: https://www.celestiallights.in
+- Pan-India delivery from any store.
 
 ## Contact
 
