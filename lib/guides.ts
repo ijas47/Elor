@@ -99,7 +99,8 @@ const entries: GuideEntry[] = [
     tag: "Technical",
     image: "/collections/staircase-cascade.jpg",
     imageAlt: "A red crystal cascade falling beside a dark spiral staircase",
-    modified: "2026-10-12",
+    modified: "2026-11-11",
+    related: ["how-to-clean-a-crystal-chandelier", "ip-rating-for-outdoor-lights", "ceiling-and-lighting-design"],
   },
   {
     slug: "wooden-chandelier",
