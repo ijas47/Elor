@@ -136,7 +136,7 @@ const entries: GuideEntry[] = [
     dek: "What gets light, in what order, and why the ceiling is the last thing drawn. The method behind an Elor plan.",
     tag: "Technical",
     image: "/photos/living-room.jpg",
-    modified: "2026-09-23",
+    modified: "2026-11-11",
     related: ["home-lighting-design", "kitchen-lighting-design", "bedroom-lighting-design"],
   },
   {
