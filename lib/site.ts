@@ -92,14 +92,14 @@ export const stores = [
     brandId: "celestial",
     kind: "Store and experience centre",
     street:
-      "Ground Floor, P O Chovva, Kannothumchal, Elayavoor",
+      "Philips Building",
     locality: "Kannur",
     region: "Kerala",
-    postalCode: "670006",
+    postalCode: "670005",
     address:
-      "Ground Floor, P O Chovva, Kannothumchal, Kannur, Elayavoor, Kerala 670006",
+      "Philips Building, Kannur, Kerala 670005",
     hours: "Mon-Sat · 9:30 AM to 8:30 PM",
-    maps: "https://maps.google.com/?q=Celestial+Lights+Chovva+Kannothumchal+Kannur+Kerala+670006",
+    maps: "https://maps.google.com/?q=Celestial+Lights+Philips+Building+Kannur+Kerala+670005",
     geo: { lat: 11.8739191, lng: 75.3881457 },
   }),
   store({
