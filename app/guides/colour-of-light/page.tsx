@@ -12,6 +12,7 @@ const META_TITLE = "Kelvin, CRI and Beam Angle";
 const DESC =
   "2700K for living rooms, 4000K where you work, CRI 90 where colour matters, and a beam that fits the wall. How to specify light for a Kerala home.";
 const PATH = "/guides/colour-of-light";
+const CELESTIAL = "https://www.celestiallights.in";
 const { updated: UPDATED, modified: MODIFIED } = guideDates(PATH);
 
 export const metadata: Metadata = {
@@ -318,6 +319,13 @@ export default function ColourOfLightGuide() {
           <Reveal><h2 className="h-lg">Bring the sample. We&rsquo;ll put it under the light.</h2></Reveal>
           <Reveal delay={0.06}>
             <p className="lede" style={{ margin: "16px auto 0" }}>
+              Ready fittings, chosen by the colour of light you specify, are at{" "}
+              <a href={CELESTIAL} target="_blank" rel="noopener noreferrer">Celestial Lights</a>
+              . Design is free with purchase from Celestial.
+            </p>
+          </Reveal>
+          <Reveal delay={0.1}>
+            <p className="lede" style={{ margin: "16px auto 0" }}>
               Wood, fabric, or a photo of the room is enough. The Kannur,
               Kochi, and Kozhikode centres have the range lit, so the Kelvin
               is something you see rather than take on trust.
@@ -327,6 +335,7 @@ export default function ColourOfLightGuide() {
             <div className="cta-ctas" style={{ marginTop: 30 }}>
               <MagneticButton href="/consultation" variant="gold">Book a Consultation <span className="arr">→</span></MagneticButton>
               <MagneticButton href="/stores" variant="ghost">Visit a store</MagneticButton>
+              <MagneticButton href={CELESTIAL} variant="ghost" external>See the range <span className="arr">→</span></MagneticButton>
             </div>
           </Reveal>
         </div>

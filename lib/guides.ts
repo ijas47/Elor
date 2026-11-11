@@ -154,7 +154,7 @@ const entries: GuideEntry[] = [
     dek: "The three numbers on a specification that decide whether a room feels like a home or a clinic, and what to ask for in Kerala.",
     tag: "Technical",
     image: "/lifestyle/lobby-canopy.jpg",
-    modified: "2026-09-23",
+    modified: "2026-11-11",
     related: ["kitchen-lighting-design", "bedroom-lighting-design", "home-lighting-design"],
   },
   {
