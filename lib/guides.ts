@@ -70,7 +70,8 @@ const entries: GuideEntry[] = [
     tag: "Technical",
     image: "/spaces/outdoor.jpg",
     imageAlt: "A building facade at night with its terraces outlined in warm light",
-    modified: "2026-10-12",
+    modified: "2026-11-11",
+    related: ["how-to-clean-a-crystal-chandelier", "ip-rating-for-outdoor-lights", "ceiling-and-lighting-design"],
   },
   {
     slug: "staircase-lighting-design",
