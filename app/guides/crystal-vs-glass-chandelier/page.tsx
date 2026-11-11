@@ -1,5 +1,6 @@
 import Link from "next/link";
 import type { Metadata } from "next";
+import type { ReactNode } from "react";
 import { site } from "@/lib/site";
 import { guideDates } from "@/lib/guides";
 import { breadcrumbSchema } from "@/lib/schema";
@@ -11,8 +12,9 @@ import { RelatedGuides } from "@/components/ui/RelatedGuides";
 const TITLE = "Crystal vs Glass vs Acrylic Chandeliers: Which to Choose";
 const META_TITLE = "Crystal vs Glass vs Acrylic Chandeliers";
 const DESC =
-  "How crystal, glass, acrylic and metal chandeliers differ in light, weight, cleaning and cost, and which suits an Indian home, humid coast or lobby.";
+  "How crystal, glass, acrylic and metal chandeliers differ in light, weight, cleaning and cost, and which suits an Indian home, a humid coast or a lobby.";
 const PATH = "/guides/crystal-vs-glass-chandelier";
+const CELESTIAL = "https://www.celestiallights.in";
 const { updated: UPDATED, modified: MODIFIED } = guideDates(PATH);
 
 export const metadata: Metadata = {
@@ -21,49 +23,66 @@ export const metadata: Metadata = {
   alternates: { canonical: PATH },
 };
 
-const materials = [
+const materials: { h: string; p: ReactNode }[] = [
   {
     h: "Lead crystal: the reference standard",
-    p: "Crystal contains lead oxide (or a modern barium/zinc equivalent), which raises the refractive index and gives you the split, prismatic sparkle nothing else reproduces. It is the heaviest option, the most expensive, and the one that rewards a room where it will actually be seen up close and lit properly. In a room with little natural light and only flat downlighting, most of what you paid for never shows.",
+    p: "Crystal contains lead oxide (or a modern barium or zinc equivalent). That raises how strongly it bends light, which is what gives you the split, sparkling look nothing else reproduces. It is the heaviest option, the most expensive, and the one that rewards a room where it will actually be seen up close and lit properly. In a room with little natural light and only flat downlighting, most of what you paid for never shows.",
   },
   {
     h: "Hand-blown glass: character over sparkle",
-    p: "Glass refracts less than crystal, so it glows rather than sparkles. What it offers instead is form: colour, organic shapes and visible hand-work that crystal's faceted geometry cannot do. Lighter than crystal, more forgiving to clean, and it reads as contemporary where crystal reads as formal.",
+    p: "Glass bends light less than crystal, so it glows rather than sparkles. What it offers instead is form: colour, organic shapes and visible hand-work that crystal's cut geometry cannot do. It is lighter than crystal, easier to clean, and it reads as contemporary where crystal reads as formal.",
   },
   {
     h: "Acrylic: light and shatter-safe",
-    p: "A fraction of the weight and cost, and it does not shatter. Genuinely the right answer for a child's room, a high ceiling that is hard to service, a rental, or a false ceiling that cannot take a slab anchor. It will not fool anyone standing under it, and it yellows over years under strong UV, so keep it away from a west-facing window.",
+    p: "A fraction of the weight and cost, and it does not shatter. It is genuinely the right answer for a child's room, a high ceiling that is hard to service, a rental, or a false ceiling that cannot take a slab anchor. It will not fool anyone standing under it, and it yellows over years under strong UV, so keep it away from a west-facing window.",
   },
   {
     h: "Metal and mixed media",
-    p: "Brass, stainless, powder-coated steel and blackened iron, often with LED integrated rather than lamped. The lightest visual language of the four and the most durable. Where crystal is about the light it throws, metal is about the shape it draws in the air, which makes it the usual choice for a modern interior.",
+    p: (
+      <>
+        Brass, stainless, powder-coated steel and blackened iron, often with LED built in rather than a separate lamp. This is the lightest look of the four and the most durable. Where crystal is about the light it throws, metal is about the shape it draws in the air, which makes it the usual choice for a modern interior. Near the coast, the finish matters. That is covered in the{" "}
+        <Link href="/guides/brass-chandelier">brass chandelier guide</Link> and the{" "}
+        <Link href="/guides/coastal-lighting-kerala">coastal lighting guide</Link>.
+      </>
+    ),
   },
 ];
 
-const faqs = [
+const faqs: { q: string; a: ReactNode; schema: string }[] = [
   {
     q: "What is the difference between a crystal and a glass chandelier?",
-    a: "Crystal contains lead oxide or a barium/zinc equivalent that raises its refractive index, so it splits light into visible prismatic sparkle. Ordinary glass refracts far less and glows softly instead. Crystal is heavier and costs more; glass offers colour, organic shapes and visible hand-work that faceted crystal cannot.",
+    a: "Crystal contains lead oxide or a barium or zinc equivalent that makes it bend light more, so it splits light into visible sparkle. Ordinary glass bends light far less and glows softly instead. Crystal is heavier and costs more. Glass offers colour, organic shapes and visible hand-work that cut crystal cannot.",
+    schema: "Crystal contains lead oxide or a barium or zinc equivalent that makes it bend light more, so it splits light into visible sparkle. Ordinary glass bends light far less and glows softly instead. Crystal is heavier and costs more. Glass offers colour, organic shapes and visible hand-work that cut crystal cannot.",
   },
   {
     q: "Which chandelier material is best for a humid or coastal Kerala home?",
     a: "Crystal, glass, stainless steel and properly powder-coated metal. Avoid untreated brass, iron and mild steel within a few kilometres of the coast. Salt-laden air corrodes them within a couple of years. Sealed fittings and stainless fixings matter as much as the visible material.",
+    schema: "Crystal, glass, stainless steel and properly powder-coated metal. Avoid untreated brass, iron and mild steel within a few kilometres of the coast. Salt-laden air corrodes them within a couple of years. Sealed fittings and stainless fixings matter as much as the visible material.",
   },
   {
     q: "Is acrylic a reasonable substitute for crystal?",
     a: "For weight, safety and budget, yes. For appearance, only at a distance. Acrylic is the sensible choice for a child's room, a hard-to-service height, or a false ceiling that cannot take a heavy anchor. It yellows over years under strong direct UV, so it is a poor choice beside a west-facing window.",
+    schema: "For weight, safety and budget, yes. For appearance, only at a distance. Acrylic is the sensible choice for a child's room, a hard-to-service height, or a false ceiling that cannot take a heavy anchor. It yellows over years under strong direct UV, so it is a poor choice beside a west-facing window.",
   },
   {
     q: "Which material is easiest to clean?",
     a: "Metal and acrylic wipe down in place. Glass is straightforward. Crystal is the most demanding, because every facet shows dust and multi-tier pieces often need drops removed to clean properly. In a room with a ceiling fan running most of the year, plan on cleaning two or three times a year rather than annually.",
+    schema: "Metal and acrylic wipe down in place. Glass is straightforward. Crystal is the most demanding, because every facet shows dust and multi-tier pieces often need drops removed to clean properly. In a room with a ceiling fan running most of the year, plan on cleaning two or three times a year rather than annually.",
   },
   {
     q: "Does crystal actually give more light than glass?",
-    a: "Crystal does not add light. It changes how the light is spread. The same lamp behind crystal throws sharp points and refracted patterns across walls and ceiling; behind glass it produces a softer, more even wash. Choose crystal for drama and glass for ambience. The lumens are set by the lamp, not the material.",
+    a: "Crystal does not add light. It changes how the light is spread. The same lamp behind crystal throws sharp points and patterns across walls and ceiling. Behind glass it produces a softer, more even wash. Choose crystal for drama and glass for ambience. The lumens are set by the lamp, not the material.",
+    schema: "Crystal does not add light. It changes how the light is spread. The same lamp behind crystal throws sharp points and patterns across walls and ceiling. Behind glass it produces a softer, more even wash. Choose crystal for drama and glass for ambience. The lumens are set by the lamp, not the material.",
   },
   {
     q: "What do the different materials cost?",
-    a: "Across our ready collection, accent and wall pieces run ₹3,000 to ₹15,000, mid-scale statement chandeliers ₹20,000 to ₹50,000, and large duplex pieces ₹45,000 to ₹70,000 and up. Within any given size, acrylic and metal sit at the lower end, glass in the middle, and crystal at the top. Bespoke fabrication is quoted per design.",
+    a: (
+      <>
+        At the same size, acrylic and metal sit at the lower end, glass in the middle, and crystal at the top. Current ready-collection bands, and how custom work is priced, are in the{" "}
+        <Link href="/guides/chandelier-pricing-guide">pricing guide</Link>. Custom fabrication is quoted per design.
+      </>
+    ),
+    schema: "At the same size, acrylic and metal sit at the lower end, glass in the middle, and crystal at the top. Current ready-collection bands, and how custom work is priced, are in the pricing guide. Custom fabrication is quoted per design.",
   },
 ];
 
@@ -90,7 +109,7 @@ const faqSchema = {
   mainEntity: faqs.map((f) => ({
     "@type": "Question",
     name: f.q,
-    acceptedAnswer: { "@type": "Answer", text: f.a },
+    acceptedAnswer: { "@type": "Answer", text: f.schema },
   })),
 };
 
@@ -122,11 +141,20 @@ export default function MaterialsComparisonGuide() {
           </Reveal>
           <Reveal delay={0.12}>
             <p className="lede" style={{ marginTop: 22 }}>
-              The short version: crystal sparkles and costs the most, glass
-              glows and carries more character, acrylic is light and safe and
-              honest about being acrylic, metal draws a shape rather than
-              throwing light. Which is right depends less on budget than on how
-              the room is lit and how close anyone stands to it.
+              Crystal sparkles and costs the most. Glass glows and shows more
+              of the maker&rsquo;s hand. Acrylic is light, shatter-safe, and
+              honest about being acrylic. Metal draws a shape rather than
+              throwing light. The right choice depends on how the room is
+              lit, how close anyone stands, and whether the ceiling can take
+              the weight.
+            </p>
+          </Reveal>
+          <Reveal delay={0.16}>
+            <p className="lede" style={{ marginTop: 16 }}>
+              Elor Lighting designs custom pieces and lighting plans. Ready
+              fittings in these materials are sold by our sister shop,{" "}
+              <a href={CELESTIAL} target="_blank" rel="noopener noreferrer">Celestial Lights</a>.
+              {" "}Design is free with purchase from Celestial.
             </p>
           </Reveal>
         </div>
@@ -134,7 +162,7 @@ export default function MaterialsComparisonGuide() {
 
       <section className="sec" style={{ paddingTop: 0 }}>
         <div className="wrap-tight">
-          <Reveal><h2 className="h-lg">Side by side</h2></Reveal>
+          <Reveal><h2 className="h-lg">How do crystal, glass, acrylic and metal compare?</h2></Reveal>
           <Reveal delay={0.12}>
             <div className="spec-wrap">
               <table className="spec-table">
@@ -155,7 +183,7 @@ export default function MaterialsComparisonGuide() {
                   <tr><td>Coastal humidity</td><td>Good</td><td>Good</td><td>Good</td><td className="warn">Depends on finish</td></tr>
                   <tr><td>Breakage risk</td><td>High</td><td>High</td><td>None</td><td>None</td></tr>
                   <tr><td>Reads as</td><td>Formal, classical</td><td>Crafted, contemporary</td><td>Practical</td><td>Modern, architectural</td></tr>
-                  <tr><td>Best for</td><td>Foyers, formal dining</td><td>Living, dining, stairwells</td><td>Kids&rsquo; rooms, high ceilings</td><td>Modern interiors, commercial</td></tr>
+                  <tr><td>Best for</td><td>Foyers, formal dining</td><td>Living, dining, stairwells</td><td>Children&rsquo;s rooms, high ceilings</td><td>Modern interiors, commercial</td></tr>
                 </tbody>
               </table>
             </div>
@@ -165,7 +193,7 @@ export default function MaterialsComparisonGuide() {
               Weight and cost are relative within a given size. A small
               crystal piece weighs less than a large metal one. See the{" "}
               <a href="/guides/chandelier-pricing-guide">pricing guide</a> for
-              real bands, and the{" "}
+              current price bands, and the{" "}
               <a href="/guides/false-ceiling-chandelier-weight">weight guide</a>{" "}
               for what your ceiling can carry.
             </p>
@@ -175,7 +203,7 @@ export default function MaterialsComparisonGuide() {
 
       <section className="sec glow-top">
         <div className="wrap-tight">
-          <Reveal><h2 className="h-lg">What each one is actually for</h2></Reveal>
+          <Reveal><h2 className="h-lg">What is each material actually for?</h2></Reveal>
         </div>
         <div className="wrap">
           <Stagger className="register">
@@ -191,14 +219,14 @@ export default function MaterialsComparisonGuide() {
 
       <section className="sec">
         <div className="wrap-tight">
-          <Reveal><h2 className="h-lg">How to decide in one pass</h2></Reveal>
+          <Reveal><h2 className="h-lg">How do you decide in one pass?</h2></Reveal>
           <Reveal delay={0.12}>
             <ul className="check-list" style={{ marginTop: 28 }}>
               <li><span className="tick">✓</span>Will anyone stand within a few metres of it? If not, crystal&rsquo;s detail is largely wasted, and scale and silhouette matter more than material.</li>
-              <li><span className="tick">✓</span>Is the room dimmable, or lit flat? Crystal needs a point source and some contrast to sparkle. Under uniform daylight-temperature downlights it looks inert.</li>
+              <li><span className="tick">✓</span>Is the room dimmable, or lit flat? Crystal needs a point source and some contrast to sparkle. Under even, daylight-colour downlights it looks inert.</li>
               <li><span className="tick">✓</span>Within a few kilometres of the coast? Rule out untreated brass, iron and mild steel before considering anything else.</li>
               <li><span className="tick">✓</span>Can the ceiling take the weight, and can anyone reach it to clean it? Both questions have killed more crystal specifications than budget has. The routine is in <Link href="/guides/how-to-clean-a-crystal-chandelier" style={{ color: "var(--gold)" }}>how to clean a crystal chandelier</Link>.</li>
-              <li><span className="tick">✓</span>Formal room or modern one? Crystal and glass carry different registers, and mixing the register with the interior is the mistake that no amount of quality fixes.</li>
+              <li><span className="tick">✓</span>Formal room or modern one? Crystal and glass carry different moods, and mixing the mood with the interior is the mistake that no amount of quality fixes.</li>
             </ul>
           </Reveal>
         </div>
@@ -228,8 +256,10 @@ export default function MaterialsComparisonGuide() {
           <Reveal delay={0.06}>
             <p className="lede" style={{ margin: "16px auto 0" }}>
               Crystal against glass is a five-second decision standing under
-              both, and an impossible one from photographs. All three stores
-              carry the full range.
+              both, and an almost impossible one from photographs. All three
+              stores carry the full range. You can also browse ready pieces at{" "}
+              <a href={CELESTIAL} target="_blank" rel="noopener noreferrer">Celestial Lights</a>.
+              {" "}Design is free with purchase from Celestial.
             </p>
           </Reveal>
           <Reveal delay={0.12}>
