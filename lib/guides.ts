@@ -89,7 +89,8 @@ const entries: GuideEntry[] = [
     tag: "Technical",
     image: "/photos/bedroom-dome.jpg",
     imageAlt: "A bedroom with a black ribbed dome pendant lighting the desk beside the bed",
-    modified: "2026-10-12",
+    modified: "2026-11-11",
+    related: ["how-to-clean-a-crystal-chandelier", "ip-rating-for-outdoor-lights", "ceiling-and-lighting-design"],
   },
   {
     slug: "kitchen-lighting-design",
