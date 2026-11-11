@@ -1,4 +1,6 @@
+import Link from "next/link";
 import type { Metadata } from "next";
+import type { ReactNode } from "react";
 import { site } from "@/lib/site";
 import { elorContact } from "@/lib/brands";
 import { guideDates } from "@/lib/guides";
@@ -9,51 +11,81 @@ import { MagneticButton } from "@/components/motion/MagneticButton";
 import { RelatedGuides } from "@/components/ui/RelatedGuides";
 import { Icon, type IconName } from "@/components/ui/Icon";
 
-export const metadata: Metadata = {
-  title: "What a Custom Chandelier Costs in India",
-  description:
-    "What a chandelier actually costs in India: real ready-collection price bands by size and material, and how bespoke fabrication pricing is worked out.",
-  alternates: { canonical: "/guides/chandelier-pricing-guide" },
-};
+const TITLE = "What Does a Custom Chandelier Cost in India?";
+const META_TITLE = "What a Custom Chandelier Costs in India";
+const DESC =
+  "Ready chandeliers in India cost ₹3,000 to ₹70,000+. Custom pieces get a firm price after a measure. Design is free with purchase from Celestial.";
+const PATH = "/guides/chandelier-pricing-guide";
+const CELESTIAL = "https://www.celestiallights.in";
+const { updated: UPDATED, modified: MODIFIED } = guideDates(PATH);
 
-const { updated: UPDATED, modified: MODIFIED } = guideDates("/guides/chandelier-pricing-guide");
+export const metadata: Metadata = {
+  title: META_TITLE,
+  description: DESC,
+  alternates: { canonical: PATH },
+};
 
 const priceBands = [
   {
-    h: "Accent & wall pieces: ₹3,000 to ₹15,000",
-    p: "Reading lights, wall sconces and smaller accent fixtures in glass, brass and metal. The entry point for a considered room.",
+    h: "Accent and wall pieces: ₹3,000 to ₹15,000",
+    p: "Reading lights, wall sconces and smaller accent fittings in glass, brass and metal. A starting point for a considered room.",
   },
   {
     h: "Statement chandeliers: ₹20,000 to ₹50,000",
-    p: "Mid-scale dining and living-room chandeliers in crystal, glass and mixed metal, the size most homes actually need.",
+    p: "Mid-size dining and living-room chandeliers in crystal, glass and mixed metal. This is the size most homes actually need.",
   },
   {
-    h: "Large & duplex statement pieces: ₹45,000 to ₹70,000+",
-    p: "Double-height cascades and grand centrepieces built for stairwells, lobbies and duplex ceilings.",
+    h: "Large and duplex statement pieces: ₹45,000 to ₹70,000+",
+    p: "Double-height cascades and large centrepieces built for stairwells, lobbies and duplex ceilings.",
   },
 ];
 
 const factors: { icon: IconName; h: string; p: string }[] = [
-  { icon: "ruler", h: "Size & drop", p: "A 24-inch flush mount and an 8-foot duplex cascade are different fabrication jobs, not different sizes of the same job. Scale is the single biggest driver." },
-  { icon: "supplier", h: "Material", p: "Crystal, hand-blown glass, brass and marble all price differently, and so does whether a material is stocked or sourced specially for your piece." },
-  { icon: "spark", h: "Fabrication complexity", p: "A single-tier ring costs less to build than a multi-layer cascade with hand-set crystal or custom metalwork. Complexity is time, and time is cost." },
-  { icon: "shield", h: "Installation & site conditions", p: "We install custom lights and give installation support for everything else. For ready fittings, ceiling height, mounting and site access shape the installation support, confirmed at consultation rather than guessed from a photo." },
+  { icon: "ruler", h: "How does size and drop change the price?", p: "A 24-inch flush mount and an 8-foot duplex cascade are different jobs, not different sizes of the same job. Scale is the single biggest driver." },
+  { icon: "supplier", h: "How does material change the price?", p: "Crystal, hand-blown glass, brass and marble all price differently. It also matters whether a material is already in stock or has to be sourced for your piece." },
+  { icon: "spark", h: "How does fabrication complexity change the price?", p: "A single-tier ring costs less to build than a multi-layer cascade with hand-set crystal or custom metalwork. Complexity is time, and time is cost." },
+  { icon: "shield", h: "Do installation and site conditions change the price?", p: "We install custom lights and give installation support for everything else. For ready fittings, ceiling height, mounting and site access shape the installation support. That is confirmed at a consultation, not guessed from a photo." },
 ];
 
-const faqs = [
-  { q: "Is the ready-collection price the final price?", a: "Yes, for ready pieces bought as shown. Delivery is quoted separately based on your location. We install custom lights and give installation support for everything else." },
-  { q: "How much does a custom chandelier typically add over a ready piece?", a: "It depends entirely on the design, there is no fixed multiplier. A custom piece can cost about the same as a large ready piece, or considerably more, depending on material and complexity. You get a firm number before committing, not an estimate." },
-  { q: "Do you charge for the design and quote itself?", a: "No. The consultation, design direction and firm quote are free. You only pay once you approve the design." },
-  { q: "Is installation included in the quote?", a: "We install custom lights and give installation support for everything else., arranged with the quote so you know what is covered before you order." },
-  { q: "Do prices differ between Kannur, Kochi and Kozhikode?", a: "Product pricing is the same across all three stores and pan-India delivery. Installation support for ready pieces can vary with site access and distance from the nearest store. We install custom lights and give installation support for everything else." },
+const faqs: { q: string; a: ReactNode; schema: string }[] = [
+  {
+    q: "Is the ready-collection price the final price?",
+    a: "Yes, for ready pieces bought as shown. Delivery is quoted separately based on your location. We install custom lights and give installation support for everything else.",
+    schema: "Yes, for ready pieces bought as shown. Delivery is quoted separately based on your location. We install custom lights and give installation support for everything else.",
+  },
+  {
+    q: "How much does a custom chandelier typically add over a ready piece?",
+    a: "It depends entirely on the design. There is no fixed multiplier. A custom piece can cost about the same as a large ready piece, or considerably more, depending on material and complexity. You get a firm number before committing, not an estimate.",
+    schema: "It depends entirely on the design. There is no fixed multiplier. A custom piece can cost about the same as a large ready piece, or considerably more, depending on material and complexity. You get a firm number before committing, not an estimate.",
+  },
+  {
+    q: "Do you charge for the design itself?",
+    a: (
+      <>
+        The first session is free. Design is free with purchase from{" "}
+        <a href={CELESTIAL} target="_blank" rel="noopener noreferrer">Celestial Lights</a>.
+        {" "}You get a firm price before you commit, and you only pay once you approve the design.
+      </>
+    ),
+    schema: "The first session is free. Design is free with purchase from Celestial Lights. You get a firm price before you commit, and you only pay once you approve the design.",
+  },
+  {
+    q: "Is installation included in the quote?",
+    a: "We install custom lights and give installation support for everything else, arranged with the quote so you know what is covered before you order.",
+    schema: "We install custom lights and give installation support for everything else, arranged with the quote so you know what is covered before you order.",
+  },
+  {
+    q: "Do prices differ between Kannur, Kochi and Kozhikode?",
+    a: "Product pricing is the same across all three stores and pan-India delivery. Installation support for ready pieces can vary with site access and distance from the nearest store. We install custom lights and give installation support for everything else.",
+    schema: "Product pricing is the same across all three stores and pan-India delivery. Installation support for ready pieces can vary with site access and distance from the nearest store. We install custom lights and give installation support for everything else.",
+  },
 ];
 
 const articleSchema = {
   "@context": "https://schema.org",
   "@type": "Article",
-  headline: "What Does a Custom Chandelier Cost in India?",
-  description:
-    "Real ready-collection price bands by size and material, and how bespoke chandelier fabrication pricing is worked out.",
+  headline: TITLE,
+  description: DESC,
   image: `${site.domain}/lifestyle/lobby-canopy.jpg`,
   author: { "@type": "Organization", name: site.name, url: site.domain },
   publisher: {
@@ -63,7 +95,7 @@ const articleSchema = {
   },
   datePublished: "2026-08-19",
   dateModified: MODIFIED,
-  mainEntityOfPage: `${site.domain}/guides/chandelier-pricing-guide`,
+  mainEntityOfPage: `${site.domain}${PATH}`,
 };
 
 const faqSchema = {
@@ -72,7 +104,7 @@ const faqSchema = {
   mainEntity: faqs.map((f) => ({
     "@type": "Question",
     name: f.q,
-    acceptedAnswer: { "@type": "Answer", text: f.a },
+    acceptedAnswer: { "@type": "Answer", text: f.schema },
   })),
 };
 
@@ -87,7 +119,7 @@ export default function ChandelierPricingGuide() {
           __html: JSON.stringify(
             breadcrumbSchema([
               { name: "Guides", path: "/guides" },
-              { name: "Chandelier Pricing Guide", path: "/guides/chandelier-pricing-guide" },
+              { name: "Chandelier Pricing Guide", path: PATH },
             ])
           ),
         }}
@@ -95,7 +127,7 @@ export default function ChandelierPricingGuide() {
 
       <section className="page-hero">
         <div className="wrap-tight">
-          <Breadcrumbs crumbs={[{ name: "Guides", path: "/guides" }, { name: "Chandelier Pricing Guide", path: "/guides/chandelier-pricing-guide" }]} />
+          <Breadcrumbs crumbs={[{ name: "Guides", path: "/guides" }, { name: "Chandelier Pricing Guide", path: PATH }]} />
           <Reveal as="span"><span className="eyebrow">Pricing Guide · Updated {UPDATED}</span></Reveal>
           <Reveal delay={0.06}>
             <h1 className="h-xl" style={{ marginTop: 18 }}>
@@ -104,10 +136,22 @@ export default function ChandelierPricingGuide() {
           </Reveal>
           <Reveal delay={0.12}>
             <p className="lede" style={{ marginTop: 22 }}>
-              Two different questions get asked here, and they have two
-              different answers: what a ready piece costs, and what a bespoke
-              one costs. This guide covers both, with real numbers, not a
-              &ldquo;starting from&rdquo; figure that never applies to anyone.
+              Ready pieces at Celestial Lights cost ₹3,000 to ₹15,000 for
+              accents, ₹20,000 to ₹50,000 for statement chandeliers, and
+              ₹45,000 to ₹70,000+ for large or duplex pieces. A custom piece
+              has no list price. Elor measures the space and gives a firm
+              price before you commit. Design is free with purchase from
+              Celestial.
+            </p>
+          </Reveal>
+          <Reveal delay={0.16}>
+            <p className="lede" style={{ marginTop: 16 }}>
+              Elor Lighting is the design shop. We plan lighting and make
+              custom fittings. Ready lights are sold by our sister shop,{" "}
+              <a href={CELESTIAL} target="_blank" rel="noopener noreferrer">Celestial Lights</a>.
+              {" "}You can visit Celestial in Kannur and Kozhikode, or the Elor
+              centre in Kochi. We install custom lights and give installation
+              support for everything else.
             </p>
           </Reveal>
         </div>
@@ -115,11 +159,13 @@ export default function ChandelierPricingGuide() {
 
       <section className="sec" style={{ paddingTop: 0 }}>
         <div className="wrap-tight">
-          <Reveal><h2 className="h-lg">Ready-collection pricing</h2></Reveal>
+          <Reveal><h2 className="h-lg">What does a ready chandelier cost?</h2></Reveal>
           <Reveal delay={0.06}>
             <p className="lede" style={{ marginTop: 16 }}>
-              The Celestial Lights collection is priced and published. Three
-              broad bands, by scale:
+              These are the current Celestial Lights ready-collection bands, by
+              scale, across crystal, marble, glass and brass. See the live range
+              at{" "}
+              <a href={CELESTIAL} target="_blank" rel="noopener noreferrer">Celestial Lights</a>.
             </p>
           </Reveal>
         </div>
@@ -133,30 +179,34 @@ export default function ChandelierPricingGuide() {
             ))}
           </Stagger>
           <p className="form-note" style={{ marginTop: 8 }}>
-            Figures reflect the current Celestial Lights ready-collection
-            range across materials including crystal, marble, glass and
-            brass. Ready pieces ship faster than a bespoke commission,
-            because nothing has to be designed or fabricated first.
-            We install custom lights and give installation support for everything else.
+            Ready pieces ship faster than a custom commission, because nothing
+            has to be designed or built first. We install custom lights and
+            give installation support for everything else.
           </p>
           <p className="form-note" style={{ marginTop: 8 }}>
             These bands are also published as a plain-text file at{" "}
-            <a href="/pricing.md">/pricing.md</a>, so AI assistants comparing
-            options can read them without rendering this page.
+            <a href="/pricing.md">/pricing.md</a>, so other tools can read them
+            without loading this page.
           </p>
         </div>
       </section>
 
       <section className="sec glow-top">
         <div className="wrap-tight">
-          <Reveal><h2 className="h-lg">Bespoke pricing works differently</h2></Reveal>
+          <Reveal><h2 className="h-lg">How is a custom chandelier priced?</h2></Reveal>
           <Reveal delay={0.06}>
             <p className="lede" style={{ marginTop: 16 }}>
-              There is no bespoke price list, because no two custom pieces
-              are the same object. Drop, diameter, material and fabrication
-              complexity all move the number. What we do instead: measure
-              your space, design the piece, and give you a firm price before
-              you commit to anything, no surprises after the piece is built.
+              There is no custom price list, because no two pieces are the
+              same. Drop, diameter, material and how hard the piece is to
+              build all move the number. What we do instead is measure your
+              space, design the piece, and give you a firm price before you
+              commit. There are no surprises after it is built.
+            </p>
+          </Reveal>
+          <Reveal delay={0.1}>
+            <p className="lede" style={{ marginTop: 16 }}>
+              Design is free with purchase from{" "}
+              <a href={CELESTIAL} target="_blank" rel="noopener noreferrer">Celestial Lights</a>.
             </p>
           </Reveal>
           <Reveal delay={0.12}>
@@ -172,8 +222,7 @@ export default function ChandelierPricingGuide() {
         <div className="wrap">
           <div className="sec-head">
             <div className="stack-sm">
-              <Reveal as="span"><span className="eyebrow">Four factors</span></Reveal>
-              <Reveal delay={0.06}><h2 className="h-lg">What actually moves<br />the price.</h2></Reveal>
+              <Reveal delay={0.06}><h2 className="h-lg">What actually moves<br />the price?</h2></Reveal>
             </div>
           </div>
           <Stagger className="pillars">
@@ -210,11 +259,15 @@ export default function ChandelierPricingGuide() {
 
       <section className="sec glow-top">
         <div className="wrap-tight" style={{ textAlign: "center" }}>
-          <Reveal><h2 className="h-lg">Get a firm price, not a guess.</h2></Reveal>
+          <Reveal><h2 className="h-lg">Ready to get a firm price?</h2></Reveal>
           <Reveal delay={0.06}>
             <p className="lede" style={{ margin: "16px auto 0" }}>
-              Free consultation, in person at our Kannur, Kochi or Kozhikode
-              store, or pan-India by appointment.
+              The first session is free. Visit Celestial Lights in Kannur
+              (Philips Building, 670005) or Kozhikode, or the Elor centre in
+              Kochi, or <Link href="/consultation">book a consultation</Link>.
+              To buy a ready piece, go to{" "}
+              <a href={CELESTIAL} target="_blank" rel="noopener noreferrer">Celestial Lights</a>.
+              {" "}Design is free with purchase from Celestial.
             </p>
           </Reveal>
           <Reveal delay={0.12}>
