@@ -39,8 +39,8 @@ const entries: GuideEntry[] = [
     tag: "Technical",
     image: "/spaces/outdoor.jpg",
     imageAlt: "A building facade at night with its terraces outlined in warm light",
-    modified: "2026-10-12",
-    related: ["home-lighting-design", "staircase-lighting-design", "brass-chandelier"],
+    modified: "2026-11-11",
+    related: ["home-lighting-design", "staircase-lighting-design", "brass-chandelier", "coastal-lighting-kerala"],
   },
   {
     slug: "chandelier-for-living-room",
