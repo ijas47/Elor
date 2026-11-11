@@ -1,3 +1,4 @@
+import Link from "next/link";
 import type { Metadata } from "next";
 import { site } from "@/lib/site";
 import { guideDates } from "@/lib/guides";
@@ -12,6 +13,7 @@ const META_TITLE = "How a Lighting Plan Is Built";
 const DESC =
   "A lighting plan starts with the furniture and the walls, then the layers, the wall wash, and the scenes. How Elor marks a Kerala ceiling before it closes.";
 const PATH = "/guides/how-a-lighting-plan-is-built";
+const CELESTIAL = "https://www.celestiallights.in";
 const { updated: UPDATED, modified: MODIFIED } = guideDates(PATH);
 
 export const metadata: Metadata = {
@@ -235,6 +237,24 @@ export default function LightingPlanGuide() {
         </div>
       </section>
 
+
+      <section className="sec" style={{ paddingTop: 0 }}>
+        <div className="wrap-tight">
+          <Reveal>
+            <h2 className="h-lg">Who draws the plan, and where do the fittings come from?</h2>
+          </Reveal>
+          <Reveal delay={0.06}>
+            <p className="lede" style={{ marginTop: 16 }}>
+              Elor draws the plan and makes custom pieces. Ready fittings are at{" "}
+              <a href={CELESTIAL} target="_blank" rel="noopener noreferrer">Celestial Lights</a>
+              . Design is free with purchase from Celestial. The Kerala whole-house plan, room by room, is in the{" "}
+              <Link href="/guides/home-lighting-design">home lighting design guide</Link>
+              . This page stays the method and the order of the drawing.
+            </p>
+          </Reveal>
+        </div>
+      </section>
+
       <section className="sec">
         <div className="wrap">
           <Reveal><h2 className="h-lg" style={{ textAlign: "center", marginBottom: 56 }}>Questions, answered</h2></Reveal>
@@ -260,13 +280,14 @@ export default function LightingPlanGuide() {
             <p className="lede" style={{ margin: "16px auto 0" }}>
               A floor plan, the ceiling height, and a photo are enough to
               start. You can see the layers switched separately in Kannur,
-              Kochi, and Kozhikode.
+              Kochi, and Kozhikode. Design is free with purchase from Celestial.
             </p>
           </Reveal>
           <Reveal delay={0.12}>
             <div className="cta-ctas" style={{ marginTop: 30 }}>
               <MagneticButton href="/consultation" variant="gold">Book a Consultation <span className="arr">→</span></MagneticButton>
               <MagneticButton href="/guides/colour-of-light" variant="ghost">Kelvin, CRI, beam</MagneticButton>
+              <MagneticButton href={CELESTIAL} variant="ghost" external>See the range <span className="arr">→</span></MagneticButton>
             </div>
           </Reveal>
         </div>
