@@ -12,7 +12,7 @@ import { RelatedGuides } from "@/components/ui/RelatedGuides";
 const TITLE = "Can a False Ceiling Hold a Chandelier?";
 const META_TITLE = "Can a False Ceiling Hold a Chandelier?";
 const DESC =
-  "A gypsum or POP false ceiling cannot hold a chandelier. See what each ceiling can carry, typical fixture weights, and why the anchor goes in the slab first.";
+  "A false ceiling cannot hold a chandelier. Treat POP as zero load. Gypsum may take a few kilograms at a framing intersection. The anchor goes in the slab.";
 const PATH = "/guides/false-ceiling-chandelier-weight";
 const CELESTIAL = "https://www.celestiallights.in";
 const { updated: UPDATED, modified: MODIFIED } = guideDates(PATH);
@@ -55,7 +55,7 @@ const faqs = [
   },
   {
     q: "Can a POP ceiling hold a chandelier?",
-    a: "Less than gypsum, and it should not be relied on at all. Plaster of Paris is brittle and fails suddenly rather than sagging as a warning. Treat a POP ceiling as a finish, not a structure.",
+    a: "No. Treat a POP ceiling as zero load. It should not be relied on at all. Plaster of Paris is brittle and fails suddenly rather than sagging as a warning. Treat a POP ceiling as a finish, not a structure.",
   },
   {
     q: "How much does a chandelier actually weigh?",
@@ -144,12 +144,13 @@ export default function FalseCeilingGuide() {
           </Reveal>
           <Reveal delay={0.12}>
             <p className="lede" style={{ marginTop: 22 }}>
-              A gypsum or POP false ceiling cannot hold a chandelier. It can
-              carry its own boards and a light fitting of a few kilograms.
-              Every chandelier has to be anchored into the RCC slab above,
-              ideally before the ceiling closes. If the ceiling is already
-              finished, the slab can still be opened at the mounting point and
-              made good.
+              A gypsum or POP false ceiling cannot hold a chandelier. A gypsum
+              ceiling can carry its own boards and a light fitting of a few
+              kilograms, only at a framing intersection. POP should carry
+              nothing. Every chandelier has to be anchored into the RCC slab
+              above, ideally before the ceiling closes. If the ceiling is
+              already finished, the slab can still be opened at the mounting
+              point and made good.
             </p>
           </Reveal>
           <Reveal delay={0.16}>
