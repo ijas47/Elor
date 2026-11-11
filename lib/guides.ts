@@ -184,8 +184,8 @@ const entries: GuideEntry[] = [
     dek: "How the four materials differ in light, weight, cleaning and cost, and which suits a humid coast or a hotel lobby.",
     tag: "Buying Guide",
     image: "/lifestyle/lobby-canopy.jpg",
-    modified: "2026-08-20",
-    related: ["how-to-clean-a-crystal-chandelier", "brass-chandelier", "how-to-choose-a-custom-chandelier"],
+    modified: "2026-11-11",
+    related: ["how-to-clean-a-crystal-chandelier", "brass-chandelier", "how-to-choose-a-custom-chandelier", "chandelier-pricing-guide"],
   },
   {
     slug: "coastal-lighting-kerala",
