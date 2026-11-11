@@ -11,11 +11,6 @@
       "source": "/guides/custom-chandeliers-kochi",
       "destination": "/stores/kochi",
       "statusCode": 301
-    },
-    {
-      "source": "/guides/custom-chandeliers-kozhikode",
-      "destination": "/stores/kozhikode",
-      "statusCode": 301
     }
   ]
 }

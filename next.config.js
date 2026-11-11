@@ -45,9 +45,16 @@ const nextConfig = {
   async headers() {
     return [{ source: "/:path*", headers: securityHeaders }];
   },
-  // City guide redirects live in vercel.json with statusCode 301. Next
-  // permanent: true would serve 308, and defining them in both files
-  // would split the source of truth.
+  // The three city guides moved to /stores/{city} when store pages became the
+  // canonical local entity. Permanent so link equity and any existing index
+  // entries follow.
+  async redirects() {
+    return ["kannur", "kochi", "kozhikode"].map((city) => ({
+      source: `/guides/custom-chandeliers-${city}`,
+      destination: `/stores/${city}`,
+      permanent: true,
+    }));
+  },
 };
 
 module.exports = nextConfig;
