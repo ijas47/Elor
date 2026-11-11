@@ -13,6 +13,7 @@ const META_TITLE = "Coastal & Humid Climate Lighting in Kerala";
 const DESC =
   "Salt air pits untreated brass and iron within two seasons. Which finishes last near the Kerala coast, what IP rating you need, and what fails first.";
 const PATH = "/guides/coastal-lighting-kerala";
+const CELESTIAL = "https://www.celestiallights.in";
 const { updated: UPDATED, modified: MODIFIED } = guideDates(PATH);
 
 export const metadata: Metadata = {
@@ -24,46 +25,46 @@ export const metadata: Metadata = {
 const zones = [
   {
     h: "Within about 500 m of open sea",
-    p: "The harshest band. Salt spray reaches the building directly and is carried inside by ventilation. Untreated brass, mild steel and iron will show pitting within a couple of seasons regardless of how they are finished at the factory. Specify marine-grade stainless, crystal, glass or acrylic, and check every screw and chain link as well as the visible body.",
+    p: "This is the harshest band. Salt spray hits the building and is carried inside by the air. Untreated brass, mild steel and iron will pit within a couple of seasons, no matter how they left the factory. Specify marine-grade stainless, crystal, glass or acrylic, and check every screw and chain link as well as the body you can see.",
   },
   {
     h: "Roughly 500 m to 5 km inland",
-    p: "Salt-laden air still reaches this band on the monsoon wind, but without direct spray. Powder-coated steel over a proper primer holds well, and lacquered brass survives indoors if it is not in the path of a sea-facing window. This covers most of Kochi, Kozhikode city and coastal Kannur.",
+    p: "Salt air still reaches this band on the monsoon wind, but without direct spray. Powder-coated steel over a proper primer holds well, and lacquered brass survives indoors if it is not in the path of a sea-facing window. This covers most of Kochi, Kozhikode city and coastal Kannur.",
   },
   {
     h: "Inland Kerala: humidity without salt",
-    p: "Thrissur, Palakkad, Kottayam and the hill districts trade salt for sustained high humidity and, at elevation, real condensation. Corrosion is slower and far more forgiving of material choice. What matters here instead is sealing and ventilation of the fitting, because moisture that condenses inside a housing has nowhere to go.",
+    p: "Thrissur, Palakkad, Kottayam and the hill districts swap salt for long spells of high humidity and, higher up, real condensation. Corrosion is slower, and material choice is more forgiving. What matters here is sealing and ventilation, because moisture that forms inside a housing has nowhere to go.",
   },
   {
     h: "Bathrooms, balconies and open courtyards, anywhere",
-    p: "Micro-climates that behave like the coast regardless of where the building is. A nalukettu courtyard is open to rain, and a Kerala bathroom stays near saturation for months. These need an IP rating and sealed fittings even in Palakkad.",
+    p: "These small climates behave like the coast, wherever the building is. A nalukettu courtyard is open to rain, and a Kerala bathroom stays very damp for months. These need an IP rating and sealed fittings even in Palakkad.",
   },
 ];
 
 const faqs = [
   {
     q: "Which chandelier materials last near the sea in Kerala?",
-    a: "Crystal, glass, acrylic, marine-grade stainless steel and properly powder-coated aluminium or steel. Avoid untreated brass, iron and mild steel within a few kilometres of open sea. Salt-laden air pits them within about two seasons, starting at fixings and joints rather than on the visible surface.",
+    a: "Crystal, glass, acrylic, marine-grade stainless steel, and properly powder-coated aluminium or steel. Avoid untreated brass, iron and mild steel within a few kilometres of open sea. Salt air pits them in about two seasons, starting at the fixings and joints, not on the surface you see.",
   },
   {
     q: "Does brass work at all in coastal Kerala?",
-    a: "Lacquered brass works indoors, away from sea-facing windows and outside the first 500 m band. Unlacquered brass will patinate quickly, which some people want and most do not. Solid brass corrodes more gracefully than brass plating, which lifts and flakes once the plating is breached.",
+    a: "Lacquered brass works indoors, away from sea-facing windows and outside the first 500 m band. Unlacquered brass will change colour quickly, which some people want and most do not. Solid brass fails more slowly than brass plating, which lifts and flakes once the plating is broken.",
   },
   {
     q: "What IP rating do I need for a Kerala balcony or courtyard?",
-    a: "IP44 as a minimum for a covered balcony, IP65 for anything exposed to driven rain or an open courtyard. A nalukettu courtyard counts as fully exposed. Indoor bathrooms need IP44 near the shower zone because Kerala bathrooms stay near saturation for months of the year.",
+    a: "IP44 at minimum for a covered balcony, IP65 for anything open to driven rain or an open courtyard. A nalukettu courtyard counts as fully exposed. Indoor bathrooms need IP44 near the shower because Kerala bathrooms stay very damp for months of the year.",
   },
   {
     q: "What actually fails first on a coastal fixture?",
-    a: "The fixings, almost always: screws, chain links, suspension wires and the internal fasteners nobody looks at. A fixture can have a perfect marine-grade body and still fail because it was assembled with plated mild-steel screws. Specifying stainless fixings throughout costs very little and doubles practical life.",
+    a: "The fixings, almost always: screws, chain links, suspension wires, and the hidden fasteners. A fitting can have a perfect marine-grade body and still fail if it was put together with plated mild-steel screws. Stainless fixings throughout cost very little and double practical life.",
   },
   {
     q: "How often should coastal fixtures be cleaned?",
-    a: "Two to three times a year, and rinse rather than just dust. Salt deposits are hygroscopic, so they hold moisture against the surface between cleanings. That single habit extends the life of a coastal fixture more than any finish upgrade.",
+    a: "Two to three times a year, and rinse rather than just dust. Salt deposits hold water against the surface between cleanings. That habit extends the life of a coastal fitting more than a finish upgrade.",
   },
   {
     q: "Does the monsoon affect fixtures indoors?",
-    a: "Yes. Sustained humidity through the monsoon drives condensation inside sealed housings and accelerates corrosion at electrical contacts. Fittings that are ventilated or genuinely sealed both work; the failure mode is a housing that is almost sealed and traps moisture with no way out.",
+    a: "Yes. Months of humidity can leave water inside housings and speed up corrosion at electrical contacts. Fittings that are ventilated or truly sealed both work. The failure is a housing that is almost sealed and traps moisture with no way out.",
   },
 ];
 
@@ -122,11 +123,11 @@ export default function CoastalLightingGuide() {
           </Reveal>
           <Reveal delay={0.12}>
             <p className="lede" style={{ marginTop: 22 }}>
-              Kerala runs 590 km of coastline, and most of its cities sit on it.
-              Salt-laden air corrodes untreated brass, iron and mild steel within
-              about two seasons, and it starts at the fixings, not on the
-              surface anyone is looking at. Crystal, glass, acrylic and
-              marine-grade stainless are unaffected.
+              Kerala has about 590 km of coast, and most of its cities sit on it.
+              Salt air pits untreated brass, iron and mild steel in about two
+              seasons. It starts at the screws and joints, not on the surface
+              you see. Crystal, glass, acrylic and marine-grade stainless are
+              not affected.
             </p>
           </Reveal>
         </div>
@@ -142,7 +143,7 @@ export default function CoastalLightingGuide() {
                   <tr>
                     <th>Material</th>
                     <th>Under 500 m</th>
-                    <th>500 m – 5 km</th>
+                    <th>500 m to 5 km</th>
                     <th>Inland</th>
                   </tr>
                 </thead>
@@ -162,8 +163,8 @@ export default function CoastalLightingGuide() {
           </Reveal>
           <Reveal delay={0.16}>
             <p className="form-note" style={{ marginTop: 12 }}>
-              &ldquo;Tea-staining&rdquo; is the brown surface discolouration 304
-              stainless develops in marine air. It is cosmetic rather than
+              &ldquo;Tea-staining&rdquo; is the brown surface mark that 304
+              stainless gets in marine air. It is cosmetic rather than
               structural, but it does not clean off easily.
             </p>
           </Reveal>
@@ -191,10 +192,11 @@ export default function CoastalLightingGuide() {
           <Reveal><h2 className="h-lg">IP ratings, plainly</h2></Reveal>
           <Reveal delay={0.06}>
             <p className="lede" style={{ marginTop: 16 }}>
-              The first digit is dust, the second is water. For Kerala only the
-              second one usually decides anything. Every rating, with what to
+              The first digit is dust, the second is water. For Kerala, the
+              second one usually decides anything. Every rating, and what to
               specify outside, is in the{" "}
-              <Link href="/guides/ip-rating-for-outdoor-lights" style={{ color: "var(--gold)" }}>IP rating guide</Link>.
+              <Link href="/guides/ip-rating-for-outdoor-lights" style={{ color: "var(--gold)" }}>IP rating guide</Link>
+              . This page stays the salt and humidity guide; that one stays the codes.
             </p>
           </Reveal>
           <Reveal delay={0.12}>
@@ -225,11 +227,18 @@ export default function CoastalLightingGuide() {
           <Reveal delay={0.12}>
             <ul className="check-list" style={{ marginTop: 28 }}>
               <li><span className="tick">✓</span>Stainless fixings throughout, including screws, chain, suspension wire and internal fasteners as well as the visible body. This is the single highest-value change and it costs very little.</li>
-              <li><span className="tick">✓</span>Sealed or genuinely ventilated housings, never the almost-sealed middle ground that traps monsoon condensation with no way out.</li>
+              <li><span className="tick">✓</span>Sealed or genuinely ventilated housings, never the almost-sealed middle that traps monsoon condensation with no way out.</li>
               <li><span className="tick">✓</span>Powder coat over a proper primer, not over bare metal, and touched up at any drilled or cut edge during installation.</li>
               <li><span className="tick">✓</span>Crystal and glass wherever the client wants the look of metal but the building is in the first 500 m band.</li>
-              <li><span className="tick">✓</span>A rinse-and-dry cleaning routine handed over with the fixture, because salt deposits hold moisture against the surface between cleanings.</li>
+              <li><span className="tick">✓</span>A rinse-and-dry cleaning routine handed over with the fitting, because salt deposits hold moisture against the surface between cleanings.</li>
             </ul>
+          </Reveal>
+          <Reveal delay={0.16}>
+            <p className="lede" style={{ marginTop: 22 }}>
+              Ready fittings are at{" "}
+              <a href={CELESTIAL} target="_blank" rel="noopener noreferrer">Celestial Lights</a>
+              . Ask for the finish and the IP rating with the photo. Design is free with purchase from Celestial.
+            </p>
           </Reveal>
         </div>
       </section>
@@ -259,13 +268,14 @@ export default function CoastalLightingGuide() {
             <p className="lede" style={{ margin: "16px auto 0" }}>
               It changes the specification more than the budget does. All three
               of our stores are on the coast, so this is the constraint we design
-              around every day.
+              around every day. Design is free with purchase from Celestial.
             </p>
           </Reveal>
           <Reveal delay={0.12}>
             <div className="cta-ctas" style={{ marginTop: 30 }}>
               <MagneticButton href="/consultation" variant="gold">Book a Consultation <span className="arr">→</span></MagneticButton>
               <MagneticButton href="/guides/crystal-vs-glass-chandelier" variant="ghost">Compare Materials</MagneticButton>
+              <MagneticButton href={CELESTIAL} variant="ghost" external>See the range <span className="arr">→</span></MagneticButton>
             </div>
           </Reveal>
         </div>

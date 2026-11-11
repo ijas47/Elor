@@ -200,8 +200,8 @@ const entries: GuideEntry[] = [
     dek: "Salt air pits untreated brass and iron within two seasons. What lasts, what IP rating you need, and the fixings that fail first.",
     tag: "Technical",
     image: "/spaces/outdoor.jpg",
-    modified: "2026-08-20",
-    related: ["brass-chandelier", "how-to-clean-a-crystal-chandelier", "home-lighting-design"],
+    modified: "2026-11-11",
+    related: ["brass-chandelier", "how-to-clean-a-crystal-chandelier", "home-lighting-design", "ip-rating-for-outdoor-lights"],
   },
   {
     slug: "how-to-choose-a-chandelier-shop",
