@@ -104,8 +104,8 @@ const entries: GuideEntry[] = [
     dek: "Wood suits a dry, air-conditioned room. On a humid coast it needs a sealed finish, or another material.",
     tag: "Buying Guide",
     image: "/video/showroom-petal.jpg",
-    imageAlt: "Cascading white petal pendants in the showroom",
-    modified: "2026-10-12",
+    imageAlt: "Showroom pendants at Celestial Lights, Kannur",
+    modified: "2026-11-11",
     related: ["brass-chandelier", "how-to-clean-a-crystal-chandelier", "how-to-choose-a-custom-chandelier"],
   },
   {
