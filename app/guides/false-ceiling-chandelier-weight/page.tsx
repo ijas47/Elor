@@ -1,4 +1,6 @@
+import Link from "next/link";
 import type { Metadata } from "next";
+import type { ReactNode } from "react";
 import { site } from "@/lib/site";
 import { guideDates } from "@/lib/guides";
 import { breadcrumbSchema } from "@/lib/schema";
@@ -7,11 +9,12 @@ import { Reveal, Stagger, StaggerItem } from "@/components/motion/Reveal";
 import { MagneticButton } from "@/components/motion/MagneticButton";
 import { RelatedGuides } from "@/components/ui/RelatedGuides";
 
-const TITLE = "Can a False Ceiling Hold a Chandelier? Weights & Anchoring";
+const TITLE = "Can a False Ceiling Hold a Chandelier?";
 const META_TITLE = "Can a False Ceiling Hold a Chandelier?";
 const DESC =
-  "Gypsum and POP ceilings carry a few kilograms, not a chandelier. What each ceiling holds, what fixtures weigh, and why the anchor goes in first.";
+  "A gypsum or POP false ceiling cannot hold a chandelier. See what each ceiling can carry, typical fixture weights, and why the anchor goes in the slab first.";
 const PATH = "/guides/false-ceiling-chandelier-weight";
+const CELESTIAL = "https://www.celestiallights.in";
 const { updated: UPDATED, modified: MODIFIED } = guideDates(PATH);
 
 export const metadata: Metadata = {
@@ -20,10 +23,16 @@ export const metadata: Metadata = {
   alternates: { canonical: PATH },
 };
 
-const steps = [
+const steps: { h: string; p: string; extra?: ReactNode }[] = [
   {
     h: "1. Decide the fixture before the ceiling closes",
-    p: "This is the whole guide in one line. The anchor has to go into the structural slab, and the slab is only accessible while the false ceiling is open. Choosing the chandelier at the end of a fit-out is what turns a simple hook into a demolition job.",
+    p: "This is the whole guide in one line. The anchor has to go into the structural slab, and the slab is only reachable while the false ceiling is open. Choosing the chandelier at the end of a fit-out is what turns a simple hook into a demolition job.",
+    extra: (
+      <>
+        If you still need a diameter and drop, use the{" "}
+        <Link href="/guides/chandelier-size-calculator">chandelier size calculator</Link> as a starting range.
+      </>
+    ),
   },
   {
     h: "2. Anchor into the RCC slab, never the framework",
@@ -31,7 +40,7 @@ const steps = [
   },
   {
     h: "3. Bring the rod or chain down through the ceiling",
-    p: "The false ceiling is cut around the drop rod and finished with a plate or recess. The ceiling carries none of the weight. It only conceals the anchor. Done properly this is invisible; done as an afterthought it cracks the board around the opening.",
+    p: "The false ceiling is cut around the drop rod and finished with a plate or recess. The ceiling carries none of the weight. It only hides the anchor. Done properly this is invisible. Done as an afterthought, it cracks the board around the opening.",
   },
   {
     h: "4. Run the circuit at the same time",
@@ -135,11 +144,18 @@ export default function FalseCeilingGuide() {
           </Reveal>
           <Reveal delay={0.12}>
             <p className="lede" style={{ marginTop: 22 }}>
-              A gypsum or POP false ceiling carries its own boards and a light
-              fitting of a few kilograms. It does not carry a chandelier. Every
-              piece past that goes into the RCC slab above, on an anchor that
-              has to be placed while the ceiling is still open. That is
-              why this is a decision for the start of a fit-out, not the end.
+              A gypsum or POP false ceiling cannot hold a chandelier. It can
+              carry its own boards and a light fitting of a few kilograms.
+              Every chandelier has to be anchored into the RCC slab above,
+              ideally before the ceiling closes. If the ceiling is already
+              finished, the slab can still be opened at the mounting point and
+              made good.
+            </p>
+          </Reveal>
+          <Reveal delay={0.16}>
+            <p className="lede" style={{ marginTop: 16 }}>
+              That is why this is a decision for the start of a fit-out, not
+              the end.
             </p>
           </Reveal>
         </div>
@@ -147,7 +163,7 @@ export default function FalseCeilingGuide() {
 
       <section className="sec" style={{ paddingTop: 0 }}>
         <div className="wrap-tight">
-          <Reveal><h2 className="h-lg">What each ceiling type carries</h2></Reveal>
+          <Reveal><h2 className="h-lg">What can each ceiling type carry?</h2></Reveal>
           <Reveal delay={0.12}>
             <div className="spec-wrap">
               <table className="spec-table">
@@ -177,22 +193,29 @@ export default function FalseCeilingGuide() {
                   <tr>
                     <td>RCC slab, anchored</td>
                     <td>Set by the anchor, not the slab</td>
-                    <td>Everything. Rate the anchor at 4× fixture weight.</td>
+                    <td>Everything. Rate the anchor at four times fixture weight.</td>
                   </tr>
                 </tbody>
               </table>
             </div>
+          </Reveal>
+          <Reveal delay={0.16}>
+            <p className="lede" style={{ marginTop: 16 }}>
+              The ceiling plan around the fitting is covered in{" "}
+              <Link href="/guides/ceiling-and-lighting-design">false ceiling lighting design</Link>.
+            </p>
           </Reveal>
         </div>
       </section>
 
       <section className="sec glow-top">
         <div className="wrap-tight">
-          <Reveal><h2 className="h-lg">What fixtures weigh</h2></Reveal>
+          <Reveal><h2 className="h-lg">What do fixtures typically weigh?</h2></Reveal>
           <Reveal delay={0.06}>
             <p className="lede" style={{ marginTop: 16 }}>
-              Only the first row is anywhere near what a false ceiling can take
-              on its own.
+              These are typical ranges, not a catalogue and not a list of what
+              is in stock. Only the first row is anywhere near what a false
+              ceiling can take on its own.
             </p>
           </Reveal>
           <Reveal delay={0.12}>
@@ -207,10 +230,10 @@ export default function FalseCeilingGuide() {
                   </tr>
                 </thead>
                 <tbody>
-                  <tr><td>Single pendant</td><td>2–5 kg</td><td>20 kg</td><td>Usually not</td></tr>
-                  <tr><td>Cluster / ring pendant</td><td>8–15 kg</td><td>60 kg</td><td className="warn">Yes</td></tr>
-                  <tr><td>Mid-size crystal chandelier</td><td>15–30 kg</td><td>120 kg</td><td className="warn">Yes</td></tr>
-                  <tr><td>Large multi-tier</td><td>40–80 kg</td><td>320 kg</td><td className="warn">Yes</td></tr>
+                  <tr><td>Single pendant</td><td>2 to 5 kg</td><td>20 kg</td><td>Usually not</td></tr>
+                  <tr><td>Cluster / ring pendant</td><td>8 to 15 kg</td><td>60 kg</td><td className="warn">Yes</td></tr>
+                  <tr><td>Mid-size crystal chandelier</td><td>15 to 30 kg</td><td>120 kg</td><td className="warn">Yes</td></tr>
+                  <tr><td>Large multi-tier</td><td>40 to 80 kg</td><td>320 kg</td><td className="warn">Yes</td></tr>
                   <tr><td>Foyer cascade</td><td>100 kg+</td><td>400 kg+</td><td className="warn">Yes, engineered</td></tr>
                 </tbody>
               </table>
@@ -221,7 +244,7 @@ export default function FalseCeilingGuide() {
 
       <section className="sec">
         <div className="wrap-tight">
-          <Reveal><h2 className="h-lg">Doing it in the right order</h2></Reveal>
+          <Reveal><h2 className="h-lg">What should you do before the ceiling closes?</h2></Reveal>
         </div>
         <div className="wrap">
           <Stagger className="register">
@@ -229,9 +252,62 @@ export default function FalseCeilingGuide() {
               <StaggerItem key={s.h} className="register-row">
                 <h3>{s.h}</h3>
                 <p>{s.p}</p>
+                {s.extra ? <p>{s.extra}</p> : null}
               </StaggerItem>
             ))}
           </Stagger>
+        </div>
+      </section>
+
+      <section className="sec">
+        <div className="wrap-tight">
+          <Reveal><h2 className="h-lg">What if the false ceiling is already finished?</h2></Reveal>
+          <Reveal delay={0.06}>
+            <p className="lede" style={{ marginTop: 16 }}>
+              It is still solvable. We locate the slab above, open a small
+              section at the mounting point, set a proper anchor, and make good
+              the ceiling around the drop. More work than doing it upfront, but
+              far cheaper than a fixture coming down.
+            </p>
+          </Reveal>
+        </div>
+      </section>
+
+      <section className="sec glow-top">
+        <div className="wrap-tight">
+          <Reveal><h2 className="h-lg">How do you get the fitting and the plan right?</h2></Reveal>
+          <Reveal delay={0.06}>
+            <p className="lede" style={{ marginTop: 16 }}>
+              Elor Lighting designs the lighting plan and the custom pieces.
+              Ready lights are sold by our sister shop,{" "}
+              <a href={CELESTIAL} target="_blank" rel="noopener noreferrer">Celestial Lights</a>.
+              {" "}Design is free with purchase from Celestial.
+            </p>
+          </Reveal>
+          <Reveal delay={0.1}>
+            <p className="lede" style={{ marginTop: 16 }}>
+              <Link href="/consultation">Book a consultation</Link> if you want
+              the anchor and the circuit specified before the boards go up, or
+              if the ceiling is already finished and you need it opened safely.
+              If a ready fitting is the right size and weight, buy it from{" "}
+              <a href={CELESTIAL} target="_blank" rel="noopener noreferrer">Celestial Lights</a>.
+              {" "}If the piece has to be made to measure, start on{" "}
+              <Link href="/customisation">customisation</Link>.
+            </p>
+          </Reveal>
+          <Reveal delay={0.12}>
+            <p className="lede" style={{ marginTop: 16 }}>
+              If the room also has a fan, hang the two on separate points. The
+              layouts are in{" "}
+              <Link href="/guides/chandelier-with-ceiling-fan">chandelier with a ceiling fan</Link>.
+            </p>
+          </Reveal>
+          <Reveal delay={0.16}>
+            <div className="cta-ctas" style={{ justifyContent: "flex-start", marginTop: 28 }}>
+              <MagneticButton href="/consultation" variant="gold">Book a Consultation <span className="arr">→</span></MagneticButton>
+              <MagneticButton href={CELESTIAL} variant="ghost" external>See Celestial Lights</MagneticButton>
+            </div>
+          </Reveal>
         </div>
       </section>
 
