@@ -59,7 +59,7 @@ const entries: GuideEntry[] = [
     tag: "Technical",
     image: "/photos/living-room.jpg",
     imageAlt: "A living room with lit shelves, a pendant, and warm seating",
-    modified: "2026-10-12",
+    modified: "2026-11-11",
     related: ["home-lighting-design", "kitchen-lighting-design", "chandelier-with-ceiling-fan"],
   },
   {
