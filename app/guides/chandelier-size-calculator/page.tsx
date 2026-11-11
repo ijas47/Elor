@@ -1,3 +1,4 @@
+import Link from "next/link";
 import type { Metadata } from "next";
 import { site } from "@/lib/site";
 import { guideDates } from "@/lib/guides";
@@ -12,8 +13,9 @@ const TITLE = "Chandelier Size Calculator: Diameter, Drop & Fan Clearance";
 // Shorter than TITLE, which stays as the Article headline and H1 subject.
 const META_TITLE = "Chandelier Size Calculator";
 const DESC =
-  "Work out the right chandelier diameter and drop for your room, with the two checks Indian homes need: ceiling fan clearance and false ceiling load.";
+  "Get a starting chandelier diameter and drop for your room, then check ceiling fan clearance and whether the false ceiling can take the weight.";
 const PATH = "/guides/chandelier-size-calculator";
+const CELESTIAL = "https://www.celestiallights.in";
 const { updated: UPDATED, modified: MODIFIED } = guideDates(PATH);
 
 export const metadata: Metadata = {
@@ -29,11 +31,11 @@ const rules = [
   },
   {
     h: "Over a dining table, the table governs, not the room",
-    p: "Half to two-thirds of the table's short side. A 1 m wide table takes a 50–65 cm fixture. Sized to the room instead, it overhangs the edges and people knock their heads reaching across.",
+    p: "Half to two-thirds of the table's short side. A 1 m wide table takes a 50 to 65 cm fixture. Sized to the room instead, it overhangs the edges and people knock their heads reaching across.",
   },
   {
     h: "Drop: 2.5 to 3 inches of fixture height per foot of ceiling",
-    p: "A 10 ft ceiling carries 25–30 inches of fixture, about 65–75 cm. Cascade pieces built for a double-height void are the exception. Those are measured to the actual vertical distance between floors.",
+    p: "A 10 ft ceiling carries 25 to 30 inches of fixture, about 65 to 75 cm. Cascade pieces built for a double-height void are the exception. Those are measured to the actual vertical distance between floors.",
   },
   {
     h: "Bottom of the fixture: 2.1 m above the floor, minimum",
@@ -137,11 +139,12 @@ export default function SizeCalculatorGuide() {
           </Reveal>
           <Reveal delay={0.12}>
             <p className="lede" style={{ marginTop: 22 }}>
-              Put in the room and get back a diameter, a drop and a mounting
-              height. The sizing rules are the standard ones. The two checks
-              underneath them (ceiling fan clearance and what your false
-              ceiling can actually hold) are the ones that decide whether
-              the fixture works once it is up.
+              This calculator gives a starting diameter, drop and mounting
+              height from standard rules, not a final specification. Check
+              ceiling-fan clearance and whether the false ceiling can take
+              the weight. Elor measures on site before making a custom piece.
+              If a ready size fits, buy it from Celestial Lights. Design is
+              free with purchase from Celestial.
             </p>
           </Reveal>
         </div>
@@ -155,7 +158,9 @@ export default function SizeCalculatorGuide() {
               Nothing is sent anywhere. This runs entirely in your browser.
               Treat the output as a starting range, not a specification: voids,
               stairwells and sloped ceilings all change the answer, which is why
-              we measure on site before fabricating anything.
+              we measure on site before fabricating anything. The full false-ceiling
+              sequence is in the{" "}
+              <a href="/guides/false-ceiling-chandelier-weight">false-ceiling chandelier weight guide</a>.
             </p>
           </Reveal>
         </div>
@@ -163,7 +168,7 @@ export default function SizeCalculatorGuide() {
 
       <section className="sec glow-top">
         <div className="wrap-tight">
-          <Reveal><h2 className="h-lg">The four rules it uses</h2></Reveal>
+          <Reveal><h2 className="h-lg">What are the four rules it uses?</h2></Reveal>
         </div>
         <div className="wrap">
           <Stagger className="register">
@@ -179,7 +184,7 @@ export default function SizeCalculatorGuide() {
 
       <section className="sec">
         <div className="wrap-tight">
-          <Reveal><h2 className="h-lg">Quick reference by room size</h2></Reveal>
+          <Reveal><h2 className="h-lg">What size does a typical Indian room need?</h2></Reveal>
           <Reveal delay={0.06}>
             <p className="lede" style={{ marginTop: 16 }}>
               Common Indian room dimensions, with the diameter the rule produces
@@ -198,10 +203,10 @@ export default function SizeCalculatorGuide() {
                   </tr>
                 </thead>
                 <tbody>
-                  <tr><td>3.0 × 3.0 m bedroom</td><td>55–65 cm</td><td>60–75 cm</td><td>1.50 m</td></tr>
-                  <tr><td>3.6 × 3.0 m dining</td><td>60–70 cm</td><td>60–75 cm</td><td>1.55 m</td></tr>
-                  <tr><td>4.5 × 3.6 m living</td><td>75–90 cm</td><td>60–75 cm</td><td>1.65 m</td></tr>
-                  <tr><td>6.0 × 4.5 m hall</td><td>95–115 cm</td><td>60–75 cm</td><td>1.78 m</td></tr>
+                  <tr><td>3.0 × 3.0 m bedroom</td><td>55 to 65 cm</td><td>60 to 75 cm</td><td>1.50 m</td></tr>
+                  <tr><td>3.6 × 3.0 m dining</td><td>60 to 70 cm</td><td>60 to 75 cm</td><td>1.55 m</td></tr>
+                  <tr><td>4.5 × 3.6 m living</td><td>75 to 90 cm</td><td>60 to 75 cm</td><td>1.65 m</td></tr>
+                  <tr><td>6.0 × 4.5 m hall</td><td>95 to 115 cm</td><td>60 to 75 cm</td><td>1.78 m</td></tr>
                   <tr><td>Double-height foyer</td><td className="warn">Measured on site</td><td className="warn">Set by the void</td><td>Usually no fan</td></tr>
                 </tbody>
               </table>
@@ -209,7 +214,9 @@ export default function SizeCalculatorGuide() {
           </Reveal>
           <Reveal delay={0.16}>
             <p className="form-note" style={{ marginTop: 12 }}>
-              Fan separation is centre-to-centre, using the upper diameter in each row.
+              Fan separation is centre-to-centre, using the upper diameter in each row. For living-room layouts, see{" "}
+              <a href="/guides/chandelier-for-living-room">chandelier for a living room</a>. For fan clearance layouts, see{" "}
+              <a href="/guides/chandelier-with-ceiling-fan">chandelier with a ceiling fan</a>.
             </p>
           </Reveal>
         </div>
@@ -231,26 +238,36 @@ export default function SizeCalculatorGuide() {
         </div>
       </section>
 
-      <RelatedGuides currentSlug="chandelier-size-calculator" />
-
       <section className="sec glow-top">
         <div className="wrap-tight" style={{ textAlign: "center" }}>
-          <Reveal><h2 className="h-lg">Got a number? We&rsquo;ll check it against the room.</h2></Reveal>
+          <Reveal><h2 className="h-lg">What should you do after you have a size?</h2></Reveal>
           <Reveal delay={0.06}>
             <p className="lede" style={{ margin: "16px auto 0" }}>
-              Send the dimensions and a photo of the ceiling. We confirm what
-              fits, what it can hang from, and what it costs, before anything
-              is made.
+              The number is a starting range, not a specification. Elor Lighting
+              will measure on site before making a custom piece.{" "}
+              <Link href="/consultation">Book a consultation</Link> for that
+              measure, or start a <Link href="/customisation">custom piece</Link>{" "}
+              if the room needs one made.
             </p>
           </Reveal>
-          <Reveal delay={0.12}>
+          <Reveal delay={0.1}>
+            <p className="lede" style={{ margin: "16px auto 0" }}>
+              If a ready chandelier in this size range fits the room, the
+              ceiling and the fan, buy it from{" "}
+              <a href={CELESTIAL} target="_blank" rel="noopener noreferrer">Celestial Lights</a>.
+              {" "}Design is free with purchase from Celestial.
+            </p>
+          </Reveal>
+          <Reveal delay={0.14}>
             <div className="cta-ctas" style={{ marginTop: 30 }}>
               <MagneticButton href="/consultation" variant="gold">Book a Consultation <span className="arr">→</span></MagneticButton>
-              <MagneticButton href="/guides/chandelier-with-ceiling-fan" variant="ghost">The Ceiling Fan Problem</MagneticButton>
+              <MagneticButton href={CELESTIAL} variant="ghost" external>See the range</MagneticButton>
             </div>
           </Reveal>
         </div>
       </section>
+
+      <RelatedGuides currentSlug="chandelier-size-calculator" />
     </>
   );
 }
