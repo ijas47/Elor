@@ -30,7 +30,8 @@ const entries: GuideEntry[] = [
     tag: "Technical",
     image: "/video/showroom-crystal.jpg",
     imageAlt: "Crystal chandeliers lit in the showroom",
-    modified: "2026-10-12",
+    modified: "2026-11-11",
+    related: ["ip-rating-for-outdoor-lights", "ceiling-and-lighting-design", "home-lighting-design"],
   },
   {
     slug: "ip-rating-for-outdoor-lights",
