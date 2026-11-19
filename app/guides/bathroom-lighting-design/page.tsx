@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import type { Metadata } from "next";
 import { site } from "@/lib/site";
@@ -16,10 +17,22 @@ const PATH = "/guides/bathroom-lighting-design";
 const CELESTIAL = "https://www.celestiallights.in";
 const { updated: UPDATED, modified: MODIFIED } = guideDates(PATH);
 
+const HERO_IMAGE = "/images/guides/bathroom-lighting-design/kerala-bathroom-vanity-lighting.webp";
+const HERO_ALT =
+  "A bathroom with a stone vanity, a mirror lit from both sides, and a recessed downlight over the shower";
+const BODY_IMAGE = "/images/guides/bathroom-lighting-design/mirror-lit-from-both-sides.webp";
+const BODY_ALT =
+  "A vanity mirror lit evenly from both sides by vertical wall lights, above a stone basin";
+
 export const metadata: Metadata = {
   title: TITLE,
   description: DESC,
   alternates: { canonical: PATH },
+  openGraph: {
+    title: TITLE,
+    description: DESC,
+    images: [{ url: HERO_IMAGE, width: 1600, height: 893, alt: HERO_ALT }],
+  },
 };
 
 const faqs = [
@@ -43,6 +56,7 @@ const articleSchema = {
   "@type": "Article",
   headline: "Bathroom lighting design for a Kerala home",
   description: DESC,
+  image: `${site.domain}${HERO_IMAGE}`,
   author: { "@type": "Organization", name: site.name, url: site.domain },
   publisher: {
     "@type": "Organization",
@@ -114,6 +128,28 @@ export default function BathroomLightingGuide() {
         </div>
       </section>
 
+
+      <section className="sec" style={{ paddingTop: 0 }}>
+        <div className="wrap-tight">
+          <div
+            style={{
+              position: "relative",
+              aspectRatio: "16 / 10",
+              borderRadius: 18,
+              overflow: "hidden",
+            }}
+          >
+            <Image
+              src={HERO_IMAGE}
+              alt={HERO_ALT}
+              fill
+              priority
+              sizes="(max-width: 760px) 100vw, 760px"
+            />
+          </div>
+        </div>
+      </section>
+
       <section className="sec" style={{ paddingTop: 0 }}>
         <div className="wrap">
           <div className="register">
@@ -129,6 +165,24 @@ export default function BathroomLightingGuide() {
               <div>
                 <p>From both sides, or with a bar on the front of the mirror, so light reaches the face. A single downlight above the head is the usual mistake. It lights the top of the hair and throws shadows into the eyes and under the chin, which is a poor light for shaving or makeup.</p>
                 <p style={{ marginTop: 16 }}>Two wall lights, one on each side of the mirror, at about face height, or a front-facing mirror bar, do the job. The exact height and wattage should be set on site.</p>
+
+                <figure style={{ marginTop: 24, marginBottom: 0 }}>
+                  <div
+                    style={{
+                      position: "relative",
+                      aspectRatio: "4 / 3",
+                      borderRadius: 18,
+                      overflow: "hidden",
+                    }}
+                  >
+                    <Image
+                      src={BODY_IMAGE}
+                      alt={BODY_ALT}
+                      fill
+                      sizes="(max-width: 760px) 100vw, 480px"
+                    />
+                  </div>
+                </figure>
               </div>
             </div>
             <div className="register-row">
