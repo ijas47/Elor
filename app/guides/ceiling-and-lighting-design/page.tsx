@@ -15,11 +15,22 @@ const DESC =
 const PATH = "/guides/ceiling-and-lighting-design";
 const CELESTIAL = "https://www.celestiallights.in";
 const { updated: UPDATED, modified: MODIFIED } = guideDates(PATH);
+const HERO_IMAGE = "/images/guides/ceiling-and-lighting-design/lobby-false-ceiling-lighting.webp";
+const HERO_ALT =
+  "A lobby with a crystal chandelier in a wooden tray ceiling, linear coves, and wall lights on either side of the lifts";
+const BODY_IMAGE = "/images/guides/ceiling-and-lighting-design/cove-and-ceiling-layers.webp";
+const BODY_ALT =
+  "A lounge with recessed coves and linear ceiling lights running above a brass and glass partition";
 
 export const metadata: Metadata = {
   title: TITLE,
   description: DESC,
   alternates: { canonical: PATH },
+  openGraph: {
+    title: TITLE,
+    description: DESC,
+    images: [{ url: HERO_IMAGE, width: 1600, height: 900, alt: HERO_ALT }],
+  },
 };
 
 const faqs: { q: string; a: string; visible?: "weight" | "fittings" }[] = [
@@ -56,7 +67,7 @@ const articleSchema = {
   "@type": "Article",
   headline: TITLE,
   description: DESC,
-  image: `${site.domain}/photos/living-room.jpg`,
+  image: `${site.domain}${HERO_IMAGE}`,
   author: { "@type": "Organization", name: site.name, url: site.domain },
   publisher: {
     "@type": "Organization",
@@ -135,8 +146,8 @@ export default function CeilingLightingDesignGuide() {
             }}
           >
             <Image
-              src="/photos/living-room.jpg"
-              alt="A living room with lit shelves, a pendant, and warm seating"
+              src={HERO_IMAGE}
+              alt={HERO_ALT}
               fill
               priority
               sizes="(max-width: 760px) 100vw, 760px"
@@ -205,6 +216,24 @@ export default function CeilingLightingDesignGuide() {
                   darker. On three circuits it has several, and that is most
                   of what makes a room feel designed.
                 </p>
+                <figure style={{ marginTop: 24, marginBottom: 0 }}>
+                  <div
+                    style={{
+                      position: "relative",
+                      aspectRatio: "4 / 3",
+                      borderRadius: 18,
+                      overflow: "hidden",
+                    }}
+                  >
+                    <Image
+                      src={BODY_IMAGE}
+                      alt={BODY_ALT}
+                      fill
+                      sizes="(max-width: 760px) 100vw, 480px"
+                    />
+                  </div>
+                </figure>
+
                 <p style={{ marginTop: 16 }}>
                   Agree the colour of the lamps once for the room, so the
                   cove, the spots, and the chandelier match. The numbers are

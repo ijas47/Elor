@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import type { Metadata } from "next";
 import type { ReactNode } from "react";
@@ -18,11 +19,22 @@ const DESC =
 const PATH = "/guides/chandelier-pricing-guide";
 const CELESTIAL = "https://www.celestiallights.in";
 const { updated: UPDATED, modified: MODIFIED } = guideDates(PATH);
+const HERO_IMAGE = "/images/guides/chandelier-pricing-guide/custom-statement-chandelier.webp";
+const HERO_ALT =
+  "A large custom chandelier of dark hanging shards in a double-height lobby";
+const BODY_IMAGE = "/images/guides/chandelier-pricing-guide/dining-chandelier.webp";
+const BODY_ALT =
+  "A brass chandelier hanging over a dining table in a modern apartment";
 
 export const metadata: Metadata = {
   title: META_TITLE,
   description: DESC,
   alternates: { canonical: PATH },
+  openGraph: {
+    title: META_TITLE,
+    description: DESC,
+    images: [{ url: HERO_IMAGE, width: 1024, height: 640, alt: HERO_ALT }],
+  },
 };
 
 const priceBands = [
@@ -84,7 +96,7 @@ const articleSchema = {
   "@type": "Article",
   headline: TITLE,
   description: DESC,
-  image: `${site.domain}/lifestyle/lobby-canopy.jpg`,
+  image: `${site.domain}${HERO_IMAGE}`,
   author: { "@type": "Organization", name: site.name, url: site.domain },
   publisher: {
     "@type": "Organization",
@@ -156,6 +168,29 @@ export default function ChandelierPricingGuide() {
 
       <section className="sec" style={{ paddingTop: 0 }}>
         <div className="wrap-tight">
+          <figure>
+            <div
+              style={{
+                position: "relative",
+                aspectRatio: "16 / 10",
+                borderRadius: 18,
+                overflow: "hidden",
+              }}
+            >
+              <Image
+                src={HERO_IMAGE}
+                alt={HERO_ALT}
+                fill
+                priority
+                sizes="(max-width: 760px) 100vw, 760px"
+              />
+            </div>
+          </figure>
+        </div>
+      </section>
+
+      <section className="sec" style={{ paddingTop: 0 }}>
+        <div className="wrap-tight">
           <Reveal><h2 className="h-lg">What does a ready chandelier cost?</h2></Reveal>
           <Reveal delay={0.06}>
             <p className="lede" style={{ marginTop: 16 }}>
@@ -165,6 +200,24 @@ export default function ChandelierPricingGuide() {
               <a href={CELESTIAL} target="_blank" rel="noopener noreferrer">Celestial Lights</a>.
             </p>
           </Reveal>
+          <figure style={{ marginTop: 28 }}>
+            <div
+              style={{
+                position: "relative",
+                aspectRatio: "4 / 3",
+                borderRadius: 18,
+                overflow: "hidden",
+              }}
+            >
+              <Image
+                src={BODY_IMAGE}
+                alt={BODY_ALT}
+                fill
+                sizes="(max-width: 760px) 100vw, 760px"
+              />
+            </div>
+          </figure>
+
         </div>
         <div className="wrap">
           <Stagger className="register">
