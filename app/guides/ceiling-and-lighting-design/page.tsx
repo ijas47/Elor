@@ -9,9 +9,9 @@ import { Reveal } from "@/components/motion/Reveal";
 import { MagneticButton } from "@/components/motion/MagneticButton";
 import { RelatedGuides } from "@/components/ui/RelatedGuides";
 
-const TITLE = "False Ceiling Lighting Design for Kerala";
+const TITLE = "False Ceiling Lighting in India (Kerala Tips)";
 const DESC =
-  "False ceiling lighting design for Kerala homes: draw the furniture first, put cove, spots and the chandelier on separate circuits, and anchor it to the slab.";
+  "False ceiling lighting for Indian homes (Kerala tips): draw furniture first, put cove, spots and the chandelier on separate circuits, and fix it to the slab.";
 const PATH = "/guides/ceiling-and-lighting-design";
 const CELESTIAL = "https://www.celestiallights.in";
 const { updated: UPDATED, modified: MODIFIED } = guideDates(PATH);

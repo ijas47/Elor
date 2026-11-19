@@ -9,9 +9,9 @@ import { Reveal } from "@/components/motion/Reveal";
 import { MagneticButton } from "@/components/motion/MagneticButton";
 import { RelatedGuides } from "@/components/ui/RelatedGuides";
 
-const TITLE = "Wooden Chandelier for Kerala Homes";
+const TITLE = "Wooden Chandelier for Indian Homes (Kerala Tips)";
 const DESC =
-  "Choose a wooden chandelier for a Kerala home by the room and a finish specified for humidity. Buy ready from Celestial, or have Elor make one to match joinery.";
+  "Choose a wooden chandelier for an Indian home (Kerala tips) by the room and a humidity-rated finish. Ready pieces are at Celestial Lights, or Elor can make one.";
 const PATH = "/guides/wooden-chandelier";
 const CELESTIAL = "https://www.celestiallights.in";
 const { updated: UPDATED, modified: MODIFIED } = guideDates(PATH);

@@ -10,10 +10,10 @@ import { MagneticButton } from "@/components/motion/MagneticButton";
 import { RelatedGuides } from "@/components/ui/RelatedGuides";
 import { guideArticles } from "@/lib/guide-articles";
 
-const TITLE = "Brass Chandelier for Kerala Homes";
+const TITLE = "Brass Chandelier for Indian Homes (Kerala Tips)";
 const CRUMB = "Brass Chandelier";
 const DESC =
-  "How to choose a brass chandelier for a Kerala home: solid, plated or painted, a finish specified for humidity, sized to the furniture and fixed to the slab.";
+  "Choose a brass chandelier for an Indian home (Kerala tips): solid, plated or painted, a humidity-rated finish, sized to the furniture and fixed to the slab.";
 const PATH = "/guides/brass-chandelier";
 const CELESTIAL = "https://www.celestiallights.in";
 const { updated: UPDATED, modified: MODIFIED } = guideDates(PATH);

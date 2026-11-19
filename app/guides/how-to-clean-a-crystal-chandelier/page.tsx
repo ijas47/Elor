@@ -12,7 +12,7 @@ import { guideArticles } from "@/lib/guide-articles";
 
 const TITLE = "How to Clean a Crystal Chandelier";
 const DESC =
-  "Clean a crystal chandelier with the power off, a cloth-and-glove wipe in place, and the drops washed by hand only when they are dull. Steps for Kerala homes.";
+  "Clean a crystal chandelier with the power off and a cloth-and-glove wipe in place. Wash drops by hand only when dull. Steps for Indian homes, including Kerala.";
 const PATH = "/guides/how-to-clean-a-crystal-chandelier";
 const CELESTIAL = "https://www.celestiallights.in";
 const { updated: UPDATED, modified: MODIFIED } = guideDates(PATH);

@@ -12,7 +12,7 @@ import { RelatedGuides } from "@/components/ui/RelatedGuides";
 const TITLE = "How a Lighting Plan Is Built: Layers, Walls and Scenes";
 const META_TITLE = "How a Lighting Plan Is Built";
 const DESC =
-  "A lighting plan starts with the furniture and the walls, then the layers, the wall wash, and the scenes. How Elor marks a Kerala ceiling before it closes.";
+  "A lighting plan starts with furniture and walls, then layers, wall wash and scenes. How Elor marks an Indian ceiling before it closes, with Kerala in mind.";
 const PATH = "/guides/how-a-lighting-plan-is-built";
 const CELESTIAL = "https://www.celestiallights.in";
 const { updated: UPDATED, modified: MODIFIED } = guideDates(PATH);
