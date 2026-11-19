@@ -1,3 +1,4 @@
+import Image from "next/image";
 import type { Metadata } from "next";
 import { site } from "@/lib/site";
 import { guideDates } from "@/lib/guides";
@@ -14,11 +15,22 @@ const DESC =
 const PATH = "/guides/colour-of-light";
 const CELESTIAL = "https://www.celestiallights.in";
 const { updated: UPDATED, modified: MODIFIED } = guideDates(PATH);
+const HERO_IMAGE = "/images/guides/colour-of-light/warm-living-dining-light.webp";
+const HERO_ALT =
+  "A city-apartment living and dining room at night in warm light, with a brass pendant, a glowing cove, and a city view beyond the windows";
+const BODY_IMAGE = "/images/guides/colour-of-light/beam-of-light-on-plaster-wall.webp";
+const BODY_ALT =
+  "A narrow beam of warm light from a ceiling slot falling across a plaster wall and the edge of a framed painting";
 
 export const metadata: Metadata = {
   title: META_TITLE,
   description: DESC,
   alternates: { canonical: PATH },
+  openGraph: {
+    title: META_TITLE,
+    description: DESC,
+    images: [{ url: HERO_IMAGE, width: 1600, height: 893, alt: HERO_ALT }],
+  },
 };
 
 const rooms = [
@@ -72,7 +84,7 @@ const articleSchema = {
   "@type": "Article",
   headline: TITLE,
   description: DESC,
-  image: `${site.domain}/lifestyle/lobby-canopy.jpg`,
+  image: `${site.domain}${HERO_IMAGE}`,
   author: { "@type": "Organization", name: site.name, url: site.domain },
   publisher: {
     "@type": "Organization",
@@ -134,6 +146,29 @@ export default function ColourOfLightGuide() {
 
       <section className="sec" style={{ paddingTop: 0 }}>
         <div className="wrap-tight">
+          <figure>
+            <div
+              style={{
+                position: "relative",
+                aspectRatio: "16 / 10",
+                borderRadius: 18,
+                overflow: "hidden",
+              }}
+            >
+              <Image
+                src={HERO_IMAGE}
+                alt={HERO_ALT}
+                fill
+                priority
+                sizes="(max-width: 760px) 100vw, 760px"
+              />
+            </div>
+          </figure>
+        </div>
+      </section>
+
+      <section className="sec" style={{ paddingTop: 0 }}>
+        <div className="wrap-tight">
           <Reveal><h2 className="h-lg">Kelvin is colour, not brightness</h2></Reveal>
           <Reveal delay={0.06}>
             <p className="lede" style={{ marginTop: 16 }}>
@@ -143,6 +178,24 @@ export default function ColourOfLightGuide() {
               evening light.
             </p>
           </Reveal>
+          <figure style={{ marginTop: 28 }}>
+            <div
+              style={{
+                position: "relative",
+                aspectRatio: "4 / 3",
+                borderRadius: 18,
+                overflow: "hidden",
+              }}
+            >
+              <Image
+                src={BODY_IMAGE}
+                alt={BODY_ALT}
+                fill
+                sizes="(max-width: 760px) 100vw, 760px"
+              />
+            </div>
+          </figure>
+
           <Reveal delay={0.12}>
             <div className="spec-wrap">
               <table className="spec-table">

@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import type { Metadata } from "next";
 import { site } from "@/lib/site";
@@ -15,11 +16,22 @@ const DESC =
 const PATH = "/guides/how-a-lighting-plan-is-built";
 const CELESTIAL = "https://www.celestiallights.in";
 const { updated: UPDATED, modified: MODIFIED } = guideDates(PATH);
+const HERO_IMAGE = "/images/guides/how-a-lighting-plan-is-built/layered-living-room-lighting.webp";
+const HERO_ALT =
+  "A city-apartment living room with a hidden ceiling cove, recessed downlights, a pendant over the coffee table, and a wash on a stone wall";
+const BODY_IMAGE = "/images/guides/how-a-lighting-plan-is-built/hidden-led-cove-strip.webp";
+const BODY_ALT =
+  "A hidden LED cove strip washing the edge of a ceiling, with the lamp itself out of view";
 
 export const metadata: Metadata = {
   title: META_TITLE,
   description: DESC,
   alternates: { canonical: PATH },
+  openGraph: {
+    title: META_TITLE,
+    description: DESC,
+    images: [{ url: HERO_IMAGE, width: 1600, height: 893, alt: HERO_ALT }],
+  },
 };
 
 const steps = [
@@ -81,7 +93,7 @@ const articleSchema = {
   "@type": "Article",
   headline: TITLE,
   description: DESC,
-  image: `${site.domain}/photos/living-room.jpg`,
+  image: `${site.domain}${HERO_IMAGE}`,
   author: { "@type": "Organization", name: site.name, url: site.domain },
   publisher: {
     "@type": "Organization",
@@ -141,6 +153,29 @@ export default function LightingPlanGuide() {
       </section>
 
       <section className="sec" style={{ paddingTop: 0 }}>
+        <div className="wrap-tight">
+          <figure>
+            <div
+              style={{
+                position: "relative",
+                aspectRatio: "16 / 10",
+                borderRadius: 18,
+                overflow: "hidden",
+              }}
+            >
+              <Image
+                src={HERO_IMAGE}
+                alt={HERO_ALT}
+                fill
+                priority
+                sizes="(max-width: 760px) 100vw, 760px"
+              />
+            </div>
+          </figure>
+        </div>
+      </section>
+
+      <section className="sec" style={{ paddingTop: 0 }}>
         <div className="wrap">
           <Stagger className="register">
             {steps.map((step) => (
@@ -167,6 +202,24 @@ export default function LightingPlanGuide() {
               The plan is where those numbers get a place in the room.
             </p>
           </Reveal>
+          <figure style={{ marginTop: 28 }}>
+            <div
+              style={{
+                position: "relative",
+                aspectRatio: "4 / 3",
+                borderRadius: 18,
+                overflow: "hidden",
+              }}
+            >
+              <Image
+                src={BODY_IMAGE}
+                alt={BODY_ALT}
+                fill
+                sizes="(max-width: 760px) 100vw, 760px"
+              />
+            </div>
+          </figure>
+
           <Reveal delay={0.12}>
             <ul className="check-list" style={{ marginTop: 28 }}>
               <li><span className="tick">✓</span>A point for every layer, drawn against the furniture, not against a blank ceiling.</li>

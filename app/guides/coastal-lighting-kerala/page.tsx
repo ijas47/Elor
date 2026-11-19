@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import type { Metadata } from "next";
 import { site } from "@/lib/site";
@@ -15,11 +16,22 @@ const DESC =
 const PATH = "/guides/coastal-lighting-kerala";
 const CELESTIAL = "https://www.celestiallights.in";
 const { updated: UPDATED, modified: MODIFIED } = guideDates(PATH);
+const HERO_IMAGE = "/images/guides/coastal-lighting-kerala/coastal-villa-sit-out-lighting.webp";
+const HERO_ALT =
+  "A coastal villa sit-out at dusk with teak furniture, up-down wall lights, and a downlight under the roof overhang, the sea visible beyond";
+const BODY_IMAGE = "/images/guides/coastal-lighting-kerala/outdoor-up-down-wall-light.webp";
+const BODY_ALT =
+  "A black outdoor wall light casting a band of light up and down a pale wall";
 
 export const metadata: Metadata = {
   title: META_TITLE,
   description: DESC,
   alternates: { canonical: PATH },
+  openGraph: {
+    title: META_TITLE,
+    description: DESC,
+    images: [{ url: HERO_IMAGE, width: 1600, height: 893, alt: HERO_ALT }],
+  },
 };
 
 const zones = [
@@ -73,7 +85,7 @@ const articleSchema = {
   "@type": "Article",
   headline: TITLE,
   description: DESC,
-  image: `${site.domain}/spaces/outdoor.jpg`,
+  image: `${site.domain}${HERO_IMAGE}`,
   author: { "@type": "Organization", name: site.name, url: site.domain },
   publisher: {
     "@type": "Organization",
@@ -130,6 +142,29 @@ export default function CoastalLightingGuide() {
               not affected.
             </p>
           </Reveal>
+        </div>
+      </section>
+
+      <section className="sec" style={{ paddingTop: 0 }}>
+        <div className="wrap-tight">
+          <figure>
+            <div
+              style={{
+                position: "relative",
+                aspectRatio: "16 / 10",
+                borderRadius: 18,
+                overflow: "hidden",
+              }}
+            >
+              <Image
+                src={HERO_IMAGE}
+                alt={HERO_ALT}
+                fill
+                priority
+                sizes="(max-width: 760px) 100vw, 760px"
+              />
+            </div>
+          </figure>
         </div>
       </section>
 
@@ -199,6 +234,24 @@ export default function CoastalLightingGuide() {
               . This page stays the salt and humidity guide; that one stays the codes.
             </p>
           </Reveal>
+          <figure style={{ marginTop: 28 }}>
+            <div
+              style={{
+                position: "relative",
+                aspectRatio: "4 / 3",
+                borderRadius: 18,
+                overflow: "hidden",
+              }}
+            >
+              <Image
+                src={BODY_IMAGE}
+                alt={BODY_ALT}
+                fill
+                sizes="(max-width: 760px) 100vw, 760px"
+              />
+            </div>
+          </figure>
+
           <Reveal delay={0.12}>
             <div className="spec-wrap">
               <table className="spec-table">
