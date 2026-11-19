@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import type { Metadata } from "next";
 import { site } from "@/lib/site";
@@ -16,10 +17,22 @@ const PATH = "/guides/cove-lighting-kerala";
 const CELESTIAL = "https://www.celestiallights.in";
 const { updated: UPDATED, modified: MODIFIED } = guideDates(PATH);
 
+const HERO_IMAGE = "/images/guides/cove-lighting-kerala/kerala-living-room-cove-lighting.webp";
+const HERO_ALT =
+  "A living room with laterite walls, teak seating, and warm cove light washing a tray ceiling";
+const BODY_IMAGE = "/images/guides/cove-lighting-kerala/hidden-led-cove-strip.webp";
+const BODY_ALT =
+  "A hidden LED strip set in the lip of a gypsum cove, washing the ceiling with warm light";
+
 export const metadata: Metadata = {
   title: TITLE,
   description: DESC,
   alternates: { canonical: PATH },
+  openGraph: {
+    title: TITLE,
+    description: DESC,
+    images: [{ url: HERO_IMAGE, width: 1600, height: 893, alt: HERO_ALT }],
+  },
 };
 
 const faqs = [
@@ -39,6 +52,7 @@ const articleSchema = {
   "@type": "Article",
   headline: "Cove and profile lighting for a Kerala false ceiling",
   description: DESC,
+  image: `${site.domain}${HERO_IMAGE}`,
   author: { "@type": "Organization", name: site.name, url: site.domain },
   publisher: {
     "@type": "Organization",
@@ -107,6 +121,28 @@ export default function CoveLightingGuide() {
         </div>
       </section>
 
+
+      <section className="sec" style={{ paddingTop: 0 }}>
+        <div className="wrap-tight">
+          <div
+            style={{
+              position: "relative",
+              aspectRatio: "16 / 10",
+              borderRadius: 18,
+              overflow: "hidden",
+            }}
+          >
+            <Image
+              src={HERO_IMAGE}
+              alt={HERO_ALT}
+              fill
+              priority
+              sizes="(max-width: 760px) 100vw, 760px"
+            />
+          </div>
+        </div>
+      </section>
+
       <section className="sec" style={{ paddingTop: 0 }}>
         <div className="wrap">
           <div className="register">
@@ -135,6 +171,24 @@ export default function CoveLightingGuide() {
               <div>
                 <p>Stand where people sit, usually the sofa, and look up. If you can see the dots, the lip is too shallow or the profile has no diffuser. The fix is in the drawing, not in a brighter strip.</p>
                 <p style={{ marginTop: 16 }}>A shallow lip is a common miss in a hurry. So is a strip left bare in a recess that can be seen from the dining chair. Get the depth right before the boards go up.</p>
+
+                <figure style={{ marginTop: 24, marginBottom: 0 }}>
+                  <div
+                    style={{
+                      position: "relative",
+                      aspectRatio: "4 / 3",
+                      borderRadius: 18,
+                      overflow: "hidden",
+                    }}
+                  >
+                    <Image
+                      src={BODY_IMAGE}
+                      alt={BODY_ALT}
+                      fill
+                      sizes="(max-width: 760px) 100vw, 480px"
+                    />
+                  </div>
+                </figure>
               </div>
             </div>
             <div className="register-row">
