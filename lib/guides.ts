@@ -45,7 +45,7 @@ const entries: GuideEntry[] = [
   },
   {
     slug: "chandelier-for-living-room",
-    title: "Living Room Chandelier for Kerala Homes",
+    title: "Living Room Chandeliers in India (Kerala Tips)",
     dek: "Size it to the seating, clear the fan, and put the anchor in the slab before the ceiling closes.",
     tag: "Buying Guide",
     image: "/images/guides/chandelier-for-living-room/living-room-crystal-chandelier.webp",
@@ -65,7 +65,7 @@ const entries: GuideEntry[] = [
   },
   {
     slug: "home-lighting-design",
-    title: "Home Lighting Design for Kerala Houses",
+    title: "Home Lighting Design in India (Kerala Tips)",
     dek: "One plan for every room, written before the ceilings close. The same job as a house lighting design.",
     tag: "Technical",
     image: "/images/guides/home-lighting-design/living-room-layered-lighting.webp",
@@ -75,7 +75,7 @@ const entries: GuideEntry[] = [
   },
   {
     slug: "staircase-lighting-design",
-    title: "Staircase Lighting for Kerala Homes",
+    title: "Staircase Lighting for Indian Homes (Kerala Tips)",
     dek: "Light the nose of each tread, and hang the void from the slab. The two are separate decisions.",
     tag: "Technical",
     image: "/images/guides/staircase-lighting-design/crystal-cascade-staircase.webp",
@@ -85,7 +85,7 @@ const entries: GuideEntry[] = [
   },
   {
     slug: "bedroom-lighting-design",
-    title: "Bedroom Lighting for Kerala Homes",
+    title: "Bedroom Lighting for Indian Homes (Kerala Tips)",
     dek: "Nothing bright over the pillow. A reading light on its own switch, and a dimmable piece in the ceiling.",
     tag: "Technical",
     image: "/images/guides/bedroom-lighting-design/bedroom-dome-pendant.webp",
@@ -95,7 +95,7 @@ const entries: GuideEntry[] = [
   },
   {
     slug: "kitchen-lighting-design",
-    title: "Kitchen Lighting for Kerala Homes",
+    title: "Kitchen Lighting for Indian Homes (Kerala Tips)",
     dek: "The worktop gets its own light. The pendant over the island is a second circuit, not the task light.",
     tag: "Technical",
     image: "/images/guides/kitchen-lighting-design/apartment-kitchen-task-and-pendant-lighting.webp",
@@ -205,7 +205,7 @@ const entries: GuideEntry[] = [
   },
   {
     slug: "coastal-lighting-kerala",
-    title: "Coastal & Humid Climate Lighting in Kerala",
+    title: "Coastal Lighting in India (Kerala Tips)",
     dek: "Salt air pits untreated brass and iron within two seasons. What lasts, what IP rating you need, and the fixings that fail first.",
     tag: "Technical",
     image: "/images/guides/coastal-lighting-kerala/coastal-villa-sit-out-lighting.webp",
@@ -235,7 +235,7 @@ const entries: GuideEntry[] = [
   },
   {
     slug: "cove-lighting-kerala",
-    title: "Cove and Profile Lighting for a Kerala Ceiling",
+    title: "Cove Lighting for Indian Homes (Kerala Tips)",
     dek: "Draw the recess before the ceiling closes, hide the strip behind a lip, and keep it on its own dimmer.",
     tag: "Technical",
     image: "/images/guides/cove-lighting-kerala/kerala-living-room-cove-lighting.webp",
@@ -245,7 +245,7 @@ const entries: GuideEntry[] = [
   },
   {
     slug: "downlight-placement",
-    title: "How to Place Downlights in a Kerala Home",
+    title: "Downlight Placement in India (Kerala Tips)",
     dek: "Start from the furniture, hide the lamp in a deep fitting, and plan the spots with the fan, cove and chandelier.",
     tag: "Technical",
     image: "/images/guides/downlight-placement/downlights-over-living-room-seating.webp",
@@ -265,7 +265,7 @@ const entries: GuideEntry[] = [
   },
   {
     slug: "bathroom-lighting-design",
-    title: "Bathroom Lighting Design for Kerala Homes",
+    title: "Bathroom Lighting for Indian Homes (Kerala Tips)",
     dek: "Plan the points before the tiles go on, light the face from the sides, and use a fitting rated for a damp room.",
     tag: "Technical",
     image: "/images/guides/bathroom-lighting-design/kerala-bathroom-vanity-lighting.webp",
@@ -275,7 +275,7 @@ const entries: GuideEntry[] = [
   },
   {
     slug: "outdoor-balcony-lighting-kerala",
-    title: "Outdoor and Balcony Lighting for a Kerala Home",
+    title: "Outdoor Lighting for Indian Homes (Kerala Tips)",
     dek: "Light the seat, the door and the steps first, and choose fittings for the monsoon before the plaster goes on.",
     tag: "Technical",
     image: "/images/guides/outdoor-balcony-lighting-kerala/kerala-villa-facade-lighting.webp",

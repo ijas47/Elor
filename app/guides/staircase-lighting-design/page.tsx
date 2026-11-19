@@ -10,10 +10,10 @@ import { MagneticButton } from "@/components/motion/MagneticButton";
 import { RelatedGuides } from "@/components/ui/RelatedGuides";
 import { guideArticles } from "@/lib/guide-articles";
 
-const TITLE = "Staircase Lighting for Kerala Homes";
+const TITLE = "Staircase Lighting for Indian Homes (Kerala Tips)";
 const CRUMB = "Staircase Lighting Design";
 const DESC =
-  "Staircase lighting design for Kerala homes: light each tread without glare, hang the double-height void from the slab, and keep the fan clear of the cascade.";
+  "Staircase lighting for Indian homes (Kerala tips): light each tread without glare, hang the void from the slab, and keep the fan clear of the cascade.";
 const PATH = "/guides/staircase-lighting-design";
 const CELESTIAL = "https://www.celestiallights.in";
 const HERO_IMAGE = "/images/guides/staircase-lighting-design/crystal-cascade-staircase.webp";

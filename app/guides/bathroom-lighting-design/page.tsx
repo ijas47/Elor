@@ -9,10 +9,10 @@ import { Reveal } from "@/components/motion/Reveal";
 import { MagneticButton } from "@/components/motion/MagneticButton";
 import { RelatedGuides } from "@/components/ui/RelatedGuides";
 
-const TITLE = "Bathroom Lighting Design for Kerala Homes";
-const CRUMB = "Bathroom Lighting Design for Kerala Homes";
+const TITLE = "Bathroom Lighting for Indian Homes (Kerala Tips)";
+const CRUMB = "Bathroom Lighting for Indian Homes (Kerala Tips)";
 const DESC =
-  "Bathroom lighting for Kerala homes: plan it before tiling, light the mirror from the sides, and use a fitting rated for a damp room.";
+  "Bathroom lighting for Indian homes: plan it before tiling, light the mirror from the sides, and use a damp-rated fitting. Kerala humidity tips included.";
 const PATH = "/guides/bathroom-lighting-design";
 const CELESTIAL = "https://www.celestiallights.in";
 const { updated: UPDATED, modified: MODIFIED } = guideDates(PATH);
@@ -54,7 +54,7 @@ const faqBodies = [
 const articleSchema = {
   "@context": "https://schema.org",
   "@type": "Article",
-  headline: "Bathroom lighting design for a Kerala home",
+  headline: "Bathroom lighting design for Indian homes (Kerala tips)",
   description: DESC,
   image: `${site.domain}${HERO_IMAGE}`,
   author: { "@type": "Organization", name: site.name, url: site.domain },
@@ -103,7 +103,7 @@ export default function BathroomLightingGuide() {
           </Reveal>
           <Reveal delay={0.06}>
             <h1 className="h-xl" style={{ marginTop: 18 }}>
-              Bathroom lighting design for a Kerala home
+              Bathroom lighting design for Indian homes (Kerala tips)
             </h1>
           </Reveal>
           <Reveal delay={0.12}>

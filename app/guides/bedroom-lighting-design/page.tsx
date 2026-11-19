@@ -10,10 +10,10 @@ import { MagneticButton } from "@/components/motion/MagneticButton";
 import { RelatedGuides } from "@/components/ui/RelatedGuides";
 import { guideArticles } from "@/lib/guide-articles";
 
-const TITLE = "Bedroom Lighting for Kerala Homes";
+const TITLE = "Bedroom Lighting for Indian Homes (Kerala Tips)";
 const CRUMB = "Bedroom Lighting Design";
 const DESC =
-  "Bedroom lighting design for Kerala homes: no bright lamp in sight of the pillow, reading light on its own switch, and the fan kept clear of the ceiling piece.";
+  "Bedroom lighting for Indian homes (Kerala tips): no bright lamp in sight of the pillow, reading light on its own switch, and the fan clear of the ceiling piece.";
 const PATH = "/guides/bedroom-lighting-design";
 const CELESTIAL = "https://www.celestiallights.in";
 const { updated: UPDATED, modified: MODIFIED } = guideDates(PATH);

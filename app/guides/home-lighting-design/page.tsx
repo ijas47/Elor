@@ -10,10 +10,10 @@ import { MagneticButton } from "@/components/motion/MagneticButton";
 import { RelatedGuides } from "@/components/ui/RelatedGuides";
 import { guideArticles } from "@/lib/guide-articles";
 
-const TITLE = "Home Lighting Design for Kerala Houses";
+const TITLE = "Home Lighting Design in India (Kerala Tips)";
 const CRUMB = "Home Lighting Design";
 const DESC =
-  "Home lighting design for Kerala houses: one plan for every room and the outside, drawn before the ceilings close, with consistent colour and separate circuits.";
+  "Home lighting for Indian homes (Kerala tips): one plan for every room and the outside, drawn before ceilings close, with even colour and separate circuits.";
 const PATH = "/guides/home-lighting-design";
 const CELESTIAL = "https://www.celestiallights.in";
 const { updated: UPDATED, modified: MODIFIED } = guideDates(PATH);

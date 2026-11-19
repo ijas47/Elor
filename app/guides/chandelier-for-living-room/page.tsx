@@ -9,9 +9,9 @@ import { Reveal } from "@/components/motion/Reveal";
 import { MagneticButton } from "@/components/motion/MagneticButton";
 import { RelatedGuides } from "@/components/ui/RelatedGuides";
 
-const TITLE = "Living Room Chandelier for Kerala Homes";
+const TITLE = "Living Room Chandeliers in India (Kerala Tips)";
 const DESC =
-  "A jhumar is a chandelier. In a Kerala living room, size it to the seating, keep it off the fan, fix it to the slab and suit the humidity.";
+  "A jhumar is a chandelier. In an Indian living room (Kerala tips): size it to the seating, keep it off the fan, fix it to the slab and suit the humidity.";
 const PATH = "/guides/chandelier-for-living-room";
 const CELESTIAL = "https://www.celestiallights.in";
 const { updated: UPDATED, modified: MODIFIED } = guideDates(PATH);
@@ -117,7 +117,7 @@ export default function LivingRoomChandelierGuide() {
           <Reveal as="span"><span className="eyebrow">Buying guide · Updated {UPDATED}</span></Reveal>
           <Reveal delay={0.06}>
             <h1 className="h-xl" style={{ marginTop: 18 }}>
-              A living room chandelier<br /><span className="serif-i">for a Kerala home.</span>
+              A living room chandelier<br /><span className="serif-i">for Indian homes.</span>
             </h1>
           </Reveal>
           <Reveal delay={0.12}>

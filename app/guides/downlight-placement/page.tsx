@@ -9,10 +9,10 @@ import { Reveal } from "@/components/motion/Reveal";
 import { MagneticButton } from "@/components/motion/MagneticButton";
 import { RelatedGuides } from "@/components/ui/RelatedGuides";
 
-const TITLE = "How to Place Downlights in a Kerala Home";
-const CRUMB = "How to Place Downlights in a Kerala Home";
+const TITLE = "Downlight Placement in India (Kerala Tips)";
+const CRUMB = "Downlight Placement in India (Kerala Tips)";
 const DESC =
-  "How to place downlights in a Kerala home: start from the furniture, hide the lamp in a deep fitting, and plan them with the fan, cove, and chandelier.";
+  "How to place downlights in Indian homes (Kerala tips): start from the furniture, hide the lamp in a deep fitting, and plan with the fan, cove and chandelier.";
 const PATH = "/guides/downlight-placement";
 const CELESTIAL = "https://www.celestiallights.in";
 const { updated: UPDATED, modified: MODIFIED } = guideDates(PATH);
@@ -50,7 +50,7 @@ const faqBodies = [
 const articleSchema = {
   "@context": "https://schema.org",
   "@type": "Article",
-  headline: "How to place downlights in a Kerala home",
+  headline: "How to place downlights in Indian homes (Kerala tips)",
   description: DESC,
   image: `${site.domain}${HERO_IMAGE}`,
   author: { "@type": "Organization", name: site.name, url: site.domain },
@@ -99,7 +99,7 @@ export default function DownlightPlacementGuide() {
           </Reveal>
           <Reveal delay={0.06}>
             <h1 className="h-xl" style={{ marginTop: 18 }}>
-              How to place downlights in a Kerala home
+              How to place downlights in Indian homes (Kerala tips)
             </h1>
           </Reveal>
           <Reveal delay={0.12}>
