@@ -268,7 +268,7 @@ const entries: GuideEntry[] = [
     dek: "Light the seat, the door and the steps first, and choose fittings for the monsoon before the plaster goes on.",
     tag: "Technical",
     image: "/images/guides/outdoor-balcony-lighting-kerala/kerala-villa-facade-lighting.webp",
-    imageAlt: "A tropical modern Kerala villa at night, with warm facade uplights, path lights along the driveway, and a lit balcony",
+    imageAlt: "A tropical modern villa at night, with warm facade uplights, path lights along the driveway, and a lit balcony",
     modified: "2026-11-19",
     related: ["ip-rating-for-outdoor-lights", "coastal-lighting-kerala", "home-lighting-design"],
   },

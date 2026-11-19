@@ -19,7 +19,7 @@ const { updated: UPDATED, modified: MODIFIED } = guideDates(PATH);
 
 const HERO_IMAGE = "/images/guides/outdoor-balcony-lighting-kerala/kerala-villa-facade-lighting.webp";
 const HERO_ALT =
-  "A tropical modern Kerala villa at night, with warm facade uplights, path lights along the driveway, and a lit balcony";
+  "A tropical modern villa at night, with warm facade uplights, path lights along the driveway, and a lit balcony";
 const BODY_IMAGE = "/images/guides/outdoor-balcony-lighting-kerala/facade-up-down-wall-light.webp";
 const BODY_ALT =
   "A black up-down wall light on a white facade, throwing a beam up and down the wall";
