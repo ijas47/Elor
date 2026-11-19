@@ -16,10 +16,22 @@ const PATH = "/guides/chandelier-for-living-room";
 const CELESTIAL = "https://www.celestiallights.in";
 const { updated: UPDATED, modified: MODIFIED } = guideDates(PATH);
 
+const HERO_IMAGE = "/images/guides/chandelier-for-living-room/living-room-crystal-chandelier.webp";
+const HERO_ALT =
+  "A crystal chandelier hanging over a seating group in a tall living room, with a warm wash along the curtains";
+const BODY_IMAGE = "/images/guides/chandelier-for-living-room/chandelier-and-ceiling-fan.webp";
+const BODY_ALT =
+  "A chandelier over a seating group and a ceiling fan on a separate point in the same living room";
+
 export const metadata: Metadata = {
   title: TITLE,
   description: DESC,
   alternates: { canonical: PATH },
+  openGraph: {
+    title: TITLE,
+    description: DESC,
+    images: [{ url: HERO_IMAGE, width: 1600, height: 1066, alt: HERO_ALT }],
+  },
 };
 
 const faqs: { q: string; a: string; visible?: "size" | "fan" }[] = [
@@ -60,7 +72,7 @@ const articleSchema = {
   "@type": "Article",
   headline: TITLE,
   description: DESC,
-  image: `${site.domain}/photos/living-room.jpg`,
+  image: `${site.domain}${HERO_IMAGE}`,
   author: { "@type": "Organization", name: site.name, url: site.domain },
   publisher: {
     "@type": "Organization",
@@ -142,8 +154,8 @@ export default function LivingRoomChandelierGuide() {
             }}
           >
             <Image
-              src="/photos/living-room.jpg"
-              alt="A living room at night with lit display shelves, a wood coffee table, and warm seating"
+              src={HERO_IMAGE}
+              alt={HERO_ALT}
               fill
               priority
               sizes="(max-width: 760px) 100vw, 760px"
@@ -216,6 +228,24 @@ export default function LivingRoomChandelierGuide() {
                   clearances are in{" "}
                   <Link href="/guides/chandelier-with-ceiling-fan">chandelier with a ceiling fan</Link>.
                 </p>
+
+                <figure style={{ marginTop: 24, marginBottom: 0 }}>
+                  <div
+                    style={{
+                      position: "relative",
+                      aspectRatio: "16 / 10",
+                      borderRadius: 18,
+                      overflow: "hidden",
+                    }}
+                  >
+                    <Image
+                      src={BODY_IMAGE}
+                      alt={BODY_ALT}
+                      fill
+                      sizes="(max-width: 760px) 100vw, 480px"
+                    />
+                  </div>
+                </figure>
               </div>
             </div>
 
