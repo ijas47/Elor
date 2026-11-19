@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import type { Metadata } from "next";
 import type { ReactNode } from "react";
@@ -16,11 +17,22 @@ const DESC =
 const PATH = "/guides/false-ceiling-chandelier-weight";
 const CELESTIAL = "https://www.celestiallights.in";
 const { updated: UPDATED, modified: MODIFIED } = guideDates(PATH);
+const HERO_IMAGE = "/images/guides/false-ceiling-chandelier-weight/double-height-crystal-chandelier.webp";
+const HERO_ALT =
+  "A rectangular crystal chandelier hanging in a double-height living room, with a warm cove along the curtains";
+const BODY_IMAGE = "/images/guides/false-ceiling-chandelier-weight/chandelier-from-recessed-ceiling-tray.webp";
+const BODY_ALT =
+  "A custom crystal chandelier hanging from a recessed ceiling tray in a double-height living room, seen from the upper gallery";
 
 export const metadata: Metadata = {
   title: META_TITLE,
   description: DESC,
   alternates: { canonical: PATH },
+  openGraph: {
+    title: META_TITLE,
+    description: DESC,
+    images: [{ url: HERO_IMAGE, width: 1600, height: 1066, alt: HERO_ALT }],
+  },
 };
 
 const steps: { h: string; p: string; extra?: ReactNode }[] = [
@@ -93,7 +105,7 @@ const articleSchema = {
   "@type": "Article",
   headline: TITLE,
   description: DESC,
-  image: `${site.domain}/work/w2-corridor.jpg`,
+  image: `${site.domain}${HERO_IMAGE}`,
   author: { "@type": "Organization", name: site.name, url: site.domain },
   publisher: {
     "@type": "Organization",
@@ -164,6 +176,29 @@ export default function FalseCeilingGuide() {
 
       <section className="sec" style={{ paddingTop: 0 }}>
         <div className="wrap-tight">
+          <figure>
+            <div
+              style={{
+                position: "relative",
+                aspectRatio: "16 / 10",
+                borderRadius: 18,
+                overflow: "hidden",
+              }}
+            >
+              <Image
+                src={HERO_IMAGE}
+                alt={HERO_ALT}
+                fill
+                priority
+                sizes="(max-width: 760px) 100vw, 760px"
+              />
+            </div>
+          </figure>
+        </div>
+      </section>
+
+      <section className="sec" style={{ paddingTop: 0 }}>
+        <div className="wrap-tight">
           <Reveal><h2 className="h-lg">What can each ceiling type carry?</h2></Reveal>
           <Reveal delay={0.12}>
             <div className="spec-wrap">
@@ -219,6 +254,24 @@ export default function FalseCeilingGuide() {
               ceiling can take on its own.
             </p>
           </Reveal>
+          <figure style={{ marginTop: 28 }}>
+            <div
+              style={{
+                position: "relative",
+                aspectRatio: "4 / 3",
+                borderRadius: 18,
+                overflow: "hidden",
+              }}
+            >
+              <Image
+                src={BODY_IMAGE}
+                alt={BODY_ALT}
+                fill
+                sizes="(max-width: 760px) 100vw, 760px"
+              />
+            </div>
+          </figure>
+
           <Reveal delay={0.12}>
             <div className="spec-wrap">
               <table className="spec-table">

@@ -1,3 +1,4 @@
+import Image from "next/image";
 import type { Metadata } from "next";
 import { site } from "@/lib/site";
 import { guideDates } from "@/lib/guides";
@@ -14,11 +15,22 @@ const DESC =
 const PATH = "/guides/why-downlights-glare";
 const CELESTIAL = "https://www.celestiallights.in";
 const { updated: UPDATED, modified: MODIFIED } = guideDates(PATH);
+const HERO_IMAGE = "/images/guides/why-downlights-glare/downlights-over-seating.webp";
+const HERO_ALT =
+  "A living room with recessed downlights in the ceiling above a sofa, a wooden ceiling fan, and a laterite wall";
+const BODY_IMAGE = "/images/guides/why-downlights-glare/deep-recessed-downlight.webp";
+const BODY_ALT =
+  "A close-up of a deep recessed downlight with the lamp hidden inside a baffle, beside a wooden fan blade";
 
 export const metadata: Metadata = {
   title: META_TITLE,
   description: DESC,
   alternates: { canonical: PATH },
+  openGraph: {
+    title: META_TITLE,
+    description: DESC,
+    images: [{ url: HERO_IMAGE, width: 1600, height: 893, alt: HERO_ALT }],
+  },
 };
 
 const checks = [
@@ -68,7 +80,7 @@ const articleSchema = {
   "@type": "Article",
   headline: TITLE,
   description: DESC,
-  image: `${site.domain}/photos/living-room.jpg`,
+  image: `${site.domain}${HERO_IMAGE}`,
   author: { "@type": "Organization", name: site.name, url: site.domain },
   publisher: {
     "@type": "Organization",
@@ -130,6 +142,29 @@ export default function DownlightGlareGuide() {
       </section>
 
       <section className="sec" style={{ paddingTop: 0 }}>
+        <div className="wrap-tight">
+          <figure>
+            <div
+              style={{
+                position: "relative",
+                aspectRatio: "16 / 10",
+                borderRadius: 18,
+                overflow: "hidden",
+              }}
+            >
+              <Image
+                src={HERO_IMAGE}
+                alt={HERO_ALT}
+                fill
+                priority
+                sizes="(max-width: 760px) 100vw, 760px"
+              />
+            </div>
+          </figure>
+        </div>
+      </section>
+
+      <section className="sec" style={{ paddingTop: 0 }}>
         <div className="wrap">
           <Stagger className="register">
             {checks.map((item) => (
@@ -139,6 +174,29 @@ export default function DownlightGlareGuide() {
               </StaggerItem>
             ))}
           </Stagger>
+        </div>
+      </section>
+
+      <section className="sec" style={{ paddingTop: 0 }}>
+        <div className="wrap-tight">
+          <figure style={{ marginTop: 28 }}>
+            <div
+              style={{
+                position: "relative",
+                aspectRatio: "4 / 3",
+                borderRadius: 18,
+                overflow: "hidden",
+              }}
+            >
+              <Image
+                src={BODY_IMAGE}
+                alt={BODY_ALT}
+                fill
+                sizes="(max-width: 760px) 100vw, 760px"
+              />
+            </div>
+          </figure>
+
         </div>
       </section>
 

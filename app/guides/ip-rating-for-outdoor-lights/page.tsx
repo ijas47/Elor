@@ -15,11 +15,22 @@ const DESC =
 const PATH = "/guides/ip-rating-for-outdoor-lights";
 const CELESTIAL = "https://www.celestiallights.in";
 const { updated: UPDATED, modified: MODIFIED } = guideDates(PATH);
+const HERO_IMAGE = "/images/guides/ip-rating-for-outdoor-lights/facade-terrace-lighting.webp";
+const HERO_ALT =
+  "A house facade at night with warm light lining each terrace edge";
+const BODY_IMAGE = "/images/guides/ip-rating-for-outdoor-lights/outdoor-up-down-wall-light.webp";
+const BODY_ALT =
+  "A black outdoor wall light casting a band of light up and down a pale wall";
 
 export const metadata: Metadata = {
   title: TITLE,
   description: DESC,
   alternates: { canonical: PATH },
+  openGraph: {
+    title: TITLE,
+    description: DESC,
+    images: [{ url: HERO_IMAGE, width: 720, height: 450, alt: HERO_ALT }],
+  },
 };
 
 const steps = [
@@ -69,7 +80,7 @@ const articleSchema = {
   "@type": "Article",
   headline: TITLE,
   description: DESC,
-  image: `${site.domain}/spaces/outdoor.jpg`,
+  image: `${site.domain}${HERO_IMAGE}`,
   author: { "@type": "Organization", name: site.name, url: site.domain },
   publisher: {
     "@type": "Organization",
@@ -145,24 +156,27 @@ export default function IpRatingGuide() {
         </div>
       </section>
 
+
       <section className="sec" style={{ paddingTop: 0 }}>
         <div className="wrap-tight">
-          <div
-            style={{
-              position: "relative",
-              aspectRatio: "16 / 10",
-              borderRadius: 18,
-              overflow: "hidden",
-            }}
-          >
-            <Image
-              src="/spaces/outdoor.jpg"
-              alt="A building facade at night with its terraces outlined in warm light"
-              fill
-              priority
-              sizes="(max-width: 760px) 100vw, 760px"
-            />
-          </div>
+          <figure>
+            <div
+              style={{
+                position: "relative",
+                aspectRatio: "16 / 10",
+                borderRadius: 18,
+                overflow: "hidden",
+              }}
+            >
+              <Image
+                src={HERO_IMAGE}
+                alt={HERO_ALT}
+                fill
+                priority
+                sizes="(max-width: 760px) 100vw, 760px"
+              />
+            </div>
+          </figure>
         </div>
       </section>
 
@@ -181,6 +195,24 @@ export default function IpRatingGuide() {
                   monsoon rain against a wall behaves like. IP66 and IP67
                   take heavy jets or immersion.
                 </p>
+                <figure style={{ marginTop: 24, marginBottom: 0 }}>
+                  <div
+                    style={{
+                      position: "relative",
+                      aspectRatio: "4 / 3",
+                      borderRadius: 18,
+                      overflow: "hidden",
+                    }}
+                  >
+                    <Image
+                      src={BODY_IMAGE}
+                      alt={BODY_ALT}
+                      fill
+                      sizes="(max-width: 760px) 100vw, 480px"
+                    />
+                  </div>
+                </figure>
+
               </div>
             </div>
             <div className="register-row">

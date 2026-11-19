@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import type { Metadata } from "next";
 import { site } from "@/lib/site";
@@ -14,6 +15,12 @@ const DESC =
 const PATH = "/guides/how-to-choose-a-custom-chandelier";
 const CELESTIAL = "https://www.celestiallights.in";
 const { updated: UPDATED, modified: MODIFIED } = guideDates(PATH);
+const HERO_IMAGE = "/images/guides/how-to-choose-a-custom-chandelier/custom-lobby-chandelier.webp";
+const HERO_ALT =
+  "A large custom chandelier of dark hanging shards in a double-height lobby";
+const BODY_IMAGE = "/images/guides/how-to-choose-a-custom-chandelier/custom-crystal-in-double-height-room.webp";
+const BODY_ALT =
+  "A custom crystal chandelier hanging from a recessed ceiling tray in a double-height living room, seen from the upper gallery";
 
 const faqs = [
   {
@@ -72,6 +79,7 @@ const articleSchema = {
   "@type": "Article",
   headline: H1,
   description: DESC,
+  image: `${site.domain}${HERO_IMAGE}`,
   author: { "@type": "Organization", name: site.name, url: site.domain },
   publisher: {
     "@type": "Organization",
@@ -97,6 +105,11 @@ export const metadata: Metadata = {
   title: TITLE,
   description: DESC,
   alternates: { canonical: PATH },
+  openGraph: {
+    title: TITLE,
+    description: DESC,
+    images: [{ url: HERO_IMAGE, width: 1024, height: 640, alt: HERO_ALT }],
+  },
 };
 
 export default function HowToChooseGuide() {
@@ -169,6 +182,29 @@ export default function HowToChooseGuide() {
 
       <section className="sec" style={{ paddingTop: 0 }}>
         <div className="wrap-tight">
+          <figure>
+            <div
+              style={{
+                position: "relative",
+                aspectRatio: "16 / 10",
+                borderRadius: 18,
+                overflow: "hidden",
+              }}
+            >
+              <Image
+                src={HERO_IMAGE}
+                alt={HERO_ALT}
+                fill
+                priority
+                sizes="(max-width: 760px) 100vw, 760px"
+              />
+            </div>
+          </figure>
+        </div>
+      </section>
+
+      <section className="sec" style={{ paddingTop: 0 }}>
+        <div className="wrap-tight">
           <Reveal>
             <h2 className="h-lg">When is a ready chandelier enough?</h2>
           </Reveal>
@@ -204,6 +240,24 @@ export default function HowToChooseGuide() {
               When the void is unusual, the stair turns, or the finish has to match the joinery. A double-height stair, a narrow hall, or a hotel that needs several matching pieces is often in this group. Send a photo, the sizes you have, and the ceiling type. Elor designs and builds that piece.
             </p>
           </Reveal>
+          <figure style={{ marginTop: 28 }}>
+            <div
+              style={{
+                position: "relative",
+                aspectRatio: "4 / 3",
+                borderRadius: 18,
+                overflow: "hidden",
+              }}
+            >
+              <Image
+                src={BODY_IMAGE}
+                alt={BODY_ALT}
+                fill
+                sizes="(max-width: 760px) 100vw, 760px"
+              />
+            </div>
+          </figure>
+
           <Reveal delay={0.1}>
             <p className="lede" style={{ marginTop: 16 }}>
               How that work runs is on{" "}
