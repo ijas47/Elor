@@ -242,6 +242,16 @@ const entries: GuideEntry[] = [
     modified: "2026-11-19",
     related: ["why-downlights-glare", "cove-lighting-kerala", "ceiling-and-lighting-design"],
   },
+  {
+    slug: "track-lighting",
+    title: "Track and Magnetic Track Lighting for a Home",
+    dek: "Use track for an aimed wall or a room that will change, and plan the feed before the ceiling closes.",
+    tag: "Technical",
+    image: "/photos/living-room.jpg",
+    imageAlt: "A living room at night with lit display shelves, a wood coffee table, and warm seating",
+    modified: "2026-11-19",
+    related: ["ceiling-and-lighting-design", "downlight-placement", "why-downlights-glare"],
+  },
 ];
 
 export interface Guide extends GuideEntry {
