@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import type { Metadata } from "next";
 import { site } from "@/lib/site";
@@ -15,11 +16,22 @@ const DESC =
 const PATH = "/guides/chandelier-with-ceiling-fan";
 const CELESTIAL = "https://www.celestiallights.in";
 const { updated: UPDATED, modified: MODIFIED } = guideDates(PATH);
+const HERO_IMAGE = "/images/guides/chandelier-with-ceiling-fan/chandelier-and-ceiling-fan.webp";
+const HERO_ALT =
+  "A living room with a crystal chandelier in one ceiling tray and a wooden ceiling fan in the other, both clear of each other";
+const BODY_IMAGE = "/images/guides/chandelier-with-ceiling-fan/pendant-and-ceiling-fan.webp";
+const BODY_ALT =
+  "A corner seating area with a black pendant and a ceiling fan sharing the same ceiling, with the pendant clear of the blades";
 
 export const metadata: Metadata = {
   title: META_TITLE,
   description: DESC,
   alternates: { canonical: PATH },
+  openGraph: {
+    title: META_TITLE,
+    description: DESC,
+    images: [{ url: HERO_IMAGE, width: 1600, height: 893, alt: HERO_ALT }],
+  },
 };
 
 const layouts = [
@@ -73,7 +85,7 @@ const articleSchema = {
   "@type": "Article",
   headline: TITLE,
   description: DESC,
-  image: `${site.domain}/work/w4-lounge.jpg`,
+  image: `${site.domain}${HERO_IMAGE}`,
   author: { "@type": "Organization", name: site.name, url: site.domain },
   publisher: {
     "@type": "Organization",
@@ -137,6 +149,29 @@ export default function CeilingFanGuide() {
 
       <section className="sec" style={{ paddingTop: 0 }}>
         <div className="wrap-tight">
+          <figure>
+            <div
+              style={{
+                position: "relative",
+                aspectRatio: "16 / 10",
+                borderRadius: 18,
+                overflow: "hidden",
+              }}
+            >
+              <Image
+                src={HERO_IMAGE}
+                alt={HERO_ALT}
+                fill
+                priority
+                sizes="(max-width: 760px) 100vw, 760px"
+              />
+            </div>
+          </figure>
+        </div>
+      </section>
+
+      <section className="sec" style={{ paddingTop: 0 }}>
+        <div className="wrap-tight">
           <Reveal><h2 className="h-lg">The clearance, in numbers</h2></Reveal>
           <Reveal delay={0.06}>
             <p className="lede" style={{ marginTop: 16 }}>
@@ -145,6 +180,24 @@ export default function CeilingFanGuide() {
               radius. Below that, the fixture sits in the airflow.
             </p>
           </Reveal>
+          <figure style={{ marginTop: 28 }}>
+            <div
+              style={{
+                position: "relative",
+                aspectRatio: "4 / 3",
+                borderRadius: 18,
+                overflow: "hidden",
+              }}
+            >
+              <Image
+                src={BODY_IMAGE}
+                alt={BODY_ALT}
+                fill
+                sizes="(max-width: 760px) 100vw, 760px"
+              />
+            </div>
+          </figure>
+
           <Reveal delay={0.12}>
             <div className="spec-wrap">
               <table className="spec-table">

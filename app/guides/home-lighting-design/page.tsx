@@ -17,6 +17,12 @@ const DESC =
 const PATH = "/guides/home-lighting-design";
 const CELESTIAL = "https://www.celestiallights.in";
 const { updated: UPDATED, modified: MODIFIED } = guideDates(PATH);
+const HERO_IMAGE = "/images/guides/home-lighting-design/living-room-layered-lighting.webp";
+const HERO_ALT =
+  "A living room with lit shelves, a pendant over a seating group, downlights in the ceiling, and a ceiling fan";
+const BODY_IMAGE = "/images/guides/home-lighting-design/bedroom-pendant-lighting.webp";
+const BODY_ALT =
+  "A bedroom with a low dome pendant hanging over the bed in warm light";
 const others = guideArticles.filter((item) => item.slug !== "home-lighting-design");
 
 const faqs = [
@@ -47,7 +53,7 @@ const articleSchema = {
   "@type": "Article",
   headline: TITLE,
   description: DESC,
-  image: `${site.domain}/spaces/outdoor.jpg`,
+  image: `${site.domain}${HERO_IMAGE}`,
   author: { "@type": "Organization", name: site.name, url: site.domain },
   publisher: {
     "@type": "Organization",
@@ -73,6 +79,11 @@ export const metadata: Metadata = {
   title: TITLE,
   description: DESC,
   alternates: { canonical: PATH },
+  openGraph: {
+    title: TITLE,
+    description: DESC,
+    images: [{ url: HERO_IMAGE, width: 1600, height: 1066, alt: HERO_ALT }],
+  },
 };
 
 function FaqAnswer({ q, a }: { q: string; a: string }) {
@@ -146,8 +157,8 @@ export default function HomeLightingDesignGuide() {
             }}
           >
             <Image
-              src="/spaces/outdoor.jpg"
-              alt="A building facade at night with its terraces outlined in warm light"
+              src={HERO_IMAGE}
+              alt={HERO_ALT}
               fill
               priority
               sizes="(max-width: 760px) 100vw, 760px"
@@ -188,6 +199,24 @@ export default function HomeLightingDesignGuide() {
                 <p>
                   The ones whose ceilings and walls close earliest: kitchens, bathrooms, and the stair. Mark those points first. Living, dining, and bedrooms follow. Outside comes into the same drawing, not as an afterthought, because the gate, the path, the car porch, the sit-out, and the facade need conduits laid before the paving and the plaster.
                 </p>
+                <figure style={{ marginTop: 24, marginBottom: 0 }}>
+                  <div
+                    style={{
+                      position: "relative",
+                      aspectRatio: "4 / 3",
+                      borderRadius: 18,
+                      overflow: "hidden",
+                    }}
+                  >
+                    <Image
+                      src={BODY_IMAGE}
+                      alt={BODY_ALT}
+                      fill
+                      sizes="(max-width: 760px) 100vw, 480px"
+                    />
+                  </div>
+                </figure>
+
               </div>
             </div>
             <div className="register-row">
