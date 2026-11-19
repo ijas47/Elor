@@ -1,3 +1,4 @@
+import Image from "next/image";
 import type { Metadata } from "next";
 import { site } from "@/lib/site";
 import { guideDates } from "@/lib/guides";
@@ -14,11 +15,22 @@ const DESC =
 const PATH = "/guides/how-to-choose-a-chandelier-shop";
 const CELESTIAL = "https://www.celestiallights.in";
 const { updated: UPDATED, modified: MODIFIED } = guideDates(PATH);
+const HERO_IMAGE = "/images/guides/how-to-choose-a-chandelier-shop/lighting-showroom-chandeliers.webp";
+const HERO_ALT =
+  "A lighting showroom with crystal, glass and brass chandeliers hanging over a stone floor, and an Indian city street visible through arched windows";
+const BODY_IMAGE = "/images/guides/how-to-choose-a-chandelier-shop/glass-petal-chandelier-detail.webp";
+const BODY_ALT =
+  "Close-up of glowing glass petal drops hanging from a chandelier, the kind of finish you inspect in a shop";
 
 export const metadata: Metadata = {
   title: META_TITLE,
   description: DESC,
   alternates: { canonical: PATH },
+  openGraph: {
+    title: META_TITLE,
+    description: DESC,
+    images: [{ url: HERO_IMAGE, width: 1600, height: 893, alt: HERO_ALT }],
+  },
 };
 
 const criteria = [
@@ -80,7 +92,7 @@ const articleSchema = {
   "@type": "Article",
   headline: TITLE,
   description: DESC,
-  image: `${site.domain}/video/showroom-petal.jpg`,
+  image: `${site.domain}${HERO_IMAGE}`,
   author: { "@type": "Organization", name: site.name, url: site.domain },
   publisher: {
     "@type": "Organization",
@@ -141,6 +153,29 @@ export default function ChooseAShopGuide() {
 
       <section className="sec" style={{ paddingTop: 0 }}>
         <div className="wrap-tight">
+          <figure>
+            <div
+              style={{
+                position: "relative",
+                aspectRatio: "16 / 10",
+                borderRadius: 18,
+                overflow: "hidden",
+              }}
+            >
+              <Image
+                src={HERO_IMAGE}
+                alt={HERO_ALT}
+                fill
+                priority
+                sizes="(max-width: 760px) 100vw, 760px"
+              />
+            </div>
+          </figure>
+        </div>
+      </section>
+
+      <section className="sec" style={{ paddingTop: 0 }}>
+        <div className="wrap-tight">
           <Reveal>
             <p className="lede">
               This is not a ranked list of shops. We cannot honestly judge
@@ -157,6 +192,24 @@ export default function ChooseAShopGuide() {
       <section className="sec glow-top">
         <div className="wrap-tight">
           <Reveal><h2 className="h-lg">Seven questions to ask</h2></Reveal>
+          <figure style={{ marginTop: 28 }}>
+            <div
+              style={{
+                position: "relative",
+                aspectRatio: "4 / 3",
+                borderRadius: 18,
+                overflow: "hidden",
+              }}
+            >
+              <Image
+                src={BODY_IMAGE}
+                alt={BODY_ALT}
+                fill
+                sizes="(max-width: 760px) 100vw, 760px"
+              />
+            </div>
+          </figure>
+
         </div>
         <div className="wrap">
           <Stagger className="register">

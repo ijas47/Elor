@@ -16,6 +16,12 @@ const DESC =
 const PATH = "/guides/how-to-clean-a-crystal-chandelier";
 const CELESTIAL = "https://www.celestiallights.in";
 const { updated: UPDATED, modified: MODIFIED } = guideDates(PATH);
+const HERO_IMAGE = "/images/guides/how-to-clean-a-crystal-chandelier/crystal-chandelier-living-room.webp";
+const HERO_ALT =
+  "A rectangular crystal chandelier hanging in a double-height living room, the kind of piece that is wiped in place";
+const BODY_IMAGE = "/images/guides/how-to-clean-a-crystal-chandelier/wiping-crystal-chandelier-drops.webp";
+const BODY_ALT =
+  "A gloved hand wiping hanging crystal chandelier drops with a soft white cloth";
 const others = guideArticles.filter((item) => item.slug !== "how-to-clean-a-crystal-chandelier");
 
 const steps = [
@@ -73,7 +79,7 @@ const articleSchema = {
   "@type": "Article",
   headline: TITLE,
   description: DESC,
-  image: `${site.domain}/video/showroom-crystal.jpg`,
+  image: `${site.domain}${HERO_IMAGE}`,
   author: { "@type": "Organization", name: site.name, url: site.domain },
   publisher: {
     "@type": "Organization",
@@ -112,6 +118,11 @@ export const metadata: Metadata = {
   title: TITLE,
   description: DESC,
   alternates: { canonical: PATH },
+  openGraph: {
+    title: TITLE,
+    description: DESC,
+    images: [{ url: HERO_IMAGE, width: 1600, height: 1066, alt: HERO_ALT }],
+  },
 };
 
 export default function HowToCleanCrystalChandelierGuide() {
@@ -164,8 +175,8 @@ export default function HowToCleanCrystalChandelierGuide() {
             }}
           >
             <Image
-              src="/video/showroom-crystal.jpg"
-              alt="Crystal chandeliers lit in the showroom"
+              src={HERO_IMAGE}
+              alt={HERO_ALT}
               fill
               priority
               sizes="(max-width: 760px) 100vw, 760px"
@@ -199,6 +210,23 @@ export default function HowToCleanCrystalChandelierGuide() {
                   </Link>
                   {" "}needs proper access: a stable platform, a second person, and the floor below cleared. If nobody can reach it safely, it is not a job for a household ladder.
                 </p>
+                <figure style={{ marginTop: 24, marginBottom: 0 }}>
+                  <div
+                    style={{
+                      position: "relative",
+                      aspectRatio: "4 / 3",
+                      borderRadius: 18,
+                      overflow: "hidden",
+                    }}
+                  >
+                    <Image
+                      src={BODY_IMAGE}
+                      alt={BODY_ALT}
+                      fill
+                      sizes="(max-width: 760px) 100vw, 480px"
+                    />
+                  </div>
+                </figure>
               </div>
             </div>
             <div className="register-row">
