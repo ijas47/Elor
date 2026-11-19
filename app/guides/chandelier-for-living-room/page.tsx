@@ -11,7 +11,7 @@ import { RelatedGuides } from "@/components/ui/RelatedGuides";
 
 const TITLE = "Living Room Chandelier for Kerala Homes";
 const DESC =
-  "How to choose a living room chandelier for a Kerala home: size it to the seating, keep it apart from the fan, anchor it to the slab, and suit it to humidity.";
+  "A jhumar is a chandelier. In a Kerala living room, size it to the seating, keep it off the fan, fix it to the slab and suit the humidity.";
 const PATH = "/guides/chandelier-for-living-room";
 const CELESTIAL = "https://www.celestiallights.in";
 const { updated: UPDATED, modified: MODIFIED } = guideDates(PATH);
@@ -23,6 +23,10 @@ export const metadata: Metadata = {
 };
 
 const faqs: { q: string; a: string; visible?: "size" | "fan" }[] = [
+  {
+    q: "Is a jhumar the same as a chandelier?",
+    a: "Yes. In ordinary Indian use, a jhumar or a jhoomer is a chandelier, especially for a hall or living room. Size it the same way: to the seating, off the fan, and fixed to the slab.",
+  },
   {
     q: "What size chandelier works in a Kerala living room?",
     a: "Size it to the seating group and the ceiling height, not to the full length of the hall. The chandelier size calculator on this site turns those two measurements into a diameter and a drop.",
@@ -106,15 +110,24 @@ export default function LivingRoomChandelierGuide() {
           </Reveal>
           <Reveal delay={0.12}>
             <p className="lede" style={{ marginTop: 22 }}>
-              Choose a living room chandelier in Kerala by the seating group,
-              not the whole hall. Keep it off the fan&apos;s point, fix it to
-              the slab before the false ceiling closes, and pick a finish that
-              stands the humidity. Put it on its own switch. Ready pieces are
-              at{" "}
+              A jhumar, or jhoomer, is a chandelier. Size it to the seating,
+              not the whole hall. Keep it off the fan, and fix it to the slab
+              before the false ceiling closes. Pick a finish that stands the
+              humidity. Ready pieces are at{" "}
               <a href={CELESTIAL} target="_blank" rel="noopener noreferrer">Celestial Lights</a>.
               {" "}Design is free with purchase from Celestial.
             </p>
           </Reveal>
+        </div>
+      </section>
+
+      <section className="sec" style={{ paddingTop: 0 }}>
+        <div className="wrap-tight">
+          <ul className="check-list">
+            <li><span className="tick">✓</span>Size it to the seating group, not the whole hall.</li>
+            <li><span className="tick">✓</span>Keep it off the fan, and fix it to the slab.</li>
+            <li><span className="tick">✓</span>A jhumar, or jhoomer, is the same hanging light.</li>
+          </ul>
         </div>
       </section>
 
@@ -142,6 +155,20 @@ export default function LivingRoomChandelierGuide() {
       <section className="sec" style={{ paddingTop: 0 }}>
         <div className="wrap">
           <div className="register">
+            <div className="register-row">
+              <h2>What people mean by a jhumar or jhoomer</h2>
+              <div>
+                <p>
+                  In ordinary Indian use, a jhumar or a jhoomer is a
+                  chandelier, especially for a hall or a living room. It is not
+                  a different product, and it does not need its own catalogue.
+                  The questions that follow are the same: how large, how it
+                  sits with a fan, how it is fixed, and whether a ready piece
+                  will do.
+                </p>
+              </div>
+            </div>
+
             <div className="register-row">
               <h2>What size chandelier suits a Kerala living room?</h2>
               <div>
