@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import type { Metadata } from "next";
 import { site } from "@/lib/site";
@@ -16,10 +17,22 @@ const PATH = "/guides/track-lighting";
 const CELESTIAL = "https://www.celestiallights.in";
 const { updated: UPDATED, modified: MODIFIED } = guideDates(PATH);
 
+const HERO_IMAGE = "/images/guides/track-lighting/ceiling-track-lighting-dining-room.webp";
+const HERO_ALT =
+  "A slim black ceiling track with adjustable heads aimed at a laterite wall and a teak dining table";
+const BODY_IMAGE = "/images/guides/track-lighting/track-lights-aimed-at-laterite-wall.webp";
+const BODY_ALT =
+  "Track lights aimed at a laterite wall and a painting, lighting the surface without flooding the room";
+
 export const metadata: Metadata = {
   title: TITLE,
   description: DESC,
   alternates: { canonical: PATH },
+  openGraph: {
+    title: TITLE,
+    description: DESC,
+    images: [{ url: HERO_IMAGE, width: 1600, height: 893, alt: HERO_ALT }],
+  },
 };
 
 const faqs = [
@@ -39,6 +52,7 @@ const articleSchema = {
   "@type": "Article",
   headline: "Track and magnetic track lighting for a home",
   description: DESC,
+  image: `${site.domain}${HERO_IMAGE}`,
   author: { "@type": "Organization", name: site.name, url: site.domain },
   publisher: {
     "@type": "Organization",
@@ -107,6 +121,28 @@ export default function TrackLightingGuide() {
         </div>
       </section>
 
+
+      <section className="sec" style={{ paddingTop: 0 }}>
+        <div className="wrap-tight">
+          <div
+            style={{
+              position: "relative",
+              aspectRatio: "16 / 10",
+              borderRadius: 18,
+              overflow: "hidden",
+            }}
+          >
+            <Image
+              src={HERO_IMAGE}
+              alt={HERO_ALT}
+              fill
+              priority
+              sizes="(max-width: 760px) 100vw, 760px"
+            />
+          </div>
+        </div>
+      </section>
+
       <section className="sec" style={{ paddingTop: 0 }}>
         <div className="wrap">
           <div className="register">
@@ -137,6 +173,24 @@ export default function TrackLightingGuide() {
               <div>
                 <p>Adjustable heads are useful, and they can shine straight into someone&apos;s eyes if they point at the sofa or along a sight line. Aim them at the wall, the worktop, or the object, not at the seated face. The same glare problem with downlights is explained in <Link href="/guides/why-downlights-glare" style={{ color: "var(--gold)" }}>why downlights glare</Link>. How to place fixed spots, when those are the better tool, is in <Link href="/guides/downlight-placement" style={{ color: "var(--gold)" }}>how to place downlights</Link>.</p>
                 <p style={{ marginTop: 16 }}>Match the colour of the track heads to the rest of the room. Those numbers are in <Link href="/guides/colour-of-light" style={{ color: "var(--gold)" }}>colour of light</Link>.</p>
+
+                <figure style={{ marginTop: 24, marginBottom: 0 }}>
+                  <div
+                    style={{
+                      position: "relative",
+                      aspectRatio: "4 / 3",
+                      borderRadius: 18,
+                      overflow: "hidden",
+                    }}
+                  >
+                    <Image
+                      src={BODY_IMAGE}
+                      alt={BODY_ALT}
+                      fill
+                      sizes="(max-width: 760px) 100vw, 480px"
+                    />
+                  </div>
+                </figure>
               </div>
             </div>
             <div className="register-row">
