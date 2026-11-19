@@ -222,6 +222,16 @@ const entries: GuideEntry[] = [
     modified: "2026-11-11",
     related: ["how-to-choose-a-custom-chandelier", "crystal-vs-glass-chandelier", "brass-chandelier", "home-lighting-design"],
   },
+  {
+    slug: "cove-lighting-kerala",
+    title: "Cove and Profile Lighting for a Kerala Ceiling",
+    dek: "Draw the recess before the ceiling closes, hide the strip behind a lip, and keep it on its own dimmer.",
+    tag: "Technical",
+    image: "/spaces/corner-pendant.jpg",
+    imageAlt: "A warm living corner with a pleated pendant and a wash of light on the wall",
+    modified: "2026-11-19",
+    related: ["ceiling-and-lighting-design", "false-ceiling-chandelier-weight", "colour-of-light"],
+  },
 ];
 
 export interface Guide extends GuideEntry {
