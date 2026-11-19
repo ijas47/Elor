@@ -4,6 +4,7 @@ import { useState } from "react";
 import { consultationEmail, parseConsultation, spaceOptions, stageOptions } from "@/lib/consultation";
 import { site } from "@/lib/site";
 import { elorContact } from "@/lib/brands";
+import { pagePath, trackGaEvent } from "@/lib/analytics";
 
 /**
  * Consultation lead form. The browser posts straight to FormSubmit.
@@ -67,6 +68,7 @@ export function ConsultForm({
         setStatus("error");
         return;
       }
+      trackGaEvent("form_submit", { page_path: pagePath() });
       form.reset();
       setStatus("sent");
     } catch {
