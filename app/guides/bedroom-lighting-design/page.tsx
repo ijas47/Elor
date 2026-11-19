@@ -17,6 +17,13 @@ const DESC =
 const PATH = "/guides/bedroom-lighting-design";
 const CELESTIAL = "https://www.celestiallights.in";
 const { updated: UPDATED, modified: MODIFIED } = guideDates(PATH);
+
+const HERO_IMAGE = "/images/guides/bedroom-lighting-design/bedroom-dome-pendant.webp";
+const HERO_ALT =
+  "A bedroom with a black ribbed dome pendant lighting the desk beside the bed";
+const BODY_IMAGE = "/images/guides/bedroom-lighting-design/bedside-reading-lights.webp";
+const BODY_ALT =
+  "A bedroom with wall-mounted reading lights on both sides of the bed and a soft ceiling cove";
 const others = guideArticles.filter((item) => item.slug !== "bedroom-lighting-design");
 
 const faqs = [
@@ -47,7 +54,7 @@ const articleSchema = {
   "@type": "Article",
   headline: TITLE,
   description: DESC,
-  image: `${site.domain}/photos/bedroom-dome.jpg`,
+  image: `${site.domain}${HERO_IMAGE}`,
   author: { "@type": "Organization", name: site.name, url: site.domain },
   publisher: {
     "@type": "Organization",
@@ -73,6 +80,11 @@ export const metadata: Metadata = {
   title: TITLE,
   description: DESC,
   alternates: { canonical: PATH },
+  openGraph: {
+    title: TITLE,
+    description: DESC,
+    images: [{ url: HERO_IMAGE, width: 1600, height: 2400, alt: HERO_ALT }],
+  },
 };
 
 export default function BedroomLightingDesignGuide() {
@@ -124,8 +136,8 @@ export default function BedroomLightingDesignGuide() {
             }}
           >
             <Image
-              src="/photos/bedroom-dome.jpg"
-              alt="A bedroom with a black ribbed dome pendant lighting the desk beside the bed"
+              src={HERO_IMAGE}
+              alt={HERO_ALT}
               fill
               priority
               sizes="(max-width: 760px) 100vw, 760px"
@@ -189,6 +201,25 @@ export default function BedroomLightingDesignGuide() {
                 <p>
                   At the bed. A wall light or a pendant on each side, positioned so the light falls on the page rather than on the pillow next to it, is the usual answer. Each side gets its own switch within reach of the bed, and it helps to be able to switch off the main room light from the bed as well. Decide this while the walls are open, because moving a point after the plaster and paint is done is a much bigger job.
                 </p>
+
+                <figure style={{ marginTop: 24, marginBottom: 0 }}>
+                  <div
+                    style={{
+                      position: "relative",
+                      aspectRatio: "4 / 3",
+                      borderRadius: 18,
+                      overflow: "hidden",
+                    }}
+                  >
+                    <Image
+                      src={BODY_IMAGE}
+                      alt={BODY_ALT}
+                      fill
+                      sizes="(max-width: 760px) 100vw, 480px"
+                    />
+                  </div>
+                </figure>
+
               </div>
             </div>
             <div className="register-row">

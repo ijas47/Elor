@@ -16,8 +16,14 @@ const DESC =
   "How to choose a brass chandelier for a Kerala home: solid, plated or painted, a finish specified for humidity, sized to the furniture and fixed to the slab.";
 const PATH = "/guides/brass-chandelier";
 const CELESTIAL = "https://www.celestiallights.in";
-const STAIR_ALT = "A red crystal cascade falling beside a dark spiral staircase";
 const { updated: UPDATED, modified: MODIFIED } = guideDates(PATH);
+
+const HERO_IMAGE = "/images/guides/brass-chandelier/brass-chandelier-over-dining-table.webp";
+const HERO_ALT =
+  "A brass chandelier with fabric shades hanging over a dining table in a city apartment";
+const BODY_IMAGE = "/images/guides/brass-chandelier/brushed-brass-chandelier-detail.webp";
+const BODY_ALT =
+  "Close view of a brushed-brass chandelier with crystal drops";
 const others = guideArticles.filter((item) => item.slug !== "brass-chandelier");
 
 const faqs = [
@@ -48,7 +54,7 @@ const articleSchema = {
   "@type": "Article",
   headline: TITLE,
   description: DESC,
-  image: `${site.domain}/collections/staircase-cascade.jpg`,
+  image: `${site.domain}${HERO_IMAGE}`,
   author: { "@type": "Organization", name: site.name, url: site.domain },
   publisher: {
     "@type": "Organization",
@@ -74,6 +80,11 @@ export const metadata: Metadata = {
   title: TITLE,
   description: DESC,
   alternates: { canonical: PATH },
+  openGraph: {
+    title: TITLE,
+    description: DESC,
+    images: [{ url: HERO_IMAGE, width: 1600, height: 893, alt: HERO_ALT }],
+  },
 };
 
 export default function BrassChandelierGuide() {
@@ -126,16 +137,13 @@ export default function BrassChandelierGuide() {
               }}
             >
               <Image
-                src="/collections/staircase-cascade.jpg"
-                alt={STAIR_ALT}
+                src={HERO_IMAGE}
+                alt={HERO_ALT}
                 fill
                 priority
                 sizes="(max-width: 760px) 100vw, 760px"
               />
             </div>
-            <figcaption className="form-note" style={{ marginTop: 12 }}>
-              A stair piece: a red crystal cascade falling beside a dark spiral staircase
-            </figcaption>
           </figure>
         </div>
       </section>
@@ -169,6 +177,25 @@ export default function BrassChandelierGuide() {
                   </Link>
                   .
                 </p>
+
+                <figure style={{ marginTop: 24, marginBottom: 0 }}>
+                  <div
+                    style={{
+                      position: "relative",
+                      aspectRatio: "4 / 3",
+                      borderRadius: 18,
+                      overflow: "hidden",
+                    }}
+                  >
+                    <Image
+                      src={BODY_IMAGE}
+                      alt={BODY_ALT}
+                      fill
+                      sizes="(max-width: 760px) 100vw, 480px"
+                    />
+                  </div>
+                </figure>
+
               </div>
             </div>
             <div className="register-row">
