@@ -141,7 +141,7 @@ export default function CoveLightingGuide() {
               <h2>Where a cove helps, and where it is not enough</h2>
               <div>
                 <p>A cove is good for a calm wash in a living room, a bedroom, or a passage. It is not the only light the room needs. You still want spots or a hanging piece for the table, the art, or a dark corner, and those should be on their own switches. A cove on a dimmer can carry a quiet evening; the brighter lights come on when the room has to work harder.</p>
-                <p style={{ marginTop: 16 }}>Spots that glare are a different problem, covered in <Link href="/guides/why-downlights-glare" style={{ color: "var(--gold)" }}>why downlights glare</Link>.</p>
+                <p style={{ marginTop: 16 }}>Spots that glare are a different problem, covered in <Link href="/guides/why-downlights-glare" style={{ color: "var(--gold)" }}>why downlights glare</Link>. How to place those spots is in <Link href="/guides/downlight-placement" style={{ color: "var(--gold)" }}>how to place downlights</Link>.</p>
                 <p style={{ marginTop: 16 }}>Do not mix colour temperatures in one room without a reason. If the cove is a different colour from the spots or the chandelier, the ceiling will look one way and the table another. The numbers on the box are explained in <Link href="/guides/colour-of-light" style={{ color: "var(--gold)" }}>colour of light</Link>.</p>
                 <p style={{ marginTop: 16 }}>A rope light or a fluorescent tube is not the current default for a new cove. Use a proper strip in a profile, planned with the ceiling.</p>
               </div>
@@ -197,7 +197,7 @@ export default function CoveLightingGuide() {
         <div className="wrap-tight">
           <h2 className="h-lg">More guides</h2>
           <p className="lede" style={{ marginTop: 16 }}>
-            <Link href="/guides/ceiling-and-lighting-design" style={{ color: "var(--gold)" }}>Ceiling and lighting design</Link> ·             <Link href="/guides/false-ceiling-chandelier-weight" style={{ color: "var(--gold)" }}>False-ceiling chandelier weight</Link> ·             <Link href="/guides/colour-of-light" style={{ color: "var(--gold)" }}>Colour of light</Link> ·             <Link href="/guides" style={{ color: "var(--gold)" }}>All lighting guides</Link>
+            <Link href="/guides/ceiling-and-lighting-design" style={{ color: "var(--gold)" }}>Ceiling and lighting design</Link> ·             <Link href="/guides/downlight-placement" style={{ color: "var(--gold)" }}>How to place downlights</Link> ·             <Link href="/guides/false-ceiling-chandelier-weight" style={{ color: "var(--gold)" }}>False-ceiling chandelier weight</Link> ·             <Link href="/guides/colour-of-light" style={{ color: "var(--gold)" }}>Colour of light</Link> ·             <Link href="/guides" style={{ color: "var(--gold)" }}>All lighting guides</Link>
           </p>
         </div>
       </section>

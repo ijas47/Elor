@@ -232,6 +232,16 @@ const entries: GuideEntry[] = [
     modified: "2026-11-19",
     related: ["ceiling-and-lighting-design", "false-ceiling-chandelier-weight", "colour-of-light"],
   },
+  {
+    slug: "downlight-placement",
+    title: "How to Place Downlights in a Kerala Home",
+    dek: "Start from the furniture, hide the lamp in a deep fitting, and plan the spots with the fan, cove and chandelier.",
+    tag: "Technical",
+    image: "/photos/living-room.jpg",
+    imageAlt: "A living room at night with lit display shelves, a wood coffee table, and warm seating",
+    modified: "2026-11-19",
+    related: ["why-downlights-glare", "cove-lighting-kerala", "ceiling-and-lighting-design"],
+  },
 ];
 
 export interface Guide extends GuideEntry {
