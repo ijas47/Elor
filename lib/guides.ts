@@ -262,6 +262,16 @@ const entries: GuideEntry[] = [
     modified: "2026-11-19",
     related: ["home-lighting-design", "ip-rating-for-outdoor-lights", "colour-of-light"],
   },
+  {
+    slug: "outdoor-balcony-lighting-kerala",
+    title: "Outdoor and Balcony Lighting for a Kerala Home",
+    dek: "Light the seat, the door and the steps first, and choose fittings for the monsoon before the plaster goes on.",
+    tag: "Technical",
+    image: "/spaces/outdoor.jpg",
+    imageAlt: "A building facade at night with its terraces outlined in warm light",
+    modified: "2026-11-19",
+    related: ["ip-rating-for-outdoor-lights", "coastal-lighting-kerala", "home-lighting-design"],
+  },
 ];
 
 export interface Guide extends GuideEntry {
