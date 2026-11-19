@@ -9,10 +9,10 @@ import { Reveal } from "@/components/motion/Reveal";
 import { MagneticButton } from "@/components/motion/MagneticButton";
 import { RelatedGuides } from "@/components/ui/RelatedGuides";
 
-const TITLE = "Cove and Profile Lighting for a Kerala Ceiling";
-const CRUMB = "Cove and Profile Lighting for a Kerala Ceiling";
+const TITLE = "Cove Lighting for Indian Homes (Kerala Tips)";
+const CRUMB = "Cove Lighting for Indian Homes (Kerala Tips)";
 const DESC =
-  "Cove lighting for a Kerala false ceiling: draw it before gypsum or POP closes, hide the strip behind a lip or profile, and put it on its own dimmer.";
+  "Cove lighting for Indian ceilings (Kerala tips): draw it before gypsum or POP closes, hide the strip behind a lip or profile, and put it on its own dimmer.";
 const PATH = "/guides/cove-lighting-kerala";
 const CELESTIAL = "https://www.celestiallights.in";
 const { updated: UPDATED, modified: MODIFIED } = guideDates(PATH);
@@ -50,7 +50,7 @@ const faqBodies = [
 const articleSchema = {
   "@context": "https://schema.org",
   "@type": "Article",
-  headline: "Cove and profile lighting for a Kerala false ceiling",
+  headline: "Cove and profile lighting for Indian homes (Kerala tips)",
   description: DESC,
   image: `${site.domain}${HERO_IMAGE}`,
   author: { "@type": "Organization", name: site.name, url: site.domain },
@@ -99,7 +99,7 @@ export default function CoveLightingGuide() {
           </Reveal>
           <Reveal delay={0.06}>
             <h1 className="h-xl" style={{ marginTop: 18 }}>
-              Cove and profile lighting for a Kerala false ceiling
+              Cove and profile lighting for Indian homes (Kerala tips)
             </h1>
           </Reveal>
           <Reveal delay={0.12}>

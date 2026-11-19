@@ -9,10 +9,10 @@ import { Reveal } from "@/components/motion/Reveal";
 import { MagneticButton } from "@/components/motion/MagneticButton";
 import { RelatedGuides } from "@/components/ui/RelatedGuides";
 
-const TITLE = "Balcony and Outdoor Lighting for a Kerala Home";
-const CRUMB = "Balcony and Outdoor Lighting for a Kerala Home";
+const TITLE = "Outdoor Lighting for Indian Homes (Kerala Tips)";
+const CRUMB = "Outdoor Lighting for Indian Homes (Kerala Tips)";
 const DESC =
-  "Balcony, sit-out and facade lighting for a Kerala home: light the seat and steps, choose fittings for the monsoon, and plan points before the plaster.";
+  "Balcony and outdoor lighting for Indian homes (Kerala tips): light the seat and steps, choose fittings for the monsoon, and plan points before the plaster.";
 const PATH = "/guides/outdoor-balcony-lighting-kerala";
 const CELESTIAL = "https://www.celestiallights.in";
 const { updated: UPDATED, modified: MODIFIED } = guideDates(PATH);
@@ -50,7 +50,7 @@ const faqBodies = [
 const articleSchema = {
   "@context": "https://schema.org",
   "@type": "Article",
-  headline: "Outdoor, balcony and facade lighting for a Kerala home",
+  headline: "Outdoor, balcony and facade lighting for Indian homes (Kerala tips)",
   description: DESC,
   image: `${site.domain}${HERO_IMAGE}`,
   author: { "@type": "Organization", name: site.name, url: site.domain },
@@ -99,7 +99,7 @@ export default function OutdoorBalconyLightingGuide() {
           </Reveal>
           <Reveal delay={0.06}>
             <h1 className="h-xl" style={{ marginTop: 18 }}>
-              Outdoor, balcony and facade lighting for a Kerala home
+              Outdoor, balcony and facade lighting for Indian homes (Kerala tips)
             </h1>
           </Reveal>
           <Reveal delay={0.12}>

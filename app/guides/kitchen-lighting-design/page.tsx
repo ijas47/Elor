@@ -10,10 +10,10 @@ import { MagneticButton } from "@/components/motion/MagneticButton";
 import { RelatedGuides } from "@/components/ui/RelatedGuides";
 import { guideArticles } from "@/lib/guide-articles";
 
-const TITLE = "Kitchen Lighting for Kerala Homes";
+const TITLE = "Kitchen Lighting for Indian Homes (Kerala Tips)";
 const CRUMB = "Kitchen Lighting Design";
 const DESC =
-  "Kitchen lighting design for Kerala homes: the worktop on its own circuit, the island pendant switched apart, no overhead shadows, finishes that survive steam.";
+  "Kitchen lighting for Indian homes (Kerala tips): worktop on its own circuit, island pendant switched apart, no overhead shadows, finishes that survive steam.";
 const PATH = "/guides/kitchen-lighting-design";
 const CELESTIAL = "https://www.celestiallights.in";
 const { updated: UPDATED, modified: MODIFIED } = guideDates(PATH);

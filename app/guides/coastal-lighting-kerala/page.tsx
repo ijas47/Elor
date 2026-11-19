@@ -9,10 +9,10 @@ import { Reveal, Stagger, StaggerItem } from "@/components/motion/Reveal";
 import { MagneticButton } from "@/components/motion/MagneticButton";
 import { RelatedGuides } from "@/components/ui/RelatedGuides";
 
-const TITLE = "Coastal & Humid Climate Lighting: What Survives in Kerala";
-const META_TITLE = "Coastal & Humid Climate Lighting in Kerala";
+const TITLE = "Coastal Lighting in India (Kerala Tips)";
+const META_TITLE = "Coastal Lighting in India (Kerala Tips)";
 const DESC =
-  "Salt air pits untreated brass and iron within two seasons. Which finishes last near the Kerala coast, what IP rating you need, and what fails first.";
+  "Salt air pits untreated brass and iron within two seasons. Which finishes last on Indian coasts, what IP you need, and what fails first, with Kerala examples.";
 const PATH = "/guides/coastal-lighting-kerala";
 const CELESTIAL = "https://www.celestiallights.in";
 const { updated: UPDATED, modified: MODIFIED } = guideDates(PATH);
@@ -130,7 +130,7 @@ export default function CoastalLightingGuide() {
           <Reveal as="span"><span className="eyebrow">Technical · Updated {UPDATED}</span></Reveal>
           <Reveal delay={0.06}>
             <h1 className="h-xl" style={{ marginTop: 18 }}>
-              What survives<br /><span className="serif-i">on the Kerala coast.</span>
+              What survives<br /><span className="serif-i">on a humid Indian coast.</span>
             </h1>
           </Reveal>
           <Reveal delay={0.12}>
