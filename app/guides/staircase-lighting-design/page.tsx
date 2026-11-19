@@ -16,9 +16,12 @@ const DESC =
   "Staircase lighting design for Kerala homes: light each tread without glare, hang the double-height void from the slab, and keep the fan clear of the cascade.";
 const PATH = "/guides/staircase-lighting-design";
 const CELESTIAL = "https://www.celestiallights.in";
-const IMAGE = "/collections/staircase-cascade.jpg";
-const IMAGE_ALT =
+const HERO_IMAGE = "/images/guides/staircase-lighting-design/crystal-cascade-staircase.webp";
+const HERO_ALT =
   "A red crystal cascade hung in a spiral stair, with a wall light on the landing";
+const BODY_IMAGE = "/images/guides/staircase-lighting-design/stair-tread-lighting.webp";
+const BODY_ALT =
+  "A staircase with small lights in the treads and a wall light on the landing";
 const { updated: UPDATED, modified: MODIFIED } = guideDates(PATH);
 const others = guideArticles.filter((item) => item.slug !== "staircase-lighting-design");
 
@@ -54,7 +57,7 @@ const articleSchema = {
   "@type": "Article",
   headline: TITLE,
   description: DESC,
-  image: `${site.domain}${IMAGE}`,
+  image: `${site.domain}${HERO_IMAGE}`,
   author: { "@type": "Organization", name: site.name, url: site.domain },
   publisher: {
     "@type": "Organization",
@@ -80,6 +83,11 @@ export const metadata: Metadata = {
   title: TITLE,
   description: DESC,
   alternates: { canonical: PATH },
+  openGraph: {
+    title: TITLE,
+    description: DESC,
+    images: [{ url: HERO_IMAGE, width: 992, height: 962, alt: HERO_ALT }],
+  },
 };
 
 export default function StaircaseLightingDesignGuide() {
@@ -132,8 +140,8 @@ export default function StaircaseLightingDesignGuide() {
               }}
             >
               <Image
-                src={IMAGE}
-                alt={IMAGE_ALT}
+                src={HERO_IMAGE}
+                alt={HERO_ALT}
                 fill
                 priority
                 sizes="(max-width: 760px) 100vw, 760px"
@@ -163,6 +171,25 @@ export default function StaircaseLightingDesignGuide() {
                   </Link>
                   .
                 </p>
+
+                <figure style={{ marginTop: 24, marginBottom: 0 }}>
+                  <div
+                    style={{
+                      position: "relative",
+                      aspectRatio: "4 / 3",
+                      borderRadius: 18,
+                      overflow: "hidden",
+                    }}
+                  >
+                    <Image
+                      src={BODY_IMAGE}
+                      alt={BODY_ALT}
+                      fill
+                      sizes="(max-width: 760px) 100vw, 480px"
+                    />
+                  </div>
+                </figure>
+
               </div>
             </div>
             <div className="register-row">

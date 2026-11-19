@@ -16,10 +16,22 @@ const PATH = "/guides/wooden-chandelier";
 const CELESTIAL = "https://www.celestiallights.in";
 const { updated: UPDATED, modified: MODIFIED } = guideDates(PATH);
 
+const HERO_IMAGE = "/images/guides/wooden-chandelier/wooden-ring-chandelier-living-room.webp";
+const HERO_ALT =
+  "A circular wooden chandelier hanging over a living and dining room in a city apartment";
+const BODY_IMAGE = "/images/guides/wooden-chandelier/teak-chandelier-wood-detail.webp";
+const BODY_ALT =
+  "Close view of a teak chandelier, showing sealed timber slats and joinery";
+
 export const metadata: Metadata = {
   title: TITLE,
   description: DESC,
   alternates: { canonical: PATH },
+  openGraph: {
+    title: TITLE,
+    description: DESC,
+    images: [{ url: HERO_IMAGE, width: 1600, height: 893, alt: HERO_ALT }],
+  },
 };
 
 const faqs = [
@@ -45,7 +57,6 @@ const faqs = [
   },
 ];
 
-// Article schema deliberately has no image: there is no wooden-piece photo
 // in the library, and the retained showroom petal hero must not be marked up
 // as one.
 const articleSchema = {
@@ -53,6 +64,7 @@ const articleSchema = {
   "@type": "Article",
   headline: TITLE,
   description: DESC,
+  image: `${site.domain}${HERO_IMAGE}`,
   author: { "@type": "Organization", name: site.name, url: site.domain },
   publisher: {
     "@type": "Organization",
@@ -137,16 +149,13 @@ export default function WoodenChandelierGuide() {
               }}
             >
               <Image
-                src="/video/showroom-petal.jpg"
-                alt="Showroom pendants at Celestial Lights, Kannur"
+                src={HERO_IMAGE}
+                alt={HERO_ALT}
                 fill
                 priority
                 sizes="(max-width: 760px) 100vw, 760px"
               />
             </div>
-            <figcaption className="form-note" style={{ marginTop: 12 }}>
-              Showroom pendants at Celestial Lights, Kannur
-            </figcaption>
           </figure>
         </div>
       </section>
@@ -259,6 +268,25 @@ export default function WoodenChandelierGuide() {
                   {" "}and the{" "}
                   <Link href="/guides/brass-chandelier">brass guide</Link>.
                 </p>
+
+                <figure style={{ marginTop: 24, marginBottom: 0 }}>
+                  <div
+                    style={{
+                      position: "relative",
+                      aspectRatio: "4 / 3",
+                      borderRadius: 18,
+                      overflow: "hidden",
+                    }}
+                  >
+                    <Image
+                      src={BODY_IMAGE}
+                      alt={BODY_ALT}
+                      fill
+                      sizes="(max-width: 760px) 100vw, 480px"
+                    />
+                  </div>
+                </figure>
+
               </div>
             </div>
 

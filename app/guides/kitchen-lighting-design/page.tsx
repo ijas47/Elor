@@ -16,8 +16,14 @@ const DESC =
   "Kitchen lighting design for Kerala homes: the worktop on its own circuit, the island pendant switched apart, no overhead shadows, finishes that survive steam.";
 const PATH = "/guides/kitchen-lighting-design";
 const CELESTIAL = "https://www.celestiallights.in";
-const STAIR_ALT = "A red crystal cascade falling beside a dark spiral staircase";
 const { updated: UPDATED, modified: MODIFIED } = guideDates(PATH);
+
+const HERO_IMAGE = "/images/guides/kitchen-lighting-design/apartment-kitchen-task-and-pendant-lighting.webp";
+const HERO_ALT =
+  "A city-apartment kitchen with under-cabinet task lighting along the worktop and a pendant over the breakfast counter";
+const BODY_IMAGE = "/images/guides/kitchen-lighting-design/under-cabinet-worktop-lighting.webp";
+const BODY_ALT =
+  "A hidden under-cabinet LED strip lighting a stone kitchen worktop evenly";
 const others = guideArticles.filter((item) => item.slug !== "kitchen-lighting-design");
 
 const faqs = [
@@ -48,7 +54,7 @@ const articleSchema = {
   "@type": "Article",
   headline: TITLE,
   description: DESC,
-  image: `${site.domain}/collections/staircase-cascade.jpg`,
+  image: `${site.domain}${HERO_IMAGE}`,
   author: { "@type": "Organization", name: site.name, url: site.domain },
   publisher: {
     "@type": "Organization",
@@ -74,6 +80,11 @@ export const metadata: Metadata = {
   title: TITLE,
   description: DESC,
   alternates: { canonical: PATH },
+  openGraph: {
+    title: TITLE,
+    description: DESC,
+    images: [{ url: HERO_IMAGE, width: 1600, height: 893, alt: HERO_ALT }],
+  },
 };
 
 export default function KitchenLightingDesignGuide() {
@@ -126,16 +137,13 @@ export default function KitchenLightingDesignGuide() {
               }}
             >
               <Image
-                src="/collections/staircase-cascade.jpg"
-                alt={STAIR_ALT}
+                src={HERO_IMAGE}
+                alt={HERO_ALT}
                 fill
                 priority
                 sizes="(max-width: 760px) 100vw, 760px"
               />
             </div>
-            <figcaption className="form-note" style={{ marginTop: 12 }}>
-              A stair piece: a red crystal cascade falling beside a dark spiral staircase
-            </figcaption>
           </figure>
         </div>
       </section>
@@ -178,6 +186,25 @@ export default function KitchenLightingDesignGuide() {
                 <p style={{ marginTop: 16 }}>
                   Under-cabinet light needs planning with the carpenter. The wiring has to reach the underside of the wall cabinets before they are fixed, the strip or fitting needs a lip or a channel so it is not seen from the dining table, and the switch should be at the counter, not by the door. If the backsplash is glossy tile or polished stone, ask how the fitting will reflect in it; a bright line reflected in the splashback is a glare of its own.
                 </p>
+
+                <figure style={{ marginTop: 24, marginBottom: 0 }}>
+                  <div
+                    style={{
+                      position: "relative",
+                      aspectRatio: "4 / 3",
+                      borderRadius: 18,
+                      overflow: "hidden",
+                    }}
+                  >
+                    <Image
+                      src={BODY_IMAGE}
+                      alt={BODY_ALT}
+                      fill
+                      sizes="(max-width: 760px) 100vw, 480px"
+                    />
+                  </div>
+                </figure>
+
               </div>
             </div>
             <div className="register-row">
