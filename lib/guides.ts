@@ -252,6 +252,16 @@ const entries: GuideEntry[] = [
     modified: "2026-11-19",
     related: ["ceiling-and-lighting-design", "downlight-placement", "why-downlights-glare"],
   },
+  {
+    slug: "bathroom-lighting-design",
+    title: "Bathroom Lighting Design for Kerala Homes",
+    dek: "Plan the points before the tiles go on, light the face from the sides, and use a fitting rated for a damp room.",
+    tag: "Technical",
+    image: "/photos/pleated-plant.jpg",
+    imageAlt: "A black pleated pendant over a side table, washing the wall with light",
+    modified: "2026-11-19",
+    related: ["home-lighting-design", "ip-rating-for-outdoor-lights", "colour-of-light"],
+  },
 ];
 
 export interface Guide extends GuideEntry {
