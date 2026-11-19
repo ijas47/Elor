@@ -6,6 +6,7 @@ import { elorContact } from "@/lib/brands";
 import { Nav } from "@/components/Nav";
 import { Footer } from "@/components/Footer";
 import { PageTransition } from "@/components/motion/PageTransition";
+import { GaClickListener } from "@/components/GaClickListener";
 import "./globals.css";
 import "./sections.css";
 
@@ -137,6 +138,7 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteSchema) }}
         />
         <Nav />
+        <GaClickListener />
         <PageTransition>{children}</PageTransition>
         <Footer />
       </body>
