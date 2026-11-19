@@ -154,7 +154,7 @@ export default function MaterialsComparisonGuide() {
               Elor Lighting designs custom pieces and lighting plans. Ready
               fittings in these materials are sold by our sister shop,{" "}
               <a href={CELESTIAL} target="_blank" rel="noopener noreferrer">Celestial Lights</a>.
-              {" "}Design is free with purchase from Celestial.
+              {" "}Design services are free*. *T&C apply.
             </p>
           </Reveal>
         </div>
@@ -259,7 +259,6 @@ export default function MaterialsComparisonGuide() {
               both, and an almost impossible one from photographs. All three
               stores carry the full range. You can also browse ready pieces at{" "}
               <a href={CELESTIAL} target="_blank" rel="noopener noreferrer">Celestial Lights</a>.
-              {" "}Design is free with purchase from Celestial.
             </p>
           </Reveal>
           <Reveal delay={0.12}>

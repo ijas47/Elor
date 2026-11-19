@@ -143,8 +143,7 @@ export default function SizeCalculatorGuide() {
               height from standard rules, not a final specification. Check
               ceiling-fan clearance and whether the false ceiling can take
               the weight. Elor measures on site before making a custom piece.
-              If a ready size fits, buy it from Celestial Lights. Design is
-              free with purchase from Celestial.
+              If a ready size fits, buy it from Celestial Lights. Design services are free*. *T&C apply.
             </p>
           </Reveal>
         </div>
@@ -255,7 +254,7 @@ export default function SizeCalculatorGuide() {
               If a ready chandelier in this size range fits the room, the
               ceiling and the fan, buy it from{" "}
               <a href={CELESTIAL} target="_blank" rel="noopener noreferrer">Celestial Lights</a>.
-              {" "}Design is free with purchase from Celestial.
+              
             </p>
           </Reveal>
           <Reveal delay={0.14}>

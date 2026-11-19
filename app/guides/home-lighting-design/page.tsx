@@ -344,7 +344,7 @@ export default function HomeLightingDesignGuide() {
               </li>
               <li>
                 <span className="tick">✓</span>
-                The plan, and any light the house still needs, is designed and made by Elor. Design is free with purchase from Celestial.
+                The plan, and any light the house still needs, is designed and made by Elor.
               </li>
               <li>
                 <span className="tick">✓</span>

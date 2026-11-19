@@ -127,7 +127,7 @@ export default function LivingRoomChandelierGuide() {
               before the false ceiling closes. Pick a finish that stands the
               humidity. Ready pieces are at{" "}
               <a href={CELESTIAL} target="_blank" rel="noopener noreferrer">Celestial Lights</a>.
-              {" "}Design is free with purchase from Celestial.
+              {" "}Design services are free*. *T&C apply.
             </p>
           </Reveal>
         </div>
@@ -366,8 +366,7 @@ export default function LivingRoomChandelierGuide() {
                   and Kozhikode, or at the Elor experience centre in Kochi.
                   When the void is unusual, the ceiling has an off-centre
                   beam, or the picture you have saved is not something anyone
-                  stocks, Elor designs and makes the piece. Design is free
-                  with purchase from Celestial. How that works, with
+                  stocks, Elor designs and makes the piece. How that works, with
                   timelines and what drives the cost, is on{" "}
                   <Link href="/customisation">custom chandeliers</Link>
                   , and the{" "}

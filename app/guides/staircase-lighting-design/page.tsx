@@ -325,7 +325,7 @@ export default function StaircaseLightingDesignGuide() {
               </li>
               <li>
                 <span className="tick">✓</span>
-                A void with an odd width, a turn, or a finish that has to match the joinery is made by Elor. Design is free with purchase from Celestial.
+                A void with an odd width, a turn, or a finish that has to match the joinery is made by Elor.
               </li>
               <li>
                 <span className="tick">✓</span>

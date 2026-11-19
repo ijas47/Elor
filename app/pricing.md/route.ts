@@ -16,13 +16,12 @@ export const dynamic = "force-static";
 export async function GET() {
   const body = `# Pricing: ${site.name}
 
-Last updated: 11 November 2026
+Last updated: 19 November 2026
 Currency: INR (₹). All prices include GST as applicable.
 
 ${site.name} is the lighting consulting and custom fabrication arm of
 Celestial Lights. Ready-collection pieces are sold at fixed prices; bespoke
-fabrication is quoted per design. The first session is free. Design is
-free with purchase from Celestial.
+fabrication is quoted per design. The first session is free. Design services are free*. *T&C apply.
 
 ## Ready collection: fixed price bands
 
@@ -46,7 +45,6 @@ free with purchase from Celestial.
 
 - Price: quoted per design, with no fixed multiplier over ready pieces
 - The first session is free
-- Design: free with purchase from Celestial
 - Payment: only after you approve the design
 - Range: a custom piece can cost about the same as a large ready piece, or
   considerably more, depending on material and fabrication complexity
@@ -59,7 +57,7 @@ We install custom lights and give installation support for everything else.
 ## Services
 
 - The first session is free (at your site, in Kannur, Calicut or Kochi, or on video)
-- Design: free with purchase from Celestial
+- Design services are free*. *T&C apply.
 - We install custom lights and give installation support for everything else.
 - Delivery: pan-India
 - Warranty: up to 5 years
