@@ -343,7 +343,7 @@ export default function BedroomLightingDesignGuide() {
               </li>
               <li>
                 <span className="tick">✓</span>
-                A piece matched to a low ceiling, a vault, or the headboard is designed and made by Elor. Design is free with purchase from Celestial.
+                A piece matched to a low ceiling, a vault, or the headboard is designed and made by Elor.
               </li>
               <li>
                 <span className="tick">✓</span>

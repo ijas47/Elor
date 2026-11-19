@@ -40,7 +40,7 @@ const faqs = [
   { q: "Can I use an ordinary ceiling light in a bathroom?", a: "Not near the shower, and not if the room stays damp for months, as Kerala bathrooms often do. Use a fitting meant for moisture. A qualified electrician should confirm the rating and the wiring. How IP ratings work is in our IP rating guide. A Kerala bathroom fitting near the shower wants IP44 or better, as that guide already says." },
   { q: "Do I need a separate mirror circuit?", a: "Yes, if you can. The mirror light is the one you use to see your face. It should work without turning the whole ceiling on." },
   { q: "Can I put a light inside the shower?", a: "Only a fitting rated for that spot, and only if a qualified electrician agrees the point and the wiring. Our IP rating guide says a fitting near the shower wants IP44 or better. Do not assume any fitting is safe inside the shower until the electrician has checked it." },
-  { q: "Is design free?", a: "Design is free with purchase from Celestial. Ready fittings are bought from Celestial. Elor writes the plan for the house." },
+  { q: "Is design free?", a: "Design services are free*. *T&C apply. Elor writes the plan for the house." },
 ];
 
 const faqBodies = [
@@ -48,7 +48,7 @@ const faqBodies = [
   <>Not near the shower, and not if the room stays damp for months, as Kerala bathrooms often do. Use a fitting meant for moisture. A qualified electrician should confirm the rating and the wiring. How IP ratings work is in our <Link href="/guides/ip-rating-for-outdoor-lights" style={{ color: "var(--gold)" }}>IP rating guide</Link>. A Kerala bathroom fitting near the shower wants IP44 or better, as that guide already says.</>,
   <>Yes, if you can. The mirror light is the one you use to see your face. It should work without turning the whole ceiling on.</>,
   <>Only a fitting rated for that spot, and only if a qualified electrician agrees the point and the wiring. Our IP rating guide says a fitting near the shower wants IP44 or better. Do not assume any fitting is safe inside the shower until the electrician has checked it.</>,
-  <>Design is free with purchase from Celestial. Ready fittings are bought from Celestial. Elor writes the plan for the house.</>,
+  <>Design services are free*. *T&C apply. Elor writes the plan for the house.</>,
 ];
 
 const articleSchema = {
@@ -108,7 +108,7 @@ export default function BathroomLightingGuide() {
           </Reveal>
           <Reveal delay={0.12}>
             <p className="lede" style={{ marginTop: 22 }}>
-              Plan bathroom lighting before the tiles go on. Use a fitting rated for a damp room, especially near the shower. Light the mirror from the sides or a front-facing bar, not only a downlight above your head. Ready fittings are at <a href={CELESTIAL} target="_blank" rel="noopener noreferrer">Celestial Lights</a>. Elor can plan the house. Design is free with purchase from Celestial.
+              Plan bathroom lighting before the tiles go on. Use a fitting rated for a damp room, especially near the shower. Light the mirror from the sides or a front-facing bar, not only a downlight above your head. Ready fittings are at <a href={CELESTIAL} target="_blank" rel="noopener noreferrer">Celestial Lights</a>. Elor can plan the house. Design services are free*. *T&C apply.
             </p>
           </Reveal>
         </div>
@@ -215,7 +215,7 @@ export default function BathroomLightingGuide() {
               <h2>Ready fittings, or a plan for the whole house?</h2>
               <div>
                 <p>Look for ready fittings at <a href={CELESTIAL} target="_blank" rel="noopener noreferrer">Celestial Lights</a>. Check that the rating suits the spot in your room before you buy.</p>
-                <p style={{ marginTop: 16 }}>Elor writes the lighting plan for the house, including the bathroom, and can take a custom brief if a ready piece will not do. Design is free with purchase from Celestial.</p>
+                <p style={{ marginTop: 16 }}>Elor writes the lighting plan for the house, including the bathroom, and can take a custom brief if a ready piece will not do.</p>
               </div>
             </div>
           </div>
@@ -246,7 +246,7 @@ export default function BathroomLightingGuide() {
         <div className="wrap-tight">
           <Reveal><h2 className="h-lg">Plan the bathroom while the walls are still open.</h2></Reveal>
           <Reveal delay={0.06}>
-            <p className="lede" style={{ marginTop: 16 }}>Send a floor plan and a photo of the room, and Elor can help mark the points before the tiles go on. Design is free with purchase from Celestial.</p>
+            <p className="lede" style={{ marginTop: 16 }}>Send a floor plan and a photo of the room, and Elor can help mark the points before the tiles go on.</p>
           </Reveal>
           <div className="cta-ctas" style={{ marginTop: 30 }}>
             <MagneticButton href="/consultation" variant="gold">Book a consultation <span className="arr">→</span></MagneticButton>

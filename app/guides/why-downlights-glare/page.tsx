@@ -182,7 +182,7 @@ export default function DownlightGlareGuide() {
             <p className="lede" style={{ margin: "16px auto 0" }}>
               Ready fittings are at{" "}
               <a href={CELESTIAL} target="_blank" rel="noopener noreferrer">Celestial Lights</a>
-              . Design is free with purchase from Celestial. This page stays the technical answer on glare; it does not name a downlight collection.
+              . Design services are free*. *T&C apply. This page stays the technical answer on glare; it does not name a downlight collection.
             </p>
           </Reveal>
           <Reveal delay={0.1}>

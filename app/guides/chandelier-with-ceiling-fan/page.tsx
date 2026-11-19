@@ -129,7 +129,7 @@ export default function CeilingFanGuide() {
               blade tips, and the two never share a circuit. Ready pieces are
               at{" "}
               <a href={CELESTIAL} target="_blank" rel="noopener noreferrer">Celestial Lights</a>.
-              {" "}Design is free with purchase from Celestial.
+              {" "}Design services are free*. *T&C apply.
             </p>
           </Reveal>
         </div>
@@ -238,7 +238,6 @@ export default function CeilingFanGuide() {
             <p className="lede" style={{ margin: "16px auto 0" }}>
               Easiest before the false ceiling goes up, and still workable
               after. A photo and the room dimensions are enough to start.
-              Design is free with purchase from Celestial.
             </p>
           </Reveal>
           <Reveal delay={0.12}>

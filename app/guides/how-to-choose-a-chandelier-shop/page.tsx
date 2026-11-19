@@ -189,7 +189,7 @@ export default function ChooseAShopGuide() {
               <li><span className="tick">✓</span>Firm pricing after design approval, before fabrication starts.</li>
               <li><span className="tick">✓</span>Ready pieces are at{" "}
                 <a href={CELESTIAL} target="_blank" rel="noopener noreferrer">Celestial Lights</a>
-                . Design is free with purchase from Celestial.</li>
+                . Design services are free*. *T&C apply.</li>
             </ul>
           </Reveal>
         </div>
@@ -218,7 +218,7 @@ export default function ChooseAShopGuide() {
           <Reveal><h2 className="h-lg">Ask us the same questions.</h2></Reveal>
           <Reveal delay={0.06}>
             <p className="lede" style={{ margin: "16px auto 0" }}>
-              Bring your room and ceiling questions, and we will walk through how we answer them. Design is free with purchase from Celestial.
+              Bring your room and ceiling questions, and we will walk through how we answer them.
             </p>
           </Reveal>
           <Reveal delay={0.12}>

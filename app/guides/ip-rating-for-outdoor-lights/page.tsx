@@ -139,7 +139,7 @@ export default function IpRatingGuide() {
               ground. The first digit is dust. The second is water. Ready
               outdoor fittings are at{" "}
               <a href={CELESTIAL} target="_blank" rel="noopener noreferrer">Celestial Lights</a>.
-              {" "}Design is free with purchase from Celestial.
+              {" "}Design services are free*. *T&C apply.
             </p>
           </Reveal>
         </div>
@@ -257,7 +257,7 @@ export default function IpRatingGuide() {
                 <span className="tick">✓</span>
                 A facade, courtyard, or pool lit as one plan, with the rating
                 set per point, is a lighting design Elor draws before the
-                wiring goes in. Design is free with purchase from Celestial.
+                wiring goes in.
               </li>
               <li>
                 <span className="tick">✓</span>

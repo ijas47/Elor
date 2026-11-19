@@ -244,7 +244,7 @@ export default function HowToCleanCrystalChandelierGuide() {
               </li>
               <li>
                 <span className="tick">✓</span>
-                A crystal chandelier sized and hung for a room nobody can easily reach is designed by Elor with access for cleaning drawn in from the start. Design is free with purchase from Celestial.
+                A crystal chandelier sized and hung for a room nobody can easily reach is designed by Elor with access for cleaning drawn in from the start.
               </li>
               <li>
                 <span className="tick">✓</span>

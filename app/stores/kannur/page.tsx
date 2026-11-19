@@ -10,7 +10,7 @@ import { MagneticButton } from "@/components/motion/MagneticButton";
 
 const TITLE = "Celestial Lights Kannur";
 const DESC =
-  "Celestial Lights Kannur at Philips Building, 670005. Buy the ready collection on the floor. Design is free with purchase from Celestial. Walk in or book.";
+  "Celestial Lights Kannur at Philips Building, 670005. Buy the ready collection on the floor. Design services are free*. *T&C apply. Walk in or book.";
 const PATH = "/stores/kannur";
 const CELESTIAL = "https://www.celestiallights.in";
 const IMAGE = "/lifestyle/hero-4.jpg";
@@ -29,7 +29,7 @@ const faqs = [
   },
   {
     q: "Is design free?",
-    a: "Design is free with purchase from Celestial. Elor does the design work. Book a consultation to start.",
+    a: "Design services are free*. *T&C apply. Elor does the design work. Book a consultation to start.",
   },
   {
     q: "Do you only serve Kannur, or the wider district?",
@@ -136,13 +136,13 @@ export default function KannurStorePage() {
                   </li>
                   <li>
                     <span className="tick">✓</span>
-                    Design is free with purchase from Celestial. Elor does that design work.
+                    Design services are free*. *T&C apply. Elor does that design work.
                   </li>
                 </ul>
               </Reveal>
               <Reveal delay={0.16}>
                 <p className="lede" style={{ marginTop: 22 }}>
-                  Celestial Lights in Kannur is the shop and experience centre where you can see and buy the ready collection. It is at Philips Building, 670005, open Monday to Saturday, 9:30 AM to 8:30 PM. You can walk in, or book ahead. Elor handles the lighting design. Design is free with purchase from Celestial.
+                  Celestial Lights in Kannur is the shop and experience centre where you can see and buy the ready collection. It is at Philips Building, 670005, open Monday to Saturday, 9:30 AM to 8:30 PM. You can walk in, or book ahead. Elor handles the lighting design. Design services are free*. *T&C apply.
                 </p>
               </Reveal>
               <Reveal delay={0.18}>
@@ -253,11 +253,11 @@ export default function KannurStorePage() {
       <section className="sec">
         <div className="wrap-tight">
           <Reveal>
-            <h2 className="h-lg">Free design with purchase from Celestial</h2>
+            <h2 className="h-lg">A custom piece starts from a photo</h2>
           </Reveal>
           <Reveal delay={0.06}>
             <p className="lede" style={{ marginTop: 16 }}>
-              Custom chandeliers start from a photo, a render or a sketch, and are made in crystal, glass, metal or acrylic. Elor writes the plan and makes the custom piece. Design is free with purchase from Celestial. Start with a{" "}
+              Custom chandeliers start from a photo, a render or a sketch, and are made in crystal, glass, metal or acrylic. Elor writes the plan and makes the custom piece. Start with a{" "}
               <Link href="/consultation" style={{ color: "var(--gold)" }}>
                 consultation
               </Link>
@@ -322,7 +322,7 @@ export default function KannurStorePage() {
                   <p className="faq-a">
                     {f.q === "Is design free?" ? (
                       <>
-                        Design is free with purchase from Celestial. Elor does the design work.{" "}
+                        Design services are free*. *T&C apply. Elor does the design work.{" "}
                         <Link href="/consultation" style={{ color: "var(--gold)" }}>
                           Book a consultation
                         </Link>
@@ -370,7 +370,7 @@ export default function KannurStorePage() {
               <Link href="/consultation" style={{ color: "var(--gold)" }}>
                 book a consultation
               </Link>
-              . Design is free with purchase from Celestial.
+.
             </p>
           </Reveal>
         </div>

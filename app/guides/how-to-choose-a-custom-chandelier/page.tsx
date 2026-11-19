@@ -10,7 +10,7 @@ import { MagneticButton } from "@/components/motion/MagneticButton";
 const TITLE = "How to Choose a Custom Chandelier";
 const H1 = "How to choose a custom chandelier, or a ready piece that already fits";
 const DESC =
-  "A ready chandelier is enough when the size already fits. If the void is unusual, Elor designs a custom piece. Design is free with purchase from Celestial.";
+  "A ready chandelier is enough when the size already fits. If the void is unusual, Elor designs a custom piece.";
 const PATH = "/guides/how-to-choose-a-custom-chandelier";
 const CELESTIAL = "https://www.celestiallights.in";
 const { updated: UPDATED, modified: MODIFIED } = guideDates(PATH);
@@ -22,7 +22,7 @@ const faqs = [
   },
   {
     q: "When should the piece be custom?",
-    a: "When the void is unusual, the stair turns, or the finish has to match the joinery. Send a photo, the sizes you have, and the ceiling type. Elor designs and builds that piece. Design is free with purchase from Celestial.",
+    a: "When the void is unusual, the stair turns, or the finish has to match the joinery. Send a photo, the sizes you have, and the ceiling type. Elor designs and builds that piece.",
   },
   {
     q: "Do I need to know exact dimensions before I start?",
@@ -50,7 +50,7 @@ const faqs = [
   },
   {
     q: "Is design free?",
-    a: "Design is free with purchase from Celestial. Ready fittings are bought from Celestial. Custom pieces are designed and made by Elor.",
+    a: "The design is part of making the custom piece. If a ready fitting already fits, you can buy it from Celestial Lights.",
   },
 ];
 
@@ -141,15 +141,14 @@ export default function HowToChooseGuide() {
               </li>
               <li>
                 <span className="tick">✓</span>
-                Design is free with purchase from Celestial. Elor does that design work.
+                Elor designs and makes the custom piece.
               </li>
             </ul>
           </Reveal>
           <Reveal delay={0.14}>
             <p className="lede" style={{ marginTop: 22 }}>
               A ready chandelier is enough when the drop, the width and the finish already fit the room. If the void is unusual, or the finish has to match the joinery, Elor designs a custom piece. Ready fittings are bought from{" "}
-              <a href={CELESTIAL} target="_blank" rel="noopener noreferrer">Celestial Lights</a>
-              . Design is free with purchase from Celestial. Measure the ceiling before you look at a catalogue.
+              <a href={CELESTIAL} target="_blank" rel="noopener noreferrer">Celestial Lights</a>. Measure the ceiling before you look at a catalogue.
             </p>
           </Reveal>
           <Reveal delay={0.18}>
@@ -202,7 +201,7 @@ export default function HowToChooseGuide() {
           </Reveal>
           <Reveal delay={0.06}>
             <p className="lede" style={{ marginTop: 16 }}>
-              When the void is unusual, the stair turns, or the finish has to match the joinery. A double-height stair, a narrow hall, or a hotel that needs several matching pieces is often in this group. Send a photo, the sizes you have, and the ceiling type. Elor designs and builds that piece. Design is free with purchase from Celestial.
+              When the void is unusual, the stair turns, or the finish has to match the joinery. A double-height stair, a narrow hall, or a hotel that needs several matching pieces is often in this group. Send a photo, the sizes you have, and the ceiling type. Elor designs and builds that piece.
             </p>
           </Reveal>
           <Reveal delay={0.1}>
@@ -410,7 +409,7 @@ export default function HowToChooseGuide() {
           </Reveal>
           <Reveal delay={0.06}>
             <p className="lede" style={{ margin: "16px auto 0" }}>
-              We measure the space and tell you what actually fits, before you commit to anything. If a ready piece already fits, buy it from Celestial. If it has to be made, Elor designs it. Design is free with purchase from Celestial.
+              We measure the space and tell you what actually fits, before you commit to anything. If a ready piece already fits, buy it from Celestial. If it has to be made, Elor designs it.
             </p>
           </Reveal>
           <Reveal delay={0.12}>

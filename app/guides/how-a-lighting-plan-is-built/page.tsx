@@ -247,7 +247,7 @@ export default function LightingPlanGuide() {
             <p className="lede" style={{ marginTop: 16 }}>
               Elor draws the plan and makes custom pieces. Ready fittings are at{" "}
               <a href={CELESTIAL} target="_blank" rel="noopener noreferrer">Celestial Lights</a>
-              . Design is free with purchase from Celestial. The Kerala whole-house plan, room by room, is in the{" "}
+              . Design services are free*. *T&C apply. The Kerala whole-house plan, room by room, is in the{" "}
               <Link href="/guides/home-lighting-design">home lighting design guide</Link>
               . This page stays the method and the order of the drawing.
             </p>
@@ -280,7 +280,7 @@ export default function LightingPlanGuide() {
             <p className="lede" style={{ margin: "16px auto 0" }}>
               A floor plan, the ceiling height, and a photo are enough to
               start. You can see the layers switched separately in Kannur,
-              Kochi, and Kozhikode. Design is free with purchase from Celestial.
+              Kochi, and Kozhikode.
             </p>
           </Reveal>
           <Reveal delay={0.12}>

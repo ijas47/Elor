@@ -329,7 +329,7 @@ export default function BrassChandelierGuide() {
               </li>
               <li>
                 <span className="tick">✓</span>
-                A diameter, a finish, or a drawing the collection does not have is made by Elor. Design is free with purchase from Celestial.
+                A diameter, a finish, or a drawing the collection does not have is made by Elor.
               </li>
               <li>
                 <span className="tick">✓</span>

@@ -104,7 +104,7 @@ export default function TrackLightingGuide() {
           </Reveal>
           <Reveal delay={0.12}>
             <p className="lede" style={{ marginTop: 22 }}>
-              Track lighting is for a room that will change, or a wall you want to aim at. The feed and the driver go in before the false ceiling closes. Heads can glare if they aim into the sofa, so aim is part of the plan. Elor plans the ceiling. Design is free with purchase from Celestial.
+              Track lighting is for a room that will change, or a wall you want to aim at. The feed and the driver go in before the false ceiling closes. Heads can glare if they aim into the sofa, so aim is part of the plan. Elor plans the ceiling. Design services are free*. *T&C apply.
             </p>
           </Reveal>
         </div>
@@ -196,7 +196,7 @@ export default function TrackLightingGuide() {
             <div className="register-row">
               <h2>Ready track, or a plan</h2>
               <div>
-                <p>Look for ready track at <a href={CELESTIAL} target="_blank" rel="noopener noreferrer">Celestial Lights</a>, if it is in the range. Elor plans the run, the feed, and the aim. Design is free with purchase from Celestial.</p>
+                <p>Look for ready track at <a href={CELESTIAL} target="_blank" rel="noopener noreferrer">Celestial Lights</a>, if it is in the range. Elor plans the run, the feed, and the aim.</p>
                 <p style={{ marginTop: 16 }}>If the ceiling is still open, <Link href="/consultation" style={{ color: "var(--gold)" }}>book a lighting consultation</Link> and draw the track with the rest of the house.</p>
               </div>
             </div>

@@ -104,7 +104,7 @@ export default function OutdoorBalconyLightingGuide() {
           </Reveal>
           <Reveal delay={0.12}>
             <p className="lede" style={{ marginTop: 22 }}>
-              Balcony lighting starts with the chair, the door, and the steps, not a string of decorative dots. A covered sit-out and an open balcony are different jobs, so pick a fitting made for weather and a finish that can take salt air. Buy ready fittings at Celestial. Elor plans the house, and design is free with purchase from Celestial.
+              Balcony lighting starts with the chair, the door, and the steps, not a string of decorative dots. A covered sit-out and an open balcony are different jobs, so pick a fitting made for weather and a finish that can take salt air. Buy ready fittings at Celestial. Elor plans the house. Design services are free*. *T&C apply.
             </p>
           </Reveal>
         </div>
@@ -221,7 +221,7 @@ export default function OutdoorBalconyLightingGuide() {
               <h2>Ready outdoor fittings, or a plan for the house?</h2>
               <div>
                 <p>If you only need a wall light for the sit-out or a light by the door, look at ready outdoor fittings at <a href={CELESTIAL} target="_blank" rel="noopener noreferrer">Celestial Lights</a>. Ask for the rating and the finish with the photo. Celestial gives wholesale best rates and can match any quote.</p>
-                <p style={{ marginTop: 16 }}>If you are lighting the facade, the balcony, the steps, and the garden together, Elor can draw it as one plan, with each point marked before the plaster. Design is free with purchase from Celestial.</p>
+                <p style={{ marginTop: 16 }}>If you are lighting the facade, the balcony, the steps, and the garden together, Elor can draw it as one plan, with each point marked before the plaster.</p>
                 <p style={{ marginTop: 16 }}>If the walls are still open, <Link href="/consultation" style={{ color: "var(--gold)" }}>book a lighting consultation</Link> and plan the outside with the rest of the house.</p>
               </div>
             </div>

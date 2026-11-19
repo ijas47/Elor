@@ -237,7 +237,7 @@ export default function CoastalLightingGuide() {
             <p className="lede" style={{ marginTop: 22 }}>
               Ready fittings are at{" "}
               <a href={CELESTIAL} target="_blank" rel="noopener noreferrer">Celestial Lights</a>
-              . Ask for the finish and the IP rating with the photo. Design is free with purchase from Celestial.
+              . Ask for the finish and the IP rating with the photo. Design services are free*. *T&C apply.
             </p>
           </Reveal>
         </div>
@@ -268,7 +268,7 @@ export default function CoastalLightingGuide() {
             <p className="lede" style={{ margin: "16px auto 0" }}>
               It changes the specification more than the budget does. All three
               of our stores are on the coast, so this is the constraint we design
-              around every day. Design is free with purchase from Celestial.
+              around every day.
             </p>
           </Reveal>
           <Reveal delay={0.12}>

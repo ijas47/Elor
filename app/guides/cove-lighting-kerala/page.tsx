@@ -104,7 +104,7 @@ export default function CoveLightingGuide() {
           </Reveal>
           <Reveal delay={0.12}>
             <p className="lede" style={{ marginTop: 22 }}>
-              Cove lighting is a hidden strip that washes the ceiling. Draw the recess, the lip, and the driver while the gypsum or POP is still open. If you can see the strip from the sofa, the lip is too shallow or the profile has no diffuser. Elor plans the ceiling. Design is free with purchase from Celestial.
+              Cove lighting is a hidden strip that washes the ceiling. Draw the recess, the lip, and the driver while the gypsum or POP is still open. If you can see the strip from the sofa, the lip is too shallow or the profile has no diffuser. Elor plans the ceiling. Design services are free*. *T&C apply.
             </p>
           </Reveal>
         </div>
@@ -210,7 +210,7 @@ export default function CoveLightingGuide() {
             <div className="register-row">
               <h2>Ready profiles, or a plan for the whole ceiling</h2>
               <div>
-                <p>Look for ready profiles, diffusers, and strips at <a href={CELESTIAL} target="_blank" rel="noopener noreferrer">Celestial Lights</a>. Elor plans the ceiling, including the recess, the lip, and how the cove sits with the rest of the lights. Design is free with purchase from Celestial.</p>
+                <p>Look for ready profiles, diffusers, and strips at <a href={CELESTIAL} target="_blank" rel="noopener noreferrer">Celestial Lights</a>. Elor plans the ceiling, including the recess, the lip, and how the cove sits with the rest of the lights.</p>
                 <p style={{ marginTop: 16 }}>If the ceiling is still open, <Link href="/consultation" style={{ color: "var(--gold)" }}>book a lighting consultation</Link> and draw the cove with the rest of the house.</p>
               </div>
             </div>

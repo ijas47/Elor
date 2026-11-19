@@ -14,7 +14,7 @@ import { Icon, type IconName } from "@/components/ui/Icon";
 const TITLE = "What Does a Custom Chandelier Cost in India?";
 const META_TITLE = "What a Custom Chandelier Costs in India";
 const DESC =
-  "Ready chandeliers in India cost ₹3,000 to ₹70,000+. Custom pieces get a firm price after a measure. Design is free with purchase from Celestial.";
+  "Ready chandeliers in India cost ₹3,000 to ₹70,000+. Custom pieces get a firm price after a measure.";
 const PATH = "/guides/chandelier-pricing-guide";
 const CELESTIAL = "https://www.celestiallights.in";
 const { updated: UPDATED, modified: MODIFIED } = guideDates(PATH);
@@ -62,12 +62,10 @@ const faqs: { q: string; a: ReactNode; schema: string }[] = [
     q: "Do you charge for the design itself?",
     a: (
       <>
-        The first session is free. Design is free with purchase from{" "}
-        <a href={CELESTIAL} target="_blank" rel="noopener noreferrer">Celestial Lights</a>.
-        {" "}You get a firm price before you commit, and you only pay once you approve the design.
+        The first session is free. You get a firm price before you commit, and you only pay once you approve the design.
       </>
     ),
-    schema: "The first session is free. Design is free with purchase from Celestial Lights. You get a firm price before you commit, and you only pay once you approve the design.",
+    schema: "The first session is free. You get a firm price before you commit, and you only pay once you approve the design.",
   },
   {
     q: "Is installation included in the quote?",
@@ -140,8 +138,7 @@ export default function ChandelierPricingGuide() {
               accents, ₹20,000 to ₹50,000 for statement chandeliers, and
               ₹45,000 to ₹70,000+ for large or duplex pieces. A custom piece
               has no list price. Elor measures the space and gives a firm
-              price before you commit. Design is free with purchase from
-              Celestial.
+              price before you commit.
             </p>
           </Reveal>
           <Reveal delay={0.16}>
@@ -205,8 +202,7 @@ export default function ChandelierPricingGuide() {
           </Reveal>
           <Reveal delay={0.1}>
             <p className="lede" style={{ marginTop: 16 }}>
-              Design is free with purchase from{" "}
-              <a href={CELESTIAL} target="_blank" rel="noopener noreferrer">Celestial Lights</a>.
+              The first session is free, and you only pay once you approve the design.
             </p>
           </Reveal>
           <Reveal delay={0.12}>
@@ -267,7 +263,6 @@ export default function ChandelierPricingGuide() {
               Kochi, or <Link href="/consultation">book a consultation</Link>.
               To buy a ready piece, go to{" "}
               <a href={CELESTIAL} target="_blank" rel="noopener noreferrer">Celestial Lights</a>.
-              {" "}Design is free with purchase from Celestial.
             </p>
           </Reveal>
           <Reveal delay={0.12}>

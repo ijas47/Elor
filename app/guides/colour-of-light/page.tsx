@@ -321,7 +321,7 @@ export default function ColourOfLightGuide() {
             <p className="lede" style={{ margin: "16px auto 0" }}>
               Ready fittings, chosen by the colour of light you specify, are at{" "}
               <a href={CELESTIAL} target="_blank" rel="noopener noreferrer">Celestial Lights</a>
-              . Design is free with purchase from Celestial.
+              . Design services are free*. *T&C apply.
             </p>
           </Reveal>
           <Reveal delay={0.1}>

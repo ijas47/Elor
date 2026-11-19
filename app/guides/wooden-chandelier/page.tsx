@@ -120,7 +120,7 @@ export default function WoodenChandelierGuide() {
                 <span className="tick">✓</span>
                 Buy a ready piece from{" "}
                 <a href={CELESTIAL} target="_blank" rel="noopener noreferrer">Celestial Lights</a>
-                {" "}if it fits, or have Elor make one to match the joinery. Design is free with purchase from Celestial.
+                {" "}if it fits, or have Elor make one to match the joinery.
               </li>
             </ul>
           </Reveal>
@@ -380,7 +380,7 @@ export default function WoodenChandelierGuide() {
                   it is a shelf fitting. When the span, the timber, or the
                   finish has to match the joinery, send a photograph of the
                   joinery and the measurements, and Elor designs and makes the
-                  piece. Design is free with purchase from Celestial. The
+                  piece. The
                   process, timeline, and what drives the cost are on{" "}
                   <Link href="/customisation">custom chandeliers</Link>.
                   {" "}If the house is still being built,{" "}

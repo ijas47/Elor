@@ -332,7 +332,7 @@ export default function KitchenLightingDesignGuide() {
               </li>
               <li>
                 <span className="tick">✓</span>
-                A linear piece made to your island, or a finish matched to the kitchen, is Elor. Design is free with purchase from Celestial.
+                A linear piece made to your island, or a finish matched to the kitchen, is Elor.
               </li>
               <li>
                 <span className="tick">✓</span>

@@ -118,7 +118,7 @@ export default function CeilingLightingDesignGuide() {
             <p className="lede" style={{ marginTop: 16 }}>
               Elor Lighting writes that plan. Ready fittings are at{" "}
               <a href={CELESTIAL} target="_blank" rel="noopener noreferrer">Celestial Lights</a>.
-              {" "}Design is free with purchase from Celestial.
+              {" "}Design services are free*. *T&C apply.
             </p>
           </Reveal>
         </div>
@@ -321,8 +321,7 @@ export default function CeilingLightingDesignGuide() {
                   <Link href="/customisation">custom chandeliers</Link>
                   , and the{" "}
                   <Link href="/guides/how-to-choose-a-chandelier-shop">chandelier shop guide</Link>
-                  {" "}lists what to ask anyone else. Design is free with
-                  purchase from Celestial.
+                  {" "}lists what to ask anyone else.
                 </p>
               </div>
             </div>
