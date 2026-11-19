@@ -11,7 +11,7 @@ import { RelatedGuides } from "@/components/ui/RelatedGuides";
 const TITLE = "Kelvin, CRI and Beam Angle: How to Read a Light";
 const META_TITLE = "Kelvin, CRI and Beam Angle";
 const DESC =
-  "2700K for living rooms, 4000K where you work, CRI 90 where colour matters, and a beam that fits the wall. How to specify light for a Kerala home.";
+  "2700K for living rooms, 4000K where you work, CRI 90 where colour matters, and a beam that fits the wall. Specify light for Indian homes, with Kerala notes.";
 const PATH = "/guides/colour-of-light";
 const CELESTIAL = "https://www.celestiallights.in";
 const { updated: UPDATED, modified: MODIFIED } = guideDates(PATH);

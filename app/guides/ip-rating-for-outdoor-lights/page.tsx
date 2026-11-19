@@ -9,7 +9,7 @@ import { Reveal } from "@/components/motion/Reveal";
 import { MagneticButton } from "@/components/motion/MagneticButton";
 import { RelatedGuides } from "@/components/ui/RelatedGuides";
 
-const TITLE = "IP Rating for Outdoor Lights in Kerala";
+const TITLE = "Outdoor Light IP Ratings in India (Kerala Tips)";
 const DESC =
   "What IP rating outdoor lights need: IP44 for a covered sit-out, IP65 for rain-exposed walls, IP66/67 for poolside and ground-recessed. With Kerala examples.";
 const PATH = "/guides/ip-rating-for-outdoor-lights";

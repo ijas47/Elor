@@ -35,7 +35,7 @@ const entries: GuideEntry[] = [
   },
   {
     slug: "ip-rating-for-outdoor-lights",
-    title: "IP Rating for Outdoor Lights",
+    title: "Outdoor Light IP Ratings in India (Kerala Tips)",
     dek: "IP44 under cover, IP65 where monsoon rain reaches, IP66/67 by the pool. And why the number is not enough on the coast.",
     tag: "Technical",
     image: "/images/guides/ip-rating-for-outdoor-lights/facade-terrace-lighting.webp",
@@ -55,7 +55,7 @@ const entries: GuideEntry[] = [
   },
   {
     slug: "ceiling-and-lighting-design",
-    title: "False Ceiling Lighting Design for Kerala Homes",
+    title: "False Ceiling Lighting in India (Kerala Tips)",
     dek: "Cove, spots, and the decorative piece are three jobs. The ceiling is drawn after the furniture.",
     tag: "Technical",
     image: "/images/guides/ceiling-and-lighting-design/lobby-false-ceiling-lighting.webp",
@@ -105,7 +105,7 @@ const entries: GuideEntry[] = [
   },
   {
     slug: "wooden-chandelier",
-    title: "Wooden Chandelier for Kerala Homes",
+    title: "Wooden Chandelier for Indian Homes (Kerala Tips)",
     dek: "Wood suits a dry, air-conditioned room. On a humid coast it needs a sealed finish, or another material.",
     tag: "Buying Guide",
     image: "/images/guides/wooden-chandelier/wooden-ring-chandelier-living-room.webp",
@@ -115,7 +115,7 @@ const entries: GuideEntry[] = [
   },
   {
     slug: "brass-chandelier",
-    title: "Brass Chandelier for Kerala Homes",
+    title: "Brass Chandelier for Indian Homes (Kerala Tips)",
     dek: "Untreated brass pits in salt air. The finish is specified for the room, then the piece is sized to it.",
     tag: "Buying Guide",
     image: "/images/guides/brass-chandelier/brass-chandelier-over-dining-table.webp",
