@@ -8,7 +8,7 @@ import { MagneticButton } from "@/components/motion/MagneticButton";
 const TITLE = "Lighting Design and Installation Across India";
 const META_TITLE = "Lighting Design Across India";
 const DESC =
-  "Elor designs lighting for any site in India and supplies our own fittings. We install custom lights and support the rest. Centres in Kannur, Calicut and Kochi.";
+  "Elor designs lighting for any site in India, with our own fittings. Centres in Kannur and Calicut are open. Kochi is opening soon.";
 const PATH = "/india";
 
 export const metadata: Metadata = {
@@ -20,7 +20,7 @@ export const metadata: Metadata = {
 const steps = [
   {
     h: "The plan starts wherever the drawings are",
-    p: "Send the floor plan, the ceiling section, and a photo of the site or a reference light. A video call covers the same first consultation you would have in Kannur, Kochi, or Kozhikode. The scheme is modelled before the ceiling closes, including positions, circuits, colour, and the custom piece if the room needs one.",
+    p: "Send the floor plan, the ceiling section, and a photo of the site or a reference light. A video call covers the same first consultation you would have in Kannur or Kozhikode. The scheme is modelled before the ceiling closes, including positions, circuits, colour, and the custom piece if the room needs one.",
   },
   {
     h: "The fittings are ours",
@@ -35,11 +35,11 @@ const steps = [
 const faqs = [
   {
     q: "Do you have an office in my city?",
-    a: "The office and the three experience centres are in Kerala: Celestial Lights in Kannur and Calicut, and Elor Lighting in Kochi. We do not keep a showroom in other cities. We design for the site wherever it is. We install custom lights and give installation support for everything else.",
+    a: "The office and the open experience centres are in Kerala: Celestial Lights in Kannur and Calicut. The Elor Lighting centre in Kochi is opening soon. We do not keep a showroom in other cities. We design for the site wherever it is. We install custom lights and give installation support for everything else.",
   },
   {
     q: "Can the whole project be done without a visit to Kerala?",
-    a: "The design can. Drawings, a video call, and a reference photo are enough to quote and to draw the plan. Installation needs the site. Seeing the range in person means a visit to one of the three centres, or a video walk-through of the same floor.",
+    a: "The design can. Drawings, a video call, and a reference photo are enough to quote and to draw the plan. Installation needs the site. Seeing the range in person means a visit to Kannur or Calicut, or a video walk-through of the same floor. The Kochi centre is opening soon.",
   },
   {
     q: "Who supplies the lights?",
@@ -102,14 +102,14 @@ export default function IndiaPage() {
               Elor writes the lighting plan for a house, a hotel, or a shop
               anywhere in India, and supplies the fittings we make.
               We install custom lights and give installation support for everything else. Kannur and Calicut are Celestial
-              Lights experience centres. Kochi is Elor’s. There is no fourth
+              Lights experience centres, and they are open. The Elor centre in Kochi is opening soon. There is no fourth
               showroom pretending to be local.
             </p>
           </Reveal>
           <Reveal delay={0.18}>
             <div className="cta-ctas" style={{ justifyContent: "flex-start", marginTop: 30 }}>
               <MagneticButton href="/consultation" variant="gold">Start with the drawings <span className="arr">→</span></MagneticButton>
-              <MagneticButton href="/stores" variant="ghost">The three centres</MagneticButton>
+              <MagneticButton href="/stores" variant="ghost">Our stores</MagneticButton>
             </div>
           </Reveal>
         </div>
@@ -135,7 +135,7 @@ export default function IndiaPage() {
             <ul className="check-list" style={{ marginTop: 28 }}>
               <li><span className="tick">✓</span>The plan, the quotation, and the factory piece can be settled from anywhere.</li>
               <li><span className="tick">✓</span>We install custom lights and give installation support for everything else.</li>
-              <li><span className="tick">✓</span>Seeing the range under real light means Kannur, Calicut, or Kochi, or a video from that floor.</li>
+              <li><span className="tick">✓</span>Seeing the range under real light means Kannur or Calicut, or a video from that floor. Kochi is opening soon.</li>
               <li><span className="tick">✓</span>Architects specifying from another city use the same trade path as a Kerala studio. The notes are on the <a href="/for/architects-and-designers">architect page</a>.</li>
               <li><span className="tick">✓</span>How the plan is drawn, including layers and scenes, is the <a href="/guides/how-a-lighting-plan-is-built">lighting-plan guide</a>.</li>
             </ul>

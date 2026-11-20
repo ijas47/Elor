@@ -18,7 +18,7 @@ export async function GET() {
 - [Collections](${site.domain}/collections): curated lighting collections
 - [Customisation](${site.domain}/customisation): custom chandelier fabrication from a photo, render or sketch
 - [Consultation](${site.domain}/consultation): book a lighting design consultation
-- [Stores](${site.domain}/stores): Celestial stores and experience centres in Kannur and Calicut, and a full experience centre in Kochi
+- [Stores](${site.domain}/stores): Celestial stores and experience centres in Kannur and Calicut, which are open, and an Elor experience centre in Kochi that is opening soon
 - [Across India](${site.domain}/india): lighting design for any site in India, supplied from our own line. We install custom lights and give installation support for everything else. Centres stay in Kerala
 ${stores.map((s) => `  - [${s.brand}, ${s.city}](${site.domain}/stores/${s.city.toLowerCase()}): ${s.address}`).join("\n")}
 - [Guides](${site.domain}/guides): practical notes on specifying and buying light

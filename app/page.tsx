@@ -28,7 +28,7 @@ export default function Home() {
           <div className="trust-item"><span className="trust-num">DIALux</span><span className="trust-label">The plan is calculated<br />before the ceiling closes</span></div>
           <div className="trust-item"><span className="trust-num">Factory</span><span className="trust-label">Custom chandeliers<br />made by us</span></div>
           <div className="trust-item"><span className="trust-num">Range</span><span className="trust-label">Basic fittings<br />to luxury pieces</span></div>
-          <div className="trust-item"><span className="trust-num">3</span><span className="trust-label">Experience centres<br />Kannur, Calicut, Kochi</span></div>
+          <div className="trust-item"><span className="trust-num">2</span><span className="trust-label">Experience centres open<br />Kannur and Calicut</span></div>
         </div>
       </div>
 
@@ -41,7 +41,7 @@ export default function Home() {
               <Reveal delay={0.06}><h2 className="h-lg">Start with<br />the room.</h2></Reveal>
             </div>
             <Reveal delay={0.12}>
-              <p className="lede">Send the drawing, or a photo of the room. We write the plan in DIALux while the ceiling can still change, then supply the fittings and build what that room still needs. We install custom lights and give installation support for everything else. Centres in Kannur, Calicut and Kochi. The site can be anywhere in India. <Link href="/india">If you are building outside Kerala.</Link></p>
+              <p className="lede">Send the drawing, or a photo of the room. We write the plan in DIALux while the ceiling can still change, then supply the fittings and build what that room still needs. We install custom lights and give installation support for everything else. Centres in Kannur and Calicut. Kochi is opening soon. The site can be anywhere in India. <Link href="/india">If you are building outside Kerala.</Link></p>
             </Reveal>
           </div>
           <Stagger className="spaces">
@@ -253,7 +253,7 @@ export default function Home() {
               <Reveal delay={0.06}><h2 className="h-lg" style={{ marginTop: 18 }}>The first session<br />is <span className="serif-i">free.</span></h2></Reveal>
               <Reveal delay={0.12}>
                 <ul className="check-list">
-                  <li><span className="tick">✓</span>At your site, in Kannur, Calicut or Kochi, or on video</li>
+                  <li><span className="tick">✓</span>At your site, in Kannur or Calicut, or on video. Kochi is opening soon</li>
                   <li><span className="tick">✓</span>You leave with positions, colour temperature, and which circuits dim</li>
                   <li><span className="tick">✓</span>You pay only if you ask us to go ahead</li>
                   <li><span className="tick">✓</span>Supply is from our own fittings. We install custom lights and give installation support for everything else.</li>
@@ -275,7 +275,7 @@ export default function Home() {
             {[
               { h: "Consult", p: "Free. On site, in a centre, or on video. Bring the floor plan if you have it." },
               { h: "Design", p: "A DIALux model, then the drawing set and a price. The ceiling should still be open." },
-              { h: "Supply", p: "Our fittings. Stand under them in Kannur, Calicut or Kochi before you order. The online shop is not open yet." },
+              { h: "Supply", p: "Our fittings. Stand under them in Kannur or Calicut before you order. The Kochi centre is opening soon. The online shop is not open yet." },
               { h: "Install", p: "We install custom lights and give installation support for everything else. One point of contact, one warranty." },
             ].map((s) => (
               <StaggerItem key={s.h}>
@@ -324,7 +324,7 @@ export default function Home() {
               <Reveal delay={0.06}><h2 className="h-lg">Stand under it<br />before you <span className="serif-i">sign off.</span></h2></Reveal>
             </div>
             <Reveal delay={0.12}>
-              <p className="lede">Kannur and Calicut are Celestial Lights. Kochi is Elor. Come and stand under a fitting before you order it. The online shop is not open yet, so until then you come in, or you send the plan on WhatsApp.</p>
+              <p className="lede">Kannur and Calicut are Celestial Lights, and you can stand under a fitting there before you order it. The Elor centre in Kochi is opening soon. The online shop is not open yet, so until then you come in, or you send the plan on WhatsApp.</p>
             </Reveal>
           </div>
           <Stagger className="stores-grid">

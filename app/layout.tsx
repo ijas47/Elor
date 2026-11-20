@@ -39,7 +39,7 @@ export const metadata: Metadata = {
     "custom chandeliers Kerala",
     "chandelier manufacturer Kerala",
     "lighting consultation Kerala",
-    "lighting shop Kochi",
+    "lighting design Kochi",
     "lighting shop Kannur",
     "lighting shop Kozhikode",
     "Celestial Lights",

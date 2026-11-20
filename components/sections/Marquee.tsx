@@ -9,7 +9,7 @@ const items = [
   "Custom lights installed by us",
   "Installation support",
   "Warranty up to 5 years",
-  "Kannur · Calicut · Kochi",
+  "Kannur · Calicut · Kochi opening soon",
   "Sites anywhere in India",
 ];
 

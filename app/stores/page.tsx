@@ -10,9 +10,9 @@ import { Reveal, Stagger, StaggerItem } from "@/components/motion/Reveal";
 import { MagneticButton } from "@/components/motion/MagneticButton";
 
 export const metadata: Metadata = {
-  title: "Our Stores · Kannur, Kochi & Kozhikode",
+  title: "Our Stores · Kannur, Calicut, Kochi Soon",
   description:
-    "See the range lit before you specify it. Celestial stores and experience centres in Kannur and Calicut. A full experience centre in Kochi.",
+    "See the range lit in Kannur and Calicut before you specify it. Celestial stores are open there. The Elor centre in Kochi is opening soon.",
   alternates: { canonical: "/stores" },
 };
 
@@ -62,8 +62,9 @@ export default function Stores() {
               <Reveal delay={0.12}>
                 <p className="lede" style={{ marginTop: 22 }}>
                   Celestial has stores and experience centres in Kannur and Calicut.
-                  Kochi is the full experience centre. Bring the drawing. Stand under
-                  the range, from basic fittings to the pieces we make to order.
+                  The Elor centre in Kochi is opening soon. Bring the drawing. Stand
+                  under the range in Kannur or Calicut, from basic fittings to the
+                  pieces we make to order.
                 </p>
               </Reveal>
               <Reveal delay={0.18}>

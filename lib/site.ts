@@ -17,7 +17,7 @@ export const site = {
   tagline: "Lighting plans, supply, and custom chandeliers. By Celestial Lights.",
   domain: "https://www.elorlighting.com",
   description:
-    "Elor Lighting is the lighting consultancy of Celestial Lights. We design lighting for sites anywhere in India and supply our own fittings. We install custom lights and give installation support for everything else. The plan is written in DIALux. Custom chandeliers are made in our factory. Experience centres and the office are in Kerala: Celestial Lights in Kannur and Calicut, and a full Elor experience centre in Kochi. An online store for the range is being built.",
+    "Elor Lighting is the lighting consultancy of Celestial Lights. We design lighting for sites anywhere in India and supply our own fittings. We install custom lights and give installation support for everything else. The plan is written in DIALux. Custom chandeliers are made in our factory. Experience centres and the office are in Kerala: Celestial Lights in Kannur and Calicut, which are open, and an Elor experience centre in Kochi that is opening soon. An online store for the range is being built.",
   /**
    * `description` above is the full entity description. It feeds Organization
    * schema and llms.txt, where length is fine. `metaDescription` is the SERP
@@ -25,7 +25,7 @@ export const site = {
    * location and its call to action before anyone read them.
    */
   metaDescription:
-    "Lighting design anywhere in India, with our own fittings. We install custom lights and support the install of the rest. Centres in Kannur, Calicut and Kochi.",
+    "Lighting design anywhere in India, with our own fittings. Custom lights installed by us. Centres in Kannur and Calicut. Kochi is opening soon.",
 
   email: brands.elor.email,
   hours: "Mon-Sat · 9:30 AM to 8:30 PM IST",
@@ -54,13 +54,15 @@ export const site = {
 
 /**
  * Celestial has two stores, Kannur and Calicut (Kozhikode), and an experience
- * centre at each. Kochi is Elor's full experience centre, not a third Celestial
- * store. Do not call all three "Celestial stores".
+ * centre at each. Those two are open. The Kochi store is Elor's upcoming
+ * experience centre, not a third Celestial store, and it is not open yet.
+ * Do not call all three "Celestial stores", and do not present Kochi as open.
  *
  * Phones: the Elor (Kochi) centre carries the Elor number; the two Celestial
  * stores carry the Celestial line. Address parts are stored separately so the
  * PostalAddress schema gets a clean streetAddress plus locality/region/PIN;
- * `address` is the display string built from them.
+ * `address` is the display string built from them. Kochi's address is the
+ * upcoming location.
  *
  * `geo` is locality-level (OpenStreetMap Nominatim geocoding of the address
  * text), not a GPS-surveyed exact point. Fine for LocalBusiness schema, but
@@ -105,7 +107,7 @@ export const stores = [
   store({
     city: "Kochi",
     brandId: "elor",
-    kind: "Full experience centre",
+    kind: "Opening soon",
     street:
       "63/500, 1st Floor, Chalakuzhy, Gandhinagar Road, near the Fire and Rescue Station, Gandhi Nagar, Kadavanthra",
     locality: "Kochi",
@@ -113,7 +115,7 @@ export const stores = [
     postalCode: "682020",
     address:
       "63/500, 1st Floor, Chalakuzhy, Gandhinagar Road, near the Fire and Rescue Station, Gandhi Nagar, Kadavanthra, Kochi, Kerala 682020",
-    hours: "Mon-Sat · 9:30 AM to 8:30 PM",
+    hours: "Opening soon",
     maps: "https://maps.google.com/?q=Elor+Lighting+63/500+Chalakuzhy+Gandhinagar+Road+Kadavanthra+Kochi+682020",
     geo: { lat: 9.9889781, lng: 76.2951875 },
   }),

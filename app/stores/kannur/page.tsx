@@ -16,7 +16,6 @@ const CELESTIAL = "https://www.celestiallights.in";
 const IMAGE = "/lifestyle/hero-4.jpg";
 const IMAGE_ALT = "Custom chandelier lighting in Kannur";
 const store = stores.find((s) => s.city === "Kannur")!;
-const others = stores.filter((s) => s.city !== "Kannur");
 
 const faqs = [
   {
@@ -289,15 +288,14 @@ export default function KannurStorePage() {
           <Reveal delay={0.12}>
             <p className="lede" style={{ marginTop: 16 }}>
               Not in Kannur? Visit the{" "}
-              {others.map((s, i) => (
-                <span key={s.city}>
-                  <Link href={`/stores/${s.city.toLowerCase()}`} style={{ color: "var(--gold)" }}>
-                    {s.city} store
-                  </Link>
-                  {i === 0 ? " or the " : ""}
-                </span>
-              ))}
-              , or{" "}
+              <Link href="/stores/kozhikode" style={{ color: "var(--gold)" }}>
+                Kozhikode store
+              </Link>
+              , see the{" "}
+              <Link href="/stores/kochi" style={{ color: "var(--gold)" }}>
+                Kochi page
+              </Link>
+              {" "}(opening soon), or{" "}
               <Link href="/consultation" style={{ color: "var(--gold)" }}>
                 book a remote consultation
               </Link>

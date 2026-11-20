@@ -18,7 +18,7 @@ export const metadata: Metadata = {
 const faqs = [
   // Also serialized into FAQPage schema below. Keep questions/answers in sync
   // with what's actually asked on the page.
-  { q: "Is the consultation really free?", a: "Yes. The first session, at your site, at an experience centre in Kannur, Calicut or Kochi, or over video, is free and carries no obligation. You only pay if you choose to go ahead." },
+  { q: "Is the consultation really free?", a: "Yes. The first session, at your site, at an experience centre in Kannur or Calicut, or over video, is free and carries no obligation. You only pay if you choose to go ahead. The Kochi centre is opening soon." },
   { q: "Do I have to buy everything from you?", a: "No. When the lights are ours, one team owns quality, pricing and the warranty. We install custom lights and give installation support for everything else." },
   { q: "Can you work with my architect or interior designer?", a: "Absolutely. We work alongside architects and designers constantly, reading drawings, improving them, and coordinating on site so the scheme lands the way it was designed." },
   { q: "Do you install the lights?", a: "We install custom lights and give installation support for everything else." },
@@ -88,9 +88,10 @@ export default async function Consultation({
           </Reveal>
           <Reveal delay={0.12}>
             <p className="lede">
-              Book it at your site, in Kannur, Calicut or Kochi, or on video.
-              You pay only if you ask us to go ahead. We install custom lights
-              and give installation support for everything else.
+              Book it at your site, in Kannur or Calicut, or on video. The
+              Kochi centre is opening soon. You pay only if you ask us to go
+              ahead. We install custom lights and give installation support
+              for everything else.
             </p>
           </Reveal>
         </div>
