@@ -309,8 +309,9 @@ export default function MaterialsComparisonGuide() {
           <Reveal delay={0.06}>
             <p className="lede" style={{ margin: "16px auto 0" }}>
               Crystal against glass is a five-second decision standing under
-              both, and an almost impossible one from photographs. All three
-              stores carry the full range. You can also browse ready pieces at{" "}
+              both, and an almost impossible one from photographs. The Kannur
+              and Kozhikode stores carry the full range. The Kochi centre is
+              opening soon. You can also browse ready pieces at{" "}
               <a href={CELESTIAL} target="_blank" rel="noopener noreferrer">Celestial Lights</a>.
             </p>
           </Reveal>
