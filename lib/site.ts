@@ -79,6 +79,8 @@ type StoreInput = {
   postalCode: string;
   address: string;
   hours: string;
+  /** Schema.org openingHours, e.g. "Mo-Sa 09:30-20:30". Omit when the store is not open yet. */
+  openingHours?: string;
   maps: string;
   geo: { lat: number; lng: number } | null;
 };
@@ -101,6 +103,7 @@ export const stores = [
     address:
       "Philips Building, Kannur, Kerala 670005",
     hours: "Mon-Sat · 9:30 AM to 8:30 PM",
+    openingHours: "Mo-Sa 09:30-20:30",
     maps: "https://maps.google.com/?q=Celestial+Lights+Philips+Building+Kannur+Kerala+670005",
     geo: { lat: 11.8739191, lng: 75.3881457 },
   }),
@@ -131,6 +134,7 @@ export const stores = [
     postalCode: "",
     address: "Kozhikode, Kerala",
     hours: "Mon-Sat · 9:30 AM to 8:30 PM",
+    openingHours: "Mo-Sa 09:30-20:30",
     maps: "https://maps.google.com/?q=Celestial+Lights+Kozhikode+Kerala",
     // No geo until the real store location is confirmed.
     geo: null,
