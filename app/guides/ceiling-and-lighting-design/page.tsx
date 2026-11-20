@@ -9,9 +9,10 @@ import { Reveal } from "@/components/motion/Reveal";
 import { MagneticButton } from "@/components/motion/MagneticButton";
 import { RelatedGuides } from "@/components/ui/RelatedGuides";
 
-const TITLE = "False Ceiling Lighting in India (Kerala Tips)";
+const TITLE = "False Ceiling Lighting Design in India (Kerala Tips)";
+const META_TITLE = "False Ceiling Lighting Design in India";
 const DESC =
-  "False ceiling lighting for Indian homes (Kerala tips): draw furniture first, put cove, spots and the chandelier on separate circuits, and fix it to the slab.";
+  "False ceiling lights for Indian homes: draw the furniture first, then plan cove, spots and a chandelier on separate circuits, anchored to the slab.";
 const PATH = "/guides/ceiling-and-lighting-design";
 const CELESTIAL = "https://www.celestiallights.in";
 const { updated: UPDATED, modified: MODIFIED } = guideDates(PATH);
@@ -23,17 +24,21 @@ const BODY_ALT =
   "A lounge with recessed coves and linear ceiling lights running above a brass and glass partition";
 
 export const metadata: Metadata = {
-  title: TITLE,
+  title: META_TITLE,
   description: DESC,
   alternates: { canonical: PATH },
   openGraph: {
-    title: TITLE,
+    title: META_TITLE,
     description: DESC,
     images: [{ url: HERO_IMAGE, width: 1600, height: 900, alt: HERO_ALT }],
   },
 };
 
 const faqs: { q: string; a: string; visible?: "weight" | "fittings" }[] = [
+  {
+    q: "What lights go in a false ceiling?",
+    a: "Usually three: a cove or profile light at the edge, recessed spots for tasks and paths, and a hanging piece over the seating or table. Each goes on its own circuit, and the spots follow the furniture, not a grid.",
+  },
   {
     q: "What is ceiling and lighting design?",
     a: "A marked ceiling that says where the cove, the spots, and the decorative piece go, which circuit each is on, and what the anchor is fixed to. It is drawn before the false ceiling closes.",
@@ -43,9 +48,13 @@ const faqs: { q: string; a: string; visible?: "weight" | "fittings" }[] = [
     a: "No. A single fitting in the middle leaves the walls dark and gives the room one level. Cove, spots, and task light stay in the plan. The chandelier sits on top of them.",
   },
   {
-    q: "Can gypsum or POP hold a chandelier?",
-    a: "No. The anchor goes into the slab while the ceiling is open, and the false ceiling is built around it. The false-ceiling guide sets out the sequence.",
+    q: "Can a false ceiling hold a chandelier?",
+    a: "No. Gypsum and POP do not carry it. The anchor goes into the slab while the ceiling is open, and the false ceiling is built around it. The false-ceiling guide sets out the sequence.",
     visible: "weight",
+  },
+  {
+    q: "Can I add lights after the POP is finished?",
+    a: "Yes, but it means cutting the finished ceiling, then patching and painting it again. A spot needs enough depth and a way to run the wire. A chandelier still needs a slab anchor, so the opening gets bigger. Marking every point before the POP closes is cheaper.",
   },
   {
     q: "Why can I see the bulb in my false-ceiling downlights?",
@@ -112,20 +121,33 @@ export default function CeilingLightingDesignGuide() {
           <Reveal as="span"><span className="eyebrow">Technical · Updated {UPDATED}</span></Reveal>
           <Reveal delay={0.06}>
             <h1 className="h-xl" style={{ marginTop: 18 }}>
-              Design the ceiling<br /><span className="serif-i">around the light.</span>
+              False ceiling lighting design: plan the ceiling around the light
             </h1>
           </Reveal>
           <Reveal delay={0.12}>
+            <ul className="check-list" style={{ marginTop: 28 }}>
+              <li><span className="tick">✓</span>Draw the furniture first, then the ceiling.</li>
+              <li><span className="tick">✓</span>Cove, spots, and the decorative piece are three jobs, on three circuits.</li>
+              <li><span className="tick">✓</span>The chandelier is fixed to the slab, not the gypsum or POP.</li>
+            </ul>
+          </Reveal>
+          <Reveal delay={0.14}>
             <p className="lede" style={{ marginTop: 22 }}>
-              Design a false ceiling and its lighting together, before the
-              gypsum closes. Draw the furniture first, then place three
-              layers: cove for a soft wash, spots for tasks and paths, and a
-              decorative piece over the seating or table. Give each its own
-              circuit, fix the chandelier anchor to the slab, and leave the
-              fan its own point.
+              False ceiling lights are not one fitting. A false ceiling usually
+              needs three: a hidden cove or profile for a soft wash, spots that
+              do not glare, and a decorative piece on its own circuit. Draw the
+              furniture first, and fix the chandelier anchor to the slab, not
+              the board.
             </p>
           </Reveal>
           <Reveal delay={0.16}>
+            <p className="lede" style={{ marginTop: 16 }}>
+              Design a false ceiling and its lighting together, before the
+              gypsum closes. Place the three layers over the furniture, give
+              each its own circuit, and leave the fan its own point.
+            </p>
+          </Reveal>
+          <Reveal delay={0.18}>
             <p className="lede" style={{ marginTop: 16 }}>
               Elor Lighting writes that plan. Ready fittings are at{" "}
               <a href={CELESTIAL} target="_blank" rel="noopener noreferrer">Celestial Lights</a>.
@@ -159,6 +181,24 @@ export default function CeilingLightingDesignGuide() {
       <section className="sec" style={{ paddingTop: 0 }}>
         <div className="wrap">
           <div className="register">
+            <div className="register-row">
+              <h2>What false ceiling lights go into a home ceiling?</h2>
+              <div>
+                <p>Three kinds, and you will hear them by their shop names.</p>
+                <ul className="check-list" style={{ marginTop: 16 }}>
+                  <li><span className="tick">✓</span><span><strong>Cove or profile light.</strong> An LED strip hidden in a lip or a channel at the edge of the ceiling. It washes the ceiling and walls with soft light. The <Link href="/guides/cove-lighting-kerala">cove guide</Link> covers the lip and the profile.</span></li>
+                  <li><span className="tick">✓</span><span><strong>Recessed spots.</strong> Downlights set into the board, also sold as recessed lighting or concealed lights. They light a task, a path, or a wall. Place them where the furniture needs them, not in a regular grid across the room. Where each one goes is in <Link href="/guides/downlight-placement">the downlight placement guide</Link>, and why some of them hurt your eyes is in <Link href="/guides/why-downlights-glare">why a downlight glares</Link>.</span></li>
+                  <li><span className="tick">✓</span><span><strong>A hanging piece.</strong> The chandelier or pendant over the seating or the table. It hangs from the slab through the false ceiling.</span></li>
+                </ul>
+                <p style={{ marginTop: 16 }}>
+                  The names are the same for a gypsum board ceiling and a POP
+                  (plaster of Paris) ceiling. What changes the result is not
+                  the shop name but the order you plan them in. That order is
+                  the rest of this page.
+                </p>
+              </div>
+            </div>
+
             <div className="register-row">
               <h2>What is ceiling and lighting design?</h2>
               <div>
@@ -330,7 +370,9 @@ export default function CeilingLightingDesignGuide() {
                   <Link href="/guides/staircase-lighting-design">staircase lighting</Link>
                   . Whatever hangs from the ceiling has to be reachable for
                   cleaning; the routine is in{" "}
-                  <Link href="/guides/how-to-clean-a-crystal-chandelier">how to clean a crystal chandelier</Link>.
+                  <Link href="/guides/how-to-clean-a-crystal-chandelier">how to clean a crystal chandelier</Link>
+                  . For the whole house at once, see{" "}
+                  <Link href="/guides/home-lighting-design">home lighting design</Link>.
                 </p>
               </div>
             </div>
@@ -345,7 +387,8 @@ export default function CeilingLightingDesignGuide() {
                   <Link href="/consultation">Book a lighting consultation</Link>
                   {" "}and start with a floor plan and a photo.{" "}
                   <a href={CELESTIAL} target="_blank" rel="noopener noreferrer">Celestial Lights</a>
-                  {" "}carries ready fittings for every room. A piece made for
+                  {" "}carries ready fittings for every room, at wholesale best
+                  rates, and can match any quote. A piece made for
                   this ceiling is on{" "}
                   <Link href="/customisation">custom chandeliers</Link>
                   , and the{" "}
@@ -423,7 +466,7 @@ export default function CeilingLightingDesignGuide() {
                   <p className="faq-a">
                     {f.visible === "weight" ? (
                       <>
-                        No. The anchor goes into the slab while the ceiling is
+                        No. Gypsum and POP do not carry it. The anchor goes into the slab while the ceiling is
                         open, and the false ceiling is built around it. The{" "}
                         <Link href="/guides/false-ceiling-chandelier-weight">false-ceiling guide</Link>
                         {" "}sets out the sequence.
