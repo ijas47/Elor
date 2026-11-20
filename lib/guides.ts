@@ -283,6 +283,16 @@ const entries: GuideEntry[] = [
     modified: "2026-11-19",
     related: ["ip-rating-for-outdoor-lights", "coastal-lighting-kerala", "home-lighting-design"],
   },
+  {
+    slug: "dining-room-lighting-design",
+    title: "Dining Room Lighting Design: Start With the Table",
+    dek: "Size the light to the table, hang it 75 to 90 cm above the top, and give it its own switch.",
+    tag: "Technical",
+    image: "/images/guides/chandelier-size-calculator/dining-chandelier-scale.webp",
+    imageAlt: "A brass chandelier hanging over a dining table in a modern apartment, sized to the table rather than the whole room",
+    modified: "2026-11-20",
+    related: ["chandelier-size-calculator", "chandelier-for-living-room", "chandelier-with-ceiling-fan", "home-lighting-design"],
+  },
 ];
 
 export interface Guide extends GuideEntry {
