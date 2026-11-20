@@ -56,7 +56,7 @@ We install custom lights and give installation support for everything else.
 
 ## Services
 
-- The first session is free (at your site, in Kannur, Calicut or Kochi, or on video)
+- The first session is free (at your site, in Kannur or Calicut, or on video). The Kochi centre is opening soon
 - Design services are free*. *T&C apply.
 - We install custom lights and give installation support for everything else.
 - Delivery: pan-India
@@ -73,7 +73,7 @@ We install custom lights and give installation support for everything else.
 ## Where to buy
 
 - Celestial Lights, Kannur: Philips Building, 670005
-- Elor Lighting, Kochi: 63/500, 1st Floor, Chalakuzhy, Gandhinagar Road, near the Fire and Rescue Station, Gandhi Nagar, Kadavanthra, Kochi, Kerala 682020
+- Elor Lighting, Kochi (opening soon): 63/500, 1st Floor, Chalakuzhy, Gandhinagar Road, near the Fire and Rescue Station, Gandhi Nagar, Kadavanthra, Kochi, Kerala 682020
 - Celestial Lights, Kozhikode: Kozhikode, Kerala
 - Shop: https://www.celestiallights.in
 - Pan-India delivery from any store.

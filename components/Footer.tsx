@@ -16,8 +16,8 @@ export function Footer() {
             </Link>
             <p className={styles.blurb}>
               The lighting consultancy of Celestial Lights. We design for
-              any site in India and supply our own fittings. We install custom lights and give installation support for everything else. Experience centres in Kannur, Calicut
-              and Kochi.
+              any site in India and supply our own fittings. We install custom lights and give installation support for everything else. Experience centres in Kannur and Calicut.
+              Kochi is opening soon.
             </p>
             <a
               href={site.shopUrl}

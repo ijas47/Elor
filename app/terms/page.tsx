@@ -41,7 +41,7 @@ export default function Terms() {
           <p>
             This is an informational and enquiry site describing Elor&rsquo;s lighting
             consultation, custom fabrication and installation services, and Celestial Lights&rsquo;
-            stores and experience centres in Kannur and Calicut, and a full experience centre in Kochi. It does not process payments or sell
+            stores and experience centres in Kannur and Calicut, which are open, and an Elor experience centre in Kochi that is opening soon. It does not process payments or sell
             products directly. Enquiries made through the consultation form or a WhatsApp/email
             reference are the start of a conversation, not a binding order. Any quote, price or
             timeline becomes binding only once confirmed separately in writing between you and

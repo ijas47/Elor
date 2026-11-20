@@ -162,8 +162,8 @@ export function Hero() {
           </div>
 
           <div className={`${styles.note} hero-fade`} style={{ animationDelay: "0.95s" }}>
-            <span className={styles.dot} />Celestial stores in Kannur and Calicut · Full
-            experience centre in Kochi
+            <span className={styles.dot} />Celestial stores in Kannur and Calicut · Kochi
+            opening soon
           </div>
         </div>
 
