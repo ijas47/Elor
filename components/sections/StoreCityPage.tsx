@@ -43,7 +43,7 @@ export function StoreCityPage({ city }: { city: StoreCity }) {
     },
     telephone: store.phone,
     email: site.email,
-    openingHours: "Mo-Sa 09:30-20:30",
+    ...(store.openingHours ? { openingHours: store.openingHours } : {}),
     url: `${site.domain}${path}`,
     hasMap: store.maps,
     parentOrganization: { "@type": "Organization", name: site.name, url: site.domain },
@@ -138,8 +138,8 @@ export function StoreCityPage({ city }: { city: StoreCity }) {
         <div className="wrap">
           <div className="sec-head">
             <div className="stack-sm">
-              <Reveal as="span"><span className="eyebrow">Visit us</span></Reveal>
-              <Reveal delay={0.06}><h2 className="h-lg">The {city} store.</h2></Reveal>
+              <Reveal as="span"><span className="eyebrow">{store.openingHours ? "Visit us" : "Opening soon"}</span></Reveal>
+              <Reveal delay={0.06}><h2 className="h-lg">{store.openingHours ? `The ${city} store.` : `The upcoming ${city} store.`}</h2></Reveal>
             </div>
           </div>
           <Reveal delay={0.12}>
@@ -147,7 +147,11 @@ export function StoreCityPage({ city }: { city: StoreCity }) {
               <div className="store-city">{store.city}</div>
               <div className="store-brand">{store.brand}</div>
               <p><span className="store-k">Address</span>{store.address}</p>
-              <p><span className="store-k">Hours</span>{store.hours}</p>
+              {store.openingHours ? (
+                <p><span className="store-k">Hours</span>{store.hours}</p>
+              ) : (
+                <p><span className="store-k">Status</span>Opening soon</p>
+              )}
               <p><span className="store-k">Phone</span><a href={store.phoneHref} style={{ color: "var(--text-dim)" }}>{store.phone}</a></p>
               <a className="store-link" href={store.maps} target="_blank" rel="noopener noreferrer">Get directions →</a>
             </div>
@@ -206,7 +210,9 @@ export function StoreCityPage({ city }: { city: StoreCity }) {
               Not in {city}? Visit the{" "}
               {others.map((s, i) => (
                 <span key={s.city}>
-                  <Link href={`/stores/${s.city.toLowerCase()}`}>{s.city} store</Link>
+                  <Link href={`/stores/${s.city.toLowerCase()}`}>
+                    {s.openingHours ? `${s.city} store` : `${s.city} store (opening soon)`}
+                  </Link>
                   {i === 0 ? " or the " : ""}
                 </span>
               ))}
