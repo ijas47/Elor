@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import type { Metadata } from "next";
 import { site } from "@/lib/site";
 import { guideDates } from "@/lib/guides";
@@ -8,10 +9,11 @@ import { Reveal, Stagger, StaggerItem } from "@/components/motion/Reveal";
 import { MagneticButton } from "@/components/motion/MagneticButton";
 import { RelatedGuides } from "@/components/ui/RelatedGuides";
 
-const TITLE = "Kelvin, CRI and Beam Angle: How to Read a Light";
-const META_TITLE = "Kelvin, CRI and Beam Angle";
+const TITLE = "Warm White vs Cool White: Kelvin, CRI and Beam Angle";
+const META_TITLE = "Warm White vs Cool White: Kelvin, CRI, Beam";
+const CRUMB = "Warm White vs Cool White";
 const DESC =
-  "2700K for living rooms, 4000K where you work, CRI 90 where colour matters, and a beam that fits the wall. Specify light for Indian homes, with Kerala notes.";
+  "Warm white vs cool white for Indian homes: 2700K to 3000K for living rooms, 4000K where you work, CRI 90 where colour matters, and a beam that fits.";
 const PATH = "/guides/colour-of-light";
 const CELESTIAL = "https://www.celestiallights.in";
 const { updated: UPDATED, modified: MODIFIED } = guideDates(PATH);
@@ -33,7 +35,7 @@ export const metadata: Metadata = {
   },
 };
 
-const rooms = [
+const rooms: { h: string; p: React.ReactNode }[] = [
   {
     h: "Living, dining, bedroom: 2700K to 3000K",
     p: "This is the evening colour of the house. Skin, timber, and brass read as themselves. A living room that also hosts dinner can sit at 3000K so the table is clear without the room going cold. Bedrooms stay at 2700K.",
@@ -48,11 +50,23 @@ const rooms = [
   },
   {
     h: "Facade and garden: 2700K to 3000K, aimed down",
-    p: "Warm light on laterite, timber, and planting. Cool white on a house front reads as a compound light, not architecture. Keep the beam on the wall and the path. A coastal site also needs a fitting that can live in salt air. That choice is in the coastal guide.",
+    p: <>Warm light on laterite, timber, and planting. Cool white on a house front reads as a compound light, not architecture. Keep the beam on the wall and the path. A coastal site also needs a fitting that can live in salt air. That choice is in the <Link href="/guides/coastal-lighting-kerala">coastal guide</Link>.</>,
   },
 ];
 
 const faqs = [
+  {
+    q: "Is warm white the same as 2700K?",
+    a: "Not exactly. 2700K is the warmer of the two warm whites on this page, a slightly amber light. 3000K is also sold as warm white and looks a little cleaner. Read the K number on the box, because the word alone does not tell you which one you are buying.",
+  },
+  {
+    q: "Can I mix warm white and cool white in one room?",
+    a: "Not in the same view. Side by side, the warm lamp looks dirty and the cool one looks blue. Pick one warm white for the room. If a worktop or desk needs a clearer light, give it 4000K on its own switch.",
+  },
+  {
+    q: "Which is better for a Kerala living room?",
+    a: "Warm white. Use 3000K if the room also hosts dinner, and 2700K if it is a quieter lounge. Cool white in a living room makes timber and skin look grey. Keep CRI at 90 or above so the teak and fabric look right.",
+  },
   {
     q: "What is Kelvin on a light?",
     a: "Kelvin (K) is the colour of the white, not its brightness. 2700K is the warm white of an old filament lamp. 3000K is a clean warm white. 4000K is a neutral white. 6500K is daylight white. A brighter lamp is more lumens, not a higher Kelvin.",
@@ -67,7 +81,7 @@ const faqs = [
   },
   {
     q: "What beam angle do I need?",
-    a: "About 10 to 15 degrees to pick out a painting or a column. About 24 to 36 degrees for a table or a general accent. About 45 to 60 degrees to wash a wall evenly. A wide beam on a small painting spills onto the wall around it. A narrow beam used as the only light in a room leaves the corners dark.",
+    a: "About 8 to 15 degrees to pick out a painting or a column. About 24 to 36 degrees for a table or a general accent. About 45 to 60 degrees to wash a wall evenly. A wide beam on a small painting spills onto the wall around it. A narrow beam used as the only light in a room leaves the corners dark.",
   },
   {
     q: "Can one fitting do every job?",
@@ -76,6 +90,7 @@ const faqs = [
   {
     q: "When do these decisions have to be made?",
     a: "Before the false ceiling closes. Beam position, the separate circuits, and the anchor for a chandelier are all in the slab or the conduit. Changing Kelvin later is a driver or a lamp. Changing where the light lands means opening the ceiling.",
+    link: true,
   },
 ];
 
@@ -102,7 +117,10 @@ const faqSchema = {
   mainEntity: faqs.map((f) => ({
     "@type": "Question",
     name: f.q,
-    acceptedAnswer: { "@type": "Answer", text: f.a },
+    acceptedAnswer: {
+      "@type": "Answer",
+      text: "link" in f && f.link ? `${f.a} The ceiling and lighting design guide covers the order of work.` : f.a,
+    },
   })),
 };
 
@@ -117,7 +135,7 @@ export default function ColourOfLightGuide() {
           __html: JSON.stringify(
             breadcrumbSchema([
               { name: "Guides", path: "/guides" },
-              { name: "Kelvin, CRI and Beam Angle", path: PATH },
+              { name: CRUMB, path: PATH },
             ])
           ),
         }}
@@ -125,14 +143,27 @@ export default function ColourOfLightGuide() {
 
       <section className="page-hero">
         <div className="wrap-tight">
-          <Breadcrumbs crumbs={[{ name: "Guides", path: "/guides" }, { name: "Kelvin, CRI and Beam Angle", path: PATH }]} />
+          <Breadcrumbs crumbs={[{ name: "Guides", path: "/guides" }, { name: CRUMB, path: PATH }]} />
           <Reveal as="span"><span className="eyebrow">Technical · Updated {UPDATED}</span></Reveal>
           <Reveal delay={0.06}>
             <h1 className="h-xl" style={{ marginTop: 18 }}>
-              Three numbers that decide<br /><span className="serif-i">how a room feels.</span>
+              Warm white vs cool white, and the three numbers that decide how a room feels
             </h1>
           </Reveal>
           <Reveal delay={0.12}>
+            <p className="lede" style={{ marginTop: 22 }}>
+              Warm white is about 2700K to 3000K, the colour this guide recommends for living rooms. Cool white is a higher Kelvin and can make a home feel like a clinic. CRI and beam angle still matter. Ready fittings are at{" "}
+              <a href={CELESTIAL} target="_blank" rel="noopener noreferrer">Celestial Lights</a>. Elor can write the plan. Design services are free*.
+            </p>
+          </Reveal>
+          <Reveal delay={0.14}>
+            <ul className="check-list" style={{ marginTop: 28 }}>
+              <li><span className="tick">✓</span>Warm white is about 2700K to 3000K. It is the colour this guide recommends for living rooms.</li>
+              <li><span className="tick">✓</span>Cool white is a higher Kelvin. It is bluer, and in a home it can feel like a clinic.</li>
+              <li><span className="tick">✓</span>CRI and beam angle still matter. A good colour on a bad lamp still looks wrong.</li>
+            </ul>
+          </Reveal>
+          <Reveal delay={0.16}>
             <p className="lede" style={{ marginTop: 22 }}>
               A fitting is not specified by its shape alone. Kelvin is the
               colour of the white. CRI is how truly colours appear under it.
@@ -169,10 +200,66 @@ export default function ColourOfLightGuide() {
 
       <section className="sec" style={{ paddingTop: 0 }}>
         <div className="wrap-tight">
-          <Reveal><h2 className="h-lg">Kelvin is colour, not brightness</h2></Reveal>
+          <Reveal><h2 className="h-lg">What do people mean by warm white and cool white?</h2></Reveal>
           <Reveal delay={0.06}>
             <p className="lede" style={{ marginTop: 16 }}>
-              People say “cool white is brighter.” It is only bluer. Brightness
+              Warm white and cool white are shop words for Kelvin. Warm white is the soft, slightly yellow light of the 2700K and 3000K rows in the table below. Cool white is the bluer end, 5000K and above. The table shows 6500K. These are the whites we keep for workshops, clinics, and security floods. In between sits 4000K, a neutral white for work surfaces.
+            </p>
+          </Reveal>
+          <Reveal delay={0.12}>
+            <div className="spec-wrap">
+              <table className="spec-table">
+                <thead>
+                  <tr>
+                    <th>Word on the box</th>
+                    <th>Kelvin</th>
+                    <th>What it looks like</th>
+                    <th>Use it for</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Warm white</td>
+                    <td>2700K</td>
+                    <td>Warm, slightly amber</td>
+                    <td>Bedrooms, lounges, hospitality</td>
+                  </tr>
+                  <tr>
+                    <td>Warm white</td>
+                    <td>3000K</td>
+                    <td>Warm white, cleaner</td>
+                    <td>Living, dining, most of the house</td>
+                  </tr>
+                  <tr>
+                    <td>Neutral white</td>
+                    <td>4000K</td>
+                    <td>Neutral white</td>
+                    <td>Kitchen worktops, study, some mirrors</td>
+                  </tr>
+                  <tr>
+                    <td>Cool white, daylight</td>
+                    <td>6500K</td>
+                    <td>Daylight, blue-white</td>
+                    <td>Workshops and security floods</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </Reveal>
+          <Reveal delay={0.14}>
+            <p className="form-note" style={{ marginTop: 12 }}>
+              Brands do not all print the words the same way, so read the K number on the box, not the label. The honest trade-off: warm white is kind to skin and timber but is not the clearest light for chopping or reading a plan. That is why the worktop gets its own 4000K light below, and the rest of the room stays warm.
+            </p>
+          </Reveal>
+        </div>
+      </section>
+
+      <section className="sec" style={{ paddingTop: 0 }}>
+        <div className="wrap-tight">
+          <Reveal><h2 className="h-lg">Is Kelvin colour or brightness?</h2></Reveal>
+          <Reveal delay={0.06}>
+            <p className="lede" style={{ marginTop: 16 }}>
+              Kelvin is colour, not brightness. People say “cool white is brighter.” It is only bluer. Brightness
               is lumens. In a Kerala house the rooms you live in want a warm
               white, close to the filament lamps the eye still treats as
               evening light.
@@ -195,41 +282,10 @@ export default function ColourOfLightGuide() {
               />
             </div>
           </figure>
-
           <Reveal delay={0.12}>
-            <div className="spec-wrap">
-              <table className="spec-table">
-                <thead>
-                  <tr>
-                    <th>Kelvin</th>
-                    <th>What it looks like</th>
-                    <th>Use it for</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td>2700K</td>
-                    <td>Warm, slightly amber</td>
-                    <td>Bedrooms, lounges, hospitality</td>
-                  </tr>
-                  <tr>
-                    <td>3000K</td>
-                    <td>Warm white, cleaner</td>
-                    <td>Living, dining, most of the house</td>
-                  </tr>
-                  <tr>
-                    <td>4000K</td>
-                    <td>Neutral white</td>
-                    <td>Kitchen worktops, study, some mirrors</td>
-                  </tr>
-                  <tr>
-                    <td>6500K</td>
-                    <td>Daylight, blue-white</td>
-                    <td>Workshops and security floods</td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
+            <p className="lede" style={{ marginTop: 16 }}>
+              The Kelvin table above is the whole range this guide uses.
+            </p>
           </Reveal>
           <Reveal delay={0.16}>
             <p className="form-note" style={{ marginTop: 12 }}>
@@ -243,7 +299,7 @@ export default function ColourOfLightGuide() {
 
       <section className="sec glow-top">
         <div className="wrap-tight">
-          <Reveal><h2 className="h-lg">Where each colour belongs</h2></Reveal>
+          <Reveal><h2 className="h-lg">Where does each colour belong?</h2></Reveal>
         </div>
         <div className="wrap">
           <Stagger className="register">
@@ -259,10 +315,10 @@ export default function ColourOfLightGuide() {
 
       <section className="sec">
         <div className="wrap-tight">
-          <Reveal><h2 className="h-lg">CRI is whether the colour is true</h2></Reveal>
+          <Reveal><h2 className="h-lg">What is CRI, and why does it matter?</h2></Reveal>
           <Reveal delay={0.06}>
             <p className="lede" style={{ marginTop: 16 }}>
-              Colour Rendering Index runs from 0 to 100. Sunlight is the
+              CRI is whether the colour is true. Colour Rendering Index runs from 0 to 100. Sunlight is the
               reference. A CRI 80 downlight can be bright and still turn teak
               grey and a tomato dull. Ask for CRI 90, and R9 above 50 if the
               sheet lists it, in every room where material is part of the
@@ -282,11 +338,12 @@ export default function ColourOfLightGuide() {
 
       <section className="sec glow-top">
         <div className="wrap-tight">
-          <Reveal><h2 className="h-lg">Beam angle is where the light stops</h2></Reveal>
+          <Reveal><h2 className="h-lg">What does beam angle change?</h2></Reveal>
           <Reveal delay={0.06}>
             <p className="lede" style={{ marginTop: 16 }}>
-              The number in degrees is the cone. A narrow cone is a spotlight.
-              A wide cone is a wash. The decorative chandelier is a separate
+              Beam angle is where the light stops. The number in degrees is the cone. A narrow cone is a spotlight.
+              A wide cone is a wash. A downlight that hurts to look at is often a beam and position problem, not a colour one. The{" "}
+              <Link href="/guides/why-downlights-glare">downlight glare guide</Link> covers that. The decorative chandelier is a separate
               decision. Its size comes from the room, which the{" "}
               <a href="/guides/chandelier-size-calculator">size calculator</a>{" "}
               covers.
@@ -327,7 +384,7 @@ export default function ColourOfLightGuide() {
 
       <section className="sec">
         <div className="wrap-tight">
-          <Reveal><h2 className="h-lg">Four layers, four switches</h2></Reveal>
+          <Reveal><h2 className="h-lg">Why does a room need four layers on four switches?</h2></Reveal>
           <Reveal delay={0.06}>
             <ul className="check-list" style={{ marginTop: 28 }}>
               <li><span className="tick">✓</span>Ambient. Cove or a quiet downlight grid, so you can cross the room. Dimmed low in the evening.</li>
@@ -357,7 +414,14 @@ export default function ColourOfLightGuide() {
               <Reveal key={f.q} delay={i * 0.04}>
                 <details className="faq-item" name="colour-of-light-faq">
                   <summary>{f.q}</summary>
-                  <p className="faq-a">{f.a}</p>
+                  <p className="faq-a">
+                    {f.a}
+                    {"link" in f && f.link ? (
+                      <>
+                        {" "}The <Link href="/guides/ceiling-and-lighting-design">ceiling and lighting design guide</Link> covers the order of work.
+                      </>
+                    ) : null}
+                  </p>
                 </details>
               </Reveal>
             ))}
