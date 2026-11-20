@@ -155,13 +155,13 @@ const entries: GuideEntry[] = [
   },
   {
     slug: "colour-of-light",
-    title: "Kelvin, CRI and Beam Angle: How to Read a Light",
+    title: "Warm White vs Cool White: Kelvin, CRI and Beam Angle",
     dek: "The three numbers on a specification that decide whether a room feels like a home or a clinic, and what to ask for in Kerala.",
     tag: "Technical",
     image: "/images/guides/colour-of-light/warm-living-dining-light.webp",
     imageAlt: "A city-apartment living and dining room at night in warm light, with a brass pendant, a glowing cove, and a city view beyond the windows",
-    modified: "2026-11-19",
-    related: ["kitchen-lighting-design", "bedroom-lighting-design", "home-lighting-design"],
+    modified: "2026-11-20",
+    related: ["how-a-lighting-plan-is-built", "kitchen-lighting-design", "home-lighting-design"],
   },
   {
     slug: "chandelier-size-calculator",
