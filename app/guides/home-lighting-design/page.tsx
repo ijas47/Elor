@@ -40,7 +40,7 @@ const faqs = [
   },
   {
     q: "Can this be done from outside Kerala?",
-    a: "The plan and the quotation can be done from drawings and video. Installation is arranged from the Kannur, Kozhikode, or Kochi centre, depending on the house. Kannur and Kozhikode trade as Celestial Lights. Kochi is the Elor experience centre.",
+    a: "The plan and the quotation can be done from drawings and video. Installation is arranged from the Kannur or Kozhikode centre, depending on the house. Kannur and Kozhikode trade as Celestial Lights. The Elor experience centre in Kochi is opening soon.",
   },
   {
     q: "What is made, and what is from the shelf?",
@@ -90,9 +90,9 @@ function FaqAnswer({ q, a }: { q: string; a: string }) {
   if (q === "Can this be done from outside Kerala?") {
     return (
       <>
-        The plan and the quotation can be done from drawings and video. Installation is arranged from the Kannur, Kozhikode, or Kochi centre, depending on the house. Kannur and Kozhikode trade as{" "}
+        The plan and the quotation can be done from drawings and video. Installation is arranged from the Kannur or Kozhikode centre, depending on the house. Kannur and Kozhikode trade as{" "}
         <a href={CELESTIAL} target="_blank" rel="noopener noreferrer">Celestial Lights</a>
-        . Kochi is the Elor experience centre.
+        . The Elor experience centre in Kochi is opening soon.
       </>
     );
   }
@@ -381,7 +381,7 @@ export default function HomeLightingDesignGuide() {
               </li>
               <li>
                 <span className="tick">✓</span>
-                Kannur and Kozhikode are Celestial Lights stores. Kochi is the Elor experience centre.
+                Kannur and Kozhikode are Celestial Lights stores. The Elor experience centre in Kochi is opening soon.
               </li>
             </ul>
           </Reveal>
