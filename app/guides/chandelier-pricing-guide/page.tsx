@@ -86,8 +86,8 @@ const faqs: { q: string; a: ReactNode; schema: string }[] = [
   },
   {
     q: "Do prices differ between Kannur, Kochi and Kozhikode?",
-    a: "Product pricing is the same across all three stores and pan-India delivery. Installation support for ready pieces can vary with site access and distance from the nearest store. We install custom lights and give installation support for everything else.",
-    schema: "Product pricing is the same across all three stores and pan-India delivery. Installation support for ready pieces can vary with site access and distance from the nearest store. We install custom lights and give installation support for everything else.",
+    a: "Product pricing is the same at the open stores in Kannur and Kozhikode, and for pan-India delivery. The Kochi store is opening soon. Installation support for ready pieces can vary with site access and distance from the nearest store. We install custom lights and give installation support for everything else.",
+    schema: "Product pricing is the same at the open stores in Kannur and Kozhikode, and for pan-India delivery. The Kochi store is opening soon. Installation support for ready pieces can vary with site access and distance from the nearest store. We install custom lights and give installation support for everything else.",
   },
 ];
 
@@ -158,8 +158,8 @@ export default function ChandelierPricingGuide() {
               Elor Lighting is the design shop. We plan lighting and make
               custom fittings. Ready lights are sold by our sister shop,{" "}
               <a href={CELESTIAL} target="_blank" rel="noopener noreferrer">Celestial Lights</a>.
-              {" "}You can visit Celestial in Kannur and Kozhikode, or the Elor
-              centre in Kochi. We install custom lights and give installation
+              {" "}You can visit Celestial in Kannur and Kozhikode. The Elor
+              centre in Kochi is opening soon. We install custom lights and give installation
               support for everything else.
             </p>
           </Reveal>
@@ -312,8 +312,8 @@ export default function ChandelierPricingGuide() {
           <Reveal delay={0.06}>
             <p className="lede" style={{ margin: "16px auto 0" }}>
               The first session is free. Visit Celestial Lights in Kannur
-              (Philips Building, 670005) or Kozhikode, or the Elor centre in
-              Kochi, or <Link href="/consultation">book a consultation</Link>.
+              (Philips Building, 670005) or Kozhikode, or <Link href="/consultation">book a consultation</Link>.
+              The Elor centre in Kochi is opening soon.
               To buy a ready piece, go to{" "}
               <a href={CELESTIAL} target="_blank" rel="noopener noreferrer">Celestial Lights</a>.
             </p>

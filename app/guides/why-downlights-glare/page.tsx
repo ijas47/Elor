@@ -245,9 +245,9 @@ export default function DownlightGlareGuide() {
           </Reveal>
           <Reveal delay={0.1}>
             <p className="lede" style={{ margin: "16px auto 0" }}>
-              The Kannur, Kochi, and Kozhikode centres have fittings at
-              different recess depths. Bring the ceiling section if you have
-              it.
+              The Kannur and Kozhikode centres have fittings at different
+              recess depths. Bring the ceiling section if you have it. The
+              Kochi centre is opening soon.
             </p>
           </Reveal>
           <Reveal delay={0.12}>

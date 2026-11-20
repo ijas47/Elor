@@ -443,9 +443,10 @@ export default function ColourOfLightGuide() {
           </Reveal>
           <Reveal delay={0.1}>
             <p className="lede" style={{ margin: "16px auto 0" }}>
-              Wood, fabric, or a photo of the room is enough. The Kannur,
-              Kochi, and Kozhikode centres have the range lit, so the Kelvin
-              is something you see rather than take on trust.
+              Wood, fabric, or a photo of the room is enough. The Kannur
+              and Kozhikode centres have the range lit, so the Kelvin is
+              something you see rather than take on trust. The Kochi centre
+              is opening soon.
             </p>
           </Reveal>
           <Reveal delay={0.12}>

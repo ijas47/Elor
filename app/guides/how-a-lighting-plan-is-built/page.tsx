@@ -84,7 +84,7 @@ const faqs = [
   },
   {
     q: "Can this be done if I am not in Kerala?",
-    a: "The plan and the quotation can be done from drawings and video. The slab anchor and the installation need someone on site, from the Kannur, Kochi, or Kozhikode centre, depending on where the house is.",
+    a: "The plan and the quotation can be done from drawings and video. The slab anchor and the installation need someone on site, arranged from the Kannur or Kozhikode centre, depending on where the house is. The Kochi centre is opening soon.",
   },
 ];
 
@@ -332,8 +332,8 @@ export default function LightingPlanGuide() {
           <Reveal delay={0.06}>
             <p className="lede" style={{ margin: "16px auto 0" }}>
               A floor plan, the ceiling height, and a photo are enough to
-              start. You can see the layers switched separately in Kannur,
-              Kochi, and Kozhikode.
+              start. You can see the layers switched separately in Kannur
+              and Kozhikode. The Kochi centre is opening soon.
             </p>
           </Reveal>
           <Reveal delay={0.12}>

@@ -363,7 +363,7 @@ export default function LivingRoomChandelierGuide() {
                   fitting from{" "}
                   <a href={CELESTIAL} target="_blank" rel="noopener noreferrer">Celestial Lights</a>
                   . You can see it at the Celestial Lights stores in Kannur
-                  and Kozhikode, or at the Elor experience centre in Kochi.
+                  and Kozhikode. The Elor experience centre in Kochi is opening soon.
                   When the void is unusual, the ceiling has an off-centre
                   beam, or the picture you have saved is not something anyone
                   stocks, Elor designs and makes the piece. How that works, with
@@ -411,8 +411,8 @@ export default function LivingRoomChandelierGuide() {
               </li>
               <li>
                 <span className="tick">✓</span>
-                Kannur and Kozhikode are Celestial Lights stores. Kochi is
-                the Elor experience centre.
+                Kannur and Kozhikode are Celestial Lights stores. The Elor
+                experience centre in Kochi is opening soon.
               </li>
             </ul>
           </Reveal>

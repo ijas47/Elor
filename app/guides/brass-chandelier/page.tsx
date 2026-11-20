@@ -337,7 +337,7 @@ export default function BrassChandelierGuide() {
               </li>
               <li>
                 <span className="tick">✓</span>
-                Kannur and Kozhikode are Celestial Lights stores. Kochi is the Elor experience centre.
+                Kannur and Kozhikode are Celestial Lights stores. The Elor experience centre in Kochi is opening soon.
               </li>
             </ul>
           </Reveal>

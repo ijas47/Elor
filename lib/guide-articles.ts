@@ -183,7 +183,7 @@ export const guideArticles: GuideArticle[] = [
         paragraphs: [
           [
             {
-              text: "If a piece in the collection already fits the seating, the ceiling height, and the finish you want, it is a shelf fitting from Celestial Lights. You can see it at the Celestial Lights stores in Kannur and Kozhikode, or at the Elor experience centre in Kochi. When the void is unusual, the ceiling has an off-centre beam, or the picture you have saved is not something anyone stocks, Elor designs and makes the piece. How that works, with timelines and what drives the cost, is on ",
+              text: "If a piece in the collection already fits the seating, the ceiling height, and the finish you want, it is a shelf fitting from Celestial Lights. You can see it at the Celestial Lights stores in Kannur and Kozhikode. The Elor experience centre in Kochi is opening soon. When the void is unusual, the ceiling has an off-centre beam, or the picture you have saved is not something anyone stocks, Elor designs and makes the piece. How that works, with timelines and what drives the cost, is on ",
             },
             { text: "custom chandeliers", href: "/customisation" },
             { text: ", and the " },
@@ -601,7 +601,7 @@ export const guideArticles: GuideArticle[] = [
       },
       {
         q: "Can this be done from outside Kerala?",
-        a: "The plan and the quotation can be done from drawings and video. Installation is arranged from the Kannur, Kozhikode, or Kochi centre, depending on the house. Kannur and Kozhikode trade as Celestial Lights. Kochi is the Elor experience centre.",
+        a: "The plan and the quotation can be done from drawings and video. Installation is arranged from the Kannur or Kozhikode centre, depending on the house. Kannur and Kozhikode trade as Celestial Lights. The Elor experience centre in Kochi is opening soon.",
       },
       {
         q: "What is made, and what is from the shelf?",
