@@ -64,7 +64,7 @@ We install custom lights and give installation support for everything else.
 
 ## Notes
 
-- Product pricing is identical across all three stores and pan-India delivery.
+- Product pricing is identical at the open stores in Kannur and Kozhikode, and for pan-India delivery. The Kochi store is opening soon.
 - Installation support for ready pieces varies with site access and distance from the nearest store.
 - Ready-collection prices are final for pieces bought as shown. Delivery is
   quoted separately. Those pieces come with installation support.
