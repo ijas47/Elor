@@ -194,11 +194,11 @@ export default function LumensVsWattsGuide() {
               <div>
                 <p>Because the same lumens feel different in different rooms. Many pages online give a lumen or watt figure per room or per square foot. We do not, because the number leaves out what changes the result:</p>
                 <ul className="check-list" style={{ marginTop: 16 }}>
-                  <li><span className="tick">✓</span><strong>Where the light lands.</strong> Light over the sofa and the table feels brighter than the same light in the middle of an empty ceiling.</li>
-                  <li><span className="tick">✓</span><strong>Glare.</strong> A bright point in your eye makes a room feel harsh, not well lit. <Link href="/guides/why-downlights-glare" style={link}>Why a downlight glares</Link> covers this.</li>
-                  <li><span className="tick">✓</span><strong>The walls.</strong> The eye reads light on walls. A room with lit walls feels brighter than one with a bright ceiling and dark walls.</li>
-                  <li><span className="tick">✓</span><strong>Surfaces.</strong> Dark surfaces take in light that a white wall would bounce back. In many Kerala homes the ceilings, doors and panels are dark timber, so the same lamps can feel dimmer there than in a flat with white walls.</li>
-                  <li><span className="tick">✓</span><strong>Switches.</strong> One switch gives one level. Separate circuits and a dimmer let a room be bright for guests and soft at night.</li>
+                  <li><span className="tick">✓</span><span><strong>Where the light lands.</strong> Light over the sofa and the table feels brighter than the same light in the middle of an empty ceiling.</span></li>
+                  <li><span className="tick">✓</span><span><strong>Glare.</strong> A bright point in your eye makes a room feel harsh, not well lit. <Link href="/guides/why-downlights-glare" style={link}>Why a downlight glares</Link> covers this.</span></li>
+                  <li><span className="tick">✓</span><span><strong>The walls.</strong> The eye reads light on walls. A room with lit walls feels brighter than one with a bright ceiling and dark walls.</span></li>
+                  <li><span className="tick">✓</span><span><strong>Surfaces.</strong> Dark surfaces take in light that a white wall would bounce back. In many Kerala homes the ceilings, doors and panels are dark timber, so the same lamps can feel dimmer there than in a flat with white walls.</span></li>
+                  <li><span className="tick">✓</span><span><strong>Switches.</strong> One switch gives one level. Separate circuits and a dimmer let a room be bright for guests and soft at night.</span></li>
                 </ul>
                 <p style={{ marginTop: 16 }}>A plan works this out room by room, from the furniture and the finishes. <Link href="/guides/how-a-lighting-plan-is-built" style={link}>How a lighting plan is built</Link> shows the method, and <Link href="/guides/downlight-placement" style={link}>downlight placement</Link> shows it on the ceiling.</p>
               </div>
