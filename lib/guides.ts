@@ -292,6 +292,8 @@ const entries: GuideEntry[] = [
     imageAlt: "A brass chandelier hanging over a dining table in a modern apartment, sized to the table rather than the whole room",
     modified: "2026-11-20",
     related: ["chandelier-size-calculator", "chandelier-for-living-room", "chandelier-with-ceiling-fan", "home-lighting-design"],
+  },
+  {
     slug: "lumens-vs-watts",
     title: "Lumens vs Watts: How Bright Should a Room Be?",
     dek: "Watts are power and lumens are light. What to ask for on a specification, and why a room needs a plan, not a chart.",
