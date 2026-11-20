@@ -293,6 +293,16 @@ const entries: GuideEntry[] = [
     modified: "2026-11-20",
     related: ["chandelier-size-calculator", "chandelier-for-living-room", "chandelier-with-ceiling-fan", "home-lighting-design"],
   },
+  {
+    slug: "lumens-vs-watts",
+    title: "Lumens vs Watts: How Bright Should a Room Be?",
+    dek: "Watts are power and lumens are light. What to ask for on a specification, and why a room needs a plan, not a chart.",
+    tag: "Technical",
+    image: "/images/guides/colour-of-light/warm-living-dining-light.webp",
+    imageAlt: "A city-apartment living and dining room at night in warm light, with a brass pendant, a glowing cove, and a city view beyond the windows",
+    modified: "2026-11-20",
+    related: ["colour-of-light", "how-a-lighting-plan-is-built", "home-lighting-design", "why-downlights-glare"],
+  },
 ];
 
 export interface Guide extends GuideEntry {
