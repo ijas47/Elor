@@ -37,7 +37,7 @@ export const storeCities: Record<StoreCity, StoreCityCopy> = {
       "We install custom lights and give installation support for everything else, with up to 5-year warranty",
     ],
     faqs: [
-      { q: "Do you only serve Kannur, or the wider district?", a: "The Kannur store serves the whole district and nearby towns for consultation and installation support. We install custom lights and give installation support for everything else. We deliver pan-India from all three stores for anything ordered online or by phone." },
+      { q: "Do you only serve Kannur, or the wider district?", a: "The Kannur store serves the whole district and nearby towns for consultation and installation support. We install custom lights and give installation support for everything else. We deliver pan-India from the Kannur and Kozhikode stores, and by phone or online order. The Kochi store is opening soon." },
       { q: "Can I just walk in, or do I need an appointment?", a: "Walk-ins are welcome during store hours. Booking a consultation ahead means we can prepare mood boards and a cost range before you arrive." },
       { q: "Is everything in the Kannur store made to order?", a: "No. The store carries the full Celestial Lights ready collection to see and buy on the spot, alongside taking custom briefs for anything you can't find on the floor." },
       { q: "How long does a custom piece take from the Kannur store?", a: "Most custom pieces are designed, fabricated and installed within 3 to 6 weeks of your consultation." },
@@ -85,7 +85,7 @@ export const storeCities: Record<StoreCity, StoreCityCopy> = {
       "We install custom lights and give installation support for everything else, with up to 5-year warranty",
     ],
     faqs: [
-      { q: "Do you only serve Kozhikode city, or the wider Malabar area?", a: "The Kozhikode store serves the city and surrounding Malabar towns for consultation and installation support. We install custom lights and give installation support for everything else. We deliver pan-India from all three stores for anything ordered online or by phone." },
+      { q: "Do you only serve Kozhikode city, or the wider Malabar area?", a: "The Kozhikode store serves the city and surrounding Malabar towns for consultation and installation support. We install custom lights and give installation support for everything else. We deliver pan-India from the Kannur and Kozhikode stores, and by phone or online order. The Kochi store is opening soon." },
       { q: "Can I just walk in, or do I need an appointment?", a: "Walk-ins are welcome during store hours. Booking a consultation ahead means we can prepare mood boards and a cost range before you arrive." },
       { q: "Is everything in the Kozhikode store made to order?", a: "No. The store carries the full Celestial Lights ready collection to see and buy on the spot, alongside taking custom briefs for anything you can't find on the floor." },
       { q: "How long does a custom piece take from the Kozhikode store?", a: "Most custom pieces are designed, fabricated and installed within 3 to 6 weeks of your consultation." },

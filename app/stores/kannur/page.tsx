@@ -32,7 +32,7 @@ const faqs = [
   },
   {
     q: "Do you only serve Kannur, or the wider district?",
-    a: "The Kannur store serves the whole district and nearby towns for consultation and installation support. We install custom lights and give installation support for everything else. We deliver pan-India from all three stores for anything ordered online or by phone.",
+    a: "The Kannur store serves the whole district and nearby towns for consultation and installation support. We install custom lights and give installation support for everything else. We deliver pan-India from the Kannur and Kozhikode stores, and by phone or online order. The Kochi store is opening soon.",
   },
   {
     q: "How long does a custom piece take from the Kannur store?",
