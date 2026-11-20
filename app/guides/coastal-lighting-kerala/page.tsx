@@ -319,9 +319,10 @@ export default function CoastalLightingGuide() {
           <Reveal><h2 className="h-lg">Tell us how close you are to the water.</h2></Reveal>
           <Reveal delay={0.06}>
             <p className="lede" style={{ margin: "16px auto 0" }}>
-              It changes the specification more than the budget does. All three
-              of our stores are on the coast, so this is the constraint we design
-              around every day.
+              It changes the specification more than the budget does. The open
+              stores in Kannur and Kozhikode are on the coast, so this is the
+              constraint we design around every day. The Kochi centre is opening
+              soon, and it is on the coast too.
             </p>
           </Reveal>
           <Reveal delay={0.12}>
