@@ -12,6 +12,7 @@ const staticRoutes = [
   { path: "/consultation", priority: 0.8, freq: "monthly" as const, lastModified: "2026-10-12" },
   { path: "/stores", priority: 0.7, freq: "monthly" as const, lastModified: "2026-10-12" },
   { path: "/india", priority: 0.8, freq: "monthly" as const, lastModified: "2026-09-24" },
+  { path: "/lighting-designer", priority: 0.8, freq: "monthly" as const, lastModified: "2026-11-26" },
   { path: "/guides", priority: 0.8, freq: "monthly" as const, lastModified: "2026-10-12" },
   { path: "/for/architects-and-designers", priority: 0.7, freq: "monthly" as const, lastModified: "2026-08-24" },
   { path: "/press", priority: 0.3, freq: "monthly" as const, lastModified: "2026-08-24" },
