@@ -257,6 +257,7 @@ export default function Home() {
                   <li><span className="tick">✓</span>You leave with positions, colour temperature, and which circuits dim</li>
                   <li><span className="tick">✓</span>You pay only if you ask us to go ahead</li>
                   <li><span className="tick">✓</span>Supply is from our own fittings. We install custom lights and give installation support for everything else.</li>
+                  <li><span className="tick">✓</span>You can also <a href="/lighting-designer">work with a lighting designer</a> on the whole job</li>
                 </ul>
               </Reveal>
               <Reveal delay={0.16}>
