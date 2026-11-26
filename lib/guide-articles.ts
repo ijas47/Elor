@@ -416,16 +416,16 @@ export const guideArticles: GuideArticle[] = [
   },
   {
     slug: "home-lighting-design",
-    metaTitle: "Home Lighting Design for Kerala Houses",
+    metaTitle: "Home Lighting Design: Plan the Whole House",
     description:
-      "Home lighting design for Kerala houses: one plan for every room and the outside, drawn before the ceilings close, with consistent colour and separate circuits.",
+      "Home lighting design for Indian homes: one plan for every room and outside, drawn before ceilings close, with one colour of light and separate circuits.",
     crumb: "Home Lighting Design",
     eyebrow: "Technical",
-    h1: "The whole house,",
-    h1Em: "one lighting plan.",
+    h1: "Home lighting design:",
+    h1Em: "one plan for the whole house.",
     lede: [
       {
-        text: "Home lighting design for a Kerala house is one plan for every room and the outside, drawn while the ceilings and walls are still open. It places each light against the furniture, gives every room separate circuits, keeps one colour of light through the house, sets fans and anchors, and chooses outdoor and bathroom fittings for the monsoon and the coast.",
+        text: "Home lighting design for an Indian house is one plan for every room and the outside, drawn while the ceilings and walls are still open. It places each light against the furniture, gives every room separate circuits, keeps one colour of light through the house, sets fans and anchors, and chooses outdoor and bathroom fittings for the monsoon and the coast.",
       },
     ],
     image: "/spaces/outdoor.jpg",

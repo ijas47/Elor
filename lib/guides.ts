@@ -65,12 +65,12 @@ const entries: GuideEntry[] = [
   },
   {
     slug: "home-lighting-design",
-    title: "Home Lighting Design in India (Kerala Tips)",
+    title: "Home Lighting Design: Plan the Whole House",
     dek: "One plan for every room, written before the ceilings close. The same job as a house lighting design.",
     tag: "Technical",
     image: "/images/guides/home-lighting-design/living-room-layered-lighting.webp",
     imageAlt: "A living room with lit shelves, a pendant over a seating group, downlights in the ceiling, and a ceiling fan",
-    modified: "2026-11-19",
+    modified: "2026-11-26",
     related: ["how-to-clean-a-crystal-chandelier", "ip-rating-for-outdoor-lights", "ceiling-and-lighting-design"],
   },
   {
