@@ -137,6 +137,7 @@ export default function IndiaPage() {
               <li><span className="tick">✓</span>We install custom lights and give installation support for everything else.</li>
               <li><span className="tick">✓</span>Seeing the range under real light means Kannur or Calicut, or a video from that floor. Kochi is opening soon.</li>
               <li><span className="tick">✓</span>Architects specifying from another city use the same trade path as a Kerala studio. The notes are on the <a href="/for/architects-and-designers">architect page</a>.</li>
+              <li><span className="tick">✓</span>Looking to hire a designer for the whole job? See our <a href="/lighting-designer">lighting designer</a> page.</li>
               <li><span className="tick">✓</span>How the plan is drawn, including layers and scenes, is the <a href="/guides/how-a-lighting-plan-is-built">lighting-plan guide</a>.</li>
             </ul>
           </Reveal>
