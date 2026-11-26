@@ -91,7 +91,7 @@ export default async function Consultation({
               Book it at your site, in Kannur or Calicut, or on video. The
               Kochi centre is opening soon. You pay only if you ask us to go
               ahead. We install custom lights and give installation support
-              for everything else.
+              for everything else. You can also <a href="/lighting-designer">work with a lighting designer</a> on the whole job.
             </p>
           </Reveal>
         </div>
