@@ -8,11 +8,20 @@ import { Reveal, Stagger, StaggerItem } from "@/components/motion/Reveal";
 import { ConsultForm } from "@/components/sections/ConsultForm";
 import { Icon, type IconName } from "@/components/ui/Icon";
 
+const DESC =
+  "Book a lighting design consultation with Elor. Your first session is free, at your site, in Kannur or Calicut, or over video. Design services are free*.";
+
 export const metadata: Metadata = {
   title: "Lighting Design Consultation",
-  description:
-    "Book a free lighting design consultation in store, at your site, or over video. We plan the scheme and design what has to be made. We install custom lights and give installation support for everything else.",
+  description: DESC,
   alternates: { canonical: "/consultation" },
+  openGraph: {
+    title: "Lighting Design Consultation",
+    description: DESC,
+  },
+  twitter: {
+    description: DESC,
+  },
 };
 
 const faqs = [
@@ -39,7 +48,7 @@ const serviceSchema = {
   provider: { "@type": "Organization", name: site.name, url: site.domain },
   areaServed: "IN",
   description:
-    "A free lighting consultation covering the whole space fixture-by-fixture, with supply from Elor's own range. We install custom lights and give installation support for everything else.",
+    "A lighting design consultation covering the whole space fixture-by-fixture, with supply from Elor's own range. Your first session is free. Design services are free*.",
   url: `${site.domain}/consultation`,
 };
 
