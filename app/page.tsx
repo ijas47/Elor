@@ -173,7 +173,9 @@ export default function Home() {
               <Reveal delay={0.06}><h2 className="h-lg">The showroom,<br /><span className="serif-i">lights on.</span></h2></Reveal>
             </div>
             <Reveal delay={0.12}>
-              <p className="lede">Short films from the Celestial Lights floor. The fittings are switched on, so you can see how the light moves before you order.</p>
+              <p className="lede">Short films from the Celestial Lights floor. The fittings are switched on, so you can see how the light moves before you order. Buying ready fittings? They are at{" "}
+                <a href="https://www.celestiallights.in" target="_blank" rel="noopener noreferrer">Celestial Lights, our sister store</a>
+                , at wholesale best rates.</p>
             </Reveal>
           </div>
           <ShowroomReel />

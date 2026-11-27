@@ -25,7 +25,8 @@ const workWith = [
   },
   {
     h: "Built from your drawing, not our catalogue",
-    p: "Send a render, a CAD file, or a rough sketch with dimensions. We work from what you've already specified rather than asking you to pick the nearest thing we happen to stock. If the brief calls for a dimension or a finish that doesn't exist yet, that's the normal starting point of a fabrication job, not an exception.",
+    p: <>Send a render, a CAD file, or a rough sketch with dimensions. We work from what you&apos;ve already specified rather than asking you to pick the nearest thing we happen to stock. If the brief calls for a dimension or a finish that doesn&apos;t exist yet, that&apos;s the normal starting point of a fabrication job, not an exception. For ready fittings at wholesale best rates, specify through{" "}
+      <a href="https://www.celestiallights.in" target="_blank" rel="noopener noreferrer">Celestial Lights, our sister store</a>.</>,
   },
   {
     h: "Spec sheets and samples before fabrication",

@@ -43,7 +43,10 @@ export default function Collections() {
                   New photographs of the range are not on this page yet.
                   The cascade here is the one piece we are showing. To have
                   something made, send a picture. To ask what is in stock,
-                  WhatsApp {site.shopLabel}.
+                  WhatsApp {site.shopLabel}. Have a quote for the same lights
+                  from somewhere else?{" "}
+                  <a href="https://www.celestiallights.in" target="_blank" rel="noopener noreferrer">Celestial Lights, our sister store</a>
+                  , can match any quote.
                 </p>
               </Reveal>
               <Reveal delay={0.18}>

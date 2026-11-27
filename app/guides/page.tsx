@@ -36,7 +36,9 @@ export default function Guides() {
             <p className="lede" style={{ marginTop: 22 }}>
               Straight answers on pricing, and what Elor and Celestial Lights
               actually build for homes and spaces in Kannur, Kochi and
-              Kozhikode.
+              Kozhikode. To buy ready fittings, go to{" "}
+              <a href="https://www.celestiallights.in" target="_blank" rel="noopener noreferrer">Celestial Lights, our sister store</a>
+              , at wholesale best rates.
             </p>
           </Reveal>
         </div>
