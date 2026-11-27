@@ -182,8 +182,8 @@ export function StoreCityPage({ city }: { city: StoreCity }) {
           <Reveal><h2 className="h-lg">Ready to plan your {city} space?</h2></Reveal>
           <Reveal delay={0.06}>
             <p className="lede" style={{ margin: "16px auto 0" }}>
-              See real ready-collection pricing first, or go straight to a
-              free consultation.
+              See what a custom piece costs in the pricing guide, or book a
+              consultation.
             </p>
           </Reveal>
           <Reveal delay={0.12}>
