@@ -364,7 +364,7 @@ export default function Home() {
           <Reveal delay={0.12}><p className="lede" style={{ textAlign: "center" }}>At the site, in a centre, or on video. If you already have a picture of the light, send that instead and we will say whether we can build it.</p></Reveal>
           <Reveal delay={0.16}>
             <div className="cta-ctas">
-              <MagneticButton href="/consultation" variant="gold">Book a Free Consultation <span className="arr">→</span></MagneticButton>
+              <MagneticButton href="/consultation" variant="gold">Book a Consultation <span className="arr">→</span></MagneticButton>
               <MagneticButton href="/customisation" variant="ghost">Start a Custom Piece</MagneticButton>
             </div>
           </Reveal>
