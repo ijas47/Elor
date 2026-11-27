@@ -64,7 +64,9 @@ export default function Stores() {
                   Celestial has stores and experience centres in Kannur and Calicut.
                   The Elor centre in Kochi is opening soon. Bring the drawing. Stand
                   under the range in Kannur or Calicut, from basic fittings to the
-                  pieces we make to order.
+                  pieces we make to order. Buying the lights?{" "}
+                  <a href="https://www.celestiallights.in" target="_blank" rel="noopener noreferrer">Celestial Lights, our sister store</a>
+                  {" "}can match any quote.
                 </p>
               </Reveal>
               <Reveal delay={0.18}>

@@ -19,6 +19,12 @@ export function Footer() {
               any site in India and supply our own fittings. We install custom lights and give installation support for everything else. Experience centres in Kannur and Calicut.
               Kochi is opening soon.
             </p>
+            <p className={styles.blurb}>
+              Sister store:{" "}
+              <a href="https://www.celestiallights.in" target="_blank" rel="noopener noreferrer">
+                Celestial Lights
+              </a>
+            </p>
             <a
               href={site.shopUrl}
               target="_blank"

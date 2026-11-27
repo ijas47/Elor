@@ -19,6 +19,10 @@ export const metadata: Metadata = {
 
 const facts = [
   { k: "Founded", v: "Elor Lighting / Celestial Lights, Kerala, India" },
+  { k: "Sister store", v: <>
+      <a href="https://www.celestiallights.in" target="_blank" rel="noopener noreferrer">Celestial Lights, our sister store</a>
+      , runs the open stores in Kannur and Calicut.
+    </> },
   { k: "What we do", v: "Lighting plans for architects and owners who are building, supply from basic to luxury, and custom chandeliers made in our factory" },
   { k: "Locations", v: "Celestial stores and experience centres in Kannur and Calicut, which are open. The Elor experience centre in Kochi is opening soon." },
   { k: "Coverage", v: "Pan-India delivery. We install custom lights and give installation support for everything else." },

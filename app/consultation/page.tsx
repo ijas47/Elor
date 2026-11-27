@@ -104,7 +104,9 @@ export default async function Consultation({
             {[
               { h: "Consult", p: "Free first session at your site, in a store, or on video. We listen before we recommend." },
               { h: "Design", p: "A fixture-by-fixture plan: positions, colour temperature, dimming zones and a transparent estimate." },
-              { h: "Supply", p: "From our own range, see it glowing in-store before you commit. Delivered pan-India." },
+              { h: "Supply", p: <>From our own range, see it glowing in-store before you commit. Delivered pan-India. Ready fittings are at{" "}
+                <a href="https://www.celestiallights.in" target="_blank" rel="noopener noreferrer">Celestial Lights, our sister store</a>
+                , at wholesale best rates.</> },
               { h: "Install", p: "We install custom lights and give installation support for everything else. One point of contact, one warranty." },
             ].map((s) => (
               <StaggerItem key={s.h}>

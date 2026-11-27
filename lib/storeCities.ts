@@ -74,7 +74,7 @@ export const storeCities: Record<StoreCity, StoreCityCopy> = {
       "Celestial Lights Kozhikode (Calicut): chandelier store and experience centre. Custom design and fabrication plus the ready collection, installed by our team.",
     heroHeadline: "Custom Chandeliers & Lighting Design in Kozhikode",
     heroLede:
-      "A Celestial Lights store and experience centre in Calicut. Lighting plans for architects and owners who are building, the ready range on the floor, and custom chandeliers made in our factory.",
+      "A Celestial Lights store and experience centre in Calicut. Lighting plans for architects and owners who are building, the ready range on the floor, and custom chandeliers made in our factory. Comparing prices before you buy? Celestial Lights, our sister store, works at wholesale best rates.",
     heroImage: "/collections/staircase-cascade.jpg",
     intro:
       "Kozhikode is a historic Malabar port city where old-town character sits right next to new construction, and lighting has to bridge both. Whether it's a heritage-style home or a new-build café, we design fixtures that fit the room they're actually going into.",
