@@ -75,12 +75,12 @@ const entries: GuideEntry[] = [
   },
   {
     slug: "staircase-lighting-design",
-    title: "Staircase Lighting for Indian Homes (Kerala Tips)",
+    title: "Staircase Lighting Design for Indian Homes",
     dek: "Light the nose of each tread, and hang the void from the slab. The two are separate decisions.",
     tag: "Technical",
     image: "/images/guides/staircase-lighting-design/crystal-cascade-staircase.webp",
     imageAlt: "A red crystal cascade hung in a spiral stair, with a wall light on the landing",
-    modified: "2026-11-19",
+    modified: "2026-11-27",
     related: ["how-to-clean-a-crystal-chandelier", "ip-rating-for-outdoor-lights", "ceiling-and-lighting-design"],
   },
   {
