@@ -55,12 +55,12 @@ const entries: GuideEntry[] = [
   },
   {
     slug: "ceiling-and-lighting-design",
-    title: "False Ceiling Lighting Design in India (Kerala Tips)",
+    title: "False Ceiling and POP Lighting Design in India (Kerala Tips)",
     dek: "Cove, spots, and the decorative piece are three jobs. The ceiling is drawn after the furniture.",
     tag: "Technical",
     image: "/images/guides/ceiling-and-lighting-design/lobby-false-ceiling-lighting.webp",
     imageAlt: "A lobby with a crystal chandelier in a wooden tray ceiling, linear coves, and wall lights on either side of the lifts",
-    modified: "2026-11-20",
+    modified: "2026-11-27",
     related: ["home-lighting-design", "kitchen-lighting-design", "chandelier-with-ceiling-fan"],
   },
   {
